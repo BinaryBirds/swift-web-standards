@@ -1,7 +1,15 @@
 /// type/subtype;parameter=value
-public struct MediaType {
+public struct MediaType: Sendable, Equatable, Codable, Hashable {
 
-    public struct Parameter: Sendable {
+    public enum Source: String, Sendable, Equatable, Codable, Hashable {
+        case apache
+        case iana
+        case nginx
+        case unknown
+    }
+    
+    
+    public struct Parameter: Sendable, Equatable, Codable, Hashable {
         public var key: String
         public var value: String?
 
@@ -23,9 +31,9 @@ public struct MediaType {
         }
     }
 
-    public struct Subtype: Sendable, ExpressibleByStringLiteral {
+    public struct Subtype: Sendable, Equatable, Codable, Hashable, ExpressibleByStringLiteral {
 
-        public struct Suffix: Sendable, ExpressibleByStringLiteral {
+        public struct Suffix: Sendable, Equatable, Codable, Hashable, ExpressibleByStringLiteral {
 
             public var value: String
 
@@ -72,17 +80,20 @@ public struct MediaType {
     public var subtype: Subtype
     public var parameter: Parameter?
     public var possibleExtensions: [String]
+    public var source: Source
 
     public init(
         type: String,
         subtype: Subtype,
         parameter: Parameter? = nil,
-        possibleExtensions: [String] = []
+        possibleExtensions: [String] = [],
+        source: Source = .unknown
     ) {
         self.type = type
         self.subtype = subtype
         self.parameter = parameter
         self.possibleExtensions = possibleExtensions
+        self.source = source
     }
 
     public var rawValue: String {

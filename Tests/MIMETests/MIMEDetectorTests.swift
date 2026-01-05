@@ -7,86 +7,87 @@ struct MIMETests {
 
     @Test
     func standardTypes() async throws {
-        let mime = MediaTypeDetector()
+        let detector = MediaTypeDetector()
+        
+        let html = MediaType.Text.html()
+        let text = MediaType.Text.plain()
 
-        #expect("text/html" == mime.getType(for: "html"))
-        #expect("html" == mime.getExtension(for: "text/html"))
-
-        #expect("text/plain" == mime.getType(for: "txt"))
-        #expect("txt" == mime.getExtension(for: "text/plain"))
+        let htmlType = detector.getPossibleMediaTypeForExtension("html")
+        let textType = detector.getPossibleMediaTypeForExtension("txt")
+        
+        
+        #expect(html == htmlType)
+        #expect(text == textType)
     }
 
-    // MARK: - test differences
-
-    //    MDN[aac] = audio/aac, mime[aac] = audio/x-aac
-    //    MDN[js] = text/javascript, mime[js] = application/javascript
-    //    MDN[mid] = audio/x-midi, mime[mid] = audio/midi
-    //    MDN[midi] = audio/x-midi, mime[midi] = audio/midi
-    //    MDN[mjs] = text/javascript, mime[mjs] = application/javascript
-    //    MDN[opus] = audio/opus, mime[opus] = audio/ogg
-    //    MDN[php] = application/php, mime[php] = application/x-httpd-php
     @Test
-    func knownMDNExtensions() {
-        let testCases = [
-            "json": "application/json",
-            "jsonld": "application/ld+json",
-            "mid": "audio/midi",
-            "midi": "audio/midi",
-            "mjs": "application/javascript",
-            "mp3": "audio/mp3",
-            "mp4": "video/mp4",
-            "mpeg": "video/mpeg",
-            "mpkg": "application/vnd.apple.installer+xml",
-            "odp": "application/vnd.oasis.opendocument.presentation",
-            "ods": "application/vnd.oasis.opendocument.spreadsheet",
-            "odt": "application/vnd.oasis.opendocument.text",
-            "oga": "audio/ogg",
-            "ogv": "video/ogg",
-            "ogx": "application/ogg",
-            "opus": "audio/ogg",
-            "otf": "font/otf",
-            "png": "image/png",
-            "pdf": "application/pdf",
-            "php": "application/x-httpd-php",
-            "ppt": "application/vnd.ms-powerpoint",
-            "pptx":
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-            "rar": "application/vnd.rar",
-            "rtf": "application/rtf",
-            "sh": "application/x-sh",
-            "svg": "image/svg+xml",
-            "tar": "application/x-tar",
-            "tif": "image/tiff",
-            "tiff": "image/tiff",
-            "ts": "video/mp2t",
-            "ttf": "font/ttf",
-            "txt": "text/plain",
-            "vsd": "application/vnd.visio",
-            "wav": "audio/wav",
-            "weba": "audio/webm",
-            "webm": "video/webm",
-            "webp": "image/webp",
-            "woff": "font/woff",
-            "woff2": "font/woff2",
-            "xhtml": "application/xhtml+xml",
-            "xls": "application/vnd.ms-excel",
-            "xlsx":
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            "xml": "application/xml",
-            "xul": "application/vnd.mozilla.xul+xml",
-            "zip": "application/zip",
-            "3gp": "video/3gpp",
-            "3g2": "video/3gpp2",
-            "7z": "application/x-7z-compressed",
+    func commonExtensions() {
+        let testCases: [String: MediaType] = [
+            // application
+            "js": .Application.javascript(),
+            "json": .Application.json(),
+            "jsonld": .Application.ldJson(),
+            "mjs": .Application.javascript(),
+            "mpkg": .Application.vndAppleInstallerXml(),
+            "odp": .Application.vndOasisOpendocumentPresentation(),
+            "ods": .Application.vndOasisOpendocumentSpreadsheet(),
+            "odt": .Application.vndOasisOpendocumentText(),
+            "ogx": .Application.ogg(),
+            "pdf": .Application.pdf(),
+            "php": .Application.xHttpdPhp(),
+            "ppt": .Application.vndMsPowerpoint(),
+            "pptx": .Application.vndOpenxmlformatsOfficedocumentPresentationmlPresentation(),
+            "rar": .Application.vndRar(),
+            "rtf": .Application.rtf(),
+            "sh": .Application.xSh(),
+            "tar": .Application.xTar(),
+            "vsd": .Application.vndVisio(),
+            "xhtml": .Application.xhtmlXml(),
+            "xls": .Application.vndMsExcel(),
+            "xlsx": .Application.vndOpenxmlformatsOfficedocumentSpreadsheetmlSheet(),
+            "xml": .Application.xml(),
+            "xul": .Application.vndMozillaXulXml(),
+            "zip": .Application.zip(),
+            "7z": .Application.x7zCompressed(),
+            "exe": .Application.octetStream(),
+            "dll": .Application.octetStream(),
+            // audio
+            "aac": .Audio.aac(),
+            "mid": .Audio.midi(),
+            "midi": .Audio.midi(),
+            "mp3": .Audio.mp3(),
+            "oga": .Audio.ogg(),
+            "opus": .Audio.ogg(),
+            "wav": .Audio.wav(),
+            "weba": .Audio.webm(),
+            // video
+            "mp4": .Video.mp4(),
+            "mpeg": .Video.mpeg(),
+            "ogv": .Video.ogg(),
+            "3gp": .Video._3gpp(),
+            "3g2": .Video._3gpp2(),
+            "ts": .Video.mp2t(),
+            "webm": .Video.webm(),
+            // font
+            "otf": .Font.otf(),
+            "ttf": .Font.ttf(),
+            "woff": .Font.woff(),
+            "woff2": .Font.woff2(),
+            // image
+            "png": .Image.png(),
+            "svg": .Image.svgXml(),
+            "tif": .Image.tiff(),
+            "tiff": .Image.tiff(),
+            "webp": .Image.webp(),
+            // text
+            "txt": .Text.plain(),
         ]
 
-        let mime = MediaTypeDetector()
-        for (ext, expectation) in testCases {
+        let detector = MediaTypeDetector()
+        for (ext, expectedType) in testCases {
 
-            #expect(
-                mime.getType(for: ext) == expectation,
-                .init(rawValue: "Ext \(ext) - \(expectation)")
-            )
+            let type = detector.getPossibleMediaTypeForExtension(ext)
+            #expect(type == expectedType)
         }
     }
 
@@ -96,19 +97,5 @@ struct MIMETests {
     //      mime-types[dmg] = application/x-apple-diskimage, mime[dmg] = application/octet-stream
     //      mime-types[iso] = application/x-iso9660-image, mime[iso] = application/octet-stream
     //      mime-types[msi] = application/x-msdownload, mime[msi] = application/octet-stream
-    //      mime-types[wav] = audio/wave, mime[wav] = audio/wav
-    //    func testExpected() {
-    //        let def = Definition.nonStandard
-    //        let mime = MIME(def)
-    //        let values = def.values
-    //
-    //        for type in values.keys {
-    //            for ext in values[type]! {
-    //                let mimeType = mime.getType(for: ext)
-    //                if mimeType != type {
-    //                    print(mimeType, type)
-    //                }
-    //            }
-    //        }
-    //    }
+    
 }
