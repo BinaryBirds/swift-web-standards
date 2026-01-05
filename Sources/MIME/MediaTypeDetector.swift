@@ -2,14 +2,16 @@ public struct MediaTypeDetector {
 
     private var definitions: [String: [String]]
 
-    public init(_ definition: Definition = .known) {
-        self.definitions = definition.values
-    }
+    public init(
+        mediaTypes: [MediaType] = MediaType.all
+    ) {
+        self.definitions = [:]
 
-    public mutating func add(_ definition: Definition) {
-        for (key, value) in definition.values {
-            definitions[key] = value
+        for mediaType in mediaTypes {
+            self.definitions[mediaType.rawValue] = mediaType.possibleExtensions
         }
+
+        print(self.definitions)
     }
 
     public func getType(for ext: String) -> String? {
@@ -29,7 +31,7 @@ public struct MediaTypeDetector {
     public func getExtension(for type: String) -> String? {
         definitions.first { $0.key == type }?.value.first
     }
-    
+
     // Source: https://github.com/broofa/mime-score
     let defaultFacetScore: Double = 900
     let facetScores: [String: Double] = [
@@ -80,51 +82,4 @@ public struct MediaTypeDetector {
         return score + source.rawValue + lengthScore
     }
 
-    
-}
-
-public enum Definition {
-    case standard
-    case nonStandard
-    case known
-    case custom([String: [String]])
-}
-
-extension Definition {
-
-    public static func union(_ definitions: Definition...) -> Definition {
-        var values: [String: [String]] = [:]
-
-        for def in definitions {
-            for (key, value) in def.values {
-                if values[key] == nil {
-                    values[key] = []
-                }
-                var extensions = values[key]!
-                for ext in value {
-                    if !extensions.contains(ext) {
-                        extensions.append(ext)
-                    }
-                }
-                values[key] = extensions
-            }
-        }
-        return .custom(values)
-    }
-}
-
-extension Definition {
-
-    var values: [String: [String]] {
-        switch self {
-        case .standard:
-            return standardDefinitions
-        case .nonStandard:
-            return nonStandardDefinitions
-        case .known:
-            return Definition.union(.standard, .nonStandard).values
-        case .custom(let values):
-            return values
-        }
-    }
 }

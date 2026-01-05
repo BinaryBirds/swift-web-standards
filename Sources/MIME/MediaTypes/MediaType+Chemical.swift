@@ -4,6 +4,18 @@ extension MediaType {
 
         static let name: String = "chemical"
 
+        public static var all: [MediaType] {
+            [
+                xCdx(),
+                xCif(),
+                xCmdf(),
+                xCml(),
+                xCsml(),
+                xPdb(),
+                xXyz(),
+            ]
+        }
+
         public static func xCdx() -> MediaType {
             .init(
                 type: name,

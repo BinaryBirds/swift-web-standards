@@ -4,6 +4,17 @@ extension MediaType {
 
         static let name: String = "font"
 
+        public static var all: [MediaType] {
+            [
+                collection(),
+                otf(),
+                sfnt(),
+                ttf(),
+                woff(),
+                woff2(),
+            ]
+        }
+
         public static func collection() -> MediaType {
             .init(
                 type: name,

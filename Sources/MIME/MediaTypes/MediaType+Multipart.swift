@@ -4,6 +4,27 @@ extension MediaType {
 
         static let name: String = "multipart"
 
+        public static var all: [MediaType] {
+            [
+                alternative(),
+                appledouble(),
+                byteranges(),
+                digest(),
+                encrypted(),
+                formData(boundary: ""),
+                headerSet(),
+                mixed(),
+                multilingual(),
+                parallel(),
+                related(),
+                report(),
+                signed(),
+                vndBintMedPlus(),
+                voiceMessage(),
+                xMixedReplace(),
+            ]
+        }
+
         public static func alternative() -> MediaType {
             .init(
                 type: name,

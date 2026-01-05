@@ -4,6 +4,54 @@ extension MediaType {
 
         static let name: String = "model"
 
+        public static var all: [MediaType] {
+            [
+                _3mf(),
+                e57(),
+                gltfJson(),
+                gltfBinary(),
+                iges(),
+                jt(),
+                mesh(),
+                mtl(),
+                obj(),
+                prc(),
+                step(),
+                stepXml(),
+                stepZip(),
+                stepXmlZip(),
+                stl(),
+                u3d(),
+                vndBary(),
+                vndCld(),
+                vndColladaXml(),
+                vndDwf(),
+                vndFlatland3dml(),
+                vndGdl(),
+                vndGsGdl(),
+                vndGsGdlAlt(),
+                vndGtw(),
+                vndMomlXml(),
+                vndMts(),
+                vndOpengex(),
+                vndParasolidTransmitBinary(),
+                vndParasolidTransmitText(),
+                vndPythaPyox(),
+                vndRosetteAnnotatedDataModel(),
+                vndSapVds(),
+                vndUsda(),
+                vndUsdzZip(),
+                vndValveSourceCompiledMap(),
+                vndVtu(),
+                vrml(),
+                x3dBinary(),
+                x3dFastinfoset(),
+                x3dVrml(),
+                x3dXml(),
+                x3dVrmlAlt(),
+            ]
+        }
+
         public static func _3mf() -> MediaType {
             .init(
                 type: name,

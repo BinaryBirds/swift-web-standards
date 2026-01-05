@@ -92,4 +92,12 @@ public struct MediaType {
         }
         return value
     }
+
+    public static var all: [MediaType] {
+        MediaType.Audio.all + MediaType.Chemical.all + MediaType.Font.all
+            + MediaType.Image.all + MediaType.Message.all + MediaType.Model.all
+            + MediaType.Multipart.all + MediaType.Text.all + MediaType.Video.all
+            + MediaType.XConference.all + MediaType.XShader.all
+            + MediaType.Application.all
+    }
 }

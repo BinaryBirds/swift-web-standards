@@ -4,6 +4,35 @@ extension MediaType {
 
         static let name: String = "message"
 
+        public static var all: [MediaType] {
+            [
+                bhttp(),
+                cpim(),
+                deliveryStatus(),
+                dispositionNotification(),
+                externalBody(),
+                feedbackReport(),
+                global(),
+                globalDeliveryStatus(),
+                globalDispositionNotification(),
+                globalHeaders(),
+                http(),
+                imdnXml(),
+                mls(),
+                news(),
+                ohttpReq(),
+                ohttpRes(),
+                partial(),
+                rfc822(),
+                sHttp(),
+                sip(),
+                sipfrag(),
+                trackingStatus(),
+                vndSiSimp(),
+                vndWfaWsc(),
+            ]
+        }
+
         public static func bhttp() -> MediaType {
             .init(
                 type: name,
