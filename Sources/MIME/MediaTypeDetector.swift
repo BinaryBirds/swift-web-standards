@@ -41,9 +41,12 @@ public struct MediaTypeDetector {
         "vnd.": 400,
     ]
 
+    // priorities, not scores
     let typeScores: [String: Double] = [
-        "application": 1,
+        "video": 4,
+        "audio": 3,
         "font": 2,
+        "application": 1,
     ]
 
     public enum Source: Double {

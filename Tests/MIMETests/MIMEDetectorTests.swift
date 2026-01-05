@@ -33,8 +33,8 @@ struct MIMETests {
             "mid": "audio/midi",
             "midi": "audio/midi",
             "mjs": "application/javascript",
-            //            "mp3": "audio/mpeg",
-            //            "mp4": "video/mp4",
+            "mp3": "audio/mp3",
+            "mp4": "video/mp4",
             "mpeg": "video/mpeg",
             "mpkg": "application/vnd.apple.installer+xml",
             "odp": "application/vnd.oasis.opendocument.presentation",
@@ -49,8 +49,8 @@ struct MIMETests {
             "pdf": "application/pdf",
             "php": "application/x-httpd-php",
             "ppt": "application/vnd.ms-powerpoint",
-            //            "pptx":
-            //                "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "pptx":
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation",
             "rar": "application/vnd.rar",
             "rtf": "application/rtf",
             "sh": "application/x-sh",
