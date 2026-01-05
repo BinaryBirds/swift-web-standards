@@ -112,7 +112,7 @@ struct SwiftCssTests {
                     Width(200.px)
                 }
             }
-            Media(.screen && .maxWidth("599px")) {
+            Media(.screen && .maxWidth(599.px)) {
                 Root {
                     Variable("size", "200px")
                 }
