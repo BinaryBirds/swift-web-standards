@@ -1,10 +1,10 @@
 public struct FontStyle: Property {
     public enum Value: String, Sendable {
-        /// The browser displays a normal font style. This is default
+        /// The browser displays a normal font style. This is default.
         case normal
-        /// The browser displays an italic font style
+        /// The browser displays an italic font style.
         case italic
-        /// The browser displays an oblique font style
+        /// The browser displays an oblique font style.
         case oblique
         /// Sets this property to its default value.
         case initial
@@ -16,7 +16,7 @@ public struct FontStyle: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the font style for text
+    /// Specifies the font style for text.
     public init(
         _ value: Value = .normal
     ) {

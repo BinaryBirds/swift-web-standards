@@ -1,6 +1,6 @@
 public struct BorderTopLeftRadius: Property {
     public enum Value: Sendable {
-        /// Defines the shape of the corners. Default value is 0. Read about length units
+        /// Defines the shape of the corners. Default value is 0. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct BorderTopLeftRadius: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Defines the radius of the border of the top-left corner
+    /// Defines the radius of the border of the top-left corner.
     public init(
         _ value: Value
     ) {

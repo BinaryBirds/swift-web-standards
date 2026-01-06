@@ -1,8 +1,8 @@
 public struct FontSizeAdjust: Property {
     public enum Value: Sendable {
-        /// Defines the aspect value to use
+        /// Defines the aspect value to use.
         case number(Double)
-        /// Default value. No font size adjustment
+        /// Default value. No font size adjustment.
         case none
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct FontSizeAdjust: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Preserves the readability of text when font fallback occurs
+    /// Preserves the readability of text when font fallback occurs.
     public init(
         _ value: Value = .none
     ) {

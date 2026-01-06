@@ -1,12 +1,12 @@
 public struct ColumnRuleWidth: Property {
     public enum Value: Sendable {
-        /// Default value. Defines a medium rule
+        /// Default value. Defines a medium rule.
         case medium
-        /// Defines a thin rule
+        /// Defines a thin rule.
         case thin
-        /// Defines a thick rule
+        /// Defines a thick rule.
         case thick
-        /// Specifies the width of the rule
+        /// Specifies the width of the rule.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -35,7 +35,7 @@ public struct ColumnRuleWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the width of the rule between columns
+    /// Specifies the width of the rule between columns.
     public init(
         _ value: Value = .medium
     ) {

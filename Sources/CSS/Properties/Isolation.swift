@@ -1,8 +1,8 @@
 public struct Isolation: Property {
     public enum Value: String, Sendable {
-        /// Default. A new stacking context is created only if one of the properties applied to the element requires it
+        /// Default. A new stacking context is created only if one of the properties applied to the element requires it.
         case auto
-        /// A new stacking context must be created
+        /// A new stacking context must be created.
         case isolate
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct Isolation: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Defines whether an element must create a new stacking content
+    /// Defines whether an element must create a new stacking content.
     public init(
         _ value: Value = .auto
     ) {

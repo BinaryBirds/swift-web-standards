@@ -23,7 +23,7 @@ public struct GridRowEnd: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies where to end the grid item
+    /// Specifies where to end the grid item.
     public init(
         _ value: Value
     ) {

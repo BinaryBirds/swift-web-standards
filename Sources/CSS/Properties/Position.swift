@@ -1,14 +1,14 @@
 public struct Position: Property {
     public enum Value: String, Sendable {
-        /// Default value. Elements render in order, as they appear in the document flow
+        /// Default value. Elements render in order, as they appear in the document flow.
         case `static`
-        /// The element is positioned relative to its first positioned (not static) ancestor element
+        /// The element is positioned relative to its first positioned (not static) ancestor element.
         case absolute
-        /// The element is positioned relative to the browser window
+        /// The element is positioned relative to the browser window.
         case fixed
-        /// The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position
+        /// The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position.
         case relative
-        /// The element is positioned based on the user's scroll position
+        /// The element is positioned based on the user's scroll position.
         /// A sticky element toggles between relative and fixed, depending on the scroll position.
         /// It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
         /// Note: Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix.
@@ -23,7 +23,7 @@ public struct Position: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the type of positioning method used for an element (static, relative, absolute or fixed)
+    /// Specifies the type of positioning method used for an element (static, relative, absolute or fixed).
     public init(
         _ value: Value = .static
     ) {

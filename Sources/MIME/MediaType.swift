@@ -1,4 +1,4 @@
-/// type/subtype;parameter=value
+/// type/subtype;parameter=value.
 public struct MediaType: Sendable, Equatable, Codable, Hashable {
 
     public enum Source: String, Sendable, Equatable, Codable, Hashable {

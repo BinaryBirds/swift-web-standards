@@ -1,6 +1,6 @@
 public struct FontFeatureSettings: Property {
     public enum Value: Sendable {
-        /// Default. Use the default settings to lay out text
+        /// Default. Use the default settings to lay out text.
         case normal
         /// Format: string [1|0|on|off] Always a string of 4 ASCII characters.
         case featureValue(String)
@@ -19,7 +19,7 @@ public struct FontFeatureSettings: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Allows control over advanced typographic features in OpenType fonts
+    /// Allows control over advanced typographic features in OpenType fonts.
     public init(
         _ value: Value = .normal
     ) {

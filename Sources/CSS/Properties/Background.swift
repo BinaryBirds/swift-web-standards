@@ -51,7 +51,7 @@ public struct Background: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for all the background-* properties
+    /// A shorthand property for all the background-* properties.
     public init(
         _ value: Value
     ) {
@@ -60,7 +60,7 @@ public struct Background: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for all the background-* properties
+    /// A shorthand property for all the background-* properties.
     public init(
         _ color: CSSColorValue? = nil,
         image: BackgroundImage.Value? = nil,

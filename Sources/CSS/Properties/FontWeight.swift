@@ -1,14 +1,14 @@
 public struct FontWeight: Property {
     public enum Value: String, Sendable {
-        /// Defines normal characters. This is default
+        /// Defines normal characters. This is default.
         case normal
-        /// Defines thick characters
+        /// Defines thick characters.
         case bold
-        /// Defines thicker characters
+        /// Defines thicker characters.
         case bolder
-        /// Defines lighter characters
+        /// Defines lighter characters.
         case lighter
-        /// Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold
+        /// Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold.
         // @TODO: better numeric value support
         case w100
         case w200
@@ -29,7 +29,7 @@ public struct FontWeight: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the weight of a font
+    /// Specifies the weight of a font.
     public init(
         _ value: Value
     ) {

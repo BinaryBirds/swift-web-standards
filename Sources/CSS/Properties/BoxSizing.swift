@@ -1,8 +1,8 @@
 public struct BoxSizing: Property {
     public enum Value: String, Sendable {
-        /// Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included
+        /// Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included.
         case contentBox = "content-box"
-        /// The width and height properties (and min/max properties) includes content, padding and border
+        /// The width and height properties (and min/max properties) includes content, padding and border.
         case borderBox = "border-box"
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct BoxSizing: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Defines how the width and height of an element are calculated: should they include padding and borders, or not
+    /// Defines how the width and height of an element are calculated: should they include padding and borders, or not.
     public init(
         _ value: Value = .contentBox
     ) {

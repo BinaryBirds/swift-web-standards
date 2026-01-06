@@ -1,10 +1,10 @@
 public struct Hyphens: Property {
     public enum Value: String, Sendable {
-        /// Words are not hyphenated
+        /// Words are not hyphenated.
         case none
-        /// Default. Words are only hyphenated at &hyphen; or &shy; (if needed)
+        /// Default. Words are only hyphenated at &hyphen; or &shy; (if needed).
         case manual
-        /// Words are hyphenated where the algorithm is deciding (if needed)
+        /// Words are hyphenated where the algorithm is deciding (if needed).
         case auto
         /// Sets this property to its default value.
         case initial
@@ -16,7 +16,7 @@ public struct Hyphens: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets how to split words to improve the layout of paragraphs
+    /// Sets how to split words to improve the layout of paragraphs.
     public init(
         _ value: Value = .manual
     ) {

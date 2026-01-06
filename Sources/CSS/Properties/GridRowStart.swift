@@ -19,7 +19,7 @@ public struct GridRowStart: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies where to start the grid item
+    /// Specifies where to start the grid item.
     public init(
         _ value: Value = .auto
     ) {

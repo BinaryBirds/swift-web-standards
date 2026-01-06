@@ -1,8 +1,8 @@
 public struct AnimationPlayState: Property {
     public enum Value: String, Sendable {
-        /// Specifies that the animation is paused
+        /// Specifies that the animation is paused.
         case paused
-        /// Default value. Specifies that the animation is running
+        /// Default value. Specifies that the animation is running.
         case running
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct AnimationPlayState: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies whether the animation is running or paused
+    /// Specifies whether the animation is running or paused.
     public init(
         _ value: Value = .running
     ) {

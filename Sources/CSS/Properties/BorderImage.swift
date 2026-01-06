@@ -43,7 +43,7 @@ public struct BorderImage: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for all the border-image-* properties
+    /// A shorthand property for all the border-image-* properties.
     public init(
         _ value: Value
     ) {
@@ -52,7 +52,7 @@ public struct BorderImage: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for all the border-image-* properties
+    /// A shorthand property for all the border-image-* properties.
     public init(
         _ source: BorderImageSource.Value,
         slice: BorderImageSlice.Value? = nil,

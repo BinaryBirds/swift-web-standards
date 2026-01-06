@@ -1,8 +1,8 @@
 public struct BorderImageSlice: Property {
     public enum Value: Sendable {
-        /// The number(s) represent pixels for raster images or coordinates for vector images
+        /// The number(s) represent pixels for raster images or coordinates for vector images.
         case number(UnitRepresentable)
-        /// Causes the middle part of the image to be displayed
+        /// Causes the middle part of the image to be displayed.
         case fill
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct BorderImageSlice: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies how to slice the border image
+    /// Specifies how to slice the border image.
     public init(
         _ value: Value
     ) {

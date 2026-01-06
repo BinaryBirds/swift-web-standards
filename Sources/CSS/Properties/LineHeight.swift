@@ -1,8 +1,8 @@
 public struct LineHeight: Property {
     public enum Value: Sendable {
-        /// A normal line height. This is default
+        /// A normal line height. This is default.
         case normal
-        /// A number that will be multiplied with the current font-size to set the line height
+        /// A number that will be multiplied with the current font-size to set the line height.
         case number(Double)
         /// A fixed line height in px, pt, cm, etc.
         case length(UnitRepresentable)
@@ -31,7 +31,7 @@ public struct LineHeight: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the line height
+    /// Sets the line height.
     public init(
         _ value: Value = .normal
     ) {

@@ -1,10 +1,10 @@
 public struct GridColumnEnd: Property {
     public enum Value: Sendable {
-        /// Default value. The item will span one column
+        /// Default value. The item will span one column.
         case auto
-        /// Specifies the number of columns the item will span
+        /// Specifies the number of columns the item will span.
         case span(Int)
-        /// Specifies on which column to end the display of the item
+        /// Specifies on which column to end the display of the item.
         case columnLine(Int)
 
         var rawValue: String {
@@ -23,7 +23,7 @@ public struct GridColumnEnd: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies where to end the grid item
+    /// Specifies where to end the grid item.
     public init(
         _ value: Value
     ) {

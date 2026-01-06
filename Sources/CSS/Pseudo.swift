@@ -1,4 +1,4 @@
-/// https://www.w3schools.com/cssref/css_selectors.asp
+/// https://www.w3schools.com/cssref/css_selectors.asp.
 public enum Pseudo: Sendable {
     case active
     case after

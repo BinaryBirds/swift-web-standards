@@ -4,7 +4,7 @@ public struct BorderRightColor: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the color of the right border
+    /// Sets the color of the right border.
     public init(_ value: CSSColorValue) {
         self.name = "border-right-color"
         self.value = value.rawValue

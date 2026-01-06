@@ -1,12 +1,12 @@
 public struct Clear: Property {
     public enum Value: String, Sendable {
-        /// Default. The element is not pushed below left or right floated elements
+        /// Default. The element is not pushed below left or right floated elements.
         case none
-        /// The element is pushed below left floated elements
+        /// The element is pushed below left floated elements.
         case left
-        /// The element is pushed below right floated elements
+        /// The element is pushed below right floated elements.
         case right
-        /// The element is pushed below both left and right floated elements
+        /// The element is pushed below both left and right floated elements.
         case both
         /// Sets this property to its default value.
         case initial
@@ -18,7 +18,7 @@ public struct Clear: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies what should happen with the element that is next to a floating element
+    /// Specifies what should happen with the element that is next to a floating element.
     public init(
         _ value: Value
     ) {

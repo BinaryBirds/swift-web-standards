@@ -1,8 +1,8 @@
 public struct ListStyleImage: Property {
     public enum Value: Sendable {
-        /// A normal line height. This is default
+        /// A normal line height. This is default.
         case none
-        /// A number that will be multiplied with the current font-size to set the line height
+        /// A number that will be multiplied with the current font-size to set the line height.
         case url(String)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct ListStyleImage: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies an image as the list-item marker
+    /// Specifies an image as the list-item marker.
     public init(
         _ value: Value
     ) {

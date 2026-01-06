@@ -1,6 +1,6 @@
 public struct OutlineColor: Property {
     public enum Value: Sendable {
-        /// Performs a color inversion. This ensures that the outline is visible, regardless of color background. This is default
+        /// Performs a color inversion. This ensures that the outline is visible, regardless of color background. This is default.
         case invert
         /// Specifies the color of the outline. Look at CSS Color Values for a complete list of possible color values.
         case color(CSSColor)
@@ -27,7 +27,7 @@ public struct OutlineColor: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the color of an outline
+    /// Sets the color of an outline.
     public init(
         _ value: Value = .invert
     ) {

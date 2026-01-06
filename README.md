@@ -283,7 +283,7 @@ print(StylesheetRenderer(minify: false, indent: 4).render(css))
 
 ## Todo
 
-- [ ] Finish MIME lib (extension detector, DSL)
+- [ ] Fix scoring issue in MediaType detector
 - [ ] Proper CSS renderer (minify)
 - [ ] Security for HTML => proper escaping
 - [ ] Get rid of public enums or use resilient enums

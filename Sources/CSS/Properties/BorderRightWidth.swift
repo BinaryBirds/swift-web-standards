@@ -4,7 +4,7 @@ public struct BorderRightWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the width of the right border
+    /// Sets the width of the right border.
     public init(_ value: BorderWidth.Value = .medium) {
         self.name = "border-right-width"
         self.value = value.rawValue

@@ -1,4 +1,4 @@
-/// https://www.w3schools.com/cssref/
+/// https://www.w3schools.com/cssref/.
 public protocol Property: Sendable {
 
     var name: String { get }
