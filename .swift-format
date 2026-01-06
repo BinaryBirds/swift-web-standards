@@ -40,7 +40,7 @@
     "NoCasesWithOnlyFallthrough": true,
     "NoEmptyTrailingClosureParentheses": true,
     "NoLabelsInCasePatterns": true,
-    "NoLeadingUnderscores": true,
+    "NoLeadingUnderscores": false,
     "NoParensAroundConditions": true,
     "NoPlaygroundLiterals": true,
     "NoVoidReturnOnFunctionSignature": true,
