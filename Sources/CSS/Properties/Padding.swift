@@ -25,7 +25,7 @@ public struct Padding: Property {
 
     /// Sets all the Padding properties in one declaration.
     public init(
-        _ value: Value = .length(0)
+        _ value: Value
     ) {
         self.name = "padding"
         self.value = value.rawValue
@@ -37,8 +37,8 @@ public struct Padding: Property {
     }
 
     public init(
-        horizontal: Value = .length(0),
-        vertical: Value = .length(0)
+        horizontal: Value,
+        vertical: Value
     ) {
         self.name = "padding"
         self.value = horizontal.rawValue + " " + vertical.rawValue
@@ -53,10 +53,10 @@ public struct Padding: Property {
     }
 
     public init(
-        top: Value = .length(0),
-        right: Value = .length(0),
-        bottom: Value = .length(0),
-        left: Value = .length(0)
+        top: Value,
+        right: Value,
+        bottom: Value,
+        left: Value
     ) {
         self.name = "padding"
         self.value =

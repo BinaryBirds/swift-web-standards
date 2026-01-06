@@ -7,9 +7,26 @@ struct FontSynthesisTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FontSynthesis(value1)
-        // assertProperty(property1, name: "font-synthesis", value: value1.rawValue)
+        let property = FontSynthesis()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FontSynthesis()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

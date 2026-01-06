@@ -7,9 +7,26 @@ struct TransitionTimingFunctionTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = TransitionTimingFunction(value1)
-        // assertProperty(property1, name: "transition-timing-function", value: value1.rawValue)
+        let property = TransitionTimingFunction()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = TransitionTimingFunction()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

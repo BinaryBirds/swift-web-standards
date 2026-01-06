@@ -7,15 +7,26 @@ struct GridGapTests {
 
     @Test
     func initializers() {
-        //        let param1_1 = GridRowGap.Value..length(let value):
-        //        let param1_2 = GridColumnGap.Value..length(let value):
-        //        let property1 = GridGap(param1_1, param1_2)
-        //        assertProperty(property1, name: "grid-gap")
-        //
-        //        let param2_1 = 1.px
-        //        let param2_2 = 1.px
-        //        let property2 = GridGap(param2_1, param2_2)
-        //        assertProperty(property2, name: "grid-gap")
+        let property = GridGap(.length(0), .length(0))
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = GridGap(.length(0), .length(0))
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

@@ -7,13 +7,26 @@ struct OrderTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = Order(value1)
-        // assertProperty(property1, name: "order", value: value1.rawValue)
+        let property = Order(.number(2))
 
-        // let value2 = 1
-        // let property2 = Order(value2)
-        // assertProperty(property2, name: "order", value: String(value2))
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = Order(.number(2))
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

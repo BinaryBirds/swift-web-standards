@@ -7,9 +7,26 @@ struct BorderRadiusTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = BorderRadius(value1)
-        // assertProperty(property1, name: "border-radius", value: value1.rawValue)
+        let property = BorderRadius(.initial)
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = BorderRadius(.initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

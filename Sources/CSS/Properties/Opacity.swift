@@ -25,7 +25,7 @@ public struct Opacity: Property {
 
     /// Sets the opacity level for an element.
     public init(
-        _ value: Value = .number(1)
+        _ value: Value
     ) {
         self.name = "opacity"
         self.value = value.rawValue

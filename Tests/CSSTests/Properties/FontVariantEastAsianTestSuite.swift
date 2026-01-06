@@ -7,9 +7,26 @@ struct FontVariantEastAsianTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FontVariantEastAsian(value1)
-        // assertProperty(property1, name: "font-variant-east-asian", value: value1.rawValue)
+        let property = FontVariantEastAsian()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FontVariantEastAsian()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

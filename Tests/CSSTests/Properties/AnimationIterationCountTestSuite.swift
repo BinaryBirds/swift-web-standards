@@ -7,9 +7,26 @@ struct AnimationIterationCountTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = AnimationIterationCount(value1)
-        // assertProperty(property1, name: "animation-iteration-count", value: value1.rawValue)
+        let property = AnimationIterationCount()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = AnimationIterationCount()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

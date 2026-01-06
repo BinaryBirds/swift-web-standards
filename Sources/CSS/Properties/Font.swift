@@ -83,12 +83,12 @@ public struct Font: Property {
 
     /// A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties.
     public init(
-        _ style: FontStyle.Value,
-        _ variant: FontVariant.Value,
-        _ weight: FontWeight.Value,
-        _ size: FontSize.Value,
-        _ lineHeight: LineHeight.Value,
-        _ family: FontFamily.Value
+        style: FontStyle.Value,
+        variant: FontVariant.Value,
+        weight: FontWeight.Value,
+        size: FontSize.Value,
+        lineHeight: LineHeight.Value,
+        family: FontFamily.Value
     ) {
         self.init(.values(style, variant, weight, size, lineHeight, family))
     }

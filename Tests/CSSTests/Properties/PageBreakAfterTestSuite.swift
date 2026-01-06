@@ -7,9 +7,26 @@ struct PageBreakAfterTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = PageBreakAfter(value1)
-        // assertProperty(property1, name: "page-break-after", value: value1.rawValue)
+        let property = PageBreakAfter()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = PageBreakAfter()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

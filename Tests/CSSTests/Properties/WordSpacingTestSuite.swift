@@ -7,13 +7,26 @@ struct WordSpacingTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = WordSpacing(value1)
-        // assertProperty(property1, name: "word-spacing", value: value1.rawValue)
+        let property = WordSpacing()
 
-        // let value2 = 1.px
-        // let property2 = WordSpacing(value2)
-        // assertProperty(property2, name: "word-spacing", value: value2.rawValue)
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = WordSpacing()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

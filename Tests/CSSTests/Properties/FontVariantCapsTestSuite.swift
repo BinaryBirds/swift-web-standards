@@ -7,9 +7,26 @@ struct FontVariantCapsTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FontVariantCaps(value1)
-        // assertProperty(property1, name: "font-variant-caps", value: value1.rawValue)
+        let property = FontVariantCaps()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FontVariantCaps()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

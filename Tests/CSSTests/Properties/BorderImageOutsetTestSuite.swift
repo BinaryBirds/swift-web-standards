@@ -7,9 +7,26 @@ struct BorderImageOutsetTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = BorderImageOutset(value1)
-        // assertProperty(property1, name: "border-image-outset", value: value1.rawValue)
+        let property = BorderImageOutset(.initial)
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = BorderImageOutset(.initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

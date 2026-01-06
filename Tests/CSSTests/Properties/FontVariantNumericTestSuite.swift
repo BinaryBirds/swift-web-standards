@@ -7,9 +7,26 @@ struct FontVariantNumericTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FontVariantNumeric(value1)
-        // assertProperty(property1, name: "font-variant-numeric", value: value1.rawValue)
+        let property = FontVariantNumeric()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FontVariantNumeric()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

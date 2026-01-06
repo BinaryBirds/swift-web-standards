@@ -7,9 +7,26 @@ struct GridTemplateAreasTests {
 
     @Test
     func initializers() {
-        // let value1 = .none
-        // let property1 = GridTemplateAreas(value1)
-        // assertProperty(property1, name: "grid-template-areas", value: value1.rawValue)
+        let property = GridTemplateAreas()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = GridTemplateAreas()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

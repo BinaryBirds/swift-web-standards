@@ -7,9 +7,26 @@ struct MaskTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = Mask(value1)
-        // assertProperty(property1, name: "mask", value: value1.rawValue)
+        let property = Mask(.initial)
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = Mask(.initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

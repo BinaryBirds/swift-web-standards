@@ -7,13 +7,26 @@ struct FlexGrowTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FlexGrow(value1)
-        // assertProperty(property1, name: "flex-grow", value: value1.rawValue)
+        let property = FlexGrow(.initial)
 
-        // let value2 = 1
-        // let property2 = FlexGrow(value2)
-        // assertProperty(property2, name: "flex-grow", value: String(value2))
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FlexGrow(.initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }
