@@ -63,7 +63,7 @@ public struct StylesheetRenderer {
 
     // MARK: - helpers
 
-    private func renderProperty(
+    func renderProperty(
         _ property: any Property,
         level: Int = 0
     ) -> String {
@@ -72,7 +72,7 @@ public struct StylesheetRenderer {
             + (property.isImportant ? " !important" : "")
     }
 
-    private func renderSelector(
+    func renderSelector(
         _ selector: Selector,
         level: Int = 0
     ) -> String {
