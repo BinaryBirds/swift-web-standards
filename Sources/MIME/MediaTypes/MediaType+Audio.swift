@@ -200,14 +200,16 @@ extension MediaType {
         public static func _1dInterleavedParityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "1d-interleaved-parityfec"
+                subtype: "1d-interleaved-parityfec",
+                source: .iana
             )
         }
 
         public static func _32kadpcm() -> MediaType {
             .init(
                 type: name,
-                subtype: "32kadpcm"
+                subtype: "32kadpcm",
+                source: .iana
             )
         }
 
@@ -217,14 +219,16 @@ extension MediaType {
                 subtype: "3gpp",
                 possibleExtensions: [
                     "3gpp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func _3gpp2() -> MediaType {
             .init(
                 type: name,
-                subtype: "3gpp2"
+                subtype: "3gpp2",
+                source: .iana
             )
         }
 
@@ -235,14 +239,16 @@ extension MediaType {
                 possibleExtensions: [
                     "adts",
                     "aac",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func ac3() -> MediaType {
             .init(
                 type: name,
-                subtype: "ac3"
+                subtype: "ac3",
+                source: .iana
             )
         }
 
@@ -252,7 +258,8 @@ extension MediaType {
                 subtype: "adpcm",
                 possibleExtensions: [
                     "adp"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -262,56 +269,64 @@ extension MediaType {
                 subtype: "amr",
                 possibleExtensions: [
                     "amr"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func amrWb() -> MediaType {
             .init(
                 type: name,
-                subtype: "amr-wb"
+                subtype: "amr-wb",
+                source: .iana
             )
         }
 
         public static func amrWbPlus() -> MediaType {
             .init(
                 type: name,
-                subtype: "amr-wb+"
+                subtype: "amr-wb+",
+                source: .iana
             )
         }
 
         public static func aptx() -> MediaType {
             .init(
                 type: name,
-                subtype: "aptx"
+                subtype: "aptx",
+                source: .iana
             )
         }
 
         public static func asc() -> MediaType {
             .init(
                 type: name,
-                subtype: "asc"
+                subtype: "asc",
+                source: .iana
             )
         }
 
         public static func atracAdvancedLossless() -> MediaType {
             .init(
                 type: name,
-                subtype: "atrac-advanced-lossless"
+                subtype: "atrac-advanced-lossless",
+                source: .iana
             )
         }
 
         public static func atracX() -> MediaType {
             .init(
                 type: name,
-                subtype: "atrac-x"
+                subtype: "atrac-x",
+                source: .iana
             )
         }
 
         public static func atrac3() -> MediaType {
             .init(
                 type: name,
-                subtype: "atrac3"
+                subtype: "atrac3",
+                source: .iana
             )
         }
 
@@ -322,441 +337,504 @@ extension MediaType {
                 possibleExtensions: [
                     "au",
                     "snd",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func bv16() -> MediaType {
             .init(
                 type: name,
-                subtype: "bv16"
+                subtype: "bv16",
+                source: .iana
             )
         }
 
         public static func bv32() -> MediaType {
             .init(
                 type: name,
-                subtype: "bv32"
+                subtype: "bv32",
+                source: .iana
             )
         }
 
         public static func clearmode() -> MediaType {
             .init(
                 type: name,
-                subtype: "clearmode"
+                subtype: "clearmode",
+                source: .iana
             )
         }
 
         public static func cn() -> MediaType {
             .init(
                 type: name,
-                subtype: "cn"
+                subtype: "cn",
+                source: .iana
             )
         }
 
         public static func dat12() -> MediaType {
             .init(
                 type: name,
-                subtype: "dat12"
+                subtype: "dat12",
+                source: .iana
             )
         }
 
         public static func dls() -> MediaType {
             .init(
                 type: name,
-                subtype: "dls"
+                subtype: "dls",
+                source: .iana
             )
         }
 
         public static func dsrEs201108() -> MediaType {
             .init(
                 type: name,
-                subtype: "dsr-es201108"
+                subtype: "dsr-es201108",
+                source: .iana
             )
         }
 
         public static func dsrEs202050() -> MediaType {
             .init(
                 type: name,
-                subtype: "dsr-es202050"
+                subtype: "dsr-es202050",
+                source: .iana
             )
         }
 
         public static func dsrEs202211() -> MediaType {
             .init(
                 type: name,
-                subtype: "dsr-es202211"
+                subtype: "dsr-es202211",
+                source: .iana
             )
         }
 
         public static func dsrEs202212() -> MediaType {
             .init(
                 type: name,
-                subtype: "dsr-es202212"
+                subtype: "dsr-es202212",
+                source: .iana
             )
         }
 
         public static func dv() -> MediaType {
             .init(
                 type: name,
-                subtype: "dv"
+                subtype: "dv",
+                source: .iana
             )
         }
 
         public static func dvi4() -> MediaType {
             .init(
                 type: name,
-                subtype: "dvi4"
+                subtype: "dvi4",
+                source: .iana
             )
         }
 
         public static func eac3() -> MediaType {
             .init(
                 type: name,
-                subtype: "eac3"
+                subtype: "eac3",
+                source: .iana
             )
         }
 
         public static func encaprtp() -> MediaType {
             .init(
                 type: name,
-                subtype: "encaprtp"
+                subtype: "encaprtp",
+                source: .iana
             )
         }
 
         public static func evrc() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrc"
+                subtype: "evrc",
+                source: .iana
             )
         }
 
         public static func evrcQcp() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrc-qcp"
+                subtype: "evrc-qcp",
+                source: .iana
             )
         }
 
         public static func evrc0() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrc0"
+                subtype: "evrc0",
+                source: .iana
             )
         }
 
         public static func evrc1() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrc1"
+                subtype: "evrc1",
+                source: .iana
             )
         }
 
         public static func evrcb() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcb"
+                subtype: "evrcb",
+                source: .iana
             )
         }
 
         public static func evrcb0() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcb0"
+                subtype: "evrcb0",
+                source: .iana
             )
         }
 
         public static func evrcb1() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcb1"
+                subtype: "evrcb1",
+                source: .iana
             )
         }
 
         public static func evrcnw() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcnw"
+                subtype: "evrcnw",
+                source: .iana
             )
         }
 
         public static func evrcnw0() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcnw0"
+                subtype: "evrcnw0",
+                source: .iana
             )
         }
 
         public static func evrcnw1() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcnw1"
+                subtype: "evrcnw1",
+                source: .iana
             )
         }
 
         public static func evrcwb() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcwb"
+                subtype: "evrcwb",
+                source: .iana
             )
         }
 
         public static func evrcwb0() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcwb0"
+                subtype: "evrcwb0",
+                source: .iana
             )
         }
 
         public static func evrcwb1() -> MediaType {
             .init(
                 type: name,
-                subtype: "evrcwb1"
+                subtype: "evrcwb1",
+                source: .iana
             )
         }
 
         public static func evs() -> MediaType {
             .init(
                 type: name,
-                subtype: "evs"
+                subtype: "evs",
+                source: .iana
             )
         }
 
         public static func flac() -> MediaType {
             .init(
                 type: name,
-                subtype: "flac"
+                subtype: "flac",
+                source: .iana
             )
         }
 
         public static func flexfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "flexfec"
+                subtype: "flexfec",
+                source: .iana
             )
         }
 
         public static func fwdred() -> MediaType {
             .init(
                 type: name,
-                subtype: "fwdred"
+                subtype: "fwdred",
+                source: .iana
             )
         }
 
         public static func g7110() -> MediaType {
             .init(
                 type: name,
-                subtype: "g711-0"
+                subtype: "g711-0",
+                source: .iana
             )
         }
 
         public static func g719() -> MediaType {
             .init(
                 type: name,
-                subtype: "g719"
+                subtype: "g719",
+                source: .iana
             )
         }
 
         public static func g722() -> MediaType {
             .init(
                 type: name,
-                subtype: "g722"
+                subtype: "g722",
+                source: .iana
             )
         }
 
         public static func g7221() -> MediaType {
             .init(
                 type: name,
-                subtype: "g7221"
+                subtype: "g7221",
+                source: .iana
             )
         }
 
         public static func g723() -> MediaType {
             .init(
                 type: name,
-                subtype: "g723"
+                subtype: "g723",
+                source: .iana
             )
         }
 
         public static func g72616() -> MediaType {
             .init(
                 type: name,
-                subtype: "g726-16"
+                subtype: "g726-16",
+                source: .iana
             )
         }
 
         public static func g72624() -> MediaType {
             .init(
                 type: name,
-                subtype: "g726-24"
+                subtype: "g726-24",
+                source: .iana
             )
         }
 
         public static func g72632() -> MediaType {
             .init(
                 type: name,
-                subtype: "g726-32"
+                subtype: "g726-32",
+                source: .iana
             )
         }
 
         public static func g72640() -> MediaType {
             .init(
                 type: name,
-                subtype: "g726-40"
+                subtype: "g726-40",
+                source: .iana
             )
         }
 
         public static func g728() -> MediaType {
             .init(
                 type: name,
-                subtype: "g728"
+                subtype: "g728",
+                source: .iana
             )
         }
 
         public static func g729() -> MediaType {
             .init(
                 type: name,
-                subtype: "g729"
+                subtype: "g729",
+                source: .iana
             )
         }
 
         public static func g7291() -> MediaType {
             .init(
                 type: name,
-                subtype: "g7291"
+                subtype: "g7291",
+                source: .iana
             )
         }
 
         public static func g729d() -> MediaType {
             .init(
                 type: name,
-                subtype: "g729d"
+                subtype: "g729d",
+                source: .iana
             )
         }
 
         public static func g729e() -> MediaType {
             .init(
                 type: name,
-                subtype: "g729e"
+                subtype: "g729e",
+                source: .iana
             )
         }
 
         public static func gsm() -> MediaType {
             .init(
                 type: name,
-                subtype: "gsm"
+                subtype: "gsm",
+                source: .iana
             )
         }
 
         public static func gsmEfr() -> MediaType {
             .init(
                 type: name,
-                subtype: "gsm-efr"
+                subtype: "gsm-efr",
+                source: .iana
             )
         }
 
         public static func gsmHr08() -> MediaType {
             .init(
                 type: name,
-                subtype: "gsm-hr-08"
+                subtype: "gsm-hr-08",
+                source: .iana
             )
         }
 
         public static func ilbc() -> MediaType {
             .init(
                 type: name,
-                subtype: "ilbc"
+                subtype: "ilbc",
+                source: .iana
             )
         }
 
         public static func ipMrV25() -> MediaType {
             .init(
                 type: name,
-                subtype: "ip-mr_v2.5"
+                subtype: "ip-mr_v2.5",
+                source: .iana
             )
         }
 
         public static func isac() -> MediaType {
             .init(
                 type: name,
-                subtype: "isac"
+                subtype: "isac",
+                source: .apache
             )
         }
 
         public static func l16() -> MediaType {
             .init(
                 type: name,
-                subtype: "l16"
+                subtype: "l16",
+                source: .iana
             )
         }
 
         public static func l20() -> MediaType {
             .init(
                 type: name,
-                subtype: "l20"
+                subtype: "l20",
+                source: .iana
             )
         }
 
         public static func l24() -> MediaType {
             .init(
                 type: name,
-                subtype: "l24"
+                subtype: "l24",
+                source: .iana
             )
         }
 
         public static func l8() -> MediaType {
             .init(
                 type: name,
-                subtype: "l8"
+                subtype: "l8",
+                source: .iana
             )
         }
 
         public static func lpc() -> MediaType {
             .init(
                 type: name,
-                subtype: "lpc"
+                subtype: "lpc",
+                source: .iana
             )
         }
 
         public static func matroska() -> MediaType {
             .init(
                 type: name,
-                subtype: "matroska"
+                subtype: "matroska",
+                source: .iana
             )
         }
 
         public static func melp() -> MediaType {
             .init(
                 type: name,
-                subtype: "melp"
+                subtype: "melp",
+                source: .iana
             )
         }
 
         public static func melp1200() -> MediaType {
             .init(
                 type: name,
-                subtype: "melp1200"
+                subtype: "melp1200",
+                source: .iana
             )
         }
 
         public static func melp2400() -> MediaType {
             .init(
                 type: name,
-                subtype: "melp2400"
+                subtype: "melp2400",
+                source: .iana
             )
         }
 
         public static func melp600() -> MediaType {
             .init(
                 type: name,
-                subtype: "melp600"
+                subtype: "melp600",
+                source: .iana
             )
         }
 
         public static func mhas() -> MediaType {
             .init(
                 type: name,
-                subtype: "mhas"
+                subtype: "mhas",
+                source: .iana
             )
         }
 
@@ -769,14 +847,16 @@ extension MediaType {
                     "midi",
                     "kar",
                     "rmi",
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func midiClip() -> MediaType {
             .init(
                 type: name,
-                subtype: "midi-clip"
+                subtype: "midi-clip",
+                source: .iana
             )
         }
 
@@ -786,7 +866,8 @@ extension MediaType {
                 subtype: "mobile-xmf",
                 possibleExtensions: [
                     "mxmf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -808,28 +889,32 @@ extension MediaType {
                     "m4a",
                     "mp4a",
                     "m4b",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mp4aLatm() -> MediaType {
             .init(
                 type: name,
-                subtype: "mp4a-latm"
+                subtype: "mp4a-latm",
+                source: .iana
             )
         }
 
         public static func mpa() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpa"
+                subtype: "mpa",
+                source: .iana
             )
         }
 
         public static func mpaRobust() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpa-robust"
+                subtype: "mpa-robust",
+                source: .iana
             )
         }
 
@@ -844,21 +929,24 @@ extension MediaType {
                     "mp3",
                     "m2a",
                     "m3a",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mpeg4Generic() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpeg4-generic"
+                subtype: "mpeg4-generic",
+                source: .iana
             )
         }
 
         public static func musepack() -> MediaType {
             .init(
                 type: name,
-                subtype: "musepack"
+                subtype: "musepack",
+                source: .apache
             )
         }
 
@@ -871,105 +959,120 @@ extension MediaType {
                     "ogg",
                     "spx",
                     "opus",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func opus() -> MediaType {
             .init(
                 type: name,
-                subtype: "opus"
+                subtype: "opus",
+                source: .iana
             )
         }
 
         public static func parityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "parityfec"
+                subtype: "parityfec",
+                source: .iana
             )
         }
 
         public static func pcma() -> MediaType {
             .init(
                 type: name,
-                subtype: "pcma"
+                subtype: "pcma",
+                source: .iana
             )
         }
 
         public static func pcmaWb() -> MediaType {
             .init(
                 type: name,
-                subtype: "pcma-wb"
+                subtype: "pcma-wb",
+                source: .iana
             )
         }
 
         public static func pcmu() -> MediaType {
             .init(
                 type: name,
-                subtype: "pcmu"
+                subtype: "pcmu",
+                source: .iana
             )
         }
 
         public static func pcmuWb() -> MediaType {
             .init(
                 type: name,
-                subtype: "pcmu-wb"
+                subtype: "pcmu-wb",
+                source: .iana
             )
         }
 
         public static func prsSid() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.sid"
+                subtype: "prs.sid",
+                source: .iana
             )
         }
 
         public static func qcelp() -> MediaType {
             .init(
                 type: name,
-                subtype: "qcelp"
+                subtype: "qcelp",
+                source: .iana
             )
         }
 
         public static func raptorfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "raptorfec"
+                subtype: "raptorfec",
+                source: .iana
             )
         }
 
         public static func red() -> MediaType {
             .init(
                 type: name,
-                subtype: "red"
+                subtype: "red",
+                source: .iana
             )
         }
 
         public static func rtpEncAescm128() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtp-enc-aescm128"
+                subtype: "rtp-enc-aescm128",
+                source: .iana
             )
         }
 
         public static func rtpMidi() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtp-midi"
+                subtype: "rtp-midi",
+                source: .iana
             )
         }
 
         public static func rtploopback() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtploopback"
+                subtype: "rtploopback",
+                source: .iana
             )
         }
 
         public static func rtx() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtx"
+                subtype: "rtx",
+                source: .iana
             )
         }
 
@@ -979,14 +1082,16 @@ extension MediaType {
                 subtype: "s3m",
                 possibleExtensions: [
                     "s3m"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func scip() -> MediaType {
             .init(
                 type: name,
-                subtype: "scip"
+                subtype: "scip",
+                source: .iana
             )
         }
 
@@ -996,196 +1101,224 @@ extension MediaType {
                 subtype: "silk",
                 possibleExtensions: [
                     "sil"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func smv() -> MediaType {
             .init(
                 type: name,
-                subtype: "smv"
+                subtype: "smv",
+                source: .iana
             )
         }
 
         public static func smvQcp() -> MediaType {
             .init(
                 type: name,
-                subtype: "smv-qcp"
+                subtype: "smv-qcp",
+                source: .iana
             )
         }
 
         public static func smv0() -> MediaType {
             .init(
                 type: name,
-                subtype: "smv0"
+                subtype: "smv0",
+                source: .iana
             )
         }
 
         public static func sofa() -> MediaType {
             .init(
                 type: name,
-                subtype: "sofa"
+                subtype: "sofa",
+                source: .iana
             )
         }
 
         public static func spMidi() -> MediaType {
             .init(
                 type: name,
-                subtype: "sp-midi"
+                subtype: "sp-midi",
+                source: .iana
             )
         }
 
         public static func speex() -> MediaType {
             .init(
                 type: name,
-                subtype: "speex"
+                subtype: "speex",
+                source: .iana
             )
         }
 
         public static func t140c() -> MediaType {
             .init(
                 type: name,
-                subtype: "t140c"
+                subtype: "t140c",
+                source: .iana
             )
         }
 
         public static func t38() -> MediaType {
             .init(
                 type: name,
-                subtype: "t38"
+                subtype: "t38",
+                source: .iana
             )
         }
 
         public static func telephoneEvent() -> MediaType {
             .init(
                 type: name,
-                subtype: "telephone-event"
+                subtype: "telephone-event",
+                source: .iana
             )
         }
 
         public static func tetraAcelp() -> MediaType {
             .init(
                 type: name,
-                subtype: "tetra_acelp"
+                subtype: "tetra_acelp",
+                source: .iana
             )
         }
 
         public static func tetraAcelpBb() -> MediaType {
             .init(
                 type: name,
-                subtype: "tetra_acelp_bb"
+                subtype: "tetra_acelp_bb",
+                source: .iana
             )
         }
 
         public static func tone() -> MediaType {
             .init(
                 type: name,
-                subtype: "tone"
+                subtype: "tone",
+                source: .iana
             )
         }
 
         public static func tsvcis() -> MediaType {
             .init(
                 type: name,
-                subtype: "tsvcis"
+                subtype: "tsvcis",
+                source: .iana
             )
         }
 
         public static func uemclip() -> MediaType {
             .init(
                 type: name,
-                subtype: "uemclip"
+                subtype: "uemclip",
+                source: .iana
             )
         }
 
         public static func ulpfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "ulpfec"
+                subtype: "ulpfec",
+                source: .iana
             )
         }
 
         public static func usac() -> MediaType {
             .init(
                 type: name,
-                subtype: "usac"
+                subtype: "usac",
+                source: .iana
             )
         }
 
         public static func vdvi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vdvi"
+                subtype: "vdvi",
+                source: .iana
             )
         }
 
         public static func vmrWb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vmr-wb"
+                subtype: "vmr-wb",
+                source: .iana
             )
         }
 
         public static func vnd3gppIufp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.iufp"
+                subtype: "vnd.3gpp.iufp",
+                source: .iana
             )
         }
 
         public static func vnd4sb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.4sb"
+                subtype: "vnd.4sb",
+                source: .iana
             )
         }
 
         public static func vndAudiokoz() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.audiokoz"
+                subtype: "vnd.audiokoz",
+                source: .iana
             )
         }
 
         public static func vndBlockfactFacta() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.blockfact.facta"
+                subtype: "vnd.blockfact.facta",
+                source: .iana
             )
         }
 
         public static func vndCelp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.celp"
+                subtype: "vnd.celp",
+                source: .iana
             )
         }
 
         public static func vndCiscoNse() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cisco.nse"
+                subtype: "vnd.cisco.nse",
+                source: .iana
             )
         }
 
         public static func vndCmlesRadioEvents() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cmles.radio-events"
+                subtype: "vnd.cmles.radio-events",
+                source: .iana
             )
         }
 
         public static func vndCnsAnp1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cns.anp1"
+                subtype: "vnd.cns.anp1",
+                source: .iana
             )
         }
 
         public static func vndCnsInf1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cns.inf1"
+                subtype: "vnd.cns.inf1",
+                source: .iana
             )
         }
 
@@ -1196,7 +1329,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uva",
                     "uvva",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1206,70 +1340,80 @@ extension MediaType {
                 subtype: "vnd.digital-winds",
                 possibleExtensions: [
                     "eol"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDlnaAdts() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dlna.adts"
+                subtype: "vnd.dlna.adts",
+                source: .iana
             )
         }
 
         public static func vndDolbyHeaac1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.heaac.1"
+                subtype: "vnd.dolby.heaac.1",
+                source: .iana
             )
         }
 
         public static func vndDolbyHeaac2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.heaac.2"
+                subtype: "vnd.dolby.heaac.2",
+                source: .iana
             )
         }
 
         public static func vndDolbyMlp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.mlp"
+                subtype: "vnd.dolby.mlp",
+                source: .iana
             )
         }
 
         public static func vndDolbyMps() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.mps"
+                subtype: "vnd.dolby.mps",
+                source: .iana
             )
         }
 
         public static func vndDolbyPl2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.pl2"
+                subtype: "vnd.dolby.pl2",
+                source: .iana
             )
         }
 
         public static func vndDolbyPl2x() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.pl2x"
+                subtype: "vnd.dolby.pl2x",
+                source: .iana
             )
         }
 
         public static func vndDolbyPl2z() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.pl2z"
+                subtype: "vnd.dolby.pl2z",
+                source: .iana
             )
         }
 
         public static func vndDolbyPulse1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.pulse.1"
+                subtype: "vnd.dolby.pulse.1",
+                source: .iana
             )
         }
 
@@ -1279,7 +1423,8 @@ extension MediaType {
                 subtype: "vnd.dra",
                 possibleExtensions: [
                     "dra"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1289,7 +1434,8 @@ extension MediaType {
                 subtype: "vnd.dts",
                 possibleExtensions: [
                     "dts"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1299,35 +1445,40 @@ extension MediaType {
                 subtype: "vnd.dts.hd",
                 possibleExtensions: [
                     "dtshd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDtsUhd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dts.uhd"
+                subtype: "vnd.dts.uhd",
+                source: .iana
             )
         }
 
         public static func vndDvbFile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.file"
+                subtype: "vnd.dvb.file",
+                source: .iana
             )
         }
 
         public static func vndEveradPlj() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.everad.plj"
+                subtype: "vnd.everad.plj",
+                source: .iana
             )
         }
 
         public static func vndHnsAudio() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hns.audio"
+                subtype: "vnd.hns.audio",
+                source: .iana
             )
         }
 
@@ -1337,7 +1488,8 @@ extension MediaType {
                 subtype: "vnd.lucent.voice",
                 possibleExtensions: [
                     "lvp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1347,21 +1499,24 @@ extension MediaType {
                 subtype: "vnd.ms-playready.media.pya",
                 possibleExtensions: [
                     "pya"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndNokiaMobileXmf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.mobile-xmf"
+                subtype: "vnd.nokia.mobile-xmf",
+                source: .iana
             )
         }
 
         public static func vndNortelVbk() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nortel.vbk"
+                subtype: "vnd.nortel.vbk",
+                source: .iana
             )
         }
 
@@ -1371,7 +1526,8 @@ extension MediaType {
                 subtype: "vnd.nuera.ecelp4800",
                 possibleExtensions: [
                     "ecelp4800"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1381,7 +1537,8 @@ extension MediaType {
                 subtype: "vnd.nuera.ecelp7470",
                 possibleExtensions: [
                     "ecelp7470"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1391,35 +1548,40 @@ extension MediaType {
                 subtype: "vnd.nuera.ecelp9600",
                 possibleExtensions: [
                     "ecelp9600"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndOctelSbc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.octel.sbc"
+                subtype: "vnd.octel.sbc",
+                source: .iana
             )
         }
 
         public static func vndPresonusMultitrack() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.presonus.multitrack"
+                subtype: "vnd.presonus.multitrack",
+                source: .iana
             )
         }
 
         public static func vndQcelp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.qcelp"
+                subtype: "vnd.qcelp",
+                source: .apache
             )
         }
 
         public static func vndRhetorex32kadpcm() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.rhetorex.32kadpcm"
+                subtype: "vnd.rhetorex.32kadpcm",
+                source: .iana
             )
         }
 
@@ -1429,7 +1591,8 @@ extension MediaType {
                 subtype: "vnd.rip",
                 possibleExtensions: [
                     "rip"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1443,14 +1606,16 @@ extension MediaType {
         public static func vndSealedmediaSoftsealMpeg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealedmedia.softseal.mpeg"
+                subtype: "vnd.sealedmedia.softseal.mpeg",
+                source: .iana
             )
         }
 
         public static func vndVmxCvsd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vmx.cvsd"
+                subtype: "vnd.vmx.cvsd",
+                source: .iana
             )
         }
 
@@ -1464,14 +1629,16 @@ extension MediaType {
         public static func vorbis() -> MediaType {
             .init(
                 type: name,
-                subtype: "vorbis"
+                subtype: "vorbis",
+                source: .iana
             )
         }
 
         public static func vorbisConfig() -> MediaType {
             .init(
                 type: name,
-                subtype: "vorbis-config"
+                subtype: "vorbis-config",
+                source: .iana
             )
         }
 
@@ -1501,7 +1668,8 @@ extension MediaType {
                 subtype: "webm",
                 possibleExtensions: [
                     "weba"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1511,7 +1679,8 @@ extension MediaType {
                 subtype: "x-aac",
                 possibleExtensions: [
                     "aac"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1523,7 +1692,8 @@ extension MediaType {
                     "aif",
                     "aiff",
                     "aifc",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1533,7 +1703,8 @@ extension MediaType {
                 subtype: "x-caf",
                 possibleExtensions: [
                     "caf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1543,7 +1714,8 @@ extension MediaType {
                 subtype: "x-flac",
                 possibleExtensions: [
                     "flac"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1553,7 +1725,8 @@ extension MediaType {
                 subtype: "x-m4a",
                 possibleExtensions: [
                     "m4a"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -1563,7 +1736,8 @@ extension MediaType {
                 subtype: "x-matroska",
                 possibleExtensions: [
                     "mka"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1573,7 +1747,8 @@ extension MediaType {
                 subtype: "x-mpegurl",
                 possibleExtensions: [
                     "m3u"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1583,7 +1758,8 @@ extension MediaType {
                 subtype: "x-ms-wax",
                 possibleExtensions: [
                     "wax"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1593,7 +1769,8 @@ extension MediaType {
                 subtype: "x-ms-wma",
                 possibleExtensions: [
                     "wma"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1604,7 +1781,8 @@ extension MediaType {
                 possibleExtensions: [
                     "ram",
                     "ra",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1614,7 +1792,8 @@ extension MediaType {
                 subtype: "x-pn-realaudio-plugin",
                 possibleExtensions: [
                     "rmp"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1624,14 +1803,16 @@ extension MediaType {
                 subtype: "x-realaudio",
                 possibleExtensions: [
                     "ra"
-                ]
+                ],
+                source: .nginx
             )
         }
 
         public static func xTta() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-tta"
+                subtype: "x-tta",
+                source: .apache
             )
         }
 
@@ -1641,7 +1822,8 @@ extension MediaType {
                 subtype: "x-wav",
                 possibleExtensions: [
                     "wav"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1651,7 +1833,8 @@ extension MediaType {
                 subtype: "xm",
                 possibleExtensions: [
                     "xm"
-                ]
+                ],
+                source: .apache
             )
         }
 

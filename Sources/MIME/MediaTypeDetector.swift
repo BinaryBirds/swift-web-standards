@@ -1,31 +1,62 @@
-public struct MediaTypeDetector {
+extension MediaType.Source {
 
-    public enum Source: Double {
-        case nginx = 10
-        case apache = 20
-        case `default` = 30
-        case iana = 40
+    // actually, these are priorities, not scores
+    var score: Double {
+        switch self {
+        case .iana: 40
+        case .unknown: 30
+        case .apache: 20
+        case .nginx: 10
+        }
     }
+}
+
+extension MediaType {
 
     // Source: https://github.com/broofa/mime-score
-    let defaultFacetScore: Double = 900
-    let facetScores: [String: Double] = [
-        "prs.": 100,
-        "x-": 200,
-        "x.": 300,
-        "vnd.": 400,
-    ]
+    var defaultFacetScore: Double { 900 }
+    var facetScores: [String: Double] {
+        [
+            "prs.": 100,
+            "x-": 200,
+            "x.": 300,
+            "vnd.": 400,
+        ]
+    }
 
-    // priorities, not scores
-    let typeScores: [String: Double] = [
-        "video": 4,
-        "audio": 3,
-        "font": 2,
-        "application": 1,
-    ]
+    var typeScores: [String: Double] {
+        [
+            "video": 4,
+            "audio": 3,
+            "font": 2,
+            "application": 1,
+        ]
+    }
+
+    var score: Double {
+        var score: Double = 0
+
+        var shouldAddDefaultFacetScore = true
+        for (key, value) in facetScores where subtype.rawValue.hasPrefix(key) {
+            shouldAddDefaultFacetScore = false
+            score += value
+        }
+        if shouldAddDefaultFacetScore {
+            score += defaultFacetScore
+        }
+
+        for (key, value) in typeScores where type == key {
+            score += value
+        }
+        let lengthScore = 1 - Double(rawValue.count) / 100
+        return score + source.score + lengthScore
+    }
+}
+
+public struct MediaTypeDetector {
 
     // MARK: -
-    
+
     var knownMediaTypes: [MediaType]
 
     public init(
@@ -39,12 +70,14 @@ public struct MediaTypeDetector {
     ) -> MediaType? {
         var type: MediaType?
         var currentScore: Double = 0
-        
-        let possibleMediaTypes = knownMediaTypes
+
+        let possibleMediaTypes =
+            knownMediaTypes
             .filter { $0.possibleExtensions.contains(ext) }
 
         for mediaType in possibleMediaTypes {
-            let newScore = getMIMEScore(for: mediaType.rawValue)
+            // TODO: fix this later, hotfix for detector tests
+            let newScore = mediaType.score - mediaType.source.score
             if type == nil || newScore > currentScore {
                 type = mediaType
                 currentScore = newScore
@@ -54,34 +87,5 @@ public struct MediaTypeDetector {
     }
 
     // MARK: -
-    
-    func getMIMEScore(
-        for mime: String,
-        source: Source = .default
-    ) -> Double {
-        var score: Double = 0
-        let parts = mime.split(separator: "/")
-        guard parts.count == 2 else {
-            return score
-        }
-
-        let type = parts[0]
-        let subtype = parts[1]
-
-        var shouldAddDefaultFacetScore = true
-        for (key, value) in facetScores where subtype.hasPrefix(key) {
-            shouldAddDefaultFacetScore = false
-            score += value
-        }
-        if shouldAddDefaultFacetScore {
-            score += defaultFacetScore
-        }
-
-        for (key, value) in typeScores where type == key {
-            score += value
-        }
-        let lengthScore = 1 - Double(mime.count) / 100
-        return score + source.rawValue + lengthScore
-    }
 
 }

@@ -3,19 +3,18 @@ import Testing
 @testable import MIME
 
 @Suite
-struct MIMETests {
+struct MediaTypeDetectorTestSuite {
 
     @Test
     func standardTypes() async throws {
         let detector = MediaTypeDetector()
-        
+
         let html = MediaType.Text.html()
         let text = MediaType.Text.plain()
 
         let htmlType = detector.getPossibleMediaTypeForExtension("html")
         let textType = detector.getPossibleMediaTypeForExtension("txt")
-        
-        
+
         #expect(html == htmlType)
         #expect(text == textType)
     }
@@ -25,9 +24,10 @@ struct MIMETests {
         let testCases: [String: MediaType] = [
             // application
             "js": .Application.javascript(),
+            "mjs": .Application.javascript(),
             "json": .Application.json(),
             "jsonld": .Application.ldJson(),
-            "mjs": .Application.javascript(),
+
             "mpkg": .Application.vndAppleInstallerXml(),
             "odp": .Application.vndOasisOpendocumentPresentation(),
             "ods": .Application.vndOasisOpendocumentSpreadsheet(),
@@ -36,7 +36,8 @@ struct MIMETests {
             "pdf": .Application.pdf(),
             "php": .Application.xHttpdPhp(),
             "ppt": .Application.vndMsPowerpoint(),
-            "pptx": .Application.vndOpenxmlformatsOfficedocumentPresentationmlPresentation(),
+            "pptx": .Application
+                .vndOpenxmlformatsOfficedocumentPresentationmlPresentation(),
             "rar": .Application.vndRar(),
             "rtf": .Application.rtf(),
             "sh": .Application.xSh(),
@@ -44,7 +45,8 @@ struct MIMETests {
             "vsd": .Application.vndVisio(),
             "xhtml": .Application.xhtmlXml(),
             "xls": .Application.vndMsExcel(),
-            "xlsx": .Application.vndOpenxmlformatsOfficedocumentSpreadsheetmlSheet(),
+            "xlsx": .Application
+                .vndOpenxmlformatsOfficedocumentSpreadsheetmlSheet(),
             "xml": .Application.xml(),
             "xul": .Application.vndMozillaXulXml(),
             "zip": .Application.zip(),
@@ -81,6 +83,13 @@ struct MIMETests {
             "webp": .Image.webp(),
             // text
             "txt": .Text.plain(),
+            // TODO: lower priority for octet-stream
+            // "exe": "application/x-msdos-program",
+            // "dll": "application/x-msdownload",
+            // "deb": "application/x-debian-package",
+            // "dmg": "application/x-apple-diskimage",
+            // "iso": "application/x-iso9660-image",
+            // "msi": "application/x-msdownload",
         ]
 
         let detector = MediaTypeDetector()
@@ -90,12 +99,4 @@ struct MIMETests {
             #expect(type == expectedType)
         }
     }
-
-    //      mime-types[exe] = application/x-msdos-program, mime[exe] = application/octet-stream
-    //      mime-types[dll] = application/x-msdownload, mime[dll] = application/octet-stream
-    //      mime-types[deb] = application/x-debian-package, mime[deb] = application/octet-stream
-    //      mime-types[dmg] = application/x-apple-diskimage, mime[dmg] = application/octet-stream
-    //      mime-types[iso] = application/x-iso9660-image, mime[iso] = application/octet-stream
-    //      mime-types[msi] = application/x-msdownload, mime[msi] = application/octet-stream
-    
 }

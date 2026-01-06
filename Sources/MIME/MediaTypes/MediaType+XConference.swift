@@ -16,7 +16,8 @@ extension MediaType {
                 subtype: "x-cooltalk",
                 possibleExtensions: [
                     "ice"
-                ]
+                ],
+                source: .apache
             )
         }
 

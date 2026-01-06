@@ -7,8 +7,7 @@ public struct MediaType: Sendable, Equatable, Codable, Hashable {
         case nginx
         case unknown
     }
-    
-    
+
     public struct Parameter: Sendable, Equatable, Codable, Hashable {
         public var key: String
         public var value: String?
@@ -31,9 +30,13 @@ public struct MediaType: Sendable, Equatable, Codable, Hashable {
         }
     }
 
-    public struct Subtype: Sendable, Equatable, Codable, Hashable, ExpressibleByStringLiteral {
+    public struct Subtype: Sendable, Equatable, Codable, Hashable,
+        ExpressibleByStringLiteral
+    {
 
-        public struct Suffix: Sendable, Equatable, Codable, Hashable, ExpressibleByStringLiteral {
+        public struct Suffix: Sendable, Equatable, Codable, Hashable,
+            ExpressibleByStringLiteral
+        {
 
             public var value: String
 
@@ -110,5 +113,51 @@ public struct MediaType: Sendable, Equatable, Codable, Hashable {
             + MediaType.Multipart.all + MediaType.Text.all + MediaType.Video.all
             + MediaType.XConference.all + MediaType.XShader.all
             + MediaType.Application.all
+    }
+
+    // parse a media type
+    public init?(
+        rawValue: String
+    ) {
+        let parts = rawValue.split(
+            separator: ";",
+            omittingEmptySubsequences: true
+        )
+        guard let typePart = parts.first else { return nil }
+
+        let typeComponents = typePart.split(
+            separator: "/",
+            omittingEmptySubsequences: true
+        )
+        guard typeComponents.count == 2 else { return nil }
+
+        self.type = String(typeComponents[0])
+        let subtypeComponents = typeComponents[1]
+            .split(
+                separator: "+",
+                maxSplits: 1
+            )
+        let subtype = String(subtypeComponents[0])
+        let suffix =
+            subtypeComponents.count == 2 ? String(subtypeComponents[1]) : nil
+
+        self.subtype = .init(
+            value: subtype,
+            suffix: suffix.map { .init(value: $0) }
+        )
+
+        if parts.count == 2 {
+            let kv = parts[1].split(separator: "=", maxSplits: 1)
+            if kv.count == 2 {
+                let key = String(kv[0])
+                let value = String(kv[1])
+                self.parameter = .init(key: key, value: value)
+            }
+        }
+        else {
+            self.parameter = nil
+        }
+        self.source = .unknown
+        self.possibleExtensions = []
     }
 }
