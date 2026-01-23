@@ -1,5 +1,6 @@
 import SGML
 
+/// Values for the HTML `popover` global attribute.
 public enum PopoverAttributeValue: String, AttributeValueRepresentable {
     /// Closes other popovers when opened; has light dismiss and responds to close requests.
     case auto
@@ -9,6 +10,7 @@ public enum PopoverAttributeValue: String, AttributeValueRepresentable {
     case hint
 }
 
+/// Provides access to the HTML `popover` global attribute.
 public protocol PopoverAttributeModifier {
     associatedtype PopoverAttributeValueType: AttributeValueRepresentable =
         PopoverAttributeValue
@@ -16,6 +18,9 @@ public protocol PopoverAttributeModifier {
 
 extension PopoverAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `popover` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func popover(
         _ value: PopoverAttributeValueType?
     ) -> Self {

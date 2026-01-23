@@ -1,12 +1,15 @@
 import SGML
 
+/// Provides access to the HTML `id` global attribute.
 public protocol IdAttributeModifier {
     associatedtype IdAttributeValueType: AttributeValueRepresentable = String
 }
 
 extension IdAttributeModifier where Self: Attributes & Mutable {
 
-    /// Sets an id attribute.
+    /// Sets the HTML `id` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func id(
         _ value: IdAttributeValueType?
     ) -> Self {

@@ -1,5 +1,6 @@
 import SGML
 
+/// Values for the HTML `autocapitalize` global attribute.
 public enum AutoCapitalizeAttributeValue: String, AttributeValueRepresentable {
     /// Keyword: off. State: none.
     case off = "off"
@@ -20,6 +21,7 @@ public enum AutoCapitalizeAttributeValue: String, AttributeValueRepresentable {
     case characters = "characters"
 }
 
+/// Provides access to the HTML `autocapitalize` global attribute.
 public protocol AutoCapitalizeAttributeModifier {
     associatedtype
         AutoCapitalizeAttributeValueType: AttributeValueRepresentable =
@@ -28,6 +30,9 @@ public protocol AutoCapitalizeAttributeModifier {
 
 extension AutoCapitalizeAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `autocapitalize` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func autoCapitalize(
         _ value: AutoCapitalizeAttributeValueType?
     ) -> Self {

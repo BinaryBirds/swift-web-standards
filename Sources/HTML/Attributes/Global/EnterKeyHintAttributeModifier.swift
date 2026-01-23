@@ -1,5 +1,6 @@
 import SGML
 
+/// Values for the HTML `enterkeyhint` global attribute.
 public enum EnterKeyHintAttributeValue: String, AttributeValueRepresentable {
     /// Presents a cue for the operation "enter".
     case enter
@@ -17,6 +18,7 @@ public enum EnterKeyHintAttributeValue: String, AttributeValueRepresentable {
     case send
 }
 
+/// Provides access to the HTML `enterkeyhint` global attribute.
 public protocol EnterKeyHintAttributeModifier {
     associatedtype EnterKeyHintAttributeValueType: AttributeValueRepresentable =
         EnterKeyHintAttributeValue
@@ -24,6 +26,9 @@ public protocol EnterKeyHintAttributeModifier {
 
 extension EnterKeyHintAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `enterkeyhint` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func enterKeyHint(
         _ value: EnterKeyHintAttributeValueType?
     ) -> Self {

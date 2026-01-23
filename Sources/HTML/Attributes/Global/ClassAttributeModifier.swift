@@ -1,12 +1,15 @@
 import SGML
 
+/// Provides access to the HTML `class` global attribute.
 public protocol ClassAttributeModifier {
     associatedtype ClassAttributeValueType: AttributeValueRepresentable = String
 }
 
 extension ClassAttributeModifier where Self: Attributes & Mutable {
 
-    /// Sets a class attribute.
+    /// Sets the HTML `class` attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func setClass(
         _ value: ClassAttributeValueType?
     ) -> Self {
@@ -16,7 +19,9 @@ extension ClassAttributeModifier where Self: Attributes & Mutable {
         )
     }
 
-    /// Adds a class attribute.
+    /// Adds a value to the HTML `class` attribute.
+    /// - Parameter value: The class value to add. Pass `nil` to skip adding.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func addClass(
         _ value: ClassAttributeValueType?
     ) -> Self {
@@ -26,7 +31,9 @@ extension ClassAttributeModifier where Self: Attributes & Mutable {
         )
     }
 
-    /// Removes a class attribute.
+    /// Removes a value from the HTML `class` attribute.
+    /// - Parameter value: The class value to remove. Pass `nil` to skip removing.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func removeClass(
         _ value: ClassAttributeValueType?
     ) -> Self {
@@ -36,7 +43,9 @@ extension ClassAttributeModifier where Self: Attributes & Mutable {
         )
     }
 
-    /// Toggles a class attribute.
+    /// Toggles a value in the HTML `class` attribute.
+    /// - Parameter value: The class value to toggle. Pass `nil` to skip toggling.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func toggleClass(
         _ value: ClassAttributeValueType?
     ) -> Self {
@@ -59,7 +68,9 @@ extension ClassAttributeModifier where Self: Attributes & Mutable {
 
     // MARK: -
 
-    /// Add class attribute values.
+    /// Adds multiple values to the HTML `class` attribute.
+    /// - Parameter values: The class values to add.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func `class`(
         _ values: [ClassAttributeValueType]
     ) -> Self {
@@ -70,7 +81,9 @@ extension ClassAttributeModifier where Self: Attributes & Mutable {
         return mutatingSelf
     }
 
-    /// Add class attribute values.
+    /// Adds multiple values to the HTML `class` attribute.
+    /// - Parameter values: The class values to add.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func `class`(
         _ values: ClassAttributeValueType...
     ) -> Self {

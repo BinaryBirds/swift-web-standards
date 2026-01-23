@@ -1,5 +1,6 @@
 import SGML
 
+/// Provides access to the HTML `itemid` global attribute.
 public protocol ItemIdAttributeModifier {
     associatedtype ItemIdAttributeValueType: AttributeValueRepresentable =
         String
@@ -7,6 +8,9 @@ public protocol ItemIdAttributeModifier {
 
 extension ItemIdAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `itemid` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func itemId(
         _ value: ItemIdAttributeValueType?
     ) -> Self {

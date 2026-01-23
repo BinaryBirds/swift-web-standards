@@ -1,5 +1,6 @@
 import SGML
 
+/// Provides access to the HTML `title` global attribute.
 public protocol TitleAttributeModifier {
     associatedtype TitleAttributeValueType: AttributeValueRepresentable = String
 }

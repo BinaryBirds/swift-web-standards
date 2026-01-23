@@ -1,5 +1,6 @@
 import SGML
 
+/// Values for the HTML `dir` global attribute.
 public enum DirAttributeValue: String, AttributeValueRepresentable {
     /// The contents of the element are explicitly directionally isolated left-to-right text.
     case ltr
@@ -9,6 +10,7 @@ public enum DirAttributeValue: String, AttributeValueRepresentable {
     case auto
 }
 
+/// Provides access to the HTML `dir` global attribute.
 public protocol DirAttributeModifier {
     associatedtype DirAttributeValueType: AttributeValueRepresentable =
         DirAttributeValue
@@ -16,6 +18,9 @@ public protocol DirAttributeModifier {
 
 extension DirAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `dir` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func dir(
         _ value: DirAttributeValueType?
     ) -> Self {
