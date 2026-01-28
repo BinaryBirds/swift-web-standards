@@ -9,7 +9,7 @@ import SGML
 /// **Tip:** If you have a long list of options, you can group related options within the `<optgroup>` tag.
 public struct Option:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     DisabledAttributeModifier,
     ValueAttributeModifier,

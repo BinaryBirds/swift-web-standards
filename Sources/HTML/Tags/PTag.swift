@@ -7,7 +7,7 @@ import SGML
 /// **Tip:** Use CSS to style paragraphs.
 public struct P:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

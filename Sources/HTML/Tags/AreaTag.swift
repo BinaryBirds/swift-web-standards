@@ -7,8 +7,8 @@ import SGML
 ///
 /// **Note:** The usemap attribute in <img> is associated with the <map> element's name attribute, and creates a relationship between the image and the map.
 ///
-/// [HTML Standard - The area element](https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element)
-/// [W3C Reference - HTML area tag](https://www.w3schools.com/tags/tag_area.asp)
+/// [HTML Standard - The area element](https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element).
+/// [W3C Reference - HTML area tag](https://www.w3schools.com/tags/tag_area.asp).
 ///
 public struct Area:
     ShortTag,

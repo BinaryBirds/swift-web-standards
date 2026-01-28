@@ -7,7 +7,7 @@ import SGML
 /// **Tip:** If the content is time- or date-related, use the `<time>` element instead.
 public struct Data:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ValueAttributeModifier,
     // categories

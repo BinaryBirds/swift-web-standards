@@ -1,15 +1,15 @@
 import SGML
 
 public enum FormTargetAttributeValue: AttributeValueRepresentable {
-    /// Opens the linked document in a new window or tab
+    /// Opens the linked document in a new window or tab.
     case blank
-    /// Opens the linked document in the same frame as it was clicked (this is default)
+    /// Opens the linked document in the same frame as it was clicked (this is default).
     case `default`
-    /// Opens the linked document in the parent frame
+    /// Opens the linked document in the parent frame.
     case parent
-    /// Opens the linked document in the full body of the window
+    /// Opens the linked document in the full body of the window.
     case top
-    /// Opens the linked document in the named iframe
+    /// Opens the linked document in the named iframe.
     case frame(String)
 
     public var attributeValue: String {

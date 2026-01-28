@@ -7,7 +7,7 @@ import SGML
 /// **Note:** There can only be one `<body>` element in an HTML document.
 public struct Body:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     EventAttributesModifier
 {

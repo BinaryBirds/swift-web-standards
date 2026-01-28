@@ -7,7 +7,7 @@ import SGML
 /// The `<map>` element contains a number of `<area>` elements, that defines the clickable areas in the image map.
 public struct Map:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     NameAttributeModifier,
     // categories

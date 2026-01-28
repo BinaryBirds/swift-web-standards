@@ -4,14 +4,14 @@ import SGML
 ///
 /// The most important attribute of the `<a>` element is the href attribute, which indicates the link's destination.
 ///
-/// By default, links will appear as follows in all browsers:
+/// By default, links will appear as follows in all browsers:.
 ///
-/// - An unvisited link is underlined and blue
-/// - A visited link is underlined and purple
-/// - An active link is underlined and red
+/// - An unvisited link is underlined and blue.
+/// - A visited link is underlined and purple.
+/// - An active link is underlined and red.
 public struct A:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     DownloadAttributeModifier,
     HrefAttributeModifier,

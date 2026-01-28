@@ -11,7 +11,7 @@ import SGML
 /// **Tip:** Use CSS to style lists.
 public struct Li:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ValueAttributeModifier
 {

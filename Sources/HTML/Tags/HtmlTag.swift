@@ -7,7 +7,7 @@ import SGML
 /// **Note:** You should always include the lang attribute inside the `<html>` tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
 public struct Html:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
 
@@ -49,7 +49,7 @@ public struct Html:
 
 extension Html {
 
-    /// Specifies the XML namespace attribute (If you need your content to conform to XHTML)
+    /// Specifies the XML namespace attribute (If you need your content to conform to XHTML).
     //    public func xmlns() -> Self {
     //        attribute("xmlns", "http://www.w3.org/1999/xhtml")
     //    }

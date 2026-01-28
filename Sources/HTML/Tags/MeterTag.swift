@@ -6,10 +6,10 @@ import SGML
 ///
 /// **Note:** The `<meter>` tag should not be used to indicate progress (as in a progress bar). For progress bars, use the `<progress>` tag.
 ///
-/// **Tip:** Always add the `<label>` tag for best accessibility practices!
+/// **Tip:** Always add the `<label>` tag for best accessibility practices!.
 public struct Meter:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ValueAttributeModifier,
     MinAttributeModifier,

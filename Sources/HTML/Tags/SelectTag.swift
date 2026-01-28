@@ -10,10 +10,10 @@ import SGML
 ///
 /// The `<option>` tags inside the `<select>` element define the available options in the drop-down list.
 ///
-/// **Tip:** Always add the `<label>` tag for best accessibility practices!
+/// **Tip:** Always add the `<label>` tag for best accessibility practices!.
 public struct Select:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     AutoCompleteAttributeModifier,
     DisabledAttributeModifier,

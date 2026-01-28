@@ -2,18 +2,18 @@ import SGML
 
 /// The `<footer>` tag defines a footer for a document or section.
 ///
-/// A `<footer>` element typically contains:
+/// A `<footer>` element typically contains:.
 ///
-/// - authorship information
-/// - copyright information
-/// - contact information
-/// - sitemap
-/// - back to top links
-/// - related documents
+/// - authorship information.
+/// - copyright information.
+/// - contact information.
+/// - sitemap.
+/// - back to top links.
+/// - related documents.
 /// You can have several `<footer>` elements in one document.
 public struct Footer:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

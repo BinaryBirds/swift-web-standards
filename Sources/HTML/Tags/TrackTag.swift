@@ -7,7 +7,7 @@ import SGML
 /// Tracks are formatted in WebVTT format (.vtt files).
 public struct Track:
     ShortTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     SrcAttributeModifier,
     LabelAttributeModifier,

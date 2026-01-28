@@ -5,7 +5,7 @@ import SGML
 /// **Tip:** This tag is not deprecated. However, it is possible to achieve richer effect by using CSS.
 public struct Var:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

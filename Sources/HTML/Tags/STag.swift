@@ -5,7 +5,7 @@ import SGML
 /// The `<s>` tag should not be used to define deleted text in a document, use the `<del>` tag for that.
 public struct S:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

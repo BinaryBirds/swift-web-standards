@@ -9,7 +9,7 @@ import SGML
 /// **Tip:** The `<summary>` tag is used in conjuction with `<details>` to specify a visible heading for the details.
 public struct Details:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     NameAttributeModifier,
     OpenAttributeModifier,

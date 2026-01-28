@@ -7,7 +7,7 @@ import SGML
 /// **Tip:** The `<figcaption>` element is used to add a caption for the `<figure>` element.
 public struct Figure:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

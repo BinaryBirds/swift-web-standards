@@ -2,7 +2,7 @@ import SGML
 
 /// Rect tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect.
 public struct Rect: SVGTag {
 
     public var attributes: AttributeStore

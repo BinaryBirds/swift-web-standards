@@ -7,7 +7,7 @@ import SGML
 /// Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
 public struct Nav:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

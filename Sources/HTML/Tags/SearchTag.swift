@@ -3,7 +3,7 @@ import SGML
 /// The `<search>` tag represents a part of the document that performs a search.
 public struct Search:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

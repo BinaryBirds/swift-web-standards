@@ -8,17 +8,17 @@ import SGML
 ///
 /// There are three supported audio formats in HTML: MP3, WAV, and OGG.
 ///
-///     Browser  | MP3 | WAV  | OGG
-///     -------  | --- | ---  | ---
-///     Edge/IE  | YES | YES* | YES*
-///     Chrome   | YES | YES  | YES
-///     Firefox  | YES | YES  | YES
-///     Safari   | YES | YES  | NO
-///     Opera    | YES | YES  | YES
-///      *From Edge 79
+///     Browser  | MP3 | WAV  | OGG.
+///     -------  | --- | ---  | ---.
+///     Edge/IE  | YES | YES* | YES*.
+///     Chrome   | YES | YES  | YES.
+///     Firefox  | YES | YES  | YES.
+///     Safari   | YES | YES  | NO.
+///     Opera    | YES | YES  | YES.
+///      *From Edge 79.
 public struct Audio:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ControlsAttributeModifier,
     SrcAttributeModifier,

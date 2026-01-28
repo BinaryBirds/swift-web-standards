@@ -8,7 +8,7 @@ import SGML
 /// **Tip:** Use the `<sup>` tag to define superscripted text.
 public struct Sub:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

@@ -2,7 +2,7 @@ import SGML
 
 /// Circle tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle.
 public struct Circle: SVGTag {
 
     public var attributes: AttributeStore

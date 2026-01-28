@@ -3,7 +3,7 @@ import SGML
 /// The `<menu>` tag represents a group of commands or a list of items.
 public struct Menu:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

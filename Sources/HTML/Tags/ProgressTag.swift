@@ -2,10 +2,10 @@ import SGML
 
 /// The `<progress>` tag represents the completion progress of a task.
 ///
-/// **Tip:** Always add the `<label>` tag for best accessibility practices!
+/// **Tip:** Always add the `<label>` tag for best accessibility practices!.
 public struct Progress:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ValueAttributeModifier,
     MaxAttributeModifier,

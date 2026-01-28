@@ -2,10 +2,10 @@ import SGML
 
 /// The `<strong>` tag is used to define text with strong importance.
 ///
-/// **Tip:** Use the `<b>` tag to specify bold text without any extra importance!
+/// **Tip:** Use the `<b>` tag to specify bold text without any extra importance!.
 public struct Strong:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,
