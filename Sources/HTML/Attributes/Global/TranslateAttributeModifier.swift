@@ -1,5 +1,6 @@
 import SGML
 
+/// Values for the HTML `translate` global attribute.
 public enum TranslateAttributeValue: String, Sendable,
     AttributeValueRepresentable
 {
@@ -9,6 +10,7 @@ public enum TranslateAttributeValue: String, Sendable,
     case no
 }
 
+/// Provides access to the HTML `translate` global attribute.
 public protocol TranslateAttributeModifier {
     associatedtype TranslateAttributeValueType: AttributeValueRepresentable =
         TranslateAttributeValue
@@ -16,6 +18,9 @@ public protocol TranslateAttributeModifier {
 
 extension TranslateAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `translate` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func translate(
         _ value: TranslateAttributeValueType?
     ) -> Self {

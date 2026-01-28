@@ -4,24 +4,56 @@ extension MediaType {
 
         static let name: String = "message"
 
+        public static var all: [MediaType] {
+            [
+                bhttp(),
+                cpim(),
+                deliveryStatus(),
+                dispositionNotification(),
+                externalBody(),
+                feedbackReport(),
+                global(),
+                globalDeliveryStatus(),
+                globalDispositionNotification(),
+                globalHeaders(),
+                http(),
+                imdnXml(),
+                mls(),
+                news(),
+                ohttpReq(),
+                ohttpRes(),
+                partial(),
+                rfc822(),
+                sHttp(),
+                sip(),
+                sipfrag(),
+                trackingStatus(),
+                vndSiSimp(),
+                vndWfaWsc(),
+            ]
+        }
+
         public static func bhttp() -> MediaType {
             .init(
                 type: name,
-                subtype: "bhttp"
+                subtype: "bhttp",
+                source: .iana
             )
         }
 
         public static func cpim() -> MediaType {
             .init(
                 type: name,
-                subtype: "cpim"
+                subtype: "cpim",
+                source: .iana
             )
         }
 
         public static func deliveryStatus() -> MediaType {
             .init(
                 type: name,
-                subtype: "delivery-status"
+                subtype: "delivery-status",
+                source: .iana
             )
         }
 
@@ -31,21 +63,24 @@ extension MediaType {
                 subtype: "disposition-notification",
                 possibleExtensions: [
                     "disposition-notification"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func externalBody() -> MediaType {
             .init(
                 type: name,
-                subtype: "external-body"
+                subtype: "external-body",
+                source: .iana
             )
         }
 
         public static func feedbackReport() -> MediaType {
             .init(
                 type: name,
-                subtype: "feedback-report"
+                subtype: "feedback-report",
+                source: .iana
             )
         }
 
@@ -55,7 +90,8 @@ extension MediaType {
                 subtype: "global",
                 possibleExtensions: [
                     "u8msg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -65,7 +101,8 @@ extension MediaType {
                 subtype: "global-delivery-status",
                 possibleExtensions: [
                     "u8dsn"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -75,7 +112,8 @@ extension MediaType {
                 subtype: "global-disposition-notification",
                 possibleExtensions: [
                     "u8mdn"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -85,14 +123,16 @@ extension MediaType {
                 subtype: "global-headers",
                 possibleExtensions: [
                     "u8hdr"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func http() -> MediaType {
             .init(
                 type: name,
-                subtype: "http"
+                subtype: "http",
+                source: .iana
             )
         }
 
@@ -102,42 +142,48 @@ extension MediaType {
                 subtype: .init(
                     value: "imdn",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func mls() -> MediaType {
             .init(
                 type: name,
-                subtype: "mls"
+                subtype: "mls",
+                source: .iana
             )
         }
 
         public static func news() -> MediaType {
             .init(
                 type: name,
-                subtype: "news"
+                subtype: "news",
+                source: .apache
             )
         }
 
         public static func ohttpReq() -> MediaType {
             .init(
                 type: name,
-                subtype: "ohttp-req"
+                subtype: "ohttp-req",
+                source: .iana
             )
         }
 
         public static func ohttpRes() -> MediaType {
             .init(
                 type: name,
-                subtype: "ohttp-res"
+                subtype: "ohttp-res",
+                source: .iana
             )
         }
 
         public static func partial() -> MediaType {
             .init(
                 type: name,
-                subtype: "partial"
+                subtype: "partial",
+                source: .iana
             )
         }
 
@@ -150,42 +196,48 @@ extension MediaType {
                     "mime",
                     "mht",
                     "mhtml",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func sHttp() -> MediaType {
             .init(
                 type: name,
-                subtype: "s-http"
+                subtype: "s-http",
+                source: .apache
             )
         }
 
         public static func sip() -> MediaType {
             .init(
                 type: name,
-                subtype: "sip"
+                subtype: "sip",
+                source: .iana
             )
         }
 
         public static func sipfrag() -> MediaType {
             .init(
                 type: name,
-                subtype: "sipfrag"
+                subtype: "sipfrag",
+                source: .iana
             )
         }
 
         public static func trackingStatus() -> MediaType {
             .init(
                 type: name,
-                subtype: "tracking-status"
+                subtype: "tracking-status",
+                source: .iana
             )
         }
 
         public static func vndSiSimp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.si.simp"
+                subtype: "vnd.si.simp",
+                source: .apache
             )
         }
 
@@ -195,7 +247,8 @@ extension MediaType {
                 subtype: "vnd.wfa.wsc",
                 possibleExtensions: [
                     "wsc"
-                ]
+                ],
+                source: .iana
             )
         }
 

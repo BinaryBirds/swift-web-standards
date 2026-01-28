@@ -7,9 +7,26 @@ struct HyphensTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = Hyphens(value1)
-        // assertProperty(property1, name: "hyphens", value: value1.rawValue)
+        let property = Hyphens()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = Hyphens()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

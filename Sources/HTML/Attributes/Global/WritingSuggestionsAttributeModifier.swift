@@ -1,5 +1,6 @@
 import SGML
 
+/// Provides access to the HTML `writingsuggestions` global attribute.
 public protocol WritingSuggestionsAttributeModifier {
     associatedtype
         WritingSuggestionsAttributeValueType: AttributeValueRepresentable =
@@ -8,6 +9,9 @@ public protocol WritingSuggestionsAttributeModifier {
 
 extension WritingSuggestionsAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `writingsuggestions` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func writingSuggestions(
         _ value: WritingSuggestionsAttributeValueType?
     ) -> Self {

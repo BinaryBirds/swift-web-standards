@@ -4,10 +4,149 @@ extension MediaType {
 
         static let name: String = "text"
 
+        public static var all: [MediaType] {
+            [
+                _1dInterleavedParityfec(),
+                cacheManifest(),
+                calendar(),
+                cmd(),
+                coffeescript(),
+                cql(),
+                cqlExpression(),
+                cqlIdentifier(),
+                css(),
+                csv(),
+                csvSchema(),
+                directory(),
+                dns(),
+                ecmascript(),
+                encaprtp(),
+                enriched(),
+                fhirpath(),
+                flexfec(),
+                fwdred(),
+                gff3(),
+                grammarRefList(),
+                hl7v2(),
+                html(),
+                jade(),
+                javascript(),
+                jcrCnd(),
+                jsx(),
+                less(),
+                markdown(),
+                mathml(),
+                mdx(),
+                mizar(),
+                n3(),
+                org(),
+                parameters(),
+                parityfec(),
+                plain(),
+                provenanceNotation(),
+                prsFallensteinRst(),
+                prsLinesTag(),
+                prsPropLogic(),
+                prsTexi(),
+                raptorfec(),
+                red(),
+                rfc822Headers(),
+                richtext(),
+                rtf(),
+                rtpEncAescm128(),
+                rtploopback(),
+                rtx(),
+                sgml(),
+                shaclc(),
+                shex(),
+                slim(),
+                spdx(),
+                strings(),
+                stylus(),
+                t140(),
+                tabSeparatedValues(),
+                troff(),
+                turtle(),
+                ulpfec(),
+                uriList(),
+                vcard(),
+                vndA(),
+                vndAbc(),
+                vndAsciiArt(),
+                vndCurl(),
+                vndCurlDcurl(),
+                vndCurlMcurl(),
+                vndCurlScurl(),
+                vndDebianCopyright(),
+                vndDmclientscript(),
+                vndDvbSubtitle(),
+                vndEsmertecThemeDescriptor(),
+                vndExchangeable(),
+                vndFamilysearchGedcom(),
+                vndFiclabFlt(),
+                vndFly(),
+                vndFmiFlexstor(),
+                vndGml(),
+                vndGraphviz(),
+                vndHans(),
+                vndHgl(),
+                vndIn3d3dml(),
+                vndIn3dSpot(),
+                vndIptcNewsml(),
+                vndIptcNitf(),
+                vndLatexZ(),
+                vndMotorolaReflex(),
+                vndMsMediapackage(),
+                vndNet2phoneCommcenterCommand(),
+                vndRadisysMsmlBasicLayout(),
+                vndSenxWarpscript(),
+                vndSiUricatalogue(),
+                vndSosi(),
+                vndSunJ2meAppDescriptor(),
+                vndTrolltechLinguist(),
+                vndTypst(),
+                vndVcf(),
+                vndWapSi(),
+                vndWapSl(),
+                vndWapWml(),
+                vndWapWmlscript(),
+                vndZooKcl(),
+                vtt(),
+                wgsl(),
+                xAsm(),
+                xC(),
+                xComponent(),
+                xFortran(),
+                xGwtRpc(),
+                xHandlebarsTemplate(),
+                xJavaSource(),
+                xJqueryTmpl(),
+                xLua(),
+                xMarkdown(),
+                xNfo(),
+                xOpml(),
+                xOrg(),
+                xPascal(),
+                xProcessing(),
+                xSass(),
+                xScss(),
+                xSetext(),
+                xSfv(),
+                xSuseYmp(),
+                xUuencode(),
+                xVcalendar(),
+                xVcard(),
+                xml(),
+                xmlExternalParsedEntity(),
+                yaml(),
+            ]
+        }
+
         public static func _1dInterleavedParityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "1d-interleaved-parityfec"
+                subtype: "1d-interleaved-parityfec",
+                source: .iana
             )
         }
 
@@ -18,7 +157,8 @@ extension MediaType {
                 possibleExtensions: [
                     "appcache",
                     "manifest",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -29,7 +169,8 @@ extension MediaType {
                 possibleExtensions: [
                     "ics",
                     "ifb",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -54,21 +195,24 @@ extension MediaType {
         public static func cql() -> MediaType {
             .init(
                 type: name,
-                subtype: "cql"
+                subtype: "cql",
+                source: .iana
             )
         }
 
         public static func cqlExpression() -> MediaType {
             .init(
                 type: name,
-                subtype: "cql-expression"
+                subtype: "cql-expression",
+                source: .iana
             )
         }
 
         public static func cqlIdentifier() -> MediaType {
             .init(
                 type: name,
-                subtype: "cql-identifier"
+                subtype: "cql-identifier",
+                source: .iana
             )
         }
 
@@ -78,7 +222,8 @@ extension MediaType {
                 subtype: "css",
                 possibleExtensions: [
                     "css"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -88,91 +233,104 @@ extension MediaType {
                 subtype: "csv",
                 possibleExtensions: [
                     "csv"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func csvSchema() -> MediaType {
             .init(
                 type: name,
-                subtype: "csv-schema"
+                subtype: "csv-schema",
+                source: .iana
             )
         }
 
         public static func directory() -> MediaType {
             .init(
                 type: name,
-                subtype: "directory"
+                subtype: "directory",
+                source: .iana
             )
         }
 
         public static func dns() -> MediaType {
             .init(
                 type: name,
-                subtype: "dns"
+                subtype: "dns",
+                source: .iana
             )
         }
 
         public static func ecmascript() -> MediaType {
             .init(
                 type: name,
-                subtype: "ecmascript"
+                subtype: "ecmascript",
+                source: .apache
             )
         }
 
         public static func encaprtp() -> MediaType {
             .init(
                 type: name,
-                subtype: "encaprtp"
+                subtype: "encaprtp",
+                source: .iana
             )
         }
 
         public static func enriched() -> MediaType {
             .init(
                 type: name,
-                subtype: "enriched"
+                subtype: "enriched",
+                source: .iana
             )
         }
 
         public static func fhirpath() -> MediaType {
             .init(
                 type: name,
-                subtype: "fhirpath"
+                subtype: "fhirpath",
+                source: .iana
             )
         }
 
         public static func flexfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "flexfec"
+                subtype: "flexfec",
+                source: .iana
             )
         }
 
         public static func fwdred() -> MediaType {
             .init(
                 type: name,
-                subtype: "fwdred"
+                subtype: "fwdred",
+                source: .iana
             )
         }
 
         public static func gff3() -> MediaType {
             .init(
                 type: name,
-                subtype: "gff3"
+                subtype: "gff3",
+                source: .iana
             )
         }
 
         public static func grammarRefList() -> MediaType {
             .init(
                 type: name,
-                subtype: "grammar-ref-list"
+                subtype: "grammar-ref-list",
+                source: .iana
             )
         }
 
         public static func hl7v2() -> MediaType {
             .init(
                 type: name,
-                subtype: "hl7v2"
+                subtype: "hl7v2",
+                source: .iana
             )
         }
 
@@ -184,7 +342,8 @@ extension MediaType {
                     "html",
                     "htm",
                     "shtml",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -205,14 +364,16 @@ extension MediaType {
                 possibleExtensions: [
                     "js",
                     "mjs",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func jcrCnd() -> MediaType {
             .init(
                 type: name,
-                subtype: "jcr-cnd"
+                subtype: "jcr-cnd",
+                source: .iana
             )
         }
 
@@ -243,7 +404,8 @@ extension MediaType {
                 possibleExtensions: [
                     "md",
                     "markdown",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -253,7 +415,8 @@ extension MediaType {
                 subtype: "mathml",
                 possibleExtensions: [
                     "mml"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -270,7 +433,8 @@ extension MediaType {
         public static func mizar() -> MediaType {
             .init(
                 type: name,
-                subtype: "mizar"
+                subtype: "mizar",
+                source: .iana
             )
         }
 
@@ -280,28 +444,32 @@ extension MediaType {
                 subtype: "n3",
                 possibleExtensions: [
                     "n3"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func org() -> MediaType {
             .init(
                 type: name,
-                subtype: "org"
+                subtype: "org",
+                source: .iana
             )
         }
 
         public static func parameters() -> MediaType {
             .init(
                 type: name,
-                subtype: "parameters"
+                subtype: "parameters",
+                source: .iana
             )
         }
 
         public static func parityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "parityfec"
+                subtype: "parityfec",
+                source: .iana
             )
         }
 
@@ -318,21 +486,24 @@ extension MediaType {
                     "log",
                     "in",
                     "ini",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func provenanceNotation() -> MediaType {
             .init(
                 type: name,
-                subtype: "provenance-notation"
+                subtype: "provenance-notation",
+                source: .iana
             )
         }
 
         public static func prsFallensteinRst() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.fallenstein.rst"
+                subtype: "prs.fallenstein.rst",
+                source: .iana
             )
         }
 
@@ -342,42 +513,48 @@ extension MediaType {
                 subtype: "prs.lines.tag",
                 possibleExtensions: [
                     "dsc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func prsPropLogic() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.prop.logic"
+                subtype: "prs.prop.logic",
+                source: .iana
             )
         }
 
         public static func prsTexi() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.texi"
+                subtype: "prs.texi",
+                source: .iana
             )
         }
 
         public static func raptorfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "raptorfec"
+                subtype: "raptorfec",
+                source: .iana
             )
         }
 
         public static func red() -> MediaType {
             .init(
                 type: name,
-                subtype: "red"
+                subtype: "red",
+                source: .iana
             )
         }
 
         public static func rfc822Headers() -> MediaType {
             .init(
                 type: name,
-                subtype: "rfc822-headers"
+                subtype: "rfc822-headers",
+                source: .iana
             )
         }
 
@@ -387,7 +564,8 @@ extension MediaType {
                 subtype: "richtext",
                 possibleExtensions: [
                     "rtx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -397,28 +575,32 @@ extension MediaType {
                 subtype: "rtf",
                 possibleExtensions: [
                     "rtf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func rtpEncAescm128() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtp-enc-aescm128"
+                subtype: "rtp-enc-aescm128",
+                source: .iana
             )
         }
 
         public static func rtploopback() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtploopback"
+                subtype: "rtploopback",
+                source: .iana
             )
         }
 
         public static func rtx() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtx"
+                subtype: "rtx",
+                source: .iana
             )
         }
 
@@ -429,14 +611,16 @@ extension MediaType {
                 possibleExtensions: [
                     "sgml",
                     "sgm",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func shaclc() -> MediaType {
             .init(
                 type: name,
-                subtype: "shaclc"
+                subtype: "shaclc",
+                source: .iana
             )
         }
 
@@ -446,7 +630,8 @@ extension MediaType {
                 subtype: "shex",
                 possibleExtensions: [
                     "shex"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -467,14 +652,16 @@ extension MediaType {
                 subtype: "spdx",
                 possibleExtensions: [
                     "spdx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func strings() -> MediaType {
             .init(
                 type: name,
-                subtype: "strings"
+                subtype: "strings",
+                source: .iana
             )
         }
 
@@ -492,7 +679,8 @@ extension MediaType {
         public static func t140() -> MediaType {
             .init(
                 type: name,
-                subtype: "t140"
+                subtype: "t140",
+                source: .iana
             )
         }
 
@@ -502,7 +690,8 @@ extension MediaType {
                 subtype: "tab-separated-values",
                 possibleExtensions: [
                     "tsv"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -517,7 +706,8 @@ extension MediaType {
                     "man",
                     "me",
                     "ms",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -527,14 +717,16 @@ extension MediaType {
                 subtype: "turtle",
                 possibleExtensions: [
                     "ttl"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func ulpfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "ulpfec"
+                subtype: "ulpfec",
+                source: .iana
             )
         }
 
@@ -546,7 +738,8 @@ extension MediaType {
                     "uri",
                     "uris",
                     "urls",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -556,28 +749,32 @@ extension MediaType {
                 subtype: "vcard",
                 possibleExtensions: [
                     "vcard"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndA() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.a"
+                subtype: "vnd.a",
+                source: .iana
             )
         }
 
         public static func vndAbc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.abc"
+                subtype: "vnd.abc",
+                source: .iana
             )
         }
 
         public static func vndAsciiArt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ascii-art"
+                subtype: "vnd.ascii-art",
+                source: .iana
             )
         }
 
@@ -587,7 +784,8 @@ extension MediaType {
                 subtype: "vnd.curl",
                 possibleExtensions: [
                     "curl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -597,7 +795,8 @@ extension MediaType {
                 subtype: "vnd.curl.dcurl",
                 possibleExtensions: [
                     "dcurl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -607,7 +806,8 @@ extension MediaType {
                 subtype: "vnd.curl.mcurl",
                 possibleExtensions: [
                     "mcurl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -617,21 +817,24 @@ extension MediaType {
                 subtype: "vnd.curl.scurl",
                 possibleExtensions: [
                     "scurl"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndDebianCopyright() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.debian.copyright"
+                subtype: "vnd.debian.copyright",
+                source: .iana
             )
         }
 
         public static func vndDmclientscript() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dmclientscript"
+                subtype: "vnd.dmclientscript",
+                source: .iana
             )
         }
 
@@ -641,21 +844,24 @@ extension MediaType {
                 subtype: "vnd.dvb.subtitle",
                 possibleExtensions: [
                     "sub"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndEsmertecThemeDescriptor() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.esmertec.theme-descriptor"
+                subtype: "vnd.esmertec.theme-descriptor",
+                source: .iana
             )
         }
 
         public static func vndExchangeable() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.exchangeable"
+                subtype: "vnd.exchangeable",
+                source: .iana
             )
         }
 
@@ -665,14 +871,16 @@ extension MediaType {
                 subtype: "vnd.familysearch.gedcom",
                 possibleExtensions: [
                     "ged"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFiclabFlt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ficlab.flt"
+                subtype: "vnd.ficlab.flt",
+                source: .iana
             )
         }
 
@@ -682,7 +890,8 @@ extension MediaType {
                 subtype: "vnd.fly",
                 possibleExtensions: [
                     "fly"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -692,14 +901,16 @@ extension MediaType {
                 subtype: "vnd.fmi.flexstor",
                 possibleExtensions: [
                     "flx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gml"
+                subtype: "vnd.gml",
+                source: .iana
             )
         }
 
@@ -709,21 +920,24 @@ extension MediaType {
                 subtype: "vnd.graphviz",
                 possibleExtensions: [
                     "gv"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndHans() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hans"
+                subtype: "vnd.hans",
+                source: .iana
             )
         }
 
         public static func vndHgl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hgl"
+                subtype: "vnd.hgl",
+                source: .iana
             )
         }
 
@@ -733,7 +947,8 @@ extension MediaType {
                 subtype: "vnd.in3d.3dml",
                 possibleExtensions: [
                     "3dml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -743,77 +958,88 @@ extension MediaType {
                 subtype: "vnd.in3d.spot",
                 possibleExtensions: [
                     "spot"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndIptcNewsml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptc.newsml"
+                subtype: "vnd.iptc.newsml",
+                source: .iana
             )
         }
 
         public static func vndIptcNitf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptc.nitf"
+                subtype: "vnd.iptc.nitf",
+                source: .iana
             )
         }
 
         public static func vndLatexZ() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.latex-z"
+                subtype: "vnd.latex-z",
+                source: .iana
             )
         }
 
         public static func vndMotorolaReflex() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.reflex"
+                subtype: "vnd.motorola.reflex",
+                source: .iana
             )
         }
 
         public static func vndMsMediapackage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-mediapackage"
+                subtype: "vnd.ms-mediapackage",
+                source: .iana
             )
         }
 
         public static func vndNet2phoneCommcenterCommand() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.net2phone.commcenter.command"
+                subtype: "vnd.net2phone.commcenter.command",
+                source: .iana
             )
         }
 
         public static func vndRadisysMsmlBasicLayout() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.radisys.msml-basic-layout"
+                subtype: "vnd.radisys.msml-basic-layout",
+                source: .iana
             )
         }
 
         public static func vndSenxWarpscript() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.senx.warpscript"
+                subtype: "vnd.senx.warpscript",
+                source: .iana
             )
         }
 
         public static func vndSiUricatalogue() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.si.uricatalogue"
+                subtype: "vnd.si.uricatalogue",
+                source: .apache
             )
         }
 
         public static func vndSosi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sosi"
+                subtype: "vnd.sosi",
+                source: .iana
             )
         }
 
@@ -823,42 +1049,48 @@ extension MediaType {
                 subtype: "vnd.sun.j2me.app-descriptor",
                 possibleExtensions: [
                     "jad"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndTrolltechLinguist() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.trolltech.linguist"
+                subtype: "vnd.trolltech.linguist",
+                source: .iana
             )
         }
 
         public static func vndTypst() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.typst"
+                subtype: "vnd.typst",
+                source: .iana
             )
         }
 
         public static func vndVcf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vcf"
+                subtype: "vnd.vcf",
+                source: .iana
             )
         }
 
         public static func vndWapSi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wap.si"
+                subtype: "vnd.wap.si",
+                source: .iana
             )
         }
 
         public static func vndWapSl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wap.sl"
+                subtype: "vnd.wap.sl",
+                source: .iana
             )
         }
 
@@ -868,7 +1100,8 @@ extension MediaType {
                 subtype: "vnd.wap.wml",
                 possibleExtensions: [
                     "wml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -878,14 +1111,16 @@ extension MediaType {
                 subtype: "vnd.wap.wmlscript",
                 possibleExtensions: [
                     "wmls"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndZooKcl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.zoo.kcl"
+                subtype: "vnd.zoo.kcl",
+                source: .iana
             )
         }
 
@@ -895,7 +1130,8 @@ extension MediaType {
                 subtype: "vtt",
                 possibleExtensions: [
                     "vtt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -905,7 +1141,8 @@ extension MediaType {
                 subtype: "wgsl",
                 possibleExtensions: [
                     "wgsl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -916,7 +1153,8 @@ extension MediaType {
                 possibleExtensions: [
                     "s",
                     "asm",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -932,7 +1170,8 @@ extension MediaType {
                     "h",
                     "hh",
                     "dic",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -942,7 +1181,8 @@ extension MediaType {
                 subtype: "x-component",
                 possibleExtensions: [
                     "htc"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -955,7 +1195,8 @@ extension MediaType {
                     "for",
                     "f77",
                     "f90",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -982,7 +1223,8 @@ extension MediaType {
                 subtype: "x-java-source",
                 possibleExtensions: [
                     "java"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1019,7 +1261,8 @@ extension MediaType {
                 subtype: "x-nfo",
                 possibleExtensions: [
                     "nfo"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1029,7 +1272,8 @@ extension MediaType {
                 subtype: "x-opml",
                 possibleExtensions: [
                     "opml"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1050,7 +1294,8 @@ extension MediaType {
                 possibleExtensions: [
                     "p",
                     "pas",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1090,7 +1335,8 @@ extension MediaType {
                 subtype: "x-setext",
                 possibleExtensions: [
                     "etx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1100,7 +1346,8 @@ extension MediaType {
                 subtype: "x-sfv",
                 possibleExtensions: [
                     "sfv"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1120,7 +1367,8 @@ extension MediaType {
                 subtype: "x-uuencode",
                 possibleExtensions: [
                     "uu"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1130,7 +1378,8 @@ extension MediaType {
                 subtype: "x-vcalendar",
                 possibleExtensions: [
                     "vcs"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1140,7 +1389,8 @@ extension MediaType {
                 subtype: "x-vcard",
                 possibleExtensions: [
                     "vcf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1150,14 +1400,16 @@ extension MediaType {
                 subtype: "xml",
                 possibleExtensions: [
                     "xml"
-                ]
+                ],
+                source: .unknown
             )
         }
 
         public static func xmlExternalParsedEntity() -> MediaType {
             .init(
                 type: name,
-                subtype: "xml-external-parsed-entity"
+                subtype: "xml-external-parsed-entity",
+                source: .iana
             )
         }
 

@@ -7,13 +7,26 @@ struct BorderLeftColorTests {
 
     @Test
     func initializers() {
-        // let value1 = .color("fff")
-        // let property1 = BorderLeftColor(value1)
-        // assertProperty(property1, name: "border-left-color", value: value1.rawValue)
+        let property = BorderLeftColor(.color(.red))
 
-        // let value2 = CSSColor(stringLiteral: "fff")
-        // let property2 = BorderLeftColor(value2)
-        // assertProperty(property2, name: "border-left-color", value: value2.rawValue)
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = BorderLeftColor(.color(.red))
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

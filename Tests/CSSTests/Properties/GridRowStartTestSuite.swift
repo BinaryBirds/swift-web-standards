@@ -7,9 +7,26 @@ struct GridRowStartTests {
 
     @Test
     func initializers() {
-        // let value1 = .auto
-        // let property1 = GridRowStart(value1)
-        // assertProperty(property1, name: "grid-row-start", value: value1.rawValue)
+        let property = GridRowStart()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = GridRowStart()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

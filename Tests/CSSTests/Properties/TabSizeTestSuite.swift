@@ -7,17 +7,26 @@ struct TabSizeTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = TabSize(value1)
-        // assertProperty(property1, name: "tab-size", value: value1.rawValue)
+        let property = TabSize(.length(8.px))
 
-        // let value2 = 1
-        // let property2 = TabSize(value2)
-        // assertProperty(property2, name: "tab-size", value: String(value2))
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
-        // let value3 = 1.px
-        // let property3 = TabSize(value3)
-        // assertProperty(property3, name: "tab-size", value: value3.rawValue)
+        let expectation = "\(property.name): \(property.value)"
 
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = TabSize(.length(8.px))
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

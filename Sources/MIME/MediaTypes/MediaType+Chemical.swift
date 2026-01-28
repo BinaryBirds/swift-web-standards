@@ -4,13 +4,26 @@ extension MediaType {
 
         static let name: String = "chemical"
 
+        public static var all: [MediaType] {
+            [
+                xCdx(),
+                xCif(),
+                xCmdf(),
+                xCml(),
+                xCsml(),
+                xPdb(),
+                xXyz(),
+            ]
+        }
+
         public static func xCdx() -> MediaType {
             .init(
                 type: name,
                 subtype: "x-cdx",
                 possibleExtensions: [
                     "cdx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -20,7 +33,8 @@ extension MediaType {
                 subtype: "x-cif",
                 possibleExtensions: [
                     "cif"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -30,7 +44,8 @@ extension MediaType {
                 subtype: "x-cmdf",
                 possibleExtensions: [
                     "cmdf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -40,7 +55,8 @@ extension MediaType {
                 subtype: "x-cml",
                 possibleExtensions: [
                     "cml"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -50,14 +66,16 @@ extension MediaType {
                 subtype: "x-csml",
                 possibleExtensions: [
                     "csml"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xPdb() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-pdb"
+                subtype: "x-pdb",
+                source: .apache
             )
         }
 
@@ -67,7 +85,8 @@ extension MediaType {
                 subtype: "x-xyz",
                 possibleExtensions: [
                     "xyz"
-                ]
+                ],
+                source: .apache
             )
         }
 

@@ -7,9 +7,26 @@ struct OverflowYTests {
 
     @Test
     func initializers() {
-        // let value1 = Overflow.Value.initial
-        // let property1 = OverflowY(value1)
-        // assertProperty(property1, name: "overflow-y", value: value1.rawValue)
+        let property = OverflowY()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = OverflowY()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

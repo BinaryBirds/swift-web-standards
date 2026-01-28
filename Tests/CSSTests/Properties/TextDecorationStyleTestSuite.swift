@@ -7,9 +7,26 @@ struct TextDecorationStyleTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = TextDecorationStyle(value1)
-        // assertProperty(property1, name: "text-decoration-style", value: value1.rawValue)
+        let property = TextDecorationStyle()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = TextDecorationStyle()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

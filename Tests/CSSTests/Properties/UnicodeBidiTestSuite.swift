@@ -7,9 +7,26 @@ struct UnicodeBidiTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = UnicodeBidi(value1)
-        // assertProperty(property1, name: "unicode-bidi", value: value1.rawValue)
+        let property = UnicodeBidi()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = UnicodeBidi()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

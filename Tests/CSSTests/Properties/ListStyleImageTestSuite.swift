@@ -7,9 +7,26 @@ struct ListStyleImageTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = ListStyleImage(value1)
-        // assertProperty(property1, name: "list-style-image", value: value1.rawValue)
+        let property = ListStyleImage(.initial)
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = ListStyleImage(.initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

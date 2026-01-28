@@ -7,9 +7,26 @@ struct LeftTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = Left(value1)
-        // assertProperty(property1, name: "left", value: value1.rawValue)
+        let property = Left()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = Left()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

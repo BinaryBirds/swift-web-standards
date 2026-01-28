@@ -7,9 +7,26 @@ struct HangingPunctuationTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = HangingPunctuation(value1)
-        // assertProperty(property1, name: "hanging-punctuation", value: value1.rawValue)
+        let property = HangingPunctuation()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = HangingPunctuation()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

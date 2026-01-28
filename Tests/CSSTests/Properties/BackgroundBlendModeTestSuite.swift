@@ -7,9 +7,26 @@ struct BackgroundBlendModeTests {
 
     @Test
     func initializers() {
-        // let value1 = .normal
-        // let property1 = BackgroundBlendMode(value1)
-        // assertProperty(property1, name: "background-blend-mode", value: value1.rawValue)
+        let property = BackgroundBlendMode()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = BackgroundBlendMode()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

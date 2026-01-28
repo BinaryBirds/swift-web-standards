@@ -247,20 +247,20 @@ An awesome Swift CSS DSL library using result builders.
 ```swift
 let css = Stylesheet {            
     Media {
-        All {
+        AllElements {
             Background("#222")
         }
         Root {
             Color(.blue)
         }
-        Element(.div) {
+        Element("div") {
             BackgroundColor(.red)
             Color(.white)
             TextAlign(.left)
         }
         .pseudo(.nthChild(2))
     }
-    Media("only screen and (max-width: 600px)") {
+    Media(.screen && .maxWidth(600.px)) {
         Id("custom-identifier") {
             Background("#222")
             Color(.cyan)
@@ -269,12 +269,11 @@ let css = Stylesheet {
             Background("#333")
             Color(.aliceBlue)
         }
-        Selector("ul > li > a") {
+        Custom("ul > li > a:hover") {
             Background("black")
             Color(.red)
                 .important()
         }
-        .pseudo(.hover)
     }
 }
     
@@ -284,7 +283,7 @@ print(StylesheetRenderer(minify: false, indent: 4).render(css))
 
 ## Todo
 
-- [ ] Finish MIME lib (extension detector, DSL)
+- [ ] Fix scoring issue in MediaType detector
 - [ ] Proper CSS renderer (minify)
 - [ ] Security for HTML => proper escaping
 - [ ] Get rid of public enums or use resilient enums
@@ -296,21 +295,17 @@ print(StylesheetRenderer(minify: false, indent: 4).render(css))
 
 - [HTML Standard](https://html.spec.whatwg.org/multipage/)
 - [HTML Reference](https://www.w3schools.com/tags/default.asp)
-
 - [Cascading Style Sheets](https://www.w3.org/Style/CSS/)
 - [CSS Snapshot 2020](https://www.w3.org/TR/css-2020/) 
 - [CSS Working Group Editor Drafts](https://drafts.csswg.org/)
 - [W3Schools CSS reference](https://www.w3schools.com/cssref/)
 - [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [CSS3](https://www.quackit.com/css/css3/)
-
 - [Mime types for JavaScript](https://github.com/broofa/mime)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
 - [mimetype.io](https://mimetype.io/all-types/)
 - [All known MIME types](https://www.digipres.org/formats/mime-types/)
 - [What Is a File Extension and MIME Type?](https://www.lifewire.com/file-extensions-and-mime-types-3469109)
-
-
 - [MIME DB](https://github.com/jshttp/mime-db)
 - [MIME Types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types)
 - [MIME Sniffing](https://mimesniff.spec.whatwg.org/#mime-type-representation)

@@ -1,5 +1,6 @@
 import SGML
 
+/// Values for the HTML `inputmode` global attribute.
 public enum InputModeAttributeValue: String, AttributeValueRepresentable {
     /// The user agent should not display a virtual keyboard.
     case none
@@ -19,6 +20,7 @@ public enum InputModeAttributeValue: String, AttributeValueRepresentable {
     case search
 }
 
+/// Provides access to the HTML `inputmode` global attribute.
 public protocol InputModeAttributeModifier {
     associatedtype InputModeAttributeValueType: AttributeValueRepresentable =
         InputModeAttributeValue
@@ -26,6 +28,9 @@ public protocol InputModeAttributeModifier {
 
 extension InputModeAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `inputmode` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func inputMode(
         _ value: InputModeAttributeValueType?
     ) -> Self {

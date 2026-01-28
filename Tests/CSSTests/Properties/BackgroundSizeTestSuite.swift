@@ -7,9 +7,26 @@ struct BackgroundSizeTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = BackgroundSize(value1)
-        // assertProperty(property1, name: "background-size", value: value1.rawValue)
+        let property = BackgroundSize()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = BackgroundSize()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

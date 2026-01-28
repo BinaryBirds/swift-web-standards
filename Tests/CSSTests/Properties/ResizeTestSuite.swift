@@ -7,9 +7,26 @@ struct ResizeTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = Resize(value1)
-        // assertProperty(property1, name: "resize", value: value1.rawValue)
+        let property = Resize()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = Resize()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

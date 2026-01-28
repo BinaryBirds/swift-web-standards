@@ -7,9 +7,26 @@ struct AnimationFillModeTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = AnimationFillMode(value1)
-        // assertProperty(property1, name: "animation-fill-mode", value: value1.rawValue)
+        let property = AnimationFillMode()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = AnimationFillMode()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

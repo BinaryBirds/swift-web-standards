@@ -4,10 +4,128 @@ extension MediaType {
 
         static let name: String = "video"
 
+        public static var all: [MediaType] {
+            [
+                _1dInterleavedParityfec(),
+                _3gpp(),
+                _3gppTt(),
+                _3gpp2(),
+                av1(),
+                bmpeg(),
+                bt656(),
+                celb(),
+                dv(),
+                encaprtp(),
+                evc(),
+                ffv1(),
+                flexfec(),
+                h261(),
+                h263(),
+                h2631998(),
+                h2632000(),
+                h264(),
+                h264Rcdo(),
+                h264Svc(),
+                h265(),
+                h266(),
+                isoSegment(),
+                jpeg(),
+                jpeg2000(),
+                jpeg2000Scl(),
+                jpm(),
+                jxsv(),
+                lottieJson(),
+                matroska(),
+                matroska3d(),
+                mj2(),
+                mp1s(),
+                mp2p(),
+                mp2t(),
+                mp4(),
+                mp4vEs(),
+                mpeg(),
+                mpeg4Generic(),
+                mpv(),
+                nv(),
+                ogg(),
+                parityfec(),
+                pointer(),
+                quicktime(),
+                raptorfec(),
+                raw(),
+                rtpEncAescm128(),
+                rtploopback(),
+                rtx(),
+                scip(),
+                smpte291(),
+                smpte292m(),
+                ulpfec(),
+                vc1(),
+                vc2(),
+                vndBlockfactFactv(),
+                vndCctv(),
+                vndDeceHd(),
+                vndDeceMobile(),
+                vndDeceMp4(),
+                vndDecePd(),
+                vndDeceSd(),
+                vndDeceVideo(),
+                vndDirectvMpeg(),
+                vndDirectvMpegTts(),
+                vndDlnaMpegTts(),
+                vndDvbFile(),
+                vndFvt(),
+                vndHnsVideo(),
+                vndIptvforum1dparityfec1010(),
+                vndIptvforum1dparityfec2005(),
+                vndIptvforum2dparityfec1010(),
+                vndIptvforum2dparityfec2005(),
+                vndIptvforumTtsavc(),
+                vndIptvforumTtsmpeg2(),
+                vndMotorolaVideo(),
+                vndMotorolaVideop(),
+                vndMpegurl(),
+                vndMsPlayreadyMediaPyv(),
+                vndNokiaInterleavedMultimedia(),
+                vndNokiaMp4vr(),
+                vndNokiaVideovoip(),
+                vndObjectvideo(),
+                vndPlanar(),
+                vndRadgamettoolsBink(),
+                vndRadgamettoolsSmacker(),
+                vndSealedMpeg1(),
+                vndSealedMpeg4(),
+                vndSealedSwf(),
+                vndSealedmediaSoftsealMov(),
+                vndUvvuMp4(),
+                vndVivo(),
+                vndYoutubeYt(),
+                vp8(),
+                vp9(),
+                webm(),
+                xF4v(),
+                xFli(),
+                xFlv(),
+                xM4v(),
+                xMatroska(),
+                xMng(),
+                xMsAsf(),
+                xMsVob(),
+                xMsWm(),
+                xMsWmv(),
+                xMsWmx(),
+                xMsWvx(),
+                xMsvideo(),
+                xSgiMovie(),
+                xSmv(),
+            ]
+        }
+
         public static func _1dInterleavedParityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "1d-interleaved-parityfec"
+                subtype: "1d-interleaved-parityfec",
+                source: .iana
             )
         }
 
@@ -18,14 +136,16 @@ extension MediaType {
                 possibleExtensions: [
                     "3gp",
                     "3gpp",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func _3gppTt() -> MediaType {
             .init(
                 type: name,
-                subtype: "3gpp-tt"
+                subtype: "3gpp-tt",
+                source: .iana
             )
         }
 
@@ -35,70 +155,80 @@ extension MediaType {
                 subtype: "3gpp2",
                 possibleExtensions: [
                     "3g2"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func av1() -> MediaType {
             .init(
                 type: name,
-                subtype: "av1"
+                subtype: "av1",
+                source: .iana
             )
         }
 
         public static func bmpeg() -> MediaType {
             .init(
                 type: name,
-                subtype: "bmpeg"
+                subtype: "bmpeg",
+                source: .iana
             )
         }
 
         public static func bt656() -> MediaType {
             .init(
                 type: name,
-                subtype: "bt656"
+                subtype: "bt656",
+                source: .iana
             )
         }
 
         public static func celb() -> MediaType {
             .init(
                 type: name,
-                subtype: "celb"
+                subtype: "celb",
+                source: .iana
             )
         }
 
         public static func dv() -> MediaType {
             .init(
                 type: name,
-                subtype: "dv"
+                subtype: "dv",
+                source: .iana
             )
         }
 
         public static func encaprtp() -> MediaType {
             .init(
                 type: name,
-                subtype: "encaprtp"
+                subtype: "encaprtp",
+                source: .iana
             )
         }
 
         public static func evc() -> MediaType {
             .init(
                 type: name,
-                subtype: "evc"
+                subtype: "evc",
+                source: .iana
             )
         }
 
         public static func ffv1() -> MediaType {
             .init(
                 type: name,
-                subtype: "ffv1"
+                subtype: "ffv1",
+                source: .iana
             )
         }
 
         public static func flexfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "flexfec"
+                subtype: "flexfec",
+                source: .iana
             )
         }
 
@@ -108,7 +238,8 @@ extension MediaType {
                 subtype: "h261",
                 possibleExtensions: [
                     "h261"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -118,21 +249,24 @@ extension MediaType {
                 subtype: "h263",
                 possibleExtensions: [
                     "h263"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func h2631998() -> MediaType {
             .init(
                 type: name,
-                subtype: "h263-1998"
+                subtype: "h263-1998",
+                source: .iana
             )
         }
 
         public static func h2632000() -> MediaType {
             .init(
                 type: name,
-                subtype: "h263-2000"
+                subtype: "h263-2000",
+                source: .iana
             )
         }
 
@@ -142,35 +276,40 @@ extension MediaType {
                 subtype: "h264",
                 possibleExtensions: [
                     "h264"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func h264Rcdo() -> MediaType {
             .init(
                 type: name,
-                subtype: "h264-rcdo"
+                subtype: "h264-rcdo",
+                source: .iana
             )
         }
 
         public static func h264Svc() -> MediaType {
             .init(
                 type: name,
-                subtype: "h264-svc"
+                subtype: "h264-svc",
+                source: .iana
             )
         }
 
         public static func h265() -> MediaType {
             .init(
                 type: name,
-                subtype: "h265"
+                subtype: "h265",
+                source: .iana
             )
         }
 
         public static func h266() -> MediaType {
             .init(
                 type: name,
-                subtype: "h266"
+                subtype: "h266",
+                source: .iana
             )
         }
 
@@ -180,7 +319,8 @@ extension MediaType {
                 subtype: "iso.segment",
                 possibleExtensions: [
                     "m4s"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -190,21 +330,24 @@ extension MediaType {
                 subtype: "jpeg",
                 possibleExtensions: [
                     "jpgv"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func jpeg2000() -> MediaType {
             .init(
                 type: name,
-                subtype: "jpeg2000"
+                subtype: "jpeg2000",
+                source: .iana
             )
         }
 
         public static func jpeg2000Scl() -> MediaType {
             .init(
                 type: name,
-                subtype: "jpeg2000-scl"
+                subtype: "jpeg2000-scl",
+                source: .iana
             )
         }
 
@@ -215,14 +358,16 @@ extension MediaType {
                 possibleExtensions: [
                     "jpm",
                     "jpgm",
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func jxsv() -> MediaType {
             .init(
                 type: name,
-                subtype: "jxsv"
+                subtype: "jxsv",
+                source: .iana
             )
         }
 
@@ -232,21 +377,24 @@ extension MediaType {
                 subtype: .init(
                     value: "lottie",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func matroska() -> MediaType {
             .init(
                 type: name,
-                subtype: "matroska"
+                subtype: "matroska",
+                source: .iana
             )
         }
 
         public static func matroska3d() -> MediaType {
             .init(
                 type: name,
-                subtype: "matroska-3d"
+                subtype: "matroska-3d",
+                source: .iana
             )
         }
 
@@ -257,21 +405,24 @@ extension MediaType {
                 possibleExtensions: [
                     "mj2",
                     "mjp2",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mp1s() -> MediaType {
             .init(
                 type: name,
-                subtype: "mp1s"
+                subtype: "mp1s",
+                source: .iana
             )
         }
 
         public static func mp2p() -> MediaType {
             .init(
                 type: name,
-                subtype: "mp2p"
+                subtype: "mp2p",
+                source: .iana
             )
         }
 
@@ -284,7 +435,8 @@ extension MediaType {
                     "m2t",
                     "m2ts",
                     "mts",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -296,14 +448,16 @@ extension MediaType {
                     "mp4",
                     "mp4v",
                     "mpg4",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mp4vEs() -> MediaType {
             .init(
                 type: name,
-                subtype: "mp4v-es"
+                subtype: "mp4v-es",
+                source: .iana
             )
         }
 
@@ -317,28 +471,32 @@ extension MediaType {
                     "mpe",
                     "m1v",
                     "m2v",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mpeg4Generic() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpeg4-generic"
+                subtype: "mpeg4-generic",
+                source: .iana
             )
         }
 
         public static func mpv() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpv"
+                subtype: "mpv",
+                source: .iana
             )
         }
 
         public static func nv() -> MediaType {
             .init(
                 type: name,
-                subtype: "nv"
+                subtype: "nv",
+                source: .iana
             )
         }
 
@@ -348,21 +506,24 @@ extension MediaType {
                 subtype: "ogg",
                 possibleExtensions: [
                     "ogv"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func parityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "parityfec"
+                subtype: "parityfec",
+                source: .iana
             )
         }
 
         public static func pointer() -> MediaType {
             .init(
                 type: name,
-                subtype: "pointer"
+                subtype: "pointer",
+                source: .iana
             )
         }
 
@@ -373,98 +534,112 @@ extension MediaType {
                 possibleExtensions: [
                     "qt",
                     "mov",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func raptorfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "raptorfec"
+                subtype: "raptorfec",
+                source: .iana
             )
         }
 
         public static func raw() -> MediaType {
             .init(
                 type: name,
-                subtype: "raw"
+                subtype: "raw",
+                source: .iana
             )
         }
 
         public static func rtpEncAescm128() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtp-enc-aescm128"
+                subtype: "rtp-enc-aescm128",
+                source: .iana
             )
         }
 
         public static func rtploopback() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtploopback"
+                subtype: "rtploopback",
+                source: .iana
             )
         }
 
         public static func rtx() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtx"
+                subtype: "rtx",
+                source: .iana
             )
         }
 
         public static func scip() -> MediaType {
             .init(
                 type: name,
-                subtype: "scip"
+                subtype: "scip",
+                source: .iana
             )
         }
 
         public static func smpte291() -> MediaType {
             .init(
                 type: name,
-                subtype: "smpte291"
+                subtype: "smpte291",
+                source: .iana
             )
         }
 
         public static func smpte292m() -> MediaType {
             .init(
                 type: name,
-                subtype: "smpte292m"
+                subtype: "smpte292m",
+                source: .iana
             )
         }
 
         public static func ulpfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "ulpfec"
+                subtype: "ulpfec",
+                source: .iana
             )
         }
 
         public static func vc1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vc1"
+                subtype: "vc1",
+                source: .iana
             )
         }
 
         public static func vc2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vc2"
+                subtype: "vc2",
+                source: .iana
             )
         }
 
         public static func vndBlockfactFactv() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.blockfact.factv"
+                subtype: "vnd.blockfact.factv",
+                source: .iana
             )
         }
 
         public static func vndCctv() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cctv"
+                subtype: "vnd.cctv",
+                source: .iana
             )
         }
 
@@ -475,7 +650,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvh",
                     "uvvh",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -486,14 +662,16 @@ extension MediaType {
                 possibleExtensions: [
                     "uvm",
                     "uvvm",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDeceMp4() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dece.mp4"
+                subtype: "vnd.dece.mp4",
+                source: .iana
             )
         }
 
@@ -504,7 +682,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvp",
                     "uvvp",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -515,7 +694,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvs",
                     "uvvs",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -526,28 +706,32 @@ extension MediaType {
                 possibleExtensions: [
                     "uvv",
                     "uvvv",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDirectvMpeg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.directv.mpeg"
+                subtype: "vnd.directv.mpeg",
+                source: .iana
             )
         }
 
         public static func vndDirectvMpegTts() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.directv.mpeg-tts"
+                subtype: "vnd.directv.mpeg-tts",
+                source: .iana
             )
         }
 
         public static func vndDlnaMpegTts() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dlna.mpeg-tts"
+                subtype: "vnd.dlna.mpeg-tts",
+                source: .iana
             )
         }
 
@@ -557,7 +741,8 @@ extension MediaType {
                 subtype: "vnd.dvb.file",
                 possibleExtensions: [
                     "dvb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -567,70 +752,80 @@ extension MediaType {
                 subtype: "vnd.fvt",
                 possibleExtensions: [
                     "fvt"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndHnsVideo() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hns.video"
+                subtype: "vnd.hns.video",
+                source: .iana
             )
         }
 
         public static func vndIptvforum1dparityfec1010() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptvforum.1dparityfec-1010"
+                subtype: "vnd.iptvforum.1dparityfec-1010",
+                source: .iana
             )
         }
 
         public static func vndIptvforum1dparityfec2005() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptvforum.1dparityfec-2005"
+                subtype: "vnd.iptvforum.1dparityfec-2005",
+                source: .iana
             )
         }
 
         public static func vndIptvforum2dparityfec1010() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptvforum.2dparityfec-1010"
+                subtype: "vnd.iptvforum.2dparityfec-1010",
+                source: .iana
             )
         }
 
         public static func vndIptvforum2dparityfec2005() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptvforum.2dparityfec-2005"
+                subtype: "vnd.iptvforum.2dparityfec-2005",
+                source: .iana
             )
         }
 
         public static func vndIptvforumTtsavc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptvforum.ttsavc"
+                subtype: "vnd.iptvforum.ttsavc",
+                source: .iana
             )
         }
 
         public static func vndIptvforumTtsmpeg2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.iptvforum.ttsmpeg2"
+                subtype: "vnd.iptvforum.ttsmpeg2",
+                source: .iana
             )
         }
 
         public static func vndMotorolaVideo() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.video"
+                subtype: "vnd.motorola.video",
+                source: .iana
             )
         }
 
         public static func vndMotorolaVideop() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.videop"
+                subtype: "vnd.motorola.videop",
+                source: .iana
             )
         }
 
@@ -641,7 +836,8 @@ extension MediaType {
                 possibleExtensions: [
                     "mxu",
                     "m4u",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -651,84 +847,96 @@ extension MediaType {
                 subtype: "vnd.ms-playready.media.pyv",
                 possibleExtensions: [
                     "pyv"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndNokiaInterleavedMultimedia() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.interleaved-multimedia"
+                subtype: "vnd.nokia.interleaved-multimedia",
+                source: .iana
             )
         }
 
         public static func vndNokiaMp4vr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.mp4vr"
+                subtype: "vnd.nokia.mp4vr",
+                source: .iana
             )
         }
 
         public static func vndNokiaVideovoip() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.videovoip"
+                subtype: "vnd.nokia.videovoip",
+                source: .iana
             )
         }
 
         public static func vndObjectvideo() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.objectvideo"
+                subtype: "vnd.objectvideo",
+                source: .iana
             )
         }
 
         public static func vndPlanar() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.planar"
+                subtype: "vnd.planar",
+                source: .iana
             )
         }
 
         public static func vndRadgamettoolsBink() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.radgamettools.bink"
+                subtype: "vnd.radgamettools.bink",
+                source: .iana
             )
         }
 
         public static func vndRadgamettoolsSmacker() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.radgamettools.smacker"
+                subtype: "vnd.radgamettools.smacker",
+                source: .apache
             )
         }
 
         public static func vndSealedMpeg1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.mpeg1"
+                subtype: "vnd.sealed.mpeg1",
+                source: .iana
             )
         }
 
         public static func vndSealedMpeg4() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.mpeg4"
+                subtype: "vnd.sealed.mpeg4",
+                source: .iana
             )
         }
 
         public static func vndSealedSwf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.swf"
+                subtype: "vnd.sealed.swf",
+                source: .iana
             )
         }
 
         public static func vndSealedmediaSoftsealMov() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealedmedia.softseal.mov"
+                subtype: "vnd.sealedmedia.softseal.mov",
+                source: .iana
             )
         }
 
@@ -739,7 +947,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvu",
                     "uvvu",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -749,28 +958,32 @@ extension MediaType {
                 subtype: "vnd.vivo",
                 possibleExtensions: [
                     "viv"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndYoutubeYt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.youtube.yt"
+                subtype: "vnd.youtube.yt",
+                source: .iana
             )
         }
 
         public static func vp8() -> MediaType {
             .init(
                 type: name,
-                subtype: "vp8"
+                subtype: "vp8",
+                source: .iana
             )
         }
 
         public static func vp9() -> MediaType {
             .init(
                 type: name,
-                subtype: "vp9"
+                subtype: "vp9",
+                source: .iana
             )
         }
 
@@ -780,7 +993,8 @@ extension MediaType {
                 subtype: "webm",
                 possibleExtensions: [
                     "webm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -790,7 +1004,8 @@ extension MediaType {
                 subtype: "x-f4v",
                 possibleExtensions: [
                     "f4v"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -800,7 +1015,8 @@ extension MediaType {
                 subtype: "x-fli",
                 possibleExtensions: [
                     "fli"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -810,7 +1026,8 @@ extension MediaType {
                 subtype: "x-flv",
                 possibleExtensions: [
                     "flv"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -820,7 +1037,8 @@ extension MediaType {
                 subtype: "x-m4v",
                 possibleExtensions: [
                     "m4v"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -832,7 +1050,8 @@ extension MediaType {
                     "mkv",
                     "mk3d",
                     "mks",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -842,7 +1061,8 @@ extension MediaType {
                 subtype: "x-mng",
                 possibleExtensions: [
                     "mng"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -853,7 +1073,8 @@ extension MediaType {
                 possibleExtensions: [
                     "asf",
                     "asx",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -863,7 +1084,8 @@ extension MediaType {
                 subtype: "x-ms-vob",
                 possibleExtensions: [
                     "vob"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -873,7 +1095,8 @@ extension MediaType {
                 subtype: "x-ms-wm",
                 possibleExtensions: [
                     "wm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -883,7 +1106,8 @@ extension MediaType {
                 subtype: "x-ms-wmv",
                 possibleExtensions: [
                     "wmv"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -893,7 +1117,8 @@ extension MediaType {
                 subtype: "x-ms-wmx",
                 possibleExtensions: [
                     "wmx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -903,7 +1128,8 @@ extension MediaType {
                 subtype: "x-ms-wvx",
                 possibleExtensions: [
                     "wvx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -913,7 +1139,8 @@ extension MediaType {
                 subtype: "x-msvideo",
                 possibleExtensions: [
                     "avi"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -923,7 +1150,8 @@ extension MediaType {
                 subtype: "x-sgi-movie",
                 possibleExtensions: [
                     "movie"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -933,7 +1161,8 @@ extension MediaType {
                 subtype: "x-smv",
                 possibleExtensions: [
                     "smv"
-                ]
+                ],
+                source: .apache
             )
         }
 

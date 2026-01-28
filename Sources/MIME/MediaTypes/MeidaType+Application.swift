@@ -3,11 +3,1955 @@ extension MediaType {
     public enum Application {
 
         static let name: String = "application"
+        public static var all: [MediaType] {
+            [
+                _1dInterleavedParityfec(),
+                _3gpdashQoeReportXml(),
+                _3gppImsXml(),
+                _3gppMbsObjectManifestJson(),
+                _3gppMbsUserServiceDescriptionsJson(),
+                _3gppMediaDeliveryMetricsReportJson(),
+                _3gpphalJson(),
+                _3gpphalformsJson(),
+                a2l(),
+                aceCbor(),
+                aceJson(),
+                aceGroupcommCbor(),
+                aceTrlCbor(),
+                activemessage(),
+                activityJson(),
+                aifCbor(),
+                aifJson(),
+                altoCdniJson(),
+                altoCdnifilterJson(),
+                altoCostmapJson(),
+                altoCostmapfilterJson(),
+                altoDirectoryJson(),
+                altoEndpointcostJson(),
+                altoEndpointcostparamsJson(),
+                altoEndpointpropJson(),
+                altoEndpointpropparamsJson(),
+                altoErrorJson(),
+                altoNetworkmapJson(),
+                altoNetworkmapfilterJson(),
+                altoPropmapJson(),
+                altoPropmapparamsJson(),
+                altoTipsJson(),
+                altoTipsparamsJson(),
+                altoUpdatestreamcontrolJson(),
+                altoUpdatestreamparamsJson(),
+                aml(),
+                andrewInset(),
+                appinstaller(),
+                applefile(),
+                applixware(),
+                appx(),
+                appxbundle(),
+                asyncapiJson(),
+                asyncapiYaml(),
+                atJwt(),
+                atf(),
+                atfx(),
+                atomXml(),
+                atomcatXml(),
+                atomdeletedXml(),
+                atomicmail(),
+                atomsvcXml(),
+                atscDwdXml(),
+                atscDynamicEventMessage(),
+                atscHeldXml(),
+                atscRdtJson(),
+                atscRsatXml(),
+                atxml(),
+                authPolicyXml(),
+                automationmlAmlXml(),
+                automationmlAmlxZip(),
+                bacnetXddZip(),
+                batchSmtp(),
+                bdoc(),
+                beepXml(),
+                bufr(),
+                c2pa(),
+                calendarJson(),
+                calendarXml(),
+                callCompletion(),
+                cals1840(),
+                captiveJson(),
+                cbor(),
+                cborSeq(),
+                cccex(),
+                ccmpXml(),
+                ccxmlXml(),
+                cdaXml(),
+                cdfxXml(),
+                cdmiCapability(),
+                cdmiContainer(),
+                cdmiDomain(),
+                cdmiObject(),
+                cdmiQueue(),
+                cdni(),
+                ceCbor(),
+                cea(),
+                cea2018Xml(),
+                cellmlXml(),
+                cfw(),
+                cid(),
+                cidEdhocCborSeq(),
+                cityJson(),
+                cityJsonSeq(),
+                clr(),
+                clueXml(),
+                clueInfoXml(),
+                cms(),
+                cnrpXml(),
+                coapEap(),
+                coapGroupJson(),
+                coapPayload(),
+                commonground(),
+                conciseProblemDetailsCbor(),
+                conferenceInfoXml(),
+                cose(),
+                coseKey(),
+                coseKeySet(),
+                coseX509(),
+                cplXml(),
+                csrattrs(),
+                cstaXml(),
+                cstadataXml(),
+                csvmJson(),
+                cuSeeme(),
+                cwl(),
+                cwlJson(),
+                cwlYaml(),
+                cwt(),
+                cybercash(),
+                dart(),
+                dashXml(),
+                dashPatchXml(),
+                dashdelta(),
+                davmountXml(),
+                dcaRft(),
+                dcd(),
+                decDx(),
+                dialogInfoXml(),
+                dicom(),
+                dicomJson(),
+                dicomXml(),
+                did(),
+                dii(),
+                dit(),
+                dns(),
+                dnsJson(),
+                dnsMessage(),
+                docbookXml(),
+                dotsCbor(),
+                dpopJwt(),
+                dskppXml(),
+                dsscDer(),
+                dsscXml(),
+                dvcs(),
+                eatCwt(),
+                eatJwt(),
+                eatBunCbor(),
+                eatBunJson(),
+                eatUcsCbor(),
+                eatUcsJson(),
+                ecmascript(),
+                edhocCborSeq(),
+                ediConsent(),
+                ediX12(),
+                edifact(),
+                efi(),
+                elmJson(),
+                elmXml(),
+                emergencycalldataCapXml(),
+                emergencycalldataCommentXml(),
+                emergencycalldataControlXml(),
+                emergencycalldataDeviceinfoXml(),
+                emergencycalldataEcallMsd(),
+                emergencycalldataLegacyesnJson(),
+                emergencycalldataProviderinfoXml(),
+                emergencycalldataServiceinfoXml(),
+                emergencycalldataSubscriberinfoXml(),
+                emergencycalldataVedsXml(),
+                emmaXml(),
+                emotionmlXml(),
+                encaprtp(),
+                entityStatementJwt(),
+                eppXml(),
+                epubZip(),
+                eshop(),
+                exi(),
+                expectCtReportJson(),
+                express(),
+                fastinfoset(),
+                fastsoap(),
+                fdf(),
+                fdtXml(),
+                fhirJson(),
+                fhirXml(),
+                fidoTrustedAppsJson(),
+                fits(),
+                flexfec(),
+                fontSfnt(),
+                fontTdpfr(),
+                fontWoff(),
+                frameworkAttributesXml(),
+                geoJson(),
+                geoJsonSeq(),
+                geofeedCsv(),
+                geopackageSqlite3(),
+                geoposeJson(),
+                geoxacmlJson(),
+                geoxacmlXml(),
+                gltfBuffer(),
+                gmlXml(),
+                gnapBindingJws(),
+                gnapBindingJwsd(),
+                gnapBindingRotationJws(),
+                gnapBindingRotationJwsd(),
+                gpxXml(),
+                grib(),
+                gxf(),
+                gzip(),
+                h224(),
+                heldXml(),
+                hjson(),
+                hl7v2Xml(),
+                http(),
+                hyperstudio(),
+                ibeKeyRequestXml(),
+                ibePkgReplyXml(),
+                ibePpData(),
+                iges(),
+                imIscomposingXml(),
+                index(),
+                indexCmd(),
+                indexObj(),
+                indexResponse(),
+                indexVnd(),
+                inkmlXml(),
+                iotp(),
+                ipfix(),
+                ipp(),
+                isup(),
+                itsXml(),
+                javaArchive(),
+                javaSerializedObject(),
+                javaVm(),
+                javascript(),
+                jf2feedJson(),
+                jose(),
+                joseJson(),
+                jrdJson(),
+                jscalendarJson(),
+                jscontactJson(),
+                json(),
+                jsonPatchJson(),
+                jsonPatchQueryJson(),
+                jsonSeq(),
+                json5(),
+                jsonmlJson(),
+                jsonpath(),
+                jwkJson(),
+                jwkSetJson(),
+                jwkSetJwt(),
+                jwt(),
+                kbJwt(),
+                kblXml(),
+                kpmlRequestXml(),
+                kpmlResponseXml(),
+                ldJson(),
+                lgrXml(),
+                linkFormat(),
+                linkset(),
+                linksetJson(),
+                loadControlXml(),
+                logoutJwt(),
+                lostXml(),
+                lostsyncXml(),
+                lpfZip(),
+                lxf(),
+                macBinhex40(),
+                macCompactpro(),
+                macwriteii(),
+                madsXml(),
+                manifestJson(),
+                marc(),
+                marcxmlXml(),
+                mathematica(),
+                mathmlXml(),
+                mathmlContentXml(),
+                mathmlPresentationXml(),
+                mbmsAssociatedProcedureDescriptionXml(),
+                mbmsDeregisterXml(),
+                mbmsEnvelopeXml(),
+                mbmsMskXml(),
+                mbmsMskResponseXml(),
+                mbmsProtectionDescriptionXml(),
+                mbmsReceptionReportXml(),
+                mbmsRegisterXml(),
+                mbmsRegisterResponseXml(),
+                mbmsScheduleXml(),
+                mbmsUserServiceDescriptionXml(),
+                mbox(),
+                mediaPolicyDatasetXml(),
+                mediaControlXml(),
+                mediaservercontrolXml(),
+                mergePatchJson(),
+                metalinkXml(),
+                metalink4Xml(),
+                metsXml(),
+                mf4(),
+                mikey(),
+                mipc(),
+                missingBlocksCborSeq(),
+                mmtAeiXml(),
+                mmtUsdXml(),
+                modsXml(),
+                mossKeys(),
+                mossSignature(),
+                mosskeyData(),
+                mosskeyRequest(),
+                mp21(),
+                mp4(),
+                mpeg4Generic(),
+                mpeg4Iod(),
+                mpeg4IodXmt(),
+                mrbConsumerXml(),
+                mrbPublishXml(),
+                mscIvrXml(),
+                mscMixerXml(),
+                msix(),
+                msixbundle(),
+                msword(),
+                mudJson(),
+                multipartCore(),
+                mxf(),
+                nQuads(),
+                nTriples(),
+                nasdata(),
+                newsCheckgroups(),
+                newsGroupinfo(),
+                newsTransmission(),
+                nlsmlXml(),
+                node(),
+                nss(),
+                oauthAuthzReqJwt(),
+                obliviousDnsMessage(),
+                ocspRequest(),
+                ocspResponse(),
+                octetStream(),
+                oda(),
+                odmXml(),
+                odx(),
+                oebpsPackageXml(),
+                ogg(),
+                ohttpKeys(),
+                omdocXml(),
+                onenote(),
+                opcNodesetXml(),
+                oscore(),
+                oxps(),
+                p21(),
+                p21Zip(),
+                p2pOverlayXml(),
+                parityfec(),
+                passport(),
+                patchOpsErrorXml(),
+                pdf(),
+                pdx(),
+                pemCertificateChain(),
+                pgpEncrypted(),
+                pgpKeys(),
+                pgpSignature(),
+                picsRules(),
+                pidfXml(),
+                pidfDiffXml(),
+                pkcs10(),
+                pkcs12(),
+                pkcs7Mime(),
+                pkcs7Signature(),
+                pkcs8(),
+                pkcs8Encrypted(),
+                pkixAttrCert(),
+                pkixCert(),
+                pkixCrl(),
+                pkixPkipath(),
+                pkixcmp(),
+                plsXml(),
+                pocSettingsXml(),
+                postscript(),
+                ppspTrackerJson(),
+                privateTokenIssuerDirectory(),
+                privateTokenRequest(),
+                privateTokenResponse(),
+                problemJson(),
+                problemXml(),
+                protobuf(),
+                protobufJson(),
+                provenanceXml(),
+                providedClaimsJwt(),
+                prsAlvestrandTitraxSheet(),
+                prsCww(),
+                prsCyn(),
+                prsHpubZip(),
+                prsImpliedDocumentXml(),
+                prsImpliedExecutable(),
+                prsImpliedObjectJson(),
+                prsImpliedObjectJsonSeq(),
+                prsImpliedObjectYaml(),
+                prsImpliedStructure(),
+                prsMayfile(),
+                prsNprend(),
+                prsPlucker(),
+                prsRdfXmlCrypt(),
+                prsVcfbzip2(),
+                prsXsfXml(),
+                pskcXml(),
+                pvdJson(),
+                qsig(),
+                ramlYaml(),
+                raptorfec(),
+                rdapJson(),
+                rdfXml(),
+                reginfoXml(),
+                relaxNgCompactSyntax(),
+                remotePrinting(),
+                reputonJson(),
+                resolveResponseJwt(),
+                resourceListsXml(),
+                resourceListsDiffXml(),
+                rfcXml(),
+                riscos(),
+                rlmiXml(),
+                rlsServicesXml(),
+                routeApdXml(),
+                routeSTsidXml(),
+                routeUsdXml(),
+                rpkiChecklist(),
+                rpkiGhostbusters(),
+                rpkiManifest(),
+                rpkiPublication(),
+                rpkiRoa(),
+                rpkiSignedTal(),
+                rpkiUpdown(),
+                rsMetadataXml(),
+                rsdXml(),
+                rssXml(),
+                rtf(),
+                rtploopback(),
+                rtx(),
+                samlassertionXml(),
+                samlmetadataXml(),
+                sarifJson(),
+                sarifExternalPropertiesJson(),
+                sbe(),
+                sbmlXml(),
+                scaipXml(),
+                scimJson(),
+                scittReceiptCose(),
+                scittStatementCose(),
+                scvpCvRequest(),
+                scvpCvResponse(),
+                scvpVpRequest(),
+                scvpVpResponse(),
+                sdJwt(),
+                sdJwtJson(),
+                sdfJson(),
+                sdp(),
+                seceventJwt(),
+                senmlCbor(),
+                senmlJson(),
+                senmlXml(),
+                senmlEtchCbor(),
+                senmlEtchJson(),
+                senmlExi(),
+                sensmlCbor(),
+                sensmlJson(),
+                sensmlXml(),
+                sensmlExi(),
+                sepXml(),
+                sepExi(),
+                sessionInfo(),
+                setPayment(),
+                setPaymentInitiation(),
+                setRegistration(),
+                setRegistrationInitiation(),
+                sgml(),
+                sgmlOpenCatalog(),
+                shfXml(),
+                sieve(),
+                simpleFilterXml(),
+                simpleMessageSummary(),
+                simplesymbolcontainer(),
+                sipc(),
+                slate(),
+                smil(),
+                smilXml(),
+                smpte336m(),
+                soapFastinfoset(),
+                soapXml(),
+                sparqlQuery(),
+                sparqlResultsXml(),
+                spdxJson(),
+                spiritsEventXml(),
+                sql(),
+                srgs(),
+                srgsXml(),
+                sruXml(),
+                ssdlXml(),
+                sslkeylogfile(),
+                ssmlXml(),
+                st211041(),
+                stixJson(),
+                stratum(),
+                suitEnvelopeCose(),
+                swidCbor(),
+                swidXml(),
+                tampApexUpdate(),
+                tampApexUpdateConfirm(),
+                tampCommunityUpdate(),
+                tampCommunityUpdateConfirm(),
+                tampError(),
+                tampSequenceAdjust(),
+                tampSequenceAdjustConfirm(),
+                tampStatusQuery(),
+                tampStatusResponse(),
+                tampUpdate(),
+                tampUpdateConfirm(),
+                tar(),
+                taxiiJson(),
+                tdJson(),
+                teiXml(),
+                tetraIsi(),
+                texinfo(),
+                thraudXml(),
+                timestampQuery(),
+                timestampReply(),
+                timestampedData(),
+                tlsrptGzip(),
+                tlsrptJson(),
+                tmJson(),
+                tnauthlist(),
+                tocCbor(),
+                tokenIntrospectionJwt(),
+                toml(),
+                trickleIceSdpfrag(),
+                trig(),
+                trustChainJson(),
+                trustMarkJwt(),
+                trustMarkDelegationJwt(),
+                ttmlXml(),
+                tveTrigger(),
+                tzif(),
+                tzifLeap(),
+                ubjson(),
+                uccsCbor(),
+                ujcsJson(),
+                ulpfec(),
+                urcGrpsheetXml(),
+                urcRessheetXml(),
+                urcTargetdescXml(),
+                urcUisocketdescXml(),
+                vc(),
+                vcCose(),
+                vcJwt(),
+                vcardJson(),
+                vcardXml(),
+                vecXml(),
+                vecPackageGzip(),
+                vecPackageZip(),
+                vemmi(),
+                vividenceScriptfile(),
+                vnd1000mindsDecisionModelXml(),
+                vnd1ob(),
+                vnd3gppProseXml(),
+                vnd3gppProsePc3aXml(),
+                vnd3gppProsePc3achXml(),
+                vnd3gppProsePc3chXml(),
+                vnd3gppProsePc8Xml(),
+                vnd3gppV2xLocalServiceInformation(),
+                vnd3gpp5gnas(),
+                vnd3gpp5gsa2x(),
+                vnd3gpp5gsa2xLocalServiceInformation(),
+                vnd3gpp5gsv2x(),
+                vnd3gpp5gsv2xLocalServiceInformation(),
+                vnd3gppAccessTransferEventsXml(),
+                vnd3gppBsfXml(),
+                vnd3gppCrsXml(),
+                vnd3gppCurrentLocationDiscoveryXml(),
+                vnd3gppGmopXml(),
+                vnd3gppGtpc(),
+                vnd3gppInterworkingData(),
+                vnd3gppLpp(),
+                vnd3gppMcSignallingEar(),
+                vnd3gppMcdataAffiliationCommandXml(),
+                vnd3gppMcdataInfoXml(),
+                vnd3gppMcdataMsgstoreCtrlRequestXml(),
+                vnd3gppMcdataPayload(),
+                vnd3gppMcdataRegroupXml(),
+                vnd3gppMcdataServiceConfigXml(),
+                vnd3gppMcdataSignalling(),
+                vnd3gppMcdataUeConfigXml(),
+                vnd3gppMcdataUserProfileXml(),
+                vnd3gppMcpttAffiliationCommandXml(),
+                vnd3gppMcpttFloorRequestXml(),
+                vnd3gppMcpttInfoXml(),
+                vnd3gppMcpttLocationInfoXml(),
+                vnd3gppMcpttMbmsUsageInfoXml(),
+                vnd3gppMcpttRegroupXml(),
+                vnd3gppMcpttServiceConfigXml(),
+                vnd3gppMcpttSignedXml(),
+                vnd3gppMcpttUeConfigXml(),
+                vnd3gppMcpttUeInitConfigXml(),
+                vnd3gppMcpttUserProfileXml(),
+                vnd3gppMcvideoAffiliationCommandXml(),
+                vnd3gppMcvideoInfoXml(),
+                vnd3gppMcvideoLocationInfoXml(),
+                vnd3gppMcvideoMbmsUsageInfoXml(),
+                vnd3gppMcvideoRegroupXml(),
+                vnd3gppMcvideoServiceConfigXml(),
+                vnd3gppMcvideoTransmissionRequestXml(),
+                vnd3gppMcvideoUeConfigXml(),
+                vnd3gppMcvideoUserProfileXml(),
+                vnd3gppMidCallXml(),
+                vnd3gppNgap(),
+                vnd3gppPfcp(),
+                vnd3gppPicBwLarge(),
+                vnd3gppPicBwSmall(),
+                vnd3gppPicBwVar(),
+                vnd3gppPinappInfoXml(),
+                vnd3gppS1ap(),
+                vnd3gppSealAppCommRequirementsInfoXml(),
+                vnd3gppSealDataDeliveryInfoCbor(),
+                vnd3gppSealDataDeliveryInfoXml(),
+                vnd3gppSealGroupDocXml(),
+                vnd3gppSealInfoXml(),
+                vnd3gppSealLocationInfoCbor(),
+                vnd3gppSealLocationInfoXml(),
+                vnd3gppSealMbmsUsageInfoXml(),
+                vnd3gppSealMbsUsageInfoXml(),
+                vnd3gppSealNetworkQosManagementInfoXml(),
+                vnd3gppSealNetworkResourceInfoCbor(),
+                vnd3gppSealUeConfigInfoXml(),
+                vnd3gppSealUnicastInfoXml(),
+                vnd3gppSealUserProfileInfoXml(),
+                vnd3gppSms(),
+                vnd3gppSmsXml(),
+                vnd3gppSrvccExtXml(),
+                vnd3gppSrvccInfoXml(),
+                vnd3gppStateAndEventInfoXml(),
+                vnd3gppUssdXml(),
+                vnd3gppV2x(),
+                vnd3gppVaeInfoXml(),
+                vnd3gpp2BcmcsinfoXml(),
+                vnd3gpp2Sms(),
+                vnd3gpp2Tcap(),
+                vnd3lightssoftwareImagescal(),
+                vnd3mPostItNotes(),
+                vndAccpacSimplyAso(),
+                vndAccpacSimplyImp(),
+                vndAcmAddressxferJson(),
+                vndAcmChatbotJson(),
+                vndAcucobol(),
+                vndAcucorp(),
+                vndAdobeAirApplicationInstallerPackageZip(),
+                vndAdobeFlashMovie(),
+                vndAdobeFormscentralFcdt(),
+                vndAdobeFxp(),
+                vndAdobePartialUpload(),
+                vndAdobeXdpXml(),
+                vndAdobeXfdf(),
+                vndAetherImp(),
+                vndAfpcAfplinedata(),
+                vndAfpcAfplinedataPagedef(),
+                vndAfpcCmocaCmresource(),
+                vndAfpcFocaCharset(),
+                vndAfpcFocaCodedfont(),
+                vndAfpcFocaCodepage(),
+                vndAfpcModca(),
+                vndAfpcModcaCmtable(),
+                vndAfpcModcaFormdef(),
+                vndAfpcModcaMediummap(),
+                vndAfpcModcaObjectcontainer(),
+                vndAfpcModcaOverlay(),
+                vndAfpcModcaPagesegment(),
+                vndAge(),
+                vndAhBarcode(),
+                vndAheadSpace(),
+                vndAirzipFilesecureAzf(),
+                vndAirzipFilesecureAzs(),
+                vndAmadeusJson(),
+                vndAmazonEbook(),
+                vndAmazonMobi8Ebook(),
+                vndAmericandynamicsAcc(),
+                vndAmigaAmi(),
+                vndAmundsenMazeXml(),
+                vndAndroidOta(),
+                vndAndroidPackageArchive(),
+                vndAnki(),
+                vndAnserWebCertificateIssueInitiation(),
+                vndAnserWebFundsTransferInitiation(),
+                vndAntixGameComponent(),
+                vndApacheArrowFile(),
+                vndApacheArrowStream(),
+                vndApacheParquet(),
+                vndApacheThriftBinary(),
+                vndApacheThriftCompact(),
+                vndApacheThriftJson(),
+                vndApexlang(),
+                vndApiJson(),
+                vndAplextorWarrpJson(),
+                vndApothekendeReservationJson(),
+                vndAppleInstallerXml(),
+                vndAppleKeynote(),
+                vndAppleMpegurl(),
+                vndAppleNumbers(),
+                vndApplePages(),
+                vndApplePkpass(),
+                vndArastraSwi(),
+                vndAristanetworksSwi(),
+                vndArtisanJson(),
+                vndArtsquare(),
+                vndAs207960VasConfigJer(),
+                vndAs207960VasConfigUper(),
+                vndAs207960VasTapJer(),
+                vndAs207960VasTapUper(),
+                vndAstraeaSoftwareIota(),
+                vndAudiograph(),
+                vndAutodeskFbx(),
+                vndAutopackage(),
+                vndAvalonJson(),
+                vndAvistarXml(),
+                vndBalsamiqBmmlXml(),
+                vndBalsamiqBmpr(),
+                vndBananaAccounting(),
+                vndBbfUspError(),
+                vndBbfUspMsg(),
+                vndBbfUspMsgJson(),
+                vndBekitzurStechJson(),
+                vndBelightsoftLhzdZip(),
+                vndBelightsoftLhzlZip(),
+                vndBintMedContent(),
+                vndBiopaxRdfXml(),
+                vndBlinkIdbValueWrapper(),
+                vndBlueiceMultipass(),
+                vndBluetoothEpOob(),
+                vndBluetoothLeOob(),
+                vndBmi(),
+                vndBpf(),
+                vndBpf3(),
+                vndBusinessobjects(),
+                vndByuUapiJson(),
+                vndBzip3(),
+                vndC3vocScheduleXml(),
+                vndCabJscript(),
+                vndCanonCpdl(),
+                vndCanonLips(),
+                vndCapasystemsPgJson(),
+                vndCel(),
+                vndCendioThinlincClientconf(),
+                vndCenturySystemsTcpStream(),
+                vndChemdrawXml(),
+                vndChessPgn(),
+                vndChipnutsKaraokeMmd(),
+                vndCiedi(),
+                vndCinderella(),
+                vndCirpackIsdnExt(),
+                vndCitationstylesStyleXml(),
+                vndClaymore(),
+                vndCloantoRp9(),
+                vndClonkC4group(),
+                vndCluetrustCartomobileConfig(),
+                vndCluetrustCartomobileConfigPkg(),
+                vndCncfHelmChartContentV1TarGzip(),
+                vndCncfHelmChartProvenanceV1Prov(),
+                vndCncfHelmConfigV1Json(),
+                vndCoffeescript(),
+                vndCollabioXodocumentsDocument(),
+                vndCollabioXodocumentsDocumentTemplate(),
+                vndCollabioXodocumentsPresentation(),
+                vndCollabioXodocumentsPresentationTemplate(),
+                vndCollabioXodocumentsSpreadsheet(),
+                vndCollabioXodocumentsSpreadsheetTemplate(),
+                vndCollectionJson(),
+                vndCollectionDocJson(),
+                vndCollectionNextJson(),
+                vndComicbookZip(),
+                vndComicbookRar(),
+                vndCommerceBattelle(),
+                vndCommonspace(),
+                vndContactCmsg(),
+                vndCoreosIgnitionJson(),
+                vndCosmocaller(),
+                vndCrickClicker(),
+                vndCrickClickerKeyboard(),
+                vndCrickClickerPalette(),
+                vndCrickClickerTemplate(),
+                vndCrickClickerWordbank(),
+                vndCriticaltoolsWbsXml(),
+                vndCryptiiPipeJson(),
+                vndCryptoShadeFile(),
+                vndCryptomatorEncrypted(),
+                vndCryptomatorVault(),
+                vndCtcPosml(),
+                vndCtctWsXml(),
+                vndCupsPdf(),
+                vndCupsPostscript(),
+                vndCupsPpd(),
+                vndCupsRaster(),
+                vndCupsRaw(),
+                vndCurl(),
+                vndCurlCar(),
+                vndCurlPcurl(),
+                vndCyanDeanRootXml(),
+                vndCybank(),
+                vndCyclonedxJson(),
+                vndCyclonedxXml(),
+                vndD2lCoursepackage1p0Zip(),
+                vndD3mDataset(),
+                vndD3mProblem(),
+                vndDart(),
+                vndDataVisionRdz(),
+                vndDatalog(),
+                vndDatapackageJson(),
+                vndDataresourceJson(),
+                vndDbf(),
+                vndDcmpXml(),
+                vndDebianBinaryPackage(),
+                vndDeceData(),
+                vndDeceTtmlXml(),
+                vndDeceUnspecified(),
+                vndDeceZip(),
+                vndDenovoFcselayoutLink(),
+                vndDesmumeMovie(),
+                vndDirBiPlateDlNosuffix(),
+                vndDmDelegationXml(),
+                vndDna(),
+                vndDocumentJson(),
+                vndDolbyMlp(),
+                vndDolbyMobile1(),
+                vndDolbyMobile2(),
+                vndDoremirScorecloudBinaryDocument(),
+                vndDpgraph(),
+                vndDreamfactory(),
+                vndDriveJson(),
+                vndDsKeypoint(),
+                vndDtgLocal(),
+                vndDtgLocalFlash(),
+                vndDtgLocalHtml(),
+                vndDvbAit(),
+                vndDvbDvbislXml(),
+                vndDvbDvbj(),
+                vndDvbEsgcontainer(),
+                vndDvbIpdcdftnotifaccess(),
+                vndDvbIpdcesgaccess(),
+                vndDvbIpdcesgaccess2(),
+                vndDvbIpdcesgpdd(),
+                vndDvbIpdcroaming(),
+                vndDvbIptvAlfecBase(),
+                vndDvbIptvAlfecEnhancement(),
+                vndDvbNotifAggregateRootXml(),
+                vndDvbNotifContainerXml(),
+                vndDvbNotifGenericXml(),
+                vndDvbNotifIaMsglistXml(),
+                vndDvbNotifIaRegistrationRequestXml(),
+                vndDvbNotifIaRegistrationResponseXml(),
+                vndDvbNotifInitXml(),
+                vndDvbPfr(),
+                vndDvbService(),
+                vndDxr(),
+                vndDynageo(),
+                vndDzr(),
+                vndEasykaraokeCdgdownload(),
+                vndEcdisUpdate(),
+                vndEcipRlp(),
+                vndEclipseDittoJson(),
+                vndEcowinChart(),
+                vndEcowinFilerequest(),
+                vndEcowinFileupdate(),
+                vndEcowinSeries(),
+                vndEcowinSeriesrequest(),
+                vndEcowinSeriesupdate(),
+                vndEfiImg(),
+                vndEfiIso(),
+                vndElnZip(),
+                vndEmclientAccessrequestXml(),
+                vndEnliven(),
+                vndEnphaseEnvoy(),
+                vndEprintsDataXml(),
+                vndEpsonEsf(),
+                vndEpsonMsf(),
+                vndEpsonQuickanime(),
+                vndEpsonSalt(),
+                vndEpsonSsf(),
+                vndEricssonQuickcall(),
+                vndErofs(),
+                vndEspassEspassZip(),
+                vndEszigno3Xml(),
+                vndEtsiAocXml(),
+                vndEtsiAsicEZip(),
+                vndEtsiAsicSZip(),
+                vndEtsiCugXml(),
+                vndEtsiIptvcommandXml(),
+                vndEtsiIptvdiscoveryXml(),
+                vndEtsiIptvprofileXml(),
+                vndEtsiIptvsadBcXml(),
+                vndEtsiIptvsadCodXml(),
+                vndEtsiIptvsadNpvrXml(),
+                vndEtsiIptvserviceXml(),
+                vndEtsiIptvsyncXml(),
+                vndEtsiIptvueprofileXml(),
+                vndEtsiMcidXml(),
+                vndEtsiMheg5(),
+                vndEtsiOverloadControlPolicyDatasetXml(),
+                vndEtsiPstnXml(),
+                vndEtsiSciXml(),
+                vndEtsiSimservsXml(),
+                vndEtsiTimestampToken(),
+                vndEtsiTslXml(),
+                vndEtsiTslDer(),
+                vndEuKasparianCarJson(),
+                vndEudoraData(),
+                vndEvolvEcigProfile(),
+                vndEvolvEcigSettings(),
+                vndEvolvEcigTheme(),
+                vndExstreamEmpowerZip(),
+                vndExstreamPackage(),
+                vndEzpixAlbum(),
+                vndEzpixPackage(),
+                vndFSecureMobile(),
+                vndFafYaml(),
+                vndFamilysearchGedcomZip(),
+                vndFastcopyDiskImage(),
+                vndFdf(),
+                vndFdsnMseed(),
+                vndFdsnSeed(),
+                vndFdsnStationxmlXml(),
+                vndFfsns(),
+                vndFgb(),
+                vndFiclabFlbZip(),
+                vndFilmitZfc(),
+                vndFints(),
+                vndFiremonkeysCloudcell(),
+                vndFlographit(),
+                vndFluxtimeClip(),
+                vndFontFontforgeSfd(),
+                vndFramemaker(),
+                vndFreelogComic(),
+                vndFrogansFnc(),
+                vndFrogansLtf(),
+                vndFscWeblaunch(),
+                vndFujifilmFbDocuworks(),
+                vndFujifilmFbDocuworksBinder(),
+                vndFujifilmFbDocuworksContainer(),
+                vndFujifilmFbJfiXml(),
+                vndFujitsuOasys(),
+                vndFujitsuOasys2(),
+                vndFujitsuOasys3(),
+                vndFujitsuOasysgp(),
+                vndFujitsuOasysprs(),
+                vndFujixeroxArtEx(),
+                vndFujixeroxArt4(),
+                vndFujixeroxDdd(),
+                vndFujixeroxDocuworks(),
+                vndFujixeroxDocuworksBinder(),
+                vndFujixeroxDocuworksContainer(),
+                vndFujixeroxHbpl(),
+                vndFutMisnet(),
+                vndFutoinCbor(),
+                vndFutoinJson(),
+                vndFuzzysheet(),
+                vndG3pixG3fc(),
+                vndGa4ghPassportJwt(),
+                vndGenomatixTuxedo(),
+                vndGenozip(),
+                vndGenticsGrdJson(),
+                vndGentooCatmetadataXml(),
+                vndGentooEbuild(),
+                vndGentooEclass(),
+                vndGentooGpkg(),
+                vndGentooManifest(),
+                vndGentooPkgmetadataXml(),
+                vndGentooXpak(),
+                vndGeoJson(),
+                vndGeocubeXml(),
+                vndGeogebraFile(),
+                vndGeogebraPinboard(),
+                vndGeogebraSlides(),
+                vndGeogebraTool(),
+                vndGeometryExplorer(),
+                vndGeonext(),
+                vndGeoplan(),
+                vndGeospace(),
+                vndGerber(),
+                vndGlobalplatformCardContentMgt(),
+                vndGlobalplatformCardContentMgtResponse(),
+                vndGmx(),
+                vndGnuTalerExchangeJson(),
+                vndGnuTalerMerchantJson(),
+                vndGoogleAppsAudio(),
+                vndGoogleAppsDocument(),
+                vndGoogleAppsDrawing(),
+                vndGoogleAppsDriveSdk(),
+                vndGoogleAppsFile(),
+                vndGoogleAppsFolder(),
+                vndGoogleAppsForm(),
+                vndGoogleAppsFusiontable(),
+                vndGoogleAppsJam(),
+                vndGoogleAppsMailLayout(),
+                vndGoogleAppsMap(),
+                vndGoogleAppsPhoto(),
+                vndGoogleAppsPresentation(),
+                vndGoogleAppsScript(),
+                vndGoogleAppsShortcut(),
+                vndGoogleAppsSite(),
+                vndGoogleAppsSpreadsheet(),
+                vndGoogleAppsUnknown(),
+                vndGoogleAppsVideo(),
+                vndGoogleEarthKmlXml(),
+                vndGoogleEarthKmz(),
+                vndGovSkEFormXml(),
+                vndGovSkEFormZip(),
+                vndGovSkXmldatacontainerXml(),
+                vndGpxseeMapXml(),
+                vndGrafeq(),
+                vndGridmp(),
+                vndGrooveAccount(),
+                vndGrooveHelp(),
+                vndGrooveIdentityMessage(),
+                vndGrooveInjector(),
+                vndGrooveToolMessage(),
+                vndGrooveToolTemplate(),
+                vndGrooveVcard(),
+                vndHalJson(),
+                vndHalXml(),
+                vndHandheldEntertainmentXml(),
+                vndHbci(),
+                vndHcJson(),
+                vndHclBireports(),
+                vndHdt(),
+                vndHerokuJson(),
+                vndHheLessonPlayer(),
+                vndHpHpgl(),
+                vndHpHpid(),
+                vndHpHps(),
+                vndHpJlyt(),
+                vndHpPcl(),
+                vndHpPclxl(),
+                vndHsl(),
+                vndHttphone(),
+                vndHydrostatixSofData(),
+                vndHyperJson(),
+                vndHyperItemJson(),
+                vndHyperdriveJson(),
+                vndHzn3dCrossword(),
+                vndIbmAfplinedata(),
+                vndIbmElectronicMedia(),
+                vndIbmMinipay(),
+                vndIbmModcap(),
+                vndIbmRightsManagement(),
+                vndIbmSecureContainer(),
+                vndIccprofile(),
+                vndIeee1905(),
+                vndIgloader(),
+                vndImagemeterFolderZip(),
+                vndImagemeterImageZip(),
+                vndImmervisionIvp(),
+                vndImmervisionIvu(),
+                vndImsImsccv1p1(),
+                vndImsImsccv1p2(),
+                vndImsImsccv1p3(),
+                vndImsLisV2ResultJson(),
+                vndImsLtiV2ToolconsumerprofileJson(),
+                vndImsLtiV2ToolproxyJson(),
+                vndImsLtiV2ToolproxyIdJson(),
+                vndImsLtiV2ToolsettingsJson(),
+                vndImsLtiV2ToolsettingsSimpleJson(),
+                vndInformedcontrolRmsXml(),
+                vndInformixVisionary(),
+                vndInfotechProject(),
+                vndInfotechProjectXml(),
+                vndInnopathWampNotification(),
+                vndInsorsIgm(),
+                vndInterconFormnet(),
+                vndIntergeo(),
+                vndIntertrustDigibox(),
+                vndIntertrustNncp(),
+                vndIntuQbo(),
+                vndIntuQfx(),
+                vndIpfsIpnsRecord(),
+                vndIpldCar(),
+                vndIpldDagCbor(),
+                vndIpldDagJson(),
+                vndIpldRaw(),
+                vndIptcG2CatalogitemXml(),
+                vndIptcG2ConceptitemXml(),
+                vndIptcG2KnowledgeitemXml(),
+                vndIptcG2NewsitemXml(),
+                vndIptcG2NewsmessageXml(),
+                vndIptcG2PackageitemXml(),
+                vndIptcG2PlanningitemXml(),
+                vndIpunpluggedRcprofile(),
+                vndIrepositoryPackageXml(),
+                vndIsXpr(),
+                vndIsacFcs(),
+                vndIso1178310Zip(),
+                vndJam(),
+                vndJapannetDirectoryService(),
+                vndJapannetJpnstoreWakeup(),
+                vndJapannetPaymentWakeup(),
+                vndJapannetRegistration(),
+                vndJapannetRegistrationWakeup(),
+                vndJapannetSetstoreWakeup(),
+                vndJapannetVerification(),
+                vndJapannetVerificationWakeup(),
+                vndJcpJavameMidletRms(),
+                vndJisp(),
+                vndJoostJodaArchive(),
+                vndJskIsdnNgn(),
+                vndKahootz(),
+                vndKdeKarbon(),
+                vndKdeKchart(),
+                vndKdeKformula(),
+                vndKdeKivio(),
+                vndKdeKontour(),
+                vndKdeKpresenter(),
+                vndKdeKspread(),
+                vndKdeKword(),
+                vndKdl(),
+                vndKenameaapp(),
+                vndKeymanKmpZip(),
+                vndKeymanKmx(),
+                vndKidspiration(),
+                vndKinar(),
+                vndKoan(),
+                vndKodakDescriptor(),
+                vndLas(),
+                vndLasLasJson(),
+                vndLasLasXml(),
+                vndLaszip(),
+                vndLdevProductlicensing(),
+                vndLeapJson(),
+                vndLibertyRequestXml(),
+                vndLlamagraphicsLifeBalanceDesktop(),
+                vndLlamagraphicsLifeBalanceExchangeXml(),
+                vndLogipipeCircuitZip(),
+                vndLoom(),
+                vndLotus123(),
+                vndLotusApproach(),
+                vndLotusFreelance(),
+                vndLotusNotes(),
+                vndLotusOrganizer(),
+                vndLotusScreencam(),
+                vndLotusWordpro(),
+                vndMacportsPortpkg(),
+                vndMaml(),
+                vndMapboxVectorTile(),
+                vndMarlinDrmActiontokenXml(),
+                vndMarlinDrmConftokenXml(),
+                vndMarlinDrmLicenseXml(),
+                vndMarlinDrmMdcf(),
+                vndMasonJson(),
+                vndMaxarArchive3tzZip(),
+                vndMaxmindMaxmindDb(),
+                vndMcd(),
+                vndMdl(),
+                vndMdlMbsdf(),
+                vndMedcalcdata(),
+                vndMediastationCdkey(),
+                vndMedicalholodeckRecordxr(),
+                vndMeridianSlingshot(),
+                vndMermaid(),
+                vndMfer(),
+                vndMfmp(),
+                vndMicroJson(),
+                vndMicrografxFlo(),
+                vndMicrografxIgx(),
+                vndMicrosoftPortableExecutable(),
+                vndMicrosoftWindowsThumbnailCache(),
+                vndMieleJson(),
+                vndMif(),
+                vndMinisoftHp3000Save(),
+                vndMitsubishiMistyGuardTrustweb(),
+                vndMobiusDaf(),
+                vndMobiusDis(),
+                vndMobiusMbk(),
+                vndMobiusMqy(),
+                vndMobiusMsl(),
+                vndMobiusPlc(),
+                vndMobiusTxf(),
+                vndModl(),
+                vndMophunApplication(),
+                vndMophunCertificate(),
+                vndMotorolaFlexsuite(),
+                vndMotorolaFlexsuiteAdsi(),
+                vndMotorolaFlexsuiteFis(),
+                vndMotorolaFlexsuiteGotap(),
+                vndMotorolaFlexsuiteKmr(),
+                vndMotorolaFlexsuiteTtc(),
+                vndMotorolaFlexsuiteWem(),
+                vndMotorolaIprm(),
+                vndMozillaXulXml(),
+                vndMs3mfdocument(),
+                vndMsArtgalry(),
+                vndMsAsf(),
+                vndMsCabCompressed(),
+                vndMsColorIccprofile(),
+                vndMsExcel(),
+                vndMsExcelAddinMacroenabled12(),
+                vndMsExcelSheetBinaryMacroenabled12(),
+                vndMsExcelSheetMacroenabled12(),
+                vndMsExcelTemplateMacroenabled12(),
+                vndMsFontobject(),
+                vndMsHtmlhelp(),
+                vndMsIms(),
+                vndMsLrm(),
+                vndMsOfficeActivexXml(),
+                vndMsOfficetheme(),
+                vndMsOpentype(),
+                vndMsOutlook(),
+                vndMsPackageObfuscatedOpentype(),
+                vndMsPkiSeccat(),
+                vndMsPkiStl(),
+                vndMsPlayreadyInitiatorXml(),
+                vndMsPowerpoint(),
+                vndMsPowerpointAddinMacroenabled12(),
+                vndMsPowerpointPresentationMacroenabled12(),
+                vndMsPowerpointSlideMacroenabled12(),
+                vndMsPowerpointSlideshowMacroenabled12(),
+                vndMsPowerpointTemplateMacroenabled12(),
+                vndMsPrintdevicecapabilitiesXml(),
+                vndMsPrintingPrintticketXml(),
+                vndMsPrintschematicketXml(),
+                vndMsProject(),
+                vndMsTnef(),
+                vndMsVisioViewer(),
+                vndMsWindowsDevicepairing(),
+                vndMsWindowsNwprintingOob(),
+                vndMsWindowsPrinterpairing(),
+                vndMsWindowsWsdOob(),
+                vndMsWmdrmLicChlgReq(),
+                vndMsWmdrmLicResp(),
+                vndMsWmdrmMeterChlgReq(),
+                vndMsWmdrmMeterResp(),
+                vndMsWordDocumentMacroenabled12(),
+                vndMsWordTemplateMacroenabled12(),
+                vndMsWorks(),
+                vndMsWpl(),
+                vndMsXpsdocument(),
+                vndMsaDiskImage(),
+                vndMseq(),
+                vndMsgpack(),
+                vndMsign(),
+                vndMultiadCreator(),
+                vndMultiadCreatorCif(),
+                vndMusicNiff(),
+                vndMusician(),
+                vndMuveeStyle(),
+                vndMynfc(),
+                vndNacamarYbridJson(),
+                vndNatoBindingdataobjectCbor(),
+                vndNatoBindingdataobjectJson(),
+                vndNatoBindingdataobjectXml(),
+                vndNatoOpenxmlformatsPackageIepdZip(),
+                vndNcdControl(),
+                vndNcdReference(),
+                vndNearstInvJson(),
+                vndNebumindLine(),
+                vndNervana(),
+                vndNetfpx(),
+                vndNeurolanguageNlu(),
+                vndNimn(),
+                vndNintendoNitroRom(),
+                vndNintendoSnesRom(),
+                vndNitf(),
+                vndNoblenetDirectory(),
+                vndNoblenetSealer(),
+                vndNoblenetWeb(),
+                vndNokiaCatalogs(),
+                vndNokiaConmlWbxml(),
+                vndNokiaConmlXml(),
+                vndNokiaIptvConfigXml(),
+                vndNokiaIsdsRadioPresets(),
+                vndNokiaLandmarkWbxml(),
+                vndNokiaLandmarkXml(),
+                vndNokiaLandmarkcollectionXml(),
+                vndNokiaNGageAcXml(),
+                vndNokiaNGageData(),
+                vndNokiaNGageSymbianInstall(),
+                vndNokiaNcd(),
+                vndNokiaPcdWbxml(),
+                vndNokiaPcdXml(),
+                vndNokiaRadioPreset(),
+                vndNokiaRadioPresets(),
+                vndNovadigmEdm(),
+                vndNovadigmEdx(),
+                vndNovadigmExt(),
+                vndNttLocalContentShare(),
+                vndNttLocalFileTransfer(),
+                vndNttLocalOgwRemoteAccess(),
+                vndNttLocalSipTaRemote(),
+                vndNttLocalSipTaTcpStream(),
+                vndNubaltecNudokuGame(),
+                vndOaiWorkflows(),
+                vndOaiWorkflowsJson(),
+                vndOaiWorkflowsYaml(),
+                vndOasisOpendocumentBase(),
+                vndOasisOpendocumentChart(),
+                vndOasisOpendocumentChartTemplate(),
+                vndOasisOpendocumentDatabase(),
+                vndOasisOpendocumentFormula(),
+                vndOasisOpendocumentFormulaTemplate(),
+                vndOasisOpendocumentGraphics(),
+                vndOasisOpendocumentGraphicsTemplate(),
+                vndOasisOpendocumentImage(),
+                vndOasisOpendocumentImageTemplate(),
+                vndOasisOpendocumentPresentation(),
+                vndOasisOpendocumentPresentationTemplate(),
+                vndOasisOpendocumentSpreadsheet(),
+                vndOasisOpendocumentSpreadsheetTemplate(),
+                vndOasisOpendocumentText(),
+                vndOasisOpendocumentTextMaster(),
+                vndOasisOpendocumentTextMasterTemplate(),
+                vndOasisOpendocumentTextTemplate(),
+                vndOasisOpendocumentTextWeb(),
+                vndObn(),
+                vndOcfCbor(),
+                vndOciImageManifestV1Json(),
+                vndOftnL10nJson(),
+                vndOipfContentaccessdownloadXml(),
+                vndOipfContentaccessstreamingXml(),
+                vndOipfCspgHexbinary(),
+                vndOipfDaeSvgXml(),
+                vndOipfDaeXhtmlXml(),
+                vndOipfMippvcontrolmessageXml(),
+                vndOipfPaeGem(),
+                vndOipfSpdiscoveryXml(),
+                vndOipfSpdlistXml(),
+                vndOipfUeprofileXml(),
+                vndOipfUserprofileXml(),
+                vndOlpcSugar(),
+                vndOmaScwsConfig(),
+                vndOmaScwsHttpRequest(),
+                vndOmaScwsHttpResponse(),
+                vndOmaBcastAssociatedProcedureParameterXml(),
+                vndOmaBcastDrmTriggerXml(),
+                vndOmaBcastImdXml(),
+                vndOmaBcastLtkm(),
+                vndOmaBcastNotificationXml(),
+                vndOmaBcastProvisioningtrigger(),
+                vndOmaBcastSgboot(),
+                vndOmaBcastSgddXml(),
+                vndOmaBcastSgdu(),
+                vndOmaBcastSimpleSymbolContainer(),
+                vndOmaBcastSmartcardTriggerXml(),
+                vndOmaBcastSprovXml(),
+                vndOmaBcastStkm(),
+                vndOmaCabAddressBookXml(),
+                vndOmaCabFeatureHandlerXml(),
+                vndOmaCabPccXml(),
+                vndOmaCabSubsInviteXml(),
+                vndOmaCabUserPrefsXml(),
+                vndOmaDcd(),
+                vndOmaDcdc(),
+                vndOmaDd2Xml(),
+                vndOmaDrmRisdXml(),
+                vndOmaGroupUsageListXml(),
+                vndOmaLwm2mCbor(),
+                vndOmaLwm2mJson(),
+                vndOmaLwm2mTlv(),
+                vndOmaPalXml(),
+                vndOmaPocDetailedProgressReportXml(),
+                vndOmaPocFinalReportXml(),
+                vndOmaPocGroupsXml(),
+                vndOmaPocInvocationDescriptorXml(),
+                vndOmaPocOptimizedProgressReportXml(),
+                vndOmaPush(),
+                vndOmaScidmMessagesXml(),
+                vndOmaXcapDirectoryXml(),
+                vndOmadsEmailXml(),
+                vndOmadsFileXml(),
+                vndOmadsFolderXml(),
+                vndOmalocSuplInit(),
+                vndOmsCellularCoseContentCbor(),
+                vndOnepager(),
+                vndOnepagertamp(),
+                vndOnepagertamx(),
+                vndOnepagertat(),
+                vndOnepagertatp(),
+                vndOnepagertatx(),
+                vndOnvifMetadata(),
+                vndOpenbloxGameXml(),
+                vndOpenbloxGameBinary(),
+                vndOpeneyeOeb(),
+                vndOpenofficeorgExtension(),
+                vndOpenprinttag(),
+                vndOpenstreetmapDataXml(),
+                vndOpentimestampsOts(),
+                vndOpenvpiDspxJson(),
+                vndOpenxmlformatsOfficedocumentCustomPropertiesXml(),
+                vndOpenxmlformatsOfficedocumentCustomxmlpropertiesXml(),
+                vndOpenxmlformatsOfficedocumentDrawingXml(),
+                vndOpenxmlformatsOfficedocumentDrawingmlChartXml(),
+                vndOpenxmlformatsOfficedocumentDrawingmlChartshapesXml(),
+                vndOpenxmlformatsOfficedocumentDrawingmlDiagramcolorsXml(),
+                vndOpenxmlformatsOfficedocumentDrawingmlDiagramdataXml(),
+                vndOpenxmlformatsOfficedocumentDrawingmlDiagramlayoutXml(),
+                vndOpenxmlformatsOfficedocumentDrawingmlDiagramstyleXml(),
+                vndOpenxmlformatsOfficedocumentExtendedPropertiesXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlCommentauthorsXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlCommentsXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlHandoutmasterXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlNotesmasterXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlNotesslideXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlPresentation(),
+                vndOpenxmlformatsOfficedocumentPresentationmlPresentationMainXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlPrespropsXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlide(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlideXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlidelayoutXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlidemasterXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlideshow(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlideshowMainXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlSlideupdateinfoXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlTablestylesXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlTagsXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlTemplate(),
+                vndOpenxmlformatsOfficedocumentPresentationmlTemplateMainXml(),
+                vndOpenxmlformatsOfficedocumentPresentationmlViewpropsXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlCalcchainXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlChartsheetXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlCommentsXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlConnectionsXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlDialogsheetXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlExternallinkXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlPivotcachedefinitionXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlPivotcacherecordsXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlPivottableXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlQuerytableXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlRevisionheadersXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlRevisionlogXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlSharedstringsXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlSheet(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlSheetMainXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlSheetmetadataXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlStylesXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlTableXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlTablesinglecellsXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlTemplate(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlTemplateMainXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlUsernamesXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlVolatiledependenciesXml(),
+                vndOpenxmlformatsOfficedocumentSpreadsheetmlWorksheetXml(),
+                vndOpenxmlformatsOfficedocumentThemeXml(),
+                vndOpenxmlformatsOfficedocumentThemeoverrideXml(),
+                vndOpenxmlformatsOfficedocumentVmldrawing(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlCommentsXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlDocument(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlDocumentGlossaryXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlDocumentMainXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlEndnotesXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlFonttableXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlFooterXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlFootnotesXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlNumberingXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlSettingsXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlStylesXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlTemplate(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlTemplateMainXml(),
+                vndOpenxmlformatsOfficedocumentWordprocessingmlWebsettingsXml(),
+                vndOpenxmlformatsPackageCorePropertiesXml(),
+                vndOpenxmlformatsPackageDigitalSignatureXmlsignatureXml(),
+                vndOpenxmlformatsPackageRelationshipsXml(),
+                vndOracleResourceJson(),
+                vndOrangeIndata(),
+                vndOsaNetdeploy(),
+                vndOsgeoMapguidePackage(),
+                vndOsgiBundle(),
+                vndOsgiDp(),
+                vndOsgiSubsystem(),
+                vndOtpsCtKipXml(),
+                vndOxliCountgraph(),
+                vndPagerdutyJson(),
+                vndPalm(),
+                vndPanoply(),
+                vndPaosXml(),
+                vndPatentdive(),
+                vndPatientecommsdoc(),
+                vndPawaafile(),
+                vndPcos(),
+                vndPgFormat(),
+                vndPgOsasli(),
+                vndPiaccessApplicationLicence(),
+                vndPicsel(),
+                vndPmiWidget(),
+                vndPmtiles(),
+                vndPocGroupAdvertisementXml(),
+                vndPocketlearn(),
+                vndPowerbuilder6(),
+                vndPowerbuilder6S(),
+                vndPowerbuilder7(),
+                vndPowerbuilder7S(),
+                vndPowerbuilder75(),
+                vndPowerbuilder75S(),
+                vndPpSystemverifyXml(),
+                vndPreminet(),
+                vndPreviewsystemsBox(),
+                vndProcreateBrush(),
+                vndProcreateBrushset(),
+                vndProcreateDream(),
+                vndProjectGraph(),
+                vndProteusMagazine(),
+                vndPsfs(),
+                vndPtMundusmundi(),
+                vndPublishareDeltaTree(),
+                vndPviPtid1(),
+                vndPwgMultiplexed(),
+                vndPwgXhtmlPrintXml(),
+                vndPyonJson(),
+                vndQualcommBrewAppRes(),
+                vndQuarantainenet(),
+                vndQuarkQuarkxpress(),
+                vndQuobjectQuoxdocument(),
+                vndR74nSandboxelsJson(),
+                vndRadisysMomlXml(),
+                vndRadisysMsmlXml(),
+                vndRadisysMsmlAuditXml(),
+                vndRadisysMsmlAuditConfXml(),
+                vndRadisysMsmlAuditConnXml(),
+                vndRadisysMsmlAuditDialogXml(),
+                vndRadisysMsmlAuditStreamXml(),
+                vndRadisysMsmlConfXml(),
+                vndRadisysMsmlDialogXml(),
+                vndRadisysMsmlDialogBaseXml(),
+                vndRadisysMsmlDialogFaxDetectXml(),
+                vndRadisysMsmlDialogFaxSendrecvXml(),
+                vndRadisysMsmlDialogGroupXml(),
+                vndRadisysMsmlDialogSpeechXml(),
+                vndRadisysMsmlDialogTransformXml(),
+                vndRainstorData(),
+                vndRapid(),
+                vndRar(),
+                vndRealvncBed(),
+                vndRecordareMusicxml(),
+                vndRecordareMusicxmlXml(),
+                vndRelpipe(),
+                vndRenlearnRlprint(),
+                vndResilientLogic(),
+                vndRestfulJson(),
+                vndRigCryptonote(),
+                vndRimCod(),
+                vndRnRealmedia(),
+                vndRnRealmediaVbr(),
+                vndRoute66Link66Xml(),
+                vndRs274x(),
+                vndRuckusDownload(),
+                vndS3sms(),
+                vndSailingtrackerTrack(),
+                vndSar(),
+                vndSbmCid(),
+                vndSbmMid2(),
+                vndScribus(),
+                vndSealed3df(),
+                vndSealedCsf(),
+                vndSealedDoc(),
+                vndSealedEml(),
+                vndSealedMht(),
+                vndSealedNet(),
+                vndSealedPpt(),
+                vndSealedTiff(),
+                vndSealedXls(),
+                vndSealedmediaSoftsealHtml(),
+                vndSealedmediaSoftsealPdf(),
+                vndSeemail(),
+                vndSeisJson(),
+                vndSema(),
+                vndSemd(),
+                vndSemf(),
+                vndShadeSaveFile(),
+                vndShanaInformedFormdata(),
+                vndShanaInformedFormtemplate(),
+                vndShanaInformedInterchange(),
+                vndShanaInformedPackage(),
+                vndShootproofJson(),
+                vndShopkickJson(),
+                vndShp(),
+                vndShx(),
+                vndSigrokSession(),
+                vndSimtechMindmapper(),
+                vndSirenJson(),
+                vndSirtxVmv0(),
+                vndSketchometry(),
+                vndSmaf(),
+                vndSmartNotebook(),
+                vndSmartTeacher(),
+                vndSmintioPortalsArchive(),
+                vndSnesdevPageTable(),
+                vndSoftware602FillerFormXml(),
+                vndSoftware602FillerFormXmlZip(),
+                vndSolentSdkmXml(),
+                vndSpotfireDxp(),
+                vndSpotfireSfs(),
+                vndSqlite3(),
+                vndSssCod(),
+                vndSssDtf(),
+                vndSssNtf(),
+                vndStardivisionCalc(),
+                vndStardivisionDraw(),
+                vndStardivisionImpress(),
+                vndStardivisionMath(),
+                vndStardivisionWriter(),
+                vndStardivisionWriterGlobal(),
+                vndStepmaniaPackage(),
+                vndStepmaniaStepchart(),
+                vndStreetStream(),
+                vndSunWadlXml(),
+                vndSunXmlCalc(),
+                vndSunXmlCalcTemplate(),
+                vndSunXmlDraw(),
+                vndSunXmlDrawTemplate(),
+                vndSunXmlImpress(),
+                vndSunXmlImpressTemplate(),
+                vndSunXmlMath(),
+                vndSunXmlWriter(),
+                vndSunXmlWriterGlobal(),
+                vndSunXmlWriterTemplate(),
+                vndSuperfileSuper(),
+                vndSusCalendar(),
+                vndSvd(),
+                vndSwiftviewIcs(),
+                vndSybylMol2(),
+                vndSycleXml(),
+                vndSyftJson(),
+                vndSymbianInstall(),
+                vndSyncmlXml(),
+                vndSyncmlDmWbxml(),
+                vndSyncmlDmXml(),
+                vndSyncmlDmNotification(),
+                vndSyncmlDmddfWbxml(),
+                vndSyncmlDmddfXml(),
+                vndSyncmlDmtndsWbxml(),
+                vndSyncmlDmtndsXml(),
+                vndSyncmlDsNotification(),
+                vndTableschemaJson(),
+                vndTaoIntentModuleArchive(),
+                vndTcpdumpPcap(),
+                vndThinkCellPpttcJson(),
+                vndTmdMediaflexApiXml(),
+                vndTml(),
+                vndTmobileLivetv(),
+                vndTriOnesource(),
+                vndTridTpt(),
+                vndTriscapeMxs(),
+                vndTrueapp(),
+                vndTruedoc(),
+                vndUbisoftWebplayer(),
+                vndUfdl(),
+                vndUicOsdmJson(),
+                vndUiqTheme(),
+                vndUmajin(),
+                vndUnity(),
+                vndUomlXml(),
+                vndUplanetAlert(),
+                vndUplanetAlertWbxml(),
+                vndUplanetBearerChoice(),
+                vndUplanetBearerChoiceWbxml(),
+                vndUplanetCacheop(),
+                vndUplanetCacheopWbxml(),
+                vndUplanetChannel(),
+                vndUplanetChannelWbxml(),
+                vndUplanetList(),
+                vndUplanetListWbxml(),
+                vndUplanetListcmd(),
+                vndUplanetListcmdWbxml(),
+                vndUplanetSignal(),
+                vndUriMap(),
+                vndValveSourceMaterial(),
+                vndVcx(),
+                vndVdStudy(),
+                vndVectorworks(),
+                vndVelJson(),
+                vndVeraisonTsmReportCbor(),
+                vndVeraisonTsmReportJson(),
+                vndVerifierAttestationJwt(),
+                vndVerimatrixVcas(),
+                vndVeritoneAionJson(),
+                vndVeryantThin(),
+                vndVesEncrypted(),
+                vndVidsoftVidconference(),
+                vndVisio(),
+                vndVisionary(),
+                vndVividenceScriptfile(),
+                vndVocalshaperVsp4(),
+                vndVsf(),
+                vndVuq(),
+                vndWantverse(),
+                vndWapSic(),
+                vndWapSlc(),
+                vndWapWbxml(),
+                vndWapWmlc(),
+                vndWapWmlscriptc(),
+                vndWasmflowWafl(),
+                vndWebturbo(),
+                vndWfaDpp(),
+                vndWfaP2p(),
+                vndWfaWsc(),
+                vndWindowsDevicepairing(),
+                vndWmap(),
+                vndWmc(),
+                vndWmfBootstrap(),
+                vndWolframMathematica(),
+                vndWolframMathematicaPackage(),
+                vndWolframPlayer(),
+                vndWordlift(),
+                vndWordperfect(),
+                vndWqd(),
+                vndWrqHp3000Labelled(),
+                vndWtStf(),
+                vndWvCspWbxml(),
+                vndWvCspXml(),
+                vndWvSspXml(),
+                vndXacmlJson(),
+                vndXara(),
+                vndXarinCpj(),
+                vndXecretsEncrypted(),
+                vndXfdl(),
+                vndXfdlWebform(),
+                vndXmiXml(),
+                vndXmpieCpkg(),
+                vndXmpieDpkg(),
+                vndXmpiePlan(),
+                vndXmpiePpkg(),
+                vndXmpieXlim(),
+                vndYamahaHvDic(),
+                vndYamahaHvScript(),
+                vndYamahaHvVoice(),
+                vndYamahaOpenscoreformat(),
+                vndYamahaOpenscoreformatOsfpvgXml(),
+                vndYamahaRemoteSetup(),
+                vndYamahaSmafAudio(),
+                vndYamahaSmafPhrase(),
+                vndYamahaThroughNgn(),
+                vndYamahaTunnelUdpencap(),
+                vndYaoweme(),
+                vndYellowriverCustomMenu(),
+                vndZul(),
+                vndZzazzDeckXml(),
+                voicexmlXml(),
+                voucherCmsJson(),
+                voucherJwsJson(),
+                vp(),
+                vpCose(),
+                vpJwt(),
+                vqRtcpxr(),
+                wasm(),
+                watcherinfoXml(),
+                webpushOptionsJson(),
+                whoisppQuery(),
+                whoisppResponse(),
+                widget(),
+                winhlp(),
+                wita(),
+                wordperfect51(),
+                wsdlXml(),
+                wspolicyXml(),
+                x7zCompressed(),
+                xAbiword(),
+                xAceCompressed(),
+                xAmf(),
+                xAppleDiskimage(),
+                xArj(),
+                xAuthorwareBin(),
+                xAuthorwareMap(),
+                xAuthorwareSeg(),
+                xBcpio(),
+                xBdoc(),
+                xBittorrent(),
+                xBlender(),
+                xBlorb(),
+                xBzip(),
+                xBzip2(),
+                xCbr(),
+                xCdlink(),
+                xCfsCompressed(),
+                xChat(),
+                xChessPgn(),
+                xChromeExtension(),
+                xCocoa(),
+                xCompress(),
+                xCompressed(),
+                xConference(),
+                xCpio(),
+                xCsh(),
+                xDeb(),
+                xDebianPackage(),
+                xDgcCompressed(),
+                xDirector(),
+                xDoom(),
+                xDtbncxXml(),
+                xDtbookXml(),
+                xDtbresourceXml(),
+                xDvi(),
+                xEnvoy(),
+                xEva(),
+                xFontBdf(),
+                xFontDos(),
+                xFontFramemaker(),
+                xFontGhostscript(),
+                xFontLibgrx(),
+                xFontLinuxPsf(),
+                xFontPcf(),
+                xFontSnf(),
+                xFontSpeedo(),
+                xFontSunosNews(),
+                xFontType1(),
+                xFontVfont(),
+                xFreearc(),
+                xFuturesplash(),
+                xGcaCompressed(),
+                xGlulx(),
+                xGnumeric(),
+                xGrampsXml(),
+                xGtar(),
+                xGzip(),
+                xHdf(),
+                xHttpdPhp(),
+                xInstallInstructions(),
+                xIpynbJson(),
+                xIso9660Image(),
+                xIworkKeynoteSffkey(),
+                xIworkNumbersSffnumbers(),
+                xIworkPagesSffpages(),
+                xJavaArchiveDiff(),
+                xJavaJnlpFile(),
+                xJavascript(),
+                xKeepass2(),
+                xLatex(),
+                xLuaBytecode(),
+                xLzhCompressed(),
+                xMakeself(),
+                xMie(),
+                xMobipocketEbook(),
+                xMpegurl(),
+                xMsApplication(),
+                xMsShortcut(),
+                xMsWmd(),
+                xMsWmz(),
+                xMsXbap(),
+                xMsaccess(),
+                xMsbinder(),
+                xMscardfile(),
+                xMsclip(),
+                xMsdosProgram(),
+                xMsdownload(),
+                xMsmediaview(),
+                xMsmetafile(),
+                xMsmoney(),
+                xMspublisher(),
+                xMsschedule(),
+                xMsterminal(),
+                xMswrite(),
+                xNetcdf(),
+                xNsProxyAutoconfig(),
+                xNzb(),
+                xPerl(),
+                xPilot(),
+                xPkcs12(),
+                xPkcs7Certificates(),
+                xPkcs7Certreqresp(),
+                xPkiMessage(),
+                xRarCompressed(),
+                xRedhatPackageManager(),
+                xResearchInfoSystems(),
+                xSea(),
+                xSh(),
+                xShar(),
+                xShockwaveFlash(),
+                xSilverlightApp(),
+                xSql(),
+                xStuffit(),
+                xStuffitx(),
+                xSubrip(),
+                xSv4cpio(),
+                xSv4crc(),
+                xT3vmImage(),
+                xTads(),
+                xTar(),
+                xTcl(),
+                xTex(),
+                xTexTfm(),
+                xTexinfo(),
+                xTgif(),
+                xUstar(),
+                xVirtualboxHdd(),
+                xVirtualboxOva(),
+                xVirtualboxOvf(),
+                xVirtualboxVbox(),
+                xVirtualboxVboxExtpack(),
+                xVirtualboxVdi(),
+                xVirtualboxVhd(),
+                xVirtualboxVmdk(),
+                xWaisSource(),
+                xWebAppManifestJson(),
+                xWwwFormUrlencoded(),
+                xX509CaCert(),
+                xX509CaRaCert(),
+                xX509NextCaCert(),
+                xXfig(),
+                xXliffXml(),
+                xXpinstall(),
+                xXz(),
+                xZipCompressed(),
+                xZmachine(),
+                x400Bp(),
+                xacmlXml(),
+                xamlXml(),
+                xcapAttXml(),
+                xcapCapsXml(),
+                xcapDiffXml(),
+                xcapElXml(),
+                xcapErrorXml(),
+                xcapNsXml(),
+                xconConferenceInfoXml(),
+                xconConferenceInfoDiffXml(),
+                xencXml(),
+                xfdf(),
+                xhtmlXml(),
+                xhtmlVoiceXml(),
+                xliffXml(),
+                xml(),
+                xmlDtd(),
+                xmlExternalParsedEntity(),
+                xmlPatchXml(),
+                xmppXml(),
+                xopXml(),
+                xprocXml(),
+                xsltXml(),
+                xspfXml(),
+                xvXml(),
+                yaml(),
+                yang(),
+                yangDataCbor(),
+                yangDataJson(),
+                yangDataXml(),
+                yangPatchJson(),
+                yangPatchXml(),
+                yangSidJson(),
+                yinXml(),
+                zip(),
+                zipDotlottie(),
+                zlib(),
+                zstd(),
+            ]
+        }
 
         public static func _1dInterleavedParityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "1d-interleaved-parityfec"
+                subtype: "1d-interleaved-parityfec",
+                source: .iana
             )
         }
 
@@ -17,7 +1961,8 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpdash-qoe-report",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -27,7 +1972,8 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpp-ims",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -37,7 +1983,8 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpp-mbs-object-manifest",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -47,7 +1994,8 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpp-mbs-user-service-descriptions",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -57,7 +2005,8 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpp-media-delivery-metrics-report",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -67,7 +2016,8 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpphal",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -77,14 +2027,16 @@ extension MediaType {
                 subtype: .init(
                     value: "3gpphalforms",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func a2l() -> MediaType {
             .init(
                 type: name,
-                subtype: "a2l"
+                subtype: "a2l",
+                source: .iana
             )
         }
 
@@ -94,7 +2046,8 @@ extension MediaType {
                 subtype: .init(
                     value: "ace",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -104,7 +2057,8 @@ extension MediaType {
                 subtype: .init(
                     value: "ace",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -114,7 +2068,8 @@ extension MediaType {
                 subtype: .init(
                     value: "ace-groupcomm",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -124,14 +2079,16 @@ extension MediaType {
                 subtype: .init(
                     value: "ace-trl",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func activemessage() -> MediaType {
             .init(
                 type: name,
-                subtype: "activemessage"
+                subtype: "activemessage",
+                source: .iana
             )
         }
 
@@ -141,7 +2098,8 @@ extension MediaType {
                 subtype: .init(
                     value: "activity",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -151,7 +2109,8 @@ extension MediaType {
                 subtype: .init(
                     value: "aif",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -161,7 +2120,8 @@ extension MediaType {
                 subtype: .init(
                     value: "aif",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -171,7 +2131,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-cdni",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -181,7 +2142,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-cdnifilter",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -191,7 +2153,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-costmap",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -201,7 +2164,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-costmapfilter",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -211,7 +2175,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-directory",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -221,7 +2186,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-endpointcost",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -231,7 +2197,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-endpointcostparams",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -241,7 +2208,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-endpointprop",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -251,7 +2219,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-endpointpropparams",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -261,7 +2230,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-error",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -271,7 +2241,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-networkmap",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -281,7 +2252,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-networkmapfilter",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -291,7 +2263,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-propmap",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -301,7 +2274,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-propmapparams",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -311,7 +2285,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-tips",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -321,7 +2296,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-tipsparams",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -331,7 +2307,8 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-updatestreamcontrol",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -341,14 +2318,16 @@ extension MediaType {
                 subtype: .init(
                     value: "alto-updatestreamparams",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func aml() -> MediaType {
             .init(
                 type: name,
-                subtype: "aml"
+                subtype: "aml",
+                source: .iana
             )
         }
 
@@ -358,7 +2337,8 @@ extension MediaType {
                 subtype: "andrew-inset",
                 possibleExtensions: [
                     "ez"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -375,7 +2355,8 @@ extension MediaType {
         public static func applefile() -> MediaType {
             .init(
                 type: name,
-                subtype: "applefile"
+                subtype: "applefile",
+                source: .iana
             )
         }
 
@@ -385,7 +2366,8 @@ extension MediaType {
                 subtype: "applixware",
                 possibleExtensions: [
                     "aw"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -415,7 +2397,8 @@ extension MediaType {
                 subtype: .init(
                     value: "asyncapi",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -425,7 +2408,8 @@ extension MediaType {
                 subtype: .init(
                     value: "asyncapi",
                     suffix: "yaml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -435,21 +2419,24 @@ extension MediaType {
                 subtype: .init(
                     value: "at",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func atf() -> MediaType {
             .init(
                 type: name,
-                subtype: "atf"
+                subtype: "atf",
+                source: .iana
             )
         }
 
         public static func atfx() -> MediaType {
             .init(
                 type: name,
-                subtype: "atfx"
+                subtype: "atfx",
+                source: .iana
             )
         }
 
@@ -462,7 +2449,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "atom"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -475,7 +2463,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "atomcat"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -488,14 +2477,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "atomdeleted"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func atomicmail() -> MediaType {
             .init(
                 type: name,
-                subtype: "atomicmail"
+                subtype: "atomicmail",
+                source: .iana
             )
         }
 
@@ -508,7 +2499,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "atomsvc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -521,14 +2513,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "dwd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func atscDynamicEventMessage() -> MediaType {
             .init(
                 type: name,
-                subtype: "atsc-dynamic-event-message"
+                subtype: "atsc-dynamic-event-message",
+                source: .iana
             )
         }
 
@@ -541,7 +2535,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "held"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -551,7 +2546,8 @@ extension MediaType {
                 subtype: .init(
                     value: "atsc-rdt",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -564,14 +2560,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rsat"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func atxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "atxml"
+                subtype: "atxml",
+                source: .iana
             )
         }
 
@@ -581,7 +2579,8 @@ extension MediaType {
                 subtype: .init(
                     value: "auth-policy",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -594,7 +2593,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "aml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -607,7 +2607,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "amlx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -617,14 +2618,16 @@ extension MediaType {
                 subtype: .init(
                     value: "bacnet-xdd",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func batchSmtp() -> MediaType {
             .init(
                 type: name,
-                subtype: "batch-smtp"
+                subtype: "batch-smtp",
+                source: .iana
             )
         }
 
@@ -644,21 +2647,24 @@ extension MediaType {
                 subtype: .init(
                     value: "beep",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func bufr() -> MediaType {
             .init(
                 type: name,
-                subtype: "bufr"
+                subtype: "bufr",
+                source: .iana
             )
         }
 
         public static func c2pa() -> MediaType {
             .init(
                 type: name,
-                subtype: "c2pa"
+                subtype: "c2pa",
+                source: .iana
             )
         }
 
@@ -668,7 +2674,8 @@ extension MediaType {
                 subtype: .init(
                     value: "calendar",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -681,21 +2688,24 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xcs"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func callCompletion() -> MediaType {
             .init(
                 type: name,
-                subtype: "call-completion"
+                subtype: "call-completion",
+                source: .iana
             )
         }
 
         public static func cals1840() -> MediaType {
             .init(
                 type: name,
-                subtype: "cals-1840"
+                subtype: "cals-1840",
+                source: .iana
             )
         }
 
@@ -705,28 +2715,32 @@ extension MediaType {
                 subtype: .init(
                     value: "captive",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func cbor() -> MediaType {
             .init(
                 type: name,
-                subtype: "cbor"
+                subtype: "cbor",
+                source: .iana
             )
         }
 
         public static func cborSeq() -> MediaType {
             .init(
                 type: name,
-                subtype: "cbor-seq"
+                subtype: "cbor-seq",
+                source: .iana
             )
         }
 
         public static func cccex() -> MediaType {
             .init(
                 type: name,
-                subtype: "cccex"
+                subtype: "cccex",
+                source: .iana
             )
         }
 
@@ -736,7 +2750,8 @@ extension MediaType {
                 subtype: .init(
                     value: "ccmp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -749,7 +2764,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "ccxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -759,7 +2775,8 @@ extension MediaType {
                 subtype: .init(
                     value: "cda",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -772,7 +2789,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "cdfx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -782,7 +2800,8 @@ extension MediaType {
                 subtype: "cdmi-capability",
                 possibleExtensions: [
                     "cdmia"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -792,7 +2811,8 @@ extension MediaType {
                 subtype: "cdmi-container",
                 possibleExtensions: [
                     "cdmic"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -802,7 +2822,8 @@ extension MediaType {
                 subtype: "cdmi-domain",
                 possibleExtensions: [
                     "cdmid"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -812,7 +2833,8 @@ extension MediaType {
                 subtype: "cdmi-object",
                 possibleExtensions: [
                     "cdmio"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -822,14 +2844,16 @@ extension MediaType {
                 subtype: "cdmi-queue",
                 possibleExtensions: [
                     "cdmiq"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func cdni() -> MediaType {
             .init(
                 type: name,
-                subtype: "cdni"
+                subtype: "cdni",
+                source: .iana
             )
         }
 
@@ -839,14 +2863,16 @@ extension MediaType {
                 subtype: .init(
                     value: "ce",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func cea() -> MediaType {
             .init(
                 type: name,
-                subtype: "cea"
+                subtype: "cea",
+                source: .iana
             )
         }
 
@@ -856,7 +2882,8 @@ extension MediaType {
                 subtype: .init(
                     value: "cea-2018",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -866,21 +2893,24 @@ extension MediaType {
                 subtype: .init(
                     value: "cellml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func cfw() -> MediaType {
             .init(
                 type: name,
-                subtype: "cfw"
+                subtype: "cfw",
+                source: .iana
             )
         }
 
         public static func cid() -> MediaType {
             .init(
                 type: name,
-                subtype: "cid"
+                subtype: "cid",
+                source: .iana
             )
         }
 
@@ -890,7 +2920,8 @@ extension MediaType {
                 subtype: .init(
                     value: "cid-edhoc",
                     suffix: "cbor-seq"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -900,7 +2931,8 @@ extension MediaType {
                 subtype: .init(
                     value: "city",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -910,14 +2942,16 @@ extension MediaType {
                 subtype: .init(
                     value: "city",
                     suffix: "json-seq"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func clr() -> MediaType {
             .init(
                 type: name,
-                subtype: "clr"
+                subtype: "clr",
+                source: .iana
             )
         }
 
@@ -927,7 +2961,8 @@ extension MediaType {
                 subtype: .init(
                     value: "clue",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -937,14 +2972,16 @@ extension MediaType {
                 subtype: .init(
                     value: "clue_info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func cms() -> MediaType {
             .init(
                 type: name,
-                subtype: "cms"
+                subtype: "cms",
+                source: .iana
             )
         }
 
@@ -954,14 +2991,16 @@ extension MediaType {
                 subtype: .init(
                     value: "cnrp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func coapEap() -> MediaType {
             .init(
                 type: name,
-                subtype: "coap-eap"
+                subtype: "coap-eap",
+                source: .iana
             )
         }
 
@@ -971,21 +3010,24 @@ extension MediaType {
                 subtype: .init(
                     value: "coap-group",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func coapPayload() -> MediaType {
             .init(
                 type: name,
-                subtype: "coap-payload"
+                subtype: "coap-payload",
+                source: .iana
             )
         }
 
         public static func commonground() -> MediaType {
             .init(
                 type: name,
-                subtype: "commonground"
+                subtype: "commonground",
+                source: .iana
             )
         }
 
@@ -995,7 +3037,8 @@ extension MediaType {
                 subtype: .init(
                     value: "concise-problem-details",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1005,35 +3048,40 @@ extension MediaType {
                 subtype: .init(
                     value: "conference-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func cose() -> MediaType {
             .init(
                 type: name,
-                subtype: "cose"
+                subtype: "cose",
+                source: .iana
             )
         }
 
         public static func coseKey() -> MediaType {
             .init(
                 type: name,
-                subtype: "cose-key"
+                subtype: "cose-key",
+                source: .iana
             )
         }
 
         public static func coseKeySet() -> MediaType {
             .init(
                 type: name,
-                subtype: "cose-key-set"
+                subtype: "cose-key-set",
+                source: .iana
             )
         }
 
         public static func coseX509() -> MediaType {
             .init(
                 type: name,
-                subtype: "cose-x509"
+                subtype: "cose-x509",
+                source: .iana
             )
         }
 
@@ -1046,14 +3094,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "cpl"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func csrattrs() -> MediaType {
             .init(
                 type: name,
-                subtype: "csrattrs"
+                subtype: "csrattrs",
+                source: .iana
             )
         }
 
@@ -1063,7 +3113,8 @@ extension MediaType {
                 subtype: .init(
                     value: "csta",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1073,7 +3124,8 @@ extension MediaType {
                 subtype: .init(
                     value: "cstadata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1083,7 +3135,8 @@ extension MediaType {
                 subtype: .init(
                     value: "csvm",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1093,7 +3146,8 @@ extension MediaType {
                 subtype: "cu-seeme",
                 possibleExtensions: [
                     "cu"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1103,7 +3157,8 @@ extension MediaType {
                 subtype: "cwl",
                 possibleExtensions: [
                     "cwl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1113,7 +3168,8 @@ extension MediaType {
                 subtype: .init(
                     value: "cwl",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1123,21 +3179,24 @@ extension MediaType {
                 subtype: .init(
                     value: "cwl",
                     suffix: "yaml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func cwt() -> MediaType {
             .init(
                 type: name,
-                subtype: "cwt"
+                subtype: "cwt",
+                source: .iana
             )
         }
 
         public static func cybercash() -> MediaType {
             .init(
                 type: name,
-                subtype: "cybercash"
+                subtype: "cybercash",
+                source: .iana
             )
         }
 
@@ -1157,7 +3216,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mpd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1170,14 +3230,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mpp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func dashdelta() -> MediaType {
             .init(
                 type: name,
-                subtype: "dashdelta"
+                subtype: "dashdelta",
+                source: .iana
             )
         }
 
@@ -1190,28 +3252,32 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "davmount"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func dcaRft() -> MediaType {
             .init(
                 type: name,
-                subtype: "dca-rft"
+                subtype: "dca-rft",
+                source: .iana
             )
         }
 
         public static func dcd() -> MediaType {
             .init(
                 type: name,
-                subtype: "dcd"
+                subtype: "dcd",
+                source: .iana
             )
         }
 
         public static func decDx() -> MediaType {
             .init(
                 type: name,
-                subtype: "dec-dx"
+                subtype: "dec-dx",
+                source: .iana
             )
         }
 
@@ -1221,7 +3287,8 @@ extension MediaType {
                 subtype: .init(
                     value: "dialog-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1231,7 +3298,8 @@ extension MediaType {
                 subtype: "dicom",
                 possibleExtensions: [
                     "dcm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1241,7 +3309,8 @@ extension MediaType {
                 subtype: .init(
                     value: "dicom",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1251,35 +3320,40 @@ extension MediaType {
                 subtype: .init(
                     value: "dicom",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func did() -> MediaType {
             .init(
                 type: name,
-                subtype: "did"
+                subtype: "did",
+                source: .iana
             )
         }
 
         public static func dii() -> MediaType {
             .init(
                 type: name,
-                subtype: "dii"
+                subtype: "dii",
+                source: .iana
             )
         }
 
         public static func dit() -> MediaType {
             .init(
                 type: name,
-                subtype: "dit"
+                subtype: "dit",
+                source: .iana
             )
         }
 
         public static func dns() -> MediaType {
             .init(
                 type: name,
-                subtype: "dns"
+                subtype: "dns",
+                source: .iana
             )
         }
 
@@ -1289,14 +3363,16 @@ extension MediaType {
                 subtype: .init(
                     value: "dns",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func dnsMessage() -> MediaType {
             .init(
                 type: name,
-                subtype: "dns-message"
+                subtype: "dns-message",
+                source: .iana
             )
         }
 
@@ -1309,7 +3385,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "dbk"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1319,7 +3396,8 @@ extension MediaType {
                 subtype: .init(
                     value: "dots",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1329,7 +3407,8 @@ extension MediaType {
                 subtype: .init(
                     value: "dpop",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1339,7 +3418,8 @@ extension MediaType {
                 subtype: .init(
                     value: "dskpp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1352,7 +3432,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "dssc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1365,14 +3446,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xdssc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func dvcs() -> MediaType {
             .init(
                 type: name,
-                subtype: "dvcs"
+                subtype: "dvcs",
+                source: .iana
             )
         }
 
@@ -1382,7 +3465,8 @@ extension MediaType {
                 subtype: .init(
                     value: "eat",
                     suffix: "cwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1392,7 +3476,8 @@ extension MediaType {
                 subtype: .init(
                     value: "eat",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1402,7 +3487,8 @@ extension MediaType {
                 subtype: .init(
                     value: "eat-bun",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1412,7 +3498,8 @@ extension MediaType {
                 subtype: .init(
                     value: "eat-bun",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1422,7 +3509,8 @@ extension MediaType {
                 subtype: .init(
                     value: "eat-ucs",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1432,7 +3520,8 @@ extension MediaType {
                 subtype: .init(
                     value: "eat-ucs",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1441,8 +3530,10 @@ extension MediaType {
                 type: name,
                 subtype: "ecmascript",
                 possibleExtensions: [
-                    "ecma"
-                ]
+                    "ecma",
+                    "es",
+                ],
+                source: .apache
             )
         }
 
@@ -1452,35 +3543,40 @@ extension MediaType {
                 subtype: .init(
                     value: "edhoc",
                     suffix: "cbor-seq"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func ediConsent() -> MediaType {
             .init(
                 type: name,
-                subtype: "edi-consent"
+                subtype: "edi-consent",
+                source: .iana
             )
         }
 
         public static func ediX12() -> MediaType {
             .init(
                 type: name,
-                subtype: "edi-x12"
+                subtype: "edi-x12",
+                source: .iana
             )
         }
 
         public static func edifact() -> MediaType {
             .init(
                 type: name,
-                subtype: "edifact"
+                subtype: "edifact",
+                source: .iana
             )
         }
 
         public static func efi() -> MediaType {
             .init(
                 type: name,
-                subtype: "efi"
+                subtype: "efi",
+                source: .iana
             )
         }
 
@@ -1490,7 +3586,8 @@ extension MediaType {
                 subtype: .init(
                     value: "elm",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1500,7 +3597,8 @@ extension MediaType {
                 subtype: .init(
                     value: "elm",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1510,7 +3608,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.cap",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1520,7 +3619,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.comment",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1530,7 +3630,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.control",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1540,14 +3641,16 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.deviceinfo",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func emergencycalldataEcallMsd() -> MediaType {
             .init(
                 type: name,
-                subtype: "emergencycalldata.ecall.msd"
+                subtype: "emergencycalldata.ecall.msd",
+                source: .iana
             )
         }
 
@@ -1557,7 +3660,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.legacyesn",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1567,7 +3671,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.providerinfo",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1577,7 +3682,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.serviceinfo",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1587,7 +3693,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.subscriberinfo",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1597,7 +3704,8 @@ extension MediaType {
                 subtype: .init(
                     value: "emergencycalldata.veds",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1610,7 +3718,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "emma"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1623,14 +3732,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "emotionml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func encaprtp() -> MediaType {
             .init(
                 type: name,
-                subtype: "encaprtp"
+                subtype: "encaprtp",
+                source: .iana
             )
         }
 
@@ -1640,7 +3751,8 @@ extension MediaType {
                 subtype: .init(
                     value: "entity-statement",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1650,7 +3762,8 @@ extension MediaType {
                 subtype: .init(
                     value: "epp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1663,14 +3776,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "epub"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func eshop() -> MediaType {
             .init(
                 type: name,
-                subtype: "eshop"
+                subtype: "eshop",
+                source: .iana
             )
         }
 
@@ -1680,7 +3795,8 @@ extension MediaType {
                 subtype: "exi",
                 possibleExtensions: [
                     "exi"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1690,7 +3806,8 @@ extension MediaType {
                 subtype: .init(
                     value: "expect-ct-report",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1700,21 +3817,24 @@ extension MediaType {
                 subtype: "express",
                 possibleExtensions: [
                     "exp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func fastinfoset() -> MediaType {
             .init(
                 type: name,
-                subtype: "fastinfoset"
+                subtype: "fastinfoset",
+                source: .iana
             )
         }
 
         public static func fastsoap() -> MediaType {
             .init(
                 type: name,
-                subtype: "fastsoap"
+                subtype: "fastsoap",
+                source: .iana
             )
         }
 
@@ -1724,7 +3844,8 @@ extension MediaType {
                 subtype: "fdf",
                 possibleExtensions: [
                     "fdf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1737,7 +3858,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "fdt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1747,7 +3869,8 @@ extension MediaType {
                 subtype: .init(
                     value: "fhir",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1757,7 +3880,8 @@ extension MediaType {
                 subtype: .init(
                     value: "fhir",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1774,21 +3898,24 @@ extension MediaType {
         public static func fits() -> MediaType {
             .init(
                 type: name,
-                subtype: "fits"
+                subtype: "fits",
+                source: .iana
             )
         }
 
         public static func flexfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "flexfec"
+                subtype: "flexfec",
+                source: .iana
             )
         }
 
         public static func fontSfnt() -> MediaType {
             .init(
                 type: name,
-                subtype: "font-sfnt"
+                subtype: "font-sfnt",
+                source: .iana
             )
         }
 
@@ -1798,14 +3925,16 @@ extension MediaType {
                 subtype: "font-tdpfr",
                 possibleExtensions: [
                     "pfr"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func fontWoff() -> MediaType {
             .init(
                 type: name,
-                subtype: "font-woff"
+                subtype: "font-woff",
+                source: .iana
             )
         }
 
@@ -1815,7 +3944,8 @@ extension MediaType {
                 subtype: .init(
                     value: "framework-attributes",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1828,7 +3958,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "geojson"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -1838,7 +3969,8 @@ extension MediaType {
                 subtype: .init(
                     value: "geo",
                     suffix: "json-seq"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1848,7 +3980,8 @@ extension MediaType {
                 subtype: .init(
                     value: "geofeed",
                     suffix: "csv"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1858,7 +3991,8 @@ extension MediaType {
                 subtype: .init(
                     value: "geopackage",
                     suffix: "sqlite3"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1868,7 +4002,8 @@ extension MediaType {
                 subtype: .init(
                     value: "geopose",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1878,7 +4013,8 @@ extension MediaType {
                 subtype: .init(
                     value: "geoxacml",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -1888,14 +4024,16 @@ extension MediaType {
                 subtype: .init(
                     value: "geoxacml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func gltfBuffer() -> MediaType {
             .init(
                 type: name,
-                subtype: "gltf-buffer"
+                subtype: "gltf-buffer",
+                source: .iana
             )
         }
 
@@ -1908,35 +4046,40 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "gml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func gnapBindingJws() -> MediaType {
             .init(
                 type: name,
-                subtype: "gnap-binding-jws"
+                subtype: "gnap-binding-jws",
+                source: .iana
             )
         }
 
         public static func gnapBindingJwsd() -> MediaType {
             .init(
                 type: name,
-                subtype: "gnap-binding-jwsd"
+                subtype: "gnap-binding-jwsd",
+                source: .iana
             )
         }
 
         public static func gnapBindingRotationJws() -> MediaType {
             .init(
                 type: name,
-                subtype: "gnap-binding-rotation-jws"
+                subtype: "gnap-binding-rotation-jws",
+                source: .iana
             )
         }
 
         public static func gnapBindingRotationJwsd() -> MediaType {
             .init(
                 type: name,
-                subtype: "gnap-binding-rotation-jwsd"
+                subtype: "gnap-binding-rotation-jwsd",
+                source: .iana
             )
         }
 
@@ -1945,18 +4088,20 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "gpx",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "gpx"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func grib() -> MediaType {
             .init(
                 type: name,
-                subtype: "grib"
+                subtype: "grib",
+                source: .iana
             )
         }
 
@@ -1966,7 +4111,8 @@ extension MediaType {
                 subtype: "gxf",
                 possibleExtensions: [
                     "gxf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1976,14 +4122,16 @@ extension MediaType {
                 subtype: "gzip",
                 possibleExtensions: [
                     "gz"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func h224() -> MediaType {
             .init(
                 type: name,
-                subtype: "h224"
+                subtype: "h224",
+                source: .iana
             )
         }
 
@@ -1993,7 +4141,8 @@ extension MediaType {
                 subtype: .init(
                     value: "held",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2013,14 +4162,16 @@ extension MediaType {
                 subtype: .init(
                     value: "hl7v2",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func http() -> MediaType {
             .init(
                 type: name,
-                subtype: "http"
+                subtype: "http",
+                source: .iana
             )
         }
 
@@ -2030,7 +4181,8 @@ extension MediaType {
                 subtype: "hyperstudio",
                 possibleExtensions: [
                     "stk"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2040,7 +4192,8 @@ extension MediaType {
                 subtype: .init(
                     value: "ibe-key-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2050,21 +4203,24 @@ extension MediaType {
                 subtype: .init(
                     value: "ibe-pkg-reply",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func ibePpData() -> MediaType {
             .init(
                 type: name,
-                subtype: "ibe-pp-data"
+                subtype: "ibe-pp-data",
+                source: .iana
             )
         }
 
         public static func iges() -> MediaType {
             .init(
                 type: name,
-                subtype: "iges"
+                subtype: "iges",
+                source: .iana
             )
         }
 
@@ -2074,42 +4230,48 @@ extension MediaType {
                 subtype: .init(
                     value: "im-iscomposing",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func index() -> MediaType {
             .init(
                 type: name,
-                subtype: "index"
+                subtype: "index",
+                source: .iana
             )
         }
 
         public static func indexCmd() -> MediaType {
             .init(
                 type: name,
-                subtype: "index.cmd"
+                subtype: "index.cmd",
+                source: .iana
             )
         }
 
         public static func indexObj() -> MediaType {
             .init(
                 type: name,
-                subtype: "index.obj"
+                subtype: "index.obj",
+                source: .iana
             )
         }
 
         public static func indexResponse() -> MediaType {
             .init(
                 type: name,
-                subtype: "index.response"
+                subtype: "index.response",
+                source: .iana
             )
         }
 
         public static func indexVnd() -> MediaType {
             .init(
                 type: name,
-                subtype: "index.vnd"
+                subtype: "index.vnd",
+                source: .iana
             )
         }
 
@@ -2123,14 +4285,16 @@ extension MediaType {
                 possibleExtensions: [
                     "ink",
                     "inkml",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func iotp() -> MediaType {
             .init(
                 type: name,
-                subtype: "iotp"
+                subtype: "iotp",
+                source: .iana
             )
         }
 
@@ -2140,21 +4304,24 @@ extension MediaType {
                 subtype: "ipfix",
                 possibleExtensions: [
                     "ipfix"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func ipp() -> MediaType {
             .init(
                 type: name,
-                subtype: "ipp"
+                subtype: "ipp",
+                source: .iana
             )
         }
 
         public static func isup() -> MediaType {
             .init(
                 type: name,
-                subtype: "isup"
+                subtype: "isup",
+                source: .iana
             )
         }
 
@@ -2167,7 +4334,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "its"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2179,7 +4347,8 @@ extension MediaType {
                     "jar",
                     "war",
                     "ear",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2189,7 +4358,8 @@ extension MediaType {
                 subtype: "java-serialized-object",
                 possibleExtensions: [
                     "ser"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -2199,7 +4369,8 @@ extension MediaType {
                 subtype: "java-vm",
                 possibleExtensions: [
                     "class"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -2208,8 +4379,10 @@ extension MediaType {
                 type: name,
                 subtype: "javascript",
                 possibleExtensions: [
-                    "js"
-                ]
+                    "js",
+                    "mjs",
+                ],
+                source: .apache
             )
         }
 
@@ -2219,14 +4392,16 @@ extension MediaType {
                 subtype: .init(
                     value: "jf2feed",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func jose() -> MediaType {
             .init(
                 type: name,
-                subtype: "jose"
+                subtype: "jose",
+                source: .iana
             )
         }
 
@@ -2236,7 +4411,8 @@ extension MediaType {
                 subtype: .init(
                     value: "jose",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2246,7 +4422,8 @@ extension MediaType {
                 subtype: .init(
                     value: "jrd",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2256,7 +4433,8 @@ extension MediaType {
                 subtype: .init(
                     value: "jscalendar",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2266,7 +4444,8 @@ extension MediaType {
                 subtype: .init(
                     value: "jscontact",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2277,7 +4456,8 @@ extension MediaType {
                 possibleExtensions: [
                     "json",
                     "map",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2287,7 +4467,8 @@ extension MediaType {
                 subtype: .init(
                     value: "json-patch",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2297,14 +4478,16 @@ extension MediaType {
                 subtype: .init(
                     value: "json-patch-query",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func jsonSeq() -> MediaType {
             .init(
                 type: name,
-                subtype: "json-seq"
+                subtype: "json-seq",
+                source: .iana
             )
         }
 
@@ -2323,18 +4506,20 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "jsonml",
-                    suffix: "json"
+                    suffix: "json",
                 ),
                 possibleExtensions: [
                     "jsonml"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func jsonpath() -> MediaType {
             .init(
                 type: name,
-                subtype: "jsonpath"
+                subtype: "jsonpath",
+                source: .iana
             )
         }
 
@@ -2344,7 +4529,8 @@ extension MediaType {
                 subtype: .init(
                     value: "jwk",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2354,7 +4540,8 @@ extension MediaType {
                 subtype: .init(
                     value: "jwk-set",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2364,14 +4551,16 @@ extension MediaType {
                 subtype: .init(
                     value: "jwk-set",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func jwt() -> MediaType {
             .init(
                 type: name,
-                subtype: "jwt"
+                subtype: "jwt",
+                source: .iana
             )
         }
 
@@ -2381,7 +4570,8 @@ extension MediaType {
                 subtype: .init(
                     value: "kb",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2394,7 +4584,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "kbl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2404,7 +4595,8 @@ extension MediaType {
                 subtype: .init(
                     value: "kpml-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2414,7 +4606,8 @@ extension MediaType {
                 subtype: .init(
                     value: "kpml-response",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2427,7 +4620,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "jsonld"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2440,21 +4634,24 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "lgr"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func linkFormat() -> MediaType {
             .init(
                 type: name,
-                subtype: "link-format"
+                subtype: "link-format",
+                source: .iana
             )
         }
 
         public static func linkset() -> MediaType {
             .init(
                 type: name,
-                subtype: "linkset"
+                subtype: "linkset",
+                source: .iana
             )
         }
 
@@ -2464,7 +4661,8 @@ extension MediaType {
                 subtype: .init(
                     value: "linkset",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2474,7 +4672,8 @@ extension MediaType {
                 subtype: .init(
                     value: "load-control",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2484,7 +4683,8 @@ extension MediaType {
                 subtype: .init(
                     value: "logout",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2497,7 +4697,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "lostxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2507,7 +4708,8 @@ extension MediaType {
                 subtype: .init(
                     value: "lostsync",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2517,14 +4719,16 @@ extension MediaType {
                 subtype: .init(
                     value: "lpf",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func lxf() -> MediaType {
             .init(
                 type: name,
-                subtype: "lxf"
+                subtype: "lxf",
+                source: .iana
             )
         }
 
@@ -2534,7 +4738,8 @@ extension MediaType {
                 subtype: "mac-binhex40",
                 possibleExtensions: [
                     "hqx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2544,14 +4749,16 @@ extension MediaType {
                 subtype: "mac-compactpro",
                 possibleExtensions: [
                     "cpt"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func macwriteii() -> MediaType {
             .init(
                 type: name,
-                subtype: "macwriteii"
+                subtype: "macwriteii",
+                source: .iana
             )
         }
 
@@ -2564,7 +4771,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mads"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2577,7 +4785,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "webmanifest"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2587,7 +4796,8 @@ extension MediaType {
                 subtype: "marc",
                 possibleExtensions: [
                     "mrc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2600,7 +4810,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mrcx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2612,7 +4823,8 @@ extension MediaType {
                     "ma",
                     "nb",
                     "mb",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2625,7 +4837,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mathml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2635,7 +4848,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mathml-content",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2645,7 +4859,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mathml-presentation",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2656,7 +4871,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-associated-procedure-description",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2666,7 +4882,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-deregister",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2676,7 +4893,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-envelope",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2686,7 +4904,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-msk",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2696,7 +4915,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-msk-response",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2706,7 +4926,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-protection-description",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2716,7 +4937,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-reception-report",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2726,7 +4948,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-register",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2736,7 +4959,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-register-response",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2746,7 +4970,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-schedule",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2756,7 +4981,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mbms-user-service-description",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2766,7 +4992,8 @@ extension MediaType {
                 subtype: "mbox",
                 possibleExtensions: [
                     "mbox"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2779,7 +5006,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mpf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2789,7 +5017,8 @@ extension MediaType {
                 subtype: .init(
                     value: "media_control",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2802,7 +5031,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mscml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2812,7 +5042,8 @@ extension MediaType {
                 subtype: .init(
                     value: "merge-patch",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2821,11 +5052,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "metalink",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "metalink"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -2838,7 +5070,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "meta4"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2851,28 +5084,32 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mets"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mf4() -> MediaType {
             .init(
                 type: name,
-                subtype: "mf4"
+                subtype: "mf4",
+                source: .iana
             )
         }
 
         public static func mikey() -> MediaType {
             .init(
                 type: name,
-                subtype: "mikey"
+                subtype: "mikey",
+                source: .iana
             )
         }
 
         public static func mipc() -> MediaType {
             .init(
                 type: name,
-                subtype: "mipc"
+                subtype: "mipc",
+                source: .iana
             )
         }
 
@@ -2882,7 +5119,8 @@ extension MediaType {
                 subtype: .init(
                     value: "missing-blocks",
                     suffix: "cbor-seq"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -2895,7 +5133,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "maei"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2908,7 +5147,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "musd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2921,35 +5161,40 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mods"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mossKeys() -> MediaType {
             .init(
                 type: name,
-                subtype: "moss-keys"
+                subtype: "moss-keys",
+                source: .iana
             )
         }
 
         public static func mossSignature() -> MediaType {
             .init(
                 type: name,
-                subtype: "moss-signature"
+                subtype: "moss-signature",
+                source: .iana
             )
         }
 
         public static func mosskeyData() -> MediaType {
             .init(
                 type: name,
-                subtype: "mosskey-data"
+                subtype: "mosskey-data",
+                source: .iana
             )
         }
 
         public static func mosskeyRequest() -> MediaType {
             .init(
                 type: name,
-                subtype: "mosskey-request"
+                subtype: "mosskey-request",
+                source: .iana
             )
         }
 
@@ -2960,7 +5205,8 @@ extension MediaType {
                 possibleExtensions: [
                     "m21",
                     "mp21",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -2973,28 +5219,32 @@ extension MediaType {
                     "mpg4",
                     "mp4s",
                     "m4p",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func mpeg4Generic() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpeg4-generic"
+                subtype: "mpeg4-generic",
+                source: .iana
             )
         }
 
         public static func mpeg4Iod() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpeg4-iod"
+                subtype: "mpeg4-iod",
+                source: .iana
             )
         }
 
         public static func mpeg4IodXmt() -> MediaType {
             .init(
                 type: name,
-                subtype: "mpeg4-iod-xmt"
+                subtype: "mpeg4-iod-xmt",
+                source: .iana
             )
         }
 
@@ -3004,7 +5254,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mrb-consumer",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3014,7 +5265,8 @@ extension MediaType {
                 subtype: .init(
                     value: "mrb-publish",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3024,7 +5276,8 @@ extension MediaType {
                 subtype: .init(
                     value: "msc-ivr",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3034,7 +5287,8 @@ extension MediaType {
                 subtype: .init(
                     value: "msc-mixer",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3065,7 +5319,8 @@ extension MediaType {
                 possibleExtensions: [
                     "doc",
                     "dot",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3075,14 +5330,16 @@ extension MediaType {
                 subtype: .init(
                     value: "mud",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func multipartCore() -> MediaType {
             .init(
                 type: name,
-                subtype: "multipart-core"
+                subtype: "multipart-core",
+                source: .iana
             )
         }
 
@@ -3092,7 +5349,8 @@ extension MediaType {
                 subtype: "mxf",
                 possibleExtensions: [
                     "mxf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3102,7 +5360,8 @@ extension MediaType {
                 subtype: "n-quads",
                 possibleExtensions: [
                     "nq"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3112,35 +5371,40 @@ extension MediaType {
                 subtype: "n-triples",
                 possibleExtensions: [
                     "nt"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func nasdata() -> MediaType {
             .init(
                 type: name,
-                subtype: "nasdata"
+                subtype: "nasdata",
+                source: .iana
             )
         }
 
         public static func newsCheckgroups() -> MediaType {
             .init(
                 type: name,
-                subtype: "news-checkgroups"
+                subtype: "news-checkgroups",
+                source: .iana
             )
         }
 
         public static func newsGroupinfo() -> MediaType {
             .init(
                 type: name,
-                subtype: "news-groupinfo"
+                subtype: "news-groupinfo",
+                source: .iana
             )
         }
 
         public static func newsTransmission() -> MediaType {
             .init(
                 type: name,
-                subtype: "news-transmission"
+                subtype: "news-transmission",
+                source: .iana
             )
         }
 
@@ -3150,7 +5414,8 @@ extension MediaType {
                 subtype: .init(
                     value: "nlsml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3160,14 +5425,16 @@ extension MediaType {
                 subtype: "node",
                 possibleExtensions: [
                     "cjs"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func nss() -> MediaType {
             .init(
                 type: name,
-                subtype: "nss"
+                subtype: "nss",
+                source: .iana
             )
         }
 
@@ -3177,28 +5444,32 @@ extension MediaType {
                 subtype: .init(
                     value: "oauth-authz-req",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func obliviousDnsMessage() -> MediaType {
             .init(
                 type: name,
-                subtype: "oblivious-dns-message"
+                subtype: "oblivious-dns-message",
+                source: .iana
             )
         }
 
         public static func ocspRequest() -> MediaType {
             .init(
                 type: name,
-                subtype: "ocsp-request"
+                subtype: "ocsp-request",
+                source: .iana
             )
         }
 
         public static func ocspResponse() -> MediaType {
             .init(
                 type: name,
-                subtype: "ocsp-response"
+                subtype: "ocsp-response",
+                source: .iana
             )
         }
 
@@ -3229,7 +5500,8 @@ extension MediaType {
                     "msp",
                     "msm",
                     "buffer",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3239,7 +5511,8 @@ extension MediaType {
                 subtype: "oda",
                 possibleExtensions: [
                     "oda"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3249,14 +5522,16 @@ extension MediaType {
                 subtype: .init(
                     value: "odm",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func odx() -> MediaType {
             .init(
                 type: name,
-                subtype: "odx"
+                subtype: "odx",
+                source: .iana
             )
         }
 
@@ -3269,7 +5544,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "opf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3279,14 +5555,16 @@ extension MediaType {
                 subtype: "ogg",
                 possibleExtensions: [
                     "ogx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func ohttpKeys() -> MediaType {
             .init(
                 type: name,
-                subtype: "ohttp-keys"
+                subtype: "ohttp-keys",
+                source: .iana
             )
         }
 
@@ -3295,11 +5573,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "omdoc",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "omdoc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -3314,7 +5593,8 @@ extension MediaType {
                     "onepkg",
                     "one",
                     "onea",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -3324,14 +5604,16 @@ extension MediaType {
                 subtype: .init(
                     value: "opc-nodeset",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func oscore() -> MediaType {
             .init(
                 type: name,
-                subtype: "oscore"
+                subtype: "oscore",
+                source: .iana
             )
         }
 
@@ -3341,14 +5623,16 @@ extension MediaType {
                 subtype: "oxps",
                 possibleExtensions: [
                     "oxps"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func p21() -> MediaType {
             .init(
                 type: name,
-                subtype: "p21"
+                subtype: "p21",
+                source: .iana
             )
         }
 
@@ -3358,7 +5642,8 @@ extension MediaType {
                 subtype: .init(
                     value: "p21",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3371,21 +5656,24 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "relo"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func parityfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "parityfec"
+                subtype: "parityfec",
+                source: .iana
             )
         }
 
         public static func passport() -> MediaType {
             .init(
                 type: name,
-                subtype: "passport"
+                subtype: "passport",
+                source: .iana
             )
         }
 
@@ -3398,7 +5686,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xer"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3408,21 +5697,24 @@ extension MediaType {
                 subtype: "pdf",
                 possibleExtensions: [
                     "pdf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func pdx() -> MediaType {
             .init(
                 type: name,
-                subtype: "pdx"
+                subtype: "pdx",
+                source: .iana
             )
         }
 
         public static func pemCertificateChain() -> MediaType {
             .init(
                 type: name,
-                subtype: "pem-certificate-chain"
+                subtype: "pem-certificate-chain",
+                source: .iana
             )
         }
 
@@ -3432,7 +5724,8 @@ extension MediaType {
                 subtype: "pgp-encrypted",
                 possibleExtensions: [
                     "pgp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3442,7 +5735,8 @@ extension MediaType {
                 subtype: "pgp-keys",
                 possibleExtensions: [
                     "asc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3453,7 +5747,8 @@ extension MediaType {
                 possibleExtensions: [
                     "sig",
                     "asc",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3463,7 +5758,8 @@ extension MediaType {
                 subtype: "pics-rules",
                 possibleExtensions: [
                     "prf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -3473,7 +5769,8 @@ extension MediaType {
                 subtype: .init(
                     value: "pidf",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3483,7 +5780,8 @@ extension MediaType {
                 subtype: .init(
                     value: "pidf-diff",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3493,14 +5791,16 @@ extension MediaType {
                 subtype: "pkcs10",
                 possibleExtensions: [
                     "p10"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func pkcs12() -> MediaType {
             .init(
                 type: name,
-                subtype: "pkcs12"
+                subtype: "pkcs12",
+                source: .iana
             )
         }
 
@@ -3511,7 +5811,8 @@ extension MediaType {
                 possibleExtensions: [
                     "p7m",
                     "p7c",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3521,7 +5822,8 @@ extension MediaType {
                 subtype: "pkcs7-signature",
                 possibleExtensions: [
                     "p7s"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3531,14 +5833,16 @@ extension MediaType {
                 subtype: "pkcs8",
                 possibleExtensions: [
                     "p8"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func pkcs8Encrypted() -> MediaType {
             .init(
                 type: name,
-                subtype: "pkcs8-encrypted"
+                subtype: "pkcs8-encrypted",
+                source: .iana
             )
         }
 
@@ -3548,7 +5852,8 @@ extension MediaType {
                 subtype: "pkix-attr-cert",
                 possibleExtensions: [
                     "ac"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3558,7 +5863,8 @@ extension MediaType {
                 subtype: "pkix-cert",
                 possibleExtensions: [
                     "cer"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3568,7 +5874,8 @@ extension MediaType {
                 subtype: "pkix-crl",
                 possibleExtensions: [
                     "crl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3578,7 +5885,8 @@ extension MediaType {
                 subtype: "pkix-pkipath",
                 possibleExtensions: [
                     "pkipath"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3588,7 +5896,8 @@ extension MediaType {
                 subtype: "pkixcmp",
                 possibleExtensions: [
                     "pki"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3601,7 +5910,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "pls"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3611,7 +5921,8 @@ extension MediaType {
                 subtype: .init(
                     value: "poc-settings",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3623,7 +5934,8 @@ extension MediaType {
                     "ai",
                     "eps",
                     "ps",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3633,28 +5945,32 @@ extension MediaType {
                 subtype: .init(
                     value: "ppsp-tracker",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func privateTokenIssuerDirectory() -> MediaType {
             .init(
                 type: name,
-                subtype: "private-token-issuer-directory"
+                subtype: "private-token-issuer-directory",
+                source: .iana
             )
         }
 
         public static func privateTokenRequest() -> MediaType {
             .init(
                 type: name,
-                subtype: "private-token-request"
+                subtype: "private-token-request",
+                source: .iana
             )
         }
 
         public static func privateTokenResponse() -> MediaType {
             .init(
                 type: name,
-                subtype: "private-token-response"
+                subtype: "private-token-response",
+                source: .iana
             )
         }
 
@@ -3664,7 +5980,8 @@ extension MediaType {
                 subtype: .init(
                     value: "problem",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3674,14 +5991,16 @@ extension MediaType {
                 subtype: .init(
                     value: "problem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func protobuf() -> MediaType {
             .init(
                 type: name,
-                subtype: "protobuf"
+                subtype: "protobuf",
+                source: .iana
             )
         }
 
@@ -3691,7 +6010,8 @@ extension MediaType {
                 subtype: .init(
                     value: "protobuf",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3704,7 +6024,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "provx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3714,14 +6035,16 @@ extension MediaType {
                 subtype: .init(
                     value: "provided-claims",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func prsAlvestrandTitraxSheet() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.alvestrand.titrax-sheet"
+                subtype: "prs.alvestrand.titrax-sheet",
+                source: .iana
             )
         }
 
@@ -3731,14 +6054,16 @@ extension MediaType {
                 subtype: "prs.cww",
                 possibleExtensions: [
                     "cww"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func prsCyn() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.cyn"
+                subtype: "prs.cyn",
+                source: .iana
             )
         }
 
@@ -3748,7 +6073,8 @@ extension MediaType {
                 subtype: .init(
                     value: "prs.hpub",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3758,14 +6084,16 @@ extension MediaType {
                 subtype: .init(
                     value: "prs.implied-document",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func prsImpliedExecutable() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.implied-executable"
+                subtype: "prs.implied-executable",
+                source: .iana
             )
         }
 
@@ -3775,7 +6103,8 @@ extension MediaType {
                 subtype: .init(
                     value: "prs.implied-object",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3785,7 +6114,8 @@ extension MediaType {
                 subtype: .init(
                     value: "prs.implied-object",
                     suffix: "json-seq"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3795,49 +6125,56 @@ extension MediaType {
                 subtype: .init(
                     value: "prs.implied-object",
                     suffix: "yaml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func prsImpliedStructure() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.implied-structure"
+                subtype: "prs.implied-structure",
+                source: .iana
             )
         }
 
         public static func prsMayfile() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.mayfile"
+                subtype: "prs.mayfile",
+                source: .iana
             )
         }
 
         public static func prsNprend() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.nprend"
+                subtype: "prs.nprend",
+                source: .iana
             )
         }
 
         public static func prsPlucker() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.plucker"
+                subtype: "prs.plucker",
+                source: .iana
             )
         }
 
         public static func prsRdfXmlCrypt() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.rdf-xml-crypt"
+                subtype: "prs.rdf-xml-crypt",
+                source: .iana
             )
         }
 
         public static func prsVcfbzip2() -> MediaType {
             .init(
                 type: name,
-                subtype: "prs.vcfbzip2"
+                subtype: "prs.vcfbzip2",
+                source: .iana
             )
         }
 
@@ -3850,7 +6187,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xsf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3863,7 +6201,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "pskcxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3873,14 +6212,16 @@ extension MediaType {
                 subtype: .init(
                     value: "pvd",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func qsig() -> MediaType {
             .init(
                 type: name,
-                subtype: "qsig"
+                subtype: "qsig",
+                source: .iana
             )
         }
 
@@ -3900,7 +6241,8 @@ extension MediaType {
         public static func raptorfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "raptorfec"
+                subtype: "raptorfec",
+                source: .iana
             )
         }
 
@@ -3910,7 +6252,8 @@ extension MediaType {
                 subtype: .init(
                     value: "rdap",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3924,7 +6267,8 @@ extension MediaType {
                 possibleExtensions: [
                     "rdf",
                     "owl",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3937,7 +6281,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -3947,14 +6292,16 @@ extension MediaType {
                 subtype: "relax-ng-compact-syntax",
                 possibleExtensions: [
                     "rnc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func remotePrinting() -> MediaType {
             .init(
                 type: name,
-                subtype: "remote-printing"
+                subtype: "remote-printing",
+                source: .apache
             )
         }
 
@@ -3964,7 +6311,8 @@ extension MediaType {
                 subtype: .init(
                     value: "reputon",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3974,7 +6322,8 @@ extension MediaType {
                 subtype: .init(
                     value: "resolve-response",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -3987,7 +6336,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4000,7 +6350,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rld"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4010,14 +6361,16 @@ extension MediaType {
                 subtype: .init(
                     value: "rfc",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func riscos() -> MediaType {
             .init(
                 type: name,
-                subtype: "riscos"
+                subtype: "riscos",
+                source: .iana
             )
         }
 
@@ -4027,7 +6380,8 @@ extension MediaType {
                 subtype: .init(
                     value: "rlmi",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4040,7 +6394,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4053,7 +6408,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rapd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4066,7 +6422,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "sls"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4079,14 +6436,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rusd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func rpkiChecklist() -> MediaType {
             .init(
                 type: name,
-                subtype: "rpki-checklist"
+                subtype: "rpki-checklist",
+                source: .iana
             )
         }
 
@@ -4096,7 +6455,8 @@ extension MediaType {
                 subtype: "rpki-ghostbusters",
                 possibleExtensions: [
                     "gbr"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4106,14 +6466,16 @@ extension MediaType {
                 subtype: "rpki-manifest",
                 possibleExtensions: [
                     "mft"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func rpkiPublication() -> MediaType {
             .init(
                 type: name,
-                subtype: "rpki-publication"
+                subtype: "rpki-publication",
+                source: .iana
             )
         }
 
@@ -4123,21 +6485,24 @@ extension MediaType {
                 subtype: "rpki-roa",
                 possibleExtensions: [
                     "roa"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func rpkiSignedTal() -> MediaType {
             .init(
                 type: name,
-                subtype: "rpki-signed-tal"
+                subtype: "rpki-signed-tal",
+                source: .iana
             )
         }
 
         public static func rpkiUpdown() -> MediaType {
             .init(
                 type: name,
-                subtype: "rpki-updown"
+                subtype: "rpki-updown",
+                source: .iana
             )
         }
 
@@ -4147,7 +6512,8 @@ extension MediaType {
                 subtype: .init(
                     value: "rs-metadata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4156,11 +6522,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "rsd",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "rsd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -4169,11 +6536,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "rss",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "rss"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -4183,21 +6551,24 @@ extension MediaType {
                 subtype: "rtf",
                 possibleExtensions: [
                     "rtf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func rtploopback() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtploopback"
+                subtype: "rtploopback",
+                source: .iana
             )
         }
 
         public static func rtx() -> MediaType {
             .init(
                 type: name,
-                subtype: "rtx"
+                subtype: "rtx",
+                source: .iana
             )
         }
 
@@ -4207,7 +6578,8 @@ extension MediaType {
                 subtype: .init(
                     value: "samlassertion",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4217,7 +6589,8 @@ extension MediaType {
                 subtype: .init(
                     value: "samlmetadata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4227,7 +6600,8 @@ extension MediaType {
                 subtype: .init(
                     value: "sarif",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4237,14 +6611,16 @@ extension MediaType {
                 subtype: .init(
                     value: "sarif-external-properties",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func sbe() -> MediaType {
             .init(
                 type: name,
-                subtype: "sbe"
+                subtype: "sbe",
+                source: .iana
             )
         }
 
@@ -4257,7 +6633,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "sbml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4267,7 +6644,8 @@ extension MediaType {
                 subtype: .init(
                     value: "scaip",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4277,7 +6655,8 @@ extension MediaType {
                 subtype: .init(
                     value: "scim",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4287,7 +6666,8 @@ extension MediaType {
                 subtype: .init(
                     value: "scitt-receipt",
                     suffix: "cose"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4297,7 +6677,8 @@ extension MediaType {
                 subtype: .init(
                     value: "scitt-statement",
                     suffix: "cose"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4307,7 +6688,8 @@ extension MediaType {
                 subtype: "scvp-cv-request",
                 possibleExtensions: [
                     "scq"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4317,7 +6699,8 @@ extension MediaType {
                 subtype: "scvp-cv-response",
                 possibleExtensions: [
                     "scs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4327,7 +6710,8 @@ extension MediaType {
                 subtype: "scvp-vp-request",
                 possibleExtensions: [
                     "spq"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4337,14 +6721,16 @@ extension MediaType {
                 subtype: "scvp-vp-response",
                 possibleExtensions: [
                     "spp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func sdJwt() -> MediaType {
             .init(
                 type: name,
-                subtype: "sd-jwt"
+                subtype: "sd-jwt",
+                source: .iana
             )
         }
 
@@ -4354,7 +6740,8 @@ extension MediaType {
                 subtype: .init(
                     value: "sd-jwt",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4364,7 +6751,8 @@ extension MediaType {
                 subtype: .init(
                     value: "sdf",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4374,7 +6762,8 @@ extension MediaType {
                 subtype: "sdp",
                 possibleExtensions: [
                     "sdp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4384,7 +6773,8 @@ extension MediaType {
                 subtype: .init(
                     value: "secevent",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4394,7 +6784,8 @@ extension MediaType {
                 subtype: .init(
                     value: "senml",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4404,7 +6795,8 @@ extension MediaType {
                 subtype: .init(
                     value: "senml",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4417,7 +6809,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "senmlx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4427,7 +6820,8 @@ extension MediaType {
                 subtype: .init(
                     value: "senml-etch",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4437,14 +6831,16 @@ extension MediaType {
                 subtype: .init(
                     value: "senml-etch",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func senmlExi() -> MediaType {
             .init(
                 type: name,
-                subtype: "senml-exi"
+                subtype: "senml-exi",
+                source: .iana
             )
         }
 
@@ -4454,7 +6850,8 @@ extension MediaType {
                 subtype: .init(
                     value: "sensml",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4464,7 +6861,8 @@ extension MediaType {
                 subtype: .init(
                     value: "sensml",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4477,14 +6875,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "sensmlx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func sensmlExi() -> MediaType {
             .init(
                 type: name,
-                subtype: "sensml-exi"
+                subtype: "sensml-exi",
+                source: .iana
             )
         }
 
@@ -4494,28 +6894,32 @@ extension MediaType {
                 subtype: .init(
                     value: "sep",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func sepExi() -> MediaType {
             .init(
                 type: name,
-                subtype: "sep-exi"
+                subtype: "sep-exi",
+                source: .iana
             )
         }
 
         public static func sessionInfo() -> MediaType {
             .init(
                 type: name,
-                subtype: "session-info"
+                subtype: "session-info",
+                source: .iana
             )
         }
 
         public static func setPayment() -> MediaType {
             .init(
                 type: name,
-                subtype: "set-payment"
+                subtype: "set-payment",
+                source: .iana
             )
         }
 
@@ -4525,14 +6929,16 @@ extension MediaType {
                 subtype: "set-payment-initiation",
                 possibleExtensions: [
                     "setpay"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func setRegistration() -> MediaType {
             .init(
                 type: name,
-                subtype: "set-registration"
+                subtype: "set-registration",
+                source: .iana
             )
         }
 
@@ -4542,21 +6948,24 @@ extension MediaType {
                 subtype: "set-registration-initiation",
                 possibleExtensions: [
                     "setreg"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func sgml() -> MediaType {
             .init(
                 type: name,
-                subtype: "sgml"
+                subtype: "sgml",
+                source: .iana
             )
         }
 
         public static func sgmlOpenCatalog() -> MediaType {
             .init(
                 type: name,
-                subtype: "sgml-open-catalog"
+                subtype: "sgml-open-catalog",
+                source: .iana
             )
         }
 
@@ -4569,7 +6978,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "shf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4580,7 +6990,8 @@ extension MediaType {
                 possibleExtensions: [
                     "siv",
                     "sieve",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4590,42 +7001,48 @@ extension MediaType {
                 subtype: .init(
                     value: "simple-filter",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func simpleMessageSummary() -> MediaType {
             .init(
                 type: name,
-                subtype: "simple-message-summary"
+                subtype: "simple-message-summary",
+                source: .iana
             )
         }
 
         public static func simplesymbolcontainer() -> MediaType {
             .init(
                 type: name,
-                subtype: "simplesymbolcontainer"
+                subtype: "simplesymbolcontainer",
+                source: .iana
             )
         }
 
         public static func sipc() -> MediaType {
             .init(
                 type: name,
-                subtype: "sipc"
+                subtype: "sipc",
+                source: .iana
             )
         }
 
         public static func slate() -> MediaType {
             .init(
                 type: name,
-                subtype: "slate"
+                subtype: "slate",
+                source: .iana
             )
         }
 
         public static func smil() -> MediaType {
             .init(
                 type: name,
-                subtype: "smil"
+                subtype: "smil",
+                source: .apache
             )
         }
 
@@ -4639,14 +7056,16 @@ extension MediaType {
                 possibleExtensions: [
                     "smi",
                     "smil",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func smpte336m() -> MediaType {
             .init(
                 type: name,
-                subtype: "smpte336m"
+                subtype: "smpte336m",
+                source: .iana
             )
         }
 
@@ -4656,7 +7075,8 @@ extension MediaType {
                 subtype: .init(
                     value: "soap",
                     suffix: "fastinfoset"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4666,7 +7086,8 @@ extension MediaType {
                 subtype: .init(
                     value: "soap",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4676,7 +7097,8 @@ extension MediaType {
                 subtype: "sparql-query",
                 possibleExtensions: [
                     "rq"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4689,7 +7111,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "srx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4699,7 +7122,8 @@ extension MediaType {
                 subtype: .init(
                     value: "spdx",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4709,7 +7133,8 @@ extension MediaType {
                 subtype: .init(
                     value: "spirits-event",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4719,7 +7144,8 @@ extension MediaType {
                 subtype: "sql",
                 possibleExtensions: [
                     "sql"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4729,7 +7155,8 @@ extension MediaType {
                 subtype: "srgs",
                 possibleExtensions: [
                     "gram"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4742,7 +7169,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "grxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4755,7 +7183,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "sru"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -4764,18 +7193,20 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "ssdl",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "ssdl"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func sslkeylogfile() -> MediaType {
             .init(
                 type: name,
-                subtype: "sslkeylogfile"
+                subtype: "sslkeylogfile",
+                source: .iana
             )
         }
 
@@ -4788,14 +7219,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "ssml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func st211041() -> MediaType {
             .init(
                 type: name,
-                subtype: "st2110-41"
+                subtype: "st2110-41",
+                source: .iana
             )
         }
 
@@ -4805,14 +7238,16 @@ extension MediaType {
                 subtype: .init(
                     value: "stix",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func stratum() -> MediaType {
             .init(
                 type: name,
-                subtype: "stratum"
+                subtype: "stratum",
+                source: .iana
             )
         }
 
@@ -4822,7 +7257,8 @@ extension MediaType {
                 subtype: .init(
                     value: "suit-envelope",
                     suffix: "cose"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4832,7 +7268,8 @@ extension MediaType {
                 subtype: .init(
                     value: "swid",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4845,84 +7282,96 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "swidtag"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func tampApexUpdate() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-apex-update"
+                subtype: "tamp-apex-update",
+                source: .iana
             )
         }
 
         public static func tampApexUpdateConfirm() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-apex-update-confirm"
+                subtype: "tamp-apex-update-confirm",
+                source: .iana
             )
         }
 
         public static func tampCommunityUpdate() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-community-update"
+                subtype: "tamp-community-update",
+                source: .iana
             )
         }
 
         public static func tampCommunityUpdateConfirm() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-community-update-confirm"
+                subtype: "tamp-community-update-confirm",
+                source: .iana
             )
         }
 
         public static func tampError() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-error"
+                subtype: "tamp-error",
+                source: .iana
             )
         }
 
         public static func tampSequenceAdjust() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-sequence-adjust"
+                subtype: "tamp-sequence-adjust",
+                source: .iana
             )
         }
 
         public static func tampSequenceAdjustConfirm() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-sequence-adjust-confirm"
+                subtype: "tamp-sequence-adjust-confirm",
+                source: .iana
             )
         }
 
         public static func tampStatusQuery() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-status-query"
+                subtype: "tamp-status-query",
+                source: .iana
             )
         }
 
         public static func tampStatusResponse() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-status-response"
+                subtype: "tamp-status-response",
+                source: .iana
             )
         }
 
         public static func tampUpdate() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-update"
+                subtype: "tamp-update",
+                source: .iana
             )
         }
 
         public static func tampUpdateConfirm() -> MediaType {
             .init(
                 type: name,
-                subtype: "tamp-update-confirm"
+                subtype: "tamp-update-confirm",
+                source: .iana
             )
         }
 
@@ -4939,7 +7388,8 @@ extension MediaType {
                 subtype: .init(
                     value: "taxii",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4949,7 +7399,8 @@ extension MediaType {
                 subtype: .init(
                     value: "td",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -4963,21 +7414,24 @@ extension MediaType {
                 possibleExtensions: [
                     "tei",
                     "teicorpus",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func tetraIsi() -> MediaType {
             .init(
                 type: name,
-                subtype: "tetra_isi"
+                subtype: "tetra_isi",
+                source: .iana
             )
         }
 
         public static func texinfo() -> MediaType {
             .init(
                 type: name,
-                subtype: "texinfo"
+                subtype: "texinfo",
+                source: .iana
             )
         }
 
@@ -4990,21 +7444,24 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "tfi"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func timestampQuery() -> MediaType {
             .init(
                 type: name,
-                subtype: "timestamp-query"
+                subtype: "timestamp-query",
+                source: .iana
             )
         }
 
         public static func timestampReply() -> MediaType {
             .init(
                 type: name,
-                subtype: "timestamp-reply"
+                subtype: "timestamp-reply",
+                source: .iana
             )
         }
 
@@ -5014,7 +7471,8 @@ extension MediaType {
                 subtype: "timestamped-data",
                 possibleExtensions: [
                     "tsd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5024,7 +7482,8 @@ extension MediaType {
                 subtype: .init(
                     value: "tlsrpt",
                     suffix: "gzip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5034,7 +7493,8 @@ extension MediaType {
                 subtype: .init(
                     value: "tlsrpt",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5044,14 +7504,16 @@ extension MediaType {
                 subtype: .init(
                     value: "tm",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func tnauthlist() -> MediaType {
             .init(
                 type: name,
-                subtype: "tnauthlist"
+                subtype: "tnauthlist",
+                source: .iana
             )
         }
 
@@ -5061,7 +7523,8 @@ extension MediaType {
                 subtype: .init(
                     value: "toc",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5071,7 +7534,8 @@ extension MediaType {
                 subtype: .init(
                     value: "token-introspection",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5081,14 +7545,16 @@ extension MediaType {
                 subtype: "toml",
                 possibleExtensions: [
                     "toml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func trickleIceSdpfrag() -> MediaType {
             .init(
                 type: name,
-                subtype: "trickle-ice-sdpfrag"
+                subtype: "trickle-ice-sdpfrag",
+                source: .iana
             )
         }
 
@@ -5098,7 +7564,8 @@ extension MediaType {
                 subtype: "trig",
                 possibleExtensions: [
                     "trig"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5108,7 +7575,8 @@ extension MediaType {
                 subtype: .init(
                     value: "trust-chain",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5118,7 +7586,8 @@ extension MediaType {
                 subtype: .init(
                     value: "trust-mark",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5128,7 +7597,8 @@ extension MediaType {
                 subtype: .init(
                     value: "trust-mark-delegation",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5141,28 +7611,32 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "ttml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func tveTrigger() -> MediaType {
             .init(
                 type: name,
-                subtype: "tve-trigger"
+                subtype: "tve-trigger",
+                source: .iana
             )
         }
 
         public static func tzif() -> MediaType {
             .init(
                 type: name,
-                subtype: "tzif"
+                subtype: "tzif",
+                source: .iana
             )
         }
 
         public static func tzifLeap() -> MediaType {
             .init(
                 type: name,
-                subtype: "tzif-leap"
+                subtype: "tzif-leap",
+                source: .iana
             )
         }
 
@@ -5182,7 +7656,8 @@ extension MediaType {
                 subtype: .init(
                     value: "uccs",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5192,14 +7667,16 @@ extension MediaType {
                 subtype: .init(
                     value: "ujcs",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func ulpfec() -> MediaType {
             .init(
                 type: name,
-                subtype: "ulpfec"
+                subtype: "ulpfec",
+                source: .iana
             )
         }
 
@@ -5209,7 +7686,8 @@ extension MediaType {
                 subtype: .init(
                     value: "urc-grpsheet",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5222,7 +7700,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "rsheet"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5235,7 +7714,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "td"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5245,14 +7725,16 @@ extension MediaType {
                 subtype: .init(
                     value: "urc-uisocketdesc",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vc"
+                subtype: "vc",
+                source: .iana
             )
         }
 
@@ -5262,7 +7744,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vc",
                     suffix: "cose"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5272,7 +7755,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vc",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5282,7 +7766,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vcard",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5292,7 +7777,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vcard",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5305,7 +7791,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "vec"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5315,7 +7802,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vec-package",
                     suffix: "gzip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5325,21 +7813,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vec-package",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vemmi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vemmi"
+                subtype: "vemmi",
+                source: .iana
             )
         }
 
         public static func vividenceScriptfile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vividence.scriptfile"
+                subtype: "vividence.scriptfile",
+                source: .apache
             )
         }
 
@@ -5352,14 +7843,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "1km"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vnd1ob() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.1ob"
+                subtype: "vnd.1ob",
+                source: .iana
             )
         }
 
@@ -5369,7 +7862,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp-prose",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5379,7 +7873,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp-prose-pc3a",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5389,7 +7884,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp-prose-pc3ach",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5399,7 +7895,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp-prose-pc3ch",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5409,49 +7906,56 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp-prose-pc8",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppV2xLocalServiceInformation() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp-v2x-local-service-information"
+                subtype: "vnd.3gpp-v2x-local-service-information",
+                source: .iana
             )
         }
 
         public static func vnd3gpp5gnas() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.5gnas"
+                subtype: "vnd.3gpp.5gnas",
+                source: .iana
             )
         }
 
         public static func vnd3gpp5gsa2x() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.5gsa2x"
+                subtype: "vnd.3gpp.5gsa2x",
+                source: .iana
             )
         }
 
         public static func vnd3gpp5gsa2xLocalServiceInformation() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.5gsa2x-local-service-information"
+                subtype: "vnd.3gpp.5gsa2x-local-service-information",
+                source: .iana
             )
         }
 
         public static func vnd3gpp5gsv2x() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.5gsv2x"
+                subtype: "vnd.3gpp.5gsv2x",
+                source: .iana
             )
         }
 
         public static func vnd3gpp5gsv2xLocalServiceInformation() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.5gsv2x-local-service-information"
+                subtype: "vnd.3gpp.5gsv2x-local-service-information",
+                source: .iana
             )
         }
 
@@ -5461,7 +7965,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.access-transfer-events",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5471,7 +7976,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.bsf",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5481,7 +7987,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.crs",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5491,7 +7998,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.current-location-discovery",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5501,35 +8009,40 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.gmop",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppGtpc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.gtpc"
+                subtype: "vnd.3gpp.gtpc",
+                source: .iana
             )
         }
 
         public static func vnd3gppInterworkingData() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.interworking-data"
+                subtype: "vnd.3gpp.interworking-data",
+                source: .iana
             )
         }
 
         public static func vnd3gppLpp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.lpp"
+                subtype: "vnd.3gpp.lpp",
+                source: .iana
             )
         }
 
         public static func vnd3gppMcSignallingEar() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.mc-signalling-ear"
+                subtype: "vnd.3gpp.mc-signalling-ear",
+                source: .iana
             )
         }
 
@@ -5539,7 +8052,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-affiliation-command",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5549,7 +8063,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5559,14 +8074,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-msgstore-ctrl-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppMcdataPayload() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.mcdata-payload"
+                subtype: "vnd.3gpp.mcdata-payload",
+                source: .iana
             )
         }
 
@@ -5576,7 +8093,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-regroup",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5586,14 +8104,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-service-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppMcdataSignalling() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.mcdata-signalling"
+                subtype: "vnd.3gpp.mcdata-signalling",
+                source: .iana
             )
         }
 
@@ -5603,7 +8123,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-ue-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5613,7 +8134,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcdata-user-profile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5623,7 +8145,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-affiliation-command",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5633,7 +8156,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-floor-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5643,7 +8167,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5653,7 +8178,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-location-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5663,7 +8189,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-mbms-usage-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5673,7 +8200,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-regroup",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5683,7 +8211,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-service-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5693,7 +8222,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-signed",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5703,7 +8233,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-ue-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5713,7 +8244,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-ue-init-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5723,7 +8255,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcptt-user-profile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5733,7 +8266,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-affiliation-command",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5743,7 +8277,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5753,7 +8288,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-location-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5763,7 +8299,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-mbms-usage-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5773,7 +8310,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-regroup",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5783,7 +8321,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-service-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5793,7 +8332,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-transmission-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5803,7 +8343,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-ue-config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5813,7 +8354,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mcvideo-user-profile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5823,21 +8365,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.mid-call",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppNgap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.ngap"
+                subtype: "vnd.3gpp.ngap",
+                source: .iana
             )
         }
 
         public static func vnd3gppPfcp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.pfcp"
+                subtype: "vnd.3gpp.pfcp",
+                source: .iana
             )
         }
 
@@ -5847,7 +8392,8 @@ extension MediaType {
                 subtype: "vnd.3gpp.pic-bw-large",
                 possibleExtensions: [
                     "plb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5857,7 +8403,8 @@ extension MediaType {
                 subtype: "vnd.3gpp.pic-bw-small",
                 possibleExtensions: [
                     "psb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5867,7 +8414,8 @@ extension MediaType {
                 subtype: "vnd.3gpp.pic-bw-var",
                 possibleExtensions: [
                     "pvb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -5877,14 +8425,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.pinapp-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppS1ap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.s1ap"
+                subtype: "vnd.3gpp.s1ap",
+                source: .iana
             )
         }
 
@@ -5895,7 +8445,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-app-comm-requirements-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5905,7 +8456,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-data-delivery-info",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5915,7 +8467,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-data-delivery-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5925,7 +8478,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-group-doc",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5935,7 +8489,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5945,7 +8500,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-location-info",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5955,7 +8511,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-location-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5965,7 +8522,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-mbms-usage-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5975,7 +8533,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-mbs-usage-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5986,7 +8545,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-network-qos-management-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -5996,7 +8556,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-network-resource-info",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6006,7 +8567,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-ue-config-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6016,7 +8578,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-unicast-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6026,14 +8589,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.seal-user-profile-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppSms() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.sms"
+                subtype: "vnd.3gpp.sms",
+                source: .iana
             )
         }
 
@@ -6043,7 +8608,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.sms",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6053,7 +8619,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.srvcc-ext",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6063,7 +8630,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.srvcc-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6073,7 +8641,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.state-and-event-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6083,14 +8652,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.ussd",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gppV2x() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp.v2x"
+                subtype: "vnd.3gpp.v2x",
+                source: .iana
             )
         }
 
@@ -6100,7 +8671,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp.vae-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6110,14 +8682,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.3gpp2.bcmcsinfo",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vnd3gpp2Sms() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3gpp2.sms"
+                subtype: "vnd.3gpp2.sms",
+                source: .iana
             )
         }
 
@@ -6127,14 +8701,16 @@ extension MediaType {
                 subtype: "vnd.3gpp2.tcap",
                 possibleExtensions: [
                     "tcap"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vnd3lightssoftwareImagescal() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.3lightssoftware.imagescal"
+                subtype: "vnd.3lightssoftware.imagescal",
+                source: .iana
             )
         }
 
@@ -6144,7 +8720,8 @@ extension MediaType {
                 subtype: "vnd.3m.post-it-notes",
                 possibleExtensions: [
                     "pwn"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6154,7 +8731,8 @@ extension MediaType {
                 subtype: "vnd.accpac.simply.aso",
                 possibleExtensions: [
                     "aso"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6164,7 +8742,8 @@ extension MediaType {
                 subtype: "vnd.accpac.simply.imp",
                 possibleExtensions: [
                     "imp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6174,7 +8753,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.acm.addressxfer",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6184,7 +8764,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.acm.chatbot",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6194,7 +8775,8 @@ extension MediaType {
                 subtype: "vnd.acucobol",
                 possibleExtensions: [
                     "acu"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6205,7 +8787,8 @@ extension MediaType {
                 possibleExtensions: [
                     "atc",
                     "acutc",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6216,18 +8799,20 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "vnd.adobe.air-application-installer-package",
-                    suffix: "zip"
+                    suffix: "zip",
                 ),
                 possibleExtensions: [
                     "air"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndAdobeFlashMovie() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.adobe.flash.movie"
+                subtype: "vnd.adobe.flash.movie",
+                source: .iana
             )
         }
 
@@ -6237,7 +8822,8 @@ extension MediaType {
                 subtype: "vnd.adobe.formscentral.fcdt",
                 possibleExtensions: [
                     "fcdt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6248,14 +8834,16 @@ extension MediaType {
                 possibleExtensions: [
                     "fxp",
                     "fxpl",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndAdobePartialUpload() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.adobe.partial-upload"
+                subtype: "vnd.adobe.partial-upload",
+                source: .iana
             )
         }
 
@@ -6268,7 +8856,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xdp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6278,105 +8867,120 @@ extension MediaType {
                 subtype: "vnd.adobe.xfdf",
                 possibleExtensions: [
                     "xfdf"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndAetherImp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.aether.imp"
+                subtype: "vnd.aether.imp",
+                source: .iana
             )
         }
 
         public static func vndAfpcAfplinedata() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.afplinedata"
+                subtype: "vnd.afpc.afplinedata",
+                source: .iana
             )
         }
 
         public static func vndAfpcAfplinedataPagedef() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.afplinedata-pagedef"
+                subtype: "vnd.afpc.afplinedata-pagedef",
+                source: .iana
             )
         }
 
         public static func vndAfpcCmocaCmresource() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.cmoca-cmresource"
+                subtype: "vnd.afpc.cmoca-cmresource",
+                source: .iana
             )
         }
 
         public static func vndAfpcFocaCharset() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.foca-charset"
+                subtype: "vnd.afpc.foca-charset",
+                source: .iana
             )
         }
 
         public static func vndAfpcFocaCodedfont() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.foca-codedfont"
+                subtype: "vnd.afpc.foca-codedfont",
+                source: .iana
             )
         }
 
         public static func vndAfpcFocaCodepage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.foca-codepage"
+                subtype: "vnd.afpc.foca-codepage",
+                source: .iana
             )
         }
 
         public static func vndAfpcModca() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca"
+                subtype: "vnd.afpc.modca",
+                source: .iana
             )
         }
 
         public static func vndAfpcModcaCmtable() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca-cmtable"
+                subtype: "vnd.afpc.modca-cmtable",
+                source: .iana
             )
         }
 
         public static func vndAfpcModcaFormdef() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca-formdef"
+                subtype: "vnd.afpc.modca-formdef",
+                source: .iana
             )
         }
 
         public static func vndAfpcModcaMediummap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca-mediummap"
+                subtype: "vnd.afpc.modca-mediummap",
+                source: .iana
             )
         }
 
         public static func vndAfpcModcaObjectcontainer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca-objectcontainer"
+                subtype: "vnd.afpc.modca-objectcontainer",
+                source: .iana
             )
         }
 
         public static func vndAfpcModcaOverlay() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca-overlay"
+                subtype: "vnd.afpc.modca-overlay",
+                source: .iana
             )
         }
 
         public static func vndAfpcModcaPagesegment() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.afpc.modca-pagesegment"
+                subtype: "vnd.afpc.modca-pagesegment",
+                source: .iana
             )
         }
 
@@ -6386,14 +8990,16 @@ extension MediaType {
                 subtype: "vnd.age",
                 possibleExtensions: [
                     "age"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndAhBarcode() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ah-barcode"
+                subtype: "vnd.ah-barcode",
+                source: .apache
             )
         }
 
@@ -6403,7 +9009,8 @@ extension MediaType {
                 subtype: "vnd.ahead.space",
                 possibleExtensions: [
                     "ahead"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6413,7 +9020,8 @@ extension MediaType {
                 subtype: "vnd.airzip.filesecure.azf",
                 possibleExtensions: [
                     "azf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6423,7 +9031,8 @@ extension MediaType {
                 subtype: "vnd.airzip.filesecure.azs",
                 possibleExtensions: [
                     "azs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6433,7 +9042,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.amadeus",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6443,14 +9053,16 @@ extension MediaType {
                 subtype: "vnd.amazon.ebook",
                 possibleExtensions: [
                     "azw"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndAmazonMobi8Ebook() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.amazon.mobi8-ebook"
+                subtype: "vnd.amazon.mobi8-ebook",
+                source: .iana
             )
         }
 
@@ -6460,7 +9072,8 @@ extension MediaType {
                 subtype: "vnd.americandynamics.acc",
                 possibleExtensions: [
                     "acc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6470,7 +9083,8 @@ extension MediaType {
                 subtype: "vnd.amiga.ami",
                 possibleExtensions: [
                     "ami"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6480,14 +9094,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.amundsen.maze",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndAndroidOta() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.android.ota"
+                subtype: "vnd.android.ota",
+                source: .iana
             )
         }
 
@@ -6497,14 +9113,16 @@ extension MediaType {
                 subtype: "vnd.android.package-archive",
                 possibleExtensions: [
                     "apk"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndAnki() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.anki"
+                subtype: "vnd.anki",
+                source: .iana
             )
         }
 
@@ -6515,7 +9133,8 @@ extension MediaType {
                 subtype: "vnd.anser-web-certificate-issue-initiation",
                 possibleExtensions: [
                     "cii"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6525,7 +9144,8 @@ extension MediaType {
                 subtype: "vnd.anser-web-funds-transfer-initiation",
                 possibleExtensions: [
                     "fti"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -6535,56 +9155,64 @@ extension MediaType {
                 subtype: "vnd.antix.game-component",
                 possibleExtensions: [
                     "atx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndApacheArrowFile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apache.arrow.file"
+                subtype: "vnd.apache.arrow.file",
+                source: .iana
             )
         }
 
         public static func vndApacheArrowStream() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apache.arrow.stream"
+                subtype: "vnd.apache.arrow.stream",
+                source: .iana
             )
         }
 
         public static func vndApacheParquet() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apache.parquet"
+                subtype: "vnd.apache.parquet",
+                source: .iana
             )
         }
 
         public static func vndApacheThriftBinary() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apache.thrift.binary"
+                subtype: "vnd.apache.thrift.binary",
+                source: .iana
             )
         }
 
         public static func vndApacheThriftCompact() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apache.thrift.compact"
+                subtype: "vnd.apache.thrift.compact",
+                source: .iana
             )
         }
 
         public static func vndApacheThriftJson() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apache.thrift.json"
+                subtype: "vnd.apache.thrift.json",
+                source: .iana
             )
         }
 
         public static func vndApexlang() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.apexlang"
+                subtype: "vnd.apexlang",
+                source: .iana
             )
         }
 
@@ -6594,7 +9222,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.api",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6604,7 +9233,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.aplextor.warrp",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6614,7 +9244,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.apothekende.reservation",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6627,7 +9258,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "mpkg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6637,7 +9269,8 @@ extension MediaType {
                 subtype: "vnd.apple.keynote",
                 possibleExtensions: [
                     "key"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6647,7 +9280,8 @@ extension MediaType {
                 subtype: "vnd.apple.mpegurl",
                 possibleExtensions: [
                     "m3u8"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6657,7 +9291,8 @@ extension MediaType {
                 subtype: "vnd.apple.numbers",
                 possibleExtensions: [
                     "numbers"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6667,7 +9302,8 @@ extension MediaType {
                 subtype: "vnd.apple.pages",
                 possibleExtensions: [
                     "pages"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6684,7 +9320,8 @@ extension MediaType {
         public static func vndArastraSwi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.arastra.swi"
+                subtype: "vnd.arastra.swi",
+                source: .apache
             )
         }
 
@@ -6694,7 +9331,8 @@ extension MediaType {
                 subtype: "vnd.aristanetworks.swi",
                 possibleExtensions: [
                     "swi"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6704,14 +9342,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.artisan",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndArtsquare() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.artsquare"
+                subtype: "vnd.artsquare",
+                source: .iana
             )
         }
 
@@ -6721,7 +9361,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.as207960.vas.config",
                     suffix: "jer"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6731,7 +9372,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.as207960.vas.config",
                     suffix: "uper"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6741,7 +9383,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.as207960.vas.tap",
                     suffix: "jer"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6751,7 +9394,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.as207960.vas.tap",
                     suffix: "uper"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6761,7 +9405,8 @@ extension MediaType {
                 subtype: "vnd.astraea-software.iota",
                 possibleExtensions: [
                     "iota"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6771,7 +9416,8 @@ extension MediaType {
                 subtype: "vnd.audiograph",
                 possibleExtensions: [
                     "aep"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6788,7 +9434,8 @@ extension MediaType {
         public static func vndAutopackage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.autopackage"
+                subtype: "vnd.autopackage",
+                source: .iana
             )
         }
 
@@ -6798,7 +9445,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.avalon",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6808,7 +9456,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.avistar",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6821,35 +9470,40 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "bmml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndBalsamiqBmpr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.balsamiq.bmpr"
+                subtype: "vnd.balsamiq.bmpr",
+                source: .iana
             )
         }
 
         public static func vndBananaAccounting() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.banana-accounting"
+                subtype: "vnd.banana-accounting",
+                source: .iana
             )
         }
 
         public static func vndBbfUspError() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bbf.usp.error"
+                subtype: "vnd.bbf.usp.error",
+                source: .iana
             )
         }
 
         public static func vndBbfUspMsg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bbf.usp.msg"
+                subtype: "vnd.bbf.usp.msg",
+                source: .iana
             )
         }
 
@@ -6859,7 +9513,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.bbf.usp.msg",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6869,7 +9524,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.bekitzur-stech",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6879,7 +9535,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.belightsoft.lhzd",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -6889,14 +9546,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.belightsoft.lhzl",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndBintMedContent() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bint.med-content"
+                subtype: "vnd.bint.med-content",
+                source: .iana
             )
         }
 
@@ -6906,14 +9565,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.biopax.rdf",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndBlinkIdbValueWrapper() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.blink-idb-value-wrapper"
+                subtype: "vnd.blink-idb-value-wrapper",
+                source: .iana
             )
         }
 
@@ -6923,21 +9584,24 @@ extension MediaType {
                 subtype: "vnd.blueice.multipass",
                 possibleExtensions: [
                     "mpm"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndBluetoothEpOob() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bluetooth.ep.oob"
+                subtype: "vnd.bluetooth.ep.oob",
+                source: .iana
             )
         }
 
         public static func vndBluetoothLeOob() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bluetooth.le.oob"
+                subtype: "vnd.bluetooth.le.oob",
+                source: .iana
             )
         }
 
@@ -6947,21 +9611,24 @@ extension MediaType {
                 subtype: "vnd.bmi",
                 possibleExtensions: [
                     "bmi"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndBpf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bpf"
+                subtype: "vnd.bpf",
+                source: .iana
             )
         }
 
         public static func vndBpf3() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bpf3"
+                subtype: "vnd.bpf3",
+                source: .iana
             )
         }
 
@@ -6971,7 +9638,8 @@ extension MediaType {
                 subtype: "vnd.businessobjects",
                 possibleExtensions: [
                     "rep"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -6981,14 +9649,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.byu.uapi",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndBzip3() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.bzip3"
+                subtype: "vnd.bzip3",
+                source: .iana
             )
         }
 
@@ -6998,28 +9668,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.c3voc.schedule",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCabJscript() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cab-jscript"
+                subtype: "vnd.cab-jscript",
+                source: .iana
             )
         }
 
         public static func vndCanonCpdl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.canon-cpdl"
+                subtype: "vnd.canon-cpdl",
+                source: .iana
             )
         }
 
         public static func vndCanonLips() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.canon-lips"
+                subtype: "vnd.canon-lips",
+                source: .iana
             )
         }
 
@@ -7029,28 +9703,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.capasystems-pg",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCel() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cel"
+                subtype: "vnd.cel",
+                source: .iana
             )
         }
 
         public static func vndCendioThinlincClientconf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cendio.thinlinc.clientconf"
+                subtype: "vnd.cendio.thinlinc.clientconf",
+                source: .iana
             )
         }
 
         public static func vndCenturySystemsTcpStream() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.century-systems.tcp_stream"
+                subtype: "vnd.century-systems.tcp_stream",
+                source: .iana
             )
         }
 
@@ -7063,14 +9741,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "cdxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndChessPgn() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.chess-pgn"
+                subtype: "vnd.chess-pgn",
+                source: .iana
             )
         }
 
@@ -7080,14 +9760,16 @@ extension MediaType {
                 subtype: "vnd.chipnuts.karaoke-mmd",
                 possibleExtensions: [
                     "mmd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndCiedi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ciedi"
+                subtype: "vnd.ciedi",
+                source: .iana
             )
         }
 
@@ -7097,14 +9779,16 @@ extension MediaType {
                 subtype: "vnd.cinderella",
                 possibleExtensions: [
                     "cdy"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndCirpackIsdnExt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cirpack.isdn-ext"
+                subtype: "vnd.cirpack.isdn-ext",
+                source: .iana
             )
         }
 
@@ -7117,7 +9801,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "csl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7127,7 +9812,8 @@ extension MediaType {
                 subtype: "vnd.claymore",
                 possibleExtensions: [
                     "cla"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7137,7 +9823,8 @@ extension MediaType {
                 subtype: "vnd.cloanto.rp9",
                 possibleExtensions: [
                     "rp9"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7151,7 +9838,8 @@ extension MediaType {
                     "c4f",
                     "c4p",
                     "c4u",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7161,7 +9849,8 @@ extension MediaType {
                 subtype: "vnd.cluetrust.cartomobile-config",
                 possibleExtensions: [
                     "c11amc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7171,7 +9860,8 @@ extension MediaType {
                 subtype: "vnd.cluetrust.cartomobile-config-pkg",
                 possibleExtensions: [
                     "c11amz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7181,14 +9871,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.cncf.helm.chart.content.v1.tar",
                     suffix: "gzip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCncfHelmChartProvenanceV1Prov() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cncf.helm.chart.provenance.v1.prov"
+                subtype: "vnd.cncf.helm.chart.provenance.v1.prov",
+                source: .iana
             )
         }
 
@@ -7198,21 +9890,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.cncf.helm.config.v1",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCoffeescript() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.coffeescript"
+                subtype: "vnd.coffeescript",
+                source: .iana
             )
         }
 
         public static func vndCollabioXodocumentsDocument() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.collabio.xodocuments.document"
+                subtype: "vnd.collabio.xodocuments.document",
+                source: .iana
             )
         }
 
@@ -7220,14 +9915,16 @@ extension MediaType {
         {
             .init(
                 type: name,
-                subtype: "vnd.collabio.xodocuments.document-template"
+                subtype: "vnd.collabio.xodocuments.document-template",
+                source: .iana
             )
         }
 
         public static func vndCollabioXodocumentsPresentation() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.collabio.xodocuments.presentation"
+                subtype: "vnd.collabio.xodocuments.presentation",
+                source: .iana
             )
         }
 
@@ -7236,14 +9933,16 @@ extension MediaType {
         {
             .init(
                 type: name,
-                subtype: "vnd.collabio.xodocuments.presentation-template"
+                subtype: "vnd.collabio.xodocuments.presentation-template",
+                source: .iana
             )
         }
 
         public static func vndCollabioXodocumentsSpreadsheet() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.collabio.xodocuments.spreadsheet"
+                subtype: "vnd.collabio.xodocuments.spreadsheet",
+                source: .iana
             )
         }
 
@@ -7252,7 +9951,8 @@ extension MediaType {
         {
             .init(
                 type: name,
-                subtype: "vnd.collabio.xodocuments.spreadsheet-template"
+                subtype: "vnd.collabio.xodocuments.spreadsheet-template",
+                source: .iana
             )
         }
 
@@ -7262,7 +9962,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.collection",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7272,7 +9973,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.collection.doc",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7282,7 +9984,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.collection.next",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7292,21 +9995,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.comicbook",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndComicbookRar() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.comicbook-rar"
+                subtype: "vnd.comicbook-rar",
+                source: .iana
             )
         }
 
         public static func vndCommerceBattelle() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.commerce-battelle"
+                subtype: "vnd.commerce-battelle",
+                source: .iana
             )
         }
 
@@ -7316,7 +10022,8 @@ extension MediaType {
                 subtype: "vnd.commonspace",
                 possibleExtensions: [
                     "csp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7326,7 +10033,8 @@ extension MediaType {
                 subtype: "vnd.contact.cmsg",
                 possibleExtensions: [
                     "cdbcmsg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7336,7 +10044,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.coreos.ignition",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7346,7 +10055,8 @@ extension MediaType {
                 subtype: "vnd.cosmocaller",
                 possibleExtensions: [
                     "cmc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7356,7 +10066,8 @@ extension MediaType {
                 subtype: "vnd.crick.clicker",
                 possibleExtensions: [
                     "clkx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7366,7 +10077,8 @@ extension MediaType {
                 subtype: "vnd.crick.clicker.keyboard",
                 possibleExtensions: [
                     "clkk"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7376,7 +10088,8 @@ extension MediaType {
                 subtype: "vnd.crick.clicker.palette",
                 possibleExtensions: [
                     "clkp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7386,7 +10099,8 @@ extension MediaType {
                 subtype: "vnd.crick.clicker.template",
                 possibleExtensions: [
                     "clkt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7396,7 +10110,8 @@ extension MediaType {
                 subtype: "vnd.crick.clicker.wordbank",
                 possibleExtensions: [
                     "clkw"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7409,7 +10124,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "wbs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7419,28 +10135,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.cryptii.pipe",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCryptoShadeFile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.crypto-shade-file"
+                subtype: "vnd.crypto-shade-file",
+                source: .iana
             )
         }
 
         public static func vndCryptomatorEncrypted() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cryptomator.encrypted"
+                subtype: "vnd.cryptomator.encrypted",
+                source: .iana
             )
         }
 
         public static func vndCryptomatorVault() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cryptomator.vault"
+                subtype: "vnd.cryptomator.vault",
+                source: .iana
             )
         }
 
@@ -7450,7 +10170,8 @@ extension MediaType {
                 subtype: "vnd.ctc-posml",
                 possibleExtensions: [
                     "pml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7460,21 +10181,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ctct.ws",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCupsPdf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cups-pdf"
+                subtype: "vnd.cups-pdf",
+                source: .iana
             )
         }
 
         public static func vndCupsPostscript() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cups-postscript"
+                subtype: "vnd.cups-postscript",
+                source: .iana
             )
         }
 
@@ -7484,28 +10208,32 @@ extension MediaType {
                 subtype: "vnd.cups-ppd",
                 possibleExtensions: [
                     "ppd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndCupsRaster() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cups-raster"
+                subtype: "vnd.cups-raster",
+                source: .iana
             )
         }
 
         public static func vndCupsRaw() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cups-raw"
+                subtype: "vnd.cups-raw",
+                source: .iana
             )
         }
 
         public static func vndCurl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.curl"
+                subtype: "vnd.curl",
+                source: .iana
             )
         }
 
@@ -7515,7 +10243,8 @@ extension MediaType {
                 subtype: "vnd.curl.car",
                 possibleExtensions: [
                     "car"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -7525,7 +10254,8 @@ extension MediaType {
                 subtype: "vnd.curl.pcurl",
                 possibleExtensions: [
                     "pcurl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -7535,14 +10265,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.cyan.dean.root",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndCybank() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cybank"
+                subtype: "vnd.cybank",
+                source: .iana
             )
         }
 
@@ -7552,7 +10284,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.cyclonedx",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7562,7 +10295,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.cyclonedx",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7572,21 +10306,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.d2l.coursepackage1p0",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndD3mDataset() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.d3m-dataset"
+                subtype: "vnd.d3m-dataset",
+                source: .iana
             )
         }
 
         public static func vndD3mProblem() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.d3m-problem"
+                subtype: "vnd.d3m-problem",
+                source: .iana
             )
         }
 
@@ -7596,7 +10333,8 @@ extension MediaType {
                 subtype: "vnd.dart",
                 possibleExtensions: [
                     "dart"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7606,14 +10344,16 @@ extension MediaType {
                 subtype: "vnd.data-vision.rdz",
                 possibleExtensions: [
                     "rdz"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDatalog() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.datalog"
+                subtype: "vnd.datalog",
+                source: .iana
             )
         }
 
@@ -7623,7 +10363,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.datapackage",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7633,7 +10374,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dataresource",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7643,7 +10385,8 @@ extension MediaType {
                 subtype: "vnd.dbf",
                 possibleExtensions: [
                     "dbf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7656,14 +10399,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "dcmp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDebianBinaryPackage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.debian.binary-package"
+                subtype: "vnd.debian.binary-package",
+                source: .iana
             )
         }
 
@@ -7676,7 +10421,8 @@ extension MediaType {
                     "uvvf",
                     "uvd",
                     "uvvd",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7690,7 +10436,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvt",
                     "uvvt",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7701,7 +10448,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvx",
                     "uvvx",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7712,7 +10460,8 @@ extension MediaType {
                 possibleExtensions: [
                     "uvz",
                     "uvvz",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7722,21 +10471,24 @@ extension MediaType {
                 subtype: "vnd.denovo.fcselayout-link",
                 possibleExtensions: [
                     "fe_launch"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDesmumeMovie() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.desmume.movie"
+                subtype: "vnd.desmume.movie",
+                source: .iana
             )
         }
 
         public static func vndDirBiPlateDlNosuffix() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dir-bi.plate-dl-nosuffix"
+                subtype: "vnd.dir-bi.plate-dl-nosuffix",
+                source: .iana
             )
         }
 
@@ -7746,7 +10498,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dm.delegation",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7756,7 +10509,8 @@ extension MediaType {
                 subtype: "vnd.dna",
                 possibleExtensions: [
                     "dna"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7766,7 +10520,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.document",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7776,28 +10531,32 @@ extension MediaType {
                 subtype: "vnd.dolby.mlp",
                 possibleExtensions: [
                     "mlp"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndDolbyMobile1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.mobile.1"
+                subtype: "vnd.dolby.mobile.1",
+                source: .iana
             )
         }
 
         public static func vndDolbyMobile2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dolby.mobile.2"
+                subtype: "vnd.dolby.mobile.2",
+                source: .iana
             )
         }
 
         public static func vndDoremirScorecloudBinaryDocument() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.doremir.scorecloud-binary-document"
+                subtype: "vnd.doremir.scorecloud-binary-document",
+                source: .iana
             )
         }
 
@@ -7807,7 +10566,8 @@ extension MediaType {
                 subtype: "vnd.dpgraph",
                 possibleExtensions: [
                     "dpg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7817,7 +10577,8 @@ extension MediaType {
                 subtype: "vnd.dreamfactory",
                 possibleExtensions: [
                     "dfac"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7827,7 +10588,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.drive",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7837,28 +10599,32 @@ extension MediaType {
                 subtype: "vnd.ds-keypoint",
                 possibleExtensions: [
                     "kpxx"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndDtgLocal() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dtg.local"
+                subtype: "vnd.dtg.local",
+                source: .iana
             )
         }
 
         public static func vndDtgLocalFlash() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dtg.local.flash"
+                subtype: "vnd.dtg.local.flash",
+                source: .iana
             )
         }
 
         public static func vndDtgLocalHtml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dtg.local.html"
+                subtype: "vnd.dtg.local.html",
+                source: .iana
             )
         }
 
@@ -7868,7 +10634,8 @@ extension MediaType {
                 subtype: "vnd.dvb.ait",
                 possibleExtensions: [
                     "ait"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -7878,70 +10645,80 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.dvbisl",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndDvbDvbj() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.dvbj"
+                subtype: "vnd.dvb.dvbj",
+                source: .iana
             )
         }
 
         public static func vndDvbEsgcontainer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.esgcontainer"
+                subtype: "vnd.dvb.esgcontainer",
+                source: .iana
             )
         }
 
         public static func vndDvbIpdcdftnotifaccess() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.ipdcdftnotifaccess"
+                subtype: "vnd.dvb.ipdcdftnotifaccess",
+                source: .iana
             )
         }
 
         public static func vndDvbIpdcesgaccess() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.ipdcesgaccess"
+                subtype: "vnd.dvb.ipdcesgaccess",
+                source: .iana
             )
         }
 
         public static func vndDvbIpdcesgaccess2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.ipdcesgaccess2"
+                subtype: "vnd.dvb.ipdcesgaccess2",
+                source: .iana
             )
         }
 
         public static func vndDvbIpdcesgpdd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.ipdcesgpdd"
+                subtype: "vnd.dvb.ipdcesgpdd",
+                source: .iana
             )
         }
 
         public static func vndDvbIpdcroaming() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.ipdcroaming"
+                subtype: "vnd.dvb.ipdcroaming",
+                source: .iana
             )
         }
 
         public static func vndDvbIptvAlfecBase() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.iptv.alfec-base"
+                subtype: "vnd.dvb.iptv.alfec-base",
+                source: .iana
             )
         }
 
         public static func vndDvbIptvAlfecEnhancement() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.iptv.alfec-enhancement"
+                subtype: "vnd.dvb.iptv.alfec-enhancement",
+                source: .iana
             )
         }
 
@@ -7951,7 +10728,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-aggregate-root",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7961,7 +10739,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-container",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7971,7 +10750,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-generic",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7981,7 +10761,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-ia-msglist",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -7991,7 +10772,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-ia-registration-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8001,7 +10783,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-ia-registration-response",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8011,14 +10794,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.dvb.notif-init",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndDvbPfr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dvb.pfr"
+                subtype: "vnd.dvb.pfr",
+                source: .iana
             )
         }
 
@@ -8028,14 +10813,16 @@ extension MediaType {
                 subtype: "vnd.dvb.service",
                 possibleExtensions: [
                     "svc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDxr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dxr"
+                subtype: "vnd.dxr",
+                source: .iana
             )
         }
 
@@ -8045,35 +10832,40 @@ extension MediaType {
                 subtype: "vnd.dynageo",
                 possibleExtensions: [
                     "geo"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndDzr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.dzr"
+                subtype: "vnd.dzr",
+                source: .iana
             )
         }
 
         public static func vndEasykaraokeCdgdownload() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.easykaraoke.cdgdownload"
+                subtype: "vnd.easykaraoke.cdgdownload",
+                source: .iana
             )
         }
 
         public static func vndEcdisUpdate() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecdis-update"
+                subtype: "vnd.ecdis-update",
+                source: .iana
             )
         }
 
         public static func vndEcipRlp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecip.rlp"
+                subtype: "vnd.ecip.rlp",
+                source: .iana
             )
         }
 
@@ -8083,7 +10875,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.eclipse.ditto",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8093,56 +10886,64 @@ extension MediaType {
                 subtype: "vnd.ecowin.chart",
                 possibleExtensions: [
                     "mag"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndEcowinFilerequest() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecowin.filerequest"
+                subtype: "vnd.ecowin.filerequest",
+                source: .iana
             )
         }
 
         public static func vndEcowinFileupdate() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecowin.fileupdate"
+                subtype: "vnd.ecowin.fileupdate",
+                source: .iana
             )
         }
 
         public static func vndEcowinSeries() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecowin.series"
+                subtype: "vnd.ecowin.series",
+                source: .iana
             )
         }
 
         public static func vndEcowinSeriesrequest() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecowin.seriesrequest"
+                subtype: "vnd.ecowin.seriesrequest",
+                source: .iana
             )
         }
 
         public static func vndEcowinSeriesupdate() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ecowin.seriesupdate"
+                subtype: "vnd.ecowin.seriesupdate",
+                source: .iana
             )
         }
 
         public static func vndEfiImg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.efi.img"
+                subtype: "vnd.efi.img",
+                source: .iana
             )
         }
 
         public static func vndEfiIso() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.efi.iso"
+                subtype: "vnd.efi.iso",
+                source: .iana
             )
         }
 
@@ -8152,7 +10953,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.eln",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8162,7 +10964,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.emclient.accessrequest",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8172,14 +10975,16 @@ extension MediaType {
                 subtype: "vnd.enliven",
                 possibleExtensions: [
                     "nml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndEnphaseEnvoy() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.enphase.envoy"
+                subtype: "vnd.enphase.envoy",
+                source: .iana
             )
         }
 
@@ -8189,7 +10994,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.eprints.data",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8199,7 +11005,8 @@ extension MediaType {
                 subtype: "vnd.epson.esf",
                 possibleExtensions: [
                     "esf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8209,7 +11016,8 @@ extension MediaType {
                 subtype: "vnd.epson.msf",
                 possibleExtensions: [
                     "msf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8219,7 +11027,8 @@ extension MediaType {
                 subtype: "vnd.epson.quickanime",
                 possibleExtensions: [
                     "qam"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8229,7 +11038,8 @@ extension MediaType {
                 subtype: "vnd.epson.salt",
                 possibleExtensions: [
                     "slt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8239,21 +11049,24 @@ extension MediaType {
                 subtype: "vnd.epson.ssf",
                 possibleExtensions: [
                     "ssf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndEricssonQuickcall() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ericsson.quickcall"
+                subtype: "vnd.ericsson.quickcall",
+                source: .iana
             )
         }
 
         public static func vndErofs() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.erofs"
+                subtype: "vnd.erofs",
+                source: .iana
             )
         }
 
@@ -8263,7 +11076,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.espass-espass",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8277,7 +11091,8 @@ extension MediaType {
                 possibleExtensions: [
                     "es3",
                     "et3",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8287,7 +11102,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.aoc",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8297,7 +11113,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.asic-e",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8307,7 +11124,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.asic-s",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8317,7 +11135,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.cug",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8327,7 +11146,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvcommand",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8337,7 +11157,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvdiscovery",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8347,7 +11168,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvprofile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8357,7 +11179,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvsad-bc",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8367,7 +11190,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvsad-cod",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8377,7 +11201,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvsad-npvr",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8387,7 +11212,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvservice",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8397,7 +11223,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvsync",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8407,7 +11234,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.iptvueprofile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8417,14 +11245,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.mcid",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndEtsiMheg5() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.etsi.mheg5"
+                subtype: "vnd.etsi.mheg5",
+                source: .iana
             )
         }
 
@@ -8435,7 +11265,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.overload-control-policy-dataset",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8445,7 +11276,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.pstn",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8455,7 +11287,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.sci",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8465,14 +11298,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.simservs",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndEtsiTimestampToken() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.etsi.timestamp-token"
+                subtype: "vnd.etsi.timestamp-token",
+                source: .iana
             )
         }
 
@@ -8482,14 +11317,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.etsi.tsl",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndEtsiTslDer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.etsi.tsl.der"
+                subtype: "vnd.etsi.tsl.der",
+                source: .iana
             )
         }
 
@@ -8499,35 +11336,40 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.eu.kasparian.car",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndEudoraData() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.eudora.data"
+                subtype: "vnd.eudora.data",
+                source: .iana
             )
         }
 
         public static func vndEvolvEcigProfile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.evolv.ecig.profile"
+                subtype: "vnd.evolv.ecig.profile",
+                source: .iana
             )
         }
 
         public static func vndEvolvEcigSettings() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.evolv.ecig.settings"
+                subtype: "vnd.evolv.ecig.settings",
+                source: .iana
             )
         }
 
         public static func vndEvolvEcigTheme() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.evolv.ecig.theme"
+                subtype: "vnd.evolv.ecig.theme",
+                source: .iana
             )
         }
 
@@ -8537,14 +11379,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.exstream-empower",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndExstreamPackage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.exstream-package"
+                subtype: "vnd.exstream-package",
+                source: .iana
             )
         }
 
@@ -8554,7 +11398,8 @@ extension MediaType {
                 subtype: "vnd.ezpix-album",
                 possibleExtensions: [
                     "ez2"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8564,14 +11409,16 @@ extension MediaType {
                 subtype: "vnd.ezpix-package",
                 possibleExtensions: [
                     "ez3"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFSecureMobile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.f-secure.mobile"
+                subtype: "vnd.f-secure.mobile",
+                source: .iana
             )
         }
 
@@ -8581,7 +11428,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.faf",
                     suffix: "yaml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8591,14 +11439,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.familysearch.gedcom",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndFastcopyDiskImage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fastcopy-disk-image"
+                subtype: "vnd.fastcopy-disk-image",
+                source: .iana
             )
         }
 
@@ -8608,7 +11458,8 @@ extension MediaType {
                 subtype: "vnd.fdf",
                 possibleExtensions: [
                     "fdf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -8618,7 +11469,8 @@ extension MediaType {
                 subtype: "vnd.fdsn.mseed",
                 possibleExtensions: [
                     "mseed"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8629,7 +11481,8 @@ extension MediaType {
                 possibleExtensions: [
                     "seed",
                     "dataless",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8639,21 +11492,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.fdsn.stationxml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndFfsns() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ffsns"
+                subtype: "vnd.ffsns",
+                source: .iana
             )
         }
 
         public static func vndFgb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fgb"
+                subtype: "vnd.fgb",
+                source: .iana
             )
         }
 
@@ -8663,28 +11519,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ficlab.flb",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndFilmitZfc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.filmit.zfc"
+                subtype: "vnd.filmit.zfc",
+                source: .iana
             )
         }
 
         public static func vndFints() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fints"
+                subtype: "vnd.fints",
+                source: .iana
             )
         }
 
         public static func vndFiremonkeysCloudcell() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.firemonkeys.cloudcell"
+                subtype: "vnd.firemonkeys.cloudcell",
+                source: .iana
             )
         }
 
@@ -8694,7 +11554,8 @@ extension MediaType {
                 subtype: "vnd.flographit",
                 possibleExtensions: [
                     "gph"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8704,14 +11565,16 @@ extension MediaType {
                 subtype: "vnd.fluxtime.clip",
                 possibleExtensions: [
                     "ftc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFontFontforgeSfd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.font-fontforge-sfd"
+                subtype: "vnd.font-fontforge-sfd",
+                source: .iana
             )
         }
 
@@ -8724,14 +11587,16 @@ extension MediaType {
                     "frame",
                     "maker",
                     "book",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFreelogComic() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.freelog.comic"
+                subtype: "vnd.freelog.comic",
+                source: .iana
             )
         }
 
@@ -8741,7 +11606,8 @@ extension MediaType {
                 subtype: "vnd.frogans.fnc",
                 possibleExtensions: [
                     "fnc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -8751,7 +11617,8 @@ extension MediaType {
                 subtype: "vnd.frogans.ltf",
                 possibleExtensions: [
                     "ltf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -8761,28 +11628,32 @@ extension MediaType {
                 subtype: "vnd.fsc.weblaunch",
                 possibleExtensions: [
                     "fsc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFujifilmFbDocuworks() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujifilm.fb.docuworks"
+                subtype: "vnd.fujifilm.fb.docuworks",
+                source: .iana
             )
         }
 
         public static func vndFujifilmFbDocuworksBinder() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujifilm.fb.docuworks.binder"
+                subtype: "vnd.fujifilm.fb.docuworks.binder",
+                source: .iana
             )
         }
 
         public static func vndFujifilmFbDocuworksContainer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujifilm.fb.docuworks.container"
+                subtype: "vnd.fujifilm.fb.docuworks.container",
+                source: .iana
             )
         }
 
@@ -8792,7 +11663,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.fujifilm.fb.jfi",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8802,7 +11674,8 @@ extension MediaType {
                 subtype: "vnd.fujitsu.oasys",
                 possibleExtensions: [
                     "oas"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8812,7 +11685,8 @@ extension MediaType {
                 subtype: "vnd.fujitsu.oasys2",
                 possibleExtensions: [
                     "oa2"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8822,7 +11696,8 @@ extension MediaType {
                 subtype: "vnd.fujitsu.oasys3",
                 possibleExtensions: [
                     "oa3"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8832,7 +11707,8 @@ extension MediaType {
                 subtype: "vnd.fujitsu.oasysgp",
                 possibleExtensions: [
                     "fg5"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8842,21 +11718,24 @@ extension MediaType {
                 subtype: "vnd.fujitsu.oasysprs",
                 possibleExtensions: [
                     "bh2"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFujixeroxArtEx() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujixerox.art-ex"
+                subtype: "vnd.fujixerox.art-ex",
+                source: .iana
             )
         }
 
         public static func vndFujixeroxArt4() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujixerox.art4"
+                subtype: "vnd.fujixerox.art4",
+                source: .iana
             )
         }
 
@@ -8866,7 +11745,8 @@ extension MediaType {
                 subtype: "vnd.fujixerox.ddd",
                 possibleExtensions: [
                     "ddd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8876,7 +11756,8 @@ extension MediaType {
                 subtype: "vnd.fujixerox.docuworks",
                 possibleExtensions: [
                     "xdw"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -8886,28 +11767,32 @@ extension MediaType {
                 subtype: "vnd.fujixerox.docuworks.binder",
                 possibleExtensions: [
                     "xbd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFujixeroxDocuworksContainer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujixerox.docuworks.container"
+                subtype: "vnd.fujixerox.docuworks.container",
+                source: .iana
             )
         }
 
         public static func vndFujixeroxHbpl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fujixerox.hbpl"
+                subtype: "vnd.fujixerox.hbpl",
+                source: .iana
             )
         }
 
         public static func vndFutMisnet() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.fut-misnet"
+                subtype: "vnd.fut-misnet",
+                source: .iana
             )
         }
 
@@ -8917,7 +11802,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.futoin",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8927,7 +11813,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.futoin",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8937,14 +11824,16 @@ extension MediaType {
                 subtype: "vnd.fuzzysheet",
                 possibleExtensions: [
                     "fzs"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndG3pixG3fc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.g3pix.g3fc"
+                subtype: "vnd.g3pix.g3fc",
+                source: .iana
             )
         }
 
@@ -8954,7 +11843,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ga4gh.passport",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8964,14 +11854,16 @@ extension MediaType {
                 subtype: "vnd.genomatix.tuxedo",
                 possibleExtensions: [
                     "txd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGenozip() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.genozip"
+                subtype: "vnd.genozip",
+                source: .iana
             )
         }
 
@@ -8981,7 +11873,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gentics.grd",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -8991,35 +11884,40 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gentoo.catmetadata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndGentooEbuild() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gentoo.ebuild"
+                subtype: "vnd.gentoo.ebuild",
+                source: .iana
             )
         }
 
         public static func vndGentooEclass() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gentoo.eclass"
+                subtype: "vnd.gentoo.eclass",
+                source: .iana
             )
         }
 
         public static func vndGentooGpkg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gentoo.gpkg"
+                subtype: "vnd.gentoo.gpkg",
+                source: .iana
             )
         }
 
         public static func vndGentooManifest() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gentoo.manifest"
+                subtype: "vnd.gentoo.manifest",
+                source: .iana
             )
         }
 
@@ -9029,14 +11927,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gentoo.pkgmetadata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndGentooXpak() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gentoo.xpak"
+                subtype: "vnd.gentoo.xpak",
+                source: .iana
             )
         }
 
@@ -9046,7 +11946,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.geo",
                     suffix: "json"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -9056,7 +11957,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.geocube",
                     suffix: "xml"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -9066,14 +11968,16 @@ extension MediaType {
                 subtype: "vnd.geogebra.file",
                 possibleExtensions: [
                     "ggb"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGeogebraPinboard() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.geogebra.pinboard"
+                subtype: "vnd.geogebra.pinboard",
+                source: .iana
             )
         }
 
@@ -9083,7 +11987,8 @@ extension MediaType {
                 subtype: "vnd.geogebra.slides",
                 possibleExtensions: [
                     "ggs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9093,7 +11998,8 @@ extension MediaType {
                 subtype: "vnd.geogebra.tool",
                 possibleExtensions: [
                     "ggt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9104,7 +12010,8 @@ extension MediaType {
                 possibleExtensions: [
                     "gex",
                     "gre",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9114,7 +12021,8 @@ extension MediaType {
                 subtype: "vnd.geonext",
                 possibleExtensions: [
                     "gxt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9124,7 +12032,8 @@ extension MediaType {
                 subtype: "vnd.geoplan",
                 possibleExtensions: [
                     "g2w"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9134,21 +12043,24 @@ extension MediaType {
                 subtype: "vnd.geospace",
                 possibleExtensions: [
                     "g3w"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGerber() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gerber"
+                subtype: "vnd.gerber",
+                source: .iana
             )
         }
 
         public static func vndGlobalplatformCardContentMgt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.globalplatform.card-content-mgt"
+                subtype: "vnd.globalplatform.card-content-mgt",
+                source: .iana
             )
         }
 
@@ -9157,7 +12069,8 @@ extension MediaType {
         {
             .init(
                 type: name,
-                subtype: "vnd.globalplatform.card-content-mgt-response"
+                subtype: "vnd.globalplatform.card-content-mgt-response",
+                source: .iana
             )
         }
 
@@ -9167,7 +12080,8 @@ extension MediaType {
                 subtype: "vnd.gmx",
                 possibleExtensions: [
                     "gmx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9177,7 +12091,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gnu.taler.exchange",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9187,7 +12102,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gnu.taler.merchant",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9360,7 +12276,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "kml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9370,7 +12287,8 @@ extension MediaType {
                 subtype: "vnd.google-earth.kmz",
                 possibleExtensions: [
                     "kmz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9380,7 +12298,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gov.sk.e-form",
                     suffix: "xml"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -9390,7 +12309,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gov.sk.e-form",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9403,7 +12323,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xdcf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9413,7 +12334,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.gpxsee.map",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9424,14 +12346,16 @@ extension MediaType {
                 possibleExtensions: [
                     "gqf",
                     "gqs",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGridmp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gridmp"
+                subtype: "vnd.gridmp",
+                source: .iana
             )
         }
 
@@ -9441,7 +12365,8 @@ extension MediaType {
                 subtype: "vnd.groove-account",
                 possibleExtensions: [
                     "gac"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9451,7 +12376,8 @@ extension MediaType {
                 subtype: "vnd.groove-help",
                 possibleExtensions: [
                     "ghf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9461,7 +12387,8 @@ extension MediaType {
                 subtype: "vnd.groove-identity-message",
                 possibleExtensions: [
                     "gim"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9471,7 +12398,8 @@ extension MediaType {
                 subtype: "vnd.groove-injector",
                 possibleExtensions: [
                     "grv"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9481,7 +12409,8 @@ extension MediaType {
                 subtype: "vnd.groove-tool-message",
                 possibleExtensions: [
                     "gtm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9491,7 +12420,8 @@ extension MediaType {
                 subtype: "vnd.groove-tool-template",
                 possibleExtensions: [
                     "tpl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9501,7 +12431,8 @@ extension MediaType {
                 subtype: "vnd.groove-vcard",
                 possibleExtensions: [
                     "vcg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9511,7 +12442,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.hal",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9524,7 +12456,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "hal"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9537,7 +12470,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "zmm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9547,7 +12481,8 @@ extension MediaType {
                 subtype: "vnd.hbci",
                 possibleExtensions: [
                     "hbci"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9557,21 +12492,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.hc",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndHclBireports() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hcl-bireports"
+                subtype: "vnd.hcl-bireports",
+                source: .iana
             )
         }
 
         public static func vndHdt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hdt"
+                subtype: "vnd.hdt",
+                source: .iana
             )
         }
 
@@ -9581,7 +12519,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.heroku",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9591,7 +12530,8 @@ extension MediaType {
                 subtype: "vnd.hhe.lesson-player",
                 possibleExtensions: [
                     "les"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9601,7 +12541,8 @@ extension MediaType {
                 subtype: "vnd.hp-hpgl",
                 possibleExtensions: [
                     "hpgl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9611,7 +12552,8 @@ extension MediaType {
                 subtype: "vnd.hp-hpid",
                 possibleExtensions: [
                     "hpid"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9621,7 +12563,8 @@ extension MediaType {
                 subtype: "vnd.hp-hps",
                 possibleExtensions: [
                     "hps"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9631,7 +12574,8 @@ extension MediaType {
                 subtype: "vnd.hp-jlyt",
                 possibleExtensions: [
                     "jlt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9641,7 +12585,8 @@ extension MediaType {
                 subtype: "vnd.hp-pcl",
                 possibleExtensions: [
                     "pcl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9651,21 +12596,24 @@ extension MediaType {
                 subtype: "vnd.hp-pclxl",
                 possibleExtensions: [
                     "pclxl"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndHsl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hsl"
+                subtype: "vnd.hsl",
+                source: .iana
             )
         }
 
         public static func vndHttphone() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.httphone"
+                subtype: "vnd.httphone",
+                source: .iana
             )
         }
 
@@ -9675,7 +12623,8 @@ extension MediaType {
                 subtype: "vnd.hydrostatix.sof-data",
                 possibleExtensions: [
                     "sfd-hdstx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9685,7 +12634,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.hyper",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9695,7 +12645,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.hyper-item",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9705,28 +12656,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.hyperdrive",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndHzn3dCrossword() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.hzn-3d-crossword"
+                subtype: "vnd.hzn-3d-crossword",
+                source: .iana
             )
         }
 
         public static func vndIbmAfplinedata() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ibm.afplinedata"
+                subtype: "vnd.ibm.afplinedata",
+                source: .apache
             )
         }
 
         public static func vndIbmElectronicMedia() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ibm.electronic-media"
+                subtype: "vnd.ibm.electronic-media",
+                source: .iana
             )
         }
 
@@ -9736,7 +12691,8 @@ extension MediaType {
                 subtype: "vnd.ibm.minipay",
                 possibleExtensions: [
                     "mpy"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9748,7 +12704,8 @@ extension MediaType {
                     "afp",
                     "listafp",
                     "list3820",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -9758,7 +12715,8 @@ extension MediaType {
                 subtype: "vnd.ibm.rights-management",
                 possibleExtensions: [
                     "irm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9768,7 +12726,8 @@ extension MediaType {
                 subtype: "vnd.ibm.secure-container",
                 possibleExtensions: [
                     "sc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9779,14 +12738,16 @@ extension MediaType {
                 possibleExtensions: [
                     "icc",
                     "icm",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndIeee1905() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ieee.1905"
+                subtype: "vnd.ieee.1905",
+                source: .iana
             )
         }
 
@@ -9796,7 +12757,8 @@ extension MediaType {
                 subtype: "vnd.igloader",
                 possibleExtensions: [
                     "igl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9806,7 +12768,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.imagemeter.folder",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9816,7 +12779,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.imagemeter.image",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9826,7 +12790,8 @@ extension MediaType {
                 subtype: "vnd.immervision-ivp",
                 possibleExtensions: [
                     "ivp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9836,28 +12801,32 @@ extension MediaType {
                 subtype: "vnd.immervision-ivu",
                 possibleExtensions: [
                     "ivu"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndImsImsccv1p1() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ims.imsccv1p1"
+                subtype: "vnd.ims.imsccv1p1",
+                source: .iana
             )
         }
 
         public static func vndImsImsccv1p2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ims.imsccv1p2"
+                subtype: "vnd.ims.imsccv1p2",
+                source: .iana
             )
         }
 
         public static func vndImsImsccv1p3() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ims.imsccv1p3"
+                subtype: "vnd.ims.imsccv1p3",
+                source: .iana
             )
         }
 
@@ -9867,7 +12836,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ims.lis.v2.result",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9877,7 +12847,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ims.lti.v2.toolconsumerprofile",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9887,7 +12858,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ims.lti.v2.toolproxy",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9897,7 +12869,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ims.lti.v2.toolproxy.id",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9907,7 +12880,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ims.lti.v2.toolsettings",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9917,7 +12891,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ims.lti.v2.toolsettings.simple",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -9927,21 +12902,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.informedcontrol.rms",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndInformixVisionary() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.informix-visionary"
+                subtype: "vnd.informix-visionary",
+                source: .apache
             )
         }
 
         public static func vndInfotechProject() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.infotech.project"
+                subtype: "vnd.infotech.project",
+                source: .iana
             )
         }
 
@@ -9951,14 +12929,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.infotech.project",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndInnopathWampNotification() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.innopath.wamp.notification"
+                subtype: "vnd.innopath.wamp.notification",
+                source: .iana
             )
         }
 
@@ -9968,7 +12948,8 @@ extension MediaType {
                 subtype: "vnd.insors.igm",
                 possibleExtensions: [
                     "igm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9979,7 +12960,8 @@ extension MediaType {
                 possibleExtensions: [
                     "xpw",
                     "xpx",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -9989,21 +12971,24 @@ extension MediaType {
                 subtype: "vnd.intergeo",
                 possibleExtensions: [
                     "i2g"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndIntertrustDigibox() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.intertrust.digibox"
+                subtype: "vnd.intertrust.digibox",
+                source: .iana
             )
         }
 
         public static func vndIntertrustNncp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.intertrust.nncp"
+                subtype: "vnd.intertrust.nncp",
+                source: .iana
             )
         }
 
@@ -10013,7 +12998,8 @@ extension MediaType {
                 subtype: "vnd.intu.qbo",
                 possibleExtensions: [
                     "qbo"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10023,42 +13009,48 @@ extension MediaType {
                 subtype: "vnd.intu.qfx",
                 possibleExtensions: [
                     "qfx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndIpfsIpnsRecord() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ipfs.ipns-record"
+                subtype: "vnd.ipfs.ipns-record",
+                source: .iana
             )
         }
 
         public static func vndIpldCar() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ipld.car"
+                subtype: "vnd.ipld.car",
+                source: .iana
             )
         }
 
         public static func vndIpldDagCbor() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ipld.dag-cbor"
+                subtype: "vnd.ipld.dag-cbor",
+                source: .iana
             )
         }
 
         public static func vndIpldDagJson() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ipld.dag-json"
+                subtype: "vnd.ipld.dag-json",
+                source: .iana
             )
         }
 
         public static func vndIpldRaw() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ipld.raw"
+                subtype: "vnd.ipld.raw",
+                source: .iana
             )
         }
 
@@ -10068,7 +13060,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.catalogitem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10078,7 +13071,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.conceptitem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10088,7 +13082,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.knowledgeitem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10098,7 +13093,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.newsitem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10108,7 +13104,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.newsmessage",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10118,7 +13115,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.packageitem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10128,7 +13126,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iptc.g2.planningitem",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10138,7 +13137,8 @@ extension MediaType {
                 subtype: "vnd.ipunplugged.rcprofile",
                 possibleExtensions: [
                     "rcprofile"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10151,7 +13151,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "irp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10161,7 +13162,8 @@ extension MediaType {
                 subtype: "vnd.is-xpr",
                 possibleExtensions: [
                     "xpr"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10171,7 +13173,8 @@ extension MediaType {
                 subtype: "vnd.isac.fcs",
                 possibleExtensions: [
                     "fcs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10181,7 +13184,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.iso11783-10",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10191,63 +13195,72 @@ extension MediaType {
                 subtype: "vnd.jam",
                 possibleExtensions: [
                     "jam"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndJapannetDirectoryService() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-directory-service"
+                subtype: "vnd.japannet-directory-service",
+                source: .iana
             )
         }
 
         public static func vndJapannetJpnstoreWakeup() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-jpnstore-wakeup"
+                subtype: "vnd.japannet-jpnstore-wakeup",
+                source: .iana
             )
         }
 
         public static func vndJapannetPaymentWakeup() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-payment-wakeup"
+                subtype: "vnd.japannet-payment-wakeup",
+                source: .iana
             )
         }
 
         public static func vndJapannetRegistration() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-registration"
+                subtype: "vnd.japannet-registration",
+                source: .iana
             )
         }
 
         public static func vndJapannetRegistrationWakeup() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-registration-wakeup"
+                subtype: "vnd.japannet-registration-wakeup",
+                source: .iana
             )
         }
 
         public static func vndJapannetSetstoreWakeup() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-setstore-wakeup"
+                subtype: "vnd.japannet-setstore-wakeup",
+                source: .iana
             )
         }
 
         public static func vndJapannetVerification() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-verification"
+                subtype: "vnd.japannet-verification",
+                source: .iana
             )
         }
 
         public static func vndJapannetVerificationWakeup() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.japannet-verification-wakeup"
+                subtype: "vnd.japannet-verification-wakeup",
+                source: .iana
             )
         }
 
@@ -10257,7 +13270,8 @@ extension MediaType {
                 subtype: "vnd.jcp.javame.midlet-rms",
                 possibleExtensions: [
                     "rms"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10267,7 +13281,8 @@ extension MediaType {
                 subtype: "vnd.jisp",
                 possibleExtensions: [
                     "jisp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10277,14 +13292,16 @@ extension MediaType {
                 subtype: "vnd.joost.joda-archive",
                 possibleExtensions: [
                     "joda"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndJskIsdnNgn() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.jsk.isdn-ngn"
+                subtype: "vnd.jsk.isdn-ngn",
+                source: .iana
             )
         }
 
@@ -10295,7 +13312,8 @@ extension MediaType {
                 possibleExtensions: [
                     "ktz",
                     "ktr",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10305,7 +13323,8 @@ extension MediaType {
                 subtype: "vnd.kde.karbon",
                 possibleExtensions: [
                     "karbon"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10315,7 +13334,8 @@ extension MediaType {
                 subtype: "vnd.kde.kchart",
                 possibleExtensions: [
                     "chrt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10325,7 +13345,8 @@ extension MediaType {
                 subtype: "vnd.kde.kformula",
                 possibleExtensions: [
                     "kfo"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10335,7 +13356,8 @@ extension MediaType {
                 subtype: "vnd.kde.kivio",
                 possibleExtensions: [
                     "flw"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10345,7 +13367,8 @@ extension MediaType {
                 subtype: "vnd.kde.kontour",
                 possibleExtensions: [
                     "kon"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10356,7 +13379,8 @@ extension MediaType {
                 possibleExtensions: [
                     "kpr",
                     "kpt",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10366,7 +13390,8 @@ extension MediaType {
                 subtype: "vnd.kde.kspread",
                 possibleExtensions: [
                     "ksp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10377,14 +13402,16 @@ extension MediaType {
                 possibleExtensions: [
                     "kwd",
                     "kwt",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndKdl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.kdl"
+                subtype: "vnd.kdl",
+                source: .iana
             )
         }
 
@@ -10394,7 +13421,8 @@ extension MediaType {
                 subtype: "vnd.kenameaapp",
                 possibleExtensions: [
                     "htke"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10404,14 +13432,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.keyman.kmp",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndKeymanKmx() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.keyman.kmx"
+                subtype: "vnd.keyman.kmx",
+                source: .iana
             )
         }
 
@@ -10421,7 +13451,8 @@ extension MediaType {
                 subtype: "vnd.kidspiration",
                 possibleExtensions: [
                     "kia"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10432,7 +13463,8 @@ extension MediaType {
                 possibleExtensions: [
                     "kne",
                     "knp",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10445,7 +13477,8 @@ extension MediaType {
                     "skd",
                     "skt",
                     "skm",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10455,14 +13488,16 @@ extension MediaType {
                 subtype: "vnd.kodak-descriptor",
                 possibleExtensions: [
                     "sse"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndLas() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.las"
+                subtype: "vnd.las",
+                source: .iana
             )
         }
 
@@ -10472,7 +13507,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.las.las",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10485,21 +13521,24 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "lasxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndLaszip() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.laszip"
+                subtype: "vnd.laszip",
+                source: .iana
             )
         }
 
         public static func vndLdevProductlicensing() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ldev.productlicensing"
+                subtype: "vnd.ldev.productlicensing",
+                source: .iana
             )
         }
 
@@ -10509,7 +13548,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.leap",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10519,7 +13559,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.liberty-request",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10529,7 +13570,8 @@ extension MediaType {
                 subtype: "vnd.llamagraphics.life-balance.desktop",
                 possibleExtensions: [
                     "lbd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10543,7 +13585,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "lbe"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10553,14 +13596,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.logipipe.circuit",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndLoom() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.loom"
+                subtype: "vnd.loom",
+                source: .iana
             )
         }
 
@@ -10570,7 +13615,8 @@ extension MediaType {
                 subtype: "vnd.lotus-1-2-3",
                 possibleExtensions: [
                     "123"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10580,7 +13626,8 @@ extension MediaType {
                 subtype: "vnd.lotus-approach",
                 possibleExtensions: [
                     "apr"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10590,7 +13637,8 @@ extension MediaType {
                 subtype: "vnd.lotus-freelance",
                 possibleExtensions: [
                     "pre"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10600,7 +13648,8 @@ extension MediaType {
                 subtype: "vnd.lotus-notes",
                 possibleExtensions: [
                     "nsf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10610,7 +13659,8 @@ extension MediaType {
                 subtype: "vnd.lotus-organizer",
                 possibleExtensions: [
                     "org"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10620,7 +13670,8 @@ extension MediaType {
                 subtype: "vnd.lotus-screencam",
                 possibleExtensions: [
                     "scm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10630,7 +13681,8 @@ extension MediaType {
                 subtype: "vnd.lotus-wordpro",
                 possibleExtensions: [
                     "lwp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10640,14 +13692,16 @@ extension MediaType {
                 subtype: "vnd.macports.portpkg",
                 possibleExtensions: [
                     "portpkg"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMaml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.maml"
+                subtype: "vnd.maml",
+                source: .iana
             )
         }
 
@@ -10657,7 +13711,8 @@ extension MediaType {
                 subtype: "vnd.mapbox-vector-tile",
                 possibleExtensions: [
                     "mvt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10667,7 +13722,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.marlin.drm.actiontoken",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10677,7 +13733,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.marlin.drm.conftoken",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10687,14 +13744,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.marlin.drm.license",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndMarlinDrmMdcf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.marlin.drm.mdcf"
+                subtype: "vnd.marlin.drm.mdcf",
+                source: .iana
             )
         }
 
@@ -10704,7 +13763,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.mason",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10714,14 +13774,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.maxar.archive.3tz",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndMaxmindMaxmindDb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.maxmind.maxmind-db"
+                subtype: "vnd.maxmind.maxmind-db",
+                source: .iana
             )
         }
 
@@ -10731,21 +13793,24 @@ extension MediaType {
                 subtype: "vnd.mcd",
                 possibleExtensions: [
                     "mcd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMdl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.mdl"
+                subtype: "vnd.mdl",
+                source: .iana
             )
         }
 
         public static func vndMdlMbsdf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.mdl-mbsdf"
+                subtype: "vnd.mdl-mbsdf",
+                source: .iana
             )
         }
 
@@ -10755,7 +13820,8 @@ extension MediaType {
                 subtype: "vnd.medcalcdata",
                 possibleExtensions: [
                     "mc1"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10765,28 +13831,32 @@ extension MediaType {
                 subtype: "vnd.mediastation.cdkey",
                 possibleExtensions: [
                     "cdkey"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMedicalholodeckRecordxr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.medicalholodeck.recordxr"
+                subtype: "vnd.medicalholodeck.recordxr",
+                source: .iana
             )
         }
 
         public static func vndMeridianSlingshot() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.meridian-slingshot"
+                subtype: "vnd.meridian-slingshot",
+                source: .iana
             )
         }
 
         public static func vndMermaid() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.mermaid"
+                subtype: "vnd.mermaid",
+                source: .iana
             )
         }
 
@@ -10796,7 +13866,8 @@ extension MediaType {
                 subtype: "vnd.mfer",
                 possibleExtensions: [
                     "mwf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10806,7 +13877,8 @@ extension MediaType {
                 subtype: "vnd.mfmp",
                 possibleExtensions: [
                     "mfm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10816,7 +13888,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.micro",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10826,7 +13899,8 @@ extension MediaType {
                 subtype: "vnd.micrografx.flo",
                 possibleExtensions: [
                     "flo"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10836,21 +13910,24 @@ extension MediaType {
                 subtype: "vnd.micrografx.igx",
                 possibleExtensions: [
                     "igx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMicrosoftPortableExecutable() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.microsoft.portable-executable"
+                subtype: "vnd.microsoft.portable-executable",
+                source: .iana
             )
         }
 
         public static func vndMicrosoftWindowsThumbnailCache() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.microsoft.windows.thumbnail-cache"
+                subtype: "vnd.microsoft.windows.thumbnail-cache",
+                source: .iana
             )
         }
 
@@ -10860,7 +13937,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.miele",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -10870,21 +13948,24 @@ extension MediaType {
                 subtype: "vnd.mif",
                 possibleExtensions: [
                     "mif"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMinisoftHp3000Save() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.minisoft-hp3000-save"
+                subtype: "vnd.minisoft-hp3000-save",
+                source: .iana
             )
         }
 
         public static func vndMitsubishiMistyGuardTrustweb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.mitsubishi.misty-guard.trustweb"
+                subtype: "vnd.mitsubishi.misty-guard.trustweb",
+                source: .iana
             )
         }
 
@@ -10894,7 +13975,8 @@ extension MediaType {
                 subtype: "vnd.mobius.daf",
                 possibleExtensions: [
                     "daf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10904,7 +13986,8 @@ extension MediaType {
                 subtype: "vnd.mobius.dis",
                 possibleExtensions: [
                     "dis"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10914,7 +13997,8 @@ extension MediaType {
                 subtype: "vnd.mobius.mbk",
                 possibleExtensions: [
                     "mbk"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10924,7 +14008,8 @@ extension MediaType {
                 subtype: "vnd.mobius.mqy",
                 possibleExtensions: [
                     "mqy"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10934,7 +14019,8 @@ extension MediaType {
                 subtype: "vnd.mobius.msl",
                 possibleExtensions: [
                     "msl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10944,7 +14030,8 @@ extension MediaType {
                 subtype: "vnd.mobius.plc",
                 possibleExtensions: [
                     "plc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10954,14 +14041,16 @@ extension MediaType {
                 subtype: "vnd.mobius.txf",
                 possibleExtensions: [
                     "txf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndModl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.modl"
+                subtype: "vnd.modl",
+                source: .iana
             )
         }
 
@@ -10971,7 +14060,8 @@ extension MediaType {
                 subtype: "vnd.mophun.application",
                 possibleExtensions: [
                     "mpn"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -10981,63 +14071,72 @@ extension MediaType {
                 subtype: "vnd.mophun.certificate",
                 possibleExtensions: [
                     "mpc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuite() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite"
+                subtype: "vnd.motorola.flexsuite",
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuiteAdsi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite.adsi"
+                subtype: "vnd.motorola.flexsuite.adsi",
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuiteFis() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite.fis"
+                subtype: "vnd.motorola.flexsuite.fis",
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuiteGotap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite.gotap"
+                subtype: "vnd.motorola.flexsuite.gotap",
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuiteKmr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite.kmr"
+                subtype: "vnd.motorola.flexsuite.kmr",
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuiteTtc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite.ttc"
+                subtype: "vnd.motorola.flexsuite.ttc",
+                source: .iana
             )
         }
 
         public static func vndMotorolaFlexsuiteWem() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.flexsuite.wem"
+                subtype: "vnd.motorola.flexsuite.wem",
+                source: .iana
             )
         }
 
         public static func vndMotorolaIprm() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.motorola.iprm"
+                subtype: "vnd.motorola.iprm",
+                source: .iana
             )
         }
 
@@ -11050,14 +14149,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xul"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMs3mfdocument() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-3mfdocument"
+                subtype: "vnd.ms-3mfdocument",
+                source: .iana
             )
         }
 
@@ -11067,14 +14168,16 @@ extension MediaType {
                 subtype: "vnd.ms-artgalry",
                 possibleExtensions: [
                     "cil"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMsAsf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-asf"
+                subtype: "vnd.ms-asf",
+                source: .iana
             )
         }
 
@@ -11084,14 +14187,16 @@ extension MediaType {
                 subtype: "vnd.ms-cab-compressed",
                 possibleExtensions: [
                     "cab"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMsColorIccprofile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-color.iccprofile"
+                subtype: "vnd.ms-color.iccprofile",
+                source: .apache
             )
         }
 
@@ -11106,7 +14211,8 @@ extension MediaType {
                     "xlc",
                     "xlt",
                     "xlw",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11116,7 +14222,8 @@ extension MediaType {
                 subtype: "vnd.ms-excel.addin.macroenabled.12",
                 possibleExtensions: [
                     "xlam"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11126,7 +14233,8 @@ extension MediaType {
                 subtype: "vnd.ms-excel.sheet.binary.macroenabled.12",
                 possibleExtensions: [
                     "xlsb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11136,7 +14244,8 @@ extension MediaType {
                 subtype: "vnd.ms-excel.sheet.macroenabled.12",
                 possibleExtensions: [
                     "xlsm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11146,7 +14255,8 @@ extension MediaType {
                 subtype: "vnd.ms-excel.template.macroenabled.12",
                 possibleExtensions: [
                     "xltm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11156,7 +14266,8 @@ extension MediaType {
                 subtype: "vnd.ms-fontobject",
                 possibleExtensions: [
                     "eot"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11166,7 +14277,8 @@ extension MediaType {
                 subtype: "vnd.ms-htmlhelp",
                 possibleExtensions: [
                     "chm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11176,7 +14288,8 @@ extension MediaType {
                 subtype: "vnd.ms-ims",
                 possibleExtensions: [
                     "ims"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11186,7 +14299,8 @@ extension MediaType {
                 subtype: "vnd.ms-lrm",
                 possibleExtensions: [
                     "lrm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11196,7 +14310,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ms-office.activex",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11206,14 +14321,16 @@ extension MediaType {
                 subtype: "vnd.ms-officetheme",
                 possibleExtensions: [
                     "thmx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMsOpentype() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-opentype"
+                subtype: "vnd.ms-opentype",
+                source: .apache
             )
         }
 
@@ -11230,7 +14347,8 @@ extension MediaType {
         public static func vndMsPackageObfuscatedOpentype() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-package.obfuscated-opentype"
+                subtype: "vnd.ms-package.obfuscated-opentype",
+                source: .apache
             )
         }
 
@@ -11240,7 +14358,8 @@ extension MediaType {
                 subtype: "vnd.ms-pki.seccat",
                 possibleExtensions: [
                     "cat"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -11250,7 +14369,8 @@ extension MediaType {
                 subtype: "vnd.ms-pki.stl",
                 possibleExtensions: [
                     "stl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -11260,7 +14380,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ms-playready.initiator",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11272,7 +14393,8 @@ extension MediaType {
                     "ppt",
                     "pps",
                     "pot",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11282,7 +14404,8 @@ extension MediaType {
                 subtype: "vnd.ms-powerpoint.addin.macroenabled.12",
                 possibleExtensions: [
                     "ppam"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11294,7 +14417,8 @@ extension MediaType {
                 subtype: "vnd.ms-powerpoint.presentation.macroenabled.12",
                 possibleExtensions: [
                     "pptm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11304,7 +14428,8 @@ extension MediaType {
                 subtype: "vnd.ms-powerpoint.slide.macroenabled.12",
                 possibleExtensions: [
                     "sldm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11315,7 +14440,8 @@ extension MediaType {
                 subtype: "vnd.ms-powerpoint.slideshow.macroenabled.12",
                 possibleExtensions: [
                     "ppsm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11326,7 +14452,8 @@ extension MediaType {
                 subtype: "vnd.ms-powerpoint.template.macroenabled.12",
                 possibleExtensions: [
                     "potm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11336,7 +14463,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ms-printdevicecapabilities",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11346,7 +14474,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ms-printing.printticket",
                     suffix: "xml"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -11356,7 +14485,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ms-printschematicket",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11367,14 +14497,16 @@ extension MediaType {
                 possibleExtensions: [
                     "mpp",
                     "mpt",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMsTnef() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-tnef"
+                subtype: "vnd.ms-tnef",
+                source: .iana
             )
         }
 
@@ -11391,56 +14523,64 @@ extension MediaType {
         public static func vndMsWindowsDevicepairing() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-windows.devicepairing"
+                subtype: "vnd.ms-windows.devicepairing",
+                source: .iana
             )
         }
 
         public static func vndMsWindowsNwprintingOob() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-windows.nwprinting.oob"
+                subtype: "vnd.ms-windows.nwprinting.oob",
+                source: .iana
             )
         }
 
         public static func vndMsWindowsPrinterpairing() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-windows.printerpairing"
+                subtype: "vnd.ms-windows.printerpairing",
+                source: .iana
             )
         }
 
         public static func vndMsWindowsWsdOob() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-windows.wsd.oob"
+                subtype: "vnd.ms-windows.wsd.oob",
+                source: .iana
             )
         }
 
         public static func vndMsWmdrmLicChlgReq() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-wmdrm.lic-chlg-req"
+                subtype: "vnd.ms-wmdrm.lic-chlg-req",
+                source: .iana
             )
         }
 
         public static func vndMsWmdrmLicResp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-wmdrm.lic-resp"
+                subtype: "vnd.ms-wmdrm.lic-resp",
+                source: .iana
             )
         }
 
         public static func vndMsWmdrmMeterChlgReq() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-wmdrm.meter-chlg-req"
+                subtype: "vnd.ms-wmdrm.meter-chlg-req",
+                source: .iana
             )
         }
 
         public static func vndMsWmdrmMeterResp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ms-wmdrm.meter-resp"
+                subtype: "vnd.ms-wmdrm.meter-resp",
+                source: .iana
             )
         }
 
@@ -11450,7 +14590,8 @@ extension MediaType {
                 subtype: "vnd.ms-word.document.macroenabled.12",
                 possibleExtensions: [
                     "docm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11460,7 +14601,8 @@ extension MediaType {
                 subtype: "vnd.ms-word.template.macroenabled.12",
                 possibleExtensions: [
                     "dotm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11473,7 +14615,8 @@ extension MediaType {
                     "wks",
                     "wcm",
                     "wdb",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11483,7 +14626,8 @@ extension MediaType {
                 subtype: "vnd.ms-wpl",
                 possibleExtensions: [
                     "wpl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11493,14 +14637,16 @@ extension MediaType {
                 subtype: "vnd.ms-xpsdocument",
                 possibleExtensions: [
                     "xps"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMsaDiskImage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.msa-disk-image"
+                subtype: "vnd.msa-disk-image",
+                source: .iana
             )
         }
 
@@ -11510,42 +14656,48 @@ extension MediaType {
                 subtype: "vnd.mseq",
                 possibleExtensions: [
                     "mseq"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMsgpack() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.msgpack"
+                subtype: "vnd.msgpack",
+                source: .iana
             )
         }
 
         public static func vndMsign() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.msign"
+                subtype: "vnd.msign",
+                source: .iana
             )
         }
 
         public static func vndMultiadCreator() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.multiad.creator"
+                subtype: "vnd.multiad.creator",
+                source: .iana
             )
         }
 
         public static func vndMultiadCreatorCif() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.multiad.creator.cif"
+                subtype: "vnd.multiad.creator.cif",
+                source: .iana
             )
         }
 
         public static func vndMusicNiff() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.music-niff"
+                subtype: "vnd.music-niff",
+                source: .iana
             )
         }
 
@@ -11555,7 +14707,8 @@ extension MediaType {
                 subtype: "vnd.musician",
                 possibleExtensions: [
                     "mus"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11565,7 +14718,8 @@ extension MediaType {
                 subtype: "vnd.muvee.style",
                 possibleExtensions: [
                     "msty"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11575,7 +14729,8 @@ extension MediaType {
                 subtype: "vnd.mynfc",
                 possibleExtensions: [
                     "taglet"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11585,7 +14740,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nacamar.ybrid",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11595,7 +14751,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nato.bindingdataobject",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11605,7 +14762,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nato.bindingdataobject",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11618,7 +14776,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "bdo"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11628,21 +14787,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nato.openxmlformats-package.iepd",
                     suffix: "zip"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndNcdControl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ncd.control"
+                subtype: "vnd.ncd.control",
+                source: .iana
             )
         }
 
         public static func vndNcdReference() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ncd.reference"
+                subtype: "vnd.ncd.reference",
+                source: .iana
             )
         }
 
@@ -11652,28 +14814,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nearst.inv",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndNebumindLine() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nebumind.line"
+                subtype: "vnd.nebumind.line",
+                source: .iana
             )
         }
 
         public static func vndNervana() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nervana"
+                subtype: "vnd.nervana",
+                source: .iana
             )
         }
 
         public static func vndNetfpx() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.netfpx"
+                subtype: "vnd.netfpx",
+                source: .iana
             )
         }
 
@@ -11683,28 +14849,32 @@ extension MediaType {
                 subtype: "vnd.neurolanguage.nlu",
                 possibleExtensions: [
                     "nlu"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndNimn() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nimn"
+                subtype: "vnd.nimn",
+                source: .iana
             )
         }
 
         public static func vndNintendoNitroRom() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nintendo.nitro.rom"
+                subtype: "vnd.nintendo.nitro.rom",
+                source: .iana
             )
         }
 
         public static func vndNintendoSnesRom() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nintendo.snes.rom"
+                subtype: "vnd.nintendo.snes.rom",
+                source: .iana
             )
         }
 
@@ -11715,7 +14885,8 @@ extension MediaType {
                 possibleExtensions: [
                     "ntf",
                     "nitf",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11725,7 +14896,8 @@ extension MediaType {
                 subtype: "vnd.noblenet-directory",
                 possibleExtensions: [
                     "nnd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11735,7 +14907,8 @@ extension MediaType {
                 subtype: "vnd.noblenet-sealer",
                 possibleExtensions: [
                     "nns"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11745,14 +14918,16 @@ extension MediaType {
                 subtype: "vnd.noblenet-web",
                 possibleExtensions: [
                     "nnw"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndNokiaCatalogs() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.catalogs"
+                subtype: "vnd.nokia.catalogs",
+                source: .iana
             )
         }
 
@@ -11762,7 +14937,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.conml",
                     suffix: "wbxml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11772,7 +14948,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.conml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11782,14 +14959,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.iptv.config",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndNokiaIsdsRadioPresets() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.isds-radio-presets"
+                subtype: "vnd.nokia.isds-radio-presets",
+                source: .iana
             )
         }
 
@@ -11799,7 +14978,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.landmark",
                     suffix: "wbxml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11809,7 +14989,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.landmark",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11819,7 +15000,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.landmarkcollection",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11832,7 +15014,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "ac"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11842,7 +15025,8 @@ extension MediaType {
                 subtype: "vnd.nokia.n-gage.data",
                 possibleExtensions: [
                     "ngdat"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11852,14 +15036,16 @@ extension MediaType {
                 subtype: "vnd.nokia.n-gage.symbian.install",
                 possibleExtensions: [
                     "n-gage"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndNokiaNcd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nokia.ncd"
+                subtype: "vnd.nokia.ncd",
+                source: .iana
             )
         }
 
@@ -11869,7 +15055,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.pcd",
                     suffix: "wbxml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11879,7 +15066,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.nokia.pcd",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11889,7 +15077,8 @@ extension MediaType {
                 subtype: "vnd.nokia.radio-preset",
                 possibleExtensions: [
                     "rpst"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11899,7 +15088,8 @@ extension MediaType {
                 subtype: "vnd.nokia.radio-presets",
                 possibleExtensions: [
                     "rpss"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11909,7 +15099,8 @@ extension MediaType {
                 subtype: "vnd.novadigm.edm",
                 possibleExtensions: [
                     "edm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11919,7 +15110,8 @@ extension MediaType {
                 subtype: "vnd.novadigm.edx",
                 possibleExtensions: [
                     "edx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -11929,56 +15121,64 @@ extension MediaType {
                 subtype: "vnd.novadigm.ext",
                 possibleExtensions: [
                     "ext"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndNttLocalContentShare() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ntt-local.content-share"
+                subtype: "vnd.ntt-local.content-share",
+                source: .iana
             )
         }
 
         public static func vndNttLocalFileTransfer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ntt-local.file-transfer"
+                subtype: "vnd.ntt-local.file-transfer",
+                source: .iana
             )
         }
 
         public static func vndNttLocalOgwRemoteAccess() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ntt-local.ogw_remote-access"
+                subtype: "vnd.ntt-local.ogw_remote-access",
+                source: .iana
             )
         }
 
         public static func vndNttLocalSipTaRemote() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ntt-local.sip-ta_remote"
+                subtype: "vnd.ntt-local.sip-ta_remote",
+                source: .iana
             )
         }
 
         public static func vndNttLocalSipTaTcpStream() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ntt-local.sip-ta_tcp_stream"
+                subtype: "vnd.ntt-local.sip-ta_tcp_stream",
+                source: .iana
             )
         }
 
         public static func vndNubaltecNudokuGame() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.nubaltec.nudoku-game"
+                subtype: "vnd.nubaltec.nudoku-game",
+                source: .iana
             )
         }
 
         public static func vndOaiWorkflows() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oai.workflows"
+                subtype: "vnd.oai.workflows",
+                source: .iana
             )
         }
 
@@ -11988,7 +15188,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oai.workflows",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -11998,14 +15199,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oai.workflows",
                     suffix: "yaml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOasisOpendocumentBase() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oasis.opendocument.base"
+                subtype: "vnd.oasis.opendocument.base",
+                source: .iana
             )
         }
 
@@ -12015,7 +15218,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.chart",
                 possibleExtensions: [
                     "odc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12025,7 +15229,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.chart-template",
                 possibleExtensions: [
                     "otc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12035,7 +15240,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.database",
                 possibleExtensions: [
                     "odb"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -12045,7 +15251,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.formula",
                 possibleExtensions: [
                     "odf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12055,7 +15262,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.formula-template",
                 possibleExtensions: [
                     "odft"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12065,7 +15273,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.graphics",
                 possibleExtensions: [
                     "odg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12075,7 +15284,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.graphics-template",
                 possibleExtensions: [
                     "otg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12085,7 +15295,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.image",
                 possibleExtensions: [
                     "odi"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12095,7 +15306,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.image-template",
                 possibleExtensions: [
                     "oti"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12105,7 +15317,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.presentation",
                 possibleExtensions: [
                     "odp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12117,7 +15330,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.presentation-template",
                 possibleExtensions: [
                     "otp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12127,7 +15341,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.spreadsheet",
                 possibleExtensions: [
                     "ods"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12139,7 +15354,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.spreadsheet-template",
                 possibleExtensions: [
                     "ots"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12149,7 +15365,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.text",
                 possibleExtensions: [
                     "odt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12159,7 +15376,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.text-master",
                 possibleExtensions: [
                     "odm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12167,7 +15385,8 @@ extension MediaType {
         {
             .init(
                 type: name,
-                subtype: "vnd.oasis.opendocument.text-master-template"
+                subtype: "vnd.oasis.opendocument.text-master-template",
+                source: .iana
             )
         }
 
@@ -12177,7 +15396,8 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.text-template",
                 possibleExtensions: [
                     "ott"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12187,14 +15407,16 @@ extension MediaType {
                 subtype: "vnd.oasis.opendocument.text-web",
                 possibleExtensions: [
                     "oth"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndObn() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.obn"
+                subtype: "vnd.obn",
+                source: .iana
             )
         }
 
@@ -12204,7 +15426,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.ocf",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12214,7 +15437,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oci.image.manifest.v1",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12224,7 +15448,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oftn.l10n",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12234,7 +15459,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.contentaccessdownload",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12244,14 +15470,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.contentaccessstreaming",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOipfCspgHexbinary() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oipf.cspg-hexbinary"
+                subtype: "vnd.oipf.cspg-hexbinary",
+                source: .iana
             )
         }
 
@@ -12261,7 +15489,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.dae.svg",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12271,7 +15500,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.dae.xhtml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12281,14 +15511,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.mippvcontrolmessage",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOipfPaeGem() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oipf.pae.gem"
+                subtype: "vnd.oipf.pae.gem",
+                source: .iana
             )
         }
 
@@ -12298,7 +15530,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.spdiscovery",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12308,7 +15541,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.spdlist",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12318,7 +15552,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.ueprofile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12328,7 +15563,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oipf.userprofile",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12338,28 +15574,32 @@ extension MediaType {
                 subtype: "vnd.olpc-sugar",
                 possibleExtensions: [
                     "xo"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndOmaScwsConfig() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma-scws-config"
+                subtype: "vnd.oma-scws-config",
+                source: .iana
             )
         }
 
         public static func vndOmaScwsHttpRequest() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma-scws-http-request"
+                subtype: "vnd.oma-scws-http-request",
+                source: .iana
             )
         }
 
         public static func vndOmaScwsHttpResponse() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma-scws-http-response"
+                subtype: "vnd.oma-scws-http-response",
+                source: .iana
             )
         }
 
@@ -12371,7 +15611,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.associated-procedure-parameter",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12381,7 +15622,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.drm-trigger",
                     suffix: "xml"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -12391,14 +15633,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.imd",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmaBcastLtkm() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.bcast.ltkm"
+                subtype: "vnd.oma.bcast.ltkm",
+                source: .iana
             )
         }
 
@@ -12408,21 +15652,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.notification",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmaBcastProvisioningtrigger() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.bcast.provisioningtrigger"
+                subtype: "vnd.oma.bcast.provisioningtrigger",
+                source: .iana
             )
         }
 
         public static func vndOmaBcastSgboot() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.bcast.sgboot"
+                subtype: "vnd.oma.bcast.sgboot",
+                source: .iana
             )
         }
 
@@ -12432,21 +15679,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.sgdd",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmaBcastSgdu() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.bcast.sgdu"
+                subtype: "vnd.oma.bcast.sgdu",
+                source: .iana
             )
         }
 
         public static func vndOmaBcastSimpleSymbolContainer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.bcast.simple-symbol-container"
+                subtype: "vnd.oma.bcast.simple-symbol-container",
+                source: .iana
             )
         }
 
@@ -12456,7 +15706,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.smartcard-trigger",
                     suffix: "xml"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -12466,14 +15717,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.bcast.sprov",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmaBcastStkm() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.bcast.stkm"
+                subtype: "vnd.oma.bcast.stkm",
+                source: .iana
             )
         }
 
@@ -12483,7 +15736,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.cab-address-book",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12493,7 +15747,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.cab-feature-handler",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12503,7 +15758,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.cab-pcc",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12513,7 +15769,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.cab-subs-invite",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12523,21 +15780,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.cab-user-prefs",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmaDcd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.dcd"
+                subtype: "vnd.oma.dcd",
+                source: .iana
             )
         }
 
         public static func vndOmaDcdc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.dcdc"
+                subtype: "vnd.oma.dcdc",
+                source: .iana
             )
         }
 
@@ -12550,7 +15810,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "dd2"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -12560,7 +15821,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.drm.risd",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12570,7 +15832,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.group-usage-list",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12580,7 +15843,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.lwm2m",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12590,7 +15854,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.lwm2m",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12600,7 +15865,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.lwm2m",
                     suffix: "tlv"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12610,7 +15876,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.pal",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12620,7 +15887,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.poc.detailed-progress-report",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12630,7 +15898,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.poc.final-report",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12640,7 +15909,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.poc.groups",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12650,7 +15920,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.poc.invocation-descriptor",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12660,14 +15931,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.poc.optimized-progress-report",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmaPush() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oma.push"
+                subtype: "vnd.oma.push",
+                source: .iana
             )
         }
 
@@ -12677,7 +15950,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.scidm.messages",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12687,7 +15961,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oma.xcap-directory",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12697,7 +15972,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.omads-email",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12707,7 +15983,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.omads-file",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12717,14 +15994,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.omads-folder",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOmalocSuplInit() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.omaloc-supl-init"
+                subtype: "vnd.omaloc-supl-init",
+                source: .iana
             )
         }
 
@@ -12734,56 +16013,64 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oms.cellular-cose-content",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOnepager() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onepager"
+                subtype: "vnd.onepager",
+                source: .iana
             )
         }
 
         public static func vndOnepagertamp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onepagertamp"
+                subtype: "vnd.onepagertamp",
+                source: .iana
             )
         }
 
         public static func vndOnepagertamx() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onepagertamx"
+                subtype: "vnd.onepagertamx",
+                source: .iana
             )
         }
 
         public static func vndOnepagertat() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onepagertat"
+                subtype: "vnd.onepagertat",
+                source: .iana
             )
         }
 
         public static func vndOnepagertatp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onepagertatp"
+                subtype: "vnd.onepagertatp",
+                source: .iana
             )
         }
 
         public static func vndOnepagertatx() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onepagertatx"
+                subtype: "vnd.onepagertatx",
+                source: .iana
             )
         }
 
         public static func vndOnvifMetadata() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.onvif.metadata"
+                subtype: "vnd.onvif.metadata",
+                source: .iana
             )
         }
 
@@ -12796,21 +16083,24 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "obgx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndOpenbloxGameBinary() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.openblox.game-binary"
+                subtype: "vnd.openblox.game-binary",
+                source: .iana
             )
         }
 
         public static func vndOpeneyeOeb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.openeye.oeb"
+                subtype: "vnd.openeye.oeb",
+                source: .iana
             )
         }
 
@@ -12820,14 +16110,16 @@ extension MediaType {
                 subtype: "vnd.openofficeorg.extension",
                 possibleExtensions: [
                     "oxt"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndOpenprinttag() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.openprinttag"
+                subtype: "vnd.openprinttag",
+                source: .iana
             )
         }
 
@@ -12840,14 +16132,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "osm"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndOpentimestampsOts() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.opentimestamps.ots"
+                subtype: "vnd.opentimestamps.ots",
+                source: .iana
             )
         }
 
@@ -12857,7 +16151,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openvpi.dspx",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12870,7 +16165,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.custom-properties",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12883,7 +16179,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.customxmlproperties",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12895,7 +16192,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openxmlformats-officedocument.drawing",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12907,7 +16205,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openxmlformats-officedocument.drawingml.chart",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12921,7 +16220,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.drawingml.chartshapes",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12935,7 +16235,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.drawingml.diagramcolors",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12949,7 +16250,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.drawingml.diagramdata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12963,7 +16265,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.drawingml.diagramlayout",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12977,7 +16280,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.drawingml.diagramstyle",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -12990,7 +16294,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.extended-properties",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13004,7 +16309,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.commentauthors",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13018,7 +16324,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.comments",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13032,7 +16339,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.handoutmaster",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13046,7 +16354,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.notesmaster",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13060,7 +16369,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.notesslide",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13074,7 +16384,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.presentationml.presentation",
                 possibleExtensions: [
                     "pptx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13088,7 +16399,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.presentation.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13102,7 +16414,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.presprops",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13115,7 +16428,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.presentationml.slide",
                 possibleExtensions: [
                     "sldx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13128,7 +16442,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.slide",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13142,7 +16457,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.slidelayout",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13156,7 +16472,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.slidemaster",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13170,7 +16487,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.presentationml.slideshow",
                 possibleExtensions: [
                     "ppsx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13184,7 +16502,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.slideshow.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13198,7 +16517,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.slideupdateinfo",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13212,7 +16532,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.tablestyles",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13225,7 +16546,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.tags",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13238,7 +16560,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.presentationml.template",
                 possibleExtensions: [
                     "potx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13252,7 +16575,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.template.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13266,7 +16590,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.presentationml.viewprops",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13280,7 +16605,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.calcchain",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13294,7 +16620,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.chartsheet",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13308,7 +16635,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.comments",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13322,7 +16650,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.connections",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13336,7 +16665,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13350,7 +16680,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.externallink",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13364,7 +16695,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.pivotcachedefinition",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13378,7 +16710,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.pivotcacherecords",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13392,7 +16725,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.pivottable",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13406,7 +16740,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.querytable",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13420,7 +16755,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.revisionheaders",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13434,7 +16770,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.revisionlog",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13448,7 +16785,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.sharedstrings",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13461,7 +16799,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 possibleExtensions: [
                     "xlsx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13475,7 +16814,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.sheet.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13489,7 +16829,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.sheetmetadata",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13502,7 +16843,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.styles",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13515,7 +16857,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.table",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13529,7 +16872,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.tablesinglecells",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13542,7 +16886,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.spreadsheetml.template",
                 possibleExtensions: [
                     "xltx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13556,7 +16901,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.template.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13570,7 +16916,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.usernames",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13584,7 +16931,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.volatiledependencies",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13598,7 +16946,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.spreadsheetml.worksheet",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13610,7 +16959,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openxmlformats-officedocument.theme",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13622,7 +16972,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openxmlformats-officedocument.themeoverride",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13631,7 +16982,8 @@ extension MediaType {
         {
             .init(
                 type: name,
-                subtype: "vnd.openxmlformats-officedocument.vmldrawing"
+                subtype: "vnd.openxmlformats-officedocument.vmldrawing",
+                source: .iana
             )
         }
 
@@ -13645,7 +16997,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.comments",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13659,7 +17012,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.wordprocessingml.document",
                 possibleExtensions: [
                     "docx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13673,7 +17027,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.document.glossary",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13687,7 +17042,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.document.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13701,7 +17057,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.endnotes",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13715,7 +17072,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.fonttable",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13729,7 +17087,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.footer",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13743,7 +17102,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.footnotes",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13757,7 +17117,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.numbering",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13771,7 +17132,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.settings",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13785,7 +17147,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.styles",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13799,7 +17162,8 @@ extension MediaType {
                     "vnd.openxmlformats-officedocument.wordprocessingml.template",
                 possibleExtensions: [
                     "dotx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13813,7 +17177,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.template.main",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13827,7 +17192,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-officedocument.wordprocessingml.websettings",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13839,7 +17205,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openxmlformats-package.core-properties",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13853,7 +17220,8 @@ extension MediaType {
                     value:
                         "vnd.openxmlformats-package.digital-signature-xmlsignature",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13865,7 +17233,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.openxmlformats-package.relationships",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13875,21 +17244,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.oracle.resource",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOrangeIndata() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.orange.indata"
+                subtype: "vnd.orange.indata",
+                source: .iana
             )
         }
 
         public static func vndOsaNetdeploy() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.osa.netdeploy"
+                subtype: "vnd.osa.netdeploy",
+                source: .iana
             )
         }
 
@@ -13899,14 +17271,16 @@ extension MediaType {
                 subtype: "vnd.osgeo.mapguide.package",
                 possibleExtensions: [
                     "mgp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndOsgiBundle() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.osgi.bundle"
+                subtype: "vnd.osgi.bundle",
+                source: .iana
             )
         }
 
@@ -13916,7 +17290,8 @@ extension MediaType {
                 subtype: "vnd.osgi.dp",
                 possibleExtensions: [
                     "dp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13926,7 +17301,8 @@ extension MediaType {
                 subtype: "vnd.osgi.subsystem",
                 possibleExtensions: [
                     "esa"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -13936,14 +17312,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.otps.ct-kip",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndOxliCountgraph() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.oxli.countgraph"
+                subtype: "vnd.oxli.countgraph",
+                source: .iana
             )
         }
 
@@ -13953,7 +17331,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.pagerduty",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -13965,35 +17344,40 @@ extension MediaType {
                     "pdb",
                     "pqa",
                     "oprc",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPanoply() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.panoply"
+                subtype: "vnd.panoply",
+                source: .iana
             )
         }
 
         public static func vndPaosXml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.paos.xml"
+                subtype: "vnd.paos.xml",
+                source: .iana
             )
         }
 
         public static func vndPatentdive() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.patentdive"
+                subtype: "vnd.patentdive",
+                source: .iana
             )
         }
 
         public static func vndPatientecommsdoc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.patientecommsdoc"
+                subtype: "vnd.patientecommsdoc",
+                source: .iana
             )
         }
 
@@ -14003,14 +17387,16 @@ extension MediaType {
                 subtype: "vnd.pawaafile",
                 possibleExtensions: [
                     "paw"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPcos() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.pcos"
+                subtype: "vnd.pcos",
+                source: .iana
             )
         }
 
@@ -14020,7 +17406,8 @@ extension MediaType {
                 subtype: "vnd.pg.format",
                 possibleExtensions: [
                     "str"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14030,14 +17417,16 @@ extension MediaType {
                 subtype: "vnd.pg.osasli",
                 possibleExtensions: [
                     "ei6"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPiaccessApplicationLicence() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.piaccess.application-licence"
+                subtype: "vnd.piaccess.application-licence",
+                source: .iana
             )
         }
 
@@ -14047,7 +17436,8 @@ extension MediaType {
                 subtype: "vnd.picsel",
                 possibleExtensions: [
                     "efif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14057,14 +17447,16 @@ extension MediaType {
                 subtype: "vnd.pmi.widget",
                 possibleExtensions: [
                     "wg"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPmtiles() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.pmtiles"
+                subtype: "vnd.pmtiles",
+                source: .iana
             )
         }
 
@@ -14074,7 +17466,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.poc.group-advertisement",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14084,7 +17477,8 @@ extension MediaType {
                 subtype: "vnd.pocketlearn",
                 possibleExtensions: [
                     "plf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14094,42 +17488,48 @@ extension MediaType {
                 subtype: "vnd.powerbuilder6",
                 possibleExtensions: [
                     "pbd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPowerbuilder6S() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.powerbuilder6-s"
+                subtype: "vnd.powerbuilder6-s",
+                source: .iana
             )
         }
 
         public static func vndPowerbuilder7() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.powerbuilder7"
+                subtype: "vnd.powerbuilder7",
+                source: .iana
             )
         }
 
         public static func vndPowerbuilder7S() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.powerbuilder7-s"
+                subtype: "vnd.powerbuilder7-s",
+                source: .iana
             )
         }
 
         public static func vndPowerbuilder75() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.powerbuilder75"
+                subtype: "vnd.powerbuilder75",
+                source: .iana
             )
         }
 
         public static func vndPowerbuilder75S() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.powerbuilder75-s"
+                subtype: "vnd.powerbuilder75-s",
+                source: .iana
             )
         }
 
@@ -14142,14 +17542,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "systemverify"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPreminet() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.preminet"
+                subtype: "vnd.preminet",
+                source: .iana
             )
         }
 
@@ -14159,7 +17561,8 @@ extension MediaType {
                 subtype: "vnd.previewsystems.box",
                 possibleExtensions: [
                     "box"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14196,7 +17599,8 @@ extension MediaType {
         public static func vndProjectGraph() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.project-graph"
+                subtype: "vnd.project-graph",
+                source: .iana
             )
         }
 
@@ -14206,21 +17610,24 @@ extension MediaType {
                 subtype: "vnd.proteus.magazine",
                 possibleExtensions: [
                     "mgz"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPsfs() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.psfs"
+                subtype: "vnd.psfs",
+                source: .iana
             )
         }
 
         public static func vndPtMundusmundi() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.pt.mundusmundi"
+                subtype: "vnd.pt.mundusmundi",
+                source: .iana
             )
         }
 
@@ -14230,7 +17637,8 @@ extension MediaType {
                 subtype: "vnd.publishare-delta-tree",
                 possibleExtensions: [
                     "qps"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14240,14 +17648,16 @@ extension MediaType {
                 subtype: "vnd.pvi.ptid1",
                 possibleExtensions: [
                     "ptid"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndPwgMultiplexed() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.pwg-multiplexed"
+                subtype: "vnd.pwg-multiplexed",
+                source: .iana
             )
         }
 
@@ -14260,7 +17670,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xhtm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14270,21 +17681,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.pyon",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndQualcommBrewAppRes() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.qualcomm.brew-app-res"
+                subtype: "vnd.qualcomm.brew-app-res",
+                source: .iana
             )
         }
 
         public static func vndQuarantainenet() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.quarantainenet"
+                subtype: "vnd.quarantainenet",
+                source: .iana
             )
         }
 
@@ -14299,14 +17713,16 @@ extension MediaType {
                     "qwt",
                     "qxl",
                     "qxb",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndQuobjectQuoxdocument() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.quobject-quoxdocument"
+                subtype: "vnd.quobject-quoxdocument",
+                source: .iana
             )
         }
 
@@ -14316,7 +17732,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.r74n.sandboxels",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14326,7 +17743,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.moml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14336,7 +17754,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14346,7 +17765,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-audit",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14356,7 +17776,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-audit-conf",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14366,7 +17787,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-audit-conn",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14376,7 +17798,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-audit-dialog",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14386,7 +17809,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-audit-stream",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14396,7 +17820,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-conf",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14406,7 +17831,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14416,7 +17842,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog-base",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14426,7 +17853,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog-fax-detect",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14436,7 +17864,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog-fax-sendrecv",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14446,7 +17875,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog-group",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14456,7 +17886,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog-speech",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14466,21 +17897,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.radisys.msml-dialog-transform",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndRainstorData() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.rainstor.data"
+                subtype: "vnd.rainstor.data",
+                source: .iana
             )
         }
 
         public static func vndRapid() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.rapid"
+                subtype: "vnd.rapid",
+                source: .iana
             )
         }
 
@@ -14490,7 +17924,8 @@ extension MediaType {
                 subtype: "vnd.rar",
                 possibleExtensions: [
                     "rar"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14500,7 +17935,8 @@ extension MediaType {
                 subtype: "vnd.realvnc.bed",
                 possibleExtensions: [
                     "bed"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14510,7 +17946,8 @@ extension MediaType {
                 subtype: "vnd.recordare.musicxml",
                 possibleExtensions: [
                     "mxl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14523,28 +17960,32 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "musicxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndRelpipe() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.relpipe"
+                subtype: "vnd.relpipe",
+                source: .iana
             )
         }
 
         public static func vndRenlearnRlprint() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.renlearn.rlprint"
+                subtype: "vnd.renlearn.rlprint",
+                source: .iana
             )
         }
 
         public static func vndResilientLogic() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.resilient.logic"
+                subtype: "vnd.resilient.logic",
+                source: .iana
             )
         }
 
@@ -14554,7 +17995,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.restful",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14564,7 +18006,8 @@ extension MediaType {
                 subtype: "vnd.rig.cryptonote",
                 possibleExtensions: [
                     "cryptonote"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14574,7 +18017,8 @@ extension MediaType {
                 subtype: "vnd.rim.cod",
                 possibleExtensions: [
                     "cod"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -14584,7 +18028,8 @@ extension MediaType {
                 subtype: "vnd.rn-realmedia",
                 possibleExtensions: [
                     "rm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -14594,7 +18039,8 @@ extension MediaType {
                 subtype: "vnd.rn-realmedia-vbr",
                 possibleExtensions: [
                     "rmvb"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -14607,28 +18053,32 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "link66"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndRs274x() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.rs-274x"
+                subtype: "vnd.rs-274x",
+                source: .iana
             )
         }
 
         public static func vndRuckusDownload() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ruckus.download"
+                subtype: "vnd.ruckus.download",
+                source: .iana
             )
         }
 
         public static func vndS3sms() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.s3sms"
+                subtype: "vnd.s3sms",
+                source: .iana
             )
         }
 
@@ -14638,112 +18088,128 @@ extension MediaType {
                 subtype: "vnd.sailingtracker.track",
                 possibleExtensions: [
                     "st"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSar() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sar"
+                subtype: "vnd.sar",
+                source: .iana
             )
         }
 
         public static func vndSbmCid() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sbm.cid"
+                subtype: "vnd.sbm.cid",
+                source: .iana
             )
         }
 
         public static func vndSbmMid2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sbm.mid2"
+                subtype: "vnd.sbm.mid2",
+                source: .iana
             )
         }
 
         public static func vndScribus() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.scribus"
+                subtype: "vnd.scribus",
+                source: .iana
             )
         }
 
         public static func vndSealed3df() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.3df"
+                subtype: "vnd.sealed.3df",
+                source: .iana
             )
         }
 
         public static func vndSealedCsf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.csf"
+                subtype: "vnd.sealed.csf",
+                source: .iana
             )
         }
 
         public static func vndSealedDoc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.doc"
+                subtype: "vnd.sealed.doc",
+                source: .iana
             )
         }
 
         public static func vndSealedEml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.eml"
+                subtype: "vnd.sealed.eml",
+                source: .iana
             )
         }
 
         public static func vndSealedMht() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.mht"
+                subtype: "vnd.sealed.mht",
+                source: .iana
             )
         }
 
         public static func vndSealedNet() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.net"
+                subtype: "vnd.sealed.net",
+                source: .iana
             )
         }
 
         public static func vndSealedPpt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.ppt"
+                subtype: "vnd.sealed.ppt",
+                source: .iana
             )
         }
 
         public static func vndSealedTiff() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.tiff"
+                subtype: "vnd.sealed.tiff",
+                source: .iana
             )
         }
 
         public static func vndSealedXls() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.xls"
+                subtype: "vnd.sealed.xls",
+                source: .iana
             )
         }
 
         public static func vndSealedmediaSoftsealHtml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealedmedia.softseal.html"
+                subtype: "vnd.sealedmedia.softseal.html",
+                source: .iana
             )
         }
 
         public static func vndSealedmediaSoftsealPdf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealedmedia.softseal.pdf"
+                subtype: "vnd.sealedmedia.softseal.pdf",
+                source: .iana
             )
         }
 
@@ -14753,7 +18219,8 @@ extension MediaType {
                 subtype: "vnd.seemail",
                 possibleExtensions: [
                     "see"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14763,7 +18230,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.seis",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14773,7 +18241,8 @@ extension MediaType {
                 subtype: "vnd.sema",
                 possibleExtensions: [
                     "sema"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14783,7 +18252,8 @@ extension MediaType {
                 subtype: "vnd.semd",
                 possibleExtensions: [
                     "semd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14793,14 +18263,16 @@ extension MediaType {
                 subtype: "vnd.semf",
                 possibleExtensions: [
                     "semf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndShadeSaveFile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.shade-save-file"
+                subtype: "vnd.shade-save-file",
+                source: .iana
             )
         }
 
@@ -14810,7 +18282,8 @@ extension MediaType {
                 subtype: "vnd.shana.informed.formdata",
                 possibleExtensions: [
                     "ifm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14820,7 +18293,8 @@ extension MediaType {
                 subtype: "vnd.shana.informed.formtemplate",
                 possibleExtensions: [
                     "itp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14830,7 +18304,8 @@ extension MediaType {
                 subtype: "vnd.shana.informed.interchange",
                 possibleExtensions: [
                     "iif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14840,7 +18315,8 @@ extension MediaType {
                 subtype: "vnd.shana.informed.package",
                 possibleExtensions: [
                     "ipk"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14850,7 +18326,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.shootproof",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -14860,28 +18337,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.shopkick",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndShp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.shp"
+                subtype: "vnd.shp",
+                source: .iana
             )
         }
 
         public static func vndShx() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.shx"
+                subtype: "vnd.shx",
+                source: .iana
             )
         }
 
         public static func vndSigrokSession() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sigrok.session"
+                subtype: "vnd.sigrok.session",
+                source: .iana
             )
         }
 
@@ -14892,7 +18373,8 @@ extension MediaType {
                 possibleExtensions: [
                     "twd",
                     "twds",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -14902,21 +18384,24 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.siren",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndSirtxVmv0() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sirtx.vmv0"
+                subtype: "vnd.sirtx.vmv0",
+                source: .iana
             )
         }
 
         public static func vndSketchometry() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sketchometry"
+                subtype: "vnd.sketchometry",
+                source: .iana
             )
         }
 
@@ -14926,14 +18411,16 @@ extension MediaType {
                 subtype: "vnd.smaf",
                 possibleExtensions: [
                     "mmf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSmartNotebook() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.smart.notebook"
+                subtype: "vnd.smart.notebook",
+                source: .iana
             )
         }
 
@@ -14943,21 +18430,24 @@ extension MediaType {
                 subtype: "vnd.smart.teacher",
                 possibleExtensions: [
                     "teacher"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSmintioPortalsArchive() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.smintio.portals.archive"
+                subtype: "vnd.smintio.portals.archive",
+                source: .iana
             )
         }
 
         public static func vndSnesdevPageTable() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.snesdev-page-table"
+                subtype: "vnd.snesdev-page-table",
+                source: .iana
             )
         }
 
@@ -14970,14 +18460,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "fo"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSoftware602FillerFormXmlZip() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.software602.filler.form-xml-zip"
+                subtype: "vnd.software602.filler.form-xml-zip",
+                source: .iana
             )
         }
 
@@ -14991,7 +18483,8 @@ extension MediaType {
                 possibleExtensions: [
                     "sdkm",
                     "sdkd",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15001,7 +18494,8 @@ extension MediaType {
                 subtype: "vnd.spotfire.dxp",
                 possibleExtensions: [
                     "dxp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15011,7 +18505,8 @@ extension MediaType {
                 subtype: "vnd.spotfire.sfs",
                 possibleExtensions: [
                     "sfs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15022,28 +18517,32 @@ extension MediaType {
                 possibleExtensions: [
                     "sqlite",
                     "sqlite3",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSssCod() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sss-cod"
+                subtype: "vnd.sss-cod",
+                source: .iana
             )
         }
 
         public static func vndSssDtf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sss-dtf"
+                subtype: "vnd.sss-dtf",
+                source: .iana
             )
         }
 
         public static func vndSssNtf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sss-ntf"
+                subtype: "vnd.sss-ntf",
+                source: .iana
             )
         }
 
@@ -15053,7 +18552,8 @@ extension MediaType {
                 subtype: "vnd.stardivision.calc",
                 possibleExtensions: [
                     "sdc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15063,7 +18563,8 @@ extension MediaType {
                 subtype: "vnd.stardivision.draw",
                 possibleExtensions: [
                     "sda"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15073,7 +18574,8 @@ extension MediaType {
                 subtype: "vnd.stardivision.impress",
                 possibleExtensions: [
                     "sdd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15083,7 +18585,8 @@ extension MediaType {
                 subtype: "vnd.stardivision.math",
                 possibleExtensions: [
                     "smf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15094,7 +18597,8 @@ extension MediaType {
                 possibleExtensions: [
                     "sdw",
                     "vor",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15104,7 +18608,8 @@ extension MediaType {
                 subtype: "vnd.stardivision.writer-global",
                 possibleExtensions: [
                     "sgl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15114,7 +18619,8 @@ extension MediaType {
                 subtype: "vnd.stepmania.package",
                 possibleExtensions: [
                     "smzip"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15124,14 +18630,16 @@ extension MediaType {
                 subtype: "vnd.stepmania.stepchart",
                 possibleExtensions: [
                     "sm"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndStreetStream() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.street-stream"
+                subtype: "vnd.street-stream",
+                source: .iana
             )
         }
 
@@ -15144,7 +18652,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "wadl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15154,7 +18663,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.calc",
                 possibleExtensions: [
                     "sxc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15164,7 +18674,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.calc.template",
                 possibleExtensions: [
                     "stc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15174,7 +18685,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.draw",
                 possibleExtensions: [
                     "sxd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15184,7 +18696,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.draw.template",
                 possibleExtensions: [
                     "std"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15194,7 +18707,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.impress",
                 possibleExtensions: [
                     "sxi"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15204,7 +18718,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.impress.template",
                 possibleExtensions: [
                     "sti"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15214,7 +18729,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.math",
                 possibleExtensions: [
                     "sxm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15224,7 +18740,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.writer",
                 possibleExtensions: [
                     "sxw"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15234,7 +18751,8 @@ extension MediaType {
                 subtype: "vnd.sun.xml.writer.global",
                 possibleExtensions: [
                     "sxg"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15244,14 +18762,16 @@ extension MediaType {
                 subtype: "vnd.sun.xml.writer.template",
                 possibleExtensions: [
                     "stw"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func vndSuperfileSuper() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.superfile.super"
+                subtype: "vnd.superfile.super",
+                source: .iana
             )
         }
 
@@ -15262,7 +18782,8 @@ extension MediaType {
                 possibleExtensions: [
                     "sus",
                     "susp",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15272,21 +18793,24 @@ extension MediaType {
                 subtype: "vnd.svd",
                 possibleExtensions: [
                     "svd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSwiftviewIcs() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.swiftview-ics"
+                subtype: "vnd.swiftview-ics",
+                source: .iana
             )
         }
 
         public static func vndSybylMol2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sybyl.mol2"
+                subtype: "vnd.sybyl.mol2",
+                source: .iana
             )
         }
 
@@ -15296,7 +18820,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.sycle",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15306,7 +18831,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.syft",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15317,7 +18843,8 @@ extension MediaType {
                 possibleExtensions: [
                     "sis",
                     "sisx",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -15330,7 +18857,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xsm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15343,7 +18871,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "bdm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15356,14 +18885,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xdm"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndSyncmlDmNotification() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.syncml.dm.notification"
+                subtype: "vnd.syncml.dm.notification",
+                source: .iana
             )
         }
 
@@ -15373,7 +18904,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.syncml.dmddf",
                     suffix: "wbxml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15386,7 +18918,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "ddf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15396,7 +18929,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.syncml.dmtnds",
                     suffix: "wbxml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15406,14 +18940,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.syncml.dmtnds",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndSyncmlDsNotification() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.syncml.ds.notification"
+                subtype: "vnd.syncml.ds.notification",
+                source: .iana
             )
         }
 
@@ -15423,7 +18959,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.tableschema",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15433,7 +18970,8 @@ extension MediaType {
                 subtype: "vnd.tao.intent-module-archive",
                 possibleExtensions: [
                     "tao"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15445,7 +18983,8 @@ extension MediaType {
                     "pcap",
                     "cap",
                     "dmp",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15455,7 +18994,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.think-cell.ppttc",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15465,14 +19005,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.tmd.mediaflex.api",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndTml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.tml"
+                subtype: "vnd.tml",
+                source: .iana
             )
         }
 
@@ -15482,14 +19024,16 @@ extension MediaType {
                 subtype: "vnd.tmobile-livetv",
                 possibleExtensions: [
                     "tmo"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndTriOnesource() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.tri.onesource"
+                subtype: "vnd.tri.onesource",
+                source: .iana
             )
         }
 
@@ -15499,7 +19043,8 @@ extension MediaType {
                 subtype: "vnd.trid.tpt",
                 possibleExtensions: [
                     "tpt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15509,7 +19054,8 @@ extension MediaType {
                 subtype: "vnd.triscape.mxs",
                 possibleExtensions: [
                     "mxs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15519,21 +19065,24 @@ extension MediaType {
                 subtype: "vnd.trueapp",
                 possibleExtensions: [
                     "tra"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndTruedoc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.truedoc"
+                subtype: "vnd.truedoc",
+                source: .iana
             )
         }
 
         public static func vndUbisoftWebplayer() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ubisoft.webplayer"
+                subtype: "vnd.ubisoft.webplayer",
+                source: .iana
             )
         }
 
@@ -15544,7 +19093,8 @@ extension MediaType {
                 possibleExtensions: [
                     "ufd",
                     "ufdl",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15554,7 +19104,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.uic.osdm",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15564,7 +19115,8 @@ extension MediaType {
                 subtype: "vnd.uiq.theme",
                 possibleExtensions: [
                     "utz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15574,7 +19126,8 @@ extension MediaType {
                 subtype: "vnd.umajin",
                 possibleExtensions: [
                     "umj"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15584,7 +19137,8 @@ extension MediaType {
                 subtype: "vnd.unity",
                 possibleExtensions: [
                     "unityweb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15598,112 +19152,128 @@ extension MediaType {
                 possibleExtensions: [
                     "uoml",
                     "uo",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndUplanetAlert() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.alert"
+                subtype: "vnd.uplanet.alert",
+                source: .iana
             )
         }
 
         public static func vndUplanetAlertWbxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.alert-wbxml"
+                subtype: "vnd.uplanet.alert-wbxml",
+                source: .iana
             )
         }
 
         public static func vndUplanetBearerChoice() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.bearer-choice"
+                subtype: "vnd.uplanet.bearer-choice",
+                source: .iana
             )
         }
 
         public static func vndUplanetBearerChoiceWbxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.bearer-choice-wbxml"
+                subtype: "vnd.uplanet.bearer-choice-wbxml",
+                source: .iana
             )
         }
 
         public static func vndUplanetCacheop() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.cacheop"
+                subtype: "vnd.uplanet.cacheop",
+                source: .iana
             )
         }
 
         public static func vndUplanetCacheopWbxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.cacheop-wbxml"
+                subtype: "vnd.uplanet.cacheop-wbxml",
+                source: .iana
             )
         }
 
         public static func vndUplanetChannel() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.channel"
+                subtype: "vnd.uplanet.channel",
+                source: .iana
             )
         }
 
         public static func vndUplanetChannelWbxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.channel-wbxml"
+                subtype: "vnd.uplanet.channel-wbxml",
+                source: .iana
             )
         }
 
         public static func vndUplanetList() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.list"
+                subtype: "vnd.uplanet.list",
+                source: .iana
             )
         }
 
         public static func vndUplanetListWbxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.list-wbxml"
+                subtype: "vnd.uplanet.list-wbxml",
+                source: .iana
             )
         }
 
         public static func vndUplanetListcmd() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.listcmd"
+                subtype: "vnd.uplanet.listcmd",
+                source: .iana
             )
         }
 
         public static func vndUplanetListcmdWbxml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.listcmd-wbxml"
+                subtype: "vnd.uplanet.listcmd-wbxml",
+                source: .iana
             )
         }
 
         public static func vndUplanetSignal() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uplanet.signal"
+                subtype: "vnd.uplanet.signal",
+                source: .iana
             )
         }
 
         public static func vndUriMap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.uri-map"
+                subtype: "vnd.uri-map",
+                source: .iana
             )
         }
 
         public static func vndValveSourceMaterial() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.valve.source.material"
+                subtype: "vnd.valve.source.material",
+                source: .iana
             )
         }
 
@@ -15713,21 +19283,24 @@ extension MediaType {
                 subtype: "vnd.vcx",
                 possibleExtensions: [
                     "vcx"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndVdStudy() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vd-study"
+                subtype: "vnd.vd-study",
+                source: .iana
             )
         }
 
         public static func vndVectorworks() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vectorworks"
+                subtype: "vnd.vectorworks",
+                source: .iana
             )
         }
 
@@ -15737,7 +19310,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.vel",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15747,7 +19321,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.veraison.tsm-report",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15757,7 +19332,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.veraison.tsm-report",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -15767,14 +19343,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.verifier-attestation",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndVerimatrixVcas() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.verimatrix.vcas"
+                subtype: "vnd.verimatrix.vcas",
+                source: .iana
             )
         }
 
@@ -15784,28 +19362,32 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.veritone.aion",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndVeryantThin() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.veryant.thin"
+                subtype: "vnd.veryant.thin",
+                source: .iana
             )
         }
 
         public static func vndVesEncrypted() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.ves.encrypted"
+                subtype: "vnd.ves.encrypted",
+                source: .iana
             )
         }
 
         public static func vndVidsoftVidconference() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vidsoft.vidconference"
+                subtype: "vnd.vidsoft.vidconference",
+                source: .iana
             )
         }
 
@@ -15820,7 +19402,8 @@ extension MediaType {
                     "vsw",
                     "vsdx",
                     "vtx",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15830,21 +19413,24 @@ extension MediaType {
                 subtype: "vnd.visionary",
                 possibleExtensions: [
                     "vis"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndVividenceScriptfile() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vividence.scriptfile"
+                subtype: "vnd.vividence.scriptfile",
+                source: .iana
             )
         }
 
         public static func vndVocalshaperVsp4() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vocalshaper.vsp4"
+                subtype: "vnd.vocalshaper.vsp4",
+                source: .iana
             )
         }
 
@@ -15854,35 +19440,40 @@ extension MediaType {
                 subtype: "vnd.vsf",
                 possibleExtensions: [
                     "vsf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndVuq() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.vuq"
+                subtype: "vnd.vuq",
+                source: .iana
             )
         }
 
         public static func vndWantverse() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wantverse"
+                subtype: "vnd.wantverse",
+                source: .iana
             )
         }
 
         public static func vndWapSic() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wap.sic"
+                subtype: "vnd.wap.sic",
+                source: .iana
             )
         }
 
         public static func vndWapSlc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wap.slc"
+                subtype: "vnd.wap.slc",
+                source: .iana
             )
         }
 
@@ -15892,7 +19483,8 @@ extension MediaType {
                 subtype: "vnd.wap.wbxml",
                 possibleExtensions: [
                     "wbxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15902,7 +19494,8 @@ extension MediaType {
                 subtype: "vnd.wap.wmlc",
                 possibleExtensions: [
                     "wmlc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -15912,14 +19505,16 @@ extension MediaType {
                 subtype: "vnd.wap.wmlscriptc",
                 possibleExtensions: [
                     "wmlsc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndWasmflowWafl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wasmflow.wafl"
+                subtype: "vnd.wasmflow.wafl",
+                source: .iana
             )
         }
 
@@ -15929,70 +19524,80 @@ extension MediaType {
                 subtype: "vnd.webturbo",
                 possibleExtensions: [
                     "wtb"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndWfaDpp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wfa.dpp"
+                subtype: "vnd.wfa.dpp",
+                source: .iana
             )
         }
 
         public static func vndWfaP2p() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wfa.p2p"
+                subtype: "vnd.wfa.p2p",
+                source: .iana
             )
         }
 
         public static func vndWfaWsc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wfa.wsc"
+                subtype: "vnd.wfa.wsc",
+                source: .iana
             )
         }
 
         public static func vndWindowsDevicepairing() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.windows.devicepairing"
+                subtype: "vnd.windows.devicepairing",
+                source: .iana
             )
         }
 
         public static func vndWmap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wmap"
+                subtype: "vnd.wmap",
+                source: .iana
             )
         }
 
         public static func vndWmc() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wmc"
+                subtype: "vnd.wmc",
+                source: .iana
             )
         }
 
         public static func vndWmfBootstrap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wmf.bootstrap"
+                subtype: "vnd.wmf.bootstrap",
+                source: .iana
             )
         }
 
         public static func vndWolframMathematica() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wolfram.mathematica"
+                subtype: "vnd.wolfram.mathematica",
+                source: .iana
             )
         }
 
         public static func vndWolframMathematicaPackage() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wolfram.mathematica.package"
+                subtype: "vnd.wolfram.mathematica.package",
+                source: .iana
             )
         }
 
@@ -16002,14 +19607,16 @@ extension MediaType {
                 subtype: "vnd.wolfram.player",
                 possibleExtensions: [
                     "nbp"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndWordlift() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wordlift"
+                subtype: "vnd.wordlift",
+                source: .iana
             )
         }
 
@@ -16019,7 +19626,8 @@ extension MediaType {
                 subtype: "vnd.wordperfect",
                 possibleExtensions: [
                     "wpd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16029,14 +19637,16 @@ extension MediaType {
                 subtype: "vnd.wqd",
                 possibleExtensions: [
                     "wqd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndWrqHp3000Labelled() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.wrq-hp3000-labelled"
+                subtype: "vnd.wrq-hp3000-labelled",
+                source: .iana
             )
         }
 
@@ -16046,7 +19656,8 @@ extension MediaType {
                 subtype: "vnd.wt.stf",
                 possibleExtensions: [
                     "stf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16056,7 +19667,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.wv.csp",
                     suffix: "wbxml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -16066,7 +19678,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.wv.csp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -16076,7 +19689,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.wv.ssp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -16086,7 +19700,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.xacml",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -16096,21 +19711,24 @@ extension MediaType {
                 subtype: "vnd.xara",
                 possibleExtensions: [
                     "xar"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndXarinCpj() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xarin.cpj"
+                subtype: "vnd.xarin.cpj",
+                source: .iana
             )
         }
 
         public static func vndXecretsEncrypted() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xecrets-encrypted"
+                subtype: "vnd.xecrets-encrypted",
+                source: .iana
             )
         }
 
@@ -16120,14 +19738,16 @@ extension MediaType {
                 subtype: "vnd.xfdl",
                 possibleExtensions: [
                     "xfdl"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndXfdlWebform() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xfdl.webform"
+                subtype: "vnd.xfdl.webform",
+                source: .iana
             )
         }
 
@@ -16137,42 +19757,48 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.xmi",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vndXmpieCpkg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xmpie.cpkg"
+                subtype: "vnd.xmpie.cpkg",
+                source: .iana
             )
         }
 
         public static func vndXmpieDpkg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xmpie.dpkg"
+                subtype: "vnd.xmpie.dpkg",
+                source: .iana
             )
         }
 
         public static func vndXmpiePlan() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xmpie.plan"
+                subtype: "vnd.xmpie.plan",
+                source: .iana
             )
         }
 
         public static func vndXmpiePpkg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xmpie.ppkg"
+                subtype: "vnd.xmpie.ppkg",
+                source: .iana
             )
         }
 
         public static func vndXmpieXlim() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.xmpie.xlim"
+                subtype: "vnd.xmpie.xlim",
+                source: .iana
             )
         }
 
@@ -16182,7 +19808,8 @@ extension MediaType {
                 subtype: "vnd.yamaha.hv-dic",
                 possibleExtensions: [
                     "hvd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16192,7 +19819,8 @@ extension MediaType {
                 subtype: "vnd.yamaha.hv-script",
                 possibleExtensions: [
                     "hvs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16202,7 +19830,8 @@ extension MediaType {
                 subtype: "vnd.yamaha.hv-voice",
                 possibleExtensions: [
                     "hvp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16212,7 +19841,8 @@ extension MediaType {
                 subtype: "vnd.yamaha.openscoreformat",
                 possibleExtensions: [
                     "osf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16225,14 +19855,16 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "osfpvg"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndYamahaRemoteSetup() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.yamaha.remote-setup"
+                subtype: "vnd.yamaha.remote-setup",
+                source: .iana
             )
         }
 
@@ -16242,7 +19874,8 @@ extension MediaType {
                 subtype: "vnd.yamaha.smaf-audio",
                 possibleExtensions: [
                     "saf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16252,28 +19885,32 @@ extension MediaType {
                 subtype: "vnd.yamaha.smaf-phrase",
                 possibleExtensions: [
                     "spf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndYamahaThroughNgn() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.yamaha.through-ngn"
+                subtype: "vnd.yamaha.through-ngn",
+                source: .iana
             )
         }
 
         public static func vndYamahaTunnelUdpencap() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.yamaha.tunnel-udpencap"
+                subtype: "vnd.yamaha.tunnel-udpencap",
+                source: .iana
             )
         }
 
         public static func vndYaoweme() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.yaoweme"
+                subtype: "vnd.yaoweme",
+                source: .iana
             )
         }
 
@@ -16283,7 +19920,8 @@ extension MediaType {
                 subtype: "vnd.yellowriver-custom-menu",
                 possibleExtensions: [
                     "cmp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16294,7 +19932,8 @@ extension MediaType {
                 possibleExtensions: [
                     "zir",
                     "zirz",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16307,7 +19946,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "zaz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16320,7 +19960,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "vxml"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16330,7 +19971,8 @@ extension MediaType {
                 subtype: .init(
                     value: "voucher-cms",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -16340,14 +19982,16 @@ extension MediaType {
                 subtype: .init(
                     value: "voucher-jws",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vp() -> MediaType {
             .init(
                 type: name,
-                subtype: "vp"
+                subtype: "vp",
+                source: .iana
             )
         }
 
@@ -16357,7 +20001,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vp",
                     suffix: "cose"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -16367,14 +20012,16 @@ extension MediaType {
                 subtype: .init(
                     value: "vp",
                     suffix: "jwt"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func vqRtcpxr() -> MediaType {
             .init(
                 type: name,
-                subtype: "vq-rtcpxr"
+                subtype: "vq-rtcpxr",
+                source: .iana
             )
         }
 
@@ -16384,7 +20031,8 @@ extension MediaType {
                 subtype: "wasm",
                 possibleExtensions: [
                     "wasm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16397,7 +20045,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "wif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16407,21 +20056,24 @@ extension MediaType {
                 subtype: .init(
                     value: "webpush-options",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
         public static func whoisppQuery() -> MediaType {
             .init(
                 type: name,
-                subtype: "whoispp-query"
+                subtype: "whoispp-query",
+                source: .iana
             )
         }
 
         public static func whoisppResponse() -> MediaType {
             .init(
                 type: name,
-                subtype: "whoispp-response"
+                subtype: "whoispp-response",
+                source: .iana
             )
         }
 
@@ -16431,7 +20083,8 @@ extension MediaType {
                 subtype: "widget",
                 possibleExtensions: [
                     "wgt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16441,21 +20094,24 @@ extension MediaType {
                 subtype: "winhlp",
                 possibleExtensions: [
                     "hlp"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func wita() -> MediaType {
             .init(
                 type: name,
-                subtype: "wita"
+                subtype: "wita",
+                source: .iana
             )
         }
 
         public static func wordperfect51() -> MediaType {
             .init(
                 type: name,
-                subtype: "wordperfect5.1"
+                subtype: "wordperfect5.1",
+                source: .iana
             )
         }
 
@@ -16468,7 +20124,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "wsdl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16481,7 +20138,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "wspolicy"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -16491,7 +20149,8 @@ extension MediaType {
                 subtype: "x-7z-compressed",
                 possibleExtensions: [
                     "7z"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16501,7 +20160,8 @@ extension MediaType {
                 subtype: "x-abiword",
                 possibleExtensions: [
                     "abw"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16511,14 +20171,16 @@ extension MediaType {
                 subtype: "x-ace-compressed",
                 possibleExtensions: [
                     "ace"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xAmf() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-amf"
+                subtype: "x-amf",
+                source: .apache
             )
         }
 
@@ -16528,7 +20190,8 @@ extension MediaType {
                 subtype: "x-apple-diskimage",
                 possibleExtensions: [
                     "dmg"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16551,7 +20214,8 @@ extension MediaType {
                     "x32",
                     "u32",
                     "vox",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16561,7 +20225,8 @@ extension MediaType {
                 subtype: "x-authorware-map",
                 possibleExtensions: [
                     "aam"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16571,7 +20236,8 @@ extension MediaType {
                 subtype: "x-authorware-seg",
                 possibleExtensions: [
                     "aas"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16581,7 +20247,8 @@ extension MediaType {
                 subtype: "x-bcpio",
                 possibleExtensions: [
                     "bcpio"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16601,7 +20268,8 @@ extension MediaType {
                 subtype: "x-bittorrent",
                 possibleExtensions: [
                     "torrent"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16622,7 +20290,8 @@ extension MediaType {
                 possibleExtensions: [
                     "blb",
                     "blorb",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16632,7 +20301,8 @@ extension MediaType {
                 subtype: "x-bzip",
                 possibleExtensions: [
                     "bz"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16643,7 +20313,8 @@ extension MediaType {
                 possibleExtensions: [
                     "bz2",
                     "boz",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16657,7 +20328,8 @@ extension MediaType {
                     "cbt",
                     "cbz",
                     "cb7",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16667,7 +20339,8 @@ extension MediaType {
                 subtype: "x-cdlink",
                 possibleExtensions: [
                     "vcd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16677,7 +20350,8 @@ extension MediaType {
                 subtype: "x-cfs-compressed",
                 possibleExtensions: [
                     "cfs"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16687,7 +20361,8 @@ extension MediaType {
                 subtype: "x-chat",
                 possibleExtensions: [
                     "chat"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16697,7 +20372,8 @@ extension MediaType {
                 subtype: "x-chess-pgn",
                 possibleExtensions: [
                     "pgn"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16717,14 +20393,16 @@ extension MediaType {
                 subtype: "x-cocoa",
                 possibleExtensions: [
                     "cco"
-                ]
+                ],
+                source: .nginx
             )
         }
 
         public static func xCompress() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-compress"
+                subtype: "x-compress",
+                source: .apache
             )
         }
 
@@ -16744,7 +20422,8 @@ extension MediaType {
                 subtype: "x-conference",
                 possibleExtensions: [
                     "nsc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16754,7 +20433,8 @@ extension MediaType {
                 subtype: "x-cpio",
                 possibleExtensions: [
                     "cpio"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16764,7 +20444,8 @@ extension MediaType {
                 subtype: "x-csh",
                 possibleExtensions: [
                     "csh"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16782,7 +20463,8 @@ extension MediaType {
                 possibleExtensions: [
                     "deb",
                     "udeb",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16792,7 +20474,8 @@ extension MediaType {
                 subtype: "x-dgc-compressed",
                 possibleExtensions: [
                     "dgc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16810,7 +20493,8 @@ extension MediaType {
                     "w3d",
                     "fgd",
                     "swa",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16820,7 +20504,8 @@ extension MediaType {
                 subtype: "x-doom",
                 possibleExtensions: [
                     "wad"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16829,11 +20514,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "x-dtbncx",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "ncx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16842,11 +20528,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "x-dtbook",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "dtb"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16855,11 +20542,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "x-dtbresource",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "res"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16869,7 +20557,8 @@ extension MediaType {
                 subtype: "x-dvi",
                 possibleExtensions: [
                     "dvi"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16879,7 +20568,8 @@ extension MediaType {
                 subtype: "x-envoy",
                 possibleExtensions: [
                     "evy"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16889,7 +20579,8 @@ extension MediaType {
                 subtype: "x-eva",
                 possibleExtensions: [
                     "eva"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16899,21 +20590,24 @@ extension MediaType {
                 subtype: "x-font-bdf",
                 possibleExtensions: [
                     "bdf"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xFontDos() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-font-dos"
+                subtype: "x-font-dos",
+                source: .apache
             )
         }
 
         public static func xFontFramemaker() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-font-framemaker"
+                subtype: "x-font-framemaker",
+                source: .apache
             )
         }
 
@@ -16923,14 +20617,16 @@ extension MediaType {
                 subtype: "x-font-ghostscript",
                 possibleExtensions: [
                     "gsf"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xFontLibgrx() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-font-libgrx"
+                subtype: "x-font-libgrx",
+                source: .apache
             )
         }
 
@@ -16940,7 +20636,8 @@ extension MediaType {
                 subtype: "x-font-linux-psf",
                 possibleExtensions: [
                     "psf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16950,7 +20647,8 @@ extension MediaType {
                 subtype: "x-font-pcf",
                 possibleExtensions: [
                     "pcf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -16960,21 +20658,24 @@ extension MediaType {
                 subtype: "x-font-snf",
                 possibleExtensions: [
                     "snf"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xFontSpeedo() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-font-speedo"
+                subtype: "x-font-speedo",
+                source: .apache
             )
         }
 
         public static func xFontSunosNews() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-font-sunos-news"
+                subtype: "x-font-sunos-news",
+                source: .apache
             )
         }
 
@@ -16987,14 +20688,16 @@ extension MediaType {
                     "pfb",
                     "pfm",
                     "afm",
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xFontVfont() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-font-vfont"
+                subtype: "x-font-vfont",
+                source: .apache
             )
         }
 
@@ -17004,7 +20707,8 @@ extension MediaType {
                 subtype: "x-freearc",
                 possibleExtensions: [
                     "arc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17014,7 +20718,8 @@ extension MediaType {
                 subtype: "x-futuresplash",
                 possibleExtensions: [
                     "spl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17024,7 +20729,8 @@ extension MediaType {
                 subtype: "x-gca-compressed",
                 possibleExtensions: [
                     "gca"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17034,7 +20740,8 @@ extension MediaType {
                 subtype: "x-glulx",
                 possibleExtensions: [
                     "ulx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17044,7 +20751,8 @@ extension MediaType {
                 subtype: "x-gnumeric",
                 possibleExtensions: [
                     "gnumeric"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17054,7 +20762,8 @@ extension MediaType {
                 subtype: "x-gramps-xml",
                 possibleExtensions: [
                     "gramps"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17064,14 +20773,16 @@ extension MediaType {
                 subtype: "x-gtar",
                 possibleExtensions: [
                     "gtar"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xGzip() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-gzip"
+                subtype: "x-gzip",
+                source: .apache
             )
         }
 
@@ -17081,7 +20792,8 @@ extension MediaType {
                 subtype: "x-hdf",
                 possibleExtensions: [
                     "hdf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17101,7 +20813,8 @@ extension MediaType {
                 subtype: "x-install-instructions",
                 possibleExtensions: [
                     "install"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17124,7 +20837,8 @@ extension MediaType {
                 subtype: "x-iso9660-image",
                 possibleExtensions: [
                     "iso"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17164,7 +20878,8 @@ extension MediaType {
                 subtype: "x-java-archive-diff",
                 possibleExtensions: [
                     "jardiff"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -17174,7 +20889,8 @@ extension MediaType {
                 subtype: "x-java-jnlp-file",
                 possibleExtensions: [
                     "jnlp"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17201,7 +20917,8 @@ extension MediaType {
                 subtype: "x-latex",
                 possibleExtensions: [
                     "latex"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17222,7 +20939,8 @@ extension MediaType {
                 possibleExtensions: [
                     "lzh",
                     "lha",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17232,7 +20950,8 @@ extension MediaType {
                 subtype: "x-makeself",
                 possibleExtensions: [
                     "run"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -17242,7 +20961,8 @@ extension MediaType {
                 subtype: "x-mie",
                 possibleExtensions: [
                     "mie"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17253,7 +20973,8 @@ extension MediaType {
                 possibleExtensions: [
                     "prc",
                     "mobi",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17270,7 +20991,8 @@ extension MediaType {
                 subtype: "x-ms-application",
                 possibleExtensions: [
                     "application"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17280,7 +21002,8 @@ extension MediaType {
                 subtype: "x-ms-shortcut",
                 possibleExtensions: [
                     "lnk"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17290,7 +21013,8 @@ extension MediaType {
                 subtype: "x-ms-wmd",
                 possibleExtensions: [
                     "wmd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17300,7 +21024,8 @@ extension MediaType {
                 subtype: "x-ms-wmz",
                 possibleExtensions: [
                     "wmz"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17310,7 +21035,8 @@ extension MediaType {
                 subtype: "x-ms-xbap",
                 possibleExtensions: [
                     "xbap"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17320,7 +21046,8 @@ extension MediaType {
                 subtype: "x-msaccess",
                 possibleExtensions: [
                     "mdb"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17330,7 +21057,8 @@ extension MediaType {
                 subtype: "x-msbinder",
                 possibleExtensions: [
                     "obd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17340,7 +21068,8 @@ extension MediaType {
                 subtype: "x-mscardfile",
                 possibleExtensions: [
                     "crd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17350,7 +21079,8 @@ extension MediaType {
                 subtype: "x-msclip",
                 possibleExtensions: [
                     "clp"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17374,7 +21104,8 @@ extension MediaType {
                     "com",
                     "bat",
                     "msi",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17386,7 +21117,8 @@ extension MediaType {
                     "mvb",
                     "m13",
                     "m14",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17399,7 +21131,8 @@ extension MediaType {
                     "wmz",
                     "emf",
                     "emz",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17409,7 +21142,8 @@ extension MediaType {
                 subtype: "x-msmoney",
                 possibleExtensions: [
                     "mny"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17419,7 +21153,8 @@ extension MediaType {
                 subtype: "x-mspublisher",
                 possibleExtensions: [
                     "pub"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17429,7 +21164,8 @@ extension MediaType {
                 subtype: "x-msschedule",
                 possibleExtensions: [
                     "scd"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17439,7 +21175,8 @@ extension MediaType {
                 subtype: "x-msterminal",
                 possibleExtensions: [
                     "trm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17449,7 +21186,8 @@ extension MediaType {
                 subtype: "x-mswrite",
                 possibleExtensions: [
                     "wri"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17460,7 +21198,8 @@ extension MediaType {
                 possibleExtensions: [
                     "nc",
                     "cdf",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17480,7 +21219,8 @@ extension MediaType {
                 subtype: "x-nzb",
                 possibleExtensions: [
                     "nzb"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17491,7 +21231,8 @@ extension MediaType {
                 possibleExtensions: [
                     "pl",
                     "pm",
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -17502,7 +21243,8 @@ extension MediaType {
                 possibleExtensions: [
                     "prc",
                     "pdb",
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -17513,7 +21255,8 @@ extension MediaType {
                 possibleExtensions: [
                     "p12",
                     "pfx",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17524,7 +21267,8 @@ extension MediaType {
                 possibleExtensions: [
                     "p7b",
                     "spc",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17534,14 +21278,16 @@ extension MediaType {
                 subtype: "x-pkcs7-certreqresp",
                 possibleExtensions: [
                     "p7r"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xPkiMessage() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-pki-message"
+                subtype: "x-pki-message",
+                source: .iana
             )
         }
 
@@ -17551,7 +21297,8 @@ extension MediaType {
                 subtype: "x-rar-compressed",
                 possibleExtensions: [
                     "rar"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17561,7 +21308,8 @@ extension MediaType {
                 subtype: "x-redhat-package-manager",
                 possibleExtensions: [
                     "rpm"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -17571,7 +21319,8 @@ extension MediaType {
                 subtype: "x-research-info-systems",
                 possibleExtensions: [
                     "ris"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17581,7 +21330,8 @@ extension MediaType {
                 subtype: "x-sea",
                 possibleExtensions: [
                     "sea"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -17591,7 +21341,8 @@ extension MediaType {
                 subtype: "x-sh",
                 possibleExtensions: [
                     "sh"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17601,7 +21352,8 @@ extension MediaType {
                 subtype: "x-shar",
                 possibleExtensions: [
                     "shar"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17611,7 +21363,8 @@ extension MediaType {
                 subtype: "x-shockwave-flash",
                 possibleExtensions: [
                     "swf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17621,7 +21374,8 @@ extension MediaType {
                 subtype: "x-silverlight-app",
                 possibleExtensions: [
                     "xap"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17631,7 +21385,8 @@ extension MediaType {
                 subtype: "x-sql",
                 possibleExtensions: [
                     "sql"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17641,7 +21396,8 @@ extension MediaType {
                 subtype: "x-stuffit",
                 possibleExtensions: [
                     "sit"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17651,7 +21407,8 @@ extension MediaType {
                 subtype: "x-stuffitx",
                 possibleExtensions: [
                     "sitx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17661,7 +21418,8 @@ extension MediaType {
                 subtype: "x-subrip",
                 possibleExtensions: [
                     "srt"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17671,7 +21429,8 @@ extension MediaType {
                 subtype: "x-sv4cpio",
                 possibleExtensions: [
                     "sv4cpio"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17681,7 +21440,8 @@ extension MediaType {
                 subtype: "x-sv4crc",
                 possibleExtensions: [
                     "sv4crc"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17691,7 +21451,8 @@ extension MediaType {
                 subtype: "x-t3vm-image",
                 possibleExtensions: [
                     "t3"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17701,7 +21462,8 @@ extension MediaType {
                 subtype: "x-tads",
                 possibleExtensions: [
                     "gam"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17711,7 +21473,8 @@ extension MediaType {
                 subtype: "x-tar",
                 possibleExtensions: [
                     "tar"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17722,7 +21485,8 @@ extension MediaType {
                 possibleExtensions: [
                     "tcl",
                     "tk",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17732,7 +21496,8 @@ extension MediaType {
                 subtype: "x-tex",
                 possibleExtensions: [
                     "tex"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17742,7 +21507,8 @@ extension MediaType {
                 subtype: "x-tex-tfm",
                 possibleExtensions: [
                     "tfm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17753,7 +21519,8 @@ extension MediaType {
                 possibleExtensions: [
                     "texinfo",
                     "texi",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17763,7 +21530,8 @@ extension MediaType {
                 subtype: "x-tgif",
                 possibleExtensions: [
                     "obj"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17773,7 +21541,8 @@ extension MediaType {
                 subtype: "x-ustar",
                 possibleExtensions: [
                     "ustar"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17863,7 +21632,8 @@ extension MediaType {
                 subtype: "x-wais-source",
                 possibleExtensions: [
                     "src"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17883,7 +21653,8 @@ extension MediaType {
         public static func xWwwFormUrlencoded() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-www-form-urlencoded"
+                subtype: "x-www-form-urlencoded",
+                source: .iana
             )
         }
 
@@ -17895,21 +21666,24 @@ extension MediaType {
                     "der",
                     "crt",
                     "pem",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func xX509CaRaCert() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-x509-ca-ra-cert"
+                subtype: "x-x509-ca-ra-cert",
+                source: .iana
             )
         }
 
         public static func xX509NextCaCert() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-x509-next-ca-cert"
+                subtype: "x-x509-next-ca-cert",
+                source: .iana
             )
         }
 
@@ -17919,7 +21693,8 @@ extension MediaType {
                 subtype: "x-xfig",
                 possibleExtensions: [
                     "fig"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17928,11 +21703,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "x-xliff",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "xlf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17942,7 +21718,8 @@ extension MediaType {
                 subtype: "x-xpinstall",
                 possibleExtensions: [
                     "xpi"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17952,7 +21729,8 @@ extension MediaType {
                 subtype: "x-xz",
                 possibleExtensions: [
                     "xz"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -17979,14 +21757,16 @@ extension MediaType {
                     "z6",
                     "z7",
                     "z8",
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func x400Bp() -> MediaType {
             .init(
                 type: name,
-                subtype: "x400-bp"
+                subtype: "x400-bp",
+                source: .iana
             )
         }
 
@@ -17996,7 +21776,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xacml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18005,11 +21786,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "xaml",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "xaml"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -18022,7 +21804,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xav"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18035,7 +21818,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xca"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18048,7 +21832,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xdf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18061,7 +21846,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xel"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18071,7 +21857,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xcap-error",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18084,7 +21871,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xns"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18094,7 +21882,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xcon-conference-info",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18104,7 +21893,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xcon-conference-info-diff",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18117,7 +21907,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xenc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18127,7 +21918,8 @@ extension MediaType {
                 subtype: "xfdf",
                 possibleExtensions: [
                     "xfdf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18141,7 +21933,8 @@ extension MediaType {
                 possibleExtensions: [
                     "xhtml",
                     "xht",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18151,7 +21944,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xhtml-voice",
                     suffix: "xml"
-                )
+                ),
+                source: .apache
             )
         }
 
@@ -18164,7 +21958,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xlf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18177,7 +21972,8 @@ extension MediaType {
                     "xsl",
                     "xsd",
                     "rng",
-                ]
+                ],
+                source: .unknown
             )
         }
 
@@ -18187,14 +21983,16 @@ extension MediaType {
                 subtype: "xml-dtd",
                 possibleExtensions: [
                     "dtd"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func xmlExternalParsedEntity() -> MediaType {
             .init(
                 type: name,
-                subtype: "xml-external-parsed-entity"
+                subtype: "xml-external-parsed-entity",
+                source: .iana
             )
         }
 
@@ -18204,7 +22002,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xml-patch",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18214,7 +22013,8 @@ extension MediaType {
                 subtype: .init(
                     value: "xmpp",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18227,7 +22027,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "xop"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18236,11 +22037,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "xproc",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "xpl"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -18254,7 +22056,8 @@ extension MediaType {
                 possibleExtensions: [
                     "xsl",
                     "xslt",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18263,11 +22066,12 @@ extension MediaType {
                 type: name,
                 subtype: .init(
                     value: "xspf",
-                    suffix: "xml"
+                    suffix: "xml",
                 ),
                 possibleExtensions: [
                     "xspf"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -18283,14 +22087,16 @@ extension MediaType {
                     "xhvml",
                     "xvml",
                     "xvm",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func yaml() -> MediaType {
             .init(
                 type: name,
-                subtype: "yaml"
+                subtype: "yaml",
+                source: .iana
             )
         }
 
@@ -18300,7 +22106,8 @@ extension MediaType {
                 subtype: "yang",
                 possibleExtensions: [
                     "yang"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18310,7 +22117,8 @@ extension MediaType {
                 subtype: .init(
                     value: "yang-data",
                     suffix: "cbor"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18320,7 +22128,8 @@ extension MediaType {
                 subtype: .init(
                     value: "yang-data",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18330,7 +22139,8 @@ extension MediaType {
                 subtype: .init(
                     value: "yang-data",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18340,7 +22150,8 @@ extension MediaType {
                 subtype: .init(
                     value: "yang-patch",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18350,7 +22161,8 @@ extension MediaType {
                 subtype: .init(
                     value: "yang-patch",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18360,7 +22172,8 @@ extension MediaType {
                 subtype: .init(
                     value: "yang-sid",
                     suffix: "json"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -18373,7 +22186,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "yin"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18383,7 +22197,8 @@ extension MediaType {
                 subtype: "zip",
                 possibleExtensions: [
                     "zip"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -18403,14 +22218,16 @@ extension MediaType {
         public static func zlib() -> MediaType {
             .init(
                 type: name,
-                subtype: "zlib"
+                subtype: "zlib",
+                source: .iana
             )
         }
 
         public static func zstd() -> MediaType {
             .init(
                 type: name,
-                subtype: "zstd"
+                subtype: "zstd",
+                source: .iana
             )
         }
 

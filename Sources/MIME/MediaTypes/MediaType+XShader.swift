@@ -4,6 +4,13 @@ extension MediaType {
 
         static let name: String = "x-shader"
 
+        public static var all: [MediaType] {
+            [
+                xFragment(),
+                xVertex(),
+            ]
+        }
+
         public static func xFragment() -> MediaType {
             .init(
                 type: name,

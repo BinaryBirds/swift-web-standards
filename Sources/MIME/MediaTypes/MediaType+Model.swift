@@ -4,20 +4,70 @@ extension MediaType {
 
         static let name: String = "model"
 
+        public static var all: [MediaType] {
+            [
+                _3mf(),
+                e57(),
+                gltfJson(),
+                gltfBinary(),
+                iges(),
+                jt(),
+                mesh(),
+                mtl(),
+                obj(),
+                prc(),
+                step(),
+                stepXml(),
+                stepZip(),
+                stepXmlZip(),
+                stl(),
+                u3d(),
+                vndBary(),
+                vndCld(),
+                vndColladaXml(),
+                vndDwf(),
+                vndFlatland3dml(),
+                vndGdl(),
+                vndGsGdl(),
+                vndGsGdlAlt(),
+                vndGtw(),
+                vndMomlXml(),
+                vndMts(),
+                vndOpengex(),
+                vndParasolidTransmitBinary(),
+                vndParasolidTransmitText(),
+                vndPythaPyox(),
+                vndRosetteAnnotatedDataModel(),
+                vndSapVds(),
+                vndUsda(),
+                vndUsdzZip(),
+                vndValveSourceCompiledMap(),
+                vndVtu(),
+                vrml(),
+                x3dBinary(),
+                x3dFastinfoset(),
+                x3dVrml(),
+                x3dXml(),
+                x3dVrmlAlt(),
+            ]
+        }
+
         public static func _3mf() -> MediaType {
             .init(
                 type: name,
                 subtype: "3mf",
                 possibleExtensions: [
                     "3mf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func e57() -> MediaType {
             .init(
                 type: name,
-                subtype: "e57"
+                subtype: "e57",
+                source: .iana
             )
         }
 
@@ -30,7 +80,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "gltf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -40,7 +91,8 @@ extension MediaType {
                 subtype: "gltf-binary",
                 possibleExtensions: [
                     "glb"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -51,7 +103,8 @@ extension MediaType {
                 possibleExtensions: [
                     "igs",
                     "iges",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -61,7 +114,8 @@ extension MediaType {
                 subtype: "jt",
                 possibleExtensions: [
                     "jt"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -73,7 +127,8 @@ extension MediaType {
                     "msh",
                     "mesh",
                     "silo",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -83,7 +138,8 @@ extension MediaType {
                 subtype: "mtl",
                 possibleExtensions: [
                     "mtl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -93,7 +149,8 @@ extension MediaType {
                 subtype: "obj",
                 possibleExtensions: [
                     "obj"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -103,7 +160,8 @@ extension MediaType {
                 subtype: "prc",
                 possibleExtensions: [
                     "prc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -117,7 +175,8 @@ extension MediaType {
                     "stpnc",
                     "p21",
                     "210",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -130,7 +189,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "stpx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -143,7 +203,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "stpz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -156,7 +217,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "stpxz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -166,7 +228,8 @@ extension MediaType {
                 subtype: "stl",
                 possibleExtensions: [
                     "stl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -176,7 +239,8 @@ extension MediaType {
                 subtype: "u3d",
                 possibleExtensions: [
                     "u3d"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -186,7 +250,8 @@ extension MediaType {
                 subtype: "vnd.bary",
                 possibleExtensions: [
                     "bary"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -196,7 +261,8 @@ extension MediaType {
                 subtype: "vnd.cld",
                 possibleExtensions: [
                     "cld"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -209,7 +275,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "dae"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -219,14 +286,16 @@ extension MediaType {
                 subtype: "vnd.dwf",
                 possibleExtensions: [
                     "dwf"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndFlatland3dml() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.flatland.3dml"
+                subtype: "vnd.flatland.3dml",
+                source: .iana
             )
         }
 
@@ -236,21 +305,24 @@ extension MediaType {
                 subtype: "vnd.gdl",
                 possibleExtensions: [
                     "gdl"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGsGdl() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gs-gdl"
+                subtype: "vnd.gs-gdl",
+                source: .apache
             )
         }
 
         public static func vndGsGdlAlt() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.gs.gdl"
+                subtype: "vnd.gs.gdl",
+                source: .iana
             )
         }
 
@@ -260,7 +332,8 @@ extension MediaType {
                 subtype: "vnd.gtw",
                 possibleExtensions: [
                     "gtw"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -270,7 +343,8 @@ extension MediaType {
                 subtype: .init(
                     value: "vnd.moml",
                     suffix: "xml"
-                )
+                ),
+                source: .iana
             )
         }
 
@@ -280,7 +354,8 @@ extension MediaType {
                 subtype: "vnd.mts",
                 possibleExtensions: [
                     "mts"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -290,7 +365,8 @@ extension MediaType {
                 subtype: "vnd.opengex",
                 possibleExtensions: [
                     "ogex"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -300,7 +376,8 @@ extension MediaType {
                 subtype: "vnd.parasolid.transmit.binary",
                 possibleExtensions: [
                     "x_b"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -310,7 +387,8 @@ extension MediaType {
                 subtype: "vnd.parasolid.transmit.text",
                 possibleExtensions: [
                     "x_t"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -321,14 +399,16 @@ extension MediaType {
                 possibleExtensions: [
                     "pyo",
                     "pyox",
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndRosetteAnnotatedDataModel() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.rosette.annotated-data-model"
+                subtype: "vnd.rosette.annotated-data-model",
+                source: .iana
             )
         }
 
@@ -338,7 +418,8 @@ extension MediaType {
                 subtype: "vnd.sap.vds",
                 possibleExtensions: [
                     "vds"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -348,7 +429,8 @@ extension MediaType {
                 subtype: "vnd.usda",
                 possibleExtensions: [
                     "usda"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -361,7 +443,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "usdz"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -371,7 +454,8 @@ extension MediaType {
                 subtype: "vnd.valve.source.compiled-map",
                 possibleExtensions: [
                     "bsp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -381,7 +465,8 @@ extension MediaType {
                 subtype: "vnd.vtu",
                 possibleExtensions: [
                     "vtu"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -392,7 +477,8 @@ extension MediaType {
                 possibleExtensions: [
                     "wrl",
                     "vrml",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -406,7 +492,8 @@ extension MediaType {
                 possibleExtensions: [
                     "x3db",
                     "x3dbz",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -419,7 +506,8 @@ extension MediaType {
                 ),
                 possibleExtensions: [
                     "x3db"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -433,7 +521,8 @@ extension MediaType {
                 possibleExtensions: [
                     "x3dv",
                     "x3dvz",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -447,7 +536,8 @@ extension MediaType {
                 possibleExtensions: [
                     "x3d",
                     "x3dz",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -457,7 +547,8 @@ extension MediaType {
                 subtype: "x3d-vrml",
                 possibleExtensions: [
                     "x3dv"
-                ]
+                ],
+                source: .iana
             )
         }
 

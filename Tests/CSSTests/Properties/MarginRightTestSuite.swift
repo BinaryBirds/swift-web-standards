@@ -7,13 +7,26 @@ struct MarginRightTests {
 
     @Test
     func initializers() {
-        // let value1 = Margin.Value.initial
-        // let property1 = MarginRight(value1)
-        // assertProperty(property1, name: "margin-right", value: value1.rawValue)
+        let property = MarginRight()
 
-        // let value2 = 1.px
-        // let property2 = MarginRight(value2)
-        // assertProperty(property2, name: "margin-right", value: value2.rawValue)
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = MarginRight()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

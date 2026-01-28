@@ -4,13 +4,129 @@ extension MediaType {
 
         static let name: String = "image"
 
+        public static var all: [MediaType] {
+            [
+                aces(),
+                apng(),
+                avci(),
+                avcs(),
+                avif(),
+                bmp(),
+                cgm(),
+                dicomRle(),
+                dpx(),
+                emf(),
+                fits(),
+                g3fax(),
+                gif(),
+                heic(),
+                heicSequence(),
+                heif(),
+                heifSequence(),
+                hej2k(),
+                hsj2(),
+                ief(),
+                j2c(),
+                jaii(),
+                jais(),
+                jls(),
+                jp2(),
+                jpeg(),
+                jph(),
+                jphc(),
+                jpm(),
+                jpx(),
+                jxl(),
+                jxr(),
+                jxra(),
+                jxrs(),
+                jxs(),
+                jxsc(),
+                jxsi(),
+                jxss(),
+                ktx(),
+                ktx2(),
+                naplps(),
+                pjpeg(),
+                png(),
+                prsBtif(),
+                prsPti(),
+                pwgRaster(),
+                sgi(),
+                svgXml(),
+                t38(),
+                tiff(),
+                tiffFx(),
+                vndAdobePhotoshop(),
+                vndAirzipAcceleratorAzv(),
+                vndBlockfactFacti(),
+                vndClip(),
+                vndCnsInf2(),
+                vndDeceGraphic(),
+                vndDjvu(),
+                vndDvbSubtitle(),
+                vndDwg(),
+                vndDxf(),
+                vndFastbidsheet(),
+                vndFpx(),
+                vndFst(),
+                vndFujixeroxEdmicsMmr(),
+                vndFujixeroxEdmicsRlc(),
+                vndGlobalgraphicsPgb(),
+                vndMicrosoftIcon(),
+                vndMix(),
+                vndMozillaApng(),
+                vndMsDds(),
+                vndMsModi(),
+                vndMsPhoto(),
+                vndNetFpx(),
+                vndPcoB16(),
+                vndRadiance(),
+                vndSealedPng(),
+                vndSealedmediaSoftsealGif(),
+                vndSealedmediaSoftsealJpg(),
+                vndSvf(),
+                vndTencentTap(),
+                vndValveSourceTexture(),
+                vndWapWbmp(),
+                vndXiff(),
+                vndZbrushPcx(),
+                webp(),
+                wmf(),
+                x3ds(),
+                xAdobeDng(),
+                xCmuRaster(),
+                xCmx(),
+                xEmf(),
+                xFreehand(),
+                xIcon(),
+                xJng(),
+                xMrsidImage(),
+                xMsBmp(),
+                xPcx(),
+                xPict(),
+                xPortableAnymap(),
+                xPortableBitmap(),
+                xPortableGraymap(),
+                xPortablePixmap(),
+                xRgb(),
+                xTga(),
+                xWmf(),
+                xXbitmap(),
+                xXcf(),
+                xXpixmap(),
+                xXwindowdump(),
+            ]
+        }
+
         public static func aces() -> MediaType {
             .init(
                 type: name,
                 subtype: "aces",
                 possibleExtensions: [
                     "exr"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -20,7 +136,8 @@ extension MediaType {
                 subtype: "apng",
                 possibleExtensions: [
                     "apng"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -30,7 +147,8 @@ extension MediaType {
                 subtype: "avci",
                 possibleExtensions: [
                     "avci"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -40,7 +158,8 @@ extension MediaType {
                 subtype: "avcs",
                 possibleExtensions: [
                     "avcs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -50,7 +169,8 @@ extension MediaType {
                 subtype: "avif",
                 possibleExtensions: [
                     "avif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -61,7 +181,8 @@ extension MediaType {
                 possibleExtensions: [
                     "bmp",
                     "dib",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -71,7 +192,8 @@ extension MediaType {
                 subtype: "cgm",
                 possibleExtensions: [
                     "cgm"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -81,7 +203,8 @@ extension MediaType {
                 subtype: "dicom-rle",
                 possibleExtensions: [
                     "drle"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -91,7 +214,8 @@ extension MediaType {
                 subtype: "dpx",
                 possibleExtensions: [
                     "dpx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -101,7 +225,8 @@ extension MediaType {
                 subtype: "emf",
                 possibleExtensions: [
                     "emf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -111,7 +236,8 @@ extension MediaType {
                 subtype: "fits",
                 possibleExtensions: [
                     "fits"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -121,7 +247,8 @@ extension MediaType {
                 subtype: "g3fax",
                 possibleExtensions: [
                     "g3"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -131,7 +258,8 @@ extension MediaType {
                 subtype: "gif",
                 possibleExtensions: [
                     "gif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -141,7 +269,8 @@ extension MediaType {
                 subtype: "heic",
                 possibleExtensions: [
                     "heic"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -151,7 +280,8 @@ extension MediaType {
                 subtype: "heic-sequence",
                 possibleExtensions: [
                     "heics"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -161,7 +291,8 @@ extension MediaType {
                 subtype: "heif",
                 possibleExtensions: [
                     "heif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -171,7 +302,8 @@ extension MediaType {
                 subtype: "heif-sequence",
                 possibleExtensions: [
                     "heifs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -181,6 +313,17 @@ extension MediaType {
                 subtype: "hej2k",
                 possibleExtensions: [
                     "hej2"
+                ],
+                source: .iana
+            )
+        }
+
+        public static func hsj2() -> MediaType {
+            .init(
+                type: name,
+                subtype: "hsj2",
+                possibleExtensions: [
+                    "hsj2"
                 ]
             )
         }
@@ -191,14 +334,16 @@ extension MediaType {
                 subtype: "ief",
                 possibleExtensions: [
                     "ief"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func j2c() -> MediaType {
             .init(
                 type: name,
-                subtype: "j2c"
+                subtype: "j2c",
+                source: .iana
             )
         }
 
@@ -208,7 +353,8 @@ extension MediaType {
                 subtype: "jaii",
                 possibleExtensions: [
                     "jaii"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -218,7 +364,8 @@ extension MediaType {
                 subtype: "jais",
                 possibleExtensions: [
                     "jais"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -228,7 +375,8 @@ extension MediaType {
                 subtype: "jls",
                 possibleExtensions: [
                     "jls"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -239,7 +387,8 @@ extension MediaType {
                 possibleExtensions: [
                     "jp2",
                     "jpg2",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -251,7 +400,8 @@ extension MediaType {
                     "jpg",
                     "jpeg",
                     "jpe",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -261,7 +411,8 @@ extension MediaType {
                 subtype: "jph",
                 possibleExtensions: [
                     "jph"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -271,7 +422,8 @@ extension MediaType {
                 subtype: "jphc",
                 possibleExtensions: [
                     "jhc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -282,7 +434,8 @@ extension MediaType {
                 possibleExtensions: [
                     "jpm",
                     "jpgm",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -293,7 +446,8 @@ extension MediaType {
                 possibleExtensions: [
                     "jpx",
                     "jpf",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -303,7 +457,8 @@ extension MediaType {
                 subtype: "jxl",
                 possibleExtensions: [
                     "jxl"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -313,7 +468,8 @@ extension MediaType {
                 subtype: "jxr",
                 possibleExtensions: [
                     "jxr"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -323,7 +479,8 @@ extension MediaType {
                 subtype: "jxra",
                 possibleExtensions: [
                     "jxra"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -333,7 +490,8 @@ extension MediaType {
                 subtype: "jxrs",
                 possibleExtensions: [
                     "jxrs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -343,7 +501,8 @@ extension MediaType {
                 subtype: "jxs",
                 possibleExtensions: [
                     "jxs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -353,7 +512,8 @@ extension MediaType {
                 subtype: "jxsc",
                 possibleExtensions: [
                     "jxsc"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -363,7 +523,8 @@ extension MediaType {
                 subtype: "jxsi",
                 possibleExtensions: [
                     "jxsi"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -373,7 +534,8 @@ extension MediaType {
                 subtype: "jxss",
                 possibleExtensions: [
                     "jxss"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -383,7 +545,8 @@ extension MediaType {
                 subtype: "ktx",
                 possibleExtensions: [
                     "ktx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -393,14 +556,16 @@ extension MediaType {
                 subtype: "ktx2",
                 possibleExtensions: [
                     "ktx2"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func naplps() -> MediaType {
             .init(
                 type: name,
-                subtype: "naplps"
+                subtype: "naplps",
+                source: .iana
             )
         }
 
@@ -420,7 +585,8 @@ extension MediaType {
                 subtype: "png",
                 possibleExtensions: [
                     "png"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -431,7 +597,8 @@ extension MediaType {
                 possibleExtensions: [
                     "btif",
                     "btf",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -441,14 +608,16 @@ extension MediaType {
                 subtype: "prs.pti",
                 possibleExtensions: [
                     "pti"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func pwgRaster() -> MediaType {
             .init(
                 type: name,
-                subtype: "pwg-raster"
+                subtype: "pwg-raster",
+                source: .iana
             )
         }
 
@@ -458,7 +627,8 @@ extension MediaType {
                 subtype: "sgi",
                 possibleExtensions: [
                     "sgi"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -472,7 +642,8 @@ extension MediaType {
                 possibleExtensions: [
                     "svg",
                     "svgz",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -482,7 +653,8 @@ extension MediaType {
                 subtype: "t38",
                 possibleExtensions: [
                     "t38"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -493,7 +665,8 @@ extension MediaType {
                 possibleExtensions: [
                     "tif",
                     "tiff",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -503,7 +676,8 @@ extension MediaType {
                 subtype: "tiff-fx",
                 possibleExtensions: [
                     "tfx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -513,7 +687,8 @@ extension MediaType {
                 subtype: "vnd.adobe.photoshop",
                 possibleExtensions: [
                     "psd"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -523,7 +698,8 @@ extension MediaType {
                 subtype: "vnd.airzip.accelerator.azv",
                 possibleExtensions: [
                     "azv"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -533,21 +709,24 @@ extension MediaType {
                 subtype: "vnd.blockfact.facti",
                 possibleExtensions: [
                     "facti"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndClip() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.clip"
+                subtype: "vnd.clip",
+                source: .iana
             )
         }
 
         public static func vndCnsInf2() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.cns.inf2"
+                subtype: "vnd.cns.inf2",
+                source: .iana
             )
         }
 
@@ -560,7 +739,8 @@ extension MediaType {
                     "uvvi",
                     "uvg",
                     "uvvg",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -571,7 +751,8 @@ extension MediaType {
                 possibleExtensions: [
                     "djvu",
                     "djv",
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -581,7 +762,8 @@ extension MediaType {
                 subtype: "vnd.dvb.subtitle",
                 possibleExtensions: [
                     "sub"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -591,7 +773,8 @@ extension MediaType {
                 subtype: "vnd.dwg",
                 possibleExtensions: [
                     "dwg"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -601,7 +784,8 @@ extension MediaType {
                 subtype: "vnd.dxf",
                 possibleExtensions: [
                     "dxf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -611,7 +795,8 @@ extension MediaType {
                 subtype: "vnd.fastbidsheet",
                 possibleExtensions: [
                     "fbs"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -621,7 +806,8 @@ extension MediaType {
                 subtype: "vnd.fpx",
                 possibleExtensions: [
                     "fpx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -631,7 +817,8 @@ extension MediaType {
                 subtype: "vnd.fst",
                 possibleExtensions: [
                     "fst"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -641,7 +828,8 @@ extension MediaType {
                 subtype: "vnd.fujixerox.edmics-mmr",
                 possibleExtensions: [
                     "mmr"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -651,14 +839,16 @@ extension MediaType {
                 subtype: "vnd.fujixerox.edmics-rlc",
                 possibleExtensions: [
                     "rlc"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndGlobalgraphicsPgb() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.globalgraphics.pgb"
+                subtype: "vnd.globalgraphics.pgb",
+                source: .iana
             )
         }
 
@@ -668,21 +858,24 @@ extension MediaType {
                 subtype: "vnd.microsoft.icon",
                 possibleExtensions: [
                     "ico"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndMix() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.mix"
+                subtype: "vnd.mix",
+                source: .iana
             )
         }
 
         public static func vndMozillaApng() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.mozilla.apng"
+                subtype: "vnd.mozilla.apng",
+                source: .iana
             )
         }
 
@@ -702,7 +895,8 @@ extension MediaType {
                 subtype: "vnd.ms-modi",
                 possibleExtensions: [
                     "mdi"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -712,7 +906,8 @@ extension MediaType {
                 subtype: "vnd.ms-photo",
                 possibleExtensions: [
                     "wdp"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -722,7 +917,8 @@ extension MediaType {
                 subtype: "vnd.net-fpx",
                 possibleExtensions: [
                     "npx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -732,42 +928,48 @@ extension MediaType {
                 subtype: "vnd.pco.b16",
                 possibleExtensions: [
                     "b16"
-                ]
+                ],
+                source: .iana
             )
         }
 
         public static func vndRadiance() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.radiance"
+                subtype: "vnd.radiance",
+                source: .iana
             )
         }
 
         public static func vndSealedPng() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealed.png"
+                subtype: "vnd.sealed.png",
+                source: .iana
             )
         }
 
         public static func vndSealedmediaSoftsealGif() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealedmedia.softseal.gif"
+                subtype: "vnd.sealedmedia.softseal.gif",
+                source: .iana
             )
         }
 
         public static func vndSealedmediaSoftsealJpg() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.sealedmedia.softseal.jpg"
+                subtype: "vnd.sealedmedia.softseal.jpg",
+                source: .iana
             )
         }
 
         public static func vndSvf() -> MediaType {
             .init(
                 type: name,
-                subtype: "vnd.svf"
+                subtype: "vnd.svf",
+                source: .iana
             )
         }
 
@@ -777,7 +979,8 @@ extension MediaType {
                 subtype: "vnd.tencent.tap",
                 possibleExtensions: [
                     "tap"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -787,7 +990,8 @@ extension MediaType {
                 subtype: "vnd.valve.source.texture",
                 possibleExtensions: [
                     "vtf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -797,7 +1001,8 @@ extension MediaType {
                 subtype: "vnd.wap.wbmp",
                 possibleExtensions: [
                     "wbmp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -807,7 +1012,8 @@ extension MediaType {
                 subtype: "vnd.xiff",
                 possibleExtensions: [
                     "xif"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -817,7 +1023,8 @@ extension MediaType {
                 subtype: "vnd.zbrush.pcx",
                 possibleExtensions: [
                     "pcx"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -827,7 +1034,8 @@ extension MediaType {
                 subtype: "webp",
                 possibleExtensions: [
                     "webp"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -837,7 +1045,8 @@ extension MediaType {
                 subtype: "wmf",
                 possibleExtensions: [
                     "wmf"
-                ]
+                ],
+                source: .iana
             )
         }
 
@@ -847,7 +1056,8 @@ extension MediaType {
                 subtype: "x-3ds",
                 possibleExtensions: [
                     "3ds"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -867,7 +1077,8 @@ extension MediaType {
                 subtype: "x-cmu-raster",
                 possibleExtensions: [
                     "ras"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -877,14 +1088,16 @@ extension MediaType {
                 subtype: "x-cmx",
                 possibleExtensions: [
                     "cmx"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xEmf() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-emf"
+                subtype: "x-emf",
+                source: .iana
             )
         }
 
@@ -898,7 +1111,8 @@ extension MediaType {
                     "fh4",
                     "fh5",
                     "fh7",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -908,7 +1122,8 @@ extension MediaType {
                 subtype: "x-icon",
                 possibleExtensions: [
                     "ico"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -918,7 +1133,8 @@ extension MediaType {
                 subtype: "x-jng",
                 possibleExtensions: [
                     "jng"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -928,7 +1144,8 @@ extension MediaType {
                 subtype: "x-mrsid-image",
                 possibleExtensions: [
                     "sid"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -938,7 +1155,8 @@ extension MediaType {
                 subtype: "x-ms-bmp",
                 possibleExtensions: [
                     "bmp"
-                ]
+                ],
+                source: .nginx
             )
         }
 
@@ -948,7 +1166,8 @@ extension MediaType {
                 subtype: "x-pcx",
                 possibleExtensions: [
                     "pcx"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -959,7 +1178,8 @@ extension MediaType {
                 possibleExtensions: [
                     "pic",
                     "pct",
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -969,7 +1189,8 @@ extension MediaType {
                 subtype: "x-portable-anymap",
                 possibleExtensions: [
                     "pnm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -979,7 +1200,8 @@ extension MediaType {
                 subtype: "x-portable-bitmap",
                 possibleExtensions: [
                     "pbm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -989,7 +1211,8 @@ extension MediaType {
                 subtype: "x-portable-graymap",
                 possibleExtensions: [
                     "pgm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -999,7 +1222,8 @@ extension MediaType {
                 subtype: "x-portable-pixmap",
                 possibleExtensions: [
                     "ppm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1009,7 +1233,8 @@ extension MediaType {
                 subtype: "x-rgb",
                 possibleExtensions: [
                     "rgb"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1019,14 +1244,16 @@ extension MediaType {
                 subtype: "x-tga",
                 possibleExtensions: [
                     "tga"
-                ]
+                ],
+                source: .apache
             )
         }
 
         public static func xWmf() -> MediaType {
             .init(
                 type: name,
-                subtype: "x-wmf"
+                subtype: "x-wmf",
+                source: .iana
             )
         }
 
@@ -1036,7 +1263,8 @@ extension MediaType {
                 subtype: "x-xbitmap",
                 possibleExtensions: [
                     "xbm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1053,7 +1281,8 @@ extension MediaType {
                 subtype: "x-xpixmap",
                 possibleExtensions: [
                     "xpm"
-                ]
+                ],
+                source: .apache
             )
         }
 
@@ -1063,7 +1292,8 @@ extension MediaType {
                 subtype: "x-xwindowdump",
                 possibleExtensions: [
                     "xwd"
-                ]
+                ],
+                source: .apache
             )
         }
 

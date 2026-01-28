@@ -1,5 +1,6 @@
 import SGML
 
+/// Provides access to the HTML `contenteditable` global attribute.
 public protocol ContentEditableAttributeModifier {
     associatedtype
         ContentEditableAttributeValueType: AttributeValueRepresentable = String
@@ -7,6 +8,9 @@ public protocol ContentEditableAttributeModifier {
 
 extension ContentEditableAttributeModifier where Self: Attributes & Mutable {
 
+    /// Sets the HTML `contenteditable` global attribute.
+    /// - Parameter value: The attribute value. Pass `nil` to remove the attribute.
+    /// - Returns: A modified copy of the element with the updated attribute.
     public func contentEditable(
         _ value: ContentEditableAttributeValueType?
     ) -> Self {

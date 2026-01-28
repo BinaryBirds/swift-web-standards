@@ -28,4 +28,27 @@ struct HtmlTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func lang() async throws {
+        let tag = Html {
+            Head {
+
+            }
+            Body {
+
+            }
+        }
+        .lang("en-US")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <html lang="en-US"><head></head><body></body></html>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }

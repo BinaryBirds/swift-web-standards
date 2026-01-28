@@ -7,9 +7,26 @@ struct BorderRightTests {
 
     @Test
     func initializers() {
-        // let value1 = Border.Value.initial
-        // let property1 = BorderRight(value1)
-        // assertProperty(property1, name: "border-right", value: value1.rawValue)
+        let property = BorderRight(.initial)
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = BorderRight(.initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

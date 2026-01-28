@@ -7,9 +7,26 @@ struct LineHeightTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = LineHeight(value1)
-        // assertProperty(property1, name: "line-height", value: value1.rawValue)
+        let property = LineHeight()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = LineHeight()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

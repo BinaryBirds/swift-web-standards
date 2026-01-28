@@ -7,13 +7,26 @@ struct FlexBasisTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FlexBasis(value1)
-        // assertProperty(property1, name: "flex-basis", value: value1.rawValue)
+        let property = FlexBasis()
 
-        // let value2 = 1.px
-        // let property2 = FlexBasis(value2)
-        // assertProperty(property2, name: "flex-basis", value: value2.rawValue)
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FlexBasis()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

@@ -7,9 +7,26 @@ struct GridAutoRowsTests {
 
     @Test
     func initializers() {
-        // let value1 = .auto
-        // let property1 = GridAutoRows(value1)
-        // assertProperty(property1, name: "grid-auto-rows", value: value1.rawValue)
+        let property = GridAutoRows()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = GridAutoRows()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

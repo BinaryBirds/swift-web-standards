@@ -7,13 +7,26 @@ struct FlexShrinkTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = FlexShrink(value1)
-        // assertProperty(property1, name: "flex-shrink", value: value1.rawValue)
+        let property = FlexShrink(.number(2))
 
-        // let value2 = 1
-        // let property2 = FlexShrink(value2)
-        // assertProperty(property2, name: "flex-shrink", value: String(value2))
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = FlexShrink(.number(2))
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

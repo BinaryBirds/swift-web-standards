@@ -7,13 +7,26 @@ struct PaddingLeftTests {
 
     @Test
     func initializers() {
-        // let value1 = Padding.Value.initial
-        // let property1 = PaddingLeft(value1)
-        // assertProperty(property1, name: "padding-left", value: value1.rawValue)
+        let property = PaddingLeft()
 
-        // let value2 = 1.px
-        // let property2 = PaddingLeft(value2)
-        // assertProperty(property2, name: "padding-left", value: value2.rawValue)
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
 
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = PaddingLeft()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

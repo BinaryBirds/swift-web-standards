@@ -7,10 +7,26 @@ struct GapTests {
 
     @Test
     func initializers() {
-        // let param1_1 = RowGap.Value.initial
-        // let param1_2 = ColumnGap.Value.initial
-        // let property1 = Gap(param1_1, param1_2)
-        // assertProperty(property1, name: "gap")
+        let property = Gap(.initial, .initial)
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = Gap(.initial, .initial)
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }

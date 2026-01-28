@@ -7,9 +7,26 @@ struct PageBreakInsideTests {
 
     @Test
     func initializers() {
-        // let value1 = .initial
-        // let property1 = PageBreakInside(value1)
-        // assertProperty(property1, name: "page-break-inside", value: value1.rawValue)
+        let property = PageBreakInside()
 
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value)"
+
+        #expect(result == expectation)
+    }
+
+    @Test
+    func important() {
+        let property = PageBreakInside()
+            .important()
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        let expectation = "\(property.name): \(property.value) !important"
+
+        #expect(result == expectation)
     }
 }
