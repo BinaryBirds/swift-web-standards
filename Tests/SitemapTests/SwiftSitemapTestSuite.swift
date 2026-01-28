@@ -20,6 +20,7 @@ struct SwiftRSSTestSuite {
         #expect(result == expectation)
     }
 
+
     @Test
     func lastMod() async throws {
         let tag = LastMod("2016-09-01")
@@ -126,6 +127,51 @@ struct SwiftRSSTestSuite {
                     <priority>0.5</priority>
                 </url>
             </urlset>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+    
+    @Test
+    func priorityFloatInit() async throws {
+        let tag = Priority(Float(0.5))
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <priority>0.5</priority>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func priorityDoubleInit() async throws {
+        let tag = Priority(Double(0.5))
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <priority>0.5</priority>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func priorityIntInit() async throws {
+        let tag = Priority(1)
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <priority>1</priority>
             """#
 
         let result = renderer.render(document: doc)
