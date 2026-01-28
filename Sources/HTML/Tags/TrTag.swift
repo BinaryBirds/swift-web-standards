@@ -5,7 +5,7 @@ import SGML
 /// A `<tr>` element contains one or more `<th>` or `<td>` elements.
 public struct Tr:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
     /// The attribute storage for the tag.

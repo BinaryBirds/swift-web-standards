@@ -1,9 +1,9 @@
 public struct AnimationName: Property {
     public enum Value: ExpressibleByStringLiteral, Sendable {
 
-        /// Specifies the name of the keyframe you want to bind to the selector
+        /// Specifies the name of the keyframe you want to bind to the selector.
         case keyframename(String)
-        /// Default value. Specifies that there will be no animation (can be used to override animations coming from the cascade)
+        /// Default value. Specifies that there will be no animation (can be used to override animations coming from the cascade).
         case none
         /// Sets this property to its default value.
         case initial
@@ -32,7 +32,7 @@ public struct AnimationName: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies a name for the @keyframes animation
+    /// Specifies a name for the @keyframes animation.
     public init(
         _ value: Value = .none
     ) {

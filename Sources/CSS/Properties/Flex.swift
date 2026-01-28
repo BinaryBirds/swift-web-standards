@@ -5,9 +5,9 @@ public struct Flex: Property {
         case auto
         /// Same as 0 0 auto.
         case none
-        /// Same as 0 1 auto. Read about initial
+        /// Same as 0 1 auto. Read about initial.
         case initial
-        /// Inherits this property from its parent element. Read about inherit
+        /// Inherits this property from its parent element. Read about inherit.
         case inherit
 
         var rawValue: String {
@@ -31,7 +31,7 @@ public struct Flex: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties
+    /// A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties.
     public init(
         _ value: Value
     ) {
@@ -40,7 +40,7 @@ public struct Flex: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties
+    /// A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties.
     public init(
         _ grow: FlexGrow.Value,
         _ shrink: FlexShrink.Value,

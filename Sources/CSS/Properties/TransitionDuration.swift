@@ -1,9 +1,9 @@
 public struct TransitionDuration: Property {
     public enum Value: Sendable {
         case zero
-        /// Specifies how many seconds a transition effect takes to complete. Default value is 0s, meaning there will be no effect
+        /// Specifies how many seconds a transition effect takes to complete. Default value is 0s, meaning there will be no effect.
         case seconds(Double)
-        /// Specifies how many milliseconds a transition effect takes to complete. Default value is 0s, meaning there will be no effect
+        /// Specifies how many milliseconds a transition effect takes to complete. Default value is 0s, meaning there will be no effect.
         case milliseconds(Double)
         /// Sets this property to its default value.
         case initial
@@ -36,7 +36,7 @@ public struct TransitionDuration: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies how many seconds or milliseconds a transition effect takes to complete
+    /// Specifies how many seconds or milliseconds a transition effect takes to complete.
     public init(
         _ value: Value = .zero
     ) {

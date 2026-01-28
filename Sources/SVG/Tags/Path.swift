@@ -2,7 +2,7 @@ import SGML
 
 /// Path tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path.
 public struct Path: SVGTag {
 
     public var attributes: AttributeStore

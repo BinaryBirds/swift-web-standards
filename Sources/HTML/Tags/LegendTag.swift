@@ -3,7 +3,7 @@ import SGML
 /// The `<legend>` tag defines a caption for the `<fieldset>` element.
 public struct Legend:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
 

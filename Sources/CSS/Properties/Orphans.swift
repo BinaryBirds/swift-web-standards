@@ -1,6 +1,6 @@
 public struct Orphans: Property {
     public enum Value: Sendable {
-        /// Sets the minimum number of lines to keep together at the bottom of a page
+        /// Sets the minimum number of lines to keep together at the bottom of a page.
         case count(Int)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct Orphans: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the minimum number of lines that must be left at the bottom of a page
+    /// Sets the minimum number of lines that must be left at the bottom of a page.
     public init(
         _ value: Value
     ) {

@@ -5,7 +5,7 @@ import SGML
 /// Browsers usually indent `<blockquote>` elements (look at example below to see how to remove the indentation).
 public struct Blockquote:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     CiteAttributeModifier,
     // categories

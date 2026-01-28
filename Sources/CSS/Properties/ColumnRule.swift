@@ -5,9 +5,9 @@ public struct ColumnRule: Property {
             ColumnRuleStyle.Value,
             ColumnRuleColor.Value
         )
-        /// Sets this property to its default value. Read about initial
+        /// Sets this property to its default value. Read about initial.
         case initial
-        /// Inherits this property from its parent element. Read about inherit
+        /// Inherits this property from its parent element. Read about inherit.
         case inherit
 
         var rawValue: String {
@@ -27,7 +27,7 @@ public struct ColumnRule: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for all the column-rule-* properties
+    /// A shorthand property for all the column-rule-* properties.
     public init(
         _ value: Value
     ) {
@@ -36,7 +36,7 @@ public struct ColumnRule: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for all the column-rule-* properties
+    /// A shorthand property for all the column-rule-* properties.
     public init(
         _ width: ColumnRuleWidth.Value,
         _ style: ColumnRuleStyle.Value,

@@ -1,6 +1,6 @@
 public struct ColumnWidth: Property {
     public enum Value: Sendable {
-        /// Default value. The column width will be determined by the browser
+        /// Default value. The column width will be determined by the browser.
         case auto
         /// A length that specifies the width of the columns. The number of columns will be the minimum number of columns needed to show all the content across the element.
         case length(UnitRepresentable)
@@ -27,7 +27,7 @@ public struct ColumnWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the column width
+    /// Specifies the column width.
     public init(
         _ value: Value = .auto
     ) {

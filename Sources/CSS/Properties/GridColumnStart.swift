@@ -1,10 +1,10 @@
 public struct GridColumnStart: Property {
     public enum Value: Sendable {
-        /// Default value. The item will be placed following the flow
+        /// Default value. The item will be placed following the flow.
         case auto
-        /// Specifies the number of columns the item will span
+        /// Specifies the number of columns the item will span.
         case span(Int)
-        /// Specifies on which column to start the display of the item
+        /// Specifies on which column to start the display of the item.
         case columnLine(Int)
 
         var rawValue: String {
@@ -23,7 +23,7 @@ public struct GridColumnStart: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies where to start the grid item
+    /// Specifies where to start the grid item.
     public init(
         _ value: Value = .auto
     ) {

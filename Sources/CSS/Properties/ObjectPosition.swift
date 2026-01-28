@@ -4,7 +4,7 @@ public struct ObjectPosition: Property {
         /// Specifies the position of the image or video inside its content box.
         /// First value controls the x-axis and the second value controls the y-axis.
         /// Can be a string (left, center or right), or a number (in px or %).
-        /// Negative values are allowed
+        /// Negative values are allowed.
         case position(UnitRepresentable, UnitRepresentable?)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct ObjectPosition: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the alignment of the replaced element inside its box
+    /// Specifies the alignment of the replaced element inside its box.
     public init(
         _ value: Value = .position(50.percent, 50.percent)
     ) {

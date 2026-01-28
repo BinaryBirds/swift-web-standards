@@ -1,6 +1,6 @@
 public struct Grid: Property {
     public enum Value: Sendable {
-        /// Default value. No specific sizing of the columns or rows
+        /// Default value. No specific sizing of the columns or rows.
         case none
         case values(
             GridTemplateRows.Value,
@@ -45,7 +45,7 @@ public struct Grid: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties
+    /// A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties.
     public init(
         _ value: Value = .none
     ) {
@@ -54,7 +54,7 @@ public struct Grid: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties
+    /// A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties.
     public init(
         _ tplRow: GridTemplateRows.Value,
         _ tplCol: GridTemplateColumns.Value,

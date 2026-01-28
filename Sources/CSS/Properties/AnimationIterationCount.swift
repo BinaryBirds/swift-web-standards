@@ -1,9 +1,9 @@
 public struct AnimationIterationCount: Property {
     public enum Value: ExpressibleByIntegerLiteral, Sendable {
 
-        /// A number that defines how many times an animation should be played. Default value is 1
+        /// A number that defines how many times an animation should be played. Default value is 1.
         case number(Int)
-        /// Specifies that the animation should be played infinite times (for ever)
+        /// Specifies that the animation should be played infinite times (for ever).
         case infinite
         /// Sets this property to its default value.
         case initial
@@ -32,7 +32,7 @@ public struct AnimationIterationCount: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the number of times an animation should be played
+    /// Specifies the number of times an animation should be played.
     public init(
         _ value: Value = 1
     ) {

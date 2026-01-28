@@ -3,7 +3,7 @@ import SGML
 /// The `<param>` tag is used to define parameters for an `<object>` element.
 public struct Param:
     ShortTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     NameAttributeModifier,
     ValueAttributeModifier

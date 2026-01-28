@@ -1,8 +1,8 @@
 public struct ListStylePosition: Property {
     public enum Value: String, Sendable {
-        /// The bullet points will be inside the list item
+        /// The bullet points will be inside the list item.
         case inside
-        /// The bullet points will be outside the list item. This is default
+        /// The bullet points will be outside the list item. This is default.
         case outside
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct ListStylePosition: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the position of the list-item markers (bullet points)
+    /// Specifies the position of the list-item markers (bullet points).
     public init(
         _ value: Value = .outside
     ) {

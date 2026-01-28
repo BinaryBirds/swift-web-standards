@@ -1,10 +1,10 @@
 public struct BorderImageWidth: Property {
     public enum Value: Sendable {
-        /// A length unit (px) specifying the size of the border-width    Play it »
+        /// A length unit (px) specifying the size of the border-width    Play it ».
         case length(UnitRepresentable)
-        /// Default value 1. Represents multiples of the corresponding border-width    Play it »
+        /// Default value 1. Represents multiples of the corresponding border-width    Play it ».
         case number(Double)
-        /// If specified, the width is the intrinsic width or height of the corresponding image slice
+        /// If specified, the width is the intrinsic width or height of the corresponding image slice.
         case auto
         /// Sets this property to its default value.
         case initial
@@ -31,7 +31,7 @@ public struct BorderImageWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the width of the border image
+    /// Specifies the width of the border image.
     public init(
         _ value: Value
     ) {

@@ -5,7 +5,7 @@ import SGML
 /// **Tip:** Also look at the `<del>` tag to markup deleted text.
 public struct Ins:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     CiteAttributeModifier,
     DateTimeAttributeModifier,

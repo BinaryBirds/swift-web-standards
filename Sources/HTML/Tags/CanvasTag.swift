@@ -7,7 +7,7 @@ import SGML
 /// Any text inside the `<canvas>` element will be displayed in browsers with JavaScript disabled and in browsers that do not support <canvas>.
 public struct Canvas:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     WidthAttributeModifier,
     HeightAttributeModifier,

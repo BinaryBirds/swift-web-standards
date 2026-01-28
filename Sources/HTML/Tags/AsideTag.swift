@@ -10,7 +10,7 @@ import SGML
 /// However, you can use CSS to style the `<aside>` element (see example below).
 public struct Aside:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

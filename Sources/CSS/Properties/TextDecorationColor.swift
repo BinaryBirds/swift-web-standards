@@ -1,6 +1,6 @@
 public struct TextDecorationColor: Property {
     public enum Value: Sendable {
-        /// Specifies the color of the text-decoration
+        /// Specifies the color of the text-decoration.
         case color(CSSColor)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct TextDecorationColor: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the color of the text-decoration
+    /// Specifies the color of the text-decoration.
     public init(
         _ value: Value
     ) {
@@ -32,7 +32,7 @@ public struct TextDecorationColor: Property {
         self.isImportant = false
     }
 
-    /// Specifies the color of the text-decoration
+    /// Specifies the color of the text-decoration.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

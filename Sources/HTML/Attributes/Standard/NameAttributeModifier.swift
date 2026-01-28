@@ -1,7 +1,7 @@
 import SGML
 
 public enum NameAttributeValue: String, AttributeValueRepresentable {
-    /// Specifies the name of the Web application that the page represents
+    /// Specifies the name of the Web application that the page represents.
     case applicationName = "application-name"
     /// Specifies the name of the author of the document.
     case author
@@ -13,10 +13,10 @@ public enum NameAttributeValue: String, AttributeValueRepresentable {
     case keywords
     /// Controls the viewport (the user's visible area of a web page).
     case viewport
-    /// robots
+    /// robots.
     case robots
 
-    /// https://css-tricks.com/meta-theme-color-and-trickery/
+    /// https://css-tricks.com/meta-theme-color-and-trickery/.
     case colorScheme = "color-scheme"
     case themeColor = "theme-color"
     case appleMobileWebAppTitle = "apple-mobile-web-app-title"

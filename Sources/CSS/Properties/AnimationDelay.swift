@@ -34,7 +34,7 @@ public struct AnimationDelay: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies a delay for the start of an animation
+    /// Specifies a delay for the start of an animation.
     public init(
         _ value: Value = .zero
     ) {

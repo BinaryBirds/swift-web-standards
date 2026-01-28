@@ -2,20 +2,20 @@ import SGML
 
 /// The `<form>` tag is used to create an HTML form for user input.
 ///
-/// The `<form>` element can contain one or more of the following form elements:
+/// The `<form>` element can contain one or more of the following form elements:.
 ///
-/// - `<input>`
-/// - `<textarea>`
-/// - `<button>`
-/// - `<select>`
-/// - `<option>`
-/// - `<optgroup>`
-/// - `<fieldset>`
-/// - `<label>`
-/// - `<output>`
+/// - `<input>`.
+/// - `<textarea>`.
+/// - `<button>`.
+/// - `<select>`.
+/// - `<option>`.
+/// - `<optgroup>`.
+/// - `<fieldset>`.
+/// - `<label>`.
+/// - `<output>`.
 public struct Form:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ActionAttributeModifier,
     AcceptCharsetAttributeModifier,
@@ -61,24 +61,24 @@ public struct Form:
     }
 
     public enum Rel: String, AttributeValueRepresentable {
-        /// Specifies that the referenced document is not a part of the current site
+        /// Specifies that the referenced document is not a part of the current site.
         case external
-        /// Links to a help document
+        /// Links to a help document.
         case help
-        /// Links to copyright information for the document
+        /// Links to copyright information for the document.
         case license
-        /// The next document in a selection
+        /// The next document in a selection.
         case next
         /// Links to an unendorsed document, like a paid link.
-        /// ("nofollow" is used by Google, to specify that the Google search spider should not follow that link)
+        /// ("nofollow" is used by Google, to specify that the Google search spider should not follow that link).
         case nofollow
         case noopener
-        /// Specifies that the browser should not send a HTTP referrer header if the user follows the hyperlink
+        /// Specifies that the browser should not send a HTTP referrer header if the user follows the hyperlink.
         case noreferrer
         case opener
-        /// The previous document in a selection
+        /// The previous document in a selection.
         case prev
-        /// Links to a search tool for the document
+        /// Links to a search tool for the document.
         case search
     }
 

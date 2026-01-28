@@ -5,7 +5,7 @@ import SGML
 /// Inside the `<style>` element you specify how HTML elements should render in a browser.
 public struct Style:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     MediaAttributeModifier,
     BlockingAttributeModifier,

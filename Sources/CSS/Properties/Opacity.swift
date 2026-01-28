@@ -1,6 +1,6 @@
 public struct Opacity: Property {
     public enum Value: Sendable {
-        /// Specifies the opacity. From 0.0 (fully transparent) to 1.0 (fully opaque)
+        /// Specifies the opacity. From 0.0 (fully transparent) to 1.0 (fully opaque).
         case number(Double)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct Opacity: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the opacity level for an element
+    /// Sets the opacity level for an element.
     public init(
         _ value: Value = .number(1)
     ) {
@@ -32,7 +32,7 @@ public struct Opacity: Property {
         self.isImportant = false
     }
 
-    /// Sets the opacity level for an element
+    /// Sets the opacity level for an element.
     public init(_ value: Double = 1) {
         self.init(.number(value))
     }

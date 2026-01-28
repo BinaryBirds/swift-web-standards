@@ -1,6 +1,6 @@
 public struct ScrollBehavior: Property {
     public enum Value: String, Sendable {
-        /// Allows a straight jump "scroll effect" between elements within the scrolling box. This is default
+        /// Allows a straight jump "scroll effect" between elements within the scrolling box. This is default.
         case auto
         /// Allows a smooth animated "scroll effect" between elements within the scrolling box.
         case smooth
@@ -14,7 +14,7 @@ public struct ScrollBehavior: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies whether to smoothly animate the scroll position in a scrollable box, instead of a straight jump
+    /// Specifies whether to smoothly animate the scroll position in a scrollable box, instead of a straight jump.
     public init(
         _ value: Value = .auto
     ) {

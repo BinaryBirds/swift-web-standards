@@ -1,8 +1,8 @@
 public struct Width: Property {
     public enum Value: Sendable {
-        /// Default value. The browser calculates the width
+        /// Default value. The browser calculates the width.
         case auto
-        /// Defines the width in px, cm, etc. Read about length units
+        /// Defines the width in px, cm, etc. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct Width: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the width of an element
+    /// Sets the width of an element.
     public init(
         _ value: Value = .auto
     ) {
@@ -36,7 +36,7 @@ public struct Width: Property {
         self.isImportant = false
     }
 
-    /// Sets the width of an element
+    /// Sets the width of an element.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

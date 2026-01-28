@@ -5,7 +5,7 @@ import SGML
 /// The `<bdo>` tag is used to override the current text direction.
 public struct Bdo:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

@@ -1,10 +1,10 @@
 public struct Transform: Property {
     public enum Value: Sendable {
-        /// Defines that there should be no transformation    Play it »
+        /// Defines that there should be no transformation    Play it ».
         case none
-        /// Defines a 2D transformation, using a matrix of six values    Play it »
+        /// Defines a 2D transformation, using a matrix of six values    Play it ».
         case matrix(Double, Double, Double, Double, Double, Double)
-        /// Defines a 3D transformation, using a 4x4 matrix of 16 values
+        /// Defines a 3D transformation, using a 4x4 matrix of 16 values.
         case matrix3d(
             Double,
             Double,
@@ -23,47 +23,47 @@ public struct Transform: Property {
             Double,
             Double
         )
-        /// Defines a 2D translation    Play it »
+        /// Defines a 2D translation    Play it ».
         case translate(Double, Double)
-        ///  Defines a 3D translation
+        ///  Defines a 3D translation.
         case translate3d(Double, Double, Double)
-        /// Defines a translation, using only the value for the X-axis    Play it »
+        /// Defines a translation, using only the value for the X-axis    Play it ».
         case translateX(Double)
-        /// Defines a translation, using only the value for the Y-axis    Play it »
+        /// Defines a translation, using only the value for the Y-axis    Play it ».
         case translateY(Double)
-        /// Defines a 3D translation, using only the value for the Z-axis
+        /// Defines a 3D translation, using only the value for the Z-axis.
         case translateZ(Double)
-        /// Defines a 2D scale transformation    Play it »
+        /// Defines a 2D scale transformation    Play it ».
         case scale(Double, Double)
-        /// Defines a 3D scale transformation
+        /// Defines a 3D scale transformation.
         case scale3d(Double, Double, Double)
-        /// Defines a scale transformation by giving a value for the X-axis    Play it »
+        /// Defines a scale transformation by giving a value for the X-axis    Play it ».
         case scaleX(Double)
-        /// Defines a scale transformation by giving a value for the Y-axis    Play it »
+        /// Defines a scale transformation by giving a value for the Y-axis    Play it ».
         case scaleY(Double)
-        /// Defines a 3D scale transformation by giving a value for the Z-axis
+        /// Defines a 3D scale transformation by giving a value for the Z-axis.
         case scaleZ(Double)
-        /// Defines a 2D rotation, the angle is specified in the parameter    Play it »
+        /// Defines a 2D rotation, the angle is specified in the parameter    Play it ».
         case rotate(Double)
-        /// Defines a 3D rotation
+        /// Defines a 3D rotation.
         case rotate3d(Double, Double, Double, Double)
-        /// Defines a 3D rotation along the X-axis    Play it »
+        /// Defines a 3D rotation along the X-axis    Play it ».
         case rotateX(Double)
-        /// Defines a 3D rotation along the Y-axis    Play it »
+        /// Defines a 3D rotation along the Y-axis    Play it ».
         case rotateY(Double)
-        /// Defines a 3D rotation along the Z-axis    Play it »
+        /// Defines a 3D rotation along the Z-axis    Play it ».
         case rotateZ(Double)
-        /// Defines a 2D skew transformation along the X- and the Y-axis    Play it »
+        /// Defines a 2D skew transformation along the X- and the Y-axis    Play it ».
         case skew(Double, Double)
-        /// Defines a 2D skew transformation along the X-axis    Play it »
+        /// Defines a 2D skew transformation along the X-axis    Play it ».
         case skewX(Double)
-        /// Defines a 2D skew transformation along the Y-axis    Play it »
+        /// Defines a 2D skew transformation along the Y-axis    Play it ».
         case skewY(Double)
-        /// Defines a perspective view for a 3D transformed element
+        /// Defines a perspective view for a 3D transformed element.
         case perspective(Double)
-        /// Sets this property to its default value. Read about initial
+        /// Sets this property to its default value. Read about initial.
         case initial
-        /// Inherits this property from its parent element. Read about inherit
+        /// Inherits this property from its parent element. Read about inherit.
         case inherit
 
         var rawValue: String {
@@ -158,7 +158,7 @@ public struct Transform: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Applies a 2D or 3D transformation to an element
+    /// Applies a 2D or 3D transformation to an element.
     public init(
         _ value: Value
     ) {

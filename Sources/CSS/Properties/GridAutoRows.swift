@@ -1,12 +1,12 @@
-/// Specifies a default row size
+/// Specifies a default row size.
 
 public struct GridAutoRows: Property {
     public enum Value: Sendable {
-        /// Default value. The size of the rows is determined by the size of the largest item in the row
+        /// Default value. The size of the rows is determined by the size of the largest item in the row.
         case auto
-        /// Sets the size of each row to depend on the largest item in the row
+        /// Sets the size of each row to depend on the largest item in the row.
         case maxContent
-        /// Sets the size of each row to depend on the largest item in the row
+        /// Sets the size of each row to depend on the largest item in the row.
         case minContent
         /// Sets the size of the rows, by using a legal length value.
         case length(UnitRepresentable)
@@ -29,7 +29,7 @@ public struct GridAutoRows: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies a default row size
+    /// Specifies a default row size.
     public init(
         _ value: Value = .auto
     ) {

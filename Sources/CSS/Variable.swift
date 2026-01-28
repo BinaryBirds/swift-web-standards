@@ -1,4 +1,4 @@
-/// Creates a new CSS variable with the given name and value
+/// Creates a new CSS variable with the given name and value.
 public struct Variable: Property {
     public var name: String
     public var value: String

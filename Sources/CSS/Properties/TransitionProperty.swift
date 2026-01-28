@@ -1,10 +1,10 @@
 public struct TransitionProperty: Property {
     public enum Value: Sendable {
-        /// No property will get a transition effect
+        /// No property will get a transition effect.
         case none
-        /// Default value. All properties will get a transition effect
+        /// Default value. All properties will get a transition effect.
         case all
-        /// Defines a comma separated list of CSS property names the transition effect is for
+        /// Defines a comma separated list of CSS property names the transition effect is for.
         case properties([String])
         /// Sets this property to its default value.
         case initial
@@ -31,7 +31,7 @@ public struct TransitionProperty: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the name of the CSS property the transition effect is for
+    /// Specifies the name of the CSS property the transition effect is for.
     public init(
         _ value: Value = .all
     ) {

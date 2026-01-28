@@ -1,8 +1,8 @@
 public struct BackgroundImage: Property {
     public enum Value: Sendable {
-        /// The URL to the image. To specify more than one image, separate the URLs with a comma
+        /// The URL to the image. To specify more than one image, separate the URLs with a comma.
         case url(String)
-        /// No background image will be displayed. This is default
+        /// No background image will be displayed. This is default.
         case none
         // @TODO: add gradient support
         //    case linear-gradient()    Sets a linear gradient as the background image. Define at least two colors (top to bottom)
@@ -32,7 +32,7 @@ public struct BackgroundImage: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies one or more background images for an element
+    /// Specifies one or more background images for an element.
     public init(
         _ value: Value
     ) {

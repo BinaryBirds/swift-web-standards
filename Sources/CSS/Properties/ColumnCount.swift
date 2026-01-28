@@ -1,9 +1,9 @@
 public struct ColumnCount: Property {
     public enum Value: ExpressibleByIntegerLiteral, Sendable {
 
-        /// The optimal number of columns into which the content of the element will be flowed
+        /// The optimal number of columns into which the content of the element will be flowed.
         case number(Int)
-        /// Default value. The number of columns will be determined by other properties, like e.g. "column-width"
+        /// Default value. The number of columns will be determined by other properties, like e.g. "column-width".
         case auto
         /// Sets this property to its default value.
         case initial
@@ -32,7 +32,7 @@ public struct ColumnCount: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the number of columns an element should be divided into
+    /// Specifies the number of columns an element should be divided into.
     public init(
         _ value: Value = .auto
     ) {

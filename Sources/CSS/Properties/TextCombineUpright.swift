@@ -32,7 +32,7 @@ public struct TextCombineUpright: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the combination of multiple characters into the space of a single character
+    /// Specifies the combination of multiple characters into the space of a single character.
     public init(
         _ value: Value
     ) {

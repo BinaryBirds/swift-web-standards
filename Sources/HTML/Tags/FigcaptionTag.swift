@@ -5,7 +5,7 @@ import SGML
 /// The `<figcaption>` element can be placed as the first or last child of the `<figure>` element.
 public struct Figcaption:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
 

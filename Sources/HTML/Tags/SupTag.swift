@@ -8,7 +8,7 @@ import SGML
 /// **Tip:** Use the `<sub>` tag to define subscript text.
 public struct Sup:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

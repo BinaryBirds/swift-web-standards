@@ -47,7 +47,7 @@ public struct FontVariantAlternates: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values
+    /// Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values.
     public init(
         _ value: Value = .normal
     ) {

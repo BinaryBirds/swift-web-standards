@@ -5,10 +5,10 @@ import SGML
 /// The content inside is typically displayed with an underline.
 /// You can change this with CSS (see example below).
 ///
-/// **Tip:** Avoid using the `<u>` element where it could be confused for a hyperlink!
+/// **Tip:** Avoid using the `<u>` element where it could be confused for a hyperlink!.
 public struct U:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

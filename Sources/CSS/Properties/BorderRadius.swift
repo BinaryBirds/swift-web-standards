@@ -1,6 +1,6 @@
 public struct BorderRadius: Property {
     public enum Value: Sendable {
-        /// Defines the shape of the corners. Default value is 0. Read about length units
+        /// Defines the shape of the corners. Default value is 0. Read about length units.
         case length(
             UnitRepresentable,
             UnitRepresentable?,
@@ -34,7 +34,7 @@ public struct BorderRadius: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for the four border-*-radius properties
+    /// A shorthand property for the four border-*-radius properties.
     public init(
         _ value: Value
     ) {

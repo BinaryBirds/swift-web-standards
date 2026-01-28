@@ -20,7 +20,7 @@ public struct FontVariantLigatures: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Controls which ligatures and contextual forms are used in textual content of the elements it applies to
+    /// Controls which ligatures and contextual forms are used in textual content of the elements it applies to.
     public init(
         _ value: Value = .normal
     ) {

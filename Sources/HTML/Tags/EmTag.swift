@@ -5,7 +5,7 @@ import SGML
 /// A screen reader will pronounce the words in `<em>` with an emphasis, using verbal stress.
 public struct Em:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

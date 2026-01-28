@@ -3,7 +3,7 @@ import SGML
 /// The `<slot>` tag defines a placeholder in a web component.
 public struct Slot:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     NameAttributeModifier,
     // categories

@@ -23,7 +23,7 @@ public struct Mask: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Hides an element by masking or clipping the image at specific places
+    /// Hides an element by masking or clipping the image at specific places.
     public init(
         _ value: Value
     ) {

@@ -1,8 +1,8 @@
 public struct MaxWidth: Property {
     public enum Value: Sendable {
-        /// No maximum width. This is default
+        /// No maximum width. This is default.
         case none
-        /// Defines the maximum width in px, cm, etc. Read about length units
+        /// Defines the maximum width in px, cm, etc. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct MaxWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the maximum width of an element
+    /// Sets the maximum width of an element.
     public init(
         _ value: Value = .none
     ) {
@@ -36,7 +36,7 @@ public struct MaxWidth: Property {
         self.isImportant = false
     }
 
-    /// Sets the maximum width of an element
+    /// Sets the maximum width of an element.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

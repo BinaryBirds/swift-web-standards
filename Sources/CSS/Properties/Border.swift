@@ -1,4 +1,4 @@
-/// A shorthand property for border-width, border-style and border-color
+/// A shorthand property for border-width, border-style and border-color.
 
 public struct Border: Property {
     public enum Value: Sendable {
@@ -25,7 +25,7 @@ public struct Border: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for border-width, border-style and border-color
+    /// A shorthand property for border-width, border-style and border-color.
     public init(
         _ value: Value
     ) {

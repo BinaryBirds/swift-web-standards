@@ -5,7 +5,7 @@ import SGML
 /// **Note:** The `<summary>` element should be the first child element of the `<details>` element.
 public struct Summary:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
 

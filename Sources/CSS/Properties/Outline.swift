@@ -1,12 +1,12 @@
 public struct Outline: Property {
     public enum Value: Sendable {
-        /// outline-width    Specifies the width of outline
-        /// outline-style    Specifies the style of the outline
-        /// outline-color    Specifies the color of the outline
+        /// outline-width    Specifies the width of outline.
+        /// outline-style    Specifies the style of the outline.
+        /// outline-color    Specifies the color of the outline.
         case values(OutlineWidth.Value, OutlineStyle.Value, OutlineColor.Value)
-        /// Sets this property to its default value. Read about initial
+        /// Sets this property to its default value. Read about initial.
         case initial
-        /// Inherits this property from its parent element. Read about inherit
+        /// Inherits this property from its parent element. Read about inherit.
         case inherit
 
         var rawValue: String {
@@ -26,7 +26,7 @@ public struct Outline: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for the outline-width, outline-style, and the outline-color properties
+    /// A shorthand property for the outline-width, outline-style, and the outline-color properties.
     public init(
         _ value: Value
     ) {

@@ -1,4 +1,4 @@
-/// type/subtype;parameter=value
+/// type/subtype;parameter=value.
 public struct MediaType {
 
     public struct Parameter: Sendable {

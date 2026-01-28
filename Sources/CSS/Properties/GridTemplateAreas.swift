@@ -1,8 +1,8 @@
 public struct GridTemplateAreas: Property {
     public enum Value: Sendable {
-        /// Default value. No named grid areas
+        /// Default value. No named grid areas.
         case none
-        /// A sequence that specifies how each columns and row should display
+        /// A sequence that specifies how each columns and row should display.
         case names([String])
 
         var rawValue: String {
@@ -19,7 +19,7 @@ public struct GridTemplateAreas: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies how to display columns and rows, using named grid items
+    /// Specifies how to display columns and rows, using named grid items.
     public init(
         _ value: Value = .none
     ) {

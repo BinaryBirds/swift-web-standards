@@ -1,6 +1,6 @@
 public struct GridColumnGap: Property {
     public enum Value: Sendable {
-        /// Any legal length value, like px or %. 0 is the default value. Read about length units
+        /// Any legal length value, like px or %. 0 is the default value. Read about length units.
         case length(UnitRepresentable)
 
         var rawValue: String {
@@ -15,7 +15,7 @@ public struct GridColumnGap: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the size of the gap between columns
+    /// Specifies the size of the gap between columns.
     public init(
         _ value: Value
     ) {
@@ -24,7 +24,7 @@ public struct GridColumnGap: Property {
         self.isImportant = false
     }
 
-    /// Specifies the size of the gap between columns
+    /// Specifies the size of the gap between columns.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

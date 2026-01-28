@@ -1,6 +1,6 @@
 public struct Filter: Property {
     public enum Value: Sendable {
-        /// Default value. Specifies no effects
+        /// Default value. Specifies no effects.
         case none
         /// Applies a blur effect to the image. A larger value will create more blur.
         /// If no value is specified, 0 is used.
@@ -16,7 +16,7 @@ public struct Filter: Property {
         /// Values over 100% will provide results with more contrast.
         case contrast(Double)
         /// Applies a drop shadow effect to the image.
-        /// Possible values:
+        /// Possible values:.
         /// h-shadow - Required. Specifies a pixel value for the horizontal shadow. Negative values place the shadow to the left of the image.
         /// v-shadow - Required. Specifies a pixel value for the vertical shadow. Negative values place the shadow above the image.
         /// blur - Optional. This is the third value, and must be in pixels.
@@ -29,8 +29,8 @@ public struct Filter: Property {
         ///     If not specified, it will be 0 (the shadow will be the same size as the element).
         ///     Note: Chrome, Safari and Opera, and maybe other browsers, do not support this 4th length; it will not render if added.
         /// color - Optional. Adds a color to the shadow. If not specified, the color depends on the browser (often black).
-        /// An example of creating a red shadow, which is 8px big both horizontally and vertically, with a blur effect of 10px:
-        /// filter: drop-shadow(8px 8px 10px red);
+        /// An example of creating a red shadow, which is 8px big both horizontally and vertically, with a blur effect of 10px:.
+        /// filter: drop-shadow(8px 8px 10px red);.
         /// Tip: This filter is similar to the box-shadow property.
         // @TODO: add drop shadow support
         //    case drop-shadow(h-shadow v-shadow blur spread color)
@@ -47,7 +47,7 @@ public struct Filter: Property {
         /// 100% will make the image completely inverted.
         /// Note: Negative values are not allowed.
         case invert(Double)
-        /// Sets the opacity level for the image. The opacity-level describes the transparency-level, where:
+        /// Sets the opacity level for the image. The opacity-level describes the transparency-level, where:.
         /// 0% is completely transparent.
         /// 100% (1) is default and represents the original image (no transparency).
         /// Note: Negative values are not allowed.
@@ -65,8 +65,8 @@ public struct Filter: Property {
         /// Note: Negative values are not allowed.
         case sepia(Double)
         /// The url() function takes the location of an XML file that specifies an SVG filter, and may include an anchor to a specific filter element.
-        /// Example:
-        /// filter: url(svg-url#element-id)
+        /// Example:.
+        /// filter: url(svg-url#element-id).
         case url(String)
         /// Sets this property to its default value.
         case initial
@@ -109,7 +109,7 @@ public struct Filter: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Defines effects (e.g. blurring or color shifting) on an element before the element is displayed
+    /// Defines effects (e.g. blurring or color shifting) on an element before the element is displayed.
     public init(
         _ value: Value = .none
     ) {

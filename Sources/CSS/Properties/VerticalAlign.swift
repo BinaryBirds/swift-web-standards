@@ -1,22 +1,22 @@
 public struct VerticalAlign: Property {
     public enum Value: Sendable {
-        /// The element is aligned with the baseline of the parent. This is default
+        /// The element is aligned with the baseline of the parent. This is default.
         case baseline
-        /// Raises or lower an element by the specified length. Negative values are allowed. Read about length units
+        /// Raises or lower an element by the specified length. Negative values are allowed. Read about length units.
         case length(UnitRepresentable)
-        /// The element is aligned with the subscript baseline of the parent
+        /// The element is aligned with the subscript baseline of the parent.
         case sub
-        /// The element is aligned with the superscript baseline of the parent
+        /// The element is aligned with the superscript baseline of the parent.
         case `super`
-        /// The element is aligned with the top of the tallest element on the line
+        /// The element is aligned with the top of the tallest element on the line.
         case top
-        /// The element is aligned with the top of the parent element's font
+        /// The element is aligned with the top of the parent element's font.
         case textTop
-        /// The element is placed in the middle of the parent element
+        /// The element is placed in the middle of the parent element.
         case middle
-        /// The element is aligned with the lowest element on the line
+        /// The element is aligned with the lowest element on the line.
         case bottom
-        /// The element is aligned with the bottom of the parent element's font
+        /// The element is aligned with the bottom of the parent element's font.
         case textBottom
         /// Sets this property to its default value.
         case initial

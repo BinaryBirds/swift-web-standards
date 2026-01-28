@@ -15,7 +15,7 @@ public struct LineBreak: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies how/if to break lines
+    /// Specifies how/if to break lines.
     public init(
         _ value: Value = .auto
     ) {

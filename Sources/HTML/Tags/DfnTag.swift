@@ -4,11 +4,11 @@ import SGML
 ///
 /// The nearest parent of the `<dfn>` tag must also contain the definition/explanation for the term.
 ///
-/// The term inside the `<dfn>` tag can be any of the following:
-/// `<p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>`
+/// The term inside the `<dfn>` tag can be any of the following:.
+/// `<p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>`.
 public struct Dfn:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

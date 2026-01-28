@@ -1,8 +1,8 @@
 public struct BorderSpacing: Property {
     public enum Value: Sendable {
         /// Specifies the distance between the borders of adjacent cells in px, cm, etc. Negative values are not allowed.
-        /// If one value is specified, it defines both the horizontal and vertical spacing between cells
-        /// If two values are specified, the first sets the horizontal spacing and the second sets the vertical spacing
+        /// If one value is specified, it defines both the horizontal and vertical spacing between cells.
+        /// If two values are specified, the first sets the horizontal spacing and the second sets the vertical spacing.
         case length(UnitRepresentable, UnitRepresentable?)
         /// Sets this property to its default value.
         case initial
@@ -29,7 +29,7 @@ public struct BorderSpacing: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the distance between the borders of adjacent cells
+    /// Sets the distance between the borders of adjacent cells.
     public init(
         _ value: Value
     ) {

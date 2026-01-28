@@ -1,11 +1,11 @@
 public struct Columns: Property {
     public enum Value: Sendable {
-        /// Default value. Sets both the column-width and column-count to "auto"
+        /// Default value. Sets both the column-width and column-count to "auto".
         case auto
         case values(ColumnWidth.Value, ColumnCount.Value)
-        /// Sets this property to its default value. Read about initial
+        /// Sets this property to its default value. Read about initial.
         case initial
-        /// Inherits this property from its parent element. Read about inherit
+        /// Inherits this property from its parent element. Read about inherit.
         case inherit
 
         var rawValue: String {
@@ -26,7 +26,7 @@ public struct Columns: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for column-width and column-count
+    /// A shorthand property for column-width and column-count.
     public init(
         _ value: Value = .auto
     ) {
@@ -35,7 +35,7 @@ public struct Columns: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for column-width and column-count
+    /// A shorthand property for column-width and column-count.
     public init(_ width: ColumnWidth.Value, _ count: ColumnCount.Value) {
         self.init(.values(width, count))
     }

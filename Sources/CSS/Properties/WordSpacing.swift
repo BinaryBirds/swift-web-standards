@@ -1,8 +1,8 @@
 public struct WordSpacing: Property {
     public enum Value: Sendable {
-        /// Defines normal space between words (0.25em) . This is default
+        /// Defines normal space between words (0.25em) . This is default.
         case normal
-        /// Defines an additional space between words (in px, pt, cm, em, etc). Negative values are allowed. Read about length units
+        /// Defines an additional space between words (in px, pt, cm, em, etc). Negative values are allowed. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct WordSpacing: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Increases or decreases the space between words in a text
+    /// Increases or decreases the space between words in a text.
     public init(
         _ value: Value = .normal
     ) {
@@ -36,7 +36,7 @@ public struct WordSpacing: Property {
         self.isImportant = false
     }
 
-    /// Increases or decreases the space between words in a text
+    /// Increases or decreases the space between words in a text.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

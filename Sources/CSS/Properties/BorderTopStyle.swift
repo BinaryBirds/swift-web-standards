@@ -4,7 +4,7 @@ public struct BorderTopStyle: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the style of the top border
+    /// Sets the style of the top border.
     public init(_ value: BorderStyle.Value = .none) {
         self.name = "border-top-style"
         self.value = value.rawValue

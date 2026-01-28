@@ -7,7 +7,7 @@ import SGML
 /// This element is useful when embedding user-generated content with an unknown text direction.
 public struct Bdi:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

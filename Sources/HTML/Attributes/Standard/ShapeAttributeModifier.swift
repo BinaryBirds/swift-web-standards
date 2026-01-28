@@ -1,13 +1,13 @@
 import SGML
 
 public enum ShapeAttributeValue: String, AttributeValueRepresentable {
-    /// Specifies the entire region
+    /// Specifies the entire region.
     case `default`
-    /// Defines a rectangular region
+    /// Defines a rectangular region.
     case rect
-    /// Defines a circular region
+    /// Defines a circular region.
     case circle
-    /// Defines a polygonal region
+    /// Defines a polygonal region.
     case poly
 }
 

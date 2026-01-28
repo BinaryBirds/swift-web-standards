@@ -1,9 +1,9 @@
 public struct TransitionDelay: Property {
     public enum Value: Sendable {
         case zero
-        /// Specifies the number of seconds to wait before the transition effect will start
+        /// Specifies the number of seconds to wait before the transition effect will start.
         case seconds(Double)
-        /// Specifies the number of milliseconds to wait before the transition effect will start
+        /// Specifies the number of milliseconds to wait before the transition effect will start.
         case milliseconds(Double)
         /// Sets this property to its default value.
         case initial
@@ -36,7 +36,7 @@ public struct TransitionDelay: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies when the transition effect will start
+    /// Specifies when the transition effect will start.
     public init(
         _ value: Value = .zero
     ) {

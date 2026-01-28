@@ -1,8 +1,8 @@
 public struct BorderImageSource: Property {
     public enum Value: Sendable {
-        /// No image will be used
+        /// No image will be used.
         case none
-        /// The path to the image to be used as a border
+        /// The path to the image to be used as a border.
         case image(String)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct BorderImageSource: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the path to the image to be used as a border
+    /// Specifies the path to the image to be used as a border.
     public init(
         _ value: Value
     ) {
