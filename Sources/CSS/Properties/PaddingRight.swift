@@ -1,4 +1,3 @@
-
 public struct PaddingRight: Property {
 
     public let name: String
