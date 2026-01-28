@@ -23,10 +23,8 @@ extension Definition {
                     values[key] = []
                 }
                 var extensions = values[key]!
-                for ext in value {
-                    if !extensions.contains(ext) {
-                        extensions.append(ext)
-                    }
+                for ext in value where !extensions.contains(ext) {
+                    extensions.append(ext)
                 }
                 values[key] = extensions
             }

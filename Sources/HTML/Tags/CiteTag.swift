@@ -7,7 +7,7 @@ import SGML
 /// The text in the `<cite>` element usually renders in italic.
 public struct Cite:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

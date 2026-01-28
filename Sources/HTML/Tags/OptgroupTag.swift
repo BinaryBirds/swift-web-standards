@@ -5,7 +5,7 @@ import SGML
 /// If you have a long list of options, groups of related options are easier to handle for a user.
 public struct Optgroup:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     DisabledAttributeModifier,
     LabelAttributeModifier,

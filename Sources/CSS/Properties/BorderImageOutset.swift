@@ -1,8 +1,8 @@
 public struct BorderImageOutset: Property {
     public enum Value: Sendable {
-        /// A length unit specifying how far from the edges the border-image will appear. Default value is 0
+        /// A length unit specifying how far from the edges the border-image will appear. Default value is 0.
         case length(UnitRepresentable)
-        /// Represent multiples of the corresponding border-width
+        /// Represent multiples of the corresponding border-width.
         case number(Double)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct BorderImageOutset: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the amount by which the border image area extends beyond the border box
+    /// Specifies the amount by which the border image area extends beyond the border box.
     public init(
         _ value: Value
     ) {

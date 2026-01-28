@@ -16,9 +16,9 @@ public struct PerspectiveOrigin: Property {
         //    }
         //    case axis(XValues, YValues?)
 
-        /// Defining where the view is placed at the xy-axis
+        /// Defining where the view is placed at the xy-axis.
         case axis(UnitRepresentable, UnitRepresentable?)
-        /// Default value. Same as 0. The perspective is not set
+        /// Default value. Same as 0. The perspective is not set.
         case none
         /// Sets this property to its default value.
         case initial
@@ -43,7 +43,7 @@ public struct PerspectiveOrigin: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Defines at which position the user is looking at the 3D-positioned element
+    /// Defines at which position the user is looking at the 3D-positioned element.
     public init(
         _ value: Value = .axis(50.percent, 50.percent)
     ) {

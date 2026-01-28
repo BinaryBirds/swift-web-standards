@@ -7,7 +7,7 @@ import SGML
 ///
 /// The text in the `<address>` element usually renders in italic, and browsers will always add a line break before and after the `<address>` element.
 ///
-/// [HTML Standard - The address element](https://html.spec.whatwg.org/multipage/sections.html#the-address-element)
+/// [HTML Standard - The address element](https://html.spec.whatwg.org/multipage/sections.html#the-address-element).
 ///
 public struct Address:
     StandardTag,

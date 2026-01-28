@@ -1,6 +1,6 @@
 public struct Height: Property {
     public enum Value: Sendable {
-        /// The browser calculates the height. This is default
+        /// The browser calculates the height. This is default.
         case auto
         /// Defines the height in px, cm, etc.
         case length(UnitRepresentable)
@@ -27,7 +27,7 @@ public struct Height: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the height of an element
+    /// Sets the height of an element.
     public init(
         _ value: Value = .auto
     ) {
@@ -36,7 +36,7 @@ public struct Height: Property {
         self.isImportant = false
     }
 
-    /// Sets the height of an element
+    /// Sets the height of an element.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

@@ -5,7 +5,7 @@ import SGML
 ///
 /// **Tip:** Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.
 ///
-/// [HTML Standard - The abbr element](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element)
+/// [HTML Standard - The abbr element](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element).
 ///
 public struct Abbr:
     StandardTag,

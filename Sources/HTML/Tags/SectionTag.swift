@@ -3,7 +3,7 @@ import SGML
 /// The `<section>` tag defines a section in a document.
 public struct Section:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

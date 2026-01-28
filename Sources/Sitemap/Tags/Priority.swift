@@ -2,11 +2,11 @@ import SGML
 
 /// A `<priority>` element indicating the relative priority of a URL.
 ///
-/// This element is part of the Sitemap protocol and provides search engines
+/// This element is part of the Sitemap protocol and provides search engines.
 /// with a hint about the importance of a URL relative to other URLs on the site.
 ///
-/// The value is typically a number between `0.0` and `1.0`, where higher values
-/// indicate higher priority. This type provides multiple initializers for
+/// The value is typically a number between `0.0` and `1.0`, where higher values.
+/// indicate higher priority. This type provides multiple initializers for.
 /// convenience when working with numeric values.
 public struct Priority: StandardTag, UrlContent {
 

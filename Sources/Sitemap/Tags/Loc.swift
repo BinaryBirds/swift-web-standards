@@ -2,10 +2,10 @@ import SGML
 
 /// A `<loc>` element specifying the URL of a sitemap entry.
 ///
-/// This element is required by the Sitemap protocol and defines the
+/// This element is required by the Sitemap protocol and defines the.
 /// canonical URL of the referenced resource.
 ///
-/// The value should be a fully qualified URL, including the scheme
+/// The value should be a fully qualified URL, including the scheme.
 /// (for example, `https://example.com/page`).
 public struct Loc: StandardTag, UrlContent {
 
@@ -21,10 +21,10 @@ public struct Loc: StandardTag, UrlContent {
     ///
     /// - Parameter value: A fully qualified URL string.
     ///
-    /// ## Example
-    /// ```swift
-    /// Loc("https://example.com/")
-    /// ```
+    /// ## Example.
+    /// ```swift.
+    /// Loc("https://example.com/").
+    /// ```.
     public init(
         _ value: String
     ) {

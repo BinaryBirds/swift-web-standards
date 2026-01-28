@@ -26,7 +26,7 @@ public struct Media: Rule {
 
         // MARK: -
 
-        /// Scan
+        /// Scan.
         public enum Scan: String, Sendable {
             /// Progressive scan.
             case progressive

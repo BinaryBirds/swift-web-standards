@@ -13,7 +13,7 @@ public struct OverflowWrap: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies whether or not the browser may break lines within words in order to prevent overflow (when a string is too long to fit its containing box)
+    /// Specifies whether or not the browser may break lines within words in order to prevent overflow (when a string is too long to fit its containing box).
     public init(
         _ value: Value
     ) {

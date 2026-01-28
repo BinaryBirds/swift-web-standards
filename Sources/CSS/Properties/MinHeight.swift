@@ -1,6 +1,6 @@
 public struct MinHeight: Property {
     public enum Value: Sendable {
-        /// Default value is 0. Defines the minimum height in px, cm, etc. Read about length units
+        /// Default value is 0. Defines the minimum height in px, cm, etc. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct MinHeight: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the minimum height of an element
+    /// Sets the minimum height of an element.
     public init(
         _ value: Value = .length(0)
     ) {
@@ -32,7 +32,7 @@ public struct MinHeight: Property {
         self.isImportant = false
     }
 
-    /// Sets the minimum height of an element
+    /// Sets the minimum height of an element.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

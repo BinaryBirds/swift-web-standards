@@ -8,7 +8,7 @@ import SGML
 /// Also, do not skip heading levels - start with `<h1>`, then use `<h2>`, and so on.
 public struct H2:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

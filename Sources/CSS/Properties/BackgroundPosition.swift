@@ -1,39 +1,39 @@
 public struct BackgroundPosition: Property {
     public enum Value: Sendable {
-        /// left center
+        /// left center.
         case left
-        /// left top
+        /// left top.
         case leftTop
-        /// left center
+        /// left center.
         case leftCenter
-        /// left bottom
+        /// left bottom.
         case leftBottom
-        /// right center
+        /// right center.
         case right
-        /// right top
+        /// right top.
         case rightTop
-        /// right center
+        /// right center.
         case rightCenter
-        /// right bottom
+        /// right bottom.
         case rightBottom
-        /// center center
+        /// center center.
         case center
-        /// center top
+        /// center top.
         case centerTop
-        /// center center
+        /// center center.
         case centerCenter
-        /// center bottom
+        /// center bottom.
         case centerBottom
         /// The first value is the horizontal position and the second value is the vertical.
         /// The top left corner is 0% 0%. The right bottom corner is 100% 100%.
         /// If you only specify one value, the other value will be 50%. .
-        /// Default value is: 0% 0%
+        /// Default value is: 0% 0%.
         case percent(Double, Double?)
         /// The first value is the horizontal position and the second value is the vertical.
         /// The top left corner is 0 0.
         /// Units can be pixels (0px 0px) or any other CSS units.
         /// If you only specify one value, the other value will be 50%.
-        /// You can mix % and positions
+        /// You can mix % and positions.
         case position(UnitRepresentable, UnitRepresentable?)
         /// Sets this property to its default value.
         case initial
@@ -82,7 +82,7 @@ public struct BackgroundPosition: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the position of a background image
+    /// Specifies the position of a background image.
     public init(
         _ value: Value
     ) {

@@ -3,7 +3,7 @@ import SGML
 /// The `<mark>` tag defines text that should be marked or highlighted.
 public struct Mark:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

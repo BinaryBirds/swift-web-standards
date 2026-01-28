@@ -1,7 +1,7 @@
 public struct FlexGrow: Property {
     public enum Value: Sendable {
 
-        /// A number specifying how much the item will grow relative to the rest of the flexible items. Default value is 0
+        /// A number specifying how much the item will grow relative to the rest of the flexible items. Default value is 0.
         case number(Int)
         /// Sets this property to its default value.
         case initial
@@ -24,7 +24,7 @@ public struct FlexGrow: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies how much the item will grow relative to the rest
+    /// Specifies how much the item will grow relative to the rest.
     public init(
         _ value: Value = .number(0)
     ) {
@@ -33,7 +33,7 @@ public struct FlexGrow: Property {
         self.isImportant = false
     }
 
-    /// Specifies how much the item will grow relative to the rest
+    /// Specifies how much the item will grow relative to the rest.
     public init(_ value: Int = 0) {
         self.init(.number(value))
     }

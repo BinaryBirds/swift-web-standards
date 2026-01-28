@@ -1,6 +1,6 @@
 public struct FontFamily: Property {
     public enum Value: Sendable {
-        /// A prioritized list of font family names and/or generic family names
+        /// A prioritized list of font family names and/or generic family names.
         case family(String)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct FontFamily: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the font family for text
+    /// Specifies the font family for text.
     public init(
         _ value: Value
     ) {

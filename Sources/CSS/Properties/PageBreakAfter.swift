@@ -1,14 +1,14 @@
 public struct PageBreakAfter: Property {
     public enum Value: String, Sendable {
-        /// Default. Automatic page-break
+        /// Default. Automatic page-break.
         case auto
-        /// Always insert a page-break after the element
+        /// Always insert a page-break after the element.
         case always
-        /// Avoid a page-break after the element (if possible)
+        /// Avoid a page-break after the element (if possible).
         case avoid
-        /// Insert page-break after the element so that the next page is formatted as a left page
+        /// Insert page-break after the element so that the next page is formatted as a left page.
         case left
-        /// Insert page-break after the element so that the next page is formatted as a right page
+        /// Insert page-break after the element so that the next page is formatted as a right page.
         case right
         /// Sets this property to its default value.
         case initial
@@ -20,7 +20,7 @@ public struct PageBreakAfter: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the page-break behavior after an element
+    /// Sets the page-break behavior after an element.
     public init(
         _ value: Value = .auto
     ) {

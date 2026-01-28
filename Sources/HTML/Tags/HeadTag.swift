@@ -6,18 +6,18 @@ import SGML
 ///
 /// Metadata typically define the document title, character set, styles, scripts, and other meta information.
 ///
-/// The following elements can go inside the `<head>` element:
+/// The following elements can go inside the `<head>` element:.
 ///
-/// - `<title>` (required in every HTML document)
-/// - `<style>`
-/// - `<base>`
-/// - `<link>`
-/// - `<meta>`
-/// - `<script>`
-/// - `<noscript>`
+/// - `<title>` (required in every HTML document).
+/// - `<style>`.
+/// - `<base>`.
+/// - `<link>`.
+/// - `<meta>`.
+/// - `<script>`.
+/// - `<noscript>`.
 public struct Head:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
 

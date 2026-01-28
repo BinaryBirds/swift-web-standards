@@ -12,10 +12,10 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
 
     public init(stringLiteral value: StringLiteralType) {
         colorValue = value
-        /// check if length is valid (000, #000, cafe00, #cafe00)
+        /// check if length is valid (000, #000, cafe00, #cafe00).
         assert([3, 4, 6, 7].contains(value.count), "Invalid hex string")
 
-        /// add # prefix if missing
+        /// add # prefix if missing.
         if !colorValue.hasPrefix("#") {
             colorValue = "#" + colorValue
         }

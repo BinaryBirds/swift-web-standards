@@ -5,7 +5,7 @@ import SGML
 /// The `<dl>` tag is used in conjunction with `<dt>` (defines terms/names) and `<dd>` (describes each term/name).
 public struct Dl:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

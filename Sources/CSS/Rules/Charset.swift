@@ -1,4 +1,4 @@
-/// Specifies the character encoding to use
+/// Specifies the character encoding to use.
 public struct Charset: Rule {
     var name: String
 

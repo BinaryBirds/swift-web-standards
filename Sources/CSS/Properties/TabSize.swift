@@ -1,8 +1,8 @@
 public struct TabSize: Property {
     public enum Value: Sendable {
-        /// The number of space-characters to be displayed for each tab-character. Default value is 8    Play it »
+        /// The number of space-characters to be displayed for each tab-character. Default value is 8    Play it ».
         case number(Int)
-        /// The length of a tab-character. This property value is not supported in any of the major browsers
+        /// The length of a tab-character. This property value is not supported in any of the major browsers.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct TabSize: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the width of a tab character
+    /// Specifies the width of a tab character.
     public init(
         _ value: Value = .number(8)
     ) {
@@ -36,12 +36,12 @@ public struct TabSize: Property {
         self.isImportant = false
     }
 
-    /// Specifies the width of a tab character
+    /// Specifies the width of a tab character.
     public init(_ value: Int = 8) {
         self.init(.number(value))
     }
 
-    /// Specifies the width of a tab character
+    /// Specifies the width of a tab character.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

@@ -1,12 +1,12 @@
 public struct OutlineWidth: Property {
     public enum Value: Sendable {
-        /// Specifies a medium outline. This is default
+        /// Specifies a medium outline. This is default.
         case medium
-        /// Specifies a thin outline
+        /// Specifies a thin outline.
         case thin
-        /// Specifies a thick outline
+        /// Specifies a thick outline.
         case thick
-        /// Allows you to define the thickness of the outline. Read about length units
+        /// Allows you to define the thickness of the outline. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -35,7 +35,7 @@ public struct OutlineWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the width of an outline
+    /// Sets the width of an outline.
     public init(
         _ value: Value = .medium
     ) {

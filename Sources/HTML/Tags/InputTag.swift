@@ -7,7 +7,7 @@ import SGML
 /// The `<input>` element can be displayed in several ways, depending on the type attribute.
 public struct Input:
     ShortTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     AltAttributeModifier,
     AcceptAttributeModifier,

@@ -5,7 +5,7 @@ import SGML
 /// The `<fieldset>` tag draws a box around the related elements.
 public struct Fieldset:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     DisabledAttributeModifier,
     FormAttributeModifier,

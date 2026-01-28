@@ -1,22 +1,22 @@
 public struct FontSize: Property {
     public enum Value: Sendable {
-        /// Sets the font-size to a medium size. This is default
+        /// Sets the font-size to a medium size. This is default.
         case medium
-        /// Sets the font-size to an xx-small size
+        /// Sets the font-size to an xx-small size.
         case xxSmall
-        /// Sets the font-size to an extra small size
+        /// Sets the font-size to an extra small size.
         case xSmall
-        /// Sets the font-size to a small size
+        /// Sets the font-size to a small size.
         case small
-        /// Sets the font-size to a large size
+        /// Sets the font-size to a large size.
         case large
-        /// Sets the font-size to an extra large size
+        /// Sets the font-size to an extra large size.
         case xLarge
-        /// Sets the font-size to an xx-large size
+        /// Sets the font-size to an xx-large size.
         case xxLarge
-        /// Sets the font-size to a smaller size than the parent element
+        /// Sets the font-size to a smaller size than the parent element.
         case smaller
-        /// Sets the font-size to a larger size than the parent element
+        /// Sets the font-size to a larger size than the parent element.
         case larger
         /// Sets the font-size to a fixed size in px, cm, etc.
         case length(UnitRepresentable)
@@ -59,7 +59,7 @@ public struct FontSize: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the font size of text
+    /// Specifies the font size of text.
     public init(
         _ value: Value = .medium
     ) {

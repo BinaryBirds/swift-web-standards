@@ -1,8 +1,8 @@
 public struct Direction: Property {
     public enum Value: String, Sendable {
-        /// Text direction goes from left-to-right. This is default
+        /// Text direction goes from left-to-right. This is default.
         case ltr
-        /// Text direction goes from right-to-left
+        /// Text direction goes from right-to-left.
         case rtl
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct Direction: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the text direction/writing direction
+    /// Specifies the text direction/writing direction.
     public init(
         _ value: Value = .ltr
     ) {

@@ -1,8 +1,8 @@
 public struct PointerEvents: Property {
     public enum Value: String, Sendable {
-        /// The element reacts to pointer events, like :hover and click. This is default
+        /// The element reacts to pointer events, like :hover and click. This is default.
         case auto
-        /// The element does not react to pointer events
+        /// The element does not react to pointer events.
         case none
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct PointerEvents: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Defines whether or not an element reacts to pointer events
+    /// Defines whether or not an element reacts to pointer events.
     public init(
         _ value: Value = .auto
     ) {

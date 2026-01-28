@@ -5,7 +5,7 @@ import SGML
 /// The `<dialog>` element makes it easy to create popup dialogs and modals on a web page.
 public struct Dialog:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ClosedByAttributeModifier,
     OpenAttributeModifier,

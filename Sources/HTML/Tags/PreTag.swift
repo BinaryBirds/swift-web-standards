@@ -6,7 +6,7 @@ import SGML
 /// The text will be displayed exactly as written in the HTML source code.
 public struct Pre:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

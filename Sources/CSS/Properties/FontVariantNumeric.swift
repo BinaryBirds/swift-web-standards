@@ -20,7 +20,7 @@ public struct FontVariantNumeric: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers
+    /// Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
     public init(
         _ value: Value = .normal
     ) {

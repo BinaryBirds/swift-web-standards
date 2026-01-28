@@ -8,7 +8,7 @@ import SGML
 /// Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
 public struct Script:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     TypeAttributeModifier,
     SrcAttributeModifier,

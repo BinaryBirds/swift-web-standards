@@ -12,10 +12,10 @@ import SGML
 ///
 /// The id attribute is needed to associate the text area with a label.
 ///
-/// **Tip:** Always add the `<label>` tag for best accessibility practices!
+/// **Tip:** Always add the `<label>` tag for best accessibility practices!.
 public struct Textarea:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     AutoCompleteAttributeModifier,
     DisabledAttributeModifier,

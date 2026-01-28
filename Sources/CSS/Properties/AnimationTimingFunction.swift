@@ -1,25 +1,25 @@
 public struct AnimationTimingFunction: Property {
     public enum Value: Sendable {
-        /// The animation has the same speed from start to end
+        /// The animation has the same speed from start to end.
         case linear
-        /// Default value. The animation has a slow start, then fast, before it ends slowly
+        /// Default value. The animation has a slow start, then fast, before it ends slowly.
         case ease
-        /// The animation has a slow start
+        /// The animation has a slow start.
         case easeIn
-        /// The animation has a slow end
+        /// The animation has a slow end.
         case easeOut
-        /// The animation has both a slow start and a slow end
+        /// The animation has both a slow start and a slow end.
         case easeInOut
-        /// Equivalent to steps(1, start)
+        /// Equivalent to steps(1, start).
         case stepStart
-        /// Equivalent to steps(1, end)
+        /// Equivalent to steps(1, end).
         case stepEnd
         /// Specifies a stepping function, with two parameters.
         /// The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0).
-        /// The second parameter, which is optional, is either the value "start" or "end", and specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value "end"
+        /// The second parameter, which is optional, is either the value "start" or "end", and specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value "end".
         case steps(Int, Int?)
-        /// Define your own values in the cubic-bezier function
-        /// Possible values are numeric values from 0 to 1
+        /// Define your own values in the cubic-bezier function.
+        /// Possible values are numeric values from 0 to 1.
         case cubicBezier(Double, Double, Double, Double)
         /// Sets this property to its default value.
         case initial
@@ -62,7 +62,7 @@ public struct AnimationTimingFunction: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the speed curve of an animation
+    /// Specifies the speed curve of an animation.
     public init(
         _ value: Value = .linear
     ) {

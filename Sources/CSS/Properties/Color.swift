@@ -23,7 +23,7 @@ public struct Color: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the color of text
+    /// Sets the color of text.
     public init(
         _ value: Value
     ) {
@@ -32,7 +32,7 @@ public struct Color: Property {
         self.isImportant = false
     }
 
-    /// Sets the color of text
+    /// Sets the color of text.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

@@ -1,8 +1,8 @@
 public struct Left: Property {
     public enum Value: Sendable {
-        /// Lets the browser calculate the left edge position. This is default
+        /// Lets the browser calculate the left edge position. This is default.
         case auto
-        /// Sets the left edge position in px, cm, etc. Negative values are allowed. Read about length units
+        /// Sets the left edge position in px, cm, etc. Negative values are allowed. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct Left: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the left position of a positioned element
+    /// Specifies the left position of a positioned element.
     public init(
         _ value: Value = .auto
     ) {

@@ -9,7 +9,7 @@ import SGML
 /// **Tip:** For unordered list, use the `<ul>` tag.
 public struct Ol:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     ReversedAttributeModifier,
     StartAttributeModifier,
@@ -36,15 +36,15 @@ public struct Ol:
     // MARK: -
 
     public enum Types: String, AttributeValueRepresentable {
-        /// Default. Decimal numbers (1, 2, 3, 4)
+        /// Default. Decimal numbers (1, 2, 3, 4).
         case decimal = "1"
-        /// Alphabetically ordered list, lowercase (a, b, c, d)
+        /// Alphabetically ordered list, lowercase (a, b, c, d).
         case lowerAlpha = "a"
-        /// Alphabetically ordered list, uppercase (A, B, C, D)
+        /// Alphabetically ordered list, uppercase (A, B, C, D).
         case upperAlpha = "A"
-        /// Roman numbers, lowercase (i, ii, iii, iv)
+        /// Roman numbers, lowercase (i, ii, iii, iv).
         case lowerRoman = "i"
-        /// Roman numbers, uppercase (I, II, III, IV)
+        /// Roman numbers, uppercase (I, II, III, IV).
         case upperRoman = "I"
     }
 

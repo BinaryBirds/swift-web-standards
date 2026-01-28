@@ -2,7 +2,7 @@ public enum CSSColorValue: Sendable {
 
     /// Specifies the background color.
     case color(CSSColor)
-    /// Specifies that the background color should be transparent. This is default
+    /// Specifies that the background color should be transparent. This is default.
     case transparent
     /// Sets this property to its default value.
     case initial

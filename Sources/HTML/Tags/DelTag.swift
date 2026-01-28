@@ -5,7 +5,7 @@ import SGML
 /// Browsers will usually strike a line through deleted text.
 public struct Del:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     CiteAttributeModifier,
     DateTimeAttributeModifier,

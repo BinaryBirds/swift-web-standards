@@ -1,8 +1,8 @@
 public struct Top: Property {
     public enum Value: Sendable {
-        /// Lets the browser calculate the top edge position. This is default
+        /// Lets the browser calculate the top edge position. This is default.
         case auto
-        /// Sets the bottom edge position in px, cm, etc. Negative values are allowed. Read about length units
+        /// Sets the bottom edge position in px, cm, etc. Negative values are allowed. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct Top: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the top position of a positioned element
+    /// Specifies the top position of a positioned element.
     public init(
         _ value: Value = .auto
     ) {
@@ -36,7 +36,7 @@ public struct Top: Property {
         self.isImportant = false
     }
 
-    /// Specifies the top position of a positioned element
+    /// Specifies the top position of a positioned element.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

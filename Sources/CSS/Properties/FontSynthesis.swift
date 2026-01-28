@@ -14,7 +14,7 @@ public struct FontSynthesis: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Controls which missing typefaces (bold or italic) may be synthesized by the browser
+    /// Controls which missing typefaces (bold or italic) may be synthesized by the browser.
     public init(
         _ value: Value = .none
     ) {

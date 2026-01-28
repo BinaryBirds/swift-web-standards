@@ -7,7 +7,7 @@ import SGML
 /// **Tip:** Use `<blockquote>` for long quotations.
 public struct Q:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     CiteAttributeModifier,
     // categories

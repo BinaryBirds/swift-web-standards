@@ -1,8 +1,8 @@
 public struct PageBreakInside: Property {
     public enum Value: String, Sendable {
-        /// Default. Automatic page-breaks
+        /// Default. Automatic page-breaks.
         case auto
-        /// Avoid page-break inside the element (if possible)
+        /// Avoid page-break inside the element (if possible).
         case avoid
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct PageBreakInside: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the page-break behavior inside an element
+    /// Sets the page-break behavior inside an element.
     public init(
         _ value: Value = .auto
     ) {

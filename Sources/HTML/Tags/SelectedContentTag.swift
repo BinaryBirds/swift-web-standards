@@ -3,7 +3,7 @@ import SGML
 /// The `<selectedcontent>` tag represents selected content for the parent control.
 public struct SelectedContent:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     PhrasingContent

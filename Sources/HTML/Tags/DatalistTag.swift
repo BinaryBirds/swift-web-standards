@@ -7,7 +7,7 @@ import SGML
 /// The `<datalist>` element's id attribute must be equal to the `<input>` element's list attribute (this binds them together).
 public struct Datalist:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

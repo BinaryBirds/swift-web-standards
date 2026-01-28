@@ -8,16 +8,16 @@ import SGML
 ///
 /// There are three supported video formats in HTML: MP4, WebM, and OGG.
 ///
-///     Browser | MP4 | WebM | Ogg
-///     ------- | --- | ---- | ---
-///     Edge    | YES | YES  | YES
-///     Chrome  | YES | YES  | YES
-///     Firefox | YES | YES  | YES
-///     Safari  | YES | YES  | NO
-///     Opera   | YES | YES  | YES
+///     Browser | MP4 | WebM | Ogg.
+///     ------- | --- | ---- | ---.
+///     Edge    | YES | YES  | YES.
+///     Chrome  | YES | YES  | YES.
+///     Firefox | YES | YES  | YES.
+///     Safari  | YES | YES  | NO.
+///     Opera   | YES | YES  | YES.
 public struct Video:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     SrcAttributeModifier,
     CrossOriginAttributeModifier,

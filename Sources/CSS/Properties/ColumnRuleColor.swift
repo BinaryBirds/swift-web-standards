@@ -23,7 +23,7 @@ public struct ColumnRuleColor: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the color of the rule between columns
+    /// Specifies the color of the rule between columns.
     public init(
         _ value: Value
     ) {
@@ -32,7 +32,7 @@ public struct ColumnRuleColor: Property {
         self.isImportant = false
     }
 
-    /// Specifies the color of the rule between columns
+    /// Specifies the color of the rule between columns.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

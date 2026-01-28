@@ -1,8 +1,8 @@
 public struct CaretColor: Property {
     public enum Value: Sendable {
-        /// Default. Browsers uses the currentColor for the caret
+        /// Default. Browsers uses the currentColor for the caret.
         case auto
-        /// Specifies a color to use for the caret. All legal color values can be used (rgb, hex, named-color, etc). For more information on legal values, read our CSS Colors Tutorial
+        /// Specifies a color to use for the caret. All legal color values can be used (rgb, hex, named-color, etc). For more information on legal values, read our CSS Colors Tutorial.
         case color(CSSColor)
         /// Sets this property to its default value.
         case initial
@@ -27,7 +27,7 @@ public struct CaretColor: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable
+    /// Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable.
     public init(
         _ value: Value = .auto
     ) {
@@ -36,7 +36,7 @@ public struct CaretColor: Property {
         self.isImportant = false
     }
 
-    /// Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable
+    /// Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

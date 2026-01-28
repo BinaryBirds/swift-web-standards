@@ -16,7 +16,7 @@ public struct TextUnderlinePosition: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the position of the underline which is set using the text-decoration property
+    /// Specifies the position of the underline which is set using the text-decoration property.
     public init(
         _ value: Value
     ) {

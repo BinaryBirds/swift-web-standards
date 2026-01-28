@@ -7,7 +7,7 @@ import SGML
 /// Note: The <hgroup> element does not render as anything special in a browser. However, you can use CSS to style the <hgroup> element and its content.
 public struct Hgroup:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

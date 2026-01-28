@@ -1,8 +1,8 @@
 public struct EmptyCells: Property {
     public enum Value: String, Sendable {
-        /// Display borders on empty cells. This is default
+        /// Display borders on empty cells. This is default.
         case show
-        /// Hide borders on empty cells
+        /// Hide borders on empty cells.
         case hide
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct EmptyCells: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies whether or not to display borders and background on empty cells in a table
+    /// Specifies whether or not to display borders and background on empty cells in a table.
     public init(
         _ value: Value = .show
     ) {

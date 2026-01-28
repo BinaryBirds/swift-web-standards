@@ -1,9 +1,9 @@
 public struct ColumnGap: Property {
     public enum Value: Sendable {
 
-        /// A specified length that will set the gap between the columns
+        /// A specified length that will set the gap between the columns.
         case length(UnitRepresentable)
-        /// Default value. Specifies a normal gap between the columns. W3C suggests a value of 1em
+        /// Default value. Specifies a normal gap between the columns. W3C suggests a value of 1em.
         case normal
         /// Sets this property to its default value.
         case initial
@@ -28,7 +28,7 @@ public struct ColumnGap: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the gap between the columns
+    /// Specifies the gap between the columns.
     public init(
         _ value: Value
     ) {
@@ -37,7 +37,7 @@ public struct ColumnGap: Property {
         self.isImportant = false
     }
 
-    /// Specifies the gap between the columns
+    /// Specifies the gap between the columns.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

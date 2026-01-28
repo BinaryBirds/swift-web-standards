@@ -1,8 +1,8 @@
 public struct CaptionSide: Property {
     public enum Value: String, Sendable {
-        /// Puts the caption above the table. This is default
+        /// Puts the caption above the table. This is default.
         case top
-        /// Puts the caption below the table
+        /// Puts the caption below the table.
         case bottom
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct CaptionSide: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the placement of a table caption
+    /// Specifies the placement of a table caption.
     public init(
         _ value: Value
     ) {

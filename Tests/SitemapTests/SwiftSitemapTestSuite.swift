@@ -20,7 +20,6 @@ struct SwiftRSSTestSuite {
         #expect(result == expectation)
     }
 
-
     @Test
     func lastMod() async throws {
         let tag = LastMod("2016-09-01")
@@ -132,7 +131,7 @@ struct SwiftRSSTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
-    
+
     @Test
     func priorityFloatInit() async throws {
         let tag = Priority(Float(0.5))

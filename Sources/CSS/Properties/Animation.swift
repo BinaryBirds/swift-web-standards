@@ -52,7 +52,7 @@ public struct Animation: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// A shorthand property for all the animation-* properties
+    /// A shorthand property for all the animation-* properties.
     public init(
         _ value: Value
     ) {
@@ -61,7 +61,7 @@ public struct Animation: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for all the animation-* properties
+    /// A shorthand property for all the animation-* properties.
     public init(
         _ name: String,
         duration: AnimationDuration.Value? = nil,

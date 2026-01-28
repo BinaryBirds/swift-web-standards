@@ -1,10 +1,10 @@
 public struct BorderWidth: Property {
     public enum Value: Sendable {
-        /// Specifies a medium bottom border. This is default
+        /// Specifies a medium bottom border. This is default.
         case medium
-        /// Specifies a thin bottom border
+        /// Specifies a thin bottom border.
         case thin
-        /// Specifies a thick bottom border
+        /// Specifies a thick bottom border.
         case thick
         /// Allows you to define the thickness of the bottom border.
         case length(UnitRepresentable)
@@ -35,7 +35,7 @@ public struct BorderWidth: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the width of the four borders
+    /// Sets the width of the four borders.
     public init(
         _ value: Value = .medium
     ) {
@@ -44,7 +44,7 @@ public struct BorderWidth: Property {
         self.isImportant = false
     }
 
-    /// Sets the width of the four borders
+    /// Sets the width of the four borders.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

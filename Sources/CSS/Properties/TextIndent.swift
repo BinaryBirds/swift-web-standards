@@ -1,6 +1,6 @@
 public struct TextIndent: Property {
     public enum Value: Sendable {
-        /// Defines a fixed indentation in px, pt, cm, em, etc. Default value is 0. Read about length units
+        /// Defines a fixed indentation in px, pt, cm, em, etc. Default value is 0. Read about length units.
         case length(UnitRepresentable)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct TextIndent: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies the indentation of the first line in a text-block
+    /// Specifies the indentation of the first line in a text-block.
     public init(
         _ value: Value
     ) {
@@ -32,7 +32,7 @@ public struct TextIndent: Property {
         self.isImportant = false
     }
 
-    /// Specifies the indentation of the first line in a text-block
+    /// Specifies the indentation of the first line in a text-block.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

@@ -7,7 +7,7 @@ import SGML
 /// Inside a `<dd>` tag you can put paragraphs, line breaks, images, links, lists, etc.
 public struct Dd:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier
 {
 

@@ -23,7 +23,7 @@ public struct Padding: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets all the Padding properties in one declaration
+    /// Sets all the Padding properties in one declaration.
     public init(
         _ value: Value = .length(0)
     ) {

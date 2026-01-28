@@ -2,7 +2,7 @@ import SGML
 
 /// G tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/G
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/G.
 public struct G: SVGTag {
 
     public var attributes: AttributeStore

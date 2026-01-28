@@ -3,7 +3,7 @@ import SGML
 /// Make some text bold (without marking it as important).
 public struct B:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

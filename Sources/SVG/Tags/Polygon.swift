@@ -2,7 +2,7 @@ import SGML
 
 /// Polygon tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon.
 public struct Polygon: SVGTag {
 
     public var attributes: AttributeStore

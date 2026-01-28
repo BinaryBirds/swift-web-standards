@@ -1,6 +1,6 @@
 public struct Order: Property {
     public enum Value: Sendable {
-        /// Default value 0. Specifies the order for the flexible item
+        /// Default value 0. Specifies the order for the flexible item.
         case number(Int)
         /// Sets this property to its default value.
         case initial
@@ -23,7 +23,7 @@ public struct Order: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the order of the flexible item, relative to the rest
+    /// Sets the order of the flexible item, relative to the rest.
     public init(
         _ value: Value = .number(1)
     ) {
@@ -32,7 +32,7 @@ public struct Order: Property {
         self.isImportant = false
     }
 
-    /// Sets the order of the flexible item, relative to the rest
+    /// Sets the order of the flexible item, relative to the rest.
     public init(_ value: Int = 1) {
         self.init(.number(1))
     }

@@ -6,14 +6,14 @@ import SGML
 ///
 /// **Tip:** This tag is not deprecated. However, it is possible to achieve richer effect by using CSS (see example below).
 ///
-/// Also look at:
-/// - `<samp>`    Defines sample output from a computer program
-/// - `<kbd>`    Defines keyboard input
-/// - `<var>`    Defines a variable
-/// - `<pre>`    Defines preformatted text
+/// Also look at:.
+/// - `<samp>`    Defines sample output from a computer program.
+/// - `<kbd>`    Defines keyboard input.
+/// - `<var>`    Defines a variable.
+/// - `<pre>`    Defines preformatted text.
 public struct Code:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

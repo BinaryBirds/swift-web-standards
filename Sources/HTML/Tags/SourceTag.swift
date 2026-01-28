@@ -6,7 +6,7 @@ import SGML
 /// The browser will choose the first `<source>` it supports.
 public struct Source:
     ShortTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     TypeAttributeModifier,
     MediaAttributeModifier,

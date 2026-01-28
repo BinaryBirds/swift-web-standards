@@ -1,10 +1,10 @@
 public struct AnimationDuration: Property {
     public enum Value: Sendable {
-        /// 0
+        /// 0.
         case zero
-        /// s
+        /// s.
         case seconds(Double)
-        /// ms
+        /// ms.
         case milliseconds(Double)
         /// Sets this property to its default value.
         case initial
@@ -37,7 +37,7 @@ public struct AnimationDuration: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Specifies how long an animation should take to complete one cycle
+    /// Specifies how long an animation should take to complete one cycle.
     public init(
         _ value: Value = .zero
     ) {

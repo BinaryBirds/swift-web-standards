@@ -2,10 +2,10 @@ import SGML
 
 /// A `<changefreq>` element describing how frequently the content of a URL is likely to change.
 ///
-/// This element is part of the Sitemap protocol and provides a hint to search engines
+/// This element is part of the Sitemap protocol and provides a hint to search engines.
 /// about the expected change rate of the referenced URL.
 ///
-/// The value is expressed using a predefined set of frequencies defined by the
+/// The value is expressed using a predefined set of frequencies defined by the.
 /// Sitemap specification.
 public struct ChangeFreq: StandardTag, UrlContent {
 
@@ -46,10 +46,10 @@ public struct ChangeFreq: StandardTag, UrlContent {
     ///
     /// - Parameter value: The expected change frequency of the URL.
     ///
-    /// ## Example
-    /// ```swift
-    /// ChangeFreq(.daily)
-    /// ```
+    /// ## Example.
+    /// ```swift.
+    /// ChangeFreq(.daily).
+    /// ```.
     public init(
         _ value: Frequency
     ) {

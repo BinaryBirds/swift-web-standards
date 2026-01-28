@@ -7,7 +7,7 @@ import SGML
 /// There can only be one single `<base>` element in a document, and it must be inside the `<head>` element.
 public struct Base:
     ShortTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     HrefAttributeModifier,
     TargetAttributeModifier,

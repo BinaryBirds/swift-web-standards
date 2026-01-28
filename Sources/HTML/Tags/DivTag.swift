@@ -6,12 +6,12 @@ import SGML
 ///
 /// The `<div>` tag is easily styled by using the class or id attribute.
 ///
-/// Any sort of content can be put inside the `<div>` tag!
+/// Any sort of content can be put inside the `<div>` tag!.
 ///
 /// **Note:** By default, browsers always place a line break before and after the `<div>` element.
 public struct Div:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

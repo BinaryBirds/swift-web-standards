@@ -9,7 +9,7 @@ import SGML
 /// **Tip:** For ordered lists, use the `<ol>` tag.
 public struct Ul:
     StandardTag,
-    /// attribute modifiers
+    /// attribute modifiers.
     GlobalAttributesModifier,
     // categories
     FlowContent,

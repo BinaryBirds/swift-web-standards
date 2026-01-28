@@ -1,8 +1,8 @@
 public struct ZIndex: Property {
     public enum Value: String, Sendable {
-        /// Sets the stack order equal to its parents. This is default
+        /// Sets the stack order equal to its parents. This is default.
         case auto
-        /// Sets the stack order of the element. Negative numbers are allowed
+        /// Sets the stack order of the element. Negative numbers are allowed.
         case number
         /// Sets this property to its default value.
         case initial
@@ -14,7 +14,7 @@ public struct ZIndex: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the stack order of a positioned element
+    /// Sets the stack order of a positioned element.
     public init(
         _ value: Value = .auto
     ) {
