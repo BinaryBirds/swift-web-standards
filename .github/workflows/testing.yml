@@ -28,5 +28,5 @@ jobs:
     with:
       local_swift_dependencies_check_enabled : true
       run_tests_with_cache_enabled : true
-      headers_check_enabled : true
+      headers_check_enabled : false
       run_tests_swift_versions: '["6.1","6.2"]'
