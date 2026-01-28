@@ -2,7 +2,7 @@ import SGML
 
 /// Ellipse tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse.
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse
 public struct Ellipse: SVGTag {
 
     public var attributes: AttributeStore

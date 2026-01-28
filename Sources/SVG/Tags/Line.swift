@@ -2,7 +2,7 @@ import SGML
 
 /// Line tag.
 ///
-/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line.
+/// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line
 public struct Line: SVGTag {
 
     public var attributes: AttributeStore
