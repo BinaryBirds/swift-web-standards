@@ -25,4 +25,20 @@ struct ColgroupTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func textContent() async throws {
+        let tag = Colgroup("Columns")
+            .id("table-columns")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <colgroup id="table-columns">Columns</colgroup>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }
