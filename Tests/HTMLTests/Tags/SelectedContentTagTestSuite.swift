@@ -4,40 +4,38 @@ import Testing
 @testable import HTML
 
 @Suite
-struct DelTagTestSuite {
+struct SelectedContentTagTestSuite {
 
     @Test
-    func initialization() async throws {
-        let tag = Del {
-            Text("Lorem ipsum")
+    func initializationWithText() async throws {
+        let tag = SelectedContent("Item")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <selectedcontent>Item</selectedcontent>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func initializationWithElements() async throws {
+        let tag = SelectedContent {
+            Span("Selection")
         }
-        .dateTime("2009-10-11T01:25-07:00")
+        .id("current")
 
         let renderer = Renderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <del datetime="2009-10-11T01:25-07:00">Lorem ipsum</del>
+            <selectedcontent id="current"><span>Selection</span></selectedcontent>
             """#
 
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
-
-    @Test
-    func rawTextWithCite() async throws {
-        let tag = Del("<em>Removed</em>")
-            .cite("https://example.com/changes")
-
-        let renderer = Renderer()
-        let doc = Document(root: tag)
-
-        let expectation = #"""
-            <del cite="https://example.com/changes"><em>Removed</em></del>
-            """#
-
-        let result = renderer.render(document: doc)
-        #expect(result == expectation)
-    }
-
 }

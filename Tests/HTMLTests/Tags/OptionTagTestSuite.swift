@@ -21,4 +21,38 @@ struct OptionTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func attributes() async throws {
+        let tag = Option("Swift")
+            .value("swift")
+            .label("Swift Language")
+            .selected()
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <option value="swift" label="Swift Language" selected>Swift</option>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func disabledOption() async throws {
+        let tag = Option("Unavailable")
+            .disabled()
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <option disabled>Unavailable</option>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }

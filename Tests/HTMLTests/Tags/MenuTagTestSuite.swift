@@ -4,40 +4,39 @@ import Testing
 @testable import HTML
 
 @Suite
-struct DelTagTestSuite {
+struct MenuTagTestSuite {
 
     @Test
-    func initialization() async throws {
-        let tag = Del {
-            Text("Lorem ipsum")
+    func initializationWithText() async throws {
+        let tag = Menu("Actions")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <menu>Actions</menu>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func initializationWithElements() async throws {
+        let tag = Menu {
+            Li("Copy")
+            Li("Paste")
         }
-        .dateTime("2009-10-11T01:25-07:00")
+        .id("clipboard")
 
         let renderer = Renderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <del datetime="2009-10-11T01:25-07:00">Lorem ipsum</del>
+            <menu id="clipboard"><li>Copy</li><li>Paste</li></menu>
             """#
 
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
-
-    @Test
-    func rawTextWithCite() async throws {
-        let tag = Del("<em>Removed</em>")
-            .cite("https://example.com/changes")
-
-        let renderer = Renderer()
-        let doc = Document(root: tag)
-
-        let expectation = #"""
-            <del cite="https://example.com/changes"><em>Removed</em></del>
-            """#
-
-        let result = renderer.render(document: doc)
-        #expect(result == expectation)
-    }
-
 }

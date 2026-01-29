@@ -4,20 +4,17 @@ import Testing
 @testable import HTML
 
 @Suite
-struct DelTagTestSuite {
+struct ParamTagTestSuite {
 
     @Test
-    func initialization() async throws {
-        let tag = Del {
-            Text("Lorem ipsum")
-        }
-        .dateTime("2009-10-11T01:25-07:00")
+    func basics() async throws {
+        let tag = Param()
 
         let renderer = Renderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <del datetime="2009-10-11T01:25-07:00">Lorem ipsum</del>
+            <param>
             """#
 
         let result = renderer.render(document: doc)
@@ -25,19 +22,20 @@ struct DelTagTestSuite {
     }
 
     @Test
-    func rawTextWithCite() async throws {
-        let tag = Del("<em>Removed</em>")
-            .cite("https://example.com/changes")
+    func nameAndValue() async throws {
+        let tag = Param()
+            .name(.description)
+            .value("movie")
+            .id("metadata")
 
         let renderer = Renderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <del cite="https://example.com/changes"><em>Removed</em></del>
+            <param name="description" value="movie" id="metadata">
             """#
 
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
-
 }

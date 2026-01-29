@@ -21,4 +21,26 @@ struct BdoTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func initializationWithElements() async throws {
+        let tag = Bdo(
+            {
+                Span("left")
+                Text(" to ")
+                Span("right")
+            },
+            dir: .ltr
+        )
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <bdo dir="ltr"><span>left</span> to <span>right</span></bdo>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }

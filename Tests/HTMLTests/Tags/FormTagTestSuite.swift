@@ -76,4 +76,47 @@ struct FormTagTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
+    @Test
+    func attributes() async throws {
+        let tag = Form {
+            Input()
+                .type(.search)
+                .id("query")
+                .placeholder("Search")
+        }
+        .action("/search")
+        .method(.get)
+        .acceptCharset("utf-8")
+        .autoComplete(.on)
+        .noValidate("novalidate")
+        .rel(.search)
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <form action="/search" method="get" accept-charset="utf-8" autocomplete="on" novalidate="novalidate" rel="search"><input type="search" id="query" placeholder="Search"></form>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func nameAndTarget() async throws {
+        let tag = Form("Form content")
+            .name(.author)
+            .target(.blank)
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <form name="author" target="_blank">Form content</form>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
 }

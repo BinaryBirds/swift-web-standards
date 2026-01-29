@@ -47,4 +47,36 @@ struct UlTagTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
+    @Test
+    func attributes() async throws {
+        let tag = Ul {}
+            .id("menu")
+            .setClass("primary")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <ul id="menu" class="primary"></ul>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func initializationWithText() async throws {
+        let tag = Ul("Item list")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <ul>Item list</ul>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
 }

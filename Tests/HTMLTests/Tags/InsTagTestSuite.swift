@@ -24,4 +24,20 @@ struct InsTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func rawTextWithCite() async throws {
+        let tag = Ins("<strong>Added</strong>")
+            .cite("https://example.com/changes")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <ins cite="https://example.com/changes"><strong>Added</strong></ins>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }

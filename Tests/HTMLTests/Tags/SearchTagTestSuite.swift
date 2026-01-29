@@ -4,40 +4,42 @@ import Testing
 @testable import HTML
 
 @Suite
-struct DelTagTestSuite {
+struct SearchTagTestSuite {
 
     @Test
-    func initialization() async throws {
-        let tag = Del {
-            Text("Lorem ipsum")
+    func initializationWithText() async throws {
+        let tag = Search("Find")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <search>Find</search>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func initializationWithElements() async throws {
+        let tag = Search {
+            Label("Search")
+                .for("query")
+            Input()
+                .type(.search)
+                .id("query")
         }
-        .dateTime("2009-10-11T01:25-07:00")
+        .id("site-search")
 
         let renderer = Renderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <del datetime="2009-10-11T01:25-07:00">Lorem ipsum</del>
+            <search id="site-search"><label for="query">Search</label><input type="search" id="query"></search>
             """#
 
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
-
-    @Test
-    func rawTextWithCite() async throws {
-        let tag = Del("<em>Removed</em>")
-            .cite("https://example.com/changes")
-
-        let renderer = Renderer()
-        let doc = Document(root: tag)
-
-        let expectation = #"""
-            <del cite="https://example.com/changes"><em>Removed</em></del>
-            """#
-
-        let result = renderer.render(document: doc)
-        #expect(result == expectation)
-    }
-
 }
