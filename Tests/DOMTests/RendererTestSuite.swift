@@ -127,6 +127,23 @@ struct RendererTestSuite {
     }
 
     @Test
+    func shortNodeWithIndentation() async throws {
+        let renderer = Renderer(
+            indent: 2
+        )
+        let node = ShortNode(
+            name: "br"
+        )
+
+        let expectation = #"""
+            <br>
+            """#
+
+        let result = renderer.render(node: node)
+        #expect(result == expectation)
+    }
+
+    @Test
     func shortNodeAsChild() async throws {
         let renderer = Renderer(indent: 4)
         let node = StandardNode(
@@ -259,6 +276,59 @@ struct RendererTestSuite {
         let expectation = #"""
             <div>
                 <p>this is a text</p>
+            </div>
+            """#
+
+        let result = renderer.render(node: node)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func commentNodeWithIndentation() async throws {
+        let renderer = Renderer(
+            indent: 2
+        )
+        let node = CommentNode(
+            value: "note"
+        )
+
+        let expectation = #"""
+            <!-- note -->
+            """#
+
+        let result = renderer.render(node: node)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func listNodeWithIndentation() async throws {
+        let renderer = Renderer(
+            indent: 2
+        )
+        let node = StandardNode(
+            name: "div",
+            children: [
+                ListNode(
+                    items: [
+                        TextNode(
+                            value: "one"
+                        ),
+                        ShortNode(
+                            name: "br"
+                        ),
+                        CommentNode(
+                            value: "note"
+                        ),
+                    ]
+                )
+            ]
+        )
+
+        let expectation = #"""
+            <div>
+              one
+              <br>
+              <!-- note -->
             </div>
             """#
 
