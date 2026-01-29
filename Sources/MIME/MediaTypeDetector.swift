@@ -52,19 +52,46 @@ extension MediaType {
         return score + source.score + lengthScore
     }
 }
-
+/// A utility for resolving the most likely media type for a given file extension.
+///
+/// `MediaTypeDetector` evaluates a set of known ``MediaType`` values and
+/// determines the best match based on declared file extensions and an internal
+/// scoring heuristic.
+///
+// MARK: -
+/// A registry for resolving media types based on file extensions.
+///
+/// `MediaTypeDetector` uses a predefined list of known media types to determine
+/// the most likely `MediaType` for a given file extension.
 public struct MediaTypeDetector {
 
-    // MARK: -
-
+    /// The collection of media types known to the detector.
+    ///
+    /// This list is used as the lookup source when resolving file extensions.
     var knownMediaTypes: [MediaType]
 
+    /// Creates a new media type detector.
+    ///
+    /// - Parameter knownMediaTypes: The media types available for detection.
+    ///   Defaults to ``MediaType/all``.
     public init(
         knownMediaTypes: [MediaType] = MediaType.all
     ) {
         self.knownMediaTypes = knownMediaTypes
     }
 
+    /// Returns the most likely media type for a given file extension.
+    ///
+    /// The detector filters all known media types that declare support for the
+    /// provided extension and selects the best candidate based on an internal
+    /// scoring heuristic.
+    ///
+    /// If multiple media types match the same extension, the one with the
+    /// highest adjusted score is returned.
+    ///
+    /// - Parameter ext: A file extension (without a leading dot).
+    /// - Returns: The most likely matching `MediaType`, or `nil` if no match
+    ///   is found.
     public func getPossibleMediaTypeForExtension(
         _ ext: String
     ) -> MediaType? {
@@ -85,7 +112,5 @@ public struct MediaTypeDetector {
         }
         return type
     }
-
-    // MARK: -
-
 }
+// MARK: -
