@@ -38,4 +38,3 @@ struct LineTests {
         #expect(result == expectation)
     }
 }
-

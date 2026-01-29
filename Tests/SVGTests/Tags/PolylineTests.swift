@@ -38,4 +38,3 @@ struct PolylineTests {
         #expect(result == expectation)
     }
 }
-

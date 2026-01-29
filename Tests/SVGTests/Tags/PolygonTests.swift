@@ -38,4 +38,3 @@ struct PolygonTests {
         #expect(result == expectation)
     }
 }
-

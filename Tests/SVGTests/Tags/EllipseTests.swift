@@ -38,4 +38,3 @@ struct EllipseTests {
         #expect(result == expectation)
     }
 }
-
