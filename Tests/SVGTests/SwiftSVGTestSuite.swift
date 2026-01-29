@@ -241,4 +241,106 @@ struct SwiftSVGTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
+    // MARK: - New tests: stroke-linecap / stroke-linejoin / transform
+
+    @Test
+    func strokeLinecapAttribute() async throws {
+        let tag = Circle(cx: 1, cy: 2, r: 3)
+            .strokeLinecap("round")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <circle cx="1" cy="2" r="3" stroke-linecap="round"></circle>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func strokeLinejoinAttribute() async throws {
+        let tag = Circle(cx: 1, cy: 2, r: 3)
+            .strokeLinejoin("bevel")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <circle cx="1" cy="2" r="3" stroke-linejoin="bevel"></circle>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func transformAttributeUsingHelper() async throws {
+        let tag = Text("I love SVG")
+            .transform("rotate(30 20 40)")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <text transform="rotate(30 20 40)">I love SVG</text>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func chainingStrokeLinecapStrokeLinejoinAndTransform() async throws {
+        let tag = Circle(cx: 40, cy: 40, r: 20)
+            .stroke("green")
+            .strokeWidth(5)
+            .strokeLinecap("round")
+            .strokeLinejoin("miter")
+            .transform("translate(10 20)")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <circle cx="40" cy="40" r="20" stroke="green" stroke-width="5" stroke-linecap="round" stroke-linejoin="miter" transform="translate(10 20)"></circle>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    // MARK: - New tests: Path(pathLength:) and Circle(pathLength:)
+
+    @Test
+    func pathWithPathLength() async throws {
+        let tag = Path("1 2 3", pathLength: 7)
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <path d="1 2 3" pathLength="7"></path>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func circleWithPathLength() async throws {
+        let tag = Circle(cx: 1, cy: 2, r: 3, pathLength: 9)
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <circle cx="1" cy="2" r="3" pathLength="9"></circle>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
 }
