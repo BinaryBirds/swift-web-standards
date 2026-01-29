@@ -1,5 +1,6 @@
 extension Attributes where Self: Mutable {
 
+    /// Sets an attribute value using an attribute key.
     public func setAttribute<Key: AttributeKeyRepresentable>(
         key: Key,
         value: String? = nil
@@ -7,6 +8,7 @@ extension Attributes where Self: Mutable {
         setAttribute(name: key.attributeKey, value: value)
     }
 
+    /// Adds an attribute value using an attribute key.
     public func addAttribute<Key: AttributeKeyRepresentable>(
         key: Key,
         value: String?
@@ -14,12 +16,14 @@ extension Attributes where Self: Mutable {
         addAttribute(name: key.attributeKey, value: value)
     }
 
+    /// Removes an attribute or attribute value using an attribute key.
     public func removeAttribute<Key: AttributeKeyRepresentable>(
         key: Key
     ) -> Self {
         removeAttribute(name: key.attributeKey)
     }
 
+    /// Removes an attribute or attribute value using an attribute key.
     public func removeAttribute<Key: AttributeKeyRepresentable>(
         key: Key,
         value: String?,
@@ -32,18 +36,21 @@ extension Attributes where Self: Mutable {
         )
     }
 
+    /// Returns an attribute value using an attribute key.
     public func getAttribute<Key: AttributeKeyRepresentable>(
         key: Key
     ) -> String? {
         getAttribute(name: key.attributeKey)
     }
 
+    /// Returns whether an attribute is present using an attribute key.
     public func hasAttribute<Key: AttributeKeyRepresentable>(
         key: Key
     ) -> Bool {
         hasAttribute(name: key.attributeKey)
     }
 
+    /// Returns whether an attribute is present using an attribute key.
     public func hasAttribute<Key: AttributeKeyRepresentable>(
         key: Key,
         value: String?
@@ -53,6 +60,7 @@ extension Attributes where Self: Mutable {
 
     // MARK: -
 
+    /// Sets an attribute value using an attribute key.
     public func setAttribute<Key: AttributeKeyRepresentable>(
         key: Key,
         value: Int?
@@ -60,6 +68,7 @@ extension Attributes where Self: Mutable {
         setAttribute(name: key.attributeKey, value: value.map(String.init))
     }
 
+    /// Returns an attribute value using an attribute key.
     public func getAttribute<Key: AttributeKeyRepresentable>(
         key: Key
     ) -> Int? {

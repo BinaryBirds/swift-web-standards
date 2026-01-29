@@ -1,15 +1,19 @@
 import DOM
 
+/// Renders SGML documents to strings.
 public struct Renderer: Sendable {
 
+    /// The indentation level used during rendering.
     public var indent: UInt8
 
+    /// Creates a renderer.
     public init(
         indent: UInt8 = 0
     ) {
         self.indent = indent
     }
 
+    /// Renders a document to a string.
     public func render(
         document: Document
     ) -> String {

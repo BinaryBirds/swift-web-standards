@@ -1,16 +1,19 @@
 import Collections
 import DOM
 
+/// Stores attribute names and values for elements.
 public struct AttributeStore: Sendable {
 
     private var storage: OrderedDictionary<String, [String?]>
 
+    /// Creates an attribute store.
     public init() {
         self.storage = [:]
     }
 
     // MARK: - api
 
+    /// Sets an attribute value, replacing any existing value.
     public mutating func set(
         name: String,
         value: String?
@@ -18,6 +21,7 @@ public struct AttributeStore: Sendable {
         storage[name] = [value]
     }
 
+    /// Adds an attribute value, preserving existing values.
     public mutating func add(
         name: String,
         value: String?
@@ -34,12 +38,14 @@ public struct AttributeStore: Sendable {
         storage[name]?.append(value)
     }
 
+    /// Removes an attribute or attribute value.
     public mutating func remove(
         name: String
     ) {
         storage[name] = nil
     }
 
+    /// Removes an attribute or attribute value.
     public mutating func remove(
         name: String,
         value: String?,
@@ -57,12 +63,14 @@ public struct AttributeStore: Sendable {
         }
     }
 
+    /// Returns whether an attribute is present.
     public func has(
         name: String
     ) -> Bool {
         storage[name] != nil
     }
 
+    /// Returns whether an attribute is present.
     public func has(
         name: String,
         value: String?
@@ -73,6 +81,7 @@ public struct AttributeStore: Sendable {
         return false
     }
 
+    /// Returns the combined attribute value.
     public func get(
         name: String
     ) -> String? {
@@ -81,6 +90,7 @@ public struct AttributeStore: Sendable {
 
     // MARK: - DOM
 
+    /// The attribute properties suitable for DOM rendering.
     public var properties: [Property] {
         storage.map { name, value in
             let values = value.compactMap { $0 }
