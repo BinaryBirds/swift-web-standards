@@ -29,4 +29,14 @@ struct ColumnsTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let values = Columns(.length(240.px), 3)
+        let initial = Columns(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(values) == "columns: 240px 3")
+        #expect(renderer.renderProperty(initial) == "columns: initial")
+    }
 }

@@ -1,4 +1,7 @@
+/// CSS `isolation` property.
+/// Provides typed values for this declaration.
 public struct Isolation: Property {
+    /// Value options for the `isolation` property.
     public enum Value: String, Sendable {
         /// Default. A new stacking context is created only if one of the properties applied to the element requires it.
         case auto
@@ -15,6 +18,7 @@ public struct Isolation: Property {
     public var isImportant: Bool
 
     /// Defines whether an element must create a new stacking content.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

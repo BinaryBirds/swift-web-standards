@@ -29,4 +29,18 @@ struct TextCombineUprightTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let none = TextCombineUpright(.none)
+        let all = TextCombineUpright(.all)
+        let digits = TextCombineUpright(.digits(2))
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(none) == "text-combine-upright: none")
+        #expect(renderer.renderProperty(all) == "text-combine-upright: all")
+        #expect(
+            renderer.renderProperty(digits) == "text-combine-upright: digits 2"
+        )
+    }
 }

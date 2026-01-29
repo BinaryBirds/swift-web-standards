@@ -1,4 +1,7 @@
+/// CSS `right` property.
+/// Provides typed values for this declaration.
 public struct Right: Property {
+    /// Value options for the `right` property.
     public enum Value: Sendable {
         /// Lets the browser calculate the right edge position. This is default.
         case auto
@@ -28,6 +31,7 @@ public struct Right: Property {
     public var isImportant: Bool
 
     /// Specifies the right position of a positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {
@@ -37,6 +41,7 @@ public struct Right: Property {
     }
 
     /// Specifies the right position of a positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: UnitRepresentable
     ) {

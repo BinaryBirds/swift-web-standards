@@ -1,4 +1,7 @@
+/// CSS `border-image-outset` property.
+/// Provides typed values for this declaration.
 public struct BorderImageOutset: Property {
+    /// Value options for the `border-image-outset` property.
     public enum Value: Sendable {
         /// A length unit specifying how far from the edges the border-image will appear. Default value is 0.
         case length(UnitRepresentable)
@@ -28,6 +31,7 @@ public struct BorderImageOutset: Property {
     public var isImportant: Bool
 
     /// Specifies the amount by which the border image area extends beyond the border box.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

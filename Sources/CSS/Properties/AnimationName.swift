@@ -1,4 +1,7 @@
+/// CSS `animation-name` property.
+/// Provides typed values for this declaration.
 public struct AnimationName: Property {
+    /// Value options for the `animation-name` property.
     public enum Value: ExpressibleByStringLiteral, Sendable {
 
         /// Specifies the name of the keyframe you want to bind to the selector.
@@ -10,6 +13,9 @@ public struct AnimationName: Property {
         /// Inherits this property from its parent element.
         case inherit
 
+        /// Creates a `animation-name` declaration.
+        /// Used by `StylesheetRenderer` when emitting CSS.
+        /// - Parameter value: The property value.
         public init(stringLiteral value: StringLiteralType) {
             self = .keyframename(value)
         }
@@ -33,6 +39,7 @@ public struct AnimationName: Property {
     public var isImportant: Bool
 
     /// Specifies a name for the @keyframes animation.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

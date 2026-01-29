@@ -1,3 +1,4 @@
+/// CSS color value supporting named, hex, and functional forms.
 public struct CSSColor: Sendable, ExpressibleByStringLiteral {
 
     private var colorValue: String
@@ -10,6 +11,10 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
     //        css = hex
     //    }
 
+    /// Creates a color from a hex string literal.
+    ///
+    /// Valid lengths are 3, 4, 6, or 7 characters, with an optional `#` prefix.
+    /// - Parameter value: The hex string literal.
     public init(stringLiteral value: StringLiteralType) {
         colorValue = value
         /// check if length is valid (000, #000, cafe00, #cafe00).
@@ -21,6 +26,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
         }
     }
 
+    /// Creates an RGB or RGBA color from integer channels.
+    /// - Parameters:
+    ///   - r: Red channel (0...255).
+    ///   - g: Green channel (0...255).
+    ///   - b: Blue channel (0...255).
+    ///   - a: Optional alpha channel (0.0...1.0).
     public init(r: Int, g: Int, b: Int, a: Double? = nil) {
         colorValue = "\(r),\(g),\(b)"
         if let a = a {
@@ -31,6 +42,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
         }
     }
 
+    /// Creates an RGB or RGBA color from percentage channels.
+    /// - Parameters:
+    ///   - r: Red percent (0...100).
+    ///   - g: Green percent (0...100).
+    ///   - b: Blue percent (0...100).
+    ///   - a: Optional alpha channel (0.0...1.0).
     public init(r: Double, g: Double, b: Double, a: Double? = nil) {
         colorValue = "\(r)%,\(g)%,\(b)%"
         if let a = a {
@@ -41,6 +58,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
         }
     }
 
+    /// Creates an HSL or HSLA color from integer channels.
+    /// - Parameters:
+    ///   - h: Hue degrees.
+    ///   - s: Saturation percent.
+    ///   - l: Lightness percent.
+    ///   - a: Optional alpha channel (0.0...1.0).
     public init(h: Int, s: Int, l: Int, a: Double? = nil) {
         colorValue = "\(h),\(s),\(l)"
         if let a = a {
@@ -51,6 +74,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
         }
     }
 
+    /// Creates an HSL or HSLA color from percentage channels.
+    /// - Parameters:
+    ///   - h: Hue percent.
+    ///   - s: Saturation percent.
+    ///   - l: Lightness percent.
+    ///   - a: Optional alpha channel (0.0...1.0).
     public init(h: Double, s: Double, l: Double, a: Double? = nil) {
         colorValue = "\(h)%,\(s)%,\(l)%"
         if let a = a {
@@ -61,6 +90,7 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
         }
     }
 
+    /// Rendered CSS color string.
     var rawValue: String {
         colorValue
     }

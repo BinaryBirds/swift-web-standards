@@ -1,4 +1,7 @@
+/// CSS `min-height` property.
+/// Provides typed values for this declaration.
 public struct MinHeight: Property {
+    /// Value options for the `min-height` property.
     public enum Value: Sendable {
         /// Default value is 0. Defines the minimum height in px, cm, etc. Read about length units.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct MinHeight: Property {
     public var isImportant: Bool
 
     /// Sets the minimum height of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .length(0)
     ) {
@@ -33,6 +37,7 @@ public struct MinHeight: Property {
     }
 
     /// Sets the minimum height of an element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

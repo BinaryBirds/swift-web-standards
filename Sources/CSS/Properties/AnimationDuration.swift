@@ -1,4 +1,7 @@
+/// CSS `animation-duration` property.
+/// Provides typed values for this declaration.
 public struct AnimationDuration: Property {
+    /// Value options for the `animation-duration` property.
     public enum Value: Sendable {
         /// 0.
         case zero
@@ -38,6 +41,7 @@ public struct AnimationDuration: Property {
     public var isImportant: Bool
 
     /// Specifies how long an animation should take to complete one cycle.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .zero
     ) {

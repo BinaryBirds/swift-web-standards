@@ -1,4 +1,7 @@
+/// CSS `font-weight` property.
+/// Provides typed values for this declaration.
 public struct FontWeight: Property {
+    /// Value options for the `font-weight` property.
     public enum Value: String, Sendable {
         /// Defines normal characters. This is default.
         case normal
@@ -30,6 +33,7 @@ public struct FontWeight: Property {
     public var isImportant: Bool
 
     /// Specifies the weight of a font.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

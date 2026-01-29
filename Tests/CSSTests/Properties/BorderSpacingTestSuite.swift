@@ -29,4 +29,16 @@ struct BorderSpacingTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let single = BorderSpacing(.length(8.px, nil))
+        let pair = BorderSpacing(.length(8.px, 12.px))
+        let inherit = BorderSpacing(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(single) == "border-spacing: 8px")
+        #expect(renderer.renderProperty(pair) == "border-spacing: 8px 12px")
+        #expect(renderer.renderProperty(inherit) == "border-spacing: inherit")
+    }
 }

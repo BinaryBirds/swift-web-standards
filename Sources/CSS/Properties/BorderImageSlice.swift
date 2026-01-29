@@ -1,4 +1,7 @@
+/// CSS `border-image-slice` property.
+/// Provides typed values for this declaration.
 public struct BorderImageSlice: Property {
+    /// Value options for the `border-image-slice` property.
     public enum Value: Sendable {
         /// The number(s) represent pixels for raster images or coordinates for vector images.
         case number(UnitRepresentable)
@@ -28,6 +31,7 @@ public struct BorderImageSlice: Property {
     public var isImportant: Bool
 
     /// Specifies how to slice the border image.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

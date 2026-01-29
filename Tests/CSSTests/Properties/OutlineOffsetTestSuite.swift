@@ -29,4 +29,16 @@ struct OutlineOffsetTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = OutlineOffset(.length(12.px))
+        let initial = OutlineOffset(.initial)
+        let inherit = OutlineOffset(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "outline-offset: 12px")
+        #expect(renderer.renderProperty(initial) == "outline-offset: initial")
+        #expect(renderer.renderProperty(inherit) == "outline-offset: inherit")
+    }
 }

@@ -29,4 +29,23 @@ struct AnimationDurationTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let zero = AnimationDuration(.zero)
+        let seconds = AnimationDuration(.seconds(1.25))
+        let milliseconds = AnimationDuration(.milliseconds(90))
+        let inherit = AnimationDuration(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(zero) == "animation-duration: 0")
+        #expect(renderer.renderProperty(seconds) == "animation-duration: 1.25s")
+        #expect(
+            renderer.renderProperty(milliseconds)
+                == "animation-duration: 90.0ms"
+        )
+        #expect(
+            renderer.renderProperty(inherit) == "animation-duration: inherit"
+        )
+    }
 }

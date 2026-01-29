@@ -1,4 +1,7 @@
+/// CSS `font-stretch` property.
+/// Provides typed values for this declaration.
 public struct FontStretch: Property {
+    /// Value options for the `font-stretch` property.
     public enum Value: String, Sendable {
         /// Makes the text as narrow as it gets.
         case ultraCondensed = "ultra-condensed"
@@ -29,6 +32,7 @@ public struct FontStretch: Property {
     public var isImportant: Bool
 
     /// Selects a normal, condensed, or expanded face from a font family.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

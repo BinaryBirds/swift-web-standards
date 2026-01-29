@@ -29,4 +29,20 @@ struct ContentTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let normal = Content(.normal)
+        let none = Content(.none)
+        let string = Content(.string("hello"))
+        let openQuote = Content(.openQuote)
+        let closeQuote = Content(.closeQuote)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(normal) == "content: normal")
+        #expect(renderer.renderProperty(none) == "content: none")
+        #expect(renderer.renderProperty(string) == "content: hello")
+        #expect(renderer.renderProperty(openQuote) == "content: open-quote")
+        #expect(renderer.renderProperty(closeQuote) == "content: close-quote")
+    }
 }

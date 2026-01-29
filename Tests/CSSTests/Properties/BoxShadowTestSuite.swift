@@ -29,4 +29,21 @@ struct BoxShadowTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let property = BoxShadow(
+            2.px,
+            4.px,
+            blur: 6.px,
+            spread: 8.px,
+            color: .black,
+            type: .inset
+        )
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        #expect(result == "box-shadow: 2px 4px 6px 8px black inset")
+    }
 }

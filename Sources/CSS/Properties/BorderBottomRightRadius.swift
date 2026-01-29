@@ -1,4 +1,7 @@
+/// CSS `border-bottom-right-radius` property.
+/// Provides typed values for this declaration.
 public struct BorderBottomRightRadius: Property {
+    /// Value options for the `border-bottom-right-radius` property.
     public enum Value: Sendable {
         /// Defines the shape of the corners. Default value is 0. Read about length units.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct BorderBottomRightRadius: Property {
     public var isImportant: Bool
 
     /// Defines the radius of the border of the bottom-right corner.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

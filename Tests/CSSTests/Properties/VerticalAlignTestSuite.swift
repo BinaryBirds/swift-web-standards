@@ -29,4 +29,16 @@ struct VerticalAlignTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let keyword = VerticalAlign(.super)
+        let length = VerticalAlign(6.px)
+        let middle = VerticalAlign(.middle)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(keyword) == "vertical-align: super")
+        #expect(renderer.renderProperty(length) == "vertical-align: 6px")
+        #expect(renderer.renderProperty(middle) == "vertical-align: middle")
+    }
 }

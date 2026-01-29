@@ -1,4 +1,7 @@
+/// CSS `font-style` property.
+/// Provides typed values for this declaration.
 public struct FontStyle: Property {
+    /// Value options for the `font-style` property.
     public enum Value: String, Sendable {
         /// The browser displays a normal font style. This is default.
         case normal
@@ -17,6 +20,7 @@ public struct FontStyle: Property {
     public var isImportant: Bool
 
     /// Specifies the font style for text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

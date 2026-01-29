@@ -1,4 +1,7 @@
+/// CSS `transition` property.
+/// Provides typed values for this declaration.
 public struct Transition: Property {
+    /// Value options for the `transition` property.
     public enum Value: Sendable {
         /// transition-property    Specifies the name of the CSS property the transition effect is for.
         /// transition-duration    Specifies how many seconds or milliseconds the transition effect takes to complete.
@@ -41,6 +44,9 @@ public struct Transition: Property {
     public let value: String
     public var isImportant: Bool
 
+    /// Creates a `transition` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

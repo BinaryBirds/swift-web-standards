@@ -1,4 +1,7 @@
+/// CSS `clip` property.
+/// Provides typed values for this declaration.
 public struct Clip: Property {
+    /// Value options for the `clip` property.
     public enum Value: Sendable {
         /// No clipping will be applied. This is default    Play it ».
         case auto
@@ -28,6 +31,7 @@ public struct Clip: Property {
     public var isImportant: Bool
 
     /// Clips an absolutely positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

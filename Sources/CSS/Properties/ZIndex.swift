@@ -1,4 +1,7 @@
+/// CSS `z-index` property.
+/// Provides typed values for this declaration.
 public struct ZIndex: Property {
+    /// Value options for the `z-index` property.
     public enum Value: String, Sendable {
         /// Sets the stack order equal to its parents. This is default.
         case auto
@@ -15,6 +18,7 @@ public struct ZIndex: Property {
     public var isImportant: Bool
 
     /// Sets the stack order of a positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

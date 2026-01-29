@@ -1,4 +1,7 @@
+/// CSS `column-rule` property.
+/// Provides typed values for this declaration.
 public struct ColumnRule: Property {
+    /// Value options for the `column-rule` property.
     public enum Value: Sendable {
         case values(
             ColumnRuleWidth.Value,
@@ -28,6 +31,7 @@ public struct ColumnRule: Property {
     public var isImportant: Bool
 
     /// A shorthand property for all the column-rule-* properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -37,6 +41,10 @@ public struct ColumnRule: Property {
     }
 
     /// A shorthand property for all the column-rule-* properties.
+    /// - Parameters:
+    ///   - width: The width value.
+    ///   - style: The style value.
+    ///   - color: The color value.
     public init(
         _ width: ColumnRuleWidth.Value,
         _ style: ColumnRuleStyle.Value,

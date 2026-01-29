@@ -1,4 +1,7 @@
+/// CSS `visibility` property.
+/// Provides typed values for this declaration.
 public struct Visibility: Property {
+    /// Value options for the `visibility` property.
     public enum Value: String, Sendable {
         /// Default value. The element is visible.
         case visible
@@ -20,6 +23,7 @@ public struct Visibility: Property {
     public var isImportant: Bool
 
     /// Specifies whether or not an element is visible.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .visible
     ) {

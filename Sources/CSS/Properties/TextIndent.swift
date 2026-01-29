@@ -1,4 +1,7 @@
+/// CSS `text-indent` property.
+/// Provides typed values for this declaration.
 public struct TextIndent: Property {
+    /// Value options for the `text-indent` property.
     public enum Value: Sendable {
         /// Defines a fixed indentation in px, pt, cm, em, etc. Default value is 0. Read about length units.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct TextIndent: Property {
     public var isImportant: Bool
 
     /// Specifies the indentation of the first line in a text-block.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -33,6 +37,7 @@ public struct TextIndent: Property {
     }
 
     /// Specifies the indentation of the first line in a text-block.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

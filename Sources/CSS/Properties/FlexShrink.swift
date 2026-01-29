@@ -1,4 +1,7 @@
+/// CSS `flex-shrink` property.
+/// Provides typed values for this declaration.
 public struct FlexShrink: Property {
+    /// Value options for the `flex-shrink` property.
     public enum Value: Sendable {
 
         /// A number specifying how much the item will shrink relative to the rest of the flexible items. Default value is 1.
@@ -25,6 +28,7 @@ public struct FlexShrink: Property {
     public var isImportant: Bool
 
     /// Specifies how the item will shrink relative to the rest.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .number(1)
     ) {
@@ -34,6 +38,7 @@ public struct FlexShrink: Property {
     }
 
     /// Specifies how the item will shrink relative to the rest.
+    /// - Parameter value: The property value.
     public init(_ value: Int = 1) {
         self.init(.number(value))
     }

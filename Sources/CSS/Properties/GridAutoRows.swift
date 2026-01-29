@@ -1,6 +1,9 @@
 /// Specifies a default row size.
 
+/// CSS `grid-auto-rows` property.
+/// Provides typed values for this declaration.
 public struct GridAutoRows: Property {
+    /// Value options for the `grid-auto-rows` property.
     public enum Value: Sendable {
         /// Default value. The size of the rows is determined by the size of the largest item in the row.
         case auto
@@ -30,6 +33,7 @@ public struct GridAutoRows: Property {
     public var isImportant: Bool
 
     /// Specifies a default row size.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

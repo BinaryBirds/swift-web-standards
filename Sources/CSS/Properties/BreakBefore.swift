@@ -1,4 +1,7 @@
+/// CSS `break-before` property.
+/// Provides typed values for this declaration.
 public struct BreakBefore: Property {
+    /// Value options for the `break-before` property.
     public enum Value: String, Sendable {
         /// Default. Automatic page/column/region break before the element.
         case auto
@@ -39,6 +42,7 @@ public struct BreakBefore: Property {
     public var isImportant: Bool
 
     /// Specifies whether or not a page-, column-, or region-break should occur before the specified element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

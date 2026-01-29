@@ -1,4 +1,7 @@
+/// CSS `font-family` property.
+/// Provides typed values for this declaration.
 public struct FontFamily: Property {
+    /// Value options for the `font-family` property.
     public enum Value: Sendable {
         /// A prioritized list of font family names and/or generic family names.
         case family(String)
@@ -24,6 +27,7 @@ public struct FontFamily: Property {
     public var isImportant: Bool
 
     /// Specifies the font family for text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

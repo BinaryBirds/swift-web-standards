@@ -1,4 +1,7 @@
+/// CSS `border-width` property.
+/// Provides typed values for this declaration.
 public struct BorderWidth: Property {
+    /// Value options for the `border-width` property.
     public enum Value: Sendable {
         /// Specifies a medium bottom border. This is default.
         case medium
@@ -36,6 +39,7 @@ public struct BorderWidth: Property {
     public var isImportant: Bool
 
     /// Sets the width of the four borders.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .medium
     ) {
@@ -45,6 +49,7 @@ public struct BorderWidth: Property {
     }
 
     /// Sets the width of the four borders.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

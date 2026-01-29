@@ -1,4 +1,7 @@
+/// CSS `border-style` property.
+/// Provides typed values for this declaration.
 public struct BorderStyle: Property {
+    /// Value options for the `border-style` property.
     public enum Value: String, Sendable {
         /// Specifies no border. This is default    Play it ».
         case none
@@ -31,6 +34,7 @@ public struct BorderStyle: Property {
     public var isImportant: Bool
 
     /// Sets the style of the four borders.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

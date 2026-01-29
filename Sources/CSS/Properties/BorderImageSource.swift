@@ -1,4 +1,7 @@
+/// CSS `border-image-source` property.
+/// Provides typed values for this declaration.
 public struct BorderImageSource: Property {
+    /// Value options for the `border-image-source` property.
     public enum Value: Sendable {
         /// No image will be used.
         case none
@@ -28,6 +31,7 @@ public struct BorderImageSource: Property {
     public var isImportant: Bool
 
     /// Specifies the path to the image to be used as a border.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

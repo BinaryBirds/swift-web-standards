@@ -1,4 +1,7 @@
+/// CSS `box-sizing` property.
+/// Provides typed values for this declaration.
 public struct BoxSizing: Property {
+    /// Value options for the `box-sizing` property.
     public enum Value: String, Sendable {
         /// Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included.
         case contentBox = "content-box"
@@ -15,6 +18,7 @@ public struct BoxSizing: Property {
     public var isImportant: Bool
 
     /// Defines how the width and height of an element are calculated: should they include padding and borders, or not.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .contentBox
     ) {

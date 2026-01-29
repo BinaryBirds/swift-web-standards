@@ -1,3 +1,5 @@
+/// CSS `border-left-color` property.
+/// Provides typed values for this declaration.
 public struct BorderLeftColor: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct BorderLeftColor: Property {
     public var isImportant: Bool
 
     /// Sets the color of the left border.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColorValue) {
         self.name = "border-left-color"
         self.value = value.rawValue

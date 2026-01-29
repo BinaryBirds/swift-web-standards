@@ -1,4 +1,7 @@
+/// CSS `page-break-inside` property.
+/// Provides typed values for this declaration.
 public struct PageBreakInside: Property {
+    /// Value options for the `page-break-inside` property.
     public enum Value: String, Sendable {
         /// Default. Automatic page-breaks.
         case auto
@@ -15,6 +18,7 @@ public struct PageBreakInside: Property {
     public var isImportant: Bool
 
     /// Sets the page-break behavior inside an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

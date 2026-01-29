@@ -1,4 +1,7 @@
+/// CSS `text-justify` property.
+/// Provides typed values for this declaration.
 public struct TextJustify: Property {
+    /// Value options for the `text-justify` property.
     public enum Value: String, Sendable {
         /// The browser determines the justification algorithm    Play it ».
         case auto
@@ -19,6 +22,7 @@ public struct TextJustify: Property {
     public var isImportant: Bool
 
     /// Specifies the justification method used when text-align is "justify".
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

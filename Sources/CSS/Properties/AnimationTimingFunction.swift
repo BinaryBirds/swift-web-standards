@@ -1,4 +1,7 @@
+/// CSS `animation-timing-function` property.
+/// Provides typed values for this declaration.
 public struct AnimationTimingFunction: Property {
+    /// Value options for the `animation-timing-function` property.
     public enum Value: Sendable {
         /// The animation has the same speed from start to end.
         case linear
@@ -63,6 +66,7 @@ public struct AnimationTimingFunction: Property {
     public var isImportant: Bool
 
     /// Specifies the speed curve of an animation.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .linear
     ) {

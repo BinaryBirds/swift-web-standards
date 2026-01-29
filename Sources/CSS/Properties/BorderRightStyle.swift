@@ -1,3 +1,5 @@
+/// CSS `border-right-style` property.
+/// Provides typed values for this declaration.
 public struct BorderRightStyle: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct BorderRightStyle: Property {
     public var isImportant: Bool
 
     /// Sets the style of the right border.
+    /// - Parameter value: The property value.
     public init(_ value: BorderStyle.Value = .none) {
         self.name = "border-right-style"
         self.value = value.rawValue

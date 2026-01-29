@@ -1,4 +1,7 @@
+/// CSS `column-width` property.
+/// Provides typed values for this declaration.
 public struct ColumnWidth: Property {
+    /// Value options for the `column-width` property.
     public enum Value: Sendable {
         /// Default value. The column width will be determined by the browser.
         case auto
@@ -28,6 +31,7 @@ public struct ColumnWidth: Property {
     public var isImportant: Bool
 
     /// Specifies the column width.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

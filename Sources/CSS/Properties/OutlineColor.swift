@@ -1,4 +1,7 @@
+/// CSS `outline-color` property.
+/// Provides typed values for this declaration.
 public struct OutlineColor: Property {
+    /// Value options for the `outline-color` property.
     public enum Value: Sendable {
         /// Performs a color inversion. This ensures that the outline is visible, regardless of color background. This is default.
         case invert
@@ -28,6 +31,7 @@ public struct OutlineColor: Property {
     public var isImportant: Bool
 
     /// Sets the color of an outline.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .invert
     ) {
@@ -36,6 +40,9 @@ public struct OutlineColor: Property {
         self.isImportant = false
     }
 
+    /// Creates a `outline-color` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

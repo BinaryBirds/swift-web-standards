@@ -1,4 +1,7 @@
+/// CSS `text-decoration-style` property.
+/// Provides typed values for this declaration.
 public struct TextDecorationStyle: Property {
+    /// Value options for the `text-decoration-style` property.
     public enum Value: String, Sendable {
         /// Default value. The line will display as a single line    Play it ».
         case solid
@@ -21,6 +24,7 @@ public struct TextDecorationStyle: Property {
     public var isImportant: Bool
 
     /// Specifies the style of the line in a text decoration.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .solid
     ) {

@@ -29,4 +29,21 @@ struct BorderLeftColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let transparent = BorderLeftColor(.transparent)
+        let named = BorderLeftColor(.green)
+        let initial = BorderLeftColor(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(transparent)
+                == "border-left-color: transparent"
+        )
+        #expect(renderer.renderProperty(named) == "border-left-color: green")
+        #expect(
+            renderer.renderProperty(initial) == "border-left-color: initial"
+        )
+    }
 }

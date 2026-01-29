@@ -1,4 +1,7 @@
+/// CSS `border-spacing` property.
+/// Provides typed values for this declaration.
 public struct BorderSpacing: Property {
+    /// Value options for the `border-spacing` property.
     public enum Value: Sendable {
         /// Specifies the distance between the borders of adjacent cells in px, cm, etc. Negative values are not allowed.
         /// If one value is specified, it defines both the horizontal and vertical spacing between cells.
@@ -30,6 +33,7 @@ public struct BorderSpacing: Property {
     public var isImportant: Bool
 
     /// Sets the distance between the borders of adjacent cells.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

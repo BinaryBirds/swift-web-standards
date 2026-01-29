@@ -1,3 +1,5 @@
+/// CSS `border-bottom-width` property.
+/// Provides typed values for this declaration.
 public struct BorderBottomWidth: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct BorderBottomWidth: Property {
     public var isImportant: Bool
 
     /// Sets the width of the bottom border.
+    /// - Parameter value: The property value.
     public init(_ value: BorderWidth.Value = .medium) {
         self.name = "border-bottom-width"
         self.value = value.rawValue

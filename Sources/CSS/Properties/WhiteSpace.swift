@@ -1,4 +1,7 @@
+/// CSS `white-space` property.
+/// Provides typed values for this declaration.
 public struct WhiteSpace: Property {
+    /// Value options for the `white-space` property.
     public enum Value: String, Sendable {
         /// Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary. This is default.
         case normal
@@ -21,6 +24,7 @@ public struct WhiteSpace: Property {
     public var isImportant: Bool
 
     /// Specifies how white-space inside an element is handled.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

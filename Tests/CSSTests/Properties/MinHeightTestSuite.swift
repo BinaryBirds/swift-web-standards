@@ -29,4 +29,16 @@ struct MinHeightTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = MinHeight(200.px)
+        let inherit = MinHeight(.inherit)
+        let initial = MinHeight(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "min-height: 200px")
+        #expect(renderer.renderProperty(inherit) == "min-height: inherit")
+        #expect(renderer.renderProperty(initial) == "min-height: initial")
+    }
 }

@@ -1,4 +1,7 @@
+/// CSS `width` property.
+/// Provides typed values for this declaration.
 public struct Width: Property {
+    /// Value options for the `width` property.
     public enum Value: Sendable {
         /// Default value. The browser calculates the width.
         case auto
@@ -28,6 +31,7 @@ public struct Width: Property {
     public var isImportant: Bool
 
     /// Sets the width of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {
@@ -37,6 +41,7 @@ public struct Width: Property {
     }
 
     /// Sets the width of an element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

@@ -1,4 +1,7 @@
+/// CSS `text-overflow` property.
+/// Provides typed values for this declaration.
 public struct TextOverflow: Property {
+    /// Value options for the `text-overflow` property.
     public enum Value: String, Sendable {
         /// Default value. The text is clipped and not accessible    Play it ».
         case clip
@@ -17,6 +20,7 @@ public struct TextOverflow: Property {
     public var isImportant: Bool
 
     /// Specifies what should happen when text overflows the containing element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .clip
     ) {

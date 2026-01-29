@@ -1,9 +1,17 @@
-/// Creates a new CSS variable with the given name and value.
+/// CSS custom property value.
 public struct Variable: Property {
+    /// The CSS property name, prefixed with `--`.
     public var name: String
+    /// The custom property value.
     public var value: String
+    /// Whether the property should be rendered as `!important`.
     public var isImportant: Bool
 
+    /// Creates a CSS custom property.
+    /// - Parameters:
+    ///   - name: The variable name without the `--` prefix.
+    ///   - value: The variable value string.
+    ///   - isImportant: Whether to mark the declaration as `!important`.
     public init(
         _ name: String,
         _ value: String,
@@ -14,15 +22,14 @@ public struct Variable: Property {
         self.isImportant = isImportant
     }
 
+    /// Returns a copy marked as `!important`.
     public func important() -> Variable {
-        guard !isImportant else {
-            return self
-        }
-        return .init(name, value, isImportant: true)
+        modify { $0.isImportant = true }
     }
 }
 
 extension String {
+    /// Converts a variable name into a `var(--name)` reference.
     public var `variable`: String {
         "var(--" + self + ")"
     }

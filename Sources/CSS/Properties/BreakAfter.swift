@@ -1,4 +1,7 @@
+/// CSS `break-after` property.
+/// Provides typed values for this declaration.
 public struct BreakAfter: Property {
+    /// Value options for the `break-after` property.
     public enum Value: String, Sendable {
         /// Default. Automatic page/column/region break after the element.
         case auto
@@ -39,6 +42,7 @@ public struct BreakAfter: Property {
     public var isImportant: Bool
 
     /// Specifies whether or not a page-, column-, or region-break should occur after the specified element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

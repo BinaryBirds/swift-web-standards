@@ -1,6 +1,9 @@
 /// Specifies the size of the gap between rows.
 
+/// CSS `grid-row-gap` property.
+/// Provides typed values for this declaration.
 public struct GridRowGap: Property {
+    /// Value options for the `grid-row-gap` property.
     public enum Value: Sendable {
         /// Any legal length value, like px or %. 0 is the default value.
         case length(UnitRepresentable)
@@ -18,6 +21,7 @@ public struct GridRowGap: Property {
     public var isImportant: Bool
 
     /// Specifies the size of the gap between rows.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -27,6 +31,7 @@ public struct GridRowGap: Property {
     }
 
     /// Specifies the size of the gap between rows.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

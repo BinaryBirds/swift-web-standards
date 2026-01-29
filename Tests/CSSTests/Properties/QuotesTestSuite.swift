@@ -29,4 +29,16 @@ struct QuotesTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let none = Quotes(.none)
+        let marks = Quotes("<", ">", "[", "]")
+        let initial = Quotes(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(none) == "quotes: none")
+        #expect(renderer.renderProperty(marks) == "quotes: < > [ ]")
+        #expect(renderer.renderProperty(initial) == "quotes: initial")
+    }
 }

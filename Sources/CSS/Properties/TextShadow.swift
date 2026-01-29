@@ -1,4 +1,7 @@
+/// CSS `text-shadow` property.
+/// Provides typed values for this declaration.
 public struct TextShadow: Property {
+    /// Value options for the `text-shadow` property.
     public enum Value: Sendable {
         /// h-shadow    Required. The position of the horizontal shadow. Negative values are allowed    Play it ».
         /// v-shadow    Required. The position of the vertical shadow. Negative values are allowed    Play it ».
@@ -37,6 +40,7 @@ public struct TextShadow: Property {
     public var isImportant: Bool
 
     /// Adds shadow to text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

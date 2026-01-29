@@ -1,4 +1,7 @@
+/// CSS `display` property.
+/// Provides typed values for this declaration.
 public struct Display: Property {
+    /// Value options for the `display` property.
     public enum Value: String, Sendable {
         /// Displays an element as an inline element (like <span>). Any height and width properties will have no effect.
         case inline
@@ -53,6 +56,7 @@ public struct Display: Property {
     public var isImportant: Bool
 
     /// Specifies how a certain HTML element should be displayed.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .initial
     ) {

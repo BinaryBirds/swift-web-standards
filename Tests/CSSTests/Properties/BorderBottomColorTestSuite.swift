@@ -29,4 +29,23 @@ struct BorderBottomColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let transparent = BorderBottomColor(.transparent)
+        let named = BorderBottomColor(.blueViolet)
+        let inherit = BorderBottomColor(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(transparent)
+                == "border-bottom-color: transparent"
+        )
+        #expect(
+            renderer.renderProperty(named) == "border-bottom-color: blueviolet"
+        )
+        #expect(
+            renderer.renderProperty(inherit) == "border-bottom-color: inherit"
+        )
+    }
 }

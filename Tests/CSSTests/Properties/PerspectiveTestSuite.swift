@@ -29,4 +29,16 @@ struct PerspectiveTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = Perspective(.length(600.px))
+        let none = Perspective(.none)
+        let inherit = Perspective(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "perspective: 600px")
+        #expect(renderer.renderProperty(none) == "perspective: none")
+        #expect(renderer.renderProperty(inherit) == "perspective: inherit")
+    }
 }

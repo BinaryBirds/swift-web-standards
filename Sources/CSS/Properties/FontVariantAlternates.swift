@@ -1,4 +1,7 @@
+/// CSS `font-variant-alternates` property.
+/// Provides typed values for this declaration.
 public struct FontVariantAlternates: Property {
+    /// Value options for the `font-variant-alternates` property.
     public enum Value: Sendable {
         case normal
         case stylistic(String)
@@ -48,6 +51,7 @@ public struct FontVariantAlternates: Property {
     public var isImportant: Bool
 
     /// Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

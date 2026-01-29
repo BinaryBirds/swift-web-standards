@@ -1,4 +1,6 @@
-/// https://www.w3schools.com/cssref/css_selectors.asp.
+/// Common CSS pseudo-classes and pseudo-elements.
+///
+/// The `value` property returns the rendered selector suffix.
 public enum Pseudo: Sendable {
     case active
     case after
@@ -40,6 +42,7 @@ public enum Pseudo: Sendable {
     case valid
     case visited
 
+    /// Rendered pseudo selector suffix.
     var value: String {
         switch self {
         case .active:
@@ -77,7 +80,7 @@ public enum Pseudo: Sendable {
         case .invalid:
             return ":invalid"
         case .lang(let value):
-            return ":lang(\(value)"
+            return ":lang(\(value))"
         case .lastChild:
             return ":last-child"
         case .lastOfType:

@@ -1,4 +1,7 @@
+/// CSS `all` property.
+/// Provides typed values for this declaration.
 public struct All: Property {
+    /// Value options for the `all` property.
     public enum Value: String, Sendable {
         /// Changes all the properties applied to the element or the element's parent to their initial value.
         case initial
@@ -13,6 +16,7 @@ public struct All: Property {
     public var isImportant: Bool
 
     /// Resets all properties (except unicode-bidi and direction).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

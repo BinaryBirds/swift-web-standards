@@ -1,4 +1,7 @@
+/// CSS `text-decoration-color` property.
+/// Provides typed values for this declaration.
 public struct TextDecorationColor: Property {
+    /// Value options for the `text-decoration-color` property.
     public enum Value: Sendable {
         /// Specifies the color of the text-decoration.
         case color(CSSColor)
@@ -24,6 +27,7 @@ public struct TextDecorationColor: Property {
     public var isImportant: Bool
 
     /// Specifies the color of the text-decoration.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -33,6 +37,7 @@ public struct TextDecorationColor: Property {
     }
 
     /// Specifies the color of the text-decoration.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

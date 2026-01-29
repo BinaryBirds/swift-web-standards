@@ -29,4 +29,16 @@ struct TabSizeTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let number = TabSize(4)
+        let length = TabSize(2.em)
+        let initial = TabSize(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(number) == "tab-size: 4")
+        #expect(renderer.renderProperty(length) == "tab-size: 2em")
+        #expect(renderer.renderProperty(initial) == "tab-size: initial")
+    }
 }

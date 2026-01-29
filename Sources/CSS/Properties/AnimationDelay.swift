@@ -1,4 +1,7 @@
+/// CSS `animation-delay` property.
+/// Provides typed values for this declaration.
 public struct AnimationDelay: Property {
+    /// Value options for the `animation-delay` property.
     public enum Value: Sendable {
         case zero
         case seconds(Double)
@@ -35,6 +38,7 @@ public struct AnimationDelay: Property {
     public var isImportant: Bool
 
     /// Specifies a delay for the start of an animation.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .zero
     ) {

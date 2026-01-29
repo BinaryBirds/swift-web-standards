@@ -29,4 +29,18 @@ struct BorderBottomWidthTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let keyword = BorderBottomWidth(.thin)
+        let length = BorderBottomWidth(2.px)
+        let initial = BorderBottomWidth(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(keyword) == "border-bottom-width: thin")
+        #expect(renderer.renderProperty(length) == "border-bottom-width: 2px")
+        #expect(
+            renderer.renderProperty(initial) == "border-bottom-width: initial"
+        )
+    }
 }

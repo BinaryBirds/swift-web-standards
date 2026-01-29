@@ -1,4 +1,7 @@
+/// CSS `background` property.
+/// Provides typed values for this declaration.
 public struct Background: Property {
+    /// Value options for the `background` property.
     public enum Value: Sendable {
 
         case values(
@@ -52,6 +55,7 @@ public struct Background: Property {
     public var isImportant: Bool
 
     /// A shorthand property for all the background-* properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -60,9 +64,26 @@ public struct Background: Property {
         self.isImportant = false
     }
 
-    /// A shorthand property for all the background-* properties.
+    /// Creates a background with CSS color.
+    /// - Parameter color: The color value.
     public init(
-        _ color: CSSColorValue? = nil,
+        color: CSSColor
+    ) {
+        self.init(.values(.color(color), nil, nil, nil, nil, nil, nil, nil))
+    }
+
+    /// A shorthand property for all the background-* properties.
+    /// - Parameters:
+    /// -  color: The color value.
+    /// -  image: The image value.
+    /// -  position: The position value.
+    /// -  size: The size value.
+    /// -  repeat: The `repeat` value.
+    /// -  origin: The origin value.
+    /// -  clip: The clip value.
+    /// -  attachment: The attachment value.
+    public init(
+        color: CSSColorValue? = nil,
         image: BackgroundImage.Value? = nil,
         position: BackgroundPosition.Value? = nil,
         size: BackgroundSize.Value? = nil,
