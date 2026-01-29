@@ -1,4 +1,7 @@
+/// CSS `flex-flow` property.
+/// Provides typed values for this declaration.
 public struct FlexFlow: Property {
+    /// Value options for the `flex-flow` property.
     public enum Value: Sendable {
         case values(FlexDirection.Value, FlexWrap.Value)
         /// Sets this property to its default value. Read about initial.
@@ -24,6 +27,7 @@ public struct FlexFlow: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the flex-direction and the flex-wrap properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -33,6 +37,9 @@ public struct FlexFlow: Property {
     }
 
     /// A shorthand property for the flex-direction and the flex-wrap properties.
+    /// - Parameters:
+    ///   - direction: The direction value.
+    ///   - wrap: The wrap value.
     public init(_ direction: FlexDirection.Value, _ wrap: FlexWrap.Value) {
         self.init(.values(direction, wrap))
     }

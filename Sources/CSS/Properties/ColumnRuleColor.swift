@@ -1,4 +1,7 @@
+/// CSS `column-rule-color` property.
+/// Provides typed values for this declaration.
 public struct ColumnRuleColor: Property {
+    /// Value options for the `column-rule-color` property.
     public enum Value: Sendable {
         /// Specifies the color of the rule.
         case color(CSSColor)
@@ -24,6 +27,7 @@ public struct ColumnRuleColor: Property {
     public var isImportant: Bool
 
     /// Specifies the color of the rule between columns.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -33,6 +37,7 @@ public struct ColumnRuleColor: Property {
     }
 
     /// Specifies the color of the rule between columns.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

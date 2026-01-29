@@ -1,4 +1,7 @@
+/// CSS `outline-width` property.
+/// Provides typed values for this declaration.
 public struct OutlineWidth: Property {
+    /// Value options for the `outline-width` property.
     public enum Value: Sendable {
         /// Specifies a medium outline. This is default.
         case medium
@@ -36,6 +39,7 @@ public struct OutlineWidth: Property {
     public var isImportant: Bool
 
     /// Sets the width of an outline.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .medium
     ) {

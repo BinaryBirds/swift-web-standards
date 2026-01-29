@@ -1,4 +1,7 @@
+/// CSS `object-position` property.
+/// Provides typed values for this declaration.
 public struct ObjectPosition: Property {
+    /// Value options for the `object-position` property.
     public enum Value: Sendable {
 
         /// Specifies the position of the image or video inside its content box.
@@ -28,6 +31,7 @@ public struct ObjectPosition: Property {
     public var isImportant: Bool
 
     /// Specifies the alignment of the replaced element inside its box.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .position(50.percent, 50.percent)
     ) {

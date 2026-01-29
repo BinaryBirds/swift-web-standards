@@ -1,4 +1,7 @@
+/// CSS `animation-direction` property.
+/// Provides typed values for this declaration.
 public struct AnimationDirection: Property {
+    /// Value options for the `animation-direction` property.
     public enum Value: String, Sendable {
         /// Default value. The animation is played as normal (forwards).
         case normal
@@ -19,6 +22,7 @@ public struct AnimationDirection: Property {
     public var isImportant: Bool
 
     /// Specifies whether an animation should be played forwards, backwards or in alternate cycles.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

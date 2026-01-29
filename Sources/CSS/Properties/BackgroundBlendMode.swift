@@ -1,4 +1,7 @@
+/// CSS `background-blend-mode` property.
+/// Provides typed values for this declaration.
 public struct BackgroundBlendMode: Property {
+    /// Value options for the `background-blend-mode` property.
     public enum Value: String, Sendable {
         /// This is default. Sets the blending mode to normal.
         case normal
@@ -27,6 +30,7 @@ public struct BackgroundBlendMode: Property {
     public var isImportant: Bool
 
     /// Specifies the blending mode of each background layer (color/image).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

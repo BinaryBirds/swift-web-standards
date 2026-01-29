@@ -29,4 +29,18 @@ struct BorderLeftWidthTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let keyword = BorderLeftWidth(.thick)
+        let length = BorderLeftWidth(5.px)
+        let inherit = BorderLeftWidth(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(keyword) == "border-left-width: thick")
+        #expect(renderer.renderProperty(length) == "border-left-width: 5px")
+        #expect(
+            renderer.renderProperty(inherit) == "border-left-width: inherit"
+        )
+    }
 }

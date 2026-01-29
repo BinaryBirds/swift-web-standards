@@ -1,4 +1,7 @@
+/// CSS `transition-timing-function` property.
+/// Provides typed values for this declaration.
 public struct TransitionTimingFunction: Property {
+    /// Value options for the `transition-timing-function` property.
     public enum Value: Sendable {
 
         /// Default value. Specifies a transition effect with a slow start, then fast, then end slowly (equivalent to cubic-bezier(0.25,0.1,0.25,1)).
@@ -66,6 +69,7 @@ public struct TransitionTimingFunction: Property {
     public var isImportant: Bool
 
     /// Specifies the speed curve of the transition effect.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .ease
     ) {

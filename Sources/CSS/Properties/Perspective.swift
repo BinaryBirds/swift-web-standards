@@ -1,4 +1,7 @@
+/// CSS `perspective` property.
+/// Provides typed values for this declaration.
 public struct Perspective: Property {
+    /// Value options for the `perspective` property.
     public enum Value: Sendable {
         /// How far the element is placed from the view.
         case length(UnitRepresentable)
@@ -28,6 +31,7 @@ public struct Perspective: Property {
     public var isImportant: Bool
 
     /// Gives a 3D-positioned element some perspective.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {
@@ -37,6 +41,7 @@ public struct Perspective: Property {
     }
 
     /// Gives a 3D-positioned element some perspective.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable = 0) {
         self.init(.length(value))
     }

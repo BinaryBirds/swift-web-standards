@@ -1,4 +1,7 @@
+/// CSS `grid` property.
+/// Provides typed values for this declaration.
 public struct Grid: Property {
+    /// Value options for the `grid` property.
     public enum Value: Sendable {
         /// Default value. No specific sizing of the columns or rows.
         case none
@@ -46,6 +49,7 @@ public struct Grid: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {
@@ -55,6 +59,13 @@ public struct Grid: Property {
     }
 
     /// A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties.
+    /// - Parameters:
+    ///   - tplRow: The tplRow value.
+    ///   - tplCol: The tplCol value.
+    ///   - tplAreas: The tplAreas value.
+    ///   - autoRow: The autoRow value.
+    ///   - autoCol: The autoCol value.
+    ///   - autoFlow: The autoFlow value.
     public init(
         _ tplRow: GridTemplateRows.Value,
         _ tplCol: GridTemplateColumns.Value,

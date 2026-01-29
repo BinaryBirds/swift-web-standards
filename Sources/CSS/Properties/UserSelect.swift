@@ -1,4 +1,7 @@
+/// CSS `user-select` property.
+/// Provides typed values for this declaration.
 public struct UserSelect: Property {
+    /// Value options for the `user-select` property.
     public enum Value: String, Sendable {
         /// Default. Text can be selected if the browser allows it.
         case auto
@@ -15,6 +18,7 @@ public struct UserSelect: Property {
     public var isImportant: Bool
 
     /// Specifies whether the text of an element can be selected.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

@@ -1,4 +1,7 @@
+/// CSS `background-position` property.
+/// Provides typed values for this declaration.
 public struct BackgroundPosition: Property {
+    /// Value options for the `background-position` property.
     public enum Value: Sendable {
         /// left center.
         case left
@@ -61,7 +64,7 @@ public struct BackgroundPosition: Property {
             case .center:
                 return "center"
             case .centerTop:
-                return "center"
+                return "center top"
             case .centerCenter:
                 return "center center"
             case .centerBottom:
@@ -83,6 +86,7 @@ public struct BackgroundPosition: Property {
     public var isImportant: Bool
 
     /// Specifies the position of a background image.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

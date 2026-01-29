@@ -1,4 +1,7 @@
+/// CSS `font-variant-numeric` property.
+/// Provides typed values for this declaration.
 public struct FontVariantNumeric: Property {
+    /// Value options for the `font-variant-numeric` property.
     public enum Value: String, Sendable {
         case normal
         case ordinal
@@ -21,6 +24,7 @@ public struct FontVariantNumeric: Property {
     public var isImportant: Bool
 
     /// Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

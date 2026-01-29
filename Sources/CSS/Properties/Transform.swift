@@ -1,4 +1,7 @@
+/// CSS `transform` property.
+/// Provides typed values for this declaration.
 public struct Transform: Property {
+    /// Value options for the `transform` property.
     public enum Value: Sendable {
         /// Defines that there should be no transformation    Play it ».
         case none
@@ -159,6 +162,7 @@ public struct Transform: Property {
     public var isImportant: Bool
 
     /// Applies a 2D or 3D transformation to an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

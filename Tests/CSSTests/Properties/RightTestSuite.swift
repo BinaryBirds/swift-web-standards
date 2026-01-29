@@ -29,4 +29,16 @@ struct RightTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let auto = Right(.auto)
+        let length = Right(24.px)
+        let initial = Right(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(auto) == "right: auto")
+        #expect(renderer.renderProperty(length) == "right: 24px")
+        #expect(renderer.renderProperty(initial) == "right: initial")
+    }
 }

@@ -29,4 +29,14 @@ struct GridGapTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func unitValues() {
+        let property = GridGap(12.px, 8.px)
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        #expect(result == "grid-gap: 12px 8px")
+    }
 }

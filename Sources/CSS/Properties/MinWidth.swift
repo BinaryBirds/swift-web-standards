@@ -1,4 +1,7 @@
+/// CSS `min-width` property.
+/// Provides typed values for this declaration.
 public struct MinWidth: Property {
+    /// Value options for the `min-width` property.
     public enum Value: Sendable {
         /// Default value is 0. Defines the minimum width in px, cm, etc. Read about length units.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct MinWidth: Property {
     public var isImportant: Bool
 
     /// Sets the minimum width of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .length(0)
     ) {
@@ -33,6 +37,7 @@ public struct MinWidth: Property {
     }
 
     /// Sets the minimum width of an element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

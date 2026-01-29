@@ -1,4 +1,7 @@
+/// CSS `grid-area` property.
+/// Provides typed values for this declaration.
 public struct GridArea: Property {
+    /// Value options for the `grid-area` property.
     public enum Value: Sendable {
         case name(String)
         case values(
@@ -27,6 +30,7 @@ public struct GridArea: Property {
     public var isImportant: Bool
 
     /// Either specifies a name for the grid item, or this property is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

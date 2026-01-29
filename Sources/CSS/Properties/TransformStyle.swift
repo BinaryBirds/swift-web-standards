@@ -1,4 +1,7 @@
+/// CSS `transform-style` property.
+/// Provides typed values for this declaration.
 public struct TransformStyle: Property {
+    /// Value options for the `transform-style` property.
     public enum Value: String, Sendable {
         /// Specifies that child elements will NOT preserve its 3D position. This is default.
         case flat
@@ -15,6 +18,7 @@ public struct TransformStyle: Property {
     public var isImportant: Bool
 
     /// Specifies how nested elements are rendered in 3D space.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .flat
     ) {

@@ -1,4 +1,7 @@
+/// CSS `content` property.
+/// Provides typed values for this declaration.
 public struct Content: Property {
+    /// Value options for the `content` property.
     public enum Value: Sendable {
         /// Default value. Sets the content, if specified, to normal, which default is "none" (which is nothing).
         case normal
@@ -58,6 +61,7 @@ public struct Content: Property {
     public var isImportant: Bool
 
     /// Used with the :before and :after pseudo-elements, to insert generated content.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

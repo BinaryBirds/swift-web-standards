@@ -1,3 +1,5 @@
+/// CSS `background-color` property.
+/// Provides typed values for this declaration.
 public struct BackgroundColor: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct BackgroundColor: Property {
     public var isImportant: Bool
 
     /// Specifies the background color of an element.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColorValue = .transparent) {
         self.name = "background-color"
         self.value = value.rawValue

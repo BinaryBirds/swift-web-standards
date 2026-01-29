@@ -1,4 +1,7 @@
+/// CSS `list-style-position` property.
+/// Provides typed values for this declaration.
 public struct ListStylePosition: Property {
+    /// Value options for the `list-style-position` property.
     public enum Value: String, Sendable {
         /// The bullet points will be inside the list item.
         case inside
@@ -15,6 +18,7 @@ public struct ListStylePosition: Property {
     public var isImportant: Bool
 
     /// Specifies the position of the list-item markers (bullet points).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .outside
     ) {

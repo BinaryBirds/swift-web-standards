@@ -1,4 +1,7 @@
+/// CSS `clear` property.
+/// Provides typed values for this declaration.
 public struct Clear: Property {
+    /// Value options for the `clear` property.
     public enum Value: String, Sendable {
         /// Default. The element is not pushed below left or right floated elements.
         case none
@@ -19,6 +22,7 @@ public struct Clear: Property {
     public var isImportant: Bool
 
     /// Specifies what should happen with the element that is next to a floating element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

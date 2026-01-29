@@ -29,4 +29,16 @@ struct OrderTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let zero = Order(.number(0))
+        let negative = Order(.number(-1))
+        let inherit = Order(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(zero) == "order: 0")
+        #expect(renderer.renderProperty(negative) == "order: -1")
+        #expect(renderer.renderProperty(inherit) == "order: inherit")
+    }
 }

@@ -1,4 +1,7 @@
+/// CSS `max-height` property.
+/// Provides typed values for this declaration.
 public struct MaxHeight: Property {
+    /// Value options for the `max-height` property.
     public enum Value: Sendable {
         /// No maximum height. This is default.
         case none
@@ -28,6 +31,7 @@ public struct MaxHeight: Property {
     public var isImportant: Bool
 
     /// Sets the maximum height of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {
@@ -37,6 +41,7 @@ public struct MaxHeight: Property {
     }
 
     /// Sets the maximum height of an element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

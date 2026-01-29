@@ -1,4 +1,7 @@
+/// CSS `border-image-width` property.
+/// Provides typed values for this declaration.
 public struct BorderImageWidth: Property {
+    /// Value options for the `border-image-width` property.
     public enum Value: Sendable {
         /// A length unit (px) specifying the size of the border-width    Play it ».
         case length(UnitRepresentable)
@@ -32,6 +35,7 @@ public struct BorderImageWidth: Property {
     public var isImportant: Bool
 
     /// Specifies the width of the border image.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

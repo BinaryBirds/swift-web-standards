@@ -1,4 +1,7 @@
+/// CSS `max-width` property.
+/// Provides typed values for this declaration.
 public struct MaxWidth: Property {
+    /// Value options for the `max-width` property.
     public enum Value: Sendable {
         /// No maximum width. This is default.
         case none
@@ -28,6 +31,7 @@ public struct MaxWidth: Property {
     public var isImportant: Bool
 
     /// Sets the maximum width of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {
@@ -37,6 +41,7 @@ public struct MaxWidth: Property {
     }
 
     /// Sets the maximum width of an element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

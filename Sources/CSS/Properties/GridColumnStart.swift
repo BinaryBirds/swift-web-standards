@@ -1,4 +1,7 @@
+/// CSS `grid-column-start` property.
+/// Provides typed values for this declaration.
 public struct GridColumnStart: Property {
+    /// Value options for the `grid-column-start` property.
     public enum Value: Sendable {
         /// Default value. The item will be placed following the flow.
         case auto
@@ -24,6 +27,7 @@ public struct GridColumnStart: Property {
     public var isImportant: Bool
 
     /// Specifies where to start the grid item.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

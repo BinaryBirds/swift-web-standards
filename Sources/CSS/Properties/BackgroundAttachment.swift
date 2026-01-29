@@ -1,4 +1,7 @@
+/// CSS `background-attachment` property.
+/// Provides typed values for this declaration.
 public struct BackgroundAttachment: Property {
+    /// Value options for the `background-attachment` property.
     public enum Value: String, Sendable {
         /// The background image will scroll with the page. This is default.
         case scroll
@@ -17,6 +20,7 @@ public struct BackgroundAttachment: Property {
     public var isImportant: Bool
 
     /// Sets whether a background image scrolls with the rest of the page, or is fixed.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .scroll
     ) {

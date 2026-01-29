@@ -1,4 +1,7 @@
+/// CSS `outline-offset` property.
+/// Provides typed values for this declaration.
 public struct OutlineOffset: Property {
+    /// Value options for the `outline-offset` property.
     public enum Value: Sendable {
         /// The distance the outline is outset from the border edge. Default value is 0.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct OutlineOffset: Property {
     public var isImportant: Bool
 
     /// Offsets an outline, and draws it beyond the border edge.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .length(0)
     ) {
@@ -33,6 +37,7 @@ public struct OutlineOffset: Property {
     }
 
     /// Offsets an outline, and draws it beyond the border edge.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable = 0) {
         self.init(.length(value))
     }

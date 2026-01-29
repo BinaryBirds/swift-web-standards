@@ -29,4 +29,16 @@ struct OutlineColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let invert = OutlineColor(.invert)
+        let color = OutlineColor(.color(.red))
+        let inherit = OutlineColor(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(invert) == "outline-color: invert")
+        #expect(renderer.renderProperty(color) == "outline-color: red")
+        #expect(renderer.renderProperty(inherit) == "outline-color: inherit")
+    }
 }

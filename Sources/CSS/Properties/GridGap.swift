@@ -1,3 +1,5 @@
+/// CSS `grid-gap` property.
+/// Provides typed values for this declaration.
 public struct GridGap: Property {
 
     public let name: String
@@ -5,6 +7,9 @@ public struct GridGap: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the grid-row-gap and grid-column-gap properties.
+    /// - Parameters:
+    ///   - row: The row value.
+    ///   - col: The col value.
     public init(_ row: GridRowGap.Value, _ col: GridColumnGap.Value) {
         self.name = "grid-gap"
         self.value = row.rawValue + " " + col.rawValue

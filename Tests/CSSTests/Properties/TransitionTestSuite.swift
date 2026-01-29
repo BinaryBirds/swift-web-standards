@@ -29,4 +29,21 @@ struct TransitionTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let property = Transition(
+            .values(
+                .properties(["opacity", "transform"]),
+                .seconds(0.2),
+                .easeOut,
+                .milliseconds(150)
+            )
+        )
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        #expect(result == "transition: opacity,transform 0.2s ease-out 150.0ms")
+    }
 }

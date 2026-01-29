@@ -1,4 +1,7 @@
+/// CSS `grid-template-columns` property.
+/// Provides typed values for this declaration.
 public struct GridTemplateColumns: Property {
+    /// Value options for the `grid-template-columns` property.
     public enum Value: Sendable {
         /// Default value. Columns are created if needed.
         case none
@@ -40,6 +43,7 @@ public struct GridTemplateColumns: Property {
     public var isImportant: Bool
 
     /// Specifies the size of the columns, and how many columns in a grid layout.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

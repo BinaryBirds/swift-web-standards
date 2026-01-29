@@ -1,4 +1,7 @@
+/// CSS `border-image-repeat` property.
+/// Provides typed values for this declaration.
 public struct BorderImageRepeat: Property {
+    /// Value options for the `border-image-repeat` property.
     public enum Value: String, Sendable {
         /// Default value. The image is stretched to fill the area    Play it ».
         case stretch
@@ -19,6 +22,7 @@ public struct BorderImageRepeat: Property {
     public var isImportant: Bool
 
     /// Specifies whether the border image should be repeated, rounded or stretched.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .stretch
     ) {

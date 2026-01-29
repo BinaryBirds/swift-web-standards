@@ -1,4 +1,7 @@
+/// CSS `overflow-wrap` property.
+/// Provides typed values for this declaration.
 public struct OverflowWrap: Property {
+    /// Value options for the `overflow-wrap` property.
     public enum Value: String, Sendable {
         case normal
         case breakWord = "break-word"
@@ -14,6 +17,7 @@ public struct OverflowWrap: Property {
     public var isImportant: Bool
 
     /// Specifies whether or not the browser may break lines within words in order to prevent overflow (when a string is too long to fit its containing box).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

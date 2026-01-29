@@ -1,4 +1,7 @@
+/// CSS `flex-grow` property.
+/// Provides typed values for this declaration.
 public struct FlexGrow: Property {
+    /// Value options for the `flex-grow` property.
     public enum Value: Sendable {
 
         /// A number specifying how much the item will grow relative to the rest of the flexible items. Default value is 0.
@@ -25,6 +28,7 @@ public struct FlexGrow: Property {
     public var isImportant: Bool
 
     /// Specifies how much the item will grow relative to the rest.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .number(0)
     ) {
@@ -34,6 +38,7 @@ public struct FlexGrow: Property {
     }
 
     /// Specifies how much the item will grow relative to the rest.
+    /// - Parameter value: The property value.
     public init(_ value: Int = 0) {
         self.init(.number(value))
     }

@@ -1,4 +1,7 @@
+/// CSS `border-collapse` property.
+/// Provides typed values for this declaration.
 public struct BorderCollapse: Property {
+    /// Value options for the `border-collapse` property.
     public enum Value: String, Sendable {
         /// Borders are separated; each cell will display its own borders. This is default.    Play it ».
         case separate
@@ -15,6 +18,7 @@ public struct BorderCollapse: Property {
     public var isImportant: Bool
 
     /// Sets whether table borders should collapse into a single border or be separated.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .separate
     ) {

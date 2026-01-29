@@ -29,4 +29,16 @@ struct CaretColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let auto = CaretColor(.auto)
+        let color = CaretColor(.blue)
+        let inherit = CaretColor(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(auto) == "caret-color: auto")
+        #expect(renderer.renderProperty(color) == "caret-color: blue")
+        #expect(renderer.renderProperty(inherit) == "caret-color: inherit")
+    }
 }

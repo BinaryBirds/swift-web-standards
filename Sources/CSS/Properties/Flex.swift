@@ -1,4 +1,7 @@
+/// CSS `flex` property.
+/// Provides typed values for this declaration.
 public struct Flex: Property {
+    /// Value options for the `flex` property.
     public enum Value: Sendable {
         case values(FlexGrow.Value, FlexShrink.Value, FlexBasis.Value)
         /// Same as 1 1 auto.
@@ -32,6 +35,7 @@ public struct Flex: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -41,6 +45,10 @@ public struct Flex: Property {
     }
 
     /// A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties.
+    /// - Parameters:
+    ///   - grow: The grow value.
+    ///   - shrink: The shrink value.
+    ///   - basis: The basis value.
     public init(
         _ grow: FlexGrow.Value,
         _ shrink: FlexShrink.Value,

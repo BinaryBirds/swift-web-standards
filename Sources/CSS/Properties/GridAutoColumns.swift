@@ -1,4 +1,7 @@
+/// CSS `grid-auto-columns` property.
+/// Provides typed values for this declaration.
 public struct GridAutoColumns: Property {
+    /// Value options for the `grid-auto-columns` property.
     public enum Value: Sendable {
         /// Default value. The size of the columns is determined by the size of the container.
         case auto
@@ -32,6 +35,7 @@ public struct GridAutoColumns: Property {
     public var isImportant: Bool
 
     /// Specifies a default column size.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

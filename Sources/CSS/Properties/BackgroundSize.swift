@@ -1,4 +1,7 @@
+/// CSS `background-size` property.
+/// Provides typed values for this declaration.
 public struct BackgroundSize: Property {
+    /// Value options for the `background-size` property.
     public enum Value: String, Sendable {
         /// Default value. The background image is displayed in its original size.
         case auto
@@ -21,6 +24,7 @@ public struct BackgroundSize: Property {
     public var isImportant: Bool
 
     /// Specifies the size of the background images.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

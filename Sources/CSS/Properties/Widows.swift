@@ -1,4 +1,7 @@
+/// CSS `widows` property.
+/// Provides typed values for this declaration.
 public struct Widows: Property {
+    /// Value options for the `widows` property.
     public enum Value: Sendable {
         /// An integer that specifies the minimum number of visible lines. Negative values are not allowed. The default value is 2.
         case number(Int)
@@ -24,6 +27,7 @@ public struct Widows: Property {
     public var isImportant: Bool
 
     /// Sets the minimum number of lines that must be left at the top of a page when a page break occurs inside an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .number(2)
     ) {

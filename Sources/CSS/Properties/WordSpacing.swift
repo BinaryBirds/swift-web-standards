@@ -1,4 +1,7 @@
+/// CSS `word-spacing` property.
+/// Provides typed values for this declaration.
 public struct WordSpacing: Property {
+    /// Value options for the `word-spacing` property.
     public enum Value: Sendable {
         /// Defines normal space between words (0.25em) . This is default.
         case normal
@@ -28,6 +31,7 @@ public struct WordSpacing: Property {
     public var isImportant: Bool
 
     /// Increases or decreases the space between words in a text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {
@@ -37,6 +41,7 @@ public struct WordSpacing: Property {
     }
 
     /// Increases or decreases the space between words in a text.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

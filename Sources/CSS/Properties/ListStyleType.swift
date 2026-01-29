@@ -1,6 +1,9 @@
 /// Specifies the type of list-item marker.
 
+/// CSS `list-style-type` property.
+/// Provides typed values for this declaration.
 public struct ListStyleType: Property {
+    /// Value options for the `list-style-type` property.
     public enum Value: String, Sendable {
         /// Default value. The marker is a filled circle.
         case disc
@@ -56,6 +59,9 @@ public struct ListStyleType: Property {
     public let value: String
     public var isImportant: Bool
 
+    /// Creates a `list-style-type` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .disc
     ) {

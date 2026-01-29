@@ -1,4 +1,7 @@
+/// CSS `writing-mode` property.
+/// Provides typed values for this declaration.
 public struct WritingMode: Property {
+    /// Value options for the `writing-mode` property.
     public enum Value: String, Sendable {
         /// Let the content flow horizontally from left to right, vertically from top to bottom.
         case horizontalTb = "horizontal-tb"
@@ -13,6 +16,7 @@ public struct WritingMode: Property {
     public var isImportant: Bool
 
     /// Specifies whether lines of text are laid out horizontally or vertically.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .horizontalTb
     ) {

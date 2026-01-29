@@ -1,4 +1,7 @@
+/// CSS `font-variant-caps` property.
+/// Provides typed values for this declaration.
 public struct FontVariantCaps: Property {
+    /// Value options for the `font-variant-caps` property.
     public enum Value: String, Sendable {
         /// Deactivates the use of alternate glyphs.
         case normal
@@ -27,6 +30,7 @@ public struct FontVariantCaps: Property {
     public var isImportant: Bool
 
     /// Controls the usage of alternate glyphs for capital letters.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

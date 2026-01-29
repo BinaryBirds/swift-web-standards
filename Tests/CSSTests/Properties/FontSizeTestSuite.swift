@@ -29,4 +29,18 @@ struct FontSizeTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let small = FontSize(.small)
+        let larger = FontSize(.larger)
+        let length = FontSize(.length(14.px))
+        let inherit = FontSize(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(small) == "font-size: small")
+        #expect(renderer.renderProperty(larger) == "font-size: larger")
+        #expect(renderer.renderProperty(length) == "font-size: 14px")
+        #expect(renderer.renderProperty(inherit) == "font-size: inherit")
+    }
 }

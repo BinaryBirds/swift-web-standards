@@ -1,4 +1,7 @@
+/// CSS `hanging-punctuation` property.
+/// Provides typed values for this declaration.
 public struct HangingPunctuation: Property {
+    /// Value options for the `hanging-punctuation` property.
     public enum Value: String, Sendable {
         /// No punctuation mark may be placed outside the line box at the start or at the end of a full line of text.
         case none
@@ -22,6 +25,7 @@ public struct HangingPunctuation: Property {
     public var isImportant: Bool
 
     /// Specifies whether a punctuation character may be placed outside the line box.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

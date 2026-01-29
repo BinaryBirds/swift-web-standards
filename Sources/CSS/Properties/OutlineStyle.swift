@@ -1,4 +1,7 @@
+/// CSS `outline-style` property.
+/// Provides typed values for this declaration.
 public struct OutlineStyle: Property {
+    /// Value options for the `outline-style` property.
     public enum Value: String, Sendable {
         /// Specifies no outline. This is default.
         case none
@@ -31,6 +34,7 @@ public struct OutlineStyle: Property {
     public var isImportant: Bool
 
     /// Sets the style of an outline.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

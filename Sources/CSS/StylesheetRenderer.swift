@@ -5,14 +5,21 @@
 //  Created by Tibor Bodecs on 2021. 11. 21..
 //
 
+/// Renders stylesheets, rules, selectors, and properties into CSS strings.
 public struct StylesheetRenderer {
 
+    /// Whether output should be minified.
     public let minify: Bool
+    /// Indentation width used when not minifying.
     public let indent: Int
 
     private let newline: String
     private let singleSpace: String
 
+    /// Creates a renderer.
+    /// - Parameters:
+    ///   - minify: When `true`, output is compact without whitespace.
+    ///   - indent: Indentation size for formatted output.
     public init(
         minify: Bool = false,
         indent: Int = 4
@@ -23,6 +30,9 @@ public struct StylesheetRenderer {
         self.singleSpace = minify ? "" : " "
     }
 
+    /// Renders a stylesheet into a CSS string.
+    /// - Parameter stylesheet: The stylesheet to render.
+    /// - Returns: The rendered CSS text.
     public func render(
         _ stylesheet: Stylesheet
     ) -> String {
@@ -63,6 +73,11 @@ public struct StylesheetRenderer {
 
     // MARK: - helpers
 
+    /// Renders a property into a CSS declaration string.
+    /// - Parameters:
+    ///   - property: The property to render.
+    ///   - level: Indentation nesting level.
+    /// - Returns: A rendered declaration line.
     func renderProperty(
         _ property: any Property,
         level: Int = 0
@@ -72,6 +87,11 @@ public struct StylesheetRenderer {
             + (property.isImportant ? " !important" : "")
     }
 
+    /// Renders a selector block with its properties.
+    /// - Parameters:
+    ///   - selector: The selector to render.
+    ///   - level: Indentation nesting level.
+    /// - Returns: A rendered selector block.
     func renderSelector(
         _ selector: Selector,
         level: Int = 0

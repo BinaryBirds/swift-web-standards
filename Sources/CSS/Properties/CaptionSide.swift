@@ -1,4 +1,7 @@
+/// CSS `caption-side` property.
+/// Provides typed values for this declaration.
 public struct CaptionSide: Property {
+    /// Value options for the `caption-side` property.
     public enum Value: String, Sendable {
         /// Puts the caption above the table. This is default.
         case top
@@ -15,6 +18,7 @@ public struct CaptionSide: Property {
     public var isImportant: Bool
 
     /// Specifies the placement of a table caption.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

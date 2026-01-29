@@ -1,4 +1,7 @@
+/// CSS `order` property.
+/// Provides typed values for this declaration.
 public struct Order: Property {
+    /// Value options for the `order` property.
     public enum Value: Sendable {
         /// Default value 0. Specifies the order for the flexible item.
         case number(Int)
@@ -24,6 +27,7 @@ public struct Order: Property {
     public var isImportant: Bool
 
     /// Sets the order of the flexible item, relative to the rest.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .number(1)
     ) {
@@ -33,6 +37,7 @@ public struct Order: Property {
     }
 
     /// Sets the order of the flexible item, relative to the rest.
+    /// - Parameter value: The property value.
     public init(_ value: Int = 1) {
         self.init(.number(1))
     }

@@ -1,4 +1,7 @@
+/// CSS `transform-origin` property.
+/// Provides typed values for this declaration.
 public struct TransformOrigin: Property {
+    /// Value options for the `transform-origin` property.
     public enum Value: Sendable {
         // @TODO: keyword support
         /// x-axis    Defines where the view is placed at the x-axis. Possible values:.
@@ -39,6 +42,7 @@ public struct TransformOrigin: Property {
     public var isImportant: Bool
 
     /// Allows you to change the position on transformed elements.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

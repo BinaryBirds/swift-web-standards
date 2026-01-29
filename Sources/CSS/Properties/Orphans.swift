@@ -1,4 +1,7 @@
+/// CSS `orphans` property.
+/// Provides typed values for this declaration.
 public struct Orphans: Property {
+    /// Value options for the `orphans` property.
     public enum Value: Sendable {
         /// Sets the minimum number of lines to keep together at the bottom of a page.
         case count(Int)
@@ -24,6 +27,7 @@ public struct Orphans: Property {
     public var isImportant: Bool
 
     /// Sets the minimum number of lines that must be left at the bottom of a page.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

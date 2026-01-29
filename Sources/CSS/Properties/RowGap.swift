@@ -1,4 +1,7 @@
+/// CSS `row-gap` property.
+/// Provides typed values for this declaration.
 public struct RowGap: Property {
+    /// Value options for the `row-gap` property.
     public enum Value: Sendable {
         /// A specified length or % that will set the gap between the rows.
         case length(UnitRepresentable)
@@ -28,6 +31,7 @@ public struct RowGap: Property {
     public var isImportant: Bool
 
     /// Specifies the gap between the grid rows.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {
@@ -37,6 +41,7 @@ public struct RowGap: Property {
     }
 
     /// Specifies the gap between the grid rows.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

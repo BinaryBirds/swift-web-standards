@@ -1,3 +1,5 @@
+/// CSS `padding-top` property.
+/// Provides typed values for this declaration.
 public struct PaddingTop: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct PaddingTop: Property {
     public var isImportant: Bool
 
     /// Sets the top padding of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Padding.Value
     ) {
@@ -14,6 +17,7 @@ public struct PaddingTop: Property {
     }
 
     /// Sets the top padding of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: UnitRepresentable = 0
     ) {

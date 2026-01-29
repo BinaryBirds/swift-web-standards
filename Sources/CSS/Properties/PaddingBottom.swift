@@ -1,3 +1,5 @@
+/// CSS `padding-bottom` property.
+/// Provides typed values for this declaration.
 public struct PaddingBottom: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct PaddingBottom: Property {
     public var isImportant: Bool
 
     /// Sets the bottom padding of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Padding.Value
     ) {
@@ -14,6 +17,7 @@ public struct PaddingBottom: Property {
     }
 
     /// Sets the bottom padding of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: UnitRepresentable = 0
     ) {

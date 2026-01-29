@@ -1,4 +1,7 @@
+/// CSS `transition-delay` property.
+/// Provides typed values for this declaration.
 public struct TransitionDelay: Property {
+    /// Value options for the `transition-delay` property.
     public enum Value: Sendable {
         case zero
         /// Specifies the number of seconds to wait before the transition effect will start.
@@ -37,6 +40,7 @@ public struct TransitionDelay: Property {
     public var isImportant: Bool
 
     /// Specifies when the transition effect will start.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .zero
     ) {

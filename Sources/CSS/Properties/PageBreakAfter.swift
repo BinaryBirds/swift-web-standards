@@ -1,4 +1,7 @@
+/// CSS `page-break-after` property.
+/// Provides typed values for this declaration.
 public struct PageBreakAfter: Property {
+    /// Value options for the `page-break-after` property.
     public enum Value: String, Sendable {
         /// Default. Automatic page-break.
         case auto
@@ -21,6 +24,7 @@ public struct PageBreakAfter: Property {
     public var isImportant: Bool
 
     /// Sets the page-break behavior after an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

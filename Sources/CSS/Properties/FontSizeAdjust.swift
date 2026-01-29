@@ -1,4 +1,7 @@
+/// CSS `font-size-adjust` property.
+/// Provides typed values for this declaration.
 public struct FontSizeAdjust: Property {
+    /// Value options for the `font-size-adjust` property.
     public enum Value: Sendable {
         /// Defines the aspect value to use.
         case number(Double)
@@ -28,6 +31,7 @@ public struct FontSizeAdjust: Property {
     public var isImportant: Bool
 
     /// Preserves the readability of text when font fallback occurs.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

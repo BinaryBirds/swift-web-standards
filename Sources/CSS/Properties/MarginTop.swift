@@ -1,9 +1,14 @@
+/// CSS `margin-top` property.
+/// Provides typed values for this declaration.
 public struct MarginTop: Property {
 
     public let name: String
     public let value: String
     public var isImportant: Bool
 
+    /// Creates a `margin-top` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(
         _ value: Margin.Value
     ) {
@@ -12,6 +17,9 @@ public struct MarginTop: Property {
         self.isImportant = false
     }
 
+    /// Creates a `margin-top` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(
         _ value: UnitRepresentable = 0
     ) {

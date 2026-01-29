@@ -1,14 +1,16 @@
+/// Common CSS color value variants used by properties.
 public enum CSSColorValue: Sendable {
 
-    /// Specifies the background color.
+    /// Explicit color value.
     case color(CSSColor)
-    /// Specifies that the background color should be transparent. This is default.
+    /// Transparent color.
     case transparent
-    /// Sets this property to its default value.
+    /// Default value.
     case initial
-    /// Inherits this property from its parent element.
+    /// Inherited value.
     case inherit
 
+    /// Rendered CSS color string.
     var rawValue: String {
         switch self {
         case .color(let value):

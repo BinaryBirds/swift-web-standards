@@ -29,4 +29,16 @@ struct MaxHeightTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let none = MaxHeight(.none)
+        let length = MaxHeight(480.px)
+        let inherit = MaxHeight(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(none) == "max-height: none")
+        #expect(renderer.renderProperty(length) == "max-height: 480px")
+        #expect(renderer.renderProperty(inherit) == "max-height: inherit")
+    }
 }

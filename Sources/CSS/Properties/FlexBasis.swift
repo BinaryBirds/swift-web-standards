@@ -1,5 +1,8 @@
+/// CSS `flex-basis` property.
+/// Provides typed values for this declaration.
 public struct FlexBasis: Property {
 
+    /// Value options for the `flex-basis` property.
     public enum Value: Sendable {
         /// Default value. The length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content.
         case auto
@@ -29,6 +32,7 @@ public struct FlexBasis: Property {
     public var isImportant: Bool
 
     /// Specifies the initial length of a flexible item.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {
@@ -38,6 +42,7 @@ public struct FlexBasis: Property {
     }
 
     /// Specifies the initial length of a flexible item.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.number(value))
     }

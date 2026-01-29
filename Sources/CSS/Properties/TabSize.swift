@@ -1,4 +1,7 @@
+/// CSS `tab-size` property.
+/// Provides typed values for this declaration.
 public struct TabSize: Property {
+    /// Value options for the `tab-size` property.
     public enum Value: Sendable {
         /// The number of space-characters to be displayed for each tab-character. Default value is 8    Play it ».
         case number(Int)
@@ -28,6 +31,7 @@ public struct TabSize: Property {
     public var isImportant: Bool
 
     /// Specifies the width of a tab character.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .number(8)
     ) {
@@ -37,11 +41,13 @@ public struct TabSize: Property {
     }
 
     /// Specifies the width of a tab character.
+    /// - Parameter value: The property value.
     public init(_ value: Int = 8) {
         self.init(.number(value))
     }
 
     /// Specifies the width of a tab character.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

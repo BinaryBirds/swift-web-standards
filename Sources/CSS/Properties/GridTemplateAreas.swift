@@ -1,4 +1,7 @@
+/// CSS `grid-template-areas` property.
+/// Provides typed values for this declaration.
 public struct GridTemplateAreas: Property {
+    /// Value options for the `grid-template-areas` property.
     public enum Value: Sendable {
         /// Default value. No named grid areas.
         case none
@@ -20,6 +23,7 @@ public struct GridTemplateAreas: Property {
     public var isImportant: Bool
 
     /// Specifies how to display columns and rows, using named grid items.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

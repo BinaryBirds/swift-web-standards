@@ -1,4 +1,7 @@
+/// CSS `cursor` property.
+/// Provides typed values for this declaration.
 public struct Cursor: Property {
+    /// Value options for the `cursor` property.
     public enum Value: String, Sendable {
         /// The cursor indicates an alias of something is to be created.
         case alias
@@ -86,6 +89,7 @@ public struct Cursor: Property {
     public var isImportant: Bool
 
     /// Specifies the mouse cursor to be displayed when pointing over an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

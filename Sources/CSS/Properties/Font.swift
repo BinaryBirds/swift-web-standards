@@ -1,4 +1,7 @@
+/// CSS `font` property.
+/// Provides typed values for this declaration.
 public struct Font: Property {
+    /// Value options for the `font` property.
     public enum Value: Sendable {
         /// font-style    Specifies the font style. Default value is "normal".
         /// font-variant    Specifies the font variant. Default value is "normal".
@@ -73,6 +76,7 @@ public struct Font: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -82,6 +86,13 @@ public struct Font: Property {
     }
 
     /// A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties.
+    /// - Parameters:
+    ///   - style: The style value.
+    ///   - variant: The variant value.
+    ///   - weight: The weight value.
+    ///   - size: The size value.
+    ///   - lineHeight: The lineHeight value.
+    ///   - family: The family value.
     public init(
         style: FontStyle.Value,
         variant: FontVariant.Value,

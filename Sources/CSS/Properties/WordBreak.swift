@@ -1,4 +1,7 @@
+/// CSS `word-break` property.
+/// Provides typed values for this declaration.
 public struct WordBreak: Property {
+    /// Value options for the `word-break` property.
     public enum Value: String, Sendable {
         /// Default value. Uses default line break rules.
         case normal
@@ -19,6 +22,7 @@ public struct WordBreak: Property {
     public var isImportant: Bool
 
     /// Specifies how words should break when reaching the end of a line.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

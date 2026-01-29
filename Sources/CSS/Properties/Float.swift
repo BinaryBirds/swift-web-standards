@@ -1,4 +1,7 @@
+/// CSS `float` property.
+/// Provides typed values for this declaration.
 public struct Float: Property {
+    /// Value options for the `float` property.
     public enum Value: String, Sendable {
         /// The element does not float, (will be displayed just where it occurs in the text). This is default.
         case none
@@ -17,6 +20,7 @@ public struct Float: Property {
     public var isImportant: Bool
 
     /// Specifies whether an element should float to the left, right, or not at all.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

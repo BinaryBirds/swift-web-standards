@@ -1,4 +1,7 @@
+/// CSS `transition-duration` property.
+/// Provides typed values for this declaration.
 public struct TransitionDuration: Property {
+    /// Value options for the `transition-duration` property.
     public enum Value: Sendable {
         case zero
         /// Specifies how many seconds a transition effect takes to complete. Default value is 0s, meaning there will be no effect.
@@ -37,6 +40,7 @@ public struct TransitionDuration: Property {
     public var isImportant: Bool
 
     /// Specifies how many seconds or milliseconds a transition effect takes to complete.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .zero
     ) {

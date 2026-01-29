@@ -1,4 +1,7 @@
+/// CSS `page-break-before` property.
+/// Provides typed values for this declaration.
 public struct PageBreakBefore: Property {
+    /// Value options for the `page-break-before` property.
     public enum Value: String, Sendable {
         /// Default. Automatic page-break.
         case auto
@@ -21,6 +24,7 @@ public struct PageBreakBefore: Property {
     public var isImportant: Bool
 
     /// Sets the page-break behavior before an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

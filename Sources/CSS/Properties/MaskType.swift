@@ -1,4 +1,7 @@
+/// CSS `mask-type` property.
+/// Provides typed values for this declaration.
 public struct MaskType: Property {
+    /// Value options for the `mask-type` property.
     public enum Value: String, Sendable {
         /// Uses the luminance of the mask.
         case luminance
@@ -15,6 +18,7 @@ public struct MaskType: Property {
     public var isImportant: Bool
 
     /// Specifies whether a mask element is used as a luminance or an alpha mask.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

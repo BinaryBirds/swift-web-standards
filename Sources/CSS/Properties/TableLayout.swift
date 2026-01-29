@@ -1,4 +1,7 @@
+/// CSS `table-layout` property.
+/// Provides typed values for this declaration.
 public struct TableLayout: Property {
+    /// Value options for the `table-layout` property.
     public enum Value: String, Sendable {
         /// Browsers use an automatic table layout algorithm. The column width is set by the widest unbreakable content in the cells. The content will dictate the layout     Play it ».
         case auto
@@ -15,6 +18,7 @@ public struct TableLayout: Property {
     public var isImportant: Bool
 
     /// Defines the algorithm used to lay out table cells, rows, and columns.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

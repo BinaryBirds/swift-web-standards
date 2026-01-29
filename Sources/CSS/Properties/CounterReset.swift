@@ -1,6 +1,9 @@
 /// Creates or resets one or more CSS counters.
 
+/// CSS `counter-reset` property.
+/// Provides typed values for this declaration.
 public struct CounterReset: Property {
+    /// Value options for the `counter-reset` property.
     public enum Value: Sendable {
         /// Default value. No counters will be reset.
         case none
@@ -31,6 +34,9 @@ public struct CounterReset: Property {
     public let value: String
     public var isImportant: Bool
 
+    /// Creates a `counter-reset` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none,
     ) {

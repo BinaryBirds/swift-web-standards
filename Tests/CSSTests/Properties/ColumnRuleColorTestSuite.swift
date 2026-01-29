@@ -29,4 +29,20 @@ struct ColumnRuleColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let color = ColumnRuleColor(.color(.blue))
+        let initial = ColumnRuleColor(.initial)
+        let inherit = ColumnRuleColor(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(color) == "column-rule-color: blue")
+        #expect(
+            renderer.renderProperty(initial) == "column-rule-color: initial"
+        )
+        #expect(
+            renderer.renderProperty(inherit) == "column-rule-color: inherit"
+        )
+    }
 }

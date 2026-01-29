@@ -1,4 +1,7 @@
+/// CSS `unicode-bidi` property.
+/// Provides typed values for this declaration.
 public struct UnicodeBidi: Property {
+    /// Value options for the `unicode-bidi` property.
     public enum Value: String, Sendable {
         /// The element does not open an additional level of embedding. This is default.
         case normal
@@ -21,6 +24,7 @@ public struct UnicodeBidi: Property {
     public var isImportant: Bool
 
     /// Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

@@ -1,4 +1,7 @@
+/// CSS `animation-fill-mode` property.
+/// Provides typed values for this declaration.
 public struct AnimationFillMode: Property {
+    /// Value options for the `animation-fill-mode` property.
     public enum Value: String, Sendable {
         /// Default value. Animation will not apply any styles to the element before or after it is executing.
         case none
@@ -19,6 +22,7 @@ public struct AnimationFillMode: Property {
     public var isImportant: Bool
 
     /// Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

@@ -1,4 +1,7 @@
+/// CSS `list-style` property.
+/// Provides typed values for this declaration.
 public struct ListStyle: Property {
+    /// Value options for the `list-style` property.
     public enum Value: Sendable {
         /// list-style-type    Specifies the type of list-item marker. Default value is "disc".
         /// list-style-position    Specifies where to place the list-item marker. Default value is "outside".
@@ -31,6 +34,7 @@ public struct ListStyle: Property {
     public var isImportant: Bool
 
     /// Sets all the properties for a list in one declaration.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

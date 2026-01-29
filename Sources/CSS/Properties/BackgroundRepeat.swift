@@ -1,4 +1,7 @@
+/// CSS `background-repeat` property.
+/// Provides typed values for this declaration.
 public struct BackgroundRepeat: Property {
+    /// Value options for the `background-repeat` property.
     public enum Value: String, Sendable {
         /// The background image is repeated both vertically and horizontally.  The last image will be clipped if it does not fit. This is default.
         case `repeat`
@@ -23,6 +26,7 @@ public struct BackgroundRepeat: Property {
     public var isImportant: Bool
 
     /// Sets if/how a background image will be repeated.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .repeat
     ) {

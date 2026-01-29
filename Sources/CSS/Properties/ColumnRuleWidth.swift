@@ -1,4 +1,7 @@
+/// CSS `column-rule-width` property.
+/// Provides typed values for this declaration.
 public struct ColumnRuleWidth: Property {
+    /// Value options for the `column-rule-width` property.
     public enum Value: Sendable {
         /// Default value. Defines a medium rule.
         case medium
@@ -36,6 +39,7 @@ public struct ColumnRuleWidth: Property {
     public var isImportant: Bool
 
     /// Specifies the width of the rule between columns.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .medium
     ) {

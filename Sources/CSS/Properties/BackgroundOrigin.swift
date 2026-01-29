@@ -1,4 +1,7 @@
+/// CSS `background-origin` property.
+/// Provides typed values for this declaration.
 public struct BackgroundOrigin: Property {
+    /// Value options for the `background-origin` property.
     public enum Value: String, Sendable {
         /// Default value. The background image starts from the upper left corner of the padding edge.
         case paddingBox = "padding-box"
@@ -17,6 +20,7 @@ public struct BackgroundOrigin: Property {
     public var isImportant: Bool
 
     /// Specifies the origin position of a background image.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .paddingBox
     ) {

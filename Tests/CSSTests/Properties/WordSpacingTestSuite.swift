@@ -29,4 +29,16 @@ struct WordSpacingTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let normal = WordSpacing(.normal)
+        let length = WordSpacing(2.px)
+        let initial = WordSpacing(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(normal) == "word-spacing: normal")
+        #expect(renderer.renderProperty(length) == "word-spacing: 2px")
+        #expect(renderer.renderProperty(initial) == "word-spacing: initial")
+    }
 }

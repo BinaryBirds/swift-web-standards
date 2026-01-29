@@ -1,4 +1,7 @@
+/// CSS `quotes` property.
+/// Provides typed values for this declaration.
 public struct Quotes: Property {
+    /// Value options for the `quotes` property.
     public enum Value: Sendable {
 
         /// Specifies that the "open-quote" and "close-quote" values of the "content" property will not produce any quotation marks.
@@ -44,6 +47,7 @@ public struct Quotes: Property {
     public var isImportant: Bool
 
     /// Sets the type of quotation marks for embedded quotations.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -53,6 +57,11 @@ public struct Quotes: Property {
     }
 
     /// Sets the type of quotation marks for embedded quotations.
+    /// - Parameters:
+    ///   - a: The a value.
+    ///   - b: The b value.
+    ///   - c: The c value.
+    ///   - d: The d value.
     public init(_ a: String, _ b: String, _ c: String, _ d: String) {
         self.init(.marks(a, b, c, d))
     }

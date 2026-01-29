@@ -1,4 +1,7 @@
+/// CSS `text-align` property.
+/// Provides typed values for this declaration.
 public struct TextAlign: Property {
+    /// Value options for the `text-align` property.
     public enum Value: String, Sendable {
         /// Aligns the text to the left    Play it ».
         case left
@@ -19,6 +22,7 @@ public struct TextAlign: Property {
     public var isImportant: Bool
 
     /// Specifies the horizontal alignment of text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

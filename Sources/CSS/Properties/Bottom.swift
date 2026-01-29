@@ -1,4 +1,7 @@
+/// CSS `bottom` property.
+/// Provides typed values for this declaration.
 public struct Bottom: Property {
+    /// Value options for the `bottom` property.
     public enum Value: Sendable {
         /// Lets the browser calculate the bottom edge position. This is default.
         case auto
@@ -28,6 +31,7 @@ public struct Bottom: Property {
     public var isImportant: Bool
 
     /// Sets the elements position, from the bottom of its parent element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

@@ -1,4 +1,7 @@
+/// CSS `grid-column-end` property.
+/// Provides typed values for this declaration.
 public struct GridColumnEnd: Property {
+    /// Value options for the `grid-column-end` property.
     public enum Value: Sendable {
         /// Default value. The item will span one column.
         case auto
@@ -24,6 +27,7 @@ public struct GridColumnEnd: Property {
     public var isImportant: Bool
 
     /// Specifies where to end the grid item.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

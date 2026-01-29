@@ -1,4 +1,7 @@
+/// CSS `list-style-image` property.
+/// Provides typed values for this declaration.
 public struct ListStyleImage: Property {
+    /// Value options for the `list-style-image` property.
     public enum Value: Sendable {
         /// A normal line height. This is default.
         case none
@@ -28,6 +31,7 @@ public struct ListStyleImage: Property {
     public var isImportant: Bool
 
     /// Specifies an image as the list-item marker.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

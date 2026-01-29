@@ -1,4 +1,7 @@
+/// CSS `top` property.
+/// Provides typed values for this declaration.
 public struct Top: Property {
+    /// Value options for the `top` property.
     public enum Value: Sendable {
         /// Lets the browser calculate the top edge position. This is default.
         case auto
@@ -28,6 +31,7 @@ public struct Top: Property {
     public var isImportant: Bool
 
     /// Specifies the top position of a positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {
@@ -37,6 +41,7 @@ public struct Top: Property {
     }
 
     /// Specifies the top position of a positioned element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

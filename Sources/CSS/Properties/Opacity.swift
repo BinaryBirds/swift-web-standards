@@ -1,4 +1,7 @@
+/// CSS `opacity` property.
+/// Provides typed values for this declaration.
 public struct Opacity: Property {
+    /// Value options for the `opacity` property.
     public enum Value: Sendable {
         /// Specifies the opacity. From 0.0 (fully transparent) to 1.0 (fully opaque).
         case number(Double)
@@ -24,6 +27,7 @@ public struct Opacity: Property {
     public var isImportant: Bool
 
     /// Sets the opacity level for an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -33,6 +37,7 @@ public struct Opacity: Property {
     }
 
     /// Sets the opacity level for an element.
+    /// - Parameter value: The property value.
     public init(_ value: Double = 1) {
         self.init(.number(value))
     }

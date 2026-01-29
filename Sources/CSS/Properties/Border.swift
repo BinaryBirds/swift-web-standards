@@ -1,6 +1,9 @@
 /// A shorthand property for border-width, border-style and border-color.
 
+/// CSS `border` property.
+/// Provides typed values for this declaration.
 public struct Border: Property {
+    /// Value options for the `border` property.
     public enum Value: Sendable {
         case values(BorderWidth.Value, BorderStyle.Value, CSSColor)
         /// Sets this property to its default value.
@@ -26,6 +29,7 @@ public struct Border: Property {
     public var isImportant: Bool
 
     /// A shorthand property for border-width, border-style and border-color.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

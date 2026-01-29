@@ -1,4 +1,7 @@
+/// CSS `text-decoration-line` property.
+/// Provides typed values for this declaration.
 public struct TextDecorationLine: Property {
+    /// Value options for the `text-decoration-line` property.
     public enum Value: String, Sendable {
         /// Default value. Specifies no line for the text-decoration    Play it ».
         case none
@@ -19,6 +22,7 @@ public struct TextDecorationLine: Property {
     public var isImportant: Bool
 
     /// Specifies the type of line in a text-decoration.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

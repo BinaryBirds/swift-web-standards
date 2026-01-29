@@ -29,4 +29,16 @@ struct MinWidthTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = MinWidth(240.px)
+        let inherit = MinWidth(.inherit)
+        let initial = MinWidth(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "min-width: 240px")
+        #expect(renderer.renderProperty(inherit) == "min-width: inherit")
+        #expect(renderer.renderProperty(initial) == "min-width: initial")
+    }
 }

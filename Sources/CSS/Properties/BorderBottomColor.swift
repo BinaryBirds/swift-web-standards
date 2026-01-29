@@ -1,3 +1,5 @@
+/// CSS `border-bottom-color` property.
+/// Provides typed values for this declaration.
 public struct BorderBottomColor: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct BorderBottomColor: Property {
     public var isImportant: Bool
 
     /// Sets the color of the bottom border.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColorValue) {
         self.name = "border-bottom-color"
         self.value = value.rawValue

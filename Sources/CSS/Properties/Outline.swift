@@ -1,4 +1,7 @@
+/// CSS `outline` property.
+/// Provides typed values for this declaration.
 public struct Outline: Property {
+    /// Value options for the `outline` property.
     public enum Value: Sendable {
         /// outline-width    Specifies the width of outline.
         /// outline-style    Specifies the style of the outline.
@@ -27,6 +30,7 @@ public struct Outline: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the outline-width, outline-style, and the outline-color properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

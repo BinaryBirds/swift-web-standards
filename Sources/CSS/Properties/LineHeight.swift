@@ -1,4 +1,7 @@
+/// CSS `line-height` property.
+/// Provides typed values for this declaration.
 public struct LineHeight: Property {
+    /// Value options for the `line-height` property.
     public enum Value: Sendable {
         /// A normal line height. This is default.
         case normal
@@ -32,6 +35,7 @@ public struct LineHeight: Property {
     public var isImportant: Bool
 
     /// Sets the line height.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

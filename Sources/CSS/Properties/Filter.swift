@@ -1,4 +1,7 @@
+/// CSS `filter` property.
+/// Provides typed values for this declaration.
 public struct Filter: Property {
+    /// Value options for the `filter` property.
     public enum Value: Sendable {
         /// Default value. Specifies no effects.
         case none
@@ -110,6 +113,7 @@ public struct Filter: Property {
     public var isImportant: Bool
 
     /// Defines effects (e.g. blurring or color shifting) on an element before the element is displayed.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

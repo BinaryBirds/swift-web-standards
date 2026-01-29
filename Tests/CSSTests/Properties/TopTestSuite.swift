@@ -29,4 +29,16 @@ struct TopTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let auto = Top(.auto)
+        let length = Top(12.px)
+        let inherit = Top(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(auto) == "top: auto")
+        #expect(renderer.renderProperty(length) == "top: 12px")
+        #expect(renderer.renderProperty(inherit) == "top: inherit")
+    }
 }

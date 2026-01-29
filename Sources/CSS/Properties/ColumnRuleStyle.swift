@@ -1,4 +1,7 @@
+/// CSS `column-rule-style` property.
+/// Provides typed values for this declaration.
 public struct ColumnRuleStyle: Property {
+    /// Value options for the `column-rule-style` property.
     public enum Value: String, Sendable {
         /// Default value. Defines no rule.
         case none
@@ -31,6 +34,7 @@ public struct ColumnRuleStyle: Property {
     public var isImportant: Bool
 
     /// Specifies the style of the rule between columns.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

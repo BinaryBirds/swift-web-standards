@@ -1,4 +1,7 @@
+/// CSS `align-self` property.
+/// Provides typed values for this declaration.
 public struct AlignSelf: Property {
+    /// Value options for the `align-self` property.
     public enum Value: String, Sendable {
         /// Default. The element inherits its parent container's align-items property, or "stretch" if it has no parent container.
         case auto
@@ -23,6 +26,7 @@ public struct AlignSelf: Property {
     public var isImportant: Bool
 
     /// Specifies the alignment for selected items inside a flexible container.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

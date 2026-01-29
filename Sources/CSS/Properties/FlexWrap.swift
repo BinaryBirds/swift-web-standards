@@ -1,4 +1,7 @@
+/// CSS `flex-wrap` property.
+/// Provides typed values for this declaration.
 public struct FlexWrap: Property {
+    /// Value options for the `flex-wrap` property.
     public enum Value: String, Sendable {
         /// Default value. Specifies that the flexible items will not wrap.
         case nowrap
@@ -17,6 +20,7 @@ public struct FlexWrap: Property {
     public var isImportant: Bool
 
     /// Specifies whether the flexible items should wrap or not.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .nowrap
     ) {

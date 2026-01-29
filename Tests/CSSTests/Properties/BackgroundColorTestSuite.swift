@@ -29,4 +29,19 @@ struct BackgroundColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let transparent = BackgroundColor(.transparent)
+        let color = BackgroundColor(.hotPink)
+        let initial = BackgroundColor(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(transparent)
+                == "background-color: transparent"
+        )
+        #expect(renderer.renderProperty(color) == "background-color: hotpink")
+        #expect(renderer.renderProperty(initial) == "background-color: initial")
+    }
 }

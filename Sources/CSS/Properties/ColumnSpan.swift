@@ -1,4 +1,7 @@
+/// CSS `column-span` property.
+/// Provides typed values for this declaration.
 public struct ColumnSpan: Property {
+    /// Value options for the `column-span` property.
     public enum Value: String, Sendable {
         /// Default value. The element should span across one column.
         case none
@@ -15,6 +18,7 @@ public struct ColumnSpan: Property {
     public var isImportant: Bool
 
     /// Specifies how many columns an element should span across.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

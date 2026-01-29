@@ -29,4 +29,18 @@ struct PaddingTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let single = Padding(12.px)
+        let axis = Padding(horizontal: 8.px, vertical: 16.px)
+        let sides = Padding(top: 1.px, right: 2.px, bottom: 3.px, left: 4.px)
+        let inherit = Padding(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(single) == "padding: 12px")
+        #expect(renderer.renderProperty(axis) == "padding: 8px 16px")
+        #expect(renderer.renderProperty(sides) == "padding: 1px 2px 3px 4px")
+        #expect(renderer.renderProperty(inherit) == "padding: inherit")
+    }
 }

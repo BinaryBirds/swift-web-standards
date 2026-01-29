@@ -29,4 +29,34 @@ struct AnimationTimingFunctionTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let linear = AnimationTimingFunction(.linear)
+        let ease = AnimationTimingFunction(.ease)
+        let steps = AnimationTimingFunction(.steps(3, nil))
+        let cubic = AnimationTimingFunction(.cubicBezier(0.2, 0.4, 0.6, 0.8))
+        let inherit = AnimationTimingFunction(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(linear)
+                == "animation-timing-function: linear"
+        )
+        #expect(
+            renderer.renderProperty(ease) == "animation-timing-function: ease"
+        )
+        #expect(
+            renderer.renderProperty(steps)
+                == "animation-timing-function: steps(3)"
+        )
+        #expect(
+            renderer.renderProperty(cubic)
+                == "animation-timing-function: cubic-bezier(0.2,0.4,0.6,0.8)"
+        )
+        #expect(
+            renderer.renderProperty(inherit)
+                == "animation-timing-function: inherit"
+        )
+    }
 }
