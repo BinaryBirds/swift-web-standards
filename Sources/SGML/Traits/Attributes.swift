@@ -1,9 +1,12 @@
+/// Provides attribute storage and mutation APIs.
 public protocol Attributes {
+    /// The attribute storage for the element.
     var attributes: AttributeStore { get set }
 }
 
 extension Attributes where Self: Mutable {
 
+    /// Sets an attribute value.
     public func setAttribute(
         name: String,
         value: String?
@@ -13,12 +16,14 @@ extension Attributes where Self: Mutable {
         }
     }
 
+    /// Sets an attribute value.
     public func setAttribute<T: Attribute>(
         _ attribute: T
     ) -> Self {
         setAttribute(name: T.name, value: attribute.value)
     }
 
+    /// Sets multiple attribute values.
     public func setAttributes<T: Attribute>(
         _ attributes: [T]
     ) -> Self {
@@ -31,6 +36,7 @@ extension Attributes where Self: Mutable {
 
     // MARK: - add
 
+    /// Adds an attribute value.
     public func addAttribute(
         name: String,
         value: String?
@@ -40,12 +46,14 @@ extension Attributes where Self: Mutable {
         }
     }
 
+    /// Adds an attribute value.
     public func addAttribute<T: Attribute>(
         _ attribute: T
     ) -> Self {
         addAttribute(name: T.name, value: attribute.value)
     }
 
+    /// Adds multiple attribute values.
     public func addAttributes<T: Attribute>(
         _ attributes: [T]
     ) -> Self {
@@ -58,6 +66,7 @@ extension Attributes where Self: Mutable {
 
     // MARK: - remove
 
+    /// Removes an attribute or attribute value.
     public func removeAttribute(
         name: String
     ) -> Self {
@@ -66,12 +75,14 @@ extension Attributes where Self: Mutable {
         }
     }
 
+    /// Removes an attribute or attribute value.
     public func removeAttribute<T: Attribute>(
         _: T.Type
     ) -> Self {
         removeAttribute(name: T.name)
     }
 
+    /// Removes an attribute or attribute value.
     public func removeAttribute(
         name: String,
         value: String?,
@@ -86,6 +97,7 @@ extension Attributes where Self: Mutable {
         }
     }
 
+    /// Removes an attribute or attribute value.
     public func removeAttribute<T: Attribute>(
         _ attribute: T,
         preservingEmptyAttribute: Bool = false
@@ -99,6 +111,7 @@ extension Attributes where Self: Mutable {
 
     // MARK: - has
 
+    /// Returns whether an attribute is present.
     public func hasAttribute(
         name: String
     ) -> Bool {
@@ -106,12 +119,14 @@ extension Attributes where Self: Mutable {
 
     }
 
+    /// Returns whether an attribute is present.
     public func hasAttribute<T: Attribute>(
         _: T.Type
     ) -> Bool {
         hasAttribute(name: T.name)
     }
 
+    /// Returns whether an attribute is present.
     public func hasAttribute(
         name: String,
         value: String?
@@ -120,6 +135,7 @@ extension Attributes where Self: Mutable {
 
     }
 
+    /// Returns whether an attribute is present.
     public func hasAttribute<T: Attribute>(
         _ attribute: T
     ) -> Bool {
@@ -128,12 +144,14 @@ extension Attributes where Self: Mutable {
 
     // MARK: - get
 
+    /// Returns an attribute value.
     public func getAttribute(
         name: String
     ) -> String? {
         attributes.get(name: name)
     }
 
+    /// Returns an attribute value.
     public func getAttribute<T: Attribute>(
         _: T.Type
     ) -> String? {

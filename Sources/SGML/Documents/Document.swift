@@ -1,8 +1,12 @@
+/// An SGML document with a doctype and root element.
 public struct Document: Sendable {
 
+    /// The document type declaration.
     public let type: DocType
+    /// The root element of the document.
     public let root: Element
 
+    /// Creates a document.
     public init(
         type: DocType = .unspecified,
         root: Element
@@ -11,6 +15,7 @@ public struct Document: Sendable {
         self.root = root
     }
 
+    /// Renders the document to a string.
     public func render(
         indent: UInt8 = 0
     ) -> String {

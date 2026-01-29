@@ -1,3 +1,4 @@
+/// Supported document type declarations.
 public enum DocType: Sendable {
     case unspecified
     case html
