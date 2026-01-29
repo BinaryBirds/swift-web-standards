@@ -1,13 +1,17 @@
+/// Renders DOM nodes into their string representation.
 public struct Renderer {
 
+    /// Number of spaces per indentation level. Use `0` for inline rendering.
     public var indent: UInt8
 
+    /// Creates a renderer with the desired indentation width.
     public init(
         indent: UInt8 = 0
     ) {
         self.indent = indent
     }
 
+    /// Renders a node, choosing inline or indented output based on `indent`.
     public func render(
         node: Node
     ) -> String {
