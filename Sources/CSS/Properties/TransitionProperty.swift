@@ -1,4 +1,7 @@
+/// CSS `transition-property` property.
+/// Provides typed values for this declaration.
 public struct TransitionProperty: Property {
+    /// Value options for the `transition-property` property.
     public enum Value: Sendable {
         /// No property will get a transition effect.
         case none
@@ -32,6 +35,7 @@ public struct TransitionProperty: Property {
     public var isImportant: Bool
 
     /// Specifies the name of the CSS property the transition effect is for.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .all
     ) {
@@ -40,6 +44,9 @@ public struct TransitionProperty: Property {
         self.isImportant = false
     }
 
+    /// Creates a `transition-property` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(_ value: [String]) {
         self.init(.properties(value))
     }

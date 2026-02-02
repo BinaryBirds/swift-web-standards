@@ -29,4 +29,21 @@ struct TransitionPropertyTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let none = TransitionProperty(.none)
+        let list = TransitionProperty(["opacity", "transform"])
+        let inherit = TransitionProperty(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(none) == "transition-property: none")
+        #expect(
+            renderer.renderProperty(list)
+                == "transition-property: opacity,transform"
+        )
+        #expect(
+            renderer.renderProperty(inherit) == "transition-property: inherit"
+        )
+    }
 }

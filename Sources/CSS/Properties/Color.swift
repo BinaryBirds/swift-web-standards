@@ -1,4 +1,7 @@
+/// CSS `color` property.
+/// Provides typed values for this declaration.
 public struct Color: Property {
+    /// Value options for the `color` property.
     public enum Value: Sendable {
         /// Specifies the text color.
         case color(CSSColor)
@@ -24,6 +27,7 @@ public struct Color: Property {
     public var isImportant: Bool
 
     /// Sets the color of text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -33,6 +37,7 @@ public struct Color: Property {
     }
 
     /// Sets the color of text.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColor) {
         self.init(.color(value))
     }

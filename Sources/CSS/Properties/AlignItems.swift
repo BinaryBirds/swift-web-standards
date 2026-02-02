@@ -1,4 +1,7 @@
+/// CSS `align-items` property.
+/// Provides typed values for this declaration.
 public struct AlignItems: Property {
+    /// Value options for the `align-items` property.
     public enum Value: String, Sendable {
         /// Default. Items are stretched to fit the container.
         case stretch
@@ -21,6 +24,7 @@ public struct AlignItems: Property {
     public var isImportant: Bool
 
     /// Specifies the alignment for items inside a flexible container.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .stretch
     ) {

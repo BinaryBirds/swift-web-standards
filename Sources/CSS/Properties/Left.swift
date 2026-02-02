@@ -1,4 +1,7 @@
+/// CSS `left` property.
+/// Provides typed values for this declaration.
 public struct Left: Property {
+    /// Value options for the `left` property.
     public enum Value: Sendable {
         /// Lets the browser calculate the left edge position. This is default.
         case auto
@@ -28,6 +31,7 @@ public struct Left: Property {
     public var isImportant: Bool
 
     /// Specifies the left position of a positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

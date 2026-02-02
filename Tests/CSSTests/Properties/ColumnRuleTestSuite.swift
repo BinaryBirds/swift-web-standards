@@ -29,4 +29,16 @@ struct ColumnRuleTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let values = ColumnRule(.thin, .dashed, .color(.red))
+        let initial = ColumnRule(.initial)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(values) == "column-rule: thin dashed red"
+        )
+        #expect(renderer.renderProperty(initial) == "column-rule: initial")
+    }
 }

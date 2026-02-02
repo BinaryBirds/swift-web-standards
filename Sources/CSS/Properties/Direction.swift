@@ -1,4 +1,7 @@
+/// CSS `direction` property.
+/// Provides typed values for this declaration.
 public struct Direction: Property {
+    /// Value options for the `direction` property.
     public enum Value: String, Sendable {
         /// Text direction goes from left-to-right. This is default.
         case ltr
@@ -15,6 +18,7 @@ public struct Direction: Property {
     public var isImportant: Bool
 
     /// Specifies the text direction/writing direction.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .ltr
     ) {

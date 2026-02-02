@@ -1,4 +1,7 @@
+/// CSS `vertical-align` property.
+/// Provides typed values for this declaration.
 public struct VerticalAlign: Property {
+    /// Value options for the `vertical-align` property.
     public enum Value: Sendable {
         /// The element is aligned with the baseline of the parent. This is default.
         case baseline
@@ -56,6 +59,7 @@ public struct VerticalAlign: Property {
     public var isImportant: Bool
 
     /// Sets the vertical alignment of an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .baseline
     ) {
@@ -65,6 +69,7 @@ public struct VerticalAlign: Property {
     }
 
     /// Sets the vertical alignment of an element.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

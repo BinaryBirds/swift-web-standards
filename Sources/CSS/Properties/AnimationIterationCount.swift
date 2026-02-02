@@ -1,4 +1,7 @@
+/// CSS `animation-iteration-count` property.
+/// Provides typed values for this declaration.
 public struct AnimationIterationCount: Property {
+    /// Value options for the `animation-iteration-count` property.
     public enum Value: ExpressibleByIntegerLiteral, Sendable {
 
         /// A number that defines how many times an animation should be played. Default value is 1.
@@ -10,6 +13,9 @@ public struct AnimationIterationCount: Property {
         /// Inherits this property from its parent element.
         case inherit
 
+        /// Creates a `animation-iteration-count` declaration.
+        /// Used by `StylesheetRenderer` when emitting CSS.
+        /// - Parameter value: The property value.
         public init(integerLiteral value: IntegerLiteralType) {
             self = .number(value)
         }
@@ -33,6 +39,7 @@ public struct AnimationIterationCount: Property {
     public var isImportant: Bool
 
     /// Specifies the number of times an animation should be played.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = 1
     ) {

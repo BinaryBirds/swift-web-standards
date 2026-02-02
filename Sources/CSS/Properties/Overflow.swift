@@ -1,4 +1,7 @@
+/// CSS `overflow` property.
+/// Provides typed values for this declaration.
 public struct Overflow: Property {
+    /// Value options for the `overflow` property.
     public enum Value: String, Sendable {
         /// The overflow is not clipped. It renders outside the element's box. This is default.
         case visible
@@ -19,6 +22,7 @@ public struct Overflow: Property {
     public var isImportant: Bool
 
     /// Specifies what happens if content overflows an element's box.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .visible
     ) {

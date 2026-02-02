@@ -1,4 +1,7 @@
+/// CSS `flex-direction` property.
+/// Provides typed values for this declaration.
 public struct FlexDirection: Property {
+    /// Value options for the `flex-direction` property.
     public enum Value: String, Sendable {
         /// Default value. The flexible items are displayed horizontally, as a row.
         case row
@@ -19,6 +22,7 @@ public struct FlexDirection: Property {
     public var isImportant: Bool
 
     /// Specifies the direction of the flexible items.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .row
     ) {

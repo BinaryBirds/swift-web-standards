@@ -29,4 +29,16 @@ struct FlexBasisTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let auto = FlexBasis(.auto)
+        let number = FlexBasis(.number(40.percent))
+        let inherit = FlexBasis(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(auto) == "flex-basis: auto")
+        #expect(renderer.renderProperty(number) == "flex-basis: 40%")
+        #expect(renderer.renderProperty(inherit) == "flex-basis: inherit")
+    }
 }

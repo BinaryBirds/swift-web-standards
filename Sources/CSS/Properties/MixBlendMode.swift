@@ -1,4 +1,7 @@
+/// CSS `mix-blend-mode` property.
+/// Provides typed values for this declaration.
 public struct MixBlendMode: Property {
+    /// Value options for the `mix-blend-mode` property.
     public enum Value: String, Sendable {
         /// This is default. Sets the blending mode to normal.
         case normal
@@ -35,6 +38,7 @@ public struct MixBlendMode: Property {
     public var isImportant: Bool
 
     /// Specifies how an element's content should blend with its direct parent background.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

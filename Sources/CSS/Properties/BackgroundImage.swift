@@ -1,4 +1,7 @@
+/// CSS `background-image` property.
+/// Provides typed values for this declaration.
 public struct BackgroundImage: Property {
+    /// Value options for the `background-image` property.
     public enum Value: Sendable {
         /// The URL to the image. To specify more than one image, separate the URLs with a comma.
         case url(String)
@@ -33,6 +36,7 @@ public struct BackgroundImage: Property {
     public var isImportant: Bool
 
     /// Specifies one or more background images for an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

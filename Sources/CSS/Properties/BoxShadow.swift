@@ -1,4 +1,7 @@
+/// CSS `box-shadow` property.
+/// Provides typed values for this declaration.
 public struct BoxShadow: Property {
+    /// Value options for the `box-shadow` property.
     public enum Value: Sendable {
         public enum ShadowType: String, Sendable {
             case outset = ""
@@ -60,6 +63,7 @@ public struct BoxShadow: Property {
     public var isImportant: Bool
 
     /// Attaches one or more shadows to an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {
@@ -68,6 +72,15 @@ public struct BoxShadow: Property {
         self.isImportant = false
     }
 
+    /// Creates a `box-shadow` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - hOffset: The hOffset value.
+    ///   - vOffset: The vOffset value.
+    ///   - blur: The blur value.
+    ///   - spread: The spread value.
+    ///   - color: The color value.
+    ///   - type: The type value.
     public init(
         _ hOffset: UnitRepresentable,
         _ vOffset: UnitRepresentable,

@@ -1,6 +1,9 @@
 /// Increases or decreases the value of one or more CSS counters.
 
+/// CSS `counter-increment` property.
+/// Provides typed values for this declaration.
 public struct CounterIncrement: Property {
+    /// Value options for the `counter-increment` property.
     public enum Value: Sendable {
         /// Default value. No counters will be incremented.
         case none
@@ -33,6 +36,9 @@ public struct CounterIncrement: Property {
     public let value: String
     public var isImportant: Bool
 
+    /// Creates a `counter-increment` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

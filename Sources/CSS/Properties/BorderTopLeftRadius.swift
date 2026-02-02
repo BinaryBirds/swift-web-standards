@@ -1,4 +1,7 @@
+/// CSS `border-top-left-radius` property.
+/// Provides typed values for this declaration.
 public struct BorderTopLeftRadius: Property {
+    /// Value options for the `border-top-left-radius` property.
     public enum Value: Sendable {
         /// Defines the shape of the corners. Default value is 0. Read about length units.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct BorderTopLeftRadius: Property {
     public var isImportant: Bool
 
     /// Defines the radius of the border of the top-left corner.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

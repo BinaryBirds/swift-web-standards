@@ -29,4 +29,16 @@ struct TextIndentTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = TextIndent(12.px)
+        let initial = TextIndent(.initial)
+        let inherit = TextIndent(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "text-indent: 12px")
+        #expect(renderer.renderProperty(initial) == "text-indent: initial")
+        #expect(renderer.renderProperty(inherit) == "text-indent: inherit")
+    }
 }

@@ -29,4 +29,18 @@ struct BorderColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let transparent = BorderColor(.transparent)
+        let named = BorderColor(.blue)
+        let inherit = BorderColor(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(transparent) == "border-color: transparent"
+        )
+        #expect(renderer.renderProperty(named) == "border-color: blue")
+        #expect(renderer.renderProperty(inherit) == "border-color: inherit")
+    }
 }

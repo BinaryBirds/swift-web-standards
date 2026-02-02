@@ -1,4 +1,7 @@
+/// CSS `line-break` property.
+/// Provides typed values for this declaration.
 public struct LineBreak: Property {
+    /// Value options for the `line-break` property.
     public enum Value: String, Sendable {
         case auto
         case loose
@@ -16,6 +19,7 @@ public struct LineBreak: Property {
     public var isImportant: Bool
 
     /// Specifies how/if to break lines.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

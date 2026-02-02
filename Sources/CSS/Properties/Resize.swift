@@ -1,4 +1,7 @@
+/// CSS `resize` property.
+/// Provides typed values for this declaration.
 public struct Resize: Property {
+    /// Value options for the `resize` property.
     public enum Value: String, Sendable {
         /// Default value. The user cannot resize the element.
         case none
@@ -19,6 +22,7 @@ public struct Resize: Property {
     public var isImportant: Bool
 
     /// Defines if (and how) an element is resizable by the user.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

@@ -29,4 +29,16 @@ struct MaxWidthTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let none = MaxWidth(.none)
+        let length = MaxWidth(320.px)
+        let inherit = MaxWidth(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(none) == "max-width: none")
+        #expect(renderer.renderProperty(length) == "max-width: 320px")
+        #expect(renderer.renderProperty(inherit) == "max-width: inherit")
+    }
 }

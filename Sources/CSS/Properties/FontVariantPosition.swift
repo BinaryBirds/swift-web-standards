@@ -1,4 +1,7 @@
+/// CSS `font-variant-position` property.
+/// Provides typed values for this declaration.
 public struct FontVariantPosition: Property {
+    /// Value options for the `font-variant-position` property.
     public enum Value: String, Sendable {
         case normal
         case sub
@@ -14,6 +17,7 @@ public struct FontVariantPosition: Property {
     public var isImportant: Bool
 
     /// Controls the usage of alternate glyphs of smaller size positioned as superscript or subscript regarding the baseline of the font.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

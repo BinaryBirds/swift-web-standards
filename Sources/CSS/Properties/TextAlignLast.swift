@@ -1,4 +1,7 @@
+/// CSS `text-align-last` property.
+/// Provides typed values for this declaration.
 public struct TextAlignLast: Property {
+    /// Value options for the `text-align-last` property.
     public enum Value: String, Sendable {
         /// Default value. The last line is justified and aligned left    Play it ».
         case auto
@@ -25,6 +28,7 @@ public struct TextAlignLast: Property {
     public var isImportant: Bool
 
     /// Describes how the last line of a block or a line right before a forced line break is aligned when text-align is "justify".
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

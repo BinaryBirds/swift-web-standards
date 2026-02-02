@@ -1,4 +1,7 @@
+/// CSS `font-variant-ligatures` property.
+/// Provides typed values for this declaration.
 public struct FontVariantLigatures: Property {
+    /// Value options for the `font-variant-ligatures` property.
     public enum Value: String, Sendable {
         case normal
         case none
@@ -21,6 +24,7 @@ public struct FontVariantLigatures: Property {
     public var isImportant: Bool
 
     /// Controls which ligatures and contextual forms are used in textual content of the elements it applies to.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

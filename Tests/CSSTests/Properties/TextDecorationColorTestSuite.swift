@@ -29,4 +29,20 @@ struct TextDecorationColorTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let initial = TextDecorationColor(.initial)
+        let color = TextDecorationColor(.blue)
+        let inherit = TextDecorationColor(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(initial) == "text-decoration-color: initial"
+        )
+        #expect(renderer.renderProperty(color) == "text-decoration-color: blue")
+        #expect(
+            renderer.renderProperty(inherit) == "text-decoration-color: inherit"
+        )
+    }
 }

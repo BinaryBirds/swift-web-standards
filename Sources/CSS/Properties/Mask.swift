@@ -1,4 +1,7 @@
+/// CSS `mask` property.
+/// Provides typed values for this declaration.
 public struct Mask: Property {
+    /// Value options for the `mask` property.
     public enum Value: Sendable {
         /// Custom mask value.
         case value(String)
@@ -24,6 +27,7 @@ public struct Mask: Property {
     public var isImportant: Bool
 
     /// Hides an element by masking or clipping the image at specific places.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

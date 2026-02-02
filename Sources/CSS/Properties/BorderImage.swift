@@ -1,4 +1,7 @@
+/// CSS `border-image` property.
+/// Provides typed values for this declaration.
 public struct BorderImage: Property {
+    /// Value options for the `border-image` property.
     public enum Value: Sendable {
 
         case values(
@@ -44,6 +47,7 @@ public struct BorderImage: Property {
     public var isImportant: Bool
 
     /// A shorthand property for all the border-image-* properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -53,8 +57,14 @@ public struct BorderImage: Property {
     }
 
     /// A shorthand property for all the border-image-* properties.
+    /// - Parameters:
+    /// - source: The source value.
+    /// - slice: The slice value.
+    /// - width: The width value.
+    /// - outset: The outset value.
+    /// - repeat: The `repeat` value.
     public init(
-        _ source: BorderImageSource.Value,
+        source: BorderImageSource.Value,
         slice: BorderImageSlice.Value? = nil,
         width: BorderImageWidth.Value? = nil,
         outset: BorderImageOutset.Value? = nil,

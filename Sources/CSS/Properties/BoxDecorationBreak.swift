@@ -1,4 +1,7 @@
+/// CSS `box-decoration-break` property.
+/// Provides typed values for this declaration.
 public struct BoxDecorationBreak: Property {
+    /// Value options for the `box-decoration-break` property.
     public enum Value: String, Sendable {
         /// Default. Box decorations are applied to the element as a whole and break at the edges of the element fragments.
         case slice
@@ -15,6 +18,7 @@ public struct BoxDecorationBreak: Property {
     public var isImportant: Bool
 
     /// Sets the behavior of the background and border of an element at page-break, or, for in-line elements, at line-break.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .slice
     ) {

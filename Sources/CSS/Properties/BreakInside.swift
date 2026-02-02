@@ -1,4 +1,7 @@
+/// CSS `break-inside` property.
+/// Provides typed values for this declaration.
 public struct BreakInside: Property {
+    /// Value options for the `break-inside` property.
     public enum Value: String, Sendable {
         /// Default. Automatic page/column/region break inside the element.
         case auto
@@ -21,6 +24,7 @@ public struct BreakInside: Property {
     public var isImportant: Bool
 
     /// Specifies whether or not a page-, column-, or region-break should occur inside the specified element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {

@@ -1,4 +1,7 @@
+/// CSS `padding` property.
+/// Provides typed values for this declaration.
 public struct Padding: Property {
+    /// Value options for the `padding` property.
     public enum Value: Sendable {
         /// Specifies a fixed bottom padding in px, pt, cm, etc. Default value is 0.
         case length(UnitRepresentable)
@@ -24,6 +27,7 @@ public struct Padding: Property {
     public var isImportant: Bool
 
     /// Sets all the Padding properties in one declaration.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -32,10 +36,18 @@ public struct Padding: Property {
         self.isImportant = false
     }
 
+    /// Creates a `padding` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable = 0) {
         self.init(.length(value))
     }
 
+    /// Creates a `padding` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - horizontal: The horizontal value.
+    ///   - vertical: The vertical value.
     public init(
         horizontal: Value,
         vertical: Value
@@ -45,6 +57,11 @@ public struct Padding: Property {
         self.isImportant = false
     }
 
+    /// Creates a `padding` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - horizontal: The horizontal value.
+    ///   - vertical: The vertical value.
     public init(
         horizontal: UnitRepresentable = 0,
         vertical: UnitRepresentable = 0
@@ -52,6 +69,13 @@ public struct Padding: Property {
         self.init(horizontal: .length(horizontal), vertical: .length(vertical))
     }
 
+    /// Creates a `padding` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - top: The top value.
+    ///   - right: The right value.
+    ///   - bottom: The bottom value.
+    ///   - left: The left value.
     public init(
         top: Value,
         right: Value,
@@ -65,6 +89,13 @@ public struct Padding: Property {
         self.isImportant = false
     }
 
+    /// Creates a `padding` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - top: The top value.
+    ///   - right: The right value.
+    ///   - bottom: The bottom value.
+    ///   - left: The left value.
     public init(
         top: UnitRepresentable = 0,
         right: UnitRepresentable = 0,

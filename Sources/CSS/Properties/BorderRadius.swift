@@ -1,4 +1,7 @@
+/// CSS `border-radius` property.
+/// Provides typed values for this declaration.
 public struct BorderRadius: Property {
+    /// Value options for the `border-radius` property.
     public enum Value: Sendable {
         /// Defines the shape of the corners. Default value is 0. Read about length units.
         case length(
@@ -35,6 +38,7 @@ public struct BorderRadius: Property {
     public var isImportant: Bool
 
     /// A shorthand property for the four border-*-radius properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

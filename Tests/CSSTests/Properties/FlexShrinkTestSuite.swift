@@ -29,4 +29,16 @@ struct FlexShrinkTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let zero = FlexShrink(.number(0))
+        let two = FlexShrink(2)
+        let inherit = FlexShrink(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(zero) == "flex-shrink: 0")
+        #expect(renderer.renderProperty(two) == "flex-shrink: 2")
+        #expect(renderer.renderProperty(inherit) == "flex-shrink: inherit")
+    }
 }

@@ -29,4 +29,16 @@ struct OutlineWidthTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let thin = OutlineWidth(.thin)
+        let length = OutlineWidth(.length(3.px))
+        let inherit = OutlineWidth(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(thin) == "outline-width: thin")
+        #expect(renderer.renderProperty(length) == "outline-width: 3px")
+        #expect(renderer.renderProperty(inherit) == "outline-width: inherit")
+    }
 }

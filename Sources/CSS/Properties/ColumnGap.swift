@@ -1,4 +1,7 @@
+/// CSS `column-gap` property.
+/// Provides typed values for this declaration.
 public struct ColumnGap: Property {
+    /// Value options for the `column-gap` property.
     public enum Value: Sendable {
 
         /// A specified length that will set the gap between the columns.
@@ -29,6 +32,7 @@ public struct ColumnGap: Property {
     public var isImportant: Bool
 
     /// Specifies the gap between the columns.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -38,6 +42,7 @@ public struct ColumnGap: Property {
     }
 
     /// Specifies the gap between the columns.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable) {
         self.init(.length(value))
     }

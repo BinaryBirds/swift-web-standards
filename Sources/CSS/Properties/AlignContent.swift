@@ -1,5 +1,8 @@
+/// CSS `align-content` property.
+/// Provides typed values for this declaration.
 public struct AlignContent: Property {
 
+    /// Value options for the `align-content` property.
     public enum Value: String, Sendable {
         /// Default value. Lines stretch to take up the remaining space.
         case stretch
@@ -26,6 +29,7 @@ public struct AlignContent: Property {
     public var isImportant: Bool
 
     /// Specifies the alignment between the lines inside a flexible container when the items do not use all available space.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .stretch
     ) {

@@ -1,4 +1,7 @@
+/// CSS `object-fit` property.
+/// Provides typed values for this declaration.
 public struct ObjectFit: Property {
+    /// Value options for the `object-fit` property.
     public enum Value: String, Sendable {
         /// This is default. The replaced content is sized to fill the element's content box. If necessary, the object will be stretched or squished to fit.
         case fill
@@ -21,6 +24,7 @@ public struct ObjectFit: Property {
     public var isImportant: Bool
 
     /// Specifies how the contents of a replaced element should be fitted to the box established by its used height and width.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .fill
     ) {

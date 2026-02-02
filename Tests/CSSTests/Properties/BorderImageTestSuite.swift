@@ -29,4 +29,23 @@ struct BorderImageTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let property = BorderImage(
+            source: .image("border.png"),
+            slice: .number(30),
+            width: .length(4.px),
+            outset: .number(2.0),
+            repeat: .round
+        )
+
+        let renderer = StylesheetRenderer()
+        let result = renderer.renderProperty(property)
+
+        #expect(
+            result
+                == "border-image: url('border.png') 30 4px 2.0 round"
+        )
+    }
 }

@@ -1,4 +1,7 @@
+/// CSS `grid-template-rows` property.
+/// Provides typed values for this declaration.
 public struct GridTemplateRows: Property {
+    /// Value options for the `grid-template-rows` property.
     public enum Value: Sendable {
         /// No size is set. Rows are created if needed.
         case none
@@ -32,6 +35,7 @@ public struct GridTemplateRows: Property {
     public var isImportant: Bool
 
     /// Specifies the size of the rows in a grid layout.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

@@ -29,4 +29,16 @@ struct FlexTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let values = Flex(.values(.number(1), .number(0), .auto))
+        let none = Flex(.none)
+        let inherit = Flex(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(values) == "flex: 1 0 auto")
+        #expect(renderer.renderProperty(none) == "flex: none")
+        #expect(renderer.renderProperty(inherit) == "flex: inherit")
+    }
 }

@@ -1,4 +1,7 @@
+/// CSS `text-decoration` property.
+/// Provides typed values for this declaration.
 public struct TextDecoration: Property {
+    /// Value options for the `text-decoration` property.
     public enum Value: Sendable {
         /// text-decoration-line    Sets the kind of text decoration to use (like underline, overline, line-through).
         /// text-decoration-color    Sets the color of the text decoration.
@@ -32,6 +35,7 @@ public struct TextDecoration: Property {
     public var isImportant: Bool
 
     /// Specifies the decoration added to text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

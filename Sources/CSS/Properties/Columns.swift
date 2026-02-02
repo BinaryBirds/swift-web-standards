@@ -1,4 +1,7 @@
+/// CSS `columns` property.
+/// Provides typed values for this declaration.
 public struct Columns: Property {
+    /// Value options for the `columns` property.
     public enum Value: Sendable {
         /// Default value. Sets both the column-width and column-count to "auto".
         case auto
@@ -27,6 +30,7 @@ public struct Columns: Property {
     public var isImportant: Bool
 
     /// A shorthand property for column-width and column-count.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .auto
     ) {
@@ -36,6 +40,9 @@ public struct Columns: Property {
     }
 
     /// A shorthand property for column-width and column-count.
+    /// - Parameters:
+    ///   - width: The width value.
+    ///   - count: The count value.
     public init(_ width: ColumnWidth.Value, _ count: ColumnCount.Value) {
         self.init(.values(width, count))
     }

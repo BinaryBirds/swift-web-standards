@@ -1,4 +1,7 @@
+/// CSS `font-feature-settings` property.
+/// Provides typed values for this declaration.
 public struct FontFeatureSettings: Property {
+    /// Value options for the `font-feature-settings` property.
     public enum Value: Sendable {
         /// Default. Use the default settings to lay out text.
         case normal
@@ -20,6 +23,7 @@ public struct FontFeatureSettings: Property {
     public var isImportant: Bool
 
     /// Allows control over advanced typographic features in OpenType fonts.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

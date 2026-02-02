@@ -29,4 +29,17 @@ struct BorderRadiusTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let property = BorderRadius(.length(4.px, 6.px, 8.px, 10.px))
+        let single = BorderRadius(.length(12.px, nil, nil, nil))
+
+        let renderer = StylesheetRenderer()
+        #expect(
+            renderer.renderProperty(property)
+                == "border-radius: 4px 6px 8px 10px"
+        )
+        #expect(renderer.renderProperty(single) == "border-radius: 12px")
+    }
 }

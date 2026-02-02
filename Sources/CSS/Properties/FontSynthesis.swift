@@ -1,4 +1,7 @@
+/// CSS `font-synthesis` property.
+/// Provides typed values for this declaration.
 public struct FontSynthesis: Property {
+    /// Value options for the `font-synthesis` property.
     public enum Value: String, Sendable {
         case none
         case weight
@@ -15,6 +18,7 @@ public struct FontSynthesis: Property {
     public var isImportant: Bool
 
     /// Controls which missing typefaces (bold or italic) may be synthesized by the browser.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
     ) {

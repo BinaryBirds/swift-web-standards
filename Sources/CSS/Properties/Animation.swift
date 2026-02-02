@@ -1,4 +1,7 @@
+/// CSS `animation` property.
+/// Provides typed values for this declaration.
 public struct Animation: Property {
+    /// Value options for the `animation` property.
     public enum Value: Sendable {
 
         case values(
@@ -29,17 +32,17 @@ public struct Animation: Property {
                 let fillMode,
                 let playState
             ):
-                return name
-                    + [
-                        duration?.rawValue,
-                        timingFunction?.rawValue,
-                        delay?.rawValue,
-                        iterationCount?.rawValue,
-                        direction?.rawValue,
-                        fillMode?.rawValue,
-                        playState?.rawValue,
-                    ]
-                    .compactMap { $0 }.joined(separator: " ")
+                return [
+                    name,
+                    duration?.rawValue,
+                    timingFunction?.rawValue,
+                    delay?.rawValue,
+                    iterationCount?.rawValue,
+                    direction?.rawValue,
+                    fillMode?.rawValue,
+                    playState?.rawValue,
+                ]
+                .compactMap { $0 }.joined(separator: " ")
             case .initial:
                 return "initial"
             case .inherit:
@@ -53,6 +56,7 @@ public struct Animation: Property {
     public var isImportant: Bool
 
     /// A shorthand property for all the animation-* properties.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -62,6 +66,15 @@ public struct Animation: Property {
     }
 
     /// A shorthand property for all the animation-* properties.
+    /// - Parameters:
+    ///   - name: The name value.
+    ///   - duration: The duration value.
+    ///   - timingFunction: The timingFunction value.
+    ///   - delay: The delay value.
+    ///   - iterationCount: The iterationCount value.
+    ///   - direction: The direction value.
+    ///   - fillMode: The fillMode value.
+    ///   - playState: The playState value.
     public init(
         _ name: String,
         duration: AnimationDuration.Value? = nil,

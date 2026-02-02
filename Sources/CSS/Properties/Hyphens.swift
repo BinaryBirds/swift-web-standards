@@ -1,4 +1,7 @@
+/// CSS `hyphens` property.
+/// Provides typed values for this declaration.
 public struct Hyphens: Property {
+    /// Value options for the `hyphens` property.
     public enum Value: String, Sendable {
         /// Words are not hyphenated.
         case none
@@ -17,6 +20,7 @@ public struct Hyphens: Property {
     public var isImportant: Bool
 
     /// Sets how to split words to improve the layout of paragraphs.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .manual
     ) {

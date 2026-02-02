@@ -1,3 +1,5 @@
+/// CSS `border-top-color` property.
+/// Provides typed values for this declaration.
 public struct BorderTopColor: Property {
 
     public let name: String
@@ -5,6 +7,7 @@ public struct BorderTopColor: Property {
     public var isImportant: Bool
 
     /// Sets the color of the top border.
+    /// - Parameter value: The property value.
     public init(_ value: CSSColorValue) {
         self.name = "border-top-color"
         self.value = value.rawValue

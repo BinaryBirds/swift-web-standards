@@ -1,4 +1,7 @@
+/// CSS `font-variant-east-asian` property.
+/// Provides typed values for this declaration.
 public struct FontVariantEastAsian: Property {
+    /// Value options for the `font-variant-east-asian` property.
     public enum Value: String, Sendable {
         case normal
         case ruby
@@ -22,6 +25,7 @@ public struct FontVariantEastAsian: Property {
     public var isImportant: Bool
 
     /// Controls the usage of alternate glyphs for East Asian scripts (e.g Japanese and Chinese).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

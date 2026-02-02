@@ -1,4 +1,7 @@
+/// CSS `font-variant` property.
+/// Provides typed values for this declaration.
 public struct FontVariant: Property {
+    /// Value options for the `font-variant` property.
     public enum Value: String, Sendable {
         /// The browser displays a normal font. This is default.
         case normal
@@ -15,6 +18,7 @@ public struct FontVariant: Property {
     public var isImportant: Bool
 
     /// Specifies whether or not a text should be displayed in a small-caps font.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .normal
     ) {

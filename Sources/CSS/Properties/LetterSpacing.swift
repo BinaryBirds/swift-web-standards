@@ -1,4 +1,7 @@
+/// CSS `letter-spacing` property.
+/// Provides typed values for this declaration.
 public struct LetterSpacing: Property {
+    /// Value options for the `letter-spacing` property.
     public enum Value: Sendable {
         /// No extra space between characters. This is default.
         case normal
@@ -28,6 +31,7 @@ public struct LetterSpacing: Property {
     public var isImportant: Bool
 
     /// Increases or decreases the space between characters in a text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

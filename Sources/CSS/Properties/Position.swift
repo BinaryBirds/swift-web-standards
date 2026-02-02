@@ -1,4 +1,7 @@
+/// CSS `position` property.
+/// Provides typed values for this declaration.
 public struct Position: Property {
+    /// Value options for the `position` property.
     public enum Value: String, Sendable {
         /// Default value. Elements render in order, as they appear in the document flow.
         case `static`
@@ -24,6 +27,7 @@ public struct Position: Property {
     public var isImportant: Bool
 
     /// Specifies the type of positioning method used for an element (static, relative, absolute or fixed).
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .static
     ) {

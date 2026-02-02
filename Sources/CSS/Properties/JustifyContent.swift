@@ -1,4 +1,7 @@
+/// CSS `justify-content` property.
+/// Provides typed values for this declaration.
 public struct JustifyContent: Property {
+    /// Value options for the `justify-content` property.
     public enum Value: String, Sendable {
         /// Default value. Items are positioned at the beginning of the container.
         case flexStart = "flex-start"
@@ -23,6 +26,7 @@ public struct JustifyContent: Property {
     public var isImportant: Bool
 
     /// Specifies the alignment between the items inside a flexible container when the items do not use all available space.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .flexStart
     ) {

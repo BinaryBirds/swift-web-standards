@@ -1,4 +1,7 @@
+/// CSS `margin` property.
+/// Provides typed values for this declaration.
 public struct Margin: Property {
+    /// Value options for the `margin` property.
     public enum Value: Sendable {
         /// Specifies a fixed bottom margin in px, cm, em, etc. Default value is 0. Negative values are allowed.
         case length(UnitRepresentable)
@@ -28,6 +31,7 @@ public struct Margin: Property {
     public var isImportant: Bool
 
     /// Sets all the margin properties in one declaration.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
@@ -36,10 +40,18 @@ public struct Margin: Property {
         self.isImportant = false
     }
 
+    /// Creates a `margin` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable = 0) {
         self.init(.length(value))
     }
 
+    /// Creates a `margin` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - horizontal: The horizontal value.
+    ///   - vertical: The vertical value.
     public init(
         horizontal: Value,
         vertical: Value
@@ -49,6 +61,11 @@ public struct Margin: Property {
         self.isImportant = false
     }
 
+    /// Creates a `margin` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - horizontal: The horizontal value.
+    ///   - vertical: The vertical value.
     public init(
         horizontal: UnitRepresentable = 0,
         vertical: UnitRepresentable = 0
@@ -56,6 +73,13 @@ public struct Margin: Property {
         self.init(horizontal: .length(horizontal), vertical: .length(vertical))
     }
 
+    /// Creates a `margin` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - top: The top value.
+    ///   - right: The right value.
+    ///   - bottom: The bottom value.
+    ///   - left: The left value.
     public init(
         top: Value,
         right: Value,
@@ -69,6 +93,13 @@ public struct Margin: Property {
         self.isImportant = false
     }
 
+    /// Creates a `margin` declaration.
+    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// - Parameters:
+    ///   - top: The top value.
+    ///   - right: The right value.
+    ///   - bottom: The bottom value.
+    ///   - left: The left value.
     public init(
         top: UnitRepresentable = 0,
         right: UnitRepresentable = 0,

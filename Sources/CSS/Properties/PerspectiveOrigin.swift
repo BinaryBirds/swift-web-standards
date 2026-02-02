@@ -1,4 +1,7 @@
+/// CSS `perspective-origin` property.
+/// Provides typed values for this declaration.
 public struct PerspectiveOrigin: Property {
+    /// Value options for the `perspective-origin` property.
     public enum Value: Sendable {
 
         // @TODO: add keyword support
@@ -44,6 +47,7 @@ public struct PerspectiveOrigin: Property {
     public var isImportant: Bool
 
     /// Defines at which position the user is looking at the 3D-positioned element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .axis(50.percent, 50.percent)
     ) {

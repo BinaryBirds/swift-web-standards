@@ -1,4 +1,7 @@
+/// CSS `text-combine-upright` property.
+/// Provides typed values for this declaration.
 public struct TextCombineUpright: Property {
+    /// Value options for the `text-combine-upright` property.
     public enum Value: Sendable {
         case none
         case all
@@ -33,6 +36,7 @@ public struct TextCombineUpright: Property {
     public var isImportant: Bool
 
     /// Specifies the combination of multiple characters into the space of a single character.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

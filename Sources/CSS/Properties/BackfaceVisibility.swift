@@ -1,4 +1,7 @@
+/// CSS `backface-visibility` property.
+/// Provides typed values for this declaration.
 public struct BackfaceVisibility: Property {
+    /// Value options for the `backface-visibility` property.
     public enum Value: String, Sendable {
         /// Default value. The backside is visible.
         case visible
@@ -15,6 +18,7 @@ public struct BackfaceVisibility: Property {
     public var isImportant: Bool
 
     /// Defines whether or not the back face of an element should be visible when facing the user.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .visible
     ) {

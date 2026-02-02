@@ -1,4 +1,7 @@
+/// CSS `background-clip` property.
+/// Provides typed values for this declaration.
 public struct BackgroundClip: Property {
+    /// Value options for the `background-clip` property.
     public enum Value: String, Sendable {
         /// Default value. The background extends behind the border.
         case borderBox = "border-box"
@@ -17,6 +20,7 @@ public struct BackgroundClip: Property {
     public var isImportant: Bool
 
     /// Defines how far the background (color or image) should extend within an element.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value = .borderBox
     ) {

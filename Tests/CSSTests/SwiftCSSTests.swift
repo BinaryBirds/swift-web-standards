@@ -70,7 +70,7 @@ struct SwiftCssTests {
 
             Media(.screen && .displayMode(.standalone)) {
                 Id("lead") {
-                    Background(.color(.red))
+                    Background(color: .red)
                 }
             }
         }
@@ -161,22 +161,22 @@ struct SwiftCssTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Background(.color(.red))
+                    Background(color: .red)
                 }
             }
             Media(.screen && .maxWidth(599.px)) {
                 Root {
-                    Background(.color(.blue))
+                    Background(color: .blue)
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
                 Root {
-                    Background(.color(.green))
+                    Background(color: .green)
                 }
             }
             Media(.screen && .displayMode(.standalone)) {
                 Element("body") {
-                    Background(.color(.yellow))
+                    Background(color: .yellow)
                 }
             }
         }

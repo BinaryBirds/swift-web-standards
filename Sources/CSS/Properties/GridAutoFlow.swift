@@ -1,4 +1,7 @@
+/// CSS `grid-auto-flow` property.
+/// Provides typed values for this declaration.
 public struct GridAutoFlow: Property {
+    /// Value options for the `grid-auto-flow` property.
     public enum Value: String, Sendable {
         /// Default value. Places items by filling each row.
         case row
@@ -17,6 +20,7 @@ public struct GridAutoFlow: Property {
     public var isImportant: Bool
 
     /// Specifies how auto-placed items are inserted in the grid.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {

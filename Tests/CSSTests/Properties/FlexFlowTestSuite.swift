@@ -29,4 +29,14 @@ struct FlexFlowTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let values = FlexFlow(.row, .wrap)
+        let inherit = FlexFlow(.inherit)
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(values) == "flex-flow: row wrap")
+        #expect(renderer.renderProperty(inherit) == "flex-flow: inherit")
+    }
 }

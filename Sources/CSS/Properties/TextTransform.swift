@@ -1,4 +1,7 @@
+/// CSS `text-transform` property.
+/// Provides typed values for this declaration.
 public struct TextTransform: Property {
+    /// Value options for the `text-transform` property.
     public enum Value: String, Sendable {
         /// No capitalization. The text renders as it is. This is default    Play it ».
         case none
@@ -19,6 +22,7 @@ public struct TextTransform: Property {
     public var isImportant: Bool
 
     /// Controls the capitalization of text.
+    /// - Parameter value: The property value.
     public init(
         _ value: Value
     ) {
