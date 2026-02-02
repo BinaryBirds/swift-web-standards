@@ -45,9 +45,21 @@ struct SelectorBehaviorTests {
         }
 
         let renderer = StylesheetRenderer()
-        #expect(renderer.renderSelector(classSelector) == ".button {\n    color: red;\n}")
-        #expect(renderer.renderSelector(idSelector) == "#hero {\n    background-color: blue;\n}")
-        #expect(renderer.renderSelector(elementSelector) == "p {\n    margin: 8px;\n}")
-        #expect(renderer.renderSelector(universalSelector) == "* {\n    padding: 4px;\n}")
+        #expect(
+            renderer.renderSelector(classSelector)
+                == ".button {\n    color: red;\n}"
+        )
+        #expect(
+            renderer.renderSelector(idSelector)
+                == "#hero {\n    background-color: blue;\n}"
+        )
+        #expect(
+            renderer.renderSelector(elementSelector)
+                == "p {\n    margin: 8px;\n}"
+        )
+        #expect(
+            renderer.renderSelector(universalSelector)
+                == "* {\n    padding: 4px;\n}"
+        )
     }
 }

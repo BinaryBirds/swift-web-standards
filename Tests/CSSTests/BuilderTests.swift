@@ -10,7 +10,8 @@ private func buildValues(includeExtras: Bool) -> [Int] {
         }
         if includeExtras {
             3
-        } else {
+        }
+        else {
             4
         }
         for item in [5, 6] {

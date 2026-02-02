@@ -19,7 +19,8 @@ struct KeyframesTests {
         }
 
         let rendered = StylesheetRenderer().render(css)
-        let expectation = "@keyframes fade {\nfrom {\n    opacity: 0.0;\n}\nto {\n    opacity: 1.0;\n}\n}\n"
+        let expectation =
+            "@keyframes fade {\nfrom {\n    opacity: 0.0;\n}\nto {\n    opacity: 1.0;\n}\n}\n"
 
         #expect(rendered == expectation)
     }

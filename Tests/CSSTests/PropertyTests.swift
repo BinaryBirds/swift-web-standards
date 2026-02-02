@@ -47,9 +47,12 @@ struct PropertyTests {
         )
         #expect(whenFalse.value == "false")
 
-        let noElse = base.if(false, { value in
-            value.modify { $0.value = "ignored" }
-        })
+        let noElse = base.if(
+            false,
+            { value in
+                value.modify { $0.value = "ignored" }
+            }
+        )
         #expect(noElse.value == "value")
     }
 }
