@@ -2,43 +2,53 @@
 
 An awesome Swift library that closely follows the [W3C web standards](https://www.w3.org/standards/).
 
-- HTML DSL using result builders
-- CSS DSL using result builders
-- SVG, RSS, Sitemap, MIME types
+## Features
 
-```swift
-import HTML
+Swift Web Standards provides a type-safe, standards-first approach to generating web formats in Swift.
+It eliminates stringly-typed templates, making it ideal for server-side rendering.
 
-let html = Html {
-    Head {
-        Title("Hello, SwiftHTML!")
-        Meta().charset("utf-8")
-        Meta().name(.viewport).content("width=device-width, initial-scale=1")
-        Link(rel: .stylesheet).href("./css/style.css")
-    }
-    Body {
-        H1("Hello, SwiftHTML!")
-        Ul {
-            Li("Type-safe HTML DSL for Swift 6+")
-            Li("Concurrency-safety; sendable support")
-            Li("Contains all the HTML tag definitions")
-            Li("RSS, Sitemap, SVG support as well")
-        }
+Including DSL using result builders for the following: 
 
-        Script(#"console.log("Hello, SwiftHTML!")"#)
-        Script().src("./js/main.js").async()
-    }
-}
+- HTML 
+- CSS 
+- Sitemap 
+- RSS 
+- SVG 
 
-let result = Document(type: .html, root: html).render(indent: 4)
-print(result) // HTML output
-```
+Other abstraction to build custom types:
+
+- DOM to work with raw nodes
+- SGML to define custom XML formats
+
+Type-safe, comprehensive list of:
+
+- MIME types
+
+
+![Release: 1.0.0-beta.1](https://img.shields.io/badge/Release-1%2E0%2E0--beta%2E1-F05138)
+
+## Requirements
+
+
+![Swift 6.1+](https://img.shields.io/badge/Swift-6%2E1%2B-F05138)
+![Platforms: Linux, macOS, iOS, tvOS, watchOS, visionOS](https://img.shields.io/badge/Platforms-Linux_%7C_macOS_%7C_iOS_%7C_tvOS_%7C_watchOS_%7C_visionOS-F05138)
+
+- Swift 6.1+
+
+- Platforms: 
+    - Linux
+    - macOS 15+
+    - iOS 18+
+    - tvOS 18+
+    - watchOS 11+
+    - visionOS 2+
+    
 
 ## Installation
 
 The Swift Web Standards package is distributed through **Swift Package Manager**.
 
-Add the package to your `Package.swift`:
+Add this package to your `Package.swift` dependencies:
 
 ```swift
 .package(url: "https://github.com/binarybirds/swift-web-standards", from: "2.0.0"),
@@ -66,10 +76,10 @@ Available libraries:
 - `SVG`
 - `Sitemap`
 - `MIME`
-- `WebStandards` (bundles everything)
+- `WebStandards` (bundles all from above)
 
 
-## DOM vs. SGML
+## DOM
 
 The **DOM** library provides the foundational data structures used to construct and render a `Node`-based object tree.  
 This tree is composed of the following node types:
@@ -82,9 +92,7 @@ This tree is composed of the following node types:
 
 These node types form the low-level DOM representation used by the renderer.
 
----
-
-## SGML Elements
+## SGML 
 
 The **SGML** library provides a higher-level API for defining and constructing markup languages.  
 It is designed to support the creation of any XML-based format—including **HTML**, **RSS**, **SVG**, and custom schemas.
@@ -161,31 +169,20 @@ struct LastBuildDate: StandardTag {
 
 You can define custom element attributes by creating a new `attribute modifier` protocol. 
 
-TODO: update this
-
 ```swift
-// very simple attribute
-struct Class: Attribute {
-    var value: String?
-    
-    init(_ value: Value) {
-        self.value = value
-    }
+public protocol StyleAttributeModifier {
+    associatedtype StyleAttributeValueType: AttributeValueRepresentable = String
 }
 
-// custom name and value type
-struct Alignment: Attribute {
+extension StyleAttributeModifier where Self: Attributes & Mutable {
 
-    enum Value: String {
-        case left
-        case right
-    }
-
-    static let name = "align"
-    var value: String?
-
-    init(_ value: Value) {
-        self.value = value.rawValue
+    public func style(
+        _ value: StyleAttributeValueType?
+    ) -> Self {
+        setAttribute(
+            key: "style",
+            value: value?.attributeValue
+        )
     }
 }
 ```
@@ -237,12 +234,66 @@ It is also possible to define tags that contain child elements; these are referr
 All standard tags support child elements by default.
 
 ```swift
-// TODO
+public struct CustomTag:
+    StandardTag
+{
+
+    public var attributes: AttributeStore
+
+    public var children: [Element]
+
+    init(
+        attributes: AttributeStore = .init(),
+        children: [Element]
+    ) {
+        self.attributes = attributes
+        self.children = children
+    }
+
+    public init(
+        @Builder<Element> _ block: () -> [Element]
+    ) {
+        self.init(children: block())
+    }
+
+}
+```
+
+## HTML
+
+This produces a standards-compliant HTML document:
+
+```swift
+import HTML
+
+let html = Html {
+    Head {
+        Title("Hello, SwiftHTML!")
+        Meta().charset("utf-8")
+        Meta().name(.viewport).content("width=device-width, initial-scale=1")
+        Link(rel: .stylesheet).href("./css/style.css")
+    }
+    Body {
+        H1("Hello, SwiftHTML!")
+        Ul {
+            Li("Type-safe HTML DSL for Swift 6+")
+            Li("Concurrency-safety; sendable support")
+            Li("Contains all the HTML tag definitions")
+            Li("RSS, Sitemap, SVG support as well")
+        }
+
+        Script(#"console.log("Hello, SwiftHTML!")"#)
+        Script().src("./js/main.js").async()
+    }
+}
+
+let result = Document(type: .html, root: html).render(indent: 4)
+print(result) // HTML output
 ```
 
 ## CSS
 
-An awesome Swift CSS DSL library using result builders.
+This produces a CSS document:
 
 ```swift
 let css = Stylesheet {            
@@ -279,16 +330,6 @@ let css = Stylesheet {
     
 print(StylesheetRenderer(minify: false, indent: 4).render(css))
 ```
-
-
-## Todo
-
-- [ ] Fix scoring issue in MediaType detector
-- [ ] Proper CSS renderer (minify)
-- [ ] Security for HTML => proper escaping
-- [ ] Get rid of public enums or use resilient enums
-- [ ] Documentation for everything
-- [ ] 90%+ test coverage
 
 
 ## Credits & references
