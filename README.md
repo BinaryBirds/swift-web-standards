@@ -2,18 +2,20 @@
 
 An awesome Swift library that closely follows the [W3C web standards](https://www.w3.org/standards/).
 
+[![Release: 1.0.0-beta.2](https://img.shields.io/badge/Release-1.0.0-beta.2-F05138)]( https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.2)
+
 ## Features
 
 Swift Web Standards provides a type-safe, standards-first approach to generating web formats in Swift.
 It eliminates stringly-typed templates, making it ideal for server-side rendering.
 
-Including DSL using result builders for the following: 
+Including DSL using result builders for the following:
 
-- HTML 
-- CSS 
-- Sitemap 
-- RSS 
-- SVG 
+- HTML
+- CSS
+- Sitemap
+- RSS
+- SVG
 
 Other abstraction to build custom types:
 
@@ -24,25 +26,18 @@ Type-safe, comprehensive list of:
 
 - MIME types
 
-
-![Release: 1.0.0-beta.1](https://img.shields.io/badge/Release-1%2E0%2E0--beta%2E1-F05138)
-
 ## Requirements
 
-
 ![Swift 6.1+](https://img.shields.io/badge/Swift-6%2E1%2B-F05138)
-![Platforms: Linux, macOS, iOS, tvOS, watchOS, visionOS](https://img.shields.io/badge/Platforms-Linux_%7C_macOS_%7C_iOS_%7C_tvOS_%7C_watchOS_%7C_visionOS-F05138)
+![Platforms: macOS, iOS, tvOS, watchOS, visionOS](https://img.shields.io/badge/Platforms-macOS_%7C_iOS_%7C_tvOS_%7C_watchOS_%7C_visionOS-F05138)
 
 - Swift 6.1+
-
-- Platforms: 
-    - Linux
-    - macOS 15+
-    - iOS 18+
-    - tvOS 18+
-    - watchOS 11+
-    - visionOS 2+
-    
+- Platforms:
+  - macOS 15+
+  - iOS 18+
+  - tvOS 18+
+  - watchOS 11+
+  - visionOS 2+
 
 ## Installation
 
@@ -51,13 +46,13 @@ The Swift Web Standards package is distributed through **Swift Package Manager**
 Add this package to your `Package.swift` dependencies:
 
 ```swift
-.package(url: "https://github.com/binarybirds/swift-web-standards", from: "2.0.0"),
+.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.2"),
 ```
 
 Then include the required product as a dependency for your target:
 
 ```swift
-.product(name: "HTML", package: "swift-web-standards"),
+.product(name: "HTML", package: "HTML"),
 ```
 
 Import the module in your source files:
@@ -78,7 +73,6 @@ Available libraries:
 - `MIME`
 - `WebStandards` (bundles all from above)
 
-
 ## DOM
 
 The **DOM** library provides the foundational data structures used to construct and render a `Node`-based object tree.  
@@ -92,7 +86,7 @@ This tree is composed of the following node types:
 
 These node types form the low-level DOM representation used by the renderer.
 
-## SGML 
+## SGML
 
 The **SGML** library provides a higher-level API for defining and constructing markup languages.  
 It is designed to support the creation of any XML-based format—including **HTML**, **RSS**, **SVG**, and custom schemas.
@@ -167,7 +161,7 @@ struct LastBuildDate: StandardTag {
 
 ### Attribute modifiers
 
-You can define custom element attributes by creating a new `attribute modifier` protocol. 
+You can define custom element attributes by creating a new `attribute modifier` protocol.
 
 ```swift
 public protocol StyleAttributeModifier {
@@ -331,6 +325,13 @@ let css = Stylesheet {
 print(StylesheetRenderer(minify: false, indent: 4).render(css))
 ```
 
+[![DocC API documentation](https://img.shields.io/badge/DocC-API_documentation-F05138)](https://binarybirds.github.io/swift-web-standards)
+
+API documentation is available at the following link.
+
+## Contributing
+
+[Pull requests](https://github.com/BinaryBirds/swift-web-standards/pulls) are welcome. Please keep changes focused and include tests for new logic.
 
 ## Credits & references
 
