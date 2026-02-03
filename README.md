@@ -2,7 +2,7 @@
 
 An awesome Swift library that closely follows the [W3C web standards](https://www.w3.org/standards/).
 
-[![Release: 1.0.0-beta.2](https://img.shields.io/badge/Release-1.0.0-beta.2-F05138)]( https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.2)
+[![Release: 1.0.0-beta.2](https://img.shields.io/badge/Release-1.0.0--beta.2-F05138)]( https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.2)
 
 ## Features
 
