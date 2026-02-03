@@ -1,3 +1,9 @@
+//
+//  InputTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<input>` tag specifies an input field where the user can enter data.

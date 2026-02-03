@@ -1,3 +1,9 @@
+//
+//  InsTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<ins>` tag defines a text that has been inserted into a document.

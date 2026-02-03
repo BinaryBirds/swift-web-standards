@@ -1,3 +1,9 @@
+//
+//  FooterTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<footer>` tag defines a footer for a document or section.

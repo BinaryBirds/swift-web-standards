@@ -1,3 +1,9 @@
+//
+//  ListStyleType.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Specifies the type of list-item marker.
 
 /// CSS `list-style-type` property.

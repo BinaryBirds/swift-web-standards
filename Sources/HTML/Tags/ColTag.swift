@@ -1,3 +1,9 @@
+//
+//  ColTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<col>` tag specifies column properties for each column within a `<colgroup>` element.

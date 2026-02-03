@@ -1,3 +1,9 @@
+//
+//  Media.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Represents an `@media` rule with optional query conditions.
 public struct Media: Rule {
 

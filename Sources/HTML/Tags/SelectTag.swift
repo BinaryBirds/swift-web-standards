@@ -1,3 +1,9 @@
+//
+//  SelectTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<select>` element is used to create a drop-down list.

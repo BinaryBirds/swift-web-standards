@@ -1,3 +1,9 @@
+//
+//  BdoTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// BDO stands for Bi-Directional Override.

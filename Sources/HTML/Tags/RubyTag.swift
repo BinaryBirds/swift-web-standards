@@ -1,3 +1,9 @@
+//
+//  RubyTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<ruby>` tag specifies a ruby annotation.

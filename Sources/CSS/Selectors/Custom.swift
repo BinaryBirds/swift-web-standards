@@ -1,3 +1,9 @@
+//
+//  Custom.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Custom selector wrapper for arbitrary selector strings.
 public struct Custom: Selector {
 

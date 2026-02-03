@@ -1,3 +1,9 @@
+//
+//  SpanTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<span>` tag is an inline container used to mark up a part of a text, or a part of a document.

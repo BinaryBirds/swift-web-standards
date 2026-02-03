@@ -1,3 +1,9 @@
+//
+//  Builder.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Result builder used to assemble arrays of CSS elements and properties.
 ///
 /// This builder is used across stylesheet, rule, and selector initializers to

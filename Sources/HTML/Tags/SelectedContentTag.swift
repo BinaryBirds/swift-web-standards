@@ -1,3 +1,9 @@
+//
+//  SelectedContentTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<selectedcontent>` tag represents selected content for the parent control.

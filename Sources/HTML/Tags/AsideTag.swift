@@ -1,3 +1,9 @@
+//
+//  AsideTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<aside>` tag defines some content aside from the content it is placed in.

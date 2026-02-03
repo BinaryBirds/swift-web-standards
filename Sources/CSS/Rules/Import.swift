@@ -1,3 +1,9 @@
+//
+//  Import.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// The @import rule allows you to import a style sheet into another style sheet.
 ///
 /// The @import rule must be at the top of the document (but after any @charset declaration).

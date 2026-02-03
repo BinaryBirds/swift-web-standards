@@ -1,3 +1,9 @@
+//
+//  ObjectPosition.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `object-position` property.
 /// Provides typed values for this declaration.
 public struct ObjectPosition: Property {

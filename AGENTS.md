@@ -1,3 +1,9 @@
+//
+//  AGENTS.md
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 05.
+
 # Repository Guidelines
 
 This repository contains an project written with Swift 6. Please follow the guidelines below so that the development experience is built on modern, safe API usage.

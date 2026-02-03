@@ -1,3 +1,9 @@
+//
+//  WhiteSpace.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `white-space` property.
 /// Provides typed values for this declaration.
 public struct WhiteSpace: Property {

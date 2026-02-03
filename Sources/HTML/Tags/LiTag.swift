@@ -1,3 +1,9 @@
+//
+//  LiTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<li>` tag defines a list item.

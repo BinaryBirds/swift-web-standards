@@ -1,3 +1,9 @@
+//
+//  Title.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 import SGML
 
 /// A `<title>` element providing a human-readable title for a feed or item.

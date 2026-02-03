@@ -1,3 +1,9 @@
+//
+//  FigureTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<figure>` tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.

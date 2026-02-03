@@ -1,3 +1,9 @@
+//
+//  UrlContent.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// A marker protocol for elements that are valid children of a `<url>` element.

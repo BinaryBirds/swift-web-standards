@@ -1,3 +1,9 @@
+//
+//  Tag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 import DOM
 
 /// A tag element that can be rendered as a node.

@@ -1,3 +1,9 @@
+//
+//  DtTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<dt>` tag defines a term/name in a description list.

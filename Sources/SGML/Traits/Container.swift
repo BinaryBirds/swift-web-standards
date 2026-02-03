@@ -1,3 +1,9 @@
+//
+//  Container.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// Provides child element storage and helpers.
 public protocol Container {
     /// The child elements contained in the container.

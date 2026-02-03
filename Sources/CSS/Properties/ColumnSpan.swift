@@ -1,3 +1,9 @@
+//
+//  ColumnSpan.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `column-span` property.
 /// Provides typed values for this declaration.
 public struct ColumnSpan: Property {

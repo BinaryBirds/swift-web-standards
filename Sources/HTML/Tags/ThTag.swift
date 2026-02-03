@@ -1,3 +1,9 @@
+//
+//  ThTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<th>` tag defines a header cell in an HTML table.

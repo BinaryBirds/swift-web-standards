@@ -1,3 +1,9 @@
+//
+//  CaretColor.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `caret-color` property.
 /// Provides typed values for this declaration.
 public struct CaretColor: Property {

@@ -1,3 +1,9 @@
+//
+//  BaseTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<base>` tag specifies the base URL and/or target for all relative URLs in a document.

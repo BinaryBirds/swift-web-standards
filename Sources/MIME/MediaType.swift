@@ -1,3 +1,9 @@
+//
+//  MediaType.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// A representation of an Internet media type (also known as a MIME type).
 ///
 /// A media type is commonly formatted as:

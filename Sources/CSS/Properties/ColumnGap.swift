@@ -1,3 +1,9 @@
+//
+//  ColumnGap.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `column-gap` property.
 /// Provides typed values for this declaration.
 public struct ColumnGap: Property {

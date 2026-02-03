@@ -1,3 +1,9 @@
+//
+//  CSSColorValue.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Common CSS color value variants used by properties.
 public enum CSSColorValue: Sendable {
 

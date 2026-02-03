@@ -1,3 +1,9 @@
+//
+//  FontFace.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Represents an `@font-face` rule.
 public struct FontFace: Rule {
 

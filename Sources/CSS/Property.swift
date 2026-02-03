@@ -1,3 +1,9 @@
+//
+//  Property.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Base protocol for renderable CSS properties.
 ///
 /// Conforming types supply a property `name` and a `value` string that are

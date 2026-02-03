@@ -1,3 +1,9 @@
+//
+//  Units.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// A type that can be rendered as a CSS length/number.
 public protocol UnitRepresentable: Sendable {
     /// The rendered unit string.

@@ -1,3 +1,9 @@
+//
+//  LastMod.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// A `<lastmod>` element indicating the last modification date of a URL.
