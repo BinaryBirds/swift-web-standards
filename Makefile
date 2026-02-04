@@ -42,7 +42,7 @@ test:
 	swift test --parallel
 
 docker-test:
-	docker build -t feather-database-tests . -f ./docker/Dockerfile.testing && docker run --rm swift-web-standards-tests
+	docker build -t tests . -f ./docker/Dockerfile.testing && docker run --rm tests
 
 
 
