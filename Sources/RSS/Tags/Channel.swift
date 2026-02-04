@@ -1,3 +1,9 @@
+//
+//  Channel.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 import SGML
 
 /// An RSS `<channel>` element representing the metadata and contents of a feed.

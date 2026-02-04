@@ -1,3 +1,9 @@
+//
+//  MediaType+Model.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 extension MediaType {
 
     public enum Model {

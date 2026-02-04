@@ -1,3 +1,9 @@
+//
+//  Description.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 import SGML
 
 /// A `<description>` element providing human-readable content for an RSS feed or item.

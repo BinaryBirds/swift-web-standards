@@ -1,3 +1,9 @@
+//
+//  SmallTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<small>` tag defines smaller text (like copyright and other side-comments).

@@ -1,3 +1,9 @@
+//
+//  HeaderTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The` <header>` element represents a container for introductory content or a set of navigational links.

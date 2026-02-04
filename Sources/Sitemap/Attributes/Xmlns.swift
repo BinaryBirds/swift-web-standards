@@ -1,3 +1,9 @@
+//
+//  Xmlns.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// An `xmlns` attribute used to declare the XML namespace for a sitemap document.

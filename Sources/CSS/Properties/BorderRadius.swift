@@ -1,3 +1,9 @@
+//
+//  BorderRadius.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `border-radius` property.
 /// Provides typed values for this declaration.
 public struct BorderRadius: Property {

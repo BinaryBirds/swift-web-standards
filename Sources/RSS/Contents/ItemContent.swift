@@ -1,3 +1,9 @@
+//
+//  ItemContent.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 import SGML
 
 /// A marker protocol for elements that are valid children of an RSS `<item>` element.

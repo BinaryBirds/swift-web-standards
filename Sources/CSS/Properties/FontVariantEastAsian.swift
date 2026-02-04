@@ -1,3 +1,9 @@
+//
+//  FontVariantEastAsian.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `font-variant-east-asian` property.
 /// Provides typed values for this declaration.
 public struct FontVariantEastAsian: Property {

@@ -1,3 +1,9 @@
+//
+//  GridAutoRows.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Specifies a default row size.
 
 /// CSS `grid-auto-rows` property.

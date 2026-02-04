@@ -1,3 +1,9 @@
+//
+//  Node.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// A DOM node that can be rendered into a string.
 public protocol Node: Sendable {
     // You should never implement this protocol

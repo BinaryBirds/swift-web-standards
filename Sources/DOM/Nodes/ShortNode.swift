@@ -1,3 +1,9 @@
+//
+//  ShortNode.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// A node rendered as a single opening tag, typically for void elements.
 public struct ShortNode: Node {
 

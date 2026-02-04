@@ -1,3 +1,9 @@
+//
+//  RoleAttributeModifier.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// Provides access to the HTML `role` global attribute.

@@ -1,3 +1,9 @@
+//
+//  Pseudo.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Common CSS pseudo-classes and pseudo-elements.
 ///
 /// The `value` property returns the rendered selector suffix.

@@ -1,3 +1,9 @@
+//
+//  Visibility.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS `visibility` property.
 /// Provides typed values for this declaration.
 public struct Visibility: Property {

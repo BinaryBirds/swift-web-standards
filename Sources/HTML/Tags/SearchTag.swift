@@ -1,3 +1,9 @@
+//
+//  SearchTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<search>` tag represents a part of the document that performs a search.

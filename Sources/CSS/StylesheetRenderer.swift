@@ -1,8 +1,8 @@
 //
 //  StylesheetRenderer.swift
-//  SwiftCss
+//  swift-web-standards
 //
-//  Created by Tibor Bodecs on 2021. 11. 21..
+//  Created by Tibor Bodecs on 2021. 11. 21.
 //
 
 /// Renders stylesheets, rules, selectors, and properties into CSS strings.

@@ -1,3 +1,9 @@
+//
+//  ImgTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<img>` tag is used to embed an image in an HTML page.

@@ -1,3 +1,9 @@
+//
+//  Attributes.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// Provides attribute storage and mutation APIs.
 public protocol Attributes {
     /// The attribute storage for the element.

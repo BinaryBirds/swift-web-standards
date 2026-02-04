@@ -1,3 +1,9 @@
+//
+//  Property.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// A name/value pair used to describe a node attribute.
 public struct Property: Sendable {
 

@@ -1,3 +1,9 @@
+//
+//  Border.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// A shorthand property for border-width, border-style and border-color.
 
 /// CSS `border` property.

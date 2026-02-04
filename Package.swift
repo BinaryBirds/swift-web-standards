@@ -36,6 +36,7 @@ let package = Package(
         .library(name: "WebStandards", targets: ["WebStandards"]),
     ],
     dependencies: [
+        // [docc-plugin-placeholder]
         .package(url: "https://github.com/apple/swift-collections", .upToNextMinor(from: "1.3.0")),
     ],
     targets: [
@@ -106,55 +107,64 @@ let package = Package(
             name: "DOMTests",
             dependencies: [
                 .target(name: "DOM"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "SGMLTests",
             dependencies: [
                 .target(name: "SGML"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "HTMLTests",
             dependencies: [
                 .target(name: "HTML"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "RSSTests",
             dependencies: [
                 .target(name: "RSS"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "SitemapTests",
             dependencies: [
                 .target(name: "Sitemap"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "SVGTests",
             dependencies: [
                 .target(name: "SVG"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "CSSTests",
             dependencies: [
                 .target(name: "CSS"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "MIMETests",
             dependencies: [
                 .target(name: "MIME"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
             name: "WebStandardsTests",
             dependencies: [
                 .target(name: "WebStandards"),
-            ]
+            ],
+            swiftSettings: defaultSwiftSettings
         ),
     ]
 )

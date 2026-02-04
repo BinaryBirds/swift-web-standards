@@ -1,3 +1,9 @@
+//
+//  DataTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<data>` tag is used to add a machine-readable translation of a given content.

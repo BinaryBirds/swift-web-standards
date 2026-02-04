@@ -1,3 +1,9 @@
+//
+//  TextareaTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<textarea>` tag defines a multi-line text input control.

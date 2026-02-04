@@ -1,3 +1,9 @@
+//
+//  CommentNode.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// An HTML comment node.
 public struct CommentNode: Node {
 

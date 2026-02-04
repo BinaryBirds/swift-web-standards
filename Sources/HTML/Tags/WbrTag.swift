@@ -1,3 +1,9 @@
+//
+//  WbrTag.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// The `<wbr>` (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break.

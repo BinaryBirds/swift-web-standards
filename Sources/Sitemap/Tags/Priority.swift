@@ -1,3 +1,9 @@
+//
+//  Priority.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 28.
+
 import SGML
 
 /// A `<priority>` element indicating the relative priority of a URL.

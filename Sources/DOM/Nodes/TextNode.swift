@@ -1,3 +1,9 @@
+//
+//  TextNode.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// A plain text node.
 public struct TextNode: Node {
 

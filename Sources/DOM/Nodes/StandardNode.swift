@@ -1,3 +1,9 @@
+//
+//  StandardNode.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 /// A node rendered with both opening and closing tags.
 public struct StandardNode: Node {
 

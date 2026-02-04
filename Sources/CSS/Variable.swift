@@ -1,3 +1,9 @@
+//
+//  Variable.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// CSS custom property value.
 public struct Variable: Property {
     /// The CSS property name, prefixed with `--`.

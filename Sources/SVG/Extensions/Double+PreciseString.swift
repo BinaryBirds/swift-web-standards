@@ -1,3 +1,9 @@
+//
+//  Double+PreciseString.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 01. 29.
+
 extension Double {
 
     /// A string representation of the value without a trailing `.0` for whole numbers.

@@ -1,3 +1,9 @@
+//
+//  Selector.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 02.
+
 /// Protocol describing a CSS selector with attached properties.
 public protocol Selector: Sendable {
     /// The selector string (e.g. `.button`, `#id`, `a`).
