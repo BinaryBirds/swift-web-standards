@@ -338,7 +338,7 @@ API documentation is available at the following link.
 - [HTML Standard](https://html.spec.whatwg.org/multipage/)
 - [HTML Reference](https://www.w3schools.com/tags/default.asp)
 - [Cascading Style Sheets](https://www.w3.org/Style/CSS/)
-- [CSS Snapshot 2020](https://www.w3.org/TR/css-2020/) 
+- [CSS Snapshot 2020](https://www.w3.org/TR/css-2020/)
 - [CSS Working Group Editor Drafts](https://drafts.csswg.org/)
 - [W3Schools CSS reference](https://www.w3schools.com/cssref/)
 - [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
