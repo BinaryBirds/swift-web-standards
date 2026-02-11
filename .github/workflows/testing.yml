@@ -7,6 +7,10 @@ on:
 
 jobs:
 
+  api_breakage:
+      name: Check API breakage
+      uses: BinaryBirds/github-workflows/.github/workflows/api_breakage.yml@main
+
   swiftlang_checks:
     name: Swiftlang Checks
     uses: swiftlang/github-workflows/.github/workflows/soundness.yml@main
