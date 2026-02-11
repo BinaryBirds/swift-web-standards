@@ -15,12 +15,13 @@ struct InputTagTestSuite {
     @Test
     func initialization() async throws {
         let tag = Input()
+            .name("foo")
 
         let renderer = Renderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <input>
+            <input name="foo">
             """#
 
         let result = renderer.render(document: doc)

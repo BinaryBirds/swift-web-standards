@@ -30,7 +30,7 @@ struct ParamTagTestSuite {
     @Test
     func nameAndValue() async throws {
         let tag = Param()
-            .name(.description)
+            .name("description")
             .value("movie")
             .id("metadata")
 

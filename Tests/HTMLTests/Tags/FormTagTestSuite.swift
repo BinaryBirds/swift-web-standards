@@ -112,7 +112,7 @@ struct FormTagTestSuite {
     @Test
     func nameAndTarget() async throws {
         let tag = Form("Form content")
-            .name(.author)
+            .name("author")
             .target(.blank)
 
         let renderer = Renderer()

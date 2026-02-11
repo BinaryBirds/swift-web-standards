@@ -37,7 +37,7 @@ struct ObjectTagTestSuite {
         .width(640)
         .height(360)
         .useMap("#media-map")
-        .name(.author)
+        .name("author")
 
         let renderer = Renderer(indent: 4)
         let doc = Document(root: tag)
