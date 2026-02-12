@@ -37,7 +37,7 @@ struct IframeTagTestSuite {
             .referrerPolicy(.noReferrer)
             .width(560)
             .height(315)
-            .name(.author)
+            .name("author")
 
         let renderer = Renderer()
         let doc = Document(root: tag)

@@ -14,7 +14,7 @@ struct NameAttributeTestSuite {
 
     @Test
     func rendersNameValues() async throws {
-        let cases: [(NameAttributeValue, String)] = [
+        let cases: [(Meta.NameAttributeValue, String)] = [
             (.applicationName, "application-name"),
             (.author, "author"),
             (.description, "description"),
@@ -34,7 +34,7 @@ struct NameAttributeTestSuite {
 
         for (value, raw) in cases {
             let tag = Button {}
-                .name(value)
+                .name(value.rawValue)
 
             let renderer = Renderer()
             let doc = Document(root: tag)
