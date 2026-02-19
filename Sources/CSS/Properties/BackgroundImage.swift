@@ -14,10 +14,10 @@ public struct BackgroundImage: Property {
         /// No background image will be displayed. This is default.
         case none
         // @TODO: add gradient support
-        //    case linear-gradient()    Sets a linear gradient as the background image. Define at least two colors (top to bottom)
         //    case radial-gradient()    Sets a radial gradient as the background image. Define at least two colors (center to edges)
         //    case repeating-linear-gradient()    Repeats a linear gradient
         //    case repeating-radial-gradient()    Repeats a radial gradient
+        case linearGradient(LinearGradient)
         /// Sets this property to its default value.
         case initial
         /// Inherits this property from its parent element.
@@ -29,6 +29,8 @@ public struct BackgroundImage: Property {
                 return "none"
             case .url(let value):
                 return "url('\(value)')"
+            case .linearGradient(let gradient):
+                return gradient.cssValue
             case .initial:
                 return "initial"
             case .inherit:
@@ -50,4 +52,96 @@ public struct BackgroundImage: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+}
+
+// MARK: - Linear Gradient
+
+public struct LinearGradient: Sendable {
+    public enum Direction: Sendable {
+        case angle(Double)  // degrees
+        case to(SideOrCorner)  // e.g. to bottom, to bottom right
+
+        var cssValue: String {
+            switch self {
+            case .angle(let deg):
+                // CSS: "180deg"
+                // (Ha szeretnél rad/turn támogatást is, bővíthető.)
+                return "\(trimTrailingZeros(deg))deg"
+            case .to(let soc):
+                return "to \(soc.cssValue)"
+            }
+        }
+    }
+
+    public enum Side: String, Sendable {
+        case top, right, bottom, left
+    }
+
+    public enum SideOrCorner: Sendable {
+        case side(Side)
+        case corner(Side, Side)  // pl. .corner(.bottom, .right)
+
+        var cssValue: String {
+            switch self {
+            case .side(let s):
+                return s.rawValue
+            case .corner(let a, let b):
+                // CSS-ben a sorrend számít UX-ben kevésbé, de valid: "bottom right"
+                return "\(a.rawValue) \(b.rawValue)"
+            }
+        }
+    }
+
+    public struct ColorStop: Sendable {
+        public let color: CSSColor
+        /// 0–2 position value, pl. ["15%"] vagy ["15%", "20%"]
+        public let positions: [UnitRepresentable]
+
+        public init(_ color: CSSColor, positions: [UnitRepresentable] = []) {
+            self.color = color
+            self.positions = positions
+        }
+
+        public init(_ color: CSSColor, _ positions: UnitRepresentable...) {
+            self.init(color, positions: positions)
+        }
+
+        var cssValue: String {
+            if positions.isEmpty {
+                return color.rawValue
+            }
+            return ([color.rawValue] + positions.map(\.rawValue))
+                .joined(separator: " ")        }
+    }
+
+    public let direction: Direction?
+    public let stops: [ColorStop]
+
+    /// - Parameters:
+    ///   - direction: nil esetén a CSS default (to bottom)
+    ///   - stops: legalább 2 stop ajánlott (CSS szerint is az értelmes)
+    public init(direction: Direction? = nil, stops: [ColorStop]) {
+        self.direction = direction
+        self.stops = stops
+    }
+
+    var cssValue: String {
+        let stopList = stops.map(\.cssValue).joined(separator: ", ")
+        if let direction {
+            return "linear-gradient(\(direction.cssValue), \(stopList))"
+        }
+        return "linear-gradient(\(stopList))"
+    }
+}
+
+// MARK: - Small helpers
+
+private func trimTrailingZeros(_ value: Double) -> String {
+    // 180.0 -> "180", 15.30 -> "15.3"
+    var s = String(value)
+    if s.contains(".") {
+        while s.last == "0" { s.removeLast() }
+        if s.last == "." { s.removeLast() }
+    }
+    return s
 }

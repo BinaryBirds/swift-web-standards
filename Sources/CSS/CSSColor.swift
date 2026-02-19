@@ -404,5 +404,5 @@ extension CSSColor {
     /// Handle variable colors, e.g. `var(--my-color)`.
     public static func variable(_ name: String) -> Self {
         .init(raw: "var(--\(name))")
-    }    
+    }
 }
