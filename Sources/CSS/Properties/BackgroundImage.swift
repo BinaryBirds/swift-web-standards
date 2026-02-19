@@ -111,7 +111,8 @@ public struct LinearGradient: Sendable {
                 return color.rawValue
             }
             return ([color.rawValue] + positions.map(\.rawValue))
-                .joined(separator: " ")        }
+                .joined(separator: " ")
+        }
     }
 
     public let direction: Direction?
