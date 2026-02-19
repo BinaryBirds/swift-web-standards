@@ -1,3 +1,9 @@
+//
+//  Angles.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 02. 19.
+
 /// A type that can be represented as a CSS angle value.
 ///
 /// Conforming types must provide a `rawValue` that renders to a valid CSS
