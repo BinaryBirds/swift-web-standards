@@ -41,7 +41,7 @@ struct BackgroundImageTests {
     @Test
     func linearGradient_angleWithStops() {
         let gradient = LinearGradient(
-            direction: .angle(180),
+            direction: .angle(180.deg),
             stops: [
                 .init("0A9AA5", 15.percent),
                 .init("068892", 55.percent),
@@ -106,7 +106,7 @@ struct BackgroundImageTests {
     @Test
     func linearGradient_hardStop_twoPositions() {
         let gradient = LinearGradient(
-            direction: .angle(180),
+            direction: .angle(180.deg),
             stops: [
                 .init("0A9AA5", 15.percent, 20.percent),  // hard stop
                 .init("046C74", 90.percent),
