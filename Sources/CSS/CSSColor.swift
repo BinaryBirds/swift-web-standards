@@ -401,4 +401,8 @@ extension CSSColor {
     public static let yellow: Self = .init(raw: "yellow")
     /// Hex color `9ACD32`.
     public static let yellowGreen: Self = .init(raw: "yellowgreen")
+    /// Handle variable colors, e.g. `var(--my-color)`.
+    public static func variable(_ name: String) -> Self {
+        .init(raw: "var(--\(name))")
+    }    
 }

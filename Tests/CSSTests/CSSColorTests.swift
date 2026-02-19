@@ -35,5 +35,8 @@ struct CSSColorTests {
 
         let percentRgb = CSSColor(r: 12.5, g: 50.0, b: 75.5)
         #expect(percentRgb.rawValue == "rgb(12.5%,50.0%,75.5%)")
+
+        let variableColor = CSSColor.variable("my-color")
+        #expect(variableColor.rawValue == "var(--my-color)")
     }
 }
