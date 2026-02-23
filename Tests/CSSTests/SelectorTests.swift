@@ -55,8 +55,8 @@ struct SelectorTests {
                 AllElements {
                     Padding(0)
                     Padding(8.rem)
-                    Padding(horizontal: 8.px)
-                    Padding(horizontal: .length(0), vertical: .inherit)
+                    Padding(vertical: 8.px)
+                    Padding(vertical: .length(0), horizontal: .inherit)
                 }
             }
         }

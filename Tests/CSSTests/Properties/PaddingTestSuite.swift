@@ -39,7 +39,7 @@ struct PaddingTests {
     @Test
     func values() {
         let single = Padding(12.px)
-        let axis = Padding(horizontal: 8.px, vertical: 16.px)
+        let axis = Padding(vertical: 8.px, horizontal: 16.px)
         let sides = Padding(top: 1.px, right: 2.px, bottom: 3.px, left: 4.px)
         let inherit = Padding(.inherit)
 

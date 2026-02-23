@@ -59,11 +59,11 @@ public struct Margin: Property {
     ///   - horizontal: The horizontal value.
     ///   - vertical: The vertical value.
     public init(
-        horizontal: Value,
-        vertical: Value
+        vertical: Value,
+        horizontal: Value
     ) {
         self.name = "margin"
-        self.value = horizontal.rawValue + " " + vertical.rawValue
+        self.value = vertical.rawValue + " " + horizontal.rawValue
         self.isImportant = false
     }
 
@@ -73,10 +73,10 @@ public struct Margin: Property {
     ///   - horizontal: The horizontal value.
     ///   - vertical: The vertical value.
     public init(
-        horizontal: UnitRepresentable = 0,
-        vertical: UnitRepresentable = 0
+        vertical: UnitRepresentable = 0,
+        horizontal: UnitRepresentable = 0
     ) {
-        self.init(horizontal: .length(horizontal), vertical: .length(vertical))
+        self.init(vertical: .length(vertical), horizontal: .length(horizontal))
     }
 
     /// Creates a `margin` declaration.
