@@ -52,8 +52,8 @@ public struct Padding: Property {
     /// Creates a `padding` declaration.
     /// Used by `StylesheetRenderer` when emitting CSS.
     /// - Parameters:
-    ///   - horizontal: The horizontal value.
     ///   - vertical: The vertical value.
+    ///   - horizontal: The horizontal value.
     public init(
         vertical: Value,
         horizontal: Value
@@ -66,8 +66,8 @@ public struct Padding: Property {
     /// Creates a `padding` declaration.
     /// Used by `StylesheetRenderer` when emitting CSS.
     /// - Parameters:
-    ///   - horizontal: The horizontal value.
     ///   - vertical: The vertical value.
+    ///   - horizontal: The horizontal value.
     public init(
         vertical: UnitRepresentable = 0,
         horizontal: UnitRepresentable = 0
