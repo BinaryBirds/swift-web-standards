@@ -44,8 +44,8 @@ struct SwiftCssTests {
             StylesheetRenderer(indent: 2).render(css) == #"""
                 @charset "UTF-8";
                 :root {
-                    margin: 8.5px 8px;
-                    padding: 8.5px 8px;
+                  margin: 8.5px 8px;
+                  padding: 8.5px 8px;
                 }
                 """#
         )
