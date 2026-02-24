@@ -17,14 +17,14 @@ struct SwiftCssTests {
             Charset("UTF-8")
             Media {
                 Root {
-                    Margin(horizontal: 8.5.px, vertical: 8.px)
-                    Padding(horizontal: 8.px, vertical: 8.px)
+                    Margin(vertical: 8.5.px, horizontal: 8.px)
+                    Padding(vertical: 8.5.px, horizontal: 8.px)
                 }
             }
         }
         #expect(
             StylesheetRenderer(minify: true, indent: 2).render(css)
-                == #"@charset "UTF-8";:root{margin:8.5px 8px;padding:8px 8px}"#
+                == #"@charset "UTF-8";:root{margin:8.5px 8px;padding:8.5px 8px}"#
         )
     }
 
@@ -34,8 +34,8 @@ struct SwiftCssTests {
             Charset("UTF-8")
             Media {
                 Root {
-                    Margin(horizontal: 8.5.px, vertical: 8.px)
-                    Padding(horizontal: 8.px, vertical: 8.px)
+                    Margin(vertical: 8.5.px, horizontal: 8.px)
+                    Padding(vertical: 8.5.px, horizontal: 8.px)
                 }
             }
         }
@@ -45,7 +45,7 @@ struct SwiftCssTests {
                 @charset "UTF-8";
                 :root {
                   margin: 8.5px 8px;
-                  padding: 8px 8px;
+                  padding: 8.5px 8px;
                 }
                 """#
         )
@@ -58,8 +58,8 @@ struct SwiftCssTests {
 
             Media {
                 Root {
-                    Margin(horizontal: 8.5.px, vertical: 8.px)
-                    Padding(horizontal: 8.px, vertical: 8.px)
+                    Margin(vertical: 8.5.px, horizontal: 8.px)
+                    Padding(vertical: 8.5.px, horizontal: 8.px)
                 }
             }
 
@@ -70,7 +70,7 @@ struct SwiftCssTests {
             }
             Media(.screen && .prefersColorScheme(.dark)) {
                 Universal {
-                    Margin(horizontal: 8.px, vertical: 8.px)
+                    Margin(vertical: 8.5.px, horizontal: 8.px)
                 }
             }
 
@@ -86,7 +86,7 @@ struct SwiftCssTests {
                 @charset "UTF-8";
                 :root {
                     margin: 8.5px 8px;
-                    padding: 8px 8px;
+                    padding: 8.5px 8px;
                 }
                 @media screen and (min-width: 600px) {
                     .button {
@@ -95,7 +95,7 @@ struct SwiftCssTests {
                 }
                 @media screen and (prefers-color-scheme: dark) {
                     * {
-                        margin: 8px 8px;
+                        margin: 8.5px 8px;
                     }
                 }
                 @media screen and (display-mode: standalone) {

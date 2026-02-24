@@ -16,7 +16,7 @@ struct StylesheetRendererTests {
         let css = Stylesheet {
             Media {
                 Class("badge") {
-                    Padding(horizontal: 6.px, vertical: 2.px)
+                    Padding(vertical: 6.px, horizontal: 2.px)
                     BackgroundColor(.red)
                 }
             }

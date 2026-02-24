@@ -39,7 +39,7 @@ struct MarginTests {
     @Test
     func values() {
         let single = Margin(12.px)
-        let axis = Margin(horizontal: 8.px, vertical: 16.px)
+        let axis = Margin(vertical: 8.px, horizontal: 16.px)
         let sides = Margin(top: 1.px, right: 2.px, bottom: 3.px, left: 4.px)
         let auto = Margin(.auto)
         let initial = Margin(.initial)

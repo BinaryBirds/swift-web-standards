@@ -52,27 +52,27 @@ public struct Padding: Property {
     /// Creates a `padding` declaration.
     /// Used by `StylesheetRenderer` when emitting CSS.
     /// - Parameters:
-    ///   - horizontal: The horizontal value.
     ///   - vertical: The vertical value.
+    ///   - horizontal: The horizontal value.
     public init(
-        horizontal: Value,
-        vertical: Value
+        vertical: Value,
+        horizontal: Value
     ) {
         self.name = "padding"
-        self.value = horizontal.rawValue + " " + vertical.rawValue
+        self.value = vertical.rawValue + " " + horizontal.rawValue
         self.isImportant = false
     }
 
     /// Creates a `padding` declaration.
     /// Used by `StylesheetRenderer` when emitting CSS.
     /// - Parameters:
-    ///   - horizontal: The horizontal value.
     ///   - vertical: The vertical value.
+    ///   - horizontal: The horizontal value.
     public init(
-        horizontal: UnitRepresentable = 0,
-        vertical: UnitRepresentable = 0
+        vertical: UnitRepresentable = 0,
+        horizontal: UnitRepresentable = 0
     ) {
-        self.init(horizontal: .length(horizontal), vertical: .length(vertical))
+        self.init(vertical: .length(vertical), horizontal: .length(horizontal))
     }
 
     /// Creates a `padding` declaration.
