@@ -44,17 +44,27 @@ struct BackdropFilterTests {
 
         let renderer = StylesheetRenderer()
         if let blur {
-            #expect(renderer.renderProperty(blur) == "backdrop-filter: blur(100px)")
-        } else {
-            Issue.record("Expected px unit to be accepted by BackdropFilter blur.")
+            #expect(
+                renderer.renderProperty(blur)
+                    == "backdrop-filter: blur(100px)"
+            )
+        }
+        else {
+            Issue.record(
+                "Expected px unit to be accepted by BackdropFilter blur."
+            )
         }
 
         if let blurRem {
             #expect(
-                renderer.renderProperty(blurRem) == "backdrop-filter: blur(2rem)"
+                renderer.renderProperty(blurRem)
+                    == "backdrop-filter: blur(2rem)"
             )
-        } else {
-            Issue.record("Expected rem unit to be accepted by BackdropFilter blur.")
+        }
+        else {
+            Issue.record(
+                "Expected rem unit to be accepted by BackdropFilter blur."
+            )
         }
 
         #expect(renderer.renderProperty(inherit) == "backdrop-filter: inherit")
