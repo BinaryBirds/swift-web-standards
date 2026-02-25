@@ -19,12 +19,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
 
     /// Creates a color from a hex string literal.
     ///
-    /// Valid lengths are 3, 4, 6, or 7 characters, with an optional `#` prefix.
+    /// Valid lengths are 3, 4, 6, 7, 8, or 9 characters, with an optional `#` prefix.
     /// - Parameter value: The hex string literal.
     public init(stringLiteral value: StringLiteralType) {
         colorValue = value
-        /// check if length is valid (000, #000, cafe00, #cafe00).
-        assert([3, 4, 6, 7].contains(value.count), "Invalid hex string")
+        /// check if length is valid (000, #000, cafe00, #cafe00, 12345678, #123456789).
+        assert([3, 4, 6, 7, 8, 9].contains(value.count), "Invalid hex string")
 
         /// add # prefix if missing.
         if !colorValue.hasPrefix("#") {
