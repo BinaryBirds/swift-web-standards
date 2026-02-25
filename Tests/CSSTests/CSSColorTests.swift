@@ -19,6 +19,9 @@ struct CSSColorTests {
         let short: CSSColor = "#fff"
         #expect(short.rawValue == "#fff")
 
+        let hexOpacity: CSSColor = "#12345678"
+        #expect(hexOpacity.rawValue == "#12345678")
+
         let rgb = CSSColor(r: 1, g: 2, b: 3)
         #expect(rgb.rawValue == "rgb(1,2,3)")
 
