@@ -19,6 +19,10 @@ public struct GridTemplateRows: Property {
         case minContent
         /// Sets the size of the rows, by using a legal length value.
         case length(UnitRepresentable)
+        /// Sets the size of the rows using fractional (`fr`) values.
+        case fraction(FractionRepresentable)
+        /// Repeats a track-size value in a pattern.
+        case `repeat`(Int, GridTrackSize)
 
         var rawValue: String {
             switch self {
@@ -32,6 +36,10 @@ public struct GridTemplateRows: Property {
                 return "min-content"
             case .length(let value):
                 return value.rawValue
+            case .fraction(let value):
+                return value.rawValue
+            case .repeat(let count, let value):
+                return "repeat(\(count), \(value.rawValue))"
             }
         }
     }

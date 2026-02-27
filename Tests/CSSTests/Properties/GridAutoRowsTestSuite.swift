@@ -35,4 +35,14 @@ struct GridAutoRowsTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = GridAutoRows(.length(80.px))
+        let fraction = GridAutoRows(.fraction(1.5.fr))
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "grid-auto-rows: 80px")
+        #expect(renderer.renderProperty(fraction) == "grid-auto-rows: 1.5fr")
+    }
 }

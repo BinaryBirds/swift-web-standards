@@ -19,6 +19,10 @@ public struct GridTemplateColumns: Property {
         case minContent
         /// Sets the size of the columns, by using a legal length value.
         case length(UnitRepresentable)
+        /// Sets the size of the columns using fractional (`fr`) values.
+        case fraction(FractionRepresentable)
+        /// Repeats a track-size value in a pattern.
+        case `repeat`(Int, GridTrackSize)
         /// Sets this property to its default value.
         case initial
         /// Inherits this property from its parent element.
@@ -36,6 +40,10 @@ public struct GridTemplateColumns: Property {
                 return "min-content"
             case .length(let value):
                 return value.rawValue
+            case .fraction(let value):
+                return value.rawValue
+            case .repeat(let count, let value):
+                return "repeat(\(count), \(value.rawValue))"
             case .initial:
                 return "initial"
             case .inherit:

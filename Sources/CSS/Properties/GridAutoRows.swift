@@ -19,6 +19,8 @@ public struct GridAutoRows: Property {
         case minContent
         /// Sets the size of the rows, by using a legal length value.
         case length(UnitRepresentable)
+        /// Sets the size of the rows using fractional (`fr`) values.
+        case fraction(FractionRepresentable)
 
         var rawValue: String {
             switch self {
@@ -29,6 +31,8 @@ public struct GridAutoRows: Property {
             case .minContent:
                 return "min-content"
             case .length(let value):
+                return value.rawValue
+            case .fraction(let value):
                 return value.rawValue
             }
         }

@@ -35,4 +35,14 @@ struct GridAutoColumnsTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = GridAutoColumns(.length(150.px))
+        let fraction = GridAutoColumns(.fraction(3.fr))
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "grid-auto-columns: 150px")
+        #expect(renderer.renderProperty(fraction) == "grid-auto-columns: 3fr")
+    }
 }
