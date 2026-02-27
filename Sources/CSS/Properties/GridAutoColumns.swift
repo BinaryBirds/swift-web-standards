@@ -23,6 +23,8 @@ public struct GridAutoColumns: Property {
         case length(UnitRepresentable)
         /// Sets the size of the columns using fractional (`fr`) values.
         case fraction(FractionRepresentable)
+        /// Sets multiple column track sizes in a single declaration.
+        case tracks([GridTrackSize])
 
         var rawValue: String {
             switch self {
@@ -36,6 +38,8 @@ public struct GridAutoColumns: Property {
                 return value.rawValue
             case .fraction(let value):
                 return value.rawValue
+            case .tracks(let values):
+                return values.map(\.rawValue).joined(separator: " ")
             }
         }
     }

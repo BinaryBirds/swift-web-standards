@@ -40,9 +40,15 @@ struct GridAutoColumnsTests {
     func values() {
         let length = GridAutoColumns(.length(150.px))
         let fraction = GridAutoColumns(.fraction(3.fr))
+        let tracks = GridAutoColumns(
+            .tracks([.length(150.px), .fraction(3.fr)])
+        )
 
         let renderer = StylesheetRenderer()
         #expect(renderer.renderProperty(length) == "grid-auto-columns: 150px")
         #expect(renderer.renderProperty(fraction) == "grid-auto-columns: 3fr")
+        #expect(
+            renderer.renderProperty(tracks) == "grid-auto-columns: 150px 3fr"
+        )
     }
 }

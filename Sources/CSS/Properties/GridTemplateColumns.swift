@@ -21,6 +21,8 @@ public struct GridTemplateColumns: Property {
         case length(UnitRepresentable)
         /// Sets the size of the columns using fractional (`fr`) values.
         case fraction(FractionRepresentable)
+        /// Sets multiple column track sizes in a single declaration.
+        case tracks([GridTrackSize])
         /// Repeats a track-size value in a pattern.
         case `repeat`(Int, GridTrackSize)
         /// Sets this property to its default value.
@@ -42,6 +44,8 @@ public struct GridTemplateColumns: Property {
                 return value.rawValue
             case .fraction(let value):
                 return value.rawValue
+            case .tracks(let values):
+                return values.map(\.rawValue).joined(separator: " ")
             case .repeat(let count, let value):
                 return "repeat(\(count), \(value.rawValue))"
             case .initial:
