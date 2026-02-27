@@ -40,6 +40,9 @@ struct GridTemplateColumnsTests {
     func values() {
         let length = GridTemplateColumns(.length(320.px))
         let fraction = GridTemplateColumns(.fraction(1.fr))
+        let tracks = GridTemplateColumns(
+            .tracks([.length(520.px), .fraction(1.fr)])
+        )
         let repeatLength = GridTemplateColumns(.repeat(3, .length(160.px)))
         let repeatFraction = GridTemplateColumns(.repeat(3, .fraction(1.fr)))
 
@@ -49,6 +52,10 @@ struct GridTemplateColumnsTests {
         )
         #expect(
             renderer.renderProperty(fraction) == "grid-template-columns: 1fr"
+        )
+        #expect(
+            renderer.renderProperty(tracks)
+                == "grid-template-columns: 520px 1fr"
         )
         #expect(
             renderer.renderProperty(repeatLength)

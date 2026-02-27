@@ -21,6 +21,8 @@ public struct GridAutoRows: Property {
         case length(UnitRepresentable)
         /// Sets the size of the rows using fractional (`fr`) values.
         case fraction(FractionRepresentable)
+        /// Sets multiple row track sizes in a single declaration.
+        case tracks([GridTrackSize])
 
         var rawValue: String {
             switch self {
@@ -34,6 +36,8 @@ public struct GridAutoRows: Property {
                 return value.rawValue
             case .fraction(let value):
                 return value.rawValue
+            case .tracks(let values):
+                return values.map(\.rawValue).joined(separator: " ")
             }
         }
     }
