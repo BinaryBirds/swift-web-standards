@@ -35,7 +35,11 @@ public struct Transform: Property {
         /// Defines a 2D translation    Play it ».
         case translate(UnitRepresentable, UnitRepresentable)
         ///  Defines a 3D translation.
-        case translate3d(UnitRepresentable, UnitRepresentable, UnitRepresentable)
+        case translate3d(
+            UnitRepresentable,
+            UnitRepresentable,
+            UnitRepresentable
+        )
         /// Defines a translation, using only the value for the X-axis    Play it ».
         case translateX(UnitRepresentable)
         /// Defines a translation, using only the value for the Y-axis    Play it ».
@@ -113,7 +117,8 @@ public struct Transform: Property {
                     + [x.rawValue, y.rawValue].joined(separator: ",") + ")"
             case .translate3d(let x, let y, let z):
                 return "translate3d("
-                    + [x.rawValue, y.rawValue, z.rawValue].joined(separator: ",")
+                    + [x.rawValue, y.rawValue, z.rawValue]
+                    .joined(separator: ",")
                     + ")"
             case .translateX(let value):
                 return "translateX(\(value.rawValue))"
@@ -138,7 +143,8 @@ public struct Transform: Property {
                 return "rotate(\(value.rawValue))"
             case .rotate3d(let x, let y, let z, let a):
                 return "rotate3d("
-                    + [String(x), String(y), String(z), a.rawValue].joined(
+                    + [String(x), String(y), String(z), a.rawValue]
+                    .joined(
                         separator: ","
                     ) + ")"
             case .rotateX(let value):
