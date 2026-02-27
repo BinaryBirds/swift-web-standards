@@ -33,15 +33,15 @@ public struct Transform: Property {
             Double
         )
         /// Defines a 2D translation    Play it ».
-        case translate(Double, Double)
+        case translate(UnitRepresentable, UnitRepresentable)
         ///  Defines a 3D translation.
-        case translate3d(Double, Double, Double)
+        case translate3d(UnitRepresentable, UnitRepresentable, UnitRepresentable)
         /// Defines a translation, using only the value for the X-axis    Play it ».
-        case translateX(Double)
+        case translateX(UnitRepresentable)
         /// Defines a translation, using only the value for the Y-axis    Play it ».
-        case translateY(Double)
+        case translateY(UnitRepresentable)
         /// Defines a 3D translation, using only the value for the Z-axis.
-        case translateZ(Double)
+        case translateZ(UnitRepresentable)
         /// Defines a 2D scale transformation    Play it ».
         case scale(Double, Double)
         /// Defines a 3D scale transformation.
@@ -53,23 +53,23 @@ public struct Transform: Property {
         /// Defines a 3D scale transformation by giving a value for the Z-axis.
         case scaleZ(Double)
         /// Defines a 2D rotation, the angle is specified in the parameter    Play it ».
-        case rotate(Double)
+        case rotate(AngleRepresentable)
         /// Defines a 3D rotation.
-        case rotate3d(Double, Double, Double, Double)
+        case rotate3d(Double, Double, Double, AngleRepresentable)
         /// Defines a 3D rotation along the X-axis    Play it ».
-        case rotateX(Double)
+        case rotateX(AngleRepresentable)
         /// Defines a 3D rotation along the Y-axis    Play it ».
-        case rotateY(Double)
+        case rotateY(AngleRepresentable)
         /// Defines a 3D rotation along the Z-axis    Play it ».
-        case rotateZ(Double)
+        case rotateZ(AngleRepresentable)
         /// Defines a 2D skew transformation along the X- and the Y-axis    Play it ».
-        case skew(Double, Double)
+        case skew(AngleRepresentable, AngleRepresentable)
         /// Defines a 2D skew transformation along the X-axis    Play it ».
-        case skewX(Double)
+        case skewX(AngleRepresentable)
         /// Defines a 2D skew transformation along the Y-axis    Play it ».
-        case skewY(Double)
+        case skewY(AngleRepresentable)
         /// Defines a perspective view for a 3D transformed element.
-        case perspective(Double)
+        case perspective(UnitRepresentable)
         /// Sets this property to its default value. Read about initial.
         case initial
         /// Inherits this property from its parent element. Read about inherit.
@@ -110,16 +110,17 @@ public struct Transform: Property {
                     .map { String($0) }.joined(separator: ",") + ")"
             case .translate(let x, let y):
                 return "translate("
-                    + [x, y].map { String($0) }.joined(separator: ",") + ")"
+                    + [x.rawValue, y.rawValue].joined(separator: ",") + ")"
             case .translate3d(let x, let y, let z):
                 return "translate3d("
-                    + [x, y, z].map { String($0) }.joined(separator: ",") + ")"
+                    + [x.rawValue, y.rawValue, z.rawValue].joined(separator: ",")
+                    + ")"
             case .translateX(let value):
-                return "translateX(\(value))"
+                return "translateX(\(value.rawValue))"
             case .translateY(let value):
-                return "translateY(\(value))"
+                return "translateY(\(value.rawValue))"
             case .translateZ(let value):
-                return "translateZ(\(value))"
+                return "translateZ(\(value.rawValue))"
             case .scale(let x, let y):
                 return "scale("
                     + [x, y].map { String($0) }.joined(separator: ",")
@@ -133,28 +134,29 @@ public struct Transform: Property {
                 return "scaleY(\(value))"
             case .scaleZ(let value):
                 return "scaleZ(\(value))"
-            case .rotate(let x):
-                return "rotate(\(x)deg)"
+            case .rotate(let value):
+                return "rotate(\(value.rawValue))"
             case .rotate3d(let x, let y, let z, let a):
                 return "rotate3d("
-                    + [x, y, z, a].map { String($0) }.joined(separator: ",")
-                    + "deg)"
+                    + [String(x), String(y), String(z), a.rawValue].joined(
+                        separator: ","
+                    ) + ")"
             case .rotateX(let value):
-                return "rotateX(\(value)deg)"
+                return "rotateX(\(value.rawValue))"
             case .rotateY(let value):
-                return "rotateY(\(value)deg)"
+                return "rotateY(\(value.rawValue))"
             case .rotateZ(let value):
-                return "rotateZ(\(value)deg)"
+                return "rotateZ(\(value.rawValue))"
             case .skew(let x, let y):
                 return "skew("
-                    + [x, y].map { String($0) + "deg" }.joined(separator: ",")
+                    + [x.rawValue, y.rawValue].joined(separator: ",")
                     + ")"
             case .skewX(let value):
-                return "skewX(\(value)deg)"
+                return "skewX(\(value.rawValue))"
             case .skewY(let value):
-                return "skewY(\(value)deg)"
+                return "skewY(\(value.rawValue))"
             case .perspective(let value):
-                return "perspective(\(value))"
+                return "perspective(\(value.rawValue))"
             case .initial:
                 return "initial"
             case .inherit:
