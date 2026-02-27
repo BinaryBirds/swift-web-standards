@@ -35,4 +35,24 @@ struct GridTemplateRowsTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func values() {
+        let length = GridTemplateRows(.length(120.px))
+        let fraction = GridTemplateRows(.fraction(2.fr))
+        let repeatLength = GridTemplateRows(.repeat(3, .length(160.px)))
+        let repeatFraction = GridTemplateRows(.repeat(3, .fraction(1.fr)))
+
+        let renderer = StylesheetRenderer()
+        #expect(renderer.renderProperty(length) == "grid-template-rows: 120px")
+        #expect(renderer.renderProperty(fraction) == "grid-template-rows: 2fr")
+        #expect(
+            renderer.renderProperty(repeatLength)
+                == "grid-template-rows: repeat(3, 160px)"
+        )
+        #expect(
+            renderer.renderProperty(repeatFraction)
+                == "grid-template-rows: repeat(3, 1fr)"
+        )
+    }
 }

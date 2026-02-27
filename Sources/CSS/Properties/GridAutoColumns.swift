@@ -21,6 +21,8 @@ public struct GridAutoColumns: Property {
         //    case minmax(min.max)
         ///     Sets the size of the columns, by using a legal length value.
         case length(UnitRepresentable)
+        /// Sets the size of the columns using fractional (`fr`) values.
+        case fraction(FractionRepresentable)
 
         var rawValue: String {
             switch self {
@@ -31,6 +33,8 @@ public struct GridAutoColumns: Property {
             case .minContent:
                 return "min-content"
             case .length(let value):
+                return value.rawValue
+            case .fraction(let value):
                 return value.rawValue
             }
         }
