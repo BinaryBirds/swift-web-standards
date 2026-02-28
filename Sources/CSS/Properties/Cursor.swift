@@ -28,9 +28,9 @@ public struct Cursor: Property {
         /// The default cursor.
         case `default`
         /// The cursor indicates that an edge of a box is to be moved right (east).
-        case eResize
+        case eResize = "e-resize"
         /// Indicates a bidirectional resize cursor.
-        case ewResize
+        case ewResize = "ew-resize"
         /// The cursor indicates that something can be grabbed.
         case grab
         /// The cursor indicates that something can be grabbed.
@@ -40,17 +40,17 @@ public struct Cursor: Property {
         /// The cursor indicates something is to be moved.
         case move
         /// The cursor indicates that an edge of a box is to be moved up (north).
-        case nResize
+        case nResize = "n-resize"
         /// The cursor indicates that an edge of a box is to be moved up and right (north/east).
-        case neResize
+        case neResize = "ne-resize"
         /// Indicates a bidirectional resize cursor.
-        case neswResize
+        case neswResize = "nesw-resize"
         /// Indicates a bidirectional resize cursor.
-        case nsResize
+        case nsResize = "ns-resize"
         /// The cursor indicates that an edge of a box is to be moved up and left (north/west).
-        case nwResize
+        case nwResize = "nw-resize"
         /// Indicates a bidirectional resize cursor.
-        case nwseResize
+        case nwseResize = "nwse-resize"
         /// The cursor indicates that the dragged item cannot be dropped here.
         case noDrop = "no-drop"
         /// No cursor is rendered for the element.
@@ -64,11 +64,11 @@ public struct Cursor: Property {
         /// The cursor indicates that the row can be resized vertically.
         case rowResize = "row-resize"
         /// The cursor indicates that an edge of a box is to be moved down (south).
-        case sResize
+        case sResize = "s-resize"
         /// The cursor indicates that an edge of a box is to be moved down and right (south/east).
-        case seResize
+        case seResize = "se-resize"
         /// The cursor indicates that an edge of a box is to be moved down and left (south/west).
-        case swResize
+        case swResize = "sw-resize"
         /// The cursor indicates text that may be selected.
         case text
         /// A comma separated list of URLs to custom cursors. Note: Always specify a generic cursor at the end of the list, in case none of the URL-defined cursors can be used.
@@ -77,7 +77,7 @@ public struct Cursor: Property {
         /// The cursor indicates vertical-text that may be selected.
         case verticalText = "vertical-text"
         /// The cursor indicates that an edge of a box is to be moved left (west).
-        case wResize
+        case wResize = "w-resize"
         /// The cursor indicates that the program is busy.
         case wait
         /// The cursor indicates that something can be zoomed in.
