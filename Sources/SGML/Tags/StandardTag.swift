@@ -7,7 +7,7 @@
 import DOM
 
 /// A tag that renders as a standard element with children.
-public protocol StandardTag: Tag, Container, Attributes {
+public protocol StandardTag: BasicTag, Container {
 
 }
 

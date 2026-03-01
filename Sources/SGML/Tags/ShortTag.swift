@@ -7,7 +7,7 @@
 import DOM
 
 /// A tag that renders as a void element.
-public protocol ShortTag: Tag, Attributes {
+public protocol ShortTag: BasicTag {
 
 }
 
@@ -21,3 +21,5 @@ extension ShortTag {
         )
     }
 }
+
+
