@@ -12,15 +12,15 @@ public struct Cursor: Property {
         /// The cursor indicates an alias of something is to be created.
         case alias
         /// The cursor indicates that something can be scrolled in any direction.
-        case allScroll
+        case allScroll = "all-scroll"
         /// Default. The browser sets a cursor.
         case auto
         /// The cursor indicates that a cell (or set of cells) may be selected.
         case cell
         /// The cursor indicates that a context-menu is available.
-        case contextMenu
+        case contextMenu = "context-menu"
         /// The cursor indicates that the column can be resized horizontally.
-        case colResize
+        case colResize = "col-resize"
         /// The cursor indicates something is to be copied.
         case copy
         /// The cursor render as a crosshair.
@@ -28,9 +28,9 @@ public struct Cursor: Property {
         /// The default cursor.
         case `default`
         /// The cursor indicates that an edge of a box is to be moved right (east).
-        case eResize
+        case eResize = "e-resize"
         /// Indicates a bidirectional resize cursor.
-        case ewResize
+        case ewResize = "ew-resize"
         /// The cursor indicates that something can be grabbed.
         case grab
         /// The cursor indicates that something can be grabbed.
@@ -40,50 +40,50 @@ public struct Cursor: Property {
         /// The cursor indicates something is to be moved.
         case move
         /// The cursor indicates that an edge of a box is to be moved up (north).
-        case nResize
+        case nResize = "n-resize"
         /// The cursor indicates that an edge of a box is to be moved up and right (north/east).
-        case neResize
+        case neResize = "ne-resize"
         /// Indicates a bidirectional resize cursor.
-        case neswResize
+        case neswResize = "nesw-resize"
         /// Indicates a bidirectional resize cursor.
-        case nsResize
+        case nsResize = "ns-resize"
         /// The cursor indicates that an edge of a box is to be moved up and left (north/west).
-        case nwResize
+        case nwResize = "nw-resize"
         /// Indicates a bidirectional resize cursor.
-        case nwseResize
+        case nwseResize = "nwse-resize"
         /// The cursor indicates that the dragged item cannot be dropped here.
-        case noDrop
+        case noDrop = "no-drop"
         /// No cursor is rendered for the element.
         case none
         /// The cursor indicates that the requested action will not be executed.
-        case notAllowed
+        case notAllowed = "not-allowed"
         /// The cursor is a pointer and indicates a link.
         case pointer
         /// The cursor indicates that the program is busy (in progress).
         case progress
         /// The cursor indicates that the row can be resized vertically.
-        case rowResize
+        case rowResize = "row-resize"
         /// The cursor indicates that an edge of a box is to be moved down (south).
-        case sResize
+        case sResize = "s-resize"
         /// The cursor indicates that an edge of a box is to be moved down and right (south/east).
-        case seResize
+        case seResize = "se-resize"
         /// The cursor indicates that an edge of a box is to be moved down and left (south/west).
-        case swResize
+        case swResize = "sw-resize"
         /// The cursor indicates text that may be selected.
         case text
         /// A comma separated list of URLs to custom cursors. Note: Always specify a generic cursor at the end of the list, in case none of the URL-defined cursors can be used.
         // @TODO: add cursor url support
         //case URL(String)
         /// The cursor indicates vertical-text that may be selected.
-        case verticalText
+        case verticalText = "vertical-text"
         /// The cursor indicates that an edge of a box is to be moved left (west).
-        case wResize
+        case wResize = "w-resize"
         /// The cursor indicates that the program is busy.
         case wait
         /// The cursor indicates that something can be zoomed in.
-        case zoomIn
+        case zoomIn = "zoom-in"
         /// The cursor indicates that something can be zoomed out.
-        case zoomOut
+        case zoomOut = "zoom-out"
         /// Sets this property to its default value.
         case initial
         /// Inherits this property from its parent element.
