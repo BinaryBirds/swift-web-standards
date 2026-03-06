@@ -50,7 +50,7 @@ public struct LineHeight: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
-    
+
     public init(
         _ value: Double
     ) {
@@ -62,5 +62,5 @@ public struct LineHeight: Property {
     ) {
         self.init(.length(unit))
     }
-    
+
 }

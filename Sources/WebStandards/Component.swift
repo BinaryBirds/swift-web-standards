@@ -5,24 +5,24 @@
 //  Created by Tibor Bödecs on 2026. 03. 06..
 //
 
-import SGML
-import HTML
 import CSS
 import DOM
+import HTML
+import SGML
 
 public protocol Component: SGML.Element {
     associatedtype Content: SGML.BasicTag
-    
+
     var identifier: String { get }
 
     var className: String { get }
 
     @CSS.Builder<CSS.Rule>
     func rules() -> [any CSS.Rule]
-    
+
     @CSS.Builder<CSS.Selector>
     func selectors() -> [any CSS.Selector]
-    
+
     @CSS.Builder<CSS.Property>
     func properties() -> [any CSS.Property]
 
@@ -32,42 +32,40 @@ public protocol Component: SGML.Element {
     func content() -> Content
 }
 
+extension Component {
 
-public extension Component {
-
-    var identifier: String {
+    public var identifier: String {
         String(describing: type(of: self))
     }
-    
-    var className: String {
+
+    public var className: String {
         camelToHyphens(identifier)
     }
-    
-    func rules() -> [any CSS.Rule] {
+
+    public func rules() -> [any CSS.Rule] {
         let selectors = selectors()
         guard !selectors.isEmpty else {
             return []
         }
         return [
-            Media(selectors: selectors),
+            Media(selectors: selectors)
         ]
     }
-    
-    func selectors() -> [any CSS.Selector] {
+
+    public func selectors() -> [any CSS.Selector] {
         let properties = properties()
         guard !properties.isEmpty else {
             return []
         }
         return [
-            Class(name: className, properties: properties),
+            Class(name: className, properties: properties)
         ]
     }
 
-    func properties() -> [any CSS.Property] {
+    public func properties() -> [any CSS.Property] {
         []
     }
-    
-    
+
     // MARK: - html body
 
     @ComponentContentBuilder

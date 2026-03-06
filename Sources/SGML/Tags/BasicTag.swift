@@ -6,5 +6,5 @@
 //
 
 public protocol BasicTag: Tag, Attributes {
-    
+
 }

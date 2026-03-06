@@ -27,7 +27,7 @@ public struct Class: Selector {
             properties: builder()
         )
     }
-    
+
     public init(
         name: String,
         properties: [any Property]

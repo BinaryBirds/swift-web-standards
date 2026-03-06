@@ -41,7 +41,7 @@ public struct FontFamily: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
-    
+
     public init(
         _ values: [String]
     ) {

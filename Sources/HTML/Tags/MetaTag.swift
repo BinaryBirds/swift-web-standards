@@ -36,7 +36,9 @@ public struct Meta:
         self.attributes = .init()
     }
 
-    public enum NameAttributeValue: RawRepresentable, AttributeValueRepresentable {
+    public enum NameAttributeValue: RawRepresentable,
+        AttributeValueRepresentable
+    {
         /// Specifies the name of the Web application that the page represents.
         case applicationName
         /// Specifies the name of the author of the document.
@@ -58,7 +60,7 @@ public struct Meta:
         case appleMobileWebAppCapable
         case appleMobileWebAppStatusBarStyle
         case custom(String?)
-        
+
         public init?(rawValue: String) {
             switch rawValue {
             case "application-name":
@@ -123,14 +125,13 @@ public struct Meta:
     }
 
     public typealias NameAttributeValueType = NameAttributeValue
-    
-    
+
     public func property(
         _ value: String?
     ) -> Self {
         setAttribute(name: "property", value: value)
     }
-    
+
     public func name(
         _ value: String?
     ) -> Self {

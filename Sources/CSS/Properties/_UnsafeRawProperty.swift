@@ -10,7 +10,7 @@ public struct UnsafeRawProperty: Property {
     public let name: String
     public let value: String
     public var isImportant: Bool
-    
+
     public init(
         name: String,
         value: String,

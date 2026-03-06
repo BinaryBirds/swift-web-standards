@@ -21,5 +21,3 @@ extension ShortTag {
         )
     }
 }
-
-

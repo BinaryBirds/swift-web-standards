@@ -5,7 +5,6 @@
 //  Created by Tibor Bödecs on 2026. 03. 01..
 //
 
-
 func camelToHyphens(
     _ string: String
 ) -> String {
@@ -24,13 +23,15 @@ func camelToHyphens(
                 // Insert hyphen if:
                 // 1) previous is lowercase or digit  (userID → user_id)
                 // 2) previous is uppercase AND next is lowercase (HTTPRequest → http_request)
-                if prev.isLowercase || prev.isNumber ||
-                   (prev.isUppercase && next?.isLowercase == true) {
+                if prev.isLowercase || prev.isNumber
+                    || (prev.isUppercase && next?.isLowercase == true)
+                {
                     result.append("-")
                 }
             }
             result.append(char.lowercased())
-        } else {
+        }
+        else {
             result.append(char)
         }
 

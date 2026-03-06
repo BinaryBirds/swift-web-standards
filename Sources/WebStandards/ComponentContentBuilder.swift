@@ -51,7 +51,7 @@ public enum ComponentContentBuilder {
     ) -> [any Element] {
         component
     }
-    
+
     public static func buildExpression(
         _ expression: ComponentGroup
     ) -> [any Element] {

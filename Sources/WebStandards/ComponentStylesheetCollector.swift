@@ -8,9 +8,9 @@ public struct ComponentStylesheetCollector {
         var componentOrder: [String] = []
         var collectedComponents: Set<String> = []
     }
-    
+
     public init() {
-        
+
     }
 
     public func getStylesheet(

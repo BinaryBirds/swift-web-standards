@@ -4,11 +4,11 @@
 //
 //  Created by Binary Birds on 2026. 01. 05.
 
-import Testing
 import CSS
 import DOM
 import HTML
 import SGML
+import Testing
 
 @testable import WebStandards
 
@@ -39,9 +39,10 @@ struct WebStandardsTestSuite {
     func globalStyleDefaultsUseGeneratedClassName() {
         #expect(GlobalPositionStyle.className == "global-position-style")
 
-        let css = StylesheetRenderer(minify: true).render(
-            Stylesheet(GlobalPositionStyle.rules())
-        )
+        let css = StylesheetRenderer(minify: true)
+            .render(
+                Stylesheet(GlobalPositionStyle.rules())
+            )
 
         #expect(css == ".global-position-style{position:relative}")
     }
@@ -86,12 +87,14 @@ struct WebStandardsTestSuite {
         let one = ComponentGroup([Span("one")])
         let many = ComponentGroup([Span("one"), Span("two")])
 
-        let oneRendered = SGML.Renderer().render(
-            document: Document(root: one)
-        )
-        let manyRendered = SGML.Renderer().render(
-            document: Document(root: many)
-        )
+        let oneRendered = SGML.Renderer()
+            .render(
+                document: Document(root: one)
+            )
+        let manyRendered = SGML.Renderer()
+            .render(
+                document: Document(root: many)
+            )
 
         #expect(!(one.node is ListNode))
         #expect(many.node is ListNode)
@@ -134,24 +137,32 @@ struct WebStandardsTestSuite {
         collector.register(GlobalPositionStyle.self)
         collector.register(GlobalAbsoluteStyle.self)
 
-        let rendered = StylesheetRenderer(minify: true).render(
-            collector.getGlobalStylesheet()
-        )
+        let rendered = StylesheetRenderer(minify: true)
+            .render(
+                collector.getGlobalStylesheet()
+            )
 
-        #expect(rendered == ".global-absolute-style{position:absolute}.global-position-style{position:relative}")
+        #expect(
+            rendered
+                == ".global-absolute-style{position:absolute}.global-position-style{position:relative}"
+        )
     }
 
     @Test
-    func componentStylesheetCollectorCollectsNestedComponentsOnceInTraversalOrder() throws {
+    func
+        componentStylesheetCollectorCollectsNestedComponentsOnceInTraversalOrder()
+        throws
+    {
         let root = Div {
             StyledParentComponent()
             StyledLeafComponent()
         }
 
         let collector = ComponentStylesheetCollector()
-        let rendered = StylesheetRenderer(minify: true).render(
-            collector.getStylesheet(from: root)
-        )
+        let rendered = StylesheetRenderer(minify: true)
+            .render(
+                collector.getStylesheet(from: root)
+            )
         #expect(
             rendered
                 == ".styled-parent-component{position:relative}.styled-leaf-component{margin:0 0 1px 0}"
@@ -159,11 +170,14 @@ struct WebStandardsTestSuite {
     }
 
     @Test
-    func componentStylesheetCollectorIncludesNestedComponentsFromRootWithoutOwnRules() {
+    func
+        componentStylesheetCollectorIncludesNestedComponentsFromRootWithoutOwnRules()
+    {
         let collector = ComponentStylesheetCollector()
-        let rendered = StylesheetRenderer(minify: true).render(
-            collector.getStylesheet(from: NoStyleParentComponent())
-        )
+        let rendered = StylesheetRenderer(minify: true)
+            .render(
+                collector.getStylesheet(from: NoStyleParentComponent())
+            )
 
         #expect(rendered == ".styled-leaf-component{margin:0 0 1px 0}")
     }

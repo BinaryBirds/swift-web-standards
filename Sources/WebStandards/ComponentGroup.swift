@@ -5,8 +5,8 @@
 //  Created by Tibor Bödecs on 2026. 03. 06..
 //
 
-import SGML
 import DOM
+import SGML
 
 public struct ComponentGroup: BasicTag, Container {
 
