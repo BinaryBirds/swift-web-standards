@@ -90,9 +90,7 @@ extension Component {
         }
     }
 
-    // MARK: - public node to conform to element
-
-    var node: Node {
+    public var node: Node {
         htmlBody().node
     }
 }
