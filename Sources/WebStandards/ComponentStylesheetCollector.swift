@@ -1,7 +1,7 @@
 import CSS
 import SGML
 
-public struct ComponentStylesheetCollector {
+public struct ComponentStylesheetCollector: Sendable {
 
     private struct State {
         var rulesByComponent: [String: [any CSS.Rule]] = [:]

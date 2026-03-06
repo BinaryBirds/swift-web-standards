@@ -1,6 +1,6 @@
 import CSS
 
-public struct GlobalStylesheetCollector {
+public struct GlobalStylesheetCollector: Sendable {
 
     private var rulesByComponent: [String: [any CSS.Rule]]
     private var componentOrder: [String]
