@@ -90,7 +90,9 @@ extension Component {
         }
     }
 
-    internal var node: Node {
+    // MARK: - public node to conform to element
+
+    var node: Node {
         htmlBody().node
     }
 }
