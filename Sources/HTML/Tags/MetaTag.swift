@@ -36,9 +36,11 @@ public struct Meta:
         self.attributes = .init()
     }
 
-    public enum NameAttributeValue: String, AttributeValueRepresentable {
+    public enum NameAttributeValue: RawRepresentable,
+        AttributeValueRepresentable
+    {
         /// Specifies the name of the Web application that the page represents.
-        case applicationName = "application-name"
+        case applicationName
         /// Specifies the name of the author of the document.
         case author
         /// Specifies a description of the page. Search engines can pick up this description to show with the results of searches.
@@ -51,16 +53,88 @@ public struct Meta:
         case viewport
         /// robots.
         case robots
-
         /// https://css-tricks.com/meta-theme-color-and-trickery/.
-        case colorScheme = "color-scheme"
-        case themeColor = "theme-color"
-        case appleMobileWebAppTitle = "apple-mobile-web-app-title"
-        case appleMobileWebAppCapable = "apple-mobile-web-app-capable"
-        case appleMobileWebAppStatusBarStyle =
-            "apple-mobile-web-app-status-bar-style"
+        case colorScheme
+        case themeColor
+        case appleMobileWebAppTitle
+        case appleMobileWebAppCapable
+        case appleMobileWebAppStatusBarStyle
+        case custom(String?)
+
+        public init?(rawValue: String) {
+            switch rawValue {
+            case "application-name":
+                self = .applicationName
+            case "author":
+                self = .author
+            case "description":
+                self = .description
+            case "generator":
+                self = .generator
+            case "keywords":
+                self = .keywords
+            case "viewport":
+                self = .viewport
+            case "robots":
+                self = .robots
+            case "color-scheme":
+                self = .colorScheme
+            case "theme-color":
+                self = .themeColor
+            case "apple-mobile-web-app-title":
+                self = .appleMobileWebAppTitle
+            case "apple-mobile-web-app-capable":
+                self = .appleMobileWebAppCapable
+            case "apple-mobile-web-app-status-bar-style":
+                self = .appleMobileWebAppStatusBarStyle
+            default:
+                self = .custom(rawValue)
+            }
+        }
+
+        public var rawValue: String {
+            switch self {
+            case .applicationName:
+                return "application-name"
+            case .author:
+                return "author"
+            case .description:
+                return "description"
+            case .generator:
+                return "generator"
+            case .keywords:
+                return "keywords"
+            case .viewport:
+                return "viewport"
+            case .robots:
+                return "robots"
+            case .colorScheme:
+                return "color-scheme"
+            case .themeColor:
+                return "theme-color"
+            case .appleMobileWebAppTitle:
+                return "apple-mobile-web-app-title"
+            case .appleMobileWebAppCapable:
+                return "apple-mobile-web-app-capable"
+            case .appleMobileWebAppStatusBarStyle:
+                return "apple-mobile-web-app-status-bar-style"
+            case .custom(let value):
+                return value ?? ""
+            }
+        }
     }
 
     public typealias NameAttributeValueType = NameAttributeValue
 
+    public func property(
+        _ value: String?
+    ) -> Self {
+        setAttribute(name: "property", value: value)
+    }
+
+    public func name(
+        _ value: String?
+    ) -> Self {
+        name(.custom(value))
+    }
 }

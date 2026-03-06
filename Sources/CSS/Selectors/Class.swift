@@ -22,8 +22,18 @@ public struct Class: Selector {
         _ name: String,
         @Builder<Property> _ builder: () -> [any Property]
     ) {
+        self.init(
+            name: name,
+            properties: builder()
+        )
+    }
+
+    public init(
+        name: String,
+        properties: [any Property]
+    ) {
         self.name = "." + name
-        self.properties = builder()
+        self.properties = properties
         self.pseudo = nil
     }
 }

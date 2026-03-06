@@ -181,7 +181,7 @@ struct SwiftCssTests {
                 }
             }
             Media(.screen && .displayMode(.standalone)) {
-                Element("body") {
+                Custom("body") {
                     Background(color: .yellow)
                 }
             }

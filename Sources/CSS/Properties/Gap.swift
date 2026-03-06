@@ -16,9 +16,21 @@ public struct Gap: Property {
     /// - Parameters:
     ///   - row: The row value.
     ///   - col: The col value.
-    public init(_ row: RowGap.Value, _ col: ColumnGap.Value) {
+    public init(
+        _ row: RowGap.Value,
+        _ col: ColumnGap.Value? = nil
+    ) {
         self.name = "gap"
-        self.value = [row.rawValue, col.rawValue].joined(separator: " ")
+        self.value = [row.rawValue, col?.rawValue]
+            .compactMap { $0 }
+            .joined(separator: " ")
         self.isImportant = false
+    }
+
+    public init(
+        _ row: UnitRepresentable,
+        _ col: UnitRepresentable? = nil
+    ) {
+        self.init(.length(row), col.map { .length($0) })
     }
 }

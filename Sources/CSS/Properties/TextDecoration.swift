@@ -7,6 +7,7 @@
 /// CSS `text-decoration` property.
 /// Provides typed values for this declaration.
 public struct TextDecoration: Property {
+
     /// Value options for the `text-decoration` property.
     public enum Value: Sendable {
         /// text-decoration-line    Sets the kind of text decoration to use (like underline, overline, line-through).
@@ -14,8 +15,8 @@ public struct TextDecoration: Property {
         /// text-decoration-style    Sets the style of the text decoration (like solid, wavy, dotted, dashed, double).
         case values(
             TextDecorationLine.Value,
-            TextDecorationColor.Value,
-            TextDecorationStyle.Value
+            TextDecorationColor.Value?,
+            TextDecorationStyle.Value?
         )
         /// Sets this property to its default value. Read about initial.
         case initial
@@ -25,7 +26,8 @@ public struct TextDecoration: Property {
         var rawValue: String {
             switch self {
             case .values(let line, let color, let style):
-                return [line.rawValue, color.rawValue, style.rawValue]
+                return [line.rawValue, color?.rawValue, style?.rawValue]
+                    .compactMap { $0 }
                     .joined(separator: " ")
             case .initial:
                 return "initial"
@@ -48,5 +50,13 @@ public struct TextDecoration: Property {
         self.name = "text-decoration"
         self.value = value.rawValue
         self.isImportant = false
+    }
+
+    public init(
+        _ line: TextDecorationLine.Value,
+        _ color: TextDecorationColor.Value? = nil,
+        _ style: TextDecorationStyle.Value? = nil
+    ) {
+        self.init(.values(line, color, style))
     }
 }

@@ -42,7 +42,7 @@ test:
 	swift test --parallel
 
 docker-test:
-	docker build -t tests . -f ./docker/Dockerfile.testing && docker run --rm tests
+	docker build -t swift-web-standards-tests . -f ./docker/tests/Dockerfile && docker run --rm swift-web-standards-tests
 
 
 

@@ -41,4 +41,16 @@ public struct FontFamily: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+
+    public init(
+        _ values: [String]
+    ) {
+        self.init(.family(values.joined(separator: ",")))
+    }
+
+    public init(
+        _ values: String...
+    ) {
+        self.init(values)
+    }
 }

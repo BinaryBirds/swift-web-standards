@@ -7,6 +7,7 @@
 /// CSS `margin` property.
 /// Provides typed values for this declaration.
 public struct Margin: Property {
+
     /// Value options for the `margin` property.
     public enum Value: Sendable {
         /// Specifies a fixed bottom margin in px, cm, em, etc. Default value is 0. Negative values are allowed.

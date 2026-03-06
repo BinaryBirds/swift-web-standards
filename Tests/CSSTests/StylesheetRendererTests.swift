@@ -32,7 +32,7 @@ struct StylesheetRendererTests {
     func indentation() {
         let css = Stylesheet {
             Media {
-                Element("span") {
+                Custom("span") {
                     Margin(4.px)
                 }
             }

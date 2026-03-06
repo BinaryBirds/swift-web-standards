@@ -2,8 +2,7 @@
 import PackageDescription
 
 // NOTE: https://github.com/swift-server/swift-http-server/blob/main/Package.swift
-var defaultSwiftSettings: [SwiftSetting] =
-[
+var defaultSwiftSettings: [SwiftSetting] = [
     // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0441-formalize-language-mode-terminology.md
     .swiftLanguageMode(.v6),
     // https://github.com/swiftlang/swift-evolution/blob/main/proposals/0444-member-import-visibility.md
@@ -11,7 +10,7 @@ var defaultSwiftSettings: [SwiftSetting] =
     // https://forums.swift.org/t/experimental-support-for-lifetime-dependencies-in-swift-6-2-and-beyond/78638
     .enableExperimentalFeature("Lifetimes"),
     // https://github.com/swiftlang/swift/pull/65218
-    .enableExperimentalFeature("AvailabilityMacro=swift-web-standards 1.0:macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0"),
+    .enableExperimentalFeature("AvailabilityMacro=swiftWebStandards 1.0:macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0"),
 ]
 
 #if compiler(>=6.2)
@@ -37,7 +36,10 @@ let package = Package(
     ],
     dependencies: [
         // [docc-plugin-placeholder]
-        .package(url: "https://github.com/apple/swift-collections", .upToNextMinor(from: "1.3.0")),
+        .package(
+            url: "https://github.com/apple/swift-collections",
+            from: "1.3.0"
+        ),
     ],
     targets: [
         .target(

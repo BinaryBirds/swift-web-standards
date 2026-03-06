@@ -19,4 +19,20 @@ public struct BorderBottom: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+
+    public init(
+        _ width: BorderWidth.Value,
+        _ style: BorderStyle.Value? = nil,
+        _ color: CSSColor? = nil
+    ) {
+        self.init(.values(width, style, color))
+    }
+
+    public init(
+        _ width: UnitRepresentable,
+        _ style: BorderStyle.Value? = nil,
+        _ color: CSSColor? = nil
+    ) {
+        self.init(.length(width), style, color)
+    }
 }

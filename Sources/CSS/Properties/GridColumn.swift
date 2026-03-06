@@ -16,9 +16,23 @@ public struct GridColumn: Property {
     /// - Parameters:
     ///   - start: The start value.
     ///   - end: The end value.
-    public init(_ start: GridColumnStart.Value, _ end: GridColumnEnd.Value) {
+    public init(
+        _ start: GridColumnStart.Value,
+        _ end: GridColumnEnd.Value? = nil
+    ) {
         self.name = "grid-column"
-        self.value = start.rawValue + " / " + end.rawValue
+        var value = start.rawValue
+        if let end {
+            value = value + " / " + end.rawValue
+        }
+        self.value = value
         self.isImportant = false
+    }
+
+    public init(
+        _ start: Int,
+        _ end: Int? = nil
+    ) {
+        self.init(.columnLine(start), end.map { .columnLine($0) })
     }
 }

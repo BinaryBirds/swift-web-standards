@@ -7,6 +7,7 @@
 /// CSS `bottom` property.
 /// Provides typed values for this declaration.
 public struct Bottom: Property {
+
     /// Value options for the `bottom` property.
     public enum Value: Sendable {
         /// Lets the browser calculate the bottom edge position. This is default.
@@ -44,5 +45,11 @@ public struct Bottom: Property {
         self.name = "bottom"
         self.value = value.rawValue
         self.isImportant = false
+    }
+
+    public init(
+        _ value: UnitRepresentable
+    ) {
+        self.init(.length(value))
     }
 }

@@ -43,7 +43,7 @@ struct SelectorBehaviorTests {
         let idSelector = Id("hero") {
             BackgroundColor(.blue)
         }
-        let elementSelector = Element("p") {
+        let elementSelector = Custom("p") {
             Margin(8.px)
         }
         let universalSelector = Universal {

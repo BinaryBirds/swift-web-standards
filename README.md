@@ -2,7 +2,11 @@
 
 An awesome Swift library that closely follows the [W3C web standards](https://www.w3.org/standards/).
 
-[![Release: 1.0.0-beta.2](https://img.shields.io/badge/Release-1.0.0--beta.2-F05138)]( https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.2)
+[
+    ![Release: 1.0.0-beta.1](https://img.shields.io/badge/Release-1.0.0--beta.1-F05138)
+](
+    https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.1
+)
 
 ## Features
 
@@ -46,7 +50,7 @@ The Swift Web Standards package is distributed through **Swift Package Manager**
 Add this package to your `Package.swift` dependencies:
 
 ```swift
-.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.2"),
+.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.1"),
 ```
 
 Then include the required product as a dependency for your target:
@@ -325,7 +329,11 @@ let css = Stylesheet {
 print(StylesheetRenderer(minify: false, indent: 4).render(css))
 ```
 
-[![DocC API documentation](https://img.shields.io/badge/DocC-API_documentation-F05138)](https://binarybirds.github.io/swift-web-standards)
+[
+    ![DocC API documentation](https://img.shields.io/badge/DocC-API_documentation-F05138)
+](
+    https://binarybirds.github.io/swift-web-standards
+)
 
 API documentation is available at the following link.
 
