@@ -7,6 +7,7 @@
 /// CSS `font-size` property.
 /// Provides typed values for this declaration.
 public struct FontSize: Property {
+
     /// Value options for the `font-size` property.
     public enum Value: Sendable {
         /// Sets the font-size to a medium size. This is default.
@@ -76,5 +77,11 @@ public struct FontSize: Property {
         self.name = "font-size"
         self.value = value.rawValue
         self.isImportant = false
+    }
+
+    public init(
+        _ value: UnitRepresentable
+    ) {
+        self.init(.length(value))
     }
 }

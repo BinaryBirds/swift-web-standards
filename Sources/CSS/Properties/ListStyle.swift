@@ -14,8 +14,8 @@ public struct ListStyle: Property {
         /// list-style-image    Specifies the type of list-item marker. Default value is "none".
         case values(
             ListStyleType.Value,
-            ListStylePosition.Value,
-            ListStyleImage.Value
+            ListStylePosition.Value?,
+            ListStyleImage.Value?
         )
         /// Sets this property to its default value. Read about initial.
         case initial
@@ -25,7 +25,8 @@ public struct ListStyle: Property {
         var rawValue: String {
             switch self {
             case .values(let type, let position, let image):
-                return [type.rawValue, position.rawValue, image.rawValue]
+                return [type.rawValue, position?.rawValue, image?.rawValue]
+                    .flatMap { $0 }
                     .joined(separator: " ")
             case .initial:
                 return "initial"
@@ -47,5 +48,13 @@ public struct ListStyle: Property {
         self.name = "list-style"
         self.value = value.rawValue
         self.isImportant = false
+    }
+
+    public init(
+        _ type: ListStyleType.Value,
+        _ position: ListStylePosition.Value? = nil,
+        _ image: ListStyleImage.Value? = nil
+    ) {
+        self.init(.values(type, position, image))
     }
 }

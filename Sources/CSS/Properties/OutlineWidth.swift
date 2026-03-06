@@ -53,4 +53,8 @@ public struct OutlineWidth: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+
+    public init(_ value: UnitRepresentable) {
+        self.init(.length(value))
+    }
 }

@@ -45,4 +45,10 @@ public struct LetterSpacing: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+
+    public init(
+        _ unit: UnitRepresentable
+    ) {
+        self.init(.length(unit))
+    }
 }

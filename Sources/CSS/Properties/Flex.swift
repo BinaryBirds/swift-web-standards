@@ -9,7 +9,7 @@
 public struct Flex: Property {
     /// Value options for the `flex` property.
     public enum Value: Sendable {
-        case values(FlexGrow.Value, FlexShrink.Value, FlexBasis.Value)
+        case values(FlexGrow.Value, FlexShrink.Value?, FlexBasis.Value?)
         /// Same as 1 1 auto.
         case auto
         /// Same as 0 0 auto.
@@ -22,7 +22,8 @@ public struct Flex: Property {
         var rawValue: String {
             switch self {
             case .values(let grow, let shrink, let basis):
-                return [grow.rawValue, shrink.rawValue, basis.rawValue]
+                return [grow.rawValue, shrink?.rawValue, basis?.rawValue]
+                    .flatMap { $0 }
                     .joined(separator: " ")
             case .auto:
                 return "auto"
@@ -57,9 +58,17 @@ public struct Flex: Property {
     ///   - basis: The basis value.
     public init(
         _ grow: FlexGrow.Value,
-        _ shrink: FlexShrink.Value,
-        _ basis: FlexBasis.Value
+        _ shrink: FlexShrink.Value? = nil,
+        _ basis: FlexBasis.Value? = nil
     ) {
         self.init(.values(grow, shrink, basis))
+    }
+
+    public init(
+        _ grow: Int,
+        _ shrink: FlexShrink.Value? = nil,
+        _ basis: FlexBasis.Value? = nil
+    ) {
+        self.init(.number(grow), shrink, basis)
     }
 }

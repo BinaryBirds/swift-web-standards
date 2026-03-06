@@ -11,7 +11,8 @@
 public struct Border: Property {
     /// Value options for the `border` property.
     public enum Value: Sendable {
-        case values(BorderWidth.Value, BorderStyle.Value, CSSColor)
+
+        case values(BorderWidth.Value, BorderStyle.Value?, CSSColor?)
         /// Sets this property to its default value.
         case initial
         /// Inherits this property from its parent element.
@@ -20,8 +21,9 @@ public struct Border: Property {
         var rawValue: String {
             switch self {
             case .values(let width, let style, let color):
-                return width.rawValue + " " + style.rawValue + " "
-                    + color.rawValue
+                return [width.rawValue, style?.rawValue, color?.rawValue]
+                    .flatMap { $0 }
+                    .joined(separator: " ")
             case .initial:
                 return "initial"
             case .inherit:
@@ -43,4 +45,21 @@ public struct Border: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+
+    public init(
+        _ width: BorderWidth.Value,
+        _ style: BorderStyle.Value? = nil,
+        _ color: CSSColor? = nil
+    ) {
+        self.init(.values(width, style, color))
+    }
+
+    public init(
+        _ width: UnitRepresentable,
+        _ style: BorderStyle.Value? = nil,
+        _ color: CSSColor? = nil
+    ) {
+        self.init(.length(width), style, color)
+    }
+
 }

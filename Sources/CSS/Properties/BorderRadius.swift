@@ -53,6 +53,15 @@ public struct BorderRadius: Property {
         self.isImportant = false
     }
 
+    public init(
+        _ v1: UnitRepresentable,
+        _ v2: UnitRepresentable? = nil,
+        _ v3: UnitRepresentable? = nil,
+        _ v4: UnitRepresentable? = nil
+    ) {
+        self.init(.length(v1, v2, v3, v4))
+    }
+
     // @TODO: better API for all value cases
     // https://www.w3schools.com/cssref/css3_pr_border-radius.asp
 }
