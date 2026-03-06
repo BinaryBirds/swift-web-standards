@@ -22,7 +22,7 @@ public struct Gap: Property {
     ) {
         self.name = "gap"
         self.value = [row.rawValue, col?.rawValue]
-            .flatMap { $0 }
+            .compactMap { $0 }
             .joined(separator: " ")
         self.isImportant = false
     }

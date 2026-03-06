@@ -26,7 +26,7 @@ public struct ListStyle: Property {
             switch self {
             case .values(let type, let position, let image):
                 return [type.rawValue, position?.rawValue, image?.rawValue]
-                    .flatMap { $0 }
+                    .compactMap { $0 }
                     .joined(separator: " ")
             case .initial:
                 return "initial"

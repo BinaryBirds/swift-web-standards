@@ -23,7 +23,7 @@ public struct Flex: Property {
             switch self {
             case .values(let grow, let shrink, let basis):
                 return [grow.rawValue, shrink?.rawValue, basis?.rawValue]
-                    .flatMap { $0 }
+                    .compactMap { $0 }
                     .joined(separator: " ")
             case .auto:
                 return "auto"

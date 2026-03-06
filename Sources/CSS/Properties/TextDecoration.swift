@@ -27,7 +27,7 @@ public struct TextDecoration: Property {
             switch self {
             case .values(let line, let color, let style):
                 return [line.rawValue, color?.rawValue, style?.rawValue]
-                    .flatMap { $0 }
+                    .compactMap { $0 }
                     .joined(separator: " ")
             case .initial:
                 return "initial"

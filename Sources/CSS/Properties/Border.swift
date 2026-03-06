@@ -22,7 +22,7 @@ public struct Border: Property {
             switch self {
             case .values(let width, let style, let color):
                 return [width.rawValue, style?.rawValue, color?.rawValue]
-                    .flatMap { $0 }
+                    .compactMap { $0 }
                     .joined(separator: " ")
             case .initial:
                 return "initial"
