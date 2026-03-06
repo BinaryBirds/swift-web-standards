@@ -221,10 +221,20 @@ public struct Media: Rule {
     ///   - builder: Builder that returns selectors.
     public init(
         _ query: Query? = nil,
-        @Builder<Selector> _ builder: () -> [Selector]
+        @Builder<Selector> _ builder: () -> [Selector] = { [] }
+    ) {
+        self.init(
+            query: query,
+            selectors: builder()
+        )
+    }
+    
+    public init(
+        query: Query? = nil,
+        selectors: [Selector]
     ) {
         self.query = query
-        self.selectors = builder()
+        self.selectors = selectors
     }
 }
 
@@ -251,7 +261,7 @@ public func || (
     Media.Query.Operator.or(lhs, rhs).query
 }
 
-extension Media.Query {
+public extension Media.Query {
 
     /// Creates a custom raw query.
     /// - Parameter value: The raw query string.
