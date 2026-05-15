@@ -21,7 +21,7 @@ struct AriaLabeledByAttributeTestSuite {
         let doc = Document(root: tag)
 
         let expectation = #"""
-            <a aria-labeledby="value"></a>
+            <a aria-labelledby="value"></a>
             """#
 
         let result = renderer.render(document: doc)
