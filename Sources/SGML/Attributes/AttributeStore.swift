@@ -6,6 +6,7 @@
 
 import Collections
 import DOM
+import OrderedCollections
 
 /// Stores attribute names and values for elements.
 public struct AttributeStore: Sendable {
