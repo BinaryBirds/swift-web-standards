@@ -13,11 +13,11 @@ public protocol AriaLabeledByAttributeModifier {
 
 extension AriaLabeledByAttributeModifier where Self: Attributes & Mutable {
 
-    public func ariaLabeledBy(
+    public func ariaLabelledBy(
         _ value: AriaLabeledByAttributeValueType?
     ) -> Self {
         setAttribute(
-            key: AriaAttributeKey.labeledBy,
+            key: AriaAttributeKey.labelledBy,
             value: value?.attributeValue
         )
     }

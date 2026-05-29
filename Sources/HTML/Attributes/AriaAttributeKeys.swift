@@ -28,7 +28,7 @@ enum AriaAttributeKey: String, AttributeKeyRepresentable {
     case invalid
     case keyShortcuts = "keyshortcuts"
     case label
-    case labeledBy = "labeledby"
+    case labelledBy = "labelledby"
     case level
     case live
     case modal
