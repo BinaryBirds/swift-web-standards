@@ -1,3 +1,9 @@
+//
+//  GlobalStylesheetCollector.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 03. 06.
+
 import CSS
 
 public struct GlobalStylesheetCollector: Sendable {
