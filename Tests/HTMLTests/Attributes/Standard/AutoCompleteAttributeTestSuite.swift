@@ -114,6 +114,22 @@ struct AutoCompleteAttributeTestSuite {
     }
 
     @Test
+    func rendersAutocompleteString() async throws {
+        let tag = Input()
+            .autocomplete("off")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <input autocomplete="off">
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
     func rendersAutoCompleteBoolean() async throws {
         let tag = Input()
             .autoComplete()

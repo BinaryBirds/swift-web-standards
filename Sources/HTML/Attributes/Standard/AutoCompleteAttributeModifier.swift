@@ -144,6 +144,22 @@ public protocol AutoCompleteAttributeModifier {
 
 extension AutoCompleteAttributeModifier where Self: Attributes & Mutable {
 
+    public func autocomplete() -> Self {
+        autoComplete()
+    }
+
+    public func autocomplete(
+        _ value: AutoCompleteAttributeValueType?
+    ) -> Self {
+        autoComplete(value)
+    }
+
+    public func autocomplete(
+        _ value: String?
+    ) -> Self {
+        autoComplete(value)
+    }
+
     public func autoComplete() -> Self {
         setAttribute(
             key: StandardAttributeKey.autocomplete
