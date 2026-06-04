@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<summary>` tag defines a visible heading for the `<details>` element.
@@ -35,7 +34,7 @@ public struct Summary:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

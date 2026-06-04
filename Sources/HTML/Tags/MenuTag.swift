@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<menu>` tag represents a group of commands or a list of items.
@@ -35,7 +34,7 @@ public struct Menu:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

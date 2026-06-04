@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<sup>` tag defines superscript text.
@@ -42,7 +41,7 @@ public struct Sup:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

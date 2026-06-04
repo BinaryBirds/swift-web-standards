@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<dfn>` tag stands for the "definition element", and it specifies a term that is going to be defined within the content.
@@ -42,7 +41,7 @@ public struct Dfn:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

@@ -4,17 +4,12 @@
 //
 //  Created by Binary Birds on 2026. 01. 29.
 
-import ContentModel
 import SGML
 
 /// SVG tag.
 ///
 /// https://developer.mozilla.org/en-US/docs/Web/SVG/Element
-public struct SVG:
-    SVGTag,
-    FlowContent,
-    PhrasingContent
-{
+public struct SVG: SVGTag {
 
     /// The `preserveAspectRatio` attribute alignment values used by SVG.
     public enum PreserveAspectRatioAlignment: String, Sendable {

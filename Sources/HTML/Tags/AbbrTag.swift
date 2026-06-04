@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 ///
@@ -46,7 +45,7 @@ public struct Abbr:
         // Phrasing content.
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

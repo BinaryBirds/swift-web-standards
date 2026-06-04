@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<dl>` tag defines a description list.
@@ -38,7 +37,7 @@ public struct Dl:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

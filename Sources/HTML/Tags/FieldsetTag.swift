@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<fieldset>` tag is used to group related elements in a form.
@@ -41,7 +40,7 @@ public struct Fieldset:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

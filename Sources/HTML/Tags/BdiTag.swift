@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// BDI stands for Bi-Directional Isolation.
@@ -41,7 +40,7 @@ public struct Bdi:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

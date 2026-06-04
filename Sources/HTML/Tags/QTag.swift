@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<q>` tag defines a short quotation.
@@ -42,7 +41,7 @@ public struct Q:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

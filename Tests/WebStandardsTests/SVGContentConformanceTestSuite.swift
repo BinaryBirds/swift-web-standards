@@ -50,4 +50,23 @@ struct SVGContentConformanceTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
+    @Test
+    func svgSupportsClassAttributeModifierThroughHtmlConformance() async throws
+    {
+        let tag = SVG {
+            Circle(cx: 8, cy: 8, r: 8)
+        }
+        .class("w-4 h-4 text-gray-500")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <svg class="w-4 h-4 text-gray-500"><circle cx="8" cy="8" r="8"></circle></svg>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
 }

@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<li>` tag defines a list item.
@@ -42,7 +41,7 @@ public struct Li:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

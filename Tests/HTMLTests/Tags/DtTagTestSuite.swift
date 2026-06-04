@@ -15,7 +15,7 @@ struct DtTagTestSuite {
     @Test
     func initialization() async throws {
         let tag = Dt {
-            Text("Lorem ipsum")
+            "Lorem ipsum"
         }
 
         let renderer = Renderer()

@@ -61,7 +61,7 @@ public struct ChangeFreq: StandardTag, UrlContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value.rawValue)
+            value.rawValue
         ]
     }
 }

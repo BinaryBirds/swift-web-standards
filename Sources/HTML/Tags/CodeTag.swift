@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<code>` tag is used to define a piece of computer code.
@@ -47,7 +46,7 @@ public struct Code:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

@@ -15,7 +15,7 @@ struct InsTagTestSuite {
     @Test
     func initialization() async throws {
         let tag = Ins {
-            Text("Lorem ipsum")
+            "Lorem ipsum"
         }
         .dateTime("2009-10-11T01:25-07:00")
 

@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<blockquote>` tag specifies a section that is quoted from another source.
@@ -39,7 +38,7 @@ public struct Blockquote:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

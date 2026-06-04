@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<a>` tag defines a hyperlink, which is used to link from one page to another.
@@ -54,7 +53,7 @@ public struct A:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

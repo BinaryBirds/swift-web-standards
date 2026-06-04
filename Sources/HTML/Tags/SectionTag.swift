@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<section>` tag defines a section in a document.
@@ -37,7 +36,7 @@ public struct Section:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

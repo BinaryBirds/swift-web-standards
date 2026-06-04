@@ -16,7 +16,7 @@ struct BuilderTestSuite {
     func basics() async throws {
         let tag = P {
             Span("foo")
-            Text("bar")
+            "bar"
             Span("baz")
         }
 
@@ -36,7 +36,7 @@ struct BuilderTestSuite {
         let condition = false
         let tag = P {
             Span("foo")
-            Text("bar")
+            "bar"
             if condition {
                 Span("baz")
             }
@@ -58,7 +58,7 @@ struct BuilderTestSuite {
         let condition = true
         let tag = P {
             Span("foo")
-            Text("bar")
+            "bar"
             if condition {
                 Span("baz")
             }
@@ -80,7 +80,7 @@ struct BuilderTestSuite {
         let condition = true
         let tag = P {
             Span("foo")
-            Text("bar")
+            "bar"
             if condition {
                 Span("baz")
             }
@@ -105,7 +105,7 @@ struct BuilderTestSuite {
         let condition = false
         let tag = P {
             Span("foo")
-            Text("bar")
+            "bar"
             if condition {
                 Span("baz")
             }

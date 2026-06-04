@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<td>` tag defines a standard data cell in an HTML table.
@@ -45,7 +44,7 @@ public struct Td:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<progress>` tag represents the completion progress of a task.
@@ -41,7 +40,7 @@ public struct Progress:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

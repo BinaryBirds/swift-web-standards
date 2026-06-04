@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<th>` tag defines a header cell in an HTML table.
@@ -46,7 +45,7 @@ public struct Th:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

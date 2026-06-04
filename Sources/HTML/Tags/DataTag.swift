@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<data>` tag is used to add a machine-readable translation of a given content.
@@ -42,7 +41,7 @@ public struct Data:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

@@ -19,7 +19,7 @@ public struct Text: SVGTag {
     ) {
         self.attributes = .init()
         self.children = [
-            SGML.Text(value)
+            value
         ]
     }
 

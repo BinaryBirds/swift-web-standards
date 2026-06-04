@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<template>` tag is used as a container to hold some HTML content hidden from the user when the page loads.
@@ -50,7 +49,7 @@ public struct Template:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

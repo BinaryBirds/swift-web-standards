@@ -39,7 +39,7 @@ public struct LastBuildDate: StandardTag, ChannelContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value)
+            value
         ]
     }
 }

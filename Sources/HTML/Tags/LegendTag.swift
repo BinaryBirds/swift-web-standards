@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<legend>` tag defines a caption for the `<fieldset>` element.
@@ -33,7 +32,7 @@ public struct Legend:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

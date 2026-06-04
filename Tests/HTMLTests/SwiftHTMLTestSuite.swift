@@ -28,9 +28,9 @@ struct SwiftHTMLTestSuite {
             }
             Body {
                 P {
-                    Text("Hello,")
+                    "Hello,"
                     Br()
-                    Text("World!")
+                    "World!"
                 }
                 Hr()
 
@@ -148,4 +148,5 @@ struct SwiftHTMLTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
 }

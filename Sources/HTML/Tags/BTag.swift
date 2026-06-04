@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// Make some text bold (without marking it as important).
@@ -37,7 +36,7 @@ public struct B:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

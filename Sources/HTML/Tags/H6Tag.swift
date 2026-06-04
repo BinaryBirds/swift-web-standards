@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<h1>` to `<h6>` tags are used to define HTML headings.
@@ -42,7 +41,7 @@ public struct H6:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

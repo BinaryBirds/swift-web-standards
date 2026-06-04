@@ -93,7 +93,7 @@ struct RendererTestSuite {
             ) {
                 self.attributes = .init()
                 self.children = [
-                    Text(text)
+                    text
                 ]
             }
         }
@@ -155,7 +155,7 @@ struct RendererTestSuite {
             ) {
                 self.attributes = .init()
                 self.children = [
-                    Text(text)
+                    text
                 ]
             }
         }
@@ -229,7 +229,7 @@ struct RendererTestSuite {
             ) {
                 self.attributes = .init()
                 self.children = [
-                    Text(text)
+                    text
                 ]
             }
         }

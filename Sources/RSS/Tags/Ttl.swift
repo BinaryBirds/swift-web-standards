@@ -36,7 +36,7 @@ public struct Ttl: StandardTag, ChannelContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(String(value))
+            String(value)
         ]
     }
 }

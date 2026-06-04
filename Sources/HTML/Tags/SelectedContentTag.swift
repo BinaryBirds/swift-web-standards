@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<selectedcontent>` tag represents selected content for the parent control.
@@ -34,7 +33,7 @@ public struct SelectedContent:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

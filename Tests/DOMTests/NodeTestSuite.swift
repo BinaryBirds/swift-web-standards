@@ -35,9 +35,7 @@ struct NodeTestSuite {
     @Test
     func textNode() async throws {
 
-        let node = TextNode(
-            value: "this is a text"
-        )
+        let node = InlineText("this is a text")
 
         #expect(node.value == "this is a text")
     }
@@ -57,9 +55,7 @@ struct NodeTestSuite {
 
         let node = ListNode(
             items: [
-                TextNode(
-                    value: "this is a text"
-                ),
+                InlineText("this is a text"),
                 ShortNode(
                     name: "br"
                 ),

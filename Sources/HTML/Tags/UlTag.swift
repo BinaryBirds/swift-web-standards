@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<ul>` tag defines an unordered (bulleted) list.
@@ -42,7 +41,7 @@ public struct Ul:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

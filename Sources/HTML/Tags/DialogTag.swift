@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<dialog>` tag defines a dialog box or subwindow.
@@ -39,7 +38,7 @@ public struct Dialog:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

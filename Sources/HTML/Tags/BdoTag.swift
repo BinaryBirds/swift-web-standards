@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// BDO stands for Bi-Directional Override.
@@ -43,7 +42,7 @@ public struct Bdo:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ],
             dir: dir
         )

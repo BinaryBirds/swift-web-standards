@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<samp>` tag is used to define sample output from a computer program.
@@ -39,7 +38,7 @@ public struct Samp:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

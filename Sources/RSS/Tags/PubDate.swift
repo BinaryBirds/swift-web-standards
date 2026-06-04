@@ -40,7 +40,7 @@ public struct PubDate: StandardTag, ItemContent, ChannelContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value)
+            value
         ]
     }
 }

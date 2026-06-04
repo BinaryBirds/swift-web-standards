@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import DOM
 import SGML
 
@@ -46,7 +45,7 @@ public struct Script:
     ) {
         self.attributes = .init()
         self.children = [
-            Text(contents, isRaw: true)
+            contents
         ]
     }
 

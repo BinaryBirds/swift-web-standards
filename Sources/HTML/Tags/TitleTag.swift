@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<title>` tag defines the title of the document.
@@ -48,7 +47,7 @@ public struct Title:
     ) {
         self.attributes = .init()
         self.children = [
-            Text(text)
+            text
         ]
     }
 }

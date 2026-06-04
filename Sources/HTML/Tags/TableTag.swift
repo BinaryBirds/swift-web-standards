@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<table>` tag defines an HTML table.
@@ -42,7 +41,7 @@ public struct Table:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

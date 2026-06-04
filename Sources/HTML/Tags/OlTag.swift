@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<ol>` tag defines an ordered list.
@@ -64,7 +63,7 @@ public struct Ol:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

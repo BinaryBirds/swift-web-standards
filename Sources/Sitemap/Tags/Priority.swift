@@ -33,7 +33,7 @@ public struct Priority: StandardTag, UrlContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value)
+            value
         ]
     }
 

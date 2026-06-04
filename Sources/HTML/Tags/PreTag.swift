@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<pre>` tag defines preformatted text.
@@ -39,7 +38,7 @@ public struct Pre:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

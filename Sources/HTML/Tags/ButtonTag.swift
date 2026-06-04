@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<button>` tag defines a clickable button.
@@ -57,7 +56,7 @@ public struct Button:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

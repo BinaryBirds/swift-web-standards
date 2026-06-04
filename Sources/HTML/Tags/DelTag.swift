@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<del>` tag defines text that has been deleted from a document.
@@ -41,7 +40,7 @@ public struct Del:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

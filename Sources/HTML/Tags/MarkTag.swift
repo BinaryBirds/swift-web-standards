@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<mark>` tag defines text that should be marked or highlighted.
@@ -37,7 +36,7 @@ public struct Mark:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

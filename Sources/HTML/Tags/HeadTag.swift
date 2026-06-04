@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<head>` element is a container for metadata (data about data) and is placed between the `<html>` tag and the `<body>` tag.

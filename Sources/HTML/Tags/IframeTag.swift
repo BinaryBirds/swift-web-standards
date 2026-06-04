@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<iframe>` tag specifies an inline frame.
@@ -55,7 +54,7 @@ public struct Iframe:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

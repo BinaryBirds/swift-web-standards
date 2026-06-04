@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<meter>` tag defines a scalar measurement within a known range, or a fractional value.
@@ -54,7 +53,7 @@ public struct Meter:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

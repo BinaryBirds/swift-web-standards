@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<dt>` tag defines a term/name in a description list.
@@ -35,7 +34,7 @@ public struct Dt:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

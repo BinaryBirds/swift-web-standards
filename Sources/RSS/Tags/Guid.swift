@@ -41,7 +41,7 @@ public struct Guid: StandardTag, ItemContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value)
+            value
         ]
 
         if let isPermalink {

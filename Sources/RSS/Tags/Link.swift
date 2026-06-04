@@ -35,7 +35,7 @@ public struct Link: StandardTag, ChannelContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value)
+            value
         ]
     }
 }

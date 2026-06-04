@@ -4,7 +4,6 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
-import ContentModel
 import SGML
 
 /// The `<option>` tag defines an option in a select list.
@@ -45,7 +44,7 @@ public struct Option:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

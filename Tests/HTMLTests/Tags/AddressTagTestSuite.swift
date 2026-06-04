@@ -15,9 +15,9 @@ struct AddressTagTestSuite {
     @Test
     func basics() async throws {
         let tag = Address {
-            Text("For more details, contact")
+            "For more details, contact"
             //              <a href="mailto:js@example.com">John Smith</a>
-            Text(".")
+            "."
         }
 
         let renderer = Renderer()
