@@ -16,7 +16,9 @@ public struct Style:
     MediaAttributeModifier,
     BlockingAttributeModifier,
     // categories
-    MetadataContent
+    MetadataContent,
+    FlowContent,
+    PhrasingContent
 {
     /// The attribute storage for the tag.
     public var attributes: AttributeStore

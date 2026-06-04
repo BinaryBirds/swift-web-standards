@@ -29,4 +29,21 @@ struct BodyTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func initializationWithStringLiteral() async throws {
+        let tag = Body {
+            "hello"
+        }
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <body>hello</body>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }

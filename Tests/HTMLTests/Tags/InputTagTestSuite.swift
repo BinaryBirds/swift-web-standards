@@ -65,4 +65,24 @@ struct InputTagTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
+    @Test
+    func requiredFlagAttribute() async throws {
+        let condition = true
+
+        let tag = Input()
+            .if(condition) {
+                $0.required()
+            }
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <input required>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
 }

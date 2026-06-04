@@ -50,4 +50,10 @@ public struct Code:
             ]
         )
     }
+
+    public init(
+        @Builder<PhrasingContent> _ block: () -> [any PhrasingContent]
+    ) {
+        self.init(children: block())
+    }
 }

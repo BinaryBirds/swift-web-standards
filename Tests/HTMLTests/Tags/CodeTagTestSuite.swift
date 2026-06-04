@@ -27,4 +27,43 @@ struct CodeTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func initializationWithBuilder() async throws {
+        let tag = Code {
+            "console.log();"
+        }
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <code>console.log();</code>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
+    func nestedInsidePre() async throws {
+        let tag = Pre {
+            Code {
+                "console.log();"
+            }
+            .class("language-javascript")
+        }
+
+        let renderer = Renderer(indent: 4)
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <pre>
+                <code class="language-javascript">console.log();</code>
+            </pre>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }
