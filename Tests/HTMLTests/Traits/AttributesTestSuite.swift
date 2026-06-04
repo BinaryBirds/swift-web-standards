@@ -242,6 +242,28 @@ struct AttributesTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func conditionalMultipleClassModifiers() async throws {
+        let isWarning = true
+
+        let tag = P("Lorem ipsum.")
+            .if(isWarning) { tag in
+                tag.addClass("warning").addClass("highlight")
+            } else: {
+                $0.addClass("normal")
+            }
+
+        let renderer = Renderer(indent: 4)
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <p class="warning highlight">Lorem ipsum.</p>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
     // MARK: - style
 
     @Test

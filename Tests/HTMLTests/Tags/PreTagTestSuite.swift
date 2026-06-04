@@ -91,6 +91,38 @@ struct PreTagTestSuite {
     }
 
     @Test
+    func nestedMultiLineTag() async throws {
+        let tag = Div {
+            Pre {
+                Code {
+                    #"""
+                    func main() -> Int {
+                        return 0
+                    }
+                    """#
+                }
+                .class("language-swift")
+            }
+        }
+
+        let renderer = Renderer(indent: 4)
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <div>
+                <pre>
+                    <code class="language-swift">func main() -> Int {
+                return 0
+            }</code>
+                </pre>
+            </div>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
     func indentationSupport() async throws {
         let tag = Div {
             Pre {

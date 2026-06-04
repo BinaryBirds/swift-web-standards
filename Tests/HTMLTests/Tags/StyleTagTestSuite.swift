@@ -28,6 +28,23 @@ struct StyleTestSuite {
     }
 
     @Test
+    func initializationInsideBody() async throws {
+        let tag = Body {
+            Style("body { color: red; }")
+        }
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <body><style>body { color: red; }</style></body>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
+    @Test
     func mediaAndBlocking() async throws {
         let tag = Style("h1 { color: blue; }")
             .media("screen")

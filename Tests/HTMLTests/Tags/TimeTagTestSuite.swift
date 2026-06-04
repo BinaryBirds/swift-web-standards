@@ -28,4 +28,29 @@ struct TimeTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func initializationWithBuilderText() async throws {
+        let lastUpdate: String? = "Yesterday"
+
+        let tag = Time {
+            InlineText("2009-10-11")
+            if let lastUpdate {
+                " - Last Updated: "
+                InlineText(lastUpdate)
+            }
+        }
+        .dateTime("2009-10-11T01:25-07:00")
+        .class("flex-1 align-middle")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <time datetime="2009-10-11T01:25-07:00" class="flex-1 align-middle">2009-10-11 - Last Updated: Yesterday</time>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }
