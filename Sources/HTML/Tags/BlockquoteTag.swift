@@ -38,7 +38,7 @@ public struct Blockquote:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

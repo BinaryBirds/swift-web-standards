@@ -49,7 +49,7 @@ public struct Template:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

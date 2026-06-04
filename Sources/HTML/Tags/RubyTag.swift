@@ -40,7 +40,7 @@ public struct Ruby:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

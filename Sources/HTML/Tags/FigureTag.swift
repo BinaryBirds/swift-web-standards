@@ -39,7 +39,7 @@ public struct Figure:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

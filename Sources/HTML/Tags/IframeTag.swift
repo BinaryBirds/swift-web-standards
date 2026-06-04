@@ -54,7 +54,7 @@ public struct Iframe:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

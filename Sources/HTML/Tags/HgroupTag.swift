@@ -40,7 +40,7 @@ public struct Hgroup:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

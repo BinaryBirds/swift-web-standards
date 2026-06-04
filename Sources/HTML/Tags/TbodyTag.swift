@@ -43,7 +43,7 @@ public struct Tbody:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

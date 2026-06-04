@@ -51,7 +51,7 @@ public struct Object:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

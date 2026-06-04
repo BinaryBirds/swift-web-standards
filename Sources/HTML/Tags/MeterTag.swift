@@ -53,7 +53,7 @@ public struct Meter:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

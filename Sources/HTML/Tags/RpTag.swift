@@ -34,7 +34,7 @@ public struct Rp:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

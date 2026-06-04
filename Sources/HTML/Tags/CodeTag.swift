@@ -46,7 +46,7 @@ public struct Code:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

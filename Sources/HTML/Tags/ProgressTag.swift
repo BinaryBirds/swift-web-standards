@@ -40,7 +40,7 @@ public struct Progress:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

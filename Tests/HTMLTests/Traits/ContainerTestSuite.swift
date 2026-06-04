@@ -17,7 +17,7 @@ struct ContainerTestSuite {
 
         let tag = P("lorem ipsum")
             .addChild(Br())
-            .addChild(Text("foo"))
+            .addChild("foo")
 
         let renderer = Renderer(indent: 4)
         let doc = Document(root: tag)
@@ -36,13 +36,13 @@ struct ContainerTestSuite {
         let tag = P("lorem ipsum")
             .addChildren(
                 [
-                    Text(" "),
-                    Text("dolor"),
-                    Text(" "),
-                    Text("sit"),
-                    Text(" "),
-                    Text("amet"),
-                    Text("."),
+                    " ",
+                    "dolor",
+                    " ",
+                    "sit",
+                    " ",
+                    "amet",
+                    ".",
                 ]
             )
 

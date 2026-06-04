@@ -39,7 +39,7 @@ public struct Datalist:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

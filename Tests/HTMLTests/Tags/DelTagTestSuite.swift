@@ -15,7 +15,7 @@ struct DelTagTestSuite {
     @Test
     func initialization() async throws {
         let tag = Del {
-            Text("Lorem ipsum")
+            "Lorem ipsum"
         }
         .dateTime("2009-10-11T01:25-07:00")
 

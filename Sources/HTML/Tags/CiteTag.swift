@@ -40,7 +40,7 @@ public struct Cite:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

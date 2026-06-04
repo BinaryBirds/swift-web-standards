@@ -38,7 +38,7 @@ public struct Dialog:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

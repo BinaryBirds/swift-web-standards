@@ -45,7 +45,7 @@ public struct Footer:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

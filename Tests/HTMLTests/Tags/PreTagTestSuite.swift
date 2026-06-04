@@ -90,4 +90,34 @@ struct PreTagTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func indentationSupport() async throws {
+        let tag = Div {
+            Pre {
+                InlineText(
+                    #"""
+                    func main() -> String {
+                        return "Hello, World!"
+                    }
+                    """#,
+                    isRaw: true
+                )
+            }
+        }
+
+        let renderer = Renderer(indent: 4)
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <div>
+                <pre>func main() -> String {
+                return "Hello, World!"
+            }</pre>
+            </div>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
 }

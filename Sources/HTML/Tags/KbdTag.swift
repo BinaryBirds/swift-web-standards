@@ -38,7 +38,7 @@ public struct Kbd:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

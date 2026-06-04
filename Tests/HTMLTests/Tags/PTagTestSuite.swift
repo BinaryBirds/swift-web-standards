@@ -33,10 +33,10 @@ struct PTagTestSuite {
     @Test
     func initializationWithChildren() async throws {
         let tag = P {
-            Text("lorem")
+            "lorem"
             A("Hello, world!")
                 .href("/")
-            Text("ipsum")
+            "ipsum"
         }
 
         let renderer = Renderer()

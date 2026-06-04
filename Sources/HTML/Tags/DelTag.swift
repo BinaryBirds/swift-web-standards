@@ -40,7 +40,7 @@ public struct Del:
     ) {
         self.init(
             children: [
-                Text(contents, isRaw: true)
+                contents
             ]
         )
     }

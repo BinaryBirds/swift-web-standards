@@ -34,7 +34,7 @@ public struct Figcaption:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

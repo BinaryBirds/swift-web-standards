@@ -38,7 +38,7 @@ public struct Var:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

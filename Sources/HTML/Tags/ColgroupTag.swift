@@ -39,7 +39,7 @@ public struct Colgroup:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

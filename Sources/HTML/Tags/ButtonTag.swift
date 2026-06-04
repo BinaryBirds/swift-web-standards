@@ -56,7 +56,7 @@ public struct Button:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

@@ -15,7 +15,7 @@ struct ArticleTagTestSuite {
     @Test
     func basics() async throws {
         let tag = Article {
-            Text("Lorem ipsum.")
+            "Lorem ipsum."
         }
 
         let renderer = Renderer()

@@ -32,7 +32,7 @@ public struct Legend:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

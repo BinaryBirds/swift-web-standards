@@ -248,6 +248,25 @@ struct SwiftSVGTestSuite {
         #expect(result == expectation)
     }
 
+    @Test
+    func preserveAspectRatioUsesSvgCaseSensitiveSpelling() async throws {
+        let tag = SVG {
+            Path("M0 0")
+        }
+        .viewBox(minX: 0, minY: 0, width: 16, height: 16)
+        .preserveAspectRatio(.xMinYMin, .meet)
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <svg viewBox="0 0 16 16" preserveAspectRatio="xMinYMin meet"><path d="M0 0"></path></svg>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
+
     // MARK: - New tests: stroke-linecap / stroke-linejoin / transform
 
     @Test

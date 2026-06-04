@@ -40,7 +40,7 @@ public struct Fieldset:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

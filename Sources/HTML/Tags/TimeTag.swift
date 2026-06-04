@@ -39,7 +39,7 @@ public struct Time:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

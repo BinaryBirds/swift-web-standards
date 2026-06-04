@@ -33,7 +33,7 @@ public struct SelectedContent:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

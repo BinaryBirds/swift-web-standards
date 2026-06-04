@@ -43,7 +43,7 @@ public struct Tfoot:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

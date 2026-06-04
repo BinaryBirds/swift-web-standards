@@ -47,7 +47,7 @@ public struct Title:
     ) {
         self.attributes = .init()
         self.children = [
-            Text(text)
+            text
         ]
     }
 }

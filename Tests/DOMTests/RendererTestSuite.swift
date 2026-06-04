@@ -45,9 +45,7 @@ struct RendererTestSuite {
         let renderer = Renderer()
         let node = ListNode(
             items: [
-                TextNode(
-                    value: "this is a text"
-                ),
+                InlineText("this is a text"),
                 ShortNode(
                     name: "br"
                 ),
@@ -193,9 +191,7 @@ struct RendererTestSuite {
     @Test
     func textNode() async throws {
         let renderer = Renderer()
-        let node = TextNode(
-            value: "this is a text"
-        )
+        let node = InlineText("this is a text")
 
         let expectation = #"""
             this is a text
@@ -211,9 +207,7 @@ struct RendererTestSuite {
         let node = StandardNode(
             name: "p",
             children: [
-                TextNode(
-                    value: "this is a text"
-                )
+                InlineText("this is a text")
             ]
         )
 
@@ -234,15 +228,11 @@ struct RendererTestSuite {
                 StandardNode(
                     name: "p",
                     children: [
-                        TextNode(
-                            value: "this is"
-                        ),
+                        InlineText("this is"),
                         ShortNode(
                             name: "br"
                         ),
-                        TextNode(
-                            value: "a text"
-                        ),
+                        InlineText("a text"),
                     ]
 
                 )
@@ -269,9 +259,7 @@ struct RendererTestSuite {
                 StandardNode(
                     name: "p",
                     children: [
-                        TextNode(
-                            value: "this is a text"
-                        )
+                        InlineText("this is a text")
                     ]
 
                 )
@@ -316,9 +304,7 @@ struct RendererTestSuite {
             children: [
                 ListNode(
                     items: [
-                        TextNode(
-                            value: "one"
-                        ),
+                        InlineText("one"),
                         ShortNode(
                             name: "br"
                         ),
@@ -356,21 +342,15 @@ struct RendererTestSuite {
                         StandardNode(
                             name: "p",
                             children: [
-                                TextNode(
-                                    value: "this is"
-                                ),
+                                InlineText("this is"),
                                 ShortNode(
                                     name: "br"
                                 ),
-                                TextNode(
-                                    value: "a "
-                                ),
+                                InlineText("a "),
                                 StandardNode(
                                     name: "b",
                                     children: [
-                                        TextNode(
-                                            value: "text"
-                                        )
+                                        InlineText("text")
                                     ]
                                 ),
                             ]
@@ -411,23 +391,17 @@ struct RendererTestSuite {
                                 StandardNode(
                                     name: "span",
                                     children: [
-                                        TextNode(
-                                            value: "this is"
-                                        ),
+                                        InlineText("this is"),
                                         ShortNode(
                                             name: "br"
                                         ),
-                                        TextNode(
-                                            value: "a "
-                                        ),
+                                        InlineText("a "),
                                     ]
                                 ),
                                 StandardNode(
                                     name: "b",
                                     children: [
-                                        TextNode(
-                                            value: "text"
-                                        )
+                                        InlineText("text")
                                     ]
                                 ),
                             ]
@@ -464,13 +438,13 @@ struct RendererTestSuite {
                 StandardNode(
                     name: "pre",
                     children: [
-                        TextNode(
-                            value: #"""
-                                func main() -> String {
-                                    return "Hello, World!"
-                                }
-                                """#,
-                            ignoreRenderIndentation: true
+                        InlineText(
+                            #"""
+                            func main() -> String {
+                                return "Hello, World!"
+                            }
+                            """#,
+                            isRaw: true
                         )
                     ]
                 )
@@ -489,4 +463,5 @@ struct RendererTestSuite {
         let result = renderer.render(node: node)
         #expect(result == expectation)
     }
+
 }

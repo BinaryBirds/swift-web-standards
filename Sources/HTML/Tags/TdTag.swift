@@ -44,7 +44,7 @@ public struct Td:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

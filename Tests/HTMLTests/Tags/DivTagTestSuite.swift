@@ -15,7 +15,7 @@ struct DivTagTestSuite {
     @Test
     func initialization() async throws {
         let tag = Div {
-            Text("Lorem ipsum")
+            "Lorem ipsum"
         }
 
         let renderer = Renderer()

@@ -45,7 +45,7 @@ public struct Address:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

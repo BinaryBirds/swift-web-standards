@@ -53,7 +53,7 @@ public struct A:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

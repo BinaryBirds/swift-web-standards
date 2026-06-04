@@ -34,7 +34,7 @@ public struct Menu:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

@@ -39,7 +39,7 @@ public struct Noscript:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

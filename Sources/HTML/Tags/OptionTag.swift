@@ -44,7 +44,7 @@ public struct Option:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

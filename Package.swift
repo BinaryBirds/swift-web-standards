@@ -58,6 +58,7 @@ let package = Package(
             name: "HTML",
             dependencies: [
                 .target(name: "SGML"),
+                .target(name: "SVG"),
             ],
             swiftSettings: defaultSwiftSettings
         ),

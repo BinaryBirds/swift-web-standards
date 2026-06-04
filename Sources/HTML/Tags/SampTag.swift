@@ -38,7 +38,7 @@ public struct Samp:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

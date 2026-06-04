@@ -42,7 +42,7 @@ public struct Bdo:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ],
             dir: dir
         )

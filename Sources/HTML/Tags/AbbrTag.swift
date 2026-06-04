@@ -45,7 +45,7 @@ public struct Abbr:
         // Phrasing content.
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

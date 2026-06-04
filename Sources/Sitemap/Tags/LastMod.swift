@@ -37,7 +37,7 @@ public struct LastMod: StandardTag, UrlContent {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(value)
+            value
         ]
     }
 }

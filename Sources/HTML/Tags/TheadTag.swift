@@ -43,7 +43,7 @@ public struct Thead:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

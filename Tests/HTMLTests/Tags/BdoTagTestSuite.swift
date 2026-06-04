@@ -32,7 +32,7 @@ struct BdoTagTestSuite {
         let tag = Bdo(
             {
                 Span("left")
-                Text(" to ")
+                " to "
                 Span("right")
             },
             dir: .ltr

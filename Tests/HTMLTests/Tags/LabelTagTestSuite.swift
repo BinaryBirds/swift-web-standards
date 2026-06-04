@@ -33,7 +33,7 @@ struct LabelTagTestSuite {
         let isRequired = true
 
         let tag = Label {
-            Text("foo")
+            "foo"
             Span("(bar)").class("more")
             if isRequired {
                 Span("*").class("required")

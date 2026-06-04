@@ -30,7 +30,7 @@ struct ObjectTagTestSuite {
     @Test
     func attributesAndParams() async throws {
         let tag = Object {
-            Text("Fallback")
+            "Fallback"
         }
         .data("movie.mp4")
         .type("video/mp4")

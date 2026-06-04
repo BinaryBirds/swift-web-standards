@@ -45,7 +45,7 @@ public struct Script:
     ) {
         self.attributes = .init()
         self.children = [
-            Text(contents, isRaw: true)
+            contents
         ]
     }
 

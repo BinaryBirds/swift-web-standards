@@ -43,7 +43,7 @@ public struct Canvas:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

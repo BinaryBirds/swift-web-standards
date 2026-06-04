@@ -41,7 +41,7 @@ public struct Dfn:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

@@ -40,7 +40,7 @@ public struct Bdi:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

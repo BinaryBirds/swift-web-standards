@@ -38,7 +38,7 @@ public struct Strong:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

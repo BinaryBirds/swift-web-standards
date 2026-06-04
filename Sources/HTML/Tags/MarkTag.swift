@@ -36,7 +36,7 @@ public struct Mark:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

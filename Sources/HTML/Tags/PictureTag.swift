@@ -47,7 +47,7 @@ public struct Picture:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

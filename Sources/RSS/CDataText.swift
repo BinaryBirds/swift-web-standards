@@ -16,8 +16,6 @@ public struct CDataText: Element {
     }
 
     public var node: Node {
-        TextNode(
-            value: "<![CDATA[" + text + "]]>"
-        )
+        DOM.InlineText("<![CDATA[" + text + "]]>")
     }
 }

@@ -55,7 +55,7 @@ public struct Form:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

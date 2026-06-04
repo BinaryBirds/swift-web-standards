@@ -42,7 +42,7 @@ public struct Header:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

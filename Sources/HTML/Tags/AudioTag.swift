@@ -59,7 +59,7 @@ public struct Audio:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

@@ -15,7 +15,7 @@ struct AudioTagTestSuite {
     @Test
     func basics() async throws {
         let tag = Audio {
-            Text("Lorem ipsum.")
+            "Lorem ipsum."
         }
         .src("test.mp3")
         .controls()
@@ -45,7 +45,7 @@ struct AudioTagTestSuite {
             Source()
                 .src("track.mp3")
                 .type("audio/mpeg")
-            Text("Your browser does not support the audio element.")
+            "Your browser does not support the audio element."
         }
         .controls()
         .preload(.metadata)

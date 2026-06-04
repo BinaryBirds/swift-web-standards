@@ -62,7 +62,7 @@ public struct Textarea:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

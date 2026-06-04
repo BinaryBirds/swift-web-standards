@@ -35,7 +35,7 @@ public struct Slot:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

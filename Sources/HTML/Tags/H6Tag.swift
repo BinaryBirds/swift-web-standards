@@ -41,7 +41,7 @@ public struct H6:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

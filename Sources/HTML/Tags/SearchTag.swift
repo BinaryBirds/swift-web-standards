@@ -34,7 +34,7 @@ public struct Search:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

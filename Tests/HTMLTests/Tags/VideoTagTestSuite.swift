@@ -15,7 +15,7 @@ struct VideoTagTestSuite {
     @Test
     func basics() async throws {
         let tag = Video {
-            Text("Video fallback")
+            "Video fallback"
         }
         .src("clip.mp4")
         .controls()
@@ -44,7 +44,7 @@ struct VideoTagTestSuite {
             Source()
                 .src("clip.mp4")
                 .type("video/mp4")
-            Text("Your browser does not support the video tag.")
+            "Your browser does not support the video tag."
         }
         .controls()
         .preload(.auto)

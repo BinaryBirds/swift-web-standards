@@ -34,7 +34,7 @@ public struct Summary:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

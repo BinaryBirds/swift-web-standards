@@ -40,7 +40,7 @@ public struct Span:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

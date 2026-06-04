@@ -63,7 +63,7 @@ public struct Ol:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

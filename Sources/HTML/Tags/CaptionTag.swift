@@ -36,7 +36,7 @@ public struct Caption:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

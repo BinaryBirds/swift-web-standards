@@ -65,7 +65,7 @@ public struct Label:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

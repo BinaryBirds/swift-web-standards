@@ -63,7 +63,7 @@ public struct Video:
     ) {
         self.init(
             children: [
-                Text(contents)
+                contents
             ]
         )
     }

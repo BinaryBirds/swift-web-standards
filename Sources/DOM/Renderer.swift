@@ -104,7 +104,7 @@ public struct Renderer {
             return renderShort(node)
         case let node as CommentNode:
             return renderComment(node)
-        case let node as TextNode:
+        case let node as InlineText:
             return node.value
         default:
             fatalError("Unknown node type `\(String(describing: node))`.")
@@ -142,15 +142,15 @@ public struct Renderer {
                     result += newline
                 }
             }
-            // Special case: begins with a TextNode
-            else if let firstText = items.first as? TextNode {
-                // Ignore render identation is true for the text node
-                if firstText.ignoreRenderIndentation {
+            // Special case: begins with an InlineText
+            else if let firstText = items.first as? InlineText {
+                // Raw text keeps its own formatting.
+                if firstText.isRaw {
                     result += spaces
                     result += openingTag
                     for child in items {
-                        if let text = child as? TextNode,
-                            text.ignoreRenderIndentation
+                        if let text = child as? InlineText,
+                            text.isRaw
                         {
                             result += text.value
                         }
@@ -199,8 +199,8 @@ public struct Renderer {
             result += spaces
             result += commentTag
             result += isInsideList ? newline : ""
-        case let node as TextNode:
-            if node.ignoreRenderIndentation {
+        case let node as InlineText:
+            if node.isRaw {
                 result += node.value
             }
             else {
