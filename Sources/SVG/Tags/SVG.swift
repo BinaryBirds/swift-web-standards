@@ -15,6 +15,27 @@ public struct SVG:
     FlowContent,
     PhrasingContent
 {
+
+    /// The `preserveAspectRatio` attribute alignment values used by SVG.
+    public enum PreserveAspectRatioAlignment: String, Sendable {
+        case none
+        case xMinYMin
+        case xMidYMin
+        case xMaxYMin
+        case xMinYMid
+        case xMidYMid
+        case xMaxYMid
+        case xMinYMax
+        case xMidYMax
+        case xMaxYMax
+    }
+
+    /// The `preserveAspectRatio` meet-or-slice values used by SVG.
+    public enum PreserveAspectRatioMeetOrSlice: String, Sendable {
+        case meet
+        case slice
+    }
+
     public var attributes: AttributeStore
     public var children: [Element]
 
@@ -43,6 +64,30 @@ public struct SVG:
             .joined(separator: " ")
 
         return setAttribute(name: "viewBox", value: value)
+    }
+
+    /// Sets the `preserveAspectRatio` attribute.
+    ///
+    /// - Parameter alignment: The alignment keyword, such as `xMinYMin`.
+    /// - Parameter meetOrSlice: The scaling mode, usually `meet`.
+    /// - Returns: The modified element, allowing method chaining.
+    public func preserveAspectRatio(
+        _ alignment: PreserveAspectRatioAlignment = .xMinYMin,
+        _ meetOrSlice: PreserveAspectRatioMeetOrSlice = .meet
+    ) -> Self {
+        preserveAspectRatio("\(alignment.rawValue) \(meetOrSlice.rawValue)")
+    }
+
+    /// Sets the `preserveAspectRatio` attribute with a custom value.
+    ///
+    /// Use this when you need to provide the exact SVG value yourself.
+    public func preserveAspectRatio(
+        _ value: String
+    ) -> Self {
+        setAttribute(
+            name: "preserveAspectRatio",
+            value: value
+        )
     }
 
 }
