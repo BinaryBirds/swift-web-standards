@@ -3,9 +3,9 @@
 An awesome Swift library that closely follows the [W3C web standards](https://www.w3.org/standards/).
 
 [
-    ![Release: 1.0.0-beta.1](https://img.shields.io/badge/Release-1.0.0--beta.1-F05138)
+    ![Release: 1.0.0-beta.2](https://img.shields.io/badge/Release-1.0.0--beta.2-F05138)
 ](
-    https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.1
+    https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.2
 )
 
 ## Features
@@ -50,7 +50,7 @@ The Swift Web Standards package is distributed through **Swift Package Manager**
 Add this package to your `Package.swift` dependencies:
 
 ```swift
-.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.1"),
+.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.2"),
 ```
 
 Then include the required product as a dependency for your target:
@@ -130,7 +130,7 @@ public struct P: StandardTag {
     ) {
         self.attributes = .init()
         self.children = [
-            Text(contents)
+            InlineText(contents)
         ]
     }
 
