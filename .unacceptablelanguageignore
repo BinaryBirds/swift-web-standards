@@ -1,6 +1,6 @@
 Sources/CSS/Properties/HangingPunctuation.swift
 Sources/MIME/Detector/Definitions/NonStandard.swift
-Sources/MIME/MeidaType+Application.swift
+Sources/MIME/MediaTypes/MediaType+Application.swift
 Tests/CSSTests/Properties/HangingPunctuationTestSuite.swift
 Tests/MIMETests/all-known.json
 mimedb.json

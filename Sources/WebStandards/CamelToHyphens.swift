@@ -1,8 +1,8 @@
 //
-//  File 2.swift
-//  puppylepsy-web-app
+//  CamelToHyphens.swift
+//  swift-web-standards
 //
-//  Created by Tibor Bödecs on 2026. 03. 01..
+//  Created by Tibor Bödecs on 2026. 03. 01.
 //
 
 func camelToHyphens(

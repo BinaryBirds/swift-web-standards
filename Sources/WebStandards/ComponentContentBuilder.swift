@@ -1,8 +1,8 @@
 //
-//  File.swift
-//  puppylepsy-web-app
+//  ComponentContentBuilder.swift
+//  swift-web-standards
 //
-//  Created by Tibor Bödecs on 2026. 03. 01..
+//  Created by Tibor Bödecs on 2026. 03. 01.
 //
 
 import SGML

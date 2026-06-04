@@ -1,8 +1,8 @@
 //
-//  File.swift
+//  ComponentGroup.swift
 //  swift-web-standards
 //
-//  Created by Tibor Bödecs on 2026. 03. 06..
+//  Created by Tibor Bödecs on 2026. 03. 06.
 //
 
 import DOM
