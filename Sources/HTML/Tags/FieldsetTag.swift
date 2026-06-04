@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<fieldset>` tag is used to group related elements in a form.

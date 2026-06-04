@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<source>` tag is used to specify multiple media resources for media elements, such as `<video>`, `<audio>`, and `<picture>`.

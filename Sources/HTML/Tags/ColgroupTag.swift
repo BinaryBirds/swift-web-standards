@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<colgroup>` tag specifies a group of one or more columns in a table for formatting.

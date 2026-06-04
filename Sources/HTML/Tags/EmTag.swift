@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<em>` tag is used to define emphasized text.

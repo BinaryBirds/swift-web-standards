@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<video>` tag is used to embed video content in a document, such as a movie clip or other video streams.

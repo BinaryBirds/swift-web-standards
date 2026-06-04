@@ -26,6 +26,7 @@ let package = Package(
     products: [
         .library(name: "DOM", targets: ["DOM"]),
         .library(name: "SGML", targets: ["SGML"]),
+        .library(name: "ContentModel", targets: ["ContentModel"]),
         .library(name: "HTML", targets: ["HTML"]),
         .library(name: "CSS", targets: ["CSS"]),
         .library(name: "RSS", targets: ["RSS"]),
@@ -55,9 +56,16 @@ let package = Package(
             swiftSettings: defaultSwiftSettings
         ),
         .target(
-            name: "HTML",
+            name: "ContentModel",
             dependencies: [
                 .target(name: "SGML"),
+            ],
+            swiftSettings: defaultSwiftSettings
+        ),
+        .target(
+            name: "HTML",
+            dependencies: [
+                .target(name: "ContentModel"),
             ],
             swiftSettings: defaultSwiftSettings
         ),
@@ -78,7 +86,7 @@ let package = Package(
         .target(
             name: "SVG",
             dependencies: [
-                .target(name: "SGML"),
+                .target(name: "ContentModel"),
             ],
             swiftSettings: defaultSwiftSettings
         ),

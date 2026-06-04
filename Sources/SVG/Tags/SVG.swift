@@ -4,13 +4,17 @@
 //
 //  Created by Binary Birds on 2026. 01. 29.
 
+import ContentModel
 import SGML
 
 /// SVG tag.
 ///
 /// https://developer.mozilla.org/en-US/docs/Web/SVG/Element
-public struct SVG: SVGTag {
-
+public struct SVG:
+    SVGTag,
+    FlowContent,
+    PhrasingContent
+{
     public var attributes: AttributeStore
     public var children: [Element]
 

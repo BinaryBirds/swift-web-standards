@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 05.
 
+import ContentModel
 import SGML
 
 extension Text:

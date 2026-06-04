@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<optgroup>` tag is used to group related options in a `<select>` element (drop-down list).

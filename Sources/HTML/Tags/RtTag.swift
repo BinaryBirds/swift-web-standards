@@ -4,6 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 01. 28.
 
+import ContentModel
 import SGML
 
 /// The `<rt>` tag defines an explanation or pronunciation of characters (for East Asian typography) in a ruby annotation.
