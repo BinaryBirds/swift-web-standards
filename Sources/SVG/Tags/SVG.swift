@@ -63,8 +63,9 @@ public struct SVG: SVGTag {
 
     /// Sets the `preserveAspectRatio` attribute.
     ///
-    /// - Parameter alignment: The alignment keyword, such as `xMinYMin`.
-    /// - Parameter meetOrSlice: The scaling mode, usually `meet`.
+    /// - Parameters:
+    ///   - alignment: The alignment keyword, such as `xMinYMin`.
+    ///   - meetOrSlice: The scaling mode, usually `meet`.
     /// - Returns: The modified element, allowing method chaining.
     public func preserveAspectRatio(
         _ alignment: PreserveAspectRatioAlignment = .xMinYMin,
