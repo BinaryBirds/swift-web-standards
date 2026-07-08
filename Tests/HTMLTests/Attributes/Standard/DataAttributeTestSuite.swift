@@ -27,4 +27,20 @@ struct DataAttributeTestSuite {
         let result = renderer.render(document: doc)
         #expect(result == expectation)
     }
+
+    @Test
+    func rendersCustomDataValue() async throws {
+        let tag = Div {}
+            .data("label", "Title")
+
+        let renderer = Renderer()
+        let doc = Document(root: tag)
+
+        let expectation = #"""
+            <div data-label="Title"></div>
+            """#
+
+        let result = renderer.render(document: doc)
+        #expect(result == expectation)
+    }
 }
