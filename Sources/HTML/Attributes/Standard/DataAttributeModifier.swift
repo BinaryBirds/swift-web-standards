@@ -20,4 +20,17 @@ extension DataAttributeModifier where Self: Attributes & Mutable {
             value: value?.attributeValue
         )
     }
+
+    /// Sets a custom HTML `data-*` attribute.
+    ///
+    /// Pass `label` to create `data-label`; do not include the `data-` prefix.
+    public func data(
+        _ key: String,
+        _ value: DataAttributeValueType?
+    ) -> Self {
+        setAttribute(
+            name: "data-\(key)",
+            value: value?.attributeValue
+        )
+    }
 }

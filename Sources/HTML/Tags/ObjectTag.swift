@@ -13,7 +13,6 @@ public struct Object:
     StandardTag,
     /// attribute modifiers.
     GlobalAttributesModifier,
-    DataAttributeModifier,
     TypeAttributeModifier,
     NameAttributeModifier,
     FormAttributeModifier,

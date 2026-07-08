@@ -15,6 +15,7 @@ public protocol GlobalAttributesModifier:
     AutoFocusAttributeModifier,
     ClassAttributeModifier,
     ContentEditableAttributeModifier,
+    DataAttributeModifier,
     DirAttributeModifier,
     DraggableAttributeModifier,
     EnterKeyHintAttributeModifier,
