@@ -17,7 +17,7 @@ struct PageComponent: Branch {
         child
     }
 
-    func renderHTML(renderer: ComponentRenderer) -> Div {
-        Div { renderer.render(child) }
+    func html() -> Div {
+        Div { child.html() }
     }
 }

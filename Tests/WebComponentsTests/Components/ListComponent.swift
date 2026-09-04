@@ -24,9 +24,9 @@ struct ListComponent: Branch {
         }
     }
 
-    func renderHTML(renderer: ComponentRenderer) -> Div {
+    func html() -> Div {
         Div {
-            renderer.render(item)
+            item.html()
         }
         .class("list-component")
     }

@@ -17,10 +17,8 @@ import WebBuilders
 struct ComponentTestSuite {
 
     @Test
-    func componentRendering() throws {
-        let html = try #require(
-            ComponentRenderer().render(MySimpleComponent(text: "lorem"))
-        )
+    func componentRendering() {
+        let html = MySimpleComponent(text: "lorem").html()
         let result = SGMLRenderer(indent: 4)
             .render(document: Document(root: html))
 
@@ -37,7 +35,7 @@ struct ComponentTestSuite {
 
     @Test
     func componentRenderingTree() throws {
-        let html = try #require(ComponentRenderer().render(ListComponent()))
+        let html = ListComponent().html()
         let result = SGMLRenderer().render(document: Document(root: html))
 
         #expect(

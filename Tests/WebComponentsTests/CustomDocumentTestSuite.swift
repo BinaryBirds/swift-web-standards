@@ -16,11 +16,11 @@ import WebBuilders
 struct CustomDocumentTestSuite {
 
     @Test
-    func customHeadAndBodyComponentsRenderAnHTMLTree() throws {
+    func customHeadAndBodyComponentsRenderAnHTMLTree() {
         let comp = CustomDocumentComponent(
             state: .init(title: "Custom document")
         )
-        let html = try #require(ComponentRenderer().render(comp))
+        let html = comp.html()
         let result = SGMLRenderer(indent: 4)
             .render(document: Document(root: html))
 
@@ -67,22 +67,19 @@ private struct CustomDocumentComponent: Branch {
         body
     }
 
-    func renderHTML(
-        renderer: ComponentRenderer
-    ) -> Html {
+    func html() -> Html {
         let stylesheet = CSSRenderer(minify: true)
             .render(ComponentStyleCollector().getStylesheet(from: self))
         let scripts = ComponentScriptCollector().getScripts(from: self)
 
         return Html(
-            head: renderer.render(
-                CustomHeadComponent(
-                    title: state.title,
-                    stylesheet: stylesheet,
-                    scripts: scripts
-                )
-            ),
-            body: renderer.render(body)
+            head: CustomHeadComponent(
+                title: state.title,
+                stylesheet: stylesheet,
+                scripts: scripts
+            )
+            .html(),
+            body: body.html()
         )
     }
 }
@@ -121,7 +118,7 @@ private struct CustomHeadComponent: Leaf {
         self.scripts = scripts
     }
 
-    func renderHTML() -> Head {
+    func html() -> Head {
         Head {
             Title(title)
 
@@ -155,12 +152,10 @@ private struct CustomBodyComponent<Content: Renderable>: Branch {
         }
     }
 
-    func renderHTML(
-        renderer: ComponentRenderer
-    ) -> Body {
+    func html() -> Body {
         Body {
             Div {
-                renderer.render(body)
+                body.html()
             }
             .class("custom-body")
         }
@@ -176,7 +171,7 @@ private struct CustomBodyChildComponent: Leaf {
         "window.custom-body-ready = true;"
     }
 
-    func renderHTML() -> H1 {
+    func html() -> H1 {
         H1(title)
     }
 }

@@ -13,7 +13,7 @@ struct FooComponent: Leaf {
 
     let text: String
 
-    func renderHTML() -> Span {
+    func html() -> Span {
         Span(text)
     }
 }

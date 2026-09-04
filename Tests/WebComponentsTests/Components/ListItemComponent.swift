@@ -18,7 +18,7 @@ struct ListItemComponent: Leaf {
         }
     }
 
-    func renderHTML() -> P {
+    func html() -> P {
         P("List item")
             .class("list-item")
     }

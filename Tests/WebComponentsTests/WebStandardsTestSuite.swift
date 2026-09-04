@@ -17,9 +17,9 @@ import WebBuilders
 struct WebComponentsTestSuite {
 
     @Test
-    func componentTreeRendersAsHTML() throws {
+    func componentTreeRendersAsHTML() {
         let root = PageComponent()
-        let html = try #require(ComponentRenderer().render(root))
+        let html = root.html()
         let result = SGMLRenderer().render(document: Document(root: html))
 
         #expect(result == "<div><span>Component subtree</span></div>")
@@ -41,7 +41,6 @@ struct WebComponentsTestSuite {
     func plainComponentsCanContributeJavaScriptWithoutHTML() {
         let component = ScriptOnlyComponent()
 
-        #expect(ComponentRenderer().render(component) == nil)
         #expect(
             ComponentScriptCollector().getJavaScript(from: component)
                 == "window.analyticsReady = true;"
@@ -82,10 +81,10 @@ private struct ScriptedParentComponent: Branch {
         leaves
     }
 
-    func renderHTML(renderer: ComponentRenderer) -> Div {
+    func html() -> Div {
         Div {
             for leaf in leaves {
-                renderer.render(leaf)
+                leaf.html()
             }
         }
     }
@@ -102,7 +101,7 @@ private struct ScriptedLeafComponent: Leaf {
     @Builder<String>
     func scripts() -> [String] { "window.leafReady = true;" }
 
-    func renderHTML() -> P { P("leaf") }
+    func html() -> P { P("leaf") }
 }
 
 private struct BuilderComponent: Branch {
@@ -115,11 +114,11 @@ private struct BuilderComponent: Branch {
         if includeGroup { group }
     }
 
-    func renderHTML(renderer: ComponentRenderer) -> Div {
+    func html() -> Div {
         Div {
             for component in children {
-                if let rendered = renderer.render(component) {
-                    rendered
+                if let renderable = component as? any Renderable {
+                    renderable.html()
                 }
             }
         }

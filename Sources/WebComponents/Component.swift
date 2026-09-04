@@ -25,32 +25,14 @@ public protocol Component: Sendable {
 
 public protocol Renderable: Component {
 
-    associatedtype RenderedHTML: SGML.Element
-
-    func renderHTML(
-        renderer: ComponentRenderer
-    ) -> RenderedHTML
-}
-
-public protocol Leaf: Renderable where RenderedHTML == HTML {
-
     associatedtype HTML: SGML.Element
 
-    func renderHTML() -> HTML
+    func html() -> HTML
 }
 
-extension Leaf {
+public protocol Leaf: Renderable {}
 
-    public func renderHTML(
-        renderer: ComponentRenderer
-    ) -> HTML {
-        renderHTML()
-    }
-}
-
-public protocol Branch: Renderable where RenderedHTML == HTML {
-
-    associatedtype HTML: SGML.Element
+public protocol Branch: Renderable {
 
     @Builder<any Component>
     var children: [any Component] { get }
