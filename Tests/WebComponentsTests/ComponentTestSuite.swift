@@ -1,3 +1,9 @@
+//
+//  ComponentTestSuite.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 09. 04.
+
 import CSS
 import DOM
 import HTML
