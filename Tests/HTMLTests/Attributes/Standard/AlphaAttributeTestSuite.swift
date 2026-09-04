@@ -18,7 +18,7 @@ struct AlphaAttributeTestSuite {
         let tag = Input()
             .alpha("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

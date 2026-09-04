@@ -25,17 +25,21 @@ public protocol Component: Sendable {
 
 public protocol Leaf: Component {
 
-    func renderHTML() -> any SGML.Element
+    associatedtype HTML: SGML.Element
+
+    func renderHTML() -> HTML
 }
 
 public protocol Composite: Component {
 
+    associatedtype HTML: SGML.Element
+
     @Builder<any Component>
-    var body: [any Component] { get }
+    var children: [any Component] { get }
 
     func renderHTML(
-        children: [any SGML.Element]
-    ) -> any SGML.Element
+        renderer: ComponentRenderer
+    ) -> HTML
 }
 
 extension Component {

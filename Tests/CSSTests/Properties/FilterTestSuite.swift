@@ -16,7 +16,7 @@ struct FilterTests {
     func initializers() {
         let property = Filter()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct FilterTests {
         let property = Filter()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -45,7 +45,7 @@ struct FilterTests {
         let url = Filter(.url("filters.svg#blur"))
         let inherit = Filter(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(blur) == "filter: blur(4.0px)")
         #expect(
             renderer.renderProperty(brightness) == "filter: brightness(120.0%)"

@@ -25,7 +25,7 @@ struct VideoTagTestSuite {
         .height(360)
         .playsInline()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -50,7 +50,7 @@ struct VideoTagTestSuite {
         .controls()
         .preload(.auto)
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -74,7 +74,7 @@ struct VideoTagTestSuite {
             .loop()
             .crossOrigin(.anonymous)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

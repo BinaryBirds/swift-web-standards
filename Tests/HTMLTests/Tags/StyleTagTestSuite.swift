@@ -17,7 +17,7 @@ struct StyleTestSuite {
     func initializationWithText() async throws {
         let tag = Style("body { color: red; }")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -34,7 +34,7 @@ struct StyleTestSuite {
             Style("body { color: red; }")
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -51,7 +51,7 @@ struct StyleTestSuite {
             .media("screen")
             .blocking(.render)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -67,7 +67,7 @@ struct StyleTestSuite {
         let tag = Style("p { margin: 0; }")
             .media("print")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -83,7 +83,7 @@ struct StyleTestSuite {
         let tag = Style(".app { display: grid; }")
             .blocking(.render)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

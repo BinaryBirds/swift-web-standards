@@ -17,7 +17,7 @@ struct TfootTagTestSuite {
     func initialization() async throws {
         let tag = Tfoot("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

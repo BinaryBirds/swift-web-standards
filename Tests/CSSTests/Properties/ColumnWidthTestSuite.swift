@@ -16,7 +16,7 @@ struct ColumnWidthTests {
     func initializers() {
         let property = ColumnWidth()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct ColumnWidthTests {
         let property = ColumnWidth()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

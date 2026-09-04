@@ -16,7 +16,7 @@ struct QuotesTests {
     func initializers() {
         let property = Quotes(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct QuotesTests {
         let property = Quotes(.inherit)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct QuotesTests {
         let marks = Quotes("<", ">", "[", "]")
         let initial = Quotes(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(none) == "quotes: none")
         #expect(renderer.renderProperty(marks) == "quotes: < > [ ]")
         #expect(renderer.renderProperty(initial) == "quotes: initial")

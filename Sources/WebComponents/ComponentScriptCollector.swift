@@ -1,12 +1,12 @@
 //
-//  ComponentJavaScriptCollector.swift
+//  ComponentScriptCollector.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 09. 04.
 //
 
 /// Collects JavaScript declared by components in a rendered component tree.
-public struct ComponentJavaScriptCollector: Sendable {
+public struct ComponentScriptCollector: Sendable {
 
     private struct State {
         var scriptsByComponent: [String: [String]] = [:]
@@ -23,11 +23,21 @@ public struct ComponentJavaScriptCollector: Sendable {
     public func getScript(
         from component: any Component
     ) -> String {
+        getScripts(from: component).joined(separator: "\n")
+    }
+
+    /// Returns each collected JavaScript source in component traversal order.
+    ///
+    /// Each component type contributes its source once, even when it occurs
+    /// multiple times in the tree. The returned values can be rendered as
+    /// separate `<script>` elements.
+    public func getScripts(
+        from component: any Component
+    ) -> [String] {
         var state = State()
         collectLocalComponentScripts(from: component, state: &state)
         return state.componentOrder
             .flatMap { state.scriptsByComponent[$0] ?? [] }
-            .joined(separator: "\n")
     }
 
     /// Alias describing the returned source as JavaScript rather than an HTML
@@ -44,7 +54,7 @@ public struct ComponentJavaScriptCollector: Sendable {
     ) {
         collectLocalScripts(from: component, state: &state)
         if let container = component as? any Composite {
-            for child in container.body {
+            for child in container.children {
                 collectLocalComponentScripts(from: child, state: &state)
             }
         }

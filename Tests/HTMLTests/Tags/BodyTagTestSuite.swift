@@ -19,7 +19,7 @@ struct BodyTagTestSuite {
             P("hello")
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -36,7 +36,7 @@ struct BodyTagTestSuite {
             "hello"
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

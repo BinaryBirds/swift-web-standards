@@ -16,7 +16,7 @@ struct BackgroundClipTests {
     func initializers() {
         let property = BackgroundClip()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BackgroundClipTests {
         let property = BackgroundClip()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

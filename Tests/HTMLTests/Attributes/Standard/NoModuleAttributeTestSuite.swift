@@ -18,7 +18,7 @@ struct NoModuleAttributeTestSuite {
         let tag = Script("content")
             .noModule()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

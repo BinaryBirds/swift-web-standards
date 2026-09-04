@@ -16,7 +16,7 @@ struct OutlineTests {
     func initializers() {
         let property = Outline(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct OutlineTests {
         let property = Outline(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

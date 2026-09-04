@@ -18,7 +18,7 @@ struct AriaColIndexAttributeTestSuite {
         let tag = A {}
             .ariaColIndex("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

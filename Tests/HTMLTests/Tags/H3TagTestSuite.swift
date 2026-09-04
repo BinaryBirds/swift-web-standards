@@ -17,7 +17,7 @@ struct H3TagTestSuite {
     func initialization() async throws {
         let tag = H3("Lorem ipsum")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

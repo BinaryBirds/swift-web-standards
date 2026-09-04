@@ -18,7 +18,7 @@ struct ContentEditableAttributeTestSuite {
         let tag = A {}
             .contentEditable("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

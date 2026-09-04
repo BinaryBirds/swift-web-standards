@@ -16,7 +16,7 @@ struct BorderImageOutsetTests {
     func initializers() {
         let property = BorderImageOutset(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BorderImageOutsetTests {
         let property = BorderImageOutset(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

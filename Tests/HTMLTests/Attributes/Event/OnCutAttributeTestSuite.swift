@@ -18,7 +18,7 @@ struct OnCutAttributeTestSuite {
         let tag = A {}
             .onCut("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

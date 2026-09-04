@@ -17,7 +17,7 @@ struct H4TagTestSuite {
     func initialization() async throws {
         let tag = H4("Lorem ipsum")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

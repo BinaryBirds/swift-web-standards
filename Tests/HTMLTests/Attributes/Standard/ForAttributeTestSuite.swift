@@ -18,7 +18,7 @@ struct ForAttributeTestSuite {
         let tag = Label {}
             .`for`("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

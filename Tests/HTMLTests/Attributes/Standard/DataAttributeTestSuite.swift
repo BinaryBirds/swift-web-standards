@@ -18,7 +18,7 @@ struct DataAttributeTestSuite {
         let tag = Object {}
             .data("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -34,7 +34,7 @@ struct DataAttributeTestSuite {
         let tag = Div {}
             .data("label", "Title")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

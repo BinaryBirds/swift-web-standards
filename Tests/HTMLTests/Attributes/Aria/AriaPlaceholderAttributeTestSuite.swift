@@ -18,7 +18,7 @@ struct AriaPlaceholderAttributeTestSuite {
         let tag = A {}
             .ariaPlaceholder("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

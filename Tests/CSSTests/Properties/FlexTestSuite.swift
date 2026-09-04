@@ -16,7 +16,7 @@ struct FlexTests {
     func initializers() {
         let property = Flex(.auto)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct FlexTests {
         let property = Flex(.auto)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct FlexTests {
         let none = Flex(.none)
         let inherit = Flex(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(values) == "flex: 1 0 auto")
         #expect(renderer.renderProperty(none) == "flex: none")
         #expect(renderer.renderProperty(inherit) == "flex: inherit")

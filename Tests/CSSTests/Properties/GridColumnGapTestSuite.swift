@@ -16,7 +16,7 @@ struct GridColumnGapTests {
     func initializers() {
         let property = GridColumnGap(.length(8.px))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct GridColumnGapTests {
         let property = GridColumnGap(.length(8.px))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

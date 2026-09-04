@@ -16,7 +16,7 @@ struct BackgroundBlendModeTests {
     func initializers() {
         let property = BackgroundBlendMode()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BackgroundBlendModeTests {
         let property = BackgroundBlendMode()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

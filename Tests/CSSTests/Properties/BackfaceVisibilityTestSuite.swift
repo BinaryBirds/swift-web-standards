@@ -16,7 +16,7 @@ struct BackfaceVisibilityTests {
     func initializers() {
         let property = BackfaceVisibility()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BackfaceVisibilityTests {
         let property = BackfaceVisibility()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

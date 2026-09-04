@@ -17,7 +17,7 @@ struct NoscriptTagTestSuite {
     func initializationWithText() async throws {
         let tag = Noscript("No JS")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

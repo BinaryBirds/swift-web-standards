@@ -18,7 +18,7 @@ struct IdAttributeTestSuite {
         let tag = A {}
             .id("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

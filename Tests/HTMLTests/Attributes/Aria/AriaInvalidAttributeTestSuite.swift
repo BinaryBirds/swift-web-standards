@@ -26,7 +26,7 @@ struct AriaInvalidAttributeTestSuite {
             let tag = Input()
                 .ariaInvalid(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

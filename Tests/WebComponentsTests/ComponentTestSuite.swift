@@ -21,34 +21,46 @@ struct ComponentTestSuite {
         let html = try #require(
             ComponentRenderer().render(MySimpleComponent(text: "lorem"))
         )
-        let result = Renderer(indent: 4)
+        let result = SGMLRenderer(indent: 4)
             .render(document: Document(root: html))
 
         #expect(
             result
-                == "<div class=\"my-simple-component\">\n    <p>lorem</p>\n    <span>foobarbaz</span>\n</div>"
+                == #"""
+                <div class="my-simple-component">
+                    <p>lorem</p>
+                    <span>foobarbaz</span>
+                </div>
+                """#
         )
     }
 
     @Test
     func componentRenderingTree() throws {
         let html = try #require(ComponentRenderer().render(ListComponent()))
-        let result = Renderer().render(document: Document(root: html))
+        let result = SGMLRenderer().render(document: Document(root: html))
 
         #expect(
             result
-                == "<div class=\"list-component\"><p class=\"list-item\">List item</p></div>"
+                == #"""
+                <div class="list-component"><p class="list-item">List item</p></div>
+                """#
         )
     }
 
     @Test
     func componentStylesheetCollectorUsesComponentTree() {
-        let rendered = StylesheetRenderer(minify: true)
+        let rendered = CSSRenderer(minify: true)
             .render(
-                ComponentStylesheetCollector()
+                ComponentStyleCollector()
                     .getStylesheet(from: ListComponent())
             )
 
-        #expect(rendered == ".list-component{color:green}.list-item{color:red}")
+        #expect(
+            rendered
+                == #"""
+                .list-component{color:green}.list-item{color:red}
+                """#
+        )
     }
 }

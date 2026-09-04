@@ -18,7 +18,7 @@ struct ReversedAttributeTestSuite {
         let tag = Ol {}
             .reversed("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

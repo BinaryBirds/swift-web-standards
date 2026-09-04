@@ -18,7 +18,7 @@ struct OnPopStateAttributeTestSuite {
         let tag = A {}
             .onPopState("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

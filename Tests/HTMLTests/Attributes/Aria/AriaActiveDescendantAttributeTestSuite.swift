@@ -18,7 +18,7 @@ struct AriaActiveDescendantAttributeTestSuite {
         let tag = A {}
             .ariaActiveDescendant("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

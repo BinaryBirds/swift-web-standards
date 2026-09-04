@@ -18,7 +18,7 @@ struct DownloadAttributeTestSuite {
         let tag = A {}
             .download("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

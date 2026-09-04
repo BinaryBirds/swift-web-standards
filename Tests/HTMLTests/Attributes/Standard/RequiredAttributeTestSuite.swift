@@ -18,7 +18,7 @@ struct RequiredAttributeTestSuite {
         let tag = Input()
             .required()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

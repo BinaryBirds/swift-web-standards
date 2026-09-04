@@ -18,7 +18,7 @@ struct OnInvalidAttributeTestSuite {
         let tag = A {}
             .onInvalid("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

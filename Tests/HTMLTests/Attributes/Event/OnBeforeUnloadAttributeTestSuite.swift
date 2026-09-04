@@ -18,7 +18,7 @@ struct OnBeforeUnloadAttributeTestSuite {
         let tag = A {}
             .onBeforeUnload("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

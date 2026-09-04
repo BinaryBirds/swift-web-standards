@@ -16,7 +16,7 @@ struct AnimationNameTests {
     func initializers() {
         let property = AnimationName()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct AnimationNameTests {
         let property = AnimationName()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct AnimationNameTests {
         let none = AnimationName(.none)
         let inherit = AnimationName(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(AnimationName(keyframe))
                 == "animation-name: fade"

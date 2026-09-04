@@ -16,7 +16,7 @@ struct AnimationTimingFunctionTests {
     func initializers() {
         let property = AnimationTimingFunction()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct AnimationTimingFunctionTests {
         let property = AnimationTimingFunction()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -45,7 +45,7 @@ struct AnimationTimingFunctionTests {
         let cubic = AnimationTimingFunction(.cubicBezier(0.2, 0.4, 0.6, 0.8))
         let inherit = AnimationTimingFunction(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(linear)
                 == "animation-timing-function: linear"

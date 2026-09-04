@@ -18,7 +18,7 @@ struct AriaMultiLineAttributeTestSuite {
         let tag = A {}
             .ariaMultiLine("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

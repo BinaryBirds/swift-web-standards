@@ -1,12 +1,12 @@
 //
-//  ComponentStylesheetCollector.swift
+//  ComponentStyleCollector.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 03. 06.
 
 import CSS
 
-public struct ComponentStylesheetCollector: Sendable {
+public struct ComponentStyleCollector: Sendable {
 
     private struct State {
         var rulesByComponent: [String: [any CSS.Rule]] = [:]
@@ -35,7 +35,7 @@ public struct ComponentStylesheetCollector: Sendable {
     ) {
         collectLocalRules(from: component, state: &state)
         if let container = component as? any Composite {
-            for child in container.body {
+            for child in container.children {
                 collectLocalComponentRules(from: child, state: &state)
             }
         }

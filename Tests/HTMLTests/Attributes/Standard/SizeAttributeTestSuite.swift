@@ -18,7 +18,7 @@ struct SizeAttributeTestSuite {
         let tag = Input()
             .size(2)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

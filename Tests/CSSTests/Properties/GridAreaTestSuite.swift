@@ -16,7 +16,7 @@ struct GridAreaTests {
     func initializers() {
         let property = GridArea(.name("value"))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct GridAreaTests {
         let property = GridArea(.name("value"))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -49,7 +49,7 @@ struct GridAreaTests {
             )
         )
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(name) == "grid-area: header")
         #expect(renderer.renderProperty(values) == "grid-area: 1 / 2 / 3 / 4")
     }

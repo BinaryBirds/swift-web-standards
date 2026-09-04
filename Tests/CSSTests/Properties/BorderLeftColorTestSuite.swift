@@ -16,7 +16,7 @@ struct BorderLeftColorTests {
     func initializers() {
         let property = BorderLeftColor(.color(.red))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BorderLeftColorTests {
         let property = BorderLeftColor(.color(.red))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct BorderLeftColorTests {
         let named = BorderLeftColor(.green)
         let initial = BorderLeftColor(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(transparent)
                 == "border-left-color: transparent"

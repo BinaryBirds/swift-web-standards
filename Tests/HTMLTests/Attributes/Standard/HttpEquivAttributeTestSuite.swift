@@ -26,7 +26,7 @@ struct HttpEquivAttributeTestSuite {
             let tag = Meta()
                 .httpEquiv(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation: String

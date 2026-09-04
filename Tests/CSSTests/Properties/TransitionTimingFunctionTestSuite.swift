@@ -16,7 +16,7 @@ struct TransitionTimingFunctionTests {
     func initializers() {
         let property = TransitionTimingFunction()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct TransitionTimingFunctionTests {
         let property = TransitionTimingFunction()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +44,7 @@ struct TransitionTimingFunctionTests {
         let stepStart = TransitionTimingFunction(.stepStart)
         let stepEnd = TransitionTimingFunction(.stepEnd)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(steps)
                 == "transition-timing-function: steps(4,1)"

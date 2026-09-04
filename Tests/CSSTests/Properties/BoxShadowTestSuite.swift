@@ -16,7 +16,7 @@ struct BoxShadowTests {
     func initializers() {
         let property = BoxShadow()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BoxShadowTests {
         let property = BoxShadow()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -48,7 +48,7 @@ struct BoxShadowTests {
             type: .inset
         )
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         #expect(result == "box-shadow: 2px 4px 6px 8px black inset")

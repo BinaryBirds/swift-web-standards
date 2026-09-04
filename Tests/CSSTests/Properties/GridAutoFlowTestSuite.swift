@@ -16,7 +16,7 @@ struct GridAutoFlowTests {
     func initializers() {
         let property = GridAutoFlow(.row)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct GridAutoFlowTests {
         let property = GridAutoFlow(.row)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

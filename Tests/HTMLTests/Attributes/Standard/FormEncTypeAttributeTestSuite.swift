@@ -18,7 +18,7 @@ struct FormEncTypeAttributeTestSuite {
         let tag = Button {}
             .formEncType(.multipart)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

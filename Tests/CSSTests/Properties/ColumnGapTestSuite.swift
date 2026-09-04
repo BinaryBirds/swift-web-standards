@@ -16,7 +16,7 @@ struct ColumnGapTests {
     func initializers() {
         let property = ColumnGap(.length(5.px))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct ColumnGapTests {
         let property = ColumnGap(.length(5.px))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct ColumnGapTests {
         let length = ColumnGap(.length(12.px))
         let inherit = ColumnGap(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(normal) == "column-gap: normal")
         #expect(renderer.renderProperty(length) == "column-gap: 12px")
         #expect(renderer.renderProperty(inherit) == "column-gap: inherit")

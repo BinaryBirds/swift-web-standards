@@ -20,7 +20,7 @@ struct MySimpleComponent: Leaf {
         }
     }
 
-    func renderHTML() -> any Element {
+    func renderHTML() -> Div {
         Div {
             P(text)
             Span("foobarbaz")

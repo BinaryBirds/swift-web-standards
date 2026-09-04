@@ -17,7 +17,7 @@ struct VarTagTestSuite {
     func initializationWithText() async throws {
         let tag = Var("hello")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

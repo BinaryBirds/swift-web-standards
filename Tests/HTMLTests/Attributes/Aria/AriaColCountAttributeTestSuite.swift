@@ -18,7 +18,7 @@ struct AriaColCountAttributeTestSuite {
         let tag = A {}
             .ariaColCount("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

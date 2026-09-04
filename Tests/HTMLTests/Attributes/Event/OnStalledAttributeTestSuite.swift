@@ -18,7 +18,7 @@ struct OnStalledAttributeTestSuite {
         let tag = A {}
             .onStalled("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

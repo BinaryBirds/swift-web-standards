@@ -18,7 +18,7 @@ struct OnPageHideAttributeTestSuite {
         let tag = A {}
             .onPageHide("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct ItemScopeAttributeTestSuite {
         let tag = A {}
             .itemScope()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

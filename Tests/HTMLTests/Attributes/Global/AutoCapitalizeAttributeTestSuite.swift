@@ -28,7 +28,7 @@ struct AutoCapitalizeAttributeTestSuite {
             let tag = P("lorem")
                 .autoCapitalize(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

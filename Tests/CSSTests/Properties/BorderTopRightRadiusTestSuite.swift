@@ -16,7 +16,7 @@ struct BorderTopRightRadiusTests {
     func initializers() {
         let property = BorderTopRightRadius(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BorderTopRightRadiusTests {
         let property = BorderTopRightRadius(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

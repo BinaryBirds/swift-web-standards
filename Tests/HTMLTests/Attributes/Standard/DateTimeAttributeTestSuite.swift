@@ -18,7 +18,7 @@ struct DateTimeAttributeTestSuite {
         let tag = Del {}
             .dateTime("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

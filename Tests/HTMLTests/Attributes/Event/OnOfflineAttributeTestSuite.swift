@@ -18,7 +18,7 @@ struct OnOfflineAttributeTestSuite {
         let tag = A {}
             .onOffline("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

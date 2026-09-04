@@ -11,13 +11,13 @@ import WebComponents
 
 struct PageComponent: Composite {
 
-    var body: [any Component] {
-        FooComponent(text: "Component subtree")
+    private let child = FooComponent(text: "Component subtree")
+
+    var children: [any Component] {
+        child
     }
 
-    func renderHTML(
-        children: [any Element]
-    ) -> any Element {
-        Div { children }
+    func renderHTML(renderer: ComponentRenderer) -> Div {
+        Div { renderer.render(child) }
     }
 }

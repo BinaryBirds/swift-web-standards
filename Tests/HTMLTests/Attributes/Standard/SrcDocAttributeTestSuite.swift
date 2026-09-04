@@ -18,7 +18,7 @@ struct SrcDocAttributeTestSuite {
         let tag = Iframe {}
             .srcDoc("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

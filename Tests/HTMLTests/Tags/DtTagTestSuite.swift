@@ -19,7 +19,7 @@ struct DtTagTestSuite {
             "Lorem ipsum"
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -35,7 +35,7 @@ struct DtTagTestSuite {
         let tag = Dt("Term")
             .id("term-1")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

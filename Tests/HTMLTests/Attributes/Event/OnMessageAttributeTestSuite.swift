@@ -18,7 +18,7 @@ struct OnMessageAttributeTestSuite {
         let tag = A {}
             .onMessage("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct SrcSetAttributeTestSuite {
         let tag = Img(src: "foo.jpg", alt: "Foo")
             .srcSet("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct ListAttributeTestSuite {
         let tag = Input()
             .list("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

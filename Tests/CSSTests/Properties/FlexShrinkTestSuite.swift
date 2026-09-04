@@ -16,7 +16,7 @@ struct FlexShrinkTests {
     func initializers() {
         let property = FlexShrink(.number(2))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct FlexShrinkTests {
         let property = FlexShrink(.number(2))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct FlexShrinkTests {
         let two = FlexShrink(2)
         let inherit = FlexShrink(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(zero) == "flex-shrink: 0")
         #expect(renderer.renderProperty(two) == "flex-shrink: 2")
         #expect(renderer.renderProperty(inherit) == "flex-shrink: inherit")

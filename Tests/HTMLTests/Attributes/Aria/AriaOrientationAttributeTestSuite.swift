@@ -18,7 +18,7 @@ struct AriaOrientationAttributeTestSuite {
         let tag = A {}
             .ariaOrientation("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

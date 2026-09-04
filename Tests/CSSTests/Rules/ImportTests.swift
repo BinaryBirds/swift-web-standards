@@ -18,7 +18,7 @@ struct ImportTests {
             Import("url(\"fonts.css\")")
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         #expect(rendered == "@import url(\"fonts.css\");")
     }
 
@@ -29,7 +29,7 @@ struct ImportTests {
             Import("url(\"theme.css\")")
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         let expectation = "@charset \"UTF-8\";\n@import url(\"theme.css\");"
 
         #expect(rendered == expectation)

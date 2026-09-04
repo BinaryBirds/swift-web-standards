@@ -18,7 +18,7 @@ struct AriaValueMaxAttributeTestSuite {
         let tag = A {}
             .ariaValueMax("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

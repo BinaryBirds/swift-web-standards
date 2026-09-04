@@ -18,7 +18,7 @@ struct ClassAttributeTestSuite {
         let tag = A {}
             .setClass("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

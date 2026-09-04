@@ -16,7 +16,7 @@ struct FontSizeTests {
     func initializers() {
         let property = FontSize()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct FontSizeTests {
         let property = FontSize()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +44,7 @@ struct FontSizeTests {
         let length = FontSize(.length(14.px))
         let inherit = FontSize(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(small) == "font-size: small")
         #expect(renderer.renderProperty(larger) == "font-size: larger")
         #expect(renderer.renderProperty(length) == "font-size: 14px")

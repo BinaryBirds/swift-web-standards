@@ -18,7 +18,7 @@ struct ValueAttributeTestSuite {
         let tag = Button {}
             .value("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

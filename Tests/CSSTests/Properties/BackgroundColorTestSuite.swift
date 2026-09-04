@@ -16,7 +16,7 @@ struct BackgroundColorTests {
     func initializers() {
         let property = BackgroundColor()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BackgroundColorTests {
         let property = BackgroundColor()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct BackgroundColorTests {
         let color = BackgroundColor(.hotPink)
         let initial = BackgroundColor(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(transparent)
                 == "background-color: transparent"

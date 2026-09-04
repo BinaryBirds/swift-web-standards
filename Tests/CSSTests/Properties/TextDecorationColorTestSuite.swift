@@ -16,7 +16,7 @@ struct TextDecorationColorTests {
     func initializers() {
         let property = TextDecorationColor(.color(.red))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct TextDecorationColorTests {
         let property = TextDecorationColor(.color(.red))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct TextDecorationColorTests {
         let color = TextDecorationColor(.blue)
         let inherit = TextDecorationColor(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(initial) == "text-decoration-color: initial"
         )

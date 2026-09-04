@@ -18,7 +18,7 @@ struct DraggableAttributeTestSuite {
         let tag = A {}
             .draggable("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -14,7 +14,7 @@ import WebBuilders
 struct UrlsetTests {
 
     private func render(_ tag: Urlset, indent: UInt8 = 0) -> String {
-        let renderer = Renderer(indent: indent)
+        let renderer = SGMLRenderer(indent: indent)
         let doc = Document(root: tag)
         return renderer.render(document: doc)
     }

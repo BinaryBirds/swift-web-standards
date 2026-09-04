@@ -19,7 +19,7 @@ struct ATagTestSuite {
             .href("http://localhost/")
             .target(.blank)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -38,7 +38,7 @@ struct ATagTestSuite {
         .href("http://localhost/")
         .target(.blank)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -57,7 +57,7 @@ struct ATagTestSuite {
         .id("foo")
         .target(.self)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

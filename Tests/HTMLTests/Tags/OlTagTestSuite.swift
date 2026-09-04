@@ -17,7 +17,7 @@ struct OlTagTestSuite {
     func initializationWithText() async throws {
         let tag = Ol("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

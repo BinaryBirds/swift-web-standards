@@ -17,7 +17,7 @@ struct SearchTagTestSuite {
     func initializationWithText() async throws {
         let tag = Search("Find")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -39,7 +39,7 @@ struct SearchTagTestSuite {
         }
         .id("site-search")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

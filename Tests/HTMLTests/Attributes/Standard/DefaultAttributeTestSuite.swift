@@ -18,7 +18,7 @@ struct DefaultAttributeTestSuite {
         let tag = Track(src: "foo.mp4")
             .`default`()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

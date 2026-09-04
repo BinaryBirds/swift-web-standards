@@ -18,7 +18,7 @@ struct TimeTagTestSuite {
         let tag = Time("2009-10-11")
             .dateTime("2009-10-11T01:25-07:00")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -43,7 +43,7 @@ struct TimeTagTestSuite {
         .dateTime("2009-10-11T01:25-07:00")
         .class("flex-1 align-middle")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct UseMapAttributeTestSuite {
         let tag = Img(src: "foo.jpg", alt: "Foo")
             .useMap("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -16,7 +16,7 @@ struct ColumnsTests {
     func initializers() {
         let property = Columns()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct ColumnsTests {
         let property = Columns()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +42,7 @@ struct ColumnsTests {
         let values = Columns(.length(240.px), 3)
         let initial = Columns(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(values) == "columns: 240px 3")
         #expect(renderer.renderProperty(initial) == "columns: initial")
     }

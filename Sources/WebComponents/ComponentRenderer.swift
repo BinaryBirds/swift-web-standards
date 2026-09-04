@@ -11,24 +11,25 @@ public struct ComponentRenderer: Sendable {
 
     public init() {}
 
+    public func render<T: Leaf>(_ component: T) -> T.HTML {
+        component.renderHTML()
+    }
+
+    public func render<T: Composite>(_ component: T) -> T.HTML {
+        component.renderHTML(renderer: self)
+    }
+
     public func render(
         _ component: any Component
     ) -> (any SGML.Element)? {
-        renderComponents(component).first
-    }
-
-    private func renderComponents(
-        _ component: any Component
-    ) -> [any SGML.Element] {
         if let leaf = component as? any Leaf {
-            return [leaf.renderHTML()]
+            return leaf.renderHTML()
         }
 
         if let container = component as? any Composite {
-            let children = container.body.flatMap { renderComponents($0) }
-            return [container.renderHTML(children: children)]
+            return container.renderHTML(renderer: self)
         }
 
-        return []
+        return nil
     }
 }

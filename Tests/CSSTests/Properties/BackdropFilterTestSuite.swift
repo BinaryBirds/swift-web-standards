@@ -16,7 +16,7 @@ struct BackdropFilterTests {
     func initializers() {
         let property = BackdropFilter()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BackdropFilterTests {
         let property = BackdropFilter()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct BackdropFilterTests {
         let blurRem = BackdropFilter(.blur(2.rem))
         let inherit = BackdropFilter(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         #expect(
             renderer.renderProperty(blur) == "backdrop-filter: blur(100px)"

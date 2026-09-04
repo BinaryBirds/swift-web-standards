@@ -16,7 +16,7 @@ struct BackgroundImageTests {
     func initializers() {
         let property = BackgroundImage(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BackgroundImageTests {
         let property = BackgroundImage(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -52,7 +52,7 @@ struct BackgroundImageTests {
 
         let property = BackgroundImage(.linearGradient(gradient))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation =
@@ -74,7 +74,7 @@ struct BackgroundImageTests {
 
         let property = BackgroundImage(.linearGradient(gradient))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation =
@@ -95,7 +95,7 @@ struct BackgroundImageTests {
 
         let property = BackgroundImage(.linearGradient(gradient))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation =
@@ -116,7 +116,7 @@ struct BackgroundImageTests {
 
         let property = BackgroundImage(.linearGradient(gradient))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation =

@@ -16,7 +16,7 @@ struct ContentTests {
     func initializers() {
         let property = Content()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct ContentTests {
         let property = Content()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -45,7 +45,7 @@ struct ContentTests {
         let openQuote = Content(.openQuote)
         let closeQuote = Content(.closeQuote)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(normal) == "content: normal")
         #expect(renderer.renderProperty(none) == "content: none")
         #expect(renderer.renderProperty(string) == "content: hello")

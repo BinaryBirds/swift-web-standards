@@ -16,7 +16,7 @@ struct RowGapTests {
     func initializers() {
         let property = RowGap()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct RowGapTests {
         let property = RowGap()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct RowGapTests {
         let length = RowGap(.length(16.px))
         let inherit = RowGap(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(normal) == "row-gap: normal")
         #expect(renderer.renderProperty(length) == "row-gap: 16px")
         #expect(renderer.renderProperty(inherit) == "row-gap: inherit")

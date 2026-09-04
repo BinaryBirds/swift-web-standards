@@ -18,7 +18,7 @@ struct AriaMultiSelectableAttributeTestSuite {
         let tag = A {}
             .ariaMultiSelectable("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

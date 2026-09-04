@@ -18,7 +18,7 @@ struct HeadersAttributeTestSuite {
         let tag = Td {}
             .headers("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

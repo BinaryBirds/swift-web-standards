@@ -17,7 +17,7 @@ struct IframeTagTestSuite {
     func initialization() async throws {
         let tag = Iframe {}
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -40,7 +40,7 @@ struct IframeTagTestSuite {
             .height(315)
             .name("author")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

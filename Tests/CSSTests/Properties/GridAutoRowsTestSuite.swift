@@ -16,7 +16,7 @@ struct GridAutoRowsTests {
     func initializers() {
         let property = GridAutoRows()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct GridAutoRowsTests {
         let property = GridAutoRows()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct GridAutoRowsTests {
         let fraction = GridAutoRows(.fraction(1.5.fr))
         let tracks = GridAutoRows(.tracks([.length(80.px), .fraction(1.5.fr)]))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "grid-auto-rows: 80px")
         #expect(renderer.renderProperty(fraction) == "grid-auto-rows: 1.5fr")
         #expect(renderer.renderProperty(tracks) == "grid-auto-rows: 80px 1.5fr")

@@ -18,7 +18,7 @@ struct MultipleAttributeTestSuite {
         let tag = Input()
             .multiple()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct OnPlayingAttributeTestSuite {
         let tag = A {}
             .onPlaying("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -16,7 +16,7 @@ struct TextUnderlinePositionTests {
     func initializers() {
         let property = TextUnderlinePosition(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct TextUnderlinePositionTests {
         let property = TextUnderlinePosition(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

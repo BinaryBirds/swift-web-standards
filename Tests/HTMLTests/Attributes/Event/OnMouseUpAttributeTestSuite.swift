@@ -18,7 +18,7 @@ struct OnMouseUpAttributeTestSuite {
         let tag = A {}
             .onMouseUp("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

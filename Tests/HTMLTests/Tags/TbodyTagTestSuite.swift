@@ -17,7 +17,7 @@ struct TbodyTagTestSuite {
     func initialization() async throws {
         let tag = Tbody("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

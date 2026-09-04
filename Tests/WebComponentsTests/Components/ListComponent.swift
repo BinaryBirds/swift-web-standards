@@ -12,19 +12,21 @@ import WebComponents
 
 struct ListComponent: Composite {
 
+    private let item = ListItemComponent()
+
+    var children: [any Component] {
+        item
+    }
+
     func selectors() -> [any Selector] {
-        Class("list-component") { Color(.green) }
+        Class("list-component") {
+            Color(.green)
+        }
     }
 
-    var body: [any Component] {
-        ListItemComponent()
-    }
-
-    func renderHTML(
-        children: [any Element]
-    ) -> any Element {
+    func renderHTML(renderer: ComponentRenderer) -> Div {
         Div {
-            children
+            renderer.render(item)
         }
         .class("list-component")
     }

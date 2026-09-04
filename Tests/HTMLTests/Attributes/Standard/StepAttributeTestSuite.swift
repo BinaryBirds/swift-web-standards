@@ -18,7 +18,7 @@ struct StepAttributeTestSuite {
         let tag = Input()
             .step(2)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

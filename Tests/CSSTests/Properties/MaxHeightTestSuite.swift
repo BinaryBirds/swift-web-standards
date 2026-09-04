@@ -16,7 +16,7 @@ struct MaxHeightTests {
     func initializers() {
         let property = MaxHeight()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct MaxHeightTests {
         let property = MaxHeight()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct MaxHeightTests {
         let length = MaxHeight(480.px)
         let inherit = MaxHeight(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(none) == "max-height: none")
         #expect(renderer.renderProperty(length) == "max-height: 480px")
         #expect(renderer.renderProperty(inherit) == "max-height: inherit")

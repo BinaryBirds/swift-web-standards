@@ -26,7 +26,7 @@ struct AriaAutoCompleteAttributeTestSuite {
             let tag = Input()
                 .ariaAutoComplete(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

@@ -326,7 +326,7 @@ let css = Stylesheet {
     }
 }
     
-print(StylesheetRenderer(minify: false, indent: 4).render(css))
+print(CSSRenderer(minify: false, indent: 4).render(css))
 ```
 
 [

@@ -18,7 +18,7 @@ struct QTagTestSuite {
         let tag = Q("Lorem ipsum")
             .cite("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

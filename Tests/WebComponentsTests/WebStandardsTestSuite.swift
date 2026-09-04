@@ -20,7 +20,7 @@ struct WebComponentsTestSuite {
     func componentTreeRendersAsHTML() throws {
         let root = PageComponent()
         let html = try #require(ComponentRenderer().render(root))
-        let result = Renderer().render(document: Document(root: html))
+        let result = SGMLRenderer().render(document: Document(root: html))
 
         #expect(result == "<div><span>Component subtree</span></div>")
     }
@@ -29,9 +29,9 @@ struct WebComponentsTestSuite {
     func componentTreeCollectorsTraverseComponentsDirectly() {
         let root = ListComponent()
 
-        let css = StylesheetRenderer(minify: true)
-            .render(ComponentStylesheetCollector().getStylesheet(from: root))
-        let javascript = ComponentJavaScriptCollector().getScript(from: root)
+        let css = CSSRenderer(minify: true)
+            .render(ComponentStyleCollector().getStylesheet(from: root))
+        let javascript = ComponentScriptCollector().getScript(from: root)
 
         #expect(css == ".list-component{color:green}.list-item{color:red}")
         #expect(javascript.isEmpty)
@@ -43,7 +43,7 @@ struct WebComponentsTestSuite {
 
         #expect(ComponentRenderer().render(component) == nil)
         #expect(
-            ComponentJavaScriptCollector().getJavaScript(from: component)
+            ComponentScriptCollector().getJavaScript(from: component)
                 == "window.analyticsReady = true;"
         )
     }
@@ -52,7 +52,7 @@ struct WebComponentsTestSuite {
     func componentTreeSupportsNestedComponentsAndDeduplication() {
         let root = ScriptedParentComponent()
 
-        let javascript = ComponentJavaScriptCollector()
+        let javascript = ComponentScriptCollector()
             .getJavaScript(from: root)
 
         #expect(
@@ -66,39 +66,28 @@ struct WebComponentsTestSuite {
         let group = ComponentGroup([FooComponent(text: "one")])
         let component = BuilderComponent(includeGroup: true, group: group)
 
-        #expect(component.body.count == 2)
+        #expect(component.children.count == 2)
     }
 
-    @Test
-    func globalStylesheetCollectorDeduplicatesAndPreservesRegistrationOrder() {
-        var collector = GlobalStylesheetCollector()
-        collector.register(GlobalAbsoluteStyle.self)
-        collector.register(GlobalPositionStyle.self)
-        collector.register(GlobalAbsoluteStyle.self)
-
-        let rendered = StylesheetRenderer(minify: true)
-            .render(Stylesheet(collector.getGlobalStylesheet().rules))
-
-        #expect(
-            rendered
-                == ".global-absolute-style{position:absolute}.global-position-style{position:relative}"
-        )
-    }
 }
 
 private struct ScriptedParentComponent: Composite {
+    private let leaves = [ScriptedLeafComponent(), ScriptedLeafComponent()]
     @Builder<String>
     func scripts() -> [String] {
         "window.parentReady = true;"
     }
 
-    var body: [any Component] {
-        ScriptedLeafComponent()
-        ScriptedLeafComponent()
+    var children: [any Component] {
+        leaves
     }
 
-    func renderHTML(children: [any Element]) -> any Element {
-        Div { for child in children { child } }
+    func renderHTML(renderer: ComponentRenderer) -> Div {
+        Div {
+            for leaf in leaves {
+                renderer.render(leaf)
+            }
+        }
     }
 }
 
@@ -113,7 +102,7 @@ private struct ScriptedLeafComponent: Leaf {
     @Builder<String>
     func scripts() -> [String] { "window.leafReady = true;" }
 
-    func renderHTML() -> any Element { P("leaf") }
+    func renderHTML() -> P { P("leaf") }
 }
 
 private struct BuilderComponent: Composite {
@@ -121,24 +110,18 @@ private struct BuilderComponent: Composite {
     let group: ComponentGroup
 
     @Builder<any Component>
-    var body: [any Component] {
+    var children: [any Component] {
         FooComponent(text: "first")
         if includeGroup { group }
     }
 
-    func renderHTML(children: [any Element]) -> any Element {
-        Div { for child in children { child } }
-    }
-}
-
-private struct GlobalPositionStyle: GlobalStyleComponent {
-    static func selectors() -> [any CSS.Selector] {
-        Class("global-position-style") { Position(.relative) }
-    }
-}
-
-private struct GlobalAbsoluteStyle: GlobalStyleComponent {
-    static func selectors() -> [any CSS.Selector] {
-        Class("global-absolute-style") { Position(.absolute) }
+    func renderHTML(renderer: ComponentRenderer) -> Div {
+        Div {
+            for component in children {
+                if let rendered = renderer.render(component) {
+                    rendered
+                }
+            }
+        }
     }
 }

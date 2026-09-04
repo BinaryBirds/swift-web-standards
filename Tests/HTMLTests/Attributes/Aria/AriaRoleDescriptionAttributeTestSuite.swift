@@ -18,7 +18,7 @@ struct AriaRoleDescriptionAttributeTestSuite {
         let tag = A {}
             .ariaRoleDescription("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

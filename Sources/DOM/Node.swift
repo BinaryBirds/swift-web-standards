@@ -15,7 +15,7 @@ extension Node {
     public func render(
         indent: UInt8 = 0
     ) -> String {
-        let renderer = Renderer(indent: indent)
+        let renderer = DOMRenderer(indent: indent)
         return renderer.render(node: self)
     }
 }

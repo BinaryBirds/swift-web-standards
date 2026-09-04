@@ -18,7 +18,7 @@ struct ColTagTestSuite {
         let tag = Col()
             .span(2)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

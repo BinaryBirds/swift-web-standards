@@ -18,7 +18,7 @@ struct OnFocusAttributeTestSuite {
         let tag = A {}
             .onFocus("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

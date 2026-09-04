@@ -18,7 +18,7 @@ struct AriaBusyAttributeTestSuite {
         let tag = A {}
             .ariaBusy("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

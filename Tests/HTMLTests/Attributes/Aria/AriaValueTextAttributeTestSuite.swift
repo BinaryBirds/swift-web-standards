@@ -18,7 +18,7 @@ struct AriaValueTextAttributeTestSuite {
         let tag = A {}
             .ariaValueText("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

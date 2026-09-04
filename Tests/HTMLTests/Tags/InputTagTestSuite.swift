@@ -18,7 +18,7 @@ struct InputTagTestSuite {
         let tag = Input()
             .name("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -35,7 +35,7 @@ struct InputTagTestSuite {
             .type(.checkbox)
             .checked()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -56,7 +56,7 @@ struct InputTagTestSuite {
                 $0.checked()
             }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -76,7 +76,7 @@ struct InputTagTestSuite {
                 $0.required()
             }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

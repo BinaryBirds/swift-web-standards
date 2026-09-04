@@ -18,7 +18,7 @@ struct LangAttributeTestSuite {
         let tag = A {}
             .lang("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

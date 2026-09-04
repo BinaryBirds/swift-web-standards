@@ -20,7 +20,7 @@ struct InsTagTestSuite {
         }
         .dateTime("2009-10-11T01:25-07:00")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -36,7 +36,7 @@ struct InsTagTestSuite {
         let tag = Ins("<strong>Added</strong>")
             .cite("https://example.com/changes")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

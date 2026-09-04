@@ -16,7 +16,7 @@ struct TransitionPropertyTests {
     func initializers() {
         let property = TransitionProperty()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct TransitionPropertyTests {
         let property = TransitionProperty()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct TransitionPropertyTests {
         let list = TransitionProperty(["opacity", "transform"])
         let inherit = TransitionProperty(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(none) == "transition-property: none")
         #expect(
             renderer.renderProperty(list)

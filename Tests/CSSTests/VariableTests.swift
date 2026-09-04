@@ -37,7 +37,7 @@ struct VariableTests {
             }
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         let expectation = ":root {\n    --spacing: 12px;\n}"
 
         #expect(rendered == expectation)

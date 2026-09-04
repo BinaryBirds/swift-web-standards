@@ -18,7 +18,7 @@ struct SizesAttributeTestSuite {
         let tag = Img(src: "foo.jpg", alt: "Foo")
             .sizes("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

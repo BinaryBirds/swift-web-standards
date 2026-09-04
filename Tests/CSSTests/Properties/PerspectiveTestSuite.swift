@@ -16,7 +16,7 @@ struct PerspectiveTests {
     func initializers() {
         let property = Perspective(.length(8.px))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct PerspectiveTests {
         let property = Perspective(.length(8.px))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct PerspectiveTests {
         let none = Perspective(.none)
         let inherit = Perspective(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "perspective: 600px")
         #expect(renderer.renderProperty(none) == "perspective: none")
         #expect(renderer.renderProperty(inherit) == "perspective: inherit")

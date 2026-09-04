@@ -18,7 +18,7 @@ struct DfnTagTestSuite {
         let tag = Dfn("HTML")
             .title("HyperText Markup Language")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

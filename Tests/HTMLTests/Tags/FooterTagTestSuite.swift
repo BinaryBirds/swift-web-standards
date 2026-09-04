@@ -17,7 +17,7 @@ struct FooterTagTestSuite {
     func initializationWithText() async throws {
         let tag = Footer("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

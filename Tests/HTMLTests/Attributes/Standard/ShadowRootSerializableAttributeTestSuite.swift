@@ -18,7 +18,7 @@ struct ShadowRootSerializableAttributeTestSuite {
         let tag = Template {}
             .shadowRootSerializable("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

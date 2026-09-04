@@ -22,7 +22,7 @@ struct SVGContentConformanceTestSuite {
             }
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -41,7 +41,7 @@ struct SVGContentConformanceTestSuite {
             }
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -60,7 +60,7 @@ struct SVGContentConformanceTestSuite {
         }
         .class("w-4 h-4 text-gray-500")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

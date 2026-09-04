@@ -18,7 +18,7 @@ struct CommandAttributeTestSuite {
         let tag = Button {}
             .command("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

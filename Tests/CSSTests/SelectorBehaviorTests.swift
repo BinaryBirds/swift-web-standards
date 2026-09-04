@@ -19,7 +19,7 @@ struct SelectorBehaviorTests {
         }
         selector.pseudo(.hover)
 
-        let rendered = StylesheetRenderer().renderSelector(selector)
+        let rendered = CSSRenderer().renderSelector(selector)
         let expectation = "a:hover {\n    color: #cafe00;\n}"
 
         #expect(rendered == expectation)
@@ -51,7 +51,7 @@ struct SelectorBehaviorTests {
             Padding(4.px)
         }
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderSelector(classSelector)
                 == ".button {\n    color: red;\n}"

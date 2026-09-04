@@ -17,7 +17,7 @@ struct TdTagTestSuite {
     func initialization() async throws {
         let tag = Td("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

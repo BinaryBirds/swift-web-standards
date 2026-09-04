@@ -30,7 +30,7 @@ struct InputModeAttributeTestSuite {
             let tag = Input()
                 .inputMode(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

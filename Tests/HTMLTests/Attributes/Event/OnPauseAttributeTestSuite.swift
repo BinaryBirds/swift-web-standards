@@ -18,7 +18,7 @@ struct OnPauseAttributeTestSuite {
         let tag = A {}
             .onPause("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

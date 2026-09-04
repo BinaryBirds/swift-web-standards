@@ -18,7 +18,7 @@ struct AbbrAttributeTestSuite {
         let tag = Th {}
             .abbr("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

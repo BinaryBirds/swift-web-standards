@@ -18,7 +18,7 @@ struct ShadowRootCustomElementRegistryAttributeTestSuite {
         let tag = Template {}
             .shadowRootCustomElementRegistry("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

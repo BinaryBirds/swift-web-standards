@@ -18,7 +18,7 @@ struct AutoPlayAttributeTestSuite {
         let tag = Audio {}
             .autoPlay()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct DisabledAttributeTestSuite {
         let tag = Button {}
             .disabled()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

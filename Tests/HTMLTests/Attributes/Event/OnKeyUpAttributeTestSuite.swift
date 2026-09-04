@@ -18,7 +18,7 @@ struct OnKeyUpAttributeTestSuite {
         let tag = A {}
             .onKeyUp("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

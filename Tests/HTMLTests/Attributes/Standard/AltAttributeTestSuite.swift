@@ -18,7 +18,7 @@ struct AltAttributeTestSuite {
         let tag = Area()
             .alt("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

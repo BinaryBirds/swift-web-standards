@@ -18,7 +18,7 @@ struct OnBlurAttributeTestSuite {
         let tag = A {}
             .onBlur("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

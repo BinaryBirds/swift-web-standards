@@ -16,7 +16,7 @@ struct MinWidthTests {
     func initializers() {
         let property = MinWidth()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct MinWidthTests {
         let property = MinWidth()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct MinWidthTests {
         let inherit = MinWidth(.inherit)
         let initial = MinWidth(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "min-width: 240px")
         #expect(renderer.renderProperty(inherit) == "min-width: inherit")
         #expect(renderer.renderProperty(initial) == "min-width: initial")

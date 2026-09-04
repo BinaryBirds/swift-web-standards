@@ -19,7 +19,7 @@ struct SelectedAttributeTestSuite {
             .type(.checkbox)
             .selected()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

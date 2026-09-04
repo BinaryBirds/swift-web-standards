@@ -18,7 +18,7 @@ struct AutoCorrectAttributeTestSuite {
         let tag = A {}
             .autoCorrect("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

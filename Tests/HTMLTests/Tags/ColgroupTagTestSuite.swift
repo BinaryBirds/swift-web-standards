@@ -21,7 +21,7 @@ struct ColgroupTagTestSuite {
         }
         .span(4)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -37,7 +37,7 @@ struct ColgroupTagTestSuite {
         let tag = Colgroup("Columns")
             .id("table-columns")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

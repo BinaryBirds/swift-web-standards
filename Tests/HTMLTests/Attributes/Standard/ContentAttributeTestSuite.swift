@@ -18,7 +18,7 @@ struct ContentAttributeTestSuite {
         let tag = Meta()
             .content("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

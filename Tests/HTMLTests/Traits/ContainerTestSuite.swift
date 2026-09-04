@@ -20,7 +20,7 @@ struct ContainerTestSuite {
             .addChild(Br())
             .addChild("foo")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -47,7 +47,7 @@ struct ContainerTestSuite {
                 ]
             )
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""

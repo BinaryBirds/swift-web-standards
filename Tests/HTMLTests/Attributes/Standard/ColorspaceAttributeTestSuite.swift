@@ -18,7 +18,7 @@ struct ColorspaceAttributeTestSuite {
         let tag = Input()
             .colorspace("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

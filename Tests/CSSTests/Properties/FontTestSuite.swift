@@ -23,7 +23,7 @@ struct FontTests {
             family: .family("Inter")
         )
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -43,7 +43,7 @@ struct FontTests {
         )
         .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -55,7 +55,7 @@ struct FontTests {
     func keywordValues() {
         let property = Font(.caption)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         #expect(result == "font: caption")

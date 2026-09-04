@@ -16,7 +16,7 @@ struct ColumnRuleColorTests {
     func initializers() {
         let property = ColumnRuleColor(.color(.red))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct ColumnRuleColorTests {
         let property = ColumnRuleColor(.color(.red))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct ColumnRuleColorTests {
         let initial = ColumnRuleColor(.initial)
         let inherit = ColumnRuleColor(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(color) == "column-rule-color: blue")
         #expect(
             renderer.renderProperty(initial) == "column-rule-color: initial"

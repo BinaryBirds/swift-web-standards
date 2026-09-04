@@ -18,7 +18,7 @@ struct AcceptAttributeTestSuite {
         let tag = Input()
             .accept("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

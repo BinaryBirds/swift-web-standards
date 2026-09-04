@@ -16,7 +16,7 @@ struct CursorTests {
     func initializers() {
         let property = Cursor()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct CursorTests {
         let property = Cursor()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -54,7 +54,7 @@ struct CursorTests {
         let zoomIn = Cursor(.zoomIn)
         let zoomOut = Cursor(.zoomOut)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(allScroll) == "cursor: all-scroll")
         #expect(renderer.renderProperty(contextMenu) == "cursor: context-menu")
         #expect(renderer.renderProperty(colResize) == "cursor: col-resize")

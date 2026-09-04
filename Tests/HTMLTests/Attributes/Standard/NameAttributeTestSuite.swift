@@ -37,7 +37,7 @@ struct NameAttributeTestSuite {
             let tag = Button {}
                 .name(value.rawValue)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation: String

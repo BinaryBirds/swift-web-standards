@@ -18,7 +18,7 @@ struct OnGotPointerCaptureAttributeTestSuite {
         let tag = A {}
             .onGotPointerCapture("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

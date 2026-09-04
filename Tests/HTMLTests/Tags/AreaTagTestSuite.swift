@@ -28,7 +28,7 @@ struct AreaTagTestSuite {
         //                $0.ping("bar")
         //            }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

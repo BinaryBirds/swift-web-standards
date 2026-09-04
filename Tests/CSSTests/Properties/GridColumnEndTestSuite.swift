@@ -16,7 +16,7 @@ struct GridColumnEndTests {
     func initializers() {
         let property = GridColumnEnd(.auto)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct GridColumnEndTests {
         let property = GridColumnEnd(.auto)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

@@ -37,7 +37,7 @@ struct SandboxAttributeTestSuite {
             let tag = Iframe {}
                 .sandbox(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation: String

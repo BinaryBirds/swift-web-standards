@@ -29,7 +29,7 @@ struct AriaCurrentAttributeTestSuite {
             let tag = A("current")
                 .ariaCurrent(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

@@ -18,7 +18,7 @@ struct ItemTypeAttributeTestSuite {
         let tag = A {}
             .itemType("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -25,7 +25,7 @@ struct PopoverTargetActionAttributeTestSuite {
             let tag = Button("toggle")
                 .popoverTargetAction(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

@@ -17,7 +17,7 @@ struct SelectedContentTagTestSuite {
     func initializationWithText() async throws {
         let tag = SelectedContent("Item")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -35,7 +35,7 @@ struct SelectedContentTagTestSuite {
         }
         .id("current")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

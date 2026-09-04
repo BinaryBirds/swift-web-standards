@@ -17,7 +17,7 @@ struct CiteTagTestSuite {
     func initializationWithText() async throws {
         let tag = Cite("The Reality Dysfunction")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct CiteAttributeTestSuite {
         let tag = Blockquote {}
             .cite("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

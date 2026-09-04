@@ -18,7 +18,7 @@ struct AriaControlsAttributeTestSuite {
         let tag = A {}
             .ariaControls("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

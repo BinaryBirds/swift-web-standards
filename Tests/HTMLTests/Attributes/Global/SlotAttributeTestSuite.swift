@@ -18,7 +18,7 @@ struct SlotAttributeTestSuite {
         let tag = A {}
             .slot("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

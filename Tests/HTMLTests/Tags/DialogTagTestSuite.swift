@@ -18,7 +18,7 @@ struct DialogTagTestSuite {
         let tag = Dialog("test")
             .closedBy(.any)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

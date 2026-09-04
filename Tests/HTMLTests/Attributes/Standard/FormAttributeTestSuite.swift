@@ -18,7 +18,7 @@ struct FormAttributeTestSuite {
         let tag = Button {}
             .form("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

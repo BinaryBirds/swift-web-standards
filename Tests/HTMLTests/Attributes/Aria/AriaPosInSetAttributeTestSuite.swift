@@ -18,7 +18,7 @@ struct AriaPosInSetAttributeTestSuite {
         let tag = A {}
             .ariaPosInSet("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct ScriptTagTestSuite {
         let tag = Script("console.log();")
             .type("application/javascript")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -34,7 +34,7 @@ struct ScriptTagTestSuite {
         let tag = Script()
             .src("main.js")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -56,7 +56,7 @@ struct ScriptTagTestSuite {
             )
             .crossOrigin(.anonymous)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

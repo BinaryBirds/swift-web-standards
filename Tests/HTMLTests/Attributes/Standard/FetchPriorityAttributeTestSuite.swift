@@ -25,7 +25,7 @@ struct FetchPriorityAttributeTestSuite {
             let tag = Img(src: "foo.jpg", alt: "Foo")
                 .fetchPriority(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

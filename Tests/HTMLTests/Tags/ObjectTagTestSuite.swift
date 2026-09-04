@@ -17,7 +17,7 @@ struct ObjectTagTestSuite {
     func initializationEmpty() async throws {
         let tag = Object()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -40,7 +40,7 @@ struct ObjectTagTestSuite {
         .useMap("#media-map")
         .name("author")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -55,7 +55,7 @@ struct ObjectTagTestSuite {
     func initializationWithText() async throws {
         let tag = Object("Embedded content")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

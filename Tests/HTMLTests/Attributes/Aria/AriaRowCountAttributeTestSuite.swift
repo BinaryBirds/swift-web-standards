@@ -18,7 +18,7 @@ struct AriaRowCountAttributeTestSuite {
         let tag = A {}
             .ariaRowCount("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

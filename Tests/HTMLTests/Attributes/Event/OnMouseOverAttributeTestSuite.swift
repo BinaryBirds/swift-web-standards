@@ -18,7 +18,7 @@ struct OnMouseOverAttributeTestSuite {
         let tag = A {}
             .onMouseOver("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

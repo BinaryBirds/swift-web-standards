@@ -18,7 +18,7 @@ struct ControlsAttributeTestSuite {
         let tag = Audio {}
             .controls()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

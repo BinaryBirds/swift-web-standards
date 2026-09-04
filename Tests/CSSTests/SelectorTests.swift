@@ -21,7 +21,7 @@ struct SelectorTests {
         ])
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 @charset "UTF-8";
                 """#
         )
@@ -39,7 +39,7 @@ struct SelectorTests {
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 * {
                     margin-top: 8px;
                     margin-bottom: 25%;
@@ -63,7 +63,7 @@ struct SelectorTests {
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 * {
                     padding: 0;
                     padding: 8rem;

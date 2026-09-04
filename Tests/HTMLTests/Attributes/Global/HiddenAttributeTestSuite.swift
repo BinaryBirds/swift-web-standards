@@ -18,7 +18,7 @@ struct HiddenAttributeTestSuite {
         let tag = A {}
             .hidden()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

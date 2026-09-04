@@ -18,7 +18,7 @@ struct AsyncAttributeTestSuite {
         let tag = Script("content")
             .`async`()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

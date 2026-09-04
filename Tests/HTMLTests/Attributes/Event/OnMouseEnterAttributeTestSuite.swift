@@ -18,7 +18,7 @@ struct OnMouseEnterAttributeTestSuite {
         let tag = A {}
             .onMouseEnter("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

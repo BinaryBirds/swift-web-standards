@@ -16,7 +16,7 @@ struct MaxWidthTests {
     func initializers() {
         let property = MaxWidth()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct MaxWidthTests {
         let property = MaxWidth()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct MaxWidthTests {
         let length = MaxWidth(320.px)
         let inherit = MaxWidth(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(none) == "max-width: none")
         #expect(renderer.renderProperty(length) == "max-width: 320px")
         #expect(renderer.renderProperty(inherit) == "max-width: inherit")

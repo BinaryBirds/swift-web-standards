@@ -17,7 +17,7 @@ struct OutputTagTestSuite {
     func initializationWithText() async throws {
         let tag = Output("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

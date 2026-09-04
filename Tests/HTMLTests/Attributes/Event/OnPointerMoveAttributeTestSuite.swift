@@ -18,7 +18,7 @@ struct OnPointerMoveAttributeTestSuite {
         let tag = A {}
             .onPointerMove("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -23,7 +23,7 @@ struct BlockingAttributeTestSuite {
             let tag = Script()
                 .blocking(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

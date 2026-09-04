@@ -18,7 +18,7 @@ struct OnRateChangeAttributeTestSuite {
         let tag = A {}
             .onRateChange("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

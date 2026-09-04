@@ -18,7 +18,7 @@ struct TabIndexAttributeTestSuite {
         let tag = A {}
             .tabIndex(2)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

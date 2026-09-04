@@ -16,7 +16,7 @@ struct PaddingTests {
     func initializers() {
         let property = Padding()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct PaddingTests {
         let property = Padding()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +44,7 @@ struct PaddingTests {
         let sides = Padding(top: 1.px, right: 2.px, bottom: 3.px, left: 4.px)
         let inherit = Padding(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(single) == "padding: 12px")
         #expect(renderer.renderProperty(axis) == "padding: 8px 16px")
         #expect(renderer.renderProperty(sides) == "padding: 1px 2px 3px 4px")

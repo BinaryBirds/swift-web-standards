@@ -18,7 +18,7 @@ struct EmbedTagTestSuite {
         let tag = Embed()
             .src("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

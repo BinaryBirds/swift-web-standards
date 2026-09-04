@@ -17,7 +17,7 @@ struct MenuTagTestSuite {
     func initializationWithText() async throws {
         let tag = Menu("Actions")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -36,7 +36,7 @@ struct MenuTagTestSuite {
         }
         .id("clipboard")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

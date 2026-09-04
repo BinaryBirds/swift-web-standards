@@ -26,7 +26,7 @@ struct AriaPressedAttributeTestSuite {
             let tag = Button("toggle")
                 .ariaPressed(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

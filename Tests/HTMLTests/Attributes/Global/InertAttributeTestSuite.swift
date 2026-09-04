@@ -18,7 +18,7 @@ struct InertAttributeTestSuite {
         let tag = A {}
             .inert()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

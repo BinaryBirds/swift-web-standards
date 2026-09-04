@@ -18,7 +18,7 @@ struct CheckedAttributeTestSuite {
         let tag = Input()
             .checked()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

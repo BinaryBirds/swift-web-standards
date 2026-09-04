@@ -18,7 +18,7 @@ struct ShadowRootDelegatesFocusAttributeTestSuite {
         let tag = Template {}
             .shadowRootDelegatesFocus("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

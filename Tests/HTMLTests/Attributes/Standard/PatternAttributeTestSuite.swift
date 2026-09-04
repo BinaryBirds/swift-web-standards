@@ -18,7 +18,7 @@ struct PatternAttributeTestSuite {
         let tag = Input()
             .pattern("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

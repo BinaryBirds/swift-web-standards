@@ -29,7 +29,7 @@ struct ReferrerPolicyAttributeTestSuite {
             let tag = A {}
                 .referrerPolicy(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation: String

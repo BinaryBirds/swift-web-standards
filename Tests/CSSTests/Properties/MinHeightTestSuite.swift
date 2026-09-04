@@ -16,7 +16,7 @@ struct MinHeightTests {
     func initializers() {
         let property = MinHeight()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct MinHeightTests {
         let property = MinHeight()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct MinHeightTests {
         let inherit = MinHeight(.inherit)
         let initial = MinHeight(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "min-height: 200px")
         #expect(renderer.renderProperty(inherit) == "min-height: inherit")
         #expect(renderer.renderProperty(initial) == "min-height: initial")

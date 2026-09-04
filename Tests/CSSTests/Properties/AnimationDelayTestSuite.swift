@@ -16,7 +16,7 @@ struct AnimationDelayTests {
     func initializers() {
         let property = AnimationDelay()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct AnimationDelayTests {
         let property = AnimationDelay()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +44,7 @@ struct AnimationDelayTests {
         let milliseconds = AnimationDelay(.milliseconds(200))
         let inherit = AnimationDelay(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(zero) == "animation-delay: 0")
         #expect(renderer.renderProperty(seconds) == "animation-delay: 0.75s")
         #expect(

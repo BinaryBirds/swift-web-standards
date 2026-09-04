@@ -16,7 +16,7 @@ struct SwiftRSSTestSuite {
     func title() async throws {
         let tag = Loc("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -31,7 +31,7 @@ struct SwiftRSSTestSuite {
     func lastMod() async throws {
         let tag = LastMod("2016-09-01")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -46,7 +46,7 @@ struct SwiftRSSTestSuite {
     func changeFreq() async throws {
         let tag = ChangeFreq(.daily)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -61,7 +61,7 @@ struct SwiftRSSTestSuite {
     func priority() async throws {
         let tag = Priority(0.5)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -81,7 +81,7 @@ struct SwiftRSSTestSuite {
             Priority(0.5)
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -114,7 +114,7 @@ struct SwiftRSSTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(type: .xml, root: tag)
 
         let expectation = #"""
@@ -143,7 +143,7 @@ struct SwiftRSSTestSuite {
     func priorityFloatInit() async throws {
         let tag = Priority(Float(0.5))
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -158,7 +158,7 @@ struct SwiftRSSTestSuite {
     func priorityDoubleInit() async throws {
         let tag = Priority(Double(0.5))
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -173,7 +173,7 @@ struct SwiftRSSTestSuite {
     func priorityIntInit() async throws {
         let tag = Priority(1)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

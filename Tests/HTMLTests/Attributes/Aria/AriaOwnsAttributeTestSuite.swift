@@ -18,7 +18,7 @@ struct AriaOwnsAttributeTestSuite {
         let tag = A {}
             .ariaOwns("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

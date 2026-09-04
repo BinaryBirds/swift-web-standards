@@ -16,7 +16,7 @@ struct CaretColorTests {
     func initializers() {
         let property = CaretColor()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct CaretColorTests {
         let property = CaretColor()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct CaretColorTests {
         let color = CaretColor(.blue)
         let inherit = CaretColor(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(auto) == "caret-color: auto")
         #expect(renderer.renderProperty(color) == "caret-color: blue")
         #expect(renderer.renderProperty(inherit) == "caret-color: inherit")

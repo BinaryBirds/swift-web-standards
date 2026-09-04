@@ -16,7 +16,7 @@ struct BorderBottomWidthTests {
     func initializers() {
         let property = BorderBottomWidth()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BorderBottomWidthTests {
         let property = BorderBottomWidth()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct BorderBottomWidthTests {
         let length = BorderBottomWidth(2.px)
         let initial = BorderBottomWidth(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(keyword) == "border-bottom-width: thin")
         #expect(renderer.renderProperty(length) == "border-bottom-width: 2px")
         #expect(

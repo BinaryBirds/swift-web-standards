@@ -16,7 +16,7 @@ struct PerspectiveOriginTests {
     func initializers() {
         let property = PerspectiveOrigin()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct PerspectiveOriginTests {
         let property = PerspectiveOrigin()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

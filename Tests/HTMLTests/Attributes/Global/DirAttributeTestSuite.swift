@@ -25,7 +25,7 @@ struct DirAttributeTestSuite {
             let tag = P("lorem")
                 .dir(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

@@ -18,7 +18,7 @@ struct IntegrityAttributeTestSuite {
         let tag = Link(rel: .stylesheet)
             .integrity("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

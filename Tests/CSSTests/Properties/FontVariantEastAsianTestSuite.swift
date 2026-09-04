@@ -16,7 +16,7 @@ struct FontVariantEastAsianTests {
     func initializers() {
         let property = FontVariantEastAsian()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct FontVariantEastAsianTests {
         let property = FontVariantEastAsian()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

@@ -17,7 +17,7 @@ struct DatalistTagTestSuite {
     func initialization() async throws {
         let tag = Datalist("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -16,7 +16,7 @@ struct BorderBottomColorTests {
     func initializers() {
         let property = BorderBottomColor(.color(.red))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct BorderBottomColorTests {
         let property = BorderBottomColor(.color(.red))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct BorderBottomColorTests {
         let named = BorderBottomColor(.blueViolet)
         let inherit = BorderBottomColor(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(transparent)
                 == "border-bottom-color: transparent"

@@ -16,7 +16,7 @@ struct SwiftRSSTestSuite {
     func title() async throws {
         let tag = Title("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -31,7 +31,7 @@ struct SwiftRSSTestSuite {
     func description() async throws {
         let tag = Description("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -46,7 +46,7 @@ struct SwiftRSSTestSuite {
     func link() async throws {
         let tag = Link("http://localhost/")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -61,7 +61,7 @@ struct SwiftRSSTestSuite {
     func language() async throws {
         let tag = Language("en_US")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -76,7 +76,7 @@ struct SwiftRSSTestSuite {
     func lastBuildDate() async throws {
         let tag = LastBuildDate("2021-12-19")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -91,7 +91,7 @@ struct SwiftRSSTestSuite {
     func pubDate() async throws {
         let tag = PubDate("2021-12-19")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -106,7 +106,7 @@ struct SwiftRSSTestSuite {
     func ttl() async throws {
         let tag = Ttl(250)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -121,7 +121,7 @@ struct SwiftRSSTestSuite {
     func guid() async throws {
         let tag = Guid("http://localhost/")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -136,7 +136,7 @@ struct SwiftRSSTestSuite {
     func guidIsPermalink() async throws {
         let tag = Guid("http://localhost/", isPermalink: true)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -156,7 +156,7 @@ struct SwiftRSSTestSuite {
             PubDate("2021-12-19")
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -191,7 +191,7 @@ struct SwiftRSSTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -237,7 +237,7 @@ struct SwiftRSSTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(type: .xml, root: tag)
 
         let expectation = #"""

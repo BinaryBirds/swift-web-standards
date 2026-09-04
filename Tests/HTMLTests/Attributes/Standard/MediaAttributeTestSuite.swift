@@ -18,7 +18,7 @@ struct MediaAttributeTestSuite {
         let tag = A {}
             .media("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

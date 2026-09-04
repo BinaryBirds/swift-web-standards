@@ -27,7 +27,7 @@ struct KindAttributeTestSuite {
             let tag = Track(src: "foo.mp4")
                 .kind(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

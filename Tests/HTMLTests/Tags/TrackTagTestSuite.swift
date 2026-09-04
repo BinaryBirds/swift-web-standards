@@ -17,7 +17,7 @@ struct TrackTagTestSuite {
     func initialization() async throws {
         let tag = Track(src: "foo.mp4")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

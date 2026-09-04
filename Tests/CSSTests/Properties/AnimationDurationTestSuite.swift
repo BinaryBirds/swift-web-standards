@@ -16,7 +16,7 @@ struct AnimationDurationTests {
     func initializers() {
         let property = AnimationDuration()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct AnimationDurationTests {
         let property = AnimationDuration()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +44,7 @@ struct AnimationDurationTests {
         let milliseconds = AnimationDuration(.milliseconds(90))
         let inherit = AnimationDuration(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(zero) == "animation-duration: 0")
         #expect(renderer.renderProperty(seconds) == "animation-duration: 1.25s")
         #expect(

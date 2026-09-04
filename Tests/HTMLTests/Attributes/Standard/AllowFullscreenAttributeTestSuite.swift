@@ -18,7 +18,7 @@ struct AllowFullscreenAttributeTestSuite {
         let tag = Iframe {}
             .allowFullscreen("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

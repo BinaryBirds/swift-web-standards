@@ -18,7 +18,7 @@ struct MinAttributeTestSuite {
         let tag = Input()
             .min(1.5)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

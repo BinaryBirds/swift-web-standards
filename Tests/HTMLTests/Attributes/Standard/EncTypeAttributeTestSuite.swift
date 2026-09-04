@@ -25,7 +25,7 @@ struct EncTypeAttributeTestSuite {
             let tag = Form {}
                 .encType(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

@@ -18,7 +18,7 @@ struct IsAttributeTestSuite {
         let tag = A {}
             .`is`("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

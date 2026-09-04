@@ -26,7 +26,7 @@ struct AriaSortAttributeTestSuite {
             let tag = Th("heading")
                 .ariaSort(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

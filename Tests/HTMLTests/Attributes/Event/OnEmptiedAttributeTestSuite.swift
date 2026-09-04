@@ -18,7 +18,7 @@ struct OnEmptiedAttributeTestSuite {
         let tag = A {}
             .onEmptied("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

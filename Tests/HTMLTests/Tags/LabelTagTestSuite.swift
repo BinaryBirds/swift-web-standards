@@ -18,7 +18,7 @@ struct LabelTagTestSuite {
         let tag = Label("Lorem ipsum")
             .for("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -41,7 +41,7 @@ struct LabelTagTestSuite {
             }
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

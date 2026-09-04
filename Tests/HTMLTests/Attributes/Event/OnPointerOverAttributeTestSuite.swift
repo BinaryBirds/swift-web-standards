@@ -18,7 +18,7 @@ struct OnPointerOverAttributeTestSuite {
         let tag = A {}
             .onPointerOver("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

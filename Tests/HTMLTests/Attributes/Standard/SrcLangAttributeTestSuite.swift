@@ -18,7 +18,7 @@ struct SrcLangAttributeTestSuite {
         let tag = Track(src: "foo.mp4")
             .srcLang("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

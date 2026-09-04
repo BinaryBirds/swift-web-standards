@@ -17,7 +17,7 @@ struct BdoTagTestSuite {
     func initializationWithText() async throws {
         let tag = Bdo("hello", dir: .rtl)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -39,7 +39,7 @@ struct BdoTagTestSuite {
             dir: .ltr
         )
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

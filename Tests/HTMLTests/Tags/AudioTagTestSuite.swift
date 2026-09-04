@@ -26,7 +26,7 @@ struct AudioTagTestSuite {
         .muted()
         .loop()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -51,7 +51,7 @@ struct AudioTagTestSuite {
         .controls()
         .preload(.metadata)
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -73,7 +73,7 @@ struct AudioTagTestSuite {
             .crossOrigin(.useCredentials)
             .preload(PreloadAttributeValue.none)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

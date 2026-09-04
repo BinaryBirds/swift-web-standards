@@ -26,7 +26,7 @@ struct AriaRelevantAttributeTestSuite {
             let tag = Div {}
                 .ariaRelevant(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

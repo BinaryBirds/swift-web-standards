@@ -18,7 +18,7 @@ struct OnResetAttributeTestSuite {
         let tag = A {}
             .onReset("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct AutoFocusAttributeTestSuite {
         let tag = A {}
             .autoFocus()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

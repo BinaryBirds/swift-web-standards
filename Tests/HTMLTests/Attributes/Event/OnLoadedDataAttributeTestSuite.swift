@@ -18,7 +18,7 @@ struct OnLoadedDataAttributeTestSuite {
         let tag = A {}
             .onLoadedData("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

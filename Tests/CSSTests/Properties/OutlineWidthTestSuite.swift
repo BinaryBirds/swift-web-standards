@@ -16,7 +16,7 @@ struct OutlineWidthTests {
     func initializers() {
         let property = OutlineWidth()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -29,7 +29,7 @@ struct OutlineWidthTests {
         let property = OutlineWidth()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +43,7 @@ struct OutlineWidthTests {
         let length = OutlineWidth(.length(3.px))
         let inherit = OutlineWidth(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(thin) == "outline-width: thin")
         #expect(renderer.renderProperty(length) == "outline-width: 3px")
         #expect(renderer.renderProperty(inherit) == "outline-width: inherit")

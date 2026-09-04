@@ -18,7 +18,7 @@ struct OnClickAttributeTestSuite {
         let tag = A {}
             .onClick("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -18,7 +18,7 @@ struct OnRejectionHandledAttributeTestSuite {
         let tag = A {}
             .onRejectionHandled("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

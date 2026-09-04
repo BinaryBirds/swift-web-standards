@@ -18,7 +18,7 @@ struct OnVolumeChangeAttributeTestSuite {
         let tag = A {}
             .onVolumeChange("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

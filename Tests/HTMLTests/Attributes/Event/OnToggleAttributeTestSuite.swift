@@ -18,7 +18,7 @@ struct OnToggleAttributeTestSuite {
         let tag = A {}
             .onToggle("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
