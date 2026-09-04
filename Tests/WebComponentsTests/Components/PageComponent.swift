@@ -9,7 +9,7 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct PageComponent: Composite {
+struct PageComponent: Branch {
 
     private let child = FooComponent(text: "Component subtree")
 

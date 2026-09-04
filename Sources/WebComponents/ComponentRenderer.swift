@@ -11,11 +11,9 @@ public struct ComponentRenderer: Sendable {
 
     public init() {}
 
-    public func render<T: Leaf>(_ component: T) -> T.HTML {
-        component.renderHTML()
-    }
-
-    public func render<T: Composite>(_ component: T) -> T.HTML {
+    public func render<T: Renderable>(
+        _ component: T
+    ) -> T.RenderedHTML {
         component.renderHTML(renderer: self)
     }
 
@@ -26,7 +24,7 @@ public struct ComponentRenderer: Sendable {
             return leaf.renderHTML()
         }
 
-        if let container = component as? any Composite {
+        if let container = component as? any Branch {
             return container.renderHTML(renderer: self)
         }
 

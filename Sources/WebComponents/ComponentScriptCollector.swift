@@ -53,7 +53,7 @@ public struct ComponentScriptCollector: Sendable {
         state: inout State
     ) {
         collectLocalScripts(from: component, state: &state)
-        if let container = component as? any Composite {
+        if let container = component as? any Branch {
             for child in container.children {
                 collectLocalComponentScripts(from: child, state: &state)
             }

@@ -10,7 +10,7 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct ListComponent: Composite {
+struct ListComponent: Branch {
 
     private let item = ListItemComponent()
 

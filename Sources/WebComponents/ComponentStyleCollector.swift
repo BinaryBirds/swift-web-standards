@@ -34,7 +34,7 @@ public struct ComponentStyleCollector: Sendable {
         state: inout State
     ) {
         collectLocalRules(from: component, state: &state)
-        if let container = component as? any Composite {
+        if let container = component as? any Branch {
             for child in container.children {
                 collectLocalComponentRules(from: child, state: &state)
             }

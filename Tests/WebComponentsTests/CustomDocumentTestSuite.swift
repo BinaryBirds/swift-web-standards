@@ -45,19 +45,22 @@ struct CustomDocumentTestSuite {
     }
 }
 
-private struct CustomDocumentComponent: Composite {
+private struct CustomDocumentComponent: Branch {
 
     let state: CustomDocumentState
     private let head: CustomHeadComponent
-    private let body: CustomBodyComponent
+    private let body: CustomBodyComponent<CustomBodyChildComponent>
     private let styles = CustomStyleComponent()
 
     init(state: CustomDocumentState) {
         self.state = state
         self.head = CustomHeadComponent(title: state.title)
-        self.body = CustomBodyComponent(title: state.title)
+        self.body = CustomBodyComponent(
+            body: CustomBodyChildComponent(title: state.title)
+        )
     }
 
+    @Builder<any Component>
     var children: [any Component] {
         head
         styles
@@ -133,17 +136,17 @@ private struct CustomHeadComponent: Leaf {
     }
 }
 
-private struct CustomBodyComponent: Composite {
+private struct CustomBodyComponent<Content: Renderable>: Branch {
 
-    let child: CustomBodyChildComponent
+    let body: Content
 
-    init(title: String) {
-        self.child = CustomBodyChildComponent(title: title)
+    init(body: Content) {
+        self.body = body
     }
 
     @Builder<any Component>
     var children: [any Component] {
-        child
+        body
     }
 
     func selectors() -> [any CSS.Selector] {
@@ -157,7 +160,7 @@ private struct CustomBodyComponent: Composite {
     ) -> Body {
         Body {
             Div {
-                renderer.render(child)
+                renderer.render(body)
             }
             .class("custom-body")
         }

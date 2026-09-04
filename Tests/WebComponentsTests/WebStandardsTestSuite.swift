@@ -71,7 +71,7 @@ struct WebComponentsTestSuite {
 
 }
 
-private struct ScriptedParentComponent: Composite {
+private struct ScriptedParentComponent: Branch {
     private let leaves = [ScriptedLeafComponent(), ScriptedLeafComponent()]
     @Builder<String>
     func scripts() -> [String] {
@@ -105,7 +105,7 @@ private struct ScriptedLeafComponent: Leaf {
     func renderHTML() -> P { P("leaf") }
 }
 
-private struct BuilderComponent: Composite {
+private struct BuilderComponent: Branch {
     let includeGroup: Bool
     let group: ComponentGroup
 
