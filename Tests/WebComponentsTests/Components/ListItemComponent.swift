@@ -7,13 +7,19 @@
 import CSS
 import HTML
 import SGML
-import Utils
+import WebBuilders
 import WebComponents
 
-struct ListItemComponent: LeafComponent {
-    func selectors() -> [any Selector] { Class("list-item") { Color(.red) } }
+struct ListItemComponent: Leaf {
+
+    func selectors() -> [any Selector] {
+        Class("list-item") {
+            Color(.red)
+        }
+    }
 
     func renderHTML() -> any Element {
-        P("List item").class("list-item")
+        P("List item")
+            .class("list-item")
     }
 }

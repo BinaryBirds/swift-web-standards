@@ -5,7 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
-import Utils
+import WebBuilders
 
 /// The `<label>` tag defines a label for several elements.
 ///

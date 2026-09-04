@@ -34,8 +34,10 @@ public struct ComponentStylesheetCollector: Sendable {
         state: inout State
     ) {
         collectLocalRules(from: component, state: &state)
-        for child in component.body {
-            collectLocalComponentRules(from: child, state: &state)
+        if let container = component as? any Composite {
+            for child in container.body {
+                collectLocalComponentRules(from: child, state: &state)
+            }
         }
     }
 

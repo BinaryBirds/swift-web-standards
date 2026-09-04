@@ -9,7 +9,7 @@ import CSS
 import DOM
 import HTML
 import SGML
-import Utils
+import WebBuilders
 
 public protocol GlobalStyleComponent {
 

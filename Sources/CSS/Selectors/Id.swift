@@ -4,7 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
-import Utils
+import WebBuilders
 
 /// CSS id selector (e.g. `#header`).
 public struct Id: Selector {

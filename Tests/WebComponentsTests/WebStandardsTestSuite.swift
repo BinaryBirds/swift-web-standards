@@ -9,7 +9,7 @@ import DOM
 import HTML
 import SGML
 import Testing
-import Utils
+import WebBuilders
 
 @testable import WebComponents
 
@@ -17,9 +17,9 @@ import Utils
 struct WebComponentsTestSuite {
 
     @Test
-    func componentTreeRendersAsHTML() {
+    func componentTreeRendersAsHTML() throws {
         let root = PageComponent()
-        let html = ComponentRenderer().render(root)
+        let html = try #require(ComponentRenderer().render(root))
         let result = Renderer().render(document: Document(root: html))
 
         #expect(result == "<div><span>Component subtree</span></div>")
@@ -35,6 +35,17 @@ struct WebComponentsTestSuite {
 
         #expect(css == ".list-component{color:green}.list-item{color:red}")
         #expect(javascript.isEmpty)
+    }
+
+    @Test
+    func plainComponentsCanContributeJavaScriptWithoutHTML() {
+        let component = ScriptOnlyComponent()
+
+        #expect(ComponentRenderer().render(component) == nil)
+        #expect(
+            ComponentJavaScriptCollector().getJavaScript(from: component)
+                == "window.analyticsReady = true;"
+        )
     }
 
     @Test
@@ -75,7 +86,7 @@ struct WebComponentsTestSuite {
     }
 }
 
-private struct ScriptedParentComponent: ContainerComponent {
+private struct ScriptedParentComponent: Composite {
     @Builder<String>
     func scripts() -> [String] {
         "window.parentReady = true;"
@@ -91,14 +102,21 @@ private struct ScriptedParentComponent: ContainerComponent {
     }
 }
 
-private struct ScriptedLeafComponent: LeafComponent {
+private struct ScriptOnlyComponent: Component {
+    @Builder<String>
+    func scripts() -> [String] {
+        "window.analyticsReady = true;"
+    }
+}
+
+private struct ScriptedLeafComponent: Leaf {
     @Builder<String>
     func scripts() -> [String] { "window.leafReady = true;" }
 
     func renderHTML() -> any Element { P("leaf") }
 }
 
-private struct BuilderComponent: ContainerComponent {
+private struct BuilderComponent: Composite {
     let includeGroup: Bool
     let group: ComponentGroup
 

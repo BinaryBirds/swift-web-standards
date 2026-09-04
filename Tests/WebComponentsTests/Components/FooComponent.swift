@@ -6,10 +6,10 @@
 
 import HTML
 import SGML
-import Utils
+import WebBuilders
 import WebComponents
 
-struct FooComponent: LeafComponent {
+struct FooComponent: Leaf {
 
     let text: String
 

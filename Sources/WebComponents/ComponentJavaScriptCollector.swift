@@ -43,8 +43,10 @@ public struct ComponentJavaScriptCollector: Sendable {
         state: inout State
     ) {
         collectLocalScripts(from: component, state: &state)
-        for child in component.body {
-            collectLocalComponentScripts(from: child, state: &state)
+        if let container = component as? any Composite {
+            for child in container.body {
+                collectLocalComponentScripts(from: child, state: &state)
+            }
         }
     }
 

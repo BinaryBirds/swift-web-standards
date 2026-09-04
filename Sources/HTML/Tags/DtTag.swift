@@ -5,7 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
-import Utils
+import WebBuilders
 
 /// The `<dt>` tag defines a term/name in a description list.
 ///

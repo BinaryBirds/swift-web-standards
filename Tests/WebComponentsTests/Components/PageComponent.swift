@@ -6,10 +6,10 @@
 
 import HTML
 import SGML
-import Utils
+import WebBuilders
 import WebComponents
 
-struct PageComponent: ContainerComponent {
+struct PageComponent: Composite {
 
     var body: [any Component] {
         FooComponent(text: "Component subtree")

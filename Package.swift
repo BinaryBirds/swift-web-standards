@@ -43,7 +43,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Utils",
+            name: "WebBuilders",
             dependencies: [
 
             ],
@@ -60,7 +60,7 @@ let package = Package(
             name: "SGML",
             dependencies: [
                 .product(name: "Collections", package: "swift-collections"),
-                .target(name: "Utils"),
+                .target(name: "WebBuilders"),
                 .target(name: "DOM"),
             ],
             swiftSettings: defaultSwiftSettings
@@ -97,7 +97,7 @@ let package = Package(
         .target(
             name: "CSS",
             dependencies: [
-                .target(name: "Utils"),
+                .target(name: "WebBuilders"),
             ],
             swiftSettings: defaultSwiftSettings
         ),

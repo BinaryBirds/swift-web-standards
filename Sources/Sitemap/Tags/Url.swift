@@ -5,7 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
-import Utils
+import WebBuilders
 
 /// A `<url>` element representing a single URL entry in a sitemap.
 ///

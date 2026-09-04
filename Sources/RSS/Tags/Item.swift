@@ -5,7 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 29.
 
 import SGML
-import Utils
+import WebBuilders
 
 /// An RSS `<item>` element representing a single entry in a feed.
 ///

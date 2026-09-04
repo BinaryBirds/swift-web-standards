@@ -4,7 +4,7 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
-import Utils
+import WebBuilders
 
 /// Represents an `@media` rule with optional query conditions.
 public struct Media: Rule {

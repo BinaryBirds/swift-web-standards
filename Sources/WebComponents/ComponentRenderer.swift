@@ -13,18 +13,22 @@ public struct ComponentRenderer: Sendable {
 
     public func render(
         _ component: any Component
-    ) -> any SGML.Element {
-        if let leaf = component as? any LeafComponent {
-            return leaf.renderHTML()
+    ) -> (any SGML.Element)? {
+        renderComponents(component).first
+    }
+
+    private func renderComponents(
+        _ component: any Component
+    ) -> [any SGML.Element] {
+        if let leaf = component as? any Leaf {
+            return [leaf.renderHTML()]
         }
 
-        guard let container = component as? any ContainerComponent else {
-            preconditionFailure(
-                "Component must conform to LeafComponent or ContainerComponent"
-            )
+        if let container = component as? any Composite {
+            let children = container.body.flatMap { renderComponents($0) }
+            return [container.renderHTML(children: children)]
         }
 
-        let children = container.body.map { render($0) }
-        return container.renderHTML(children: children)
+        return []
     }
 }

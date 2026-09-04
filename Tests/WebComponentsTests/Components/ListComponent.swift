@@ -7,10 +7,10 @@
 import CSS
 import HTML
 import SGML
-import Utils
+import WebBuilders
 import WebComponents
 
-struct ListComponent: ContainerComponent {
+struct ListComponent: Composite {
 
     func selectors() -> [any Selector] {
         Class("list-component") { Color(.green) }

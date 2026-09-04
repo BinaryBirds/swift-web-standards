@@ -7,10 +7,10 @@
 import CSS
 import HTML
 import SGML
-import Utils
+import WebBuilders
 import WebComponents
 
-struct MySimpleComponent: LeafComponent {
+struct MySimpleComponent: Leaf {
     let text: String
 
     func selectors() -> [any Selector] {

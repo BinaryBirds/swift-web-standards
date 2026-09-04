@@ -9,7 +9,7 @@ import DOM
 import HTML
 import SGML
 import Testing
-import Utils
+import WebBuilders
 
 @testable import WebComponents
 
@@ -17,8 +17,10 @@ import Utils
 struct ComponentTestSuite {
 
     @Test
-    func componentRendering() {
-        let html = ComponentRenderer().render(MySimpleComponent(text: "lorem"))
+    func componentRendering() throws {
+        let html = try #require(
+            ComponentRenderer().render(MySimpleComponent(text: "lorem"))
+        )
         let result = Renderer(indent: 4)
             .render(document: Document(root: html))
 
@@ -29,8 +31,8 @@ struct ComponentTestSuite {
     }
 
     @Test
-    func componentRenderingTree() {
-        let html = ComponentRenderer().render(ListComponent())
+    func componentRenderingTree() throws {
+        let html = try #require(ComponentRenderer().render(ListComponent()))
         let result = Renderer().render(document: Document(root: html))
 
         #expect(

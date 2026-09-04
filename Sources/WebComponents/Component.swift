@@ -7,12 +7,10 @@
 
 import CSS
 import SGML
-import Utils
+import WebBuilders
 
 public protocol Component: Sendable {
 
-    @Builder<any Component>
-    var body: [any Component] { get }
     var identifier: String { get }
 
     @Builder<any CSS.Rule>
@@ -25,12 +23,15 @@ public protocol Component: Sendable {
     func scripts() -> [String]
 }
 
-public protocol LeafComponent: Component {
+public protocol Leaf: Component {
 
     func renderHTML() -> any SGML.Element
 }
 
-public protocol ContainerComponent: Component {
+public protocol Composite: Component {
+
+    @Builder<any Component>
+    var body: [any Component] { get }
 
     func renderHTML(
         children: [any SGML.Element]
@@ -56,10 +57,6 @@ extension Component {
     }
 
     public func scripts() -> [String] {
-        []
-    }
-
-    public var body: [any Component] {
         []
     }
 

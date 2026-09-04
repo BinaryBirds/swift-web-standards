@@ -6,7 +6,7 @@
 
 import SGML
 import Testing
-import Utils
+import WebBuilders
 
 @testable import SVG
 

@@ -7,7 +7,7 @@
 import SGML
 import Sitemap
 import Testing
-import Utils
+import WebBuilders
 
 @Suite
 struct SwiftRSSTestSuite {

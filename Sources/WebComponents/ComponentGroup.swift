@@ -6,7 +6,7 @@
 //
 
 import SGML
-import Utils
+import WebBuilders
 
 public struct ComponentGroup: Sendable {
 
