@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import Utils
 
 @testable import HTML
 @testable import SVG

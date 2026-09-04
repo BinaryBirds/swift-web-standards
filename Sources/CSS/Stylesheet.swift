@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import Utils
+
 /// Top-level CSS stylesheet container.
 public struct Stylesheet: Sendable {
 
@@ -21,7 +23,7 @@ public struct Stylesheet: Sendable {
     /// Creates a stylesheet using the CSS result builder.
     /// - Parameter builder: A builder that returns rule instances.
     public init(
-        @Builder<Rule> _ builder: () -> [Rule]
+        @Builder<any Rule> _ builder: () -> [Rule]
     ) {
         self.rules = builder()
     }

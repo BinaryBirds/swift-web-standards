@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 29.
 
 import SGML
+import Utils
 
 /// An RSS `<channel>` element representing the metadata and contents of a feed.
 ///

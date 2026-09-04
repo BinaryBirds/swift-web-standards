@@ -10,7 +10,7 @@ var defaultSwiftSettings: [SwiftSetting] = [
     // https://forums.swift.org/t/experimental-support-for-lifetime-dependencies-in-swift-6-2-and-beyond/78638
     .enableExperimentalFeature("Lifetimes"),
     // https://github.com/swiftlang/swift/pull/65218
-    .enableExperimentalFeature("AvailabilityMacro=swiftWebStandards 1.0:macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0"),
+    .enableExperimentalFeature("AvailabilityMacro=WebComponents 1.0:macOS 15.0, iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0"),
 ]
 
 #if compiler(>=6.2)
@@ -32,7 +32,7 @@ let package = Package(
         .library(name: "SVG", targets: ["SVG"]),
         .library(name: "Sitemap", targets: ["Sitemap"]),
         .library(name: "MIME", targets: ["MIME"]),
-        .library(name: "WebStandards", targets: ["WebStandards"]),
+        .library(name: "WebComponents", targets: ["WebComponents"]),
     ],
     dependencies: [
         // [docc-plugin-placeholder]
@@ -43,13 +43,24 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "Utils",
+            dependencies: [
+
+            ],
+            swiftSettings: defaultSwiftSettings
+        ),
+        .target(
             name: "DOM",
+            dependencies: [
+
+            ],
             swiftSettings: defaultSwiftSettings
         ),
         .target(
             name: "SGML",
             dependencies: [
                 .product(name: "Collections", package: "swift-collections"),
+                .target(name: "Utils"),
                 .target(name: "DOM"),
             ],
             swiftSettings: defaultSwiftSettings
@@ -85,22 +96,25 @@ let package = Package(
         ),
         .target(
             name: "CSS",
+            dependencies: [
+                .target(name: "Utils"),
+            ],
             swiftSettings: defaultSwiftSettings
         ),
         .target(
             name: "MIME",
+            dependencies: [
+
+            ],
             swiftSettings: defaultSwiftSettings
         ),
         .target(
-            name: "WebStandards",
+            name: "WebComponents",
             dependencies: [
-                .target(name: "DOM"),
                 .target(name: "MIME"),
-                .target(name: "SGML"),
                 .target(name: "CSS"),
                 .target(name: "HTML"),
                 .target(name: "RSS"),
-                .target(name: "SVG"),
                 .target(name: "Sitemap"),
             ],
             swiftSettings: defaultSwiftSettings
@@ -163,9 +177,9 @@ let package = Package(
             swiftSettings: defaultSwiftSettings
         ),
         .testTarget(
-            name: "WebStandardsTests",
+            name: "WebComponentsTests",
             dependencies: [
-                .target(name: "WebStandards"),
+                .target(name: "WebComponents"),
             ],
             swiftSettings: defaultSwiftSettings
         ),

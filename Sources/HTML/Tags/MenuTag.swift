@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import Utils
 
 /// The `<menu>` tag represents a group of commands or a list of items.
 public struct Menu:

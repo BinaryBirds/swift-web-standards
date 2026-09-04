@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import Utils
 
 /// The `<summary>` tag defines a visible heading for the `<details>` element.
 ///

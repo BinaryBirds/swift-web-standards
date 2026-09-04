@@ -5,7 +5,6 @@
 //  Created by Binary Birds on 2026. 03. 06.
 
 import CSS
-import SGML
 
 public struct ComponentStylesheetCollector: Sendable {
 
@@ -20,10 +19,10 @@ public struct ComponentStylesheetCollector: Sendable {
     }
 
     public func getStylesheet(
-        from element: any SGML.Element
+        from component: any Component
     ) -> CSS.Stylesheet {
         var state = State()
-        collectLocalComponentRules(from: element, state: &state)
+        collectLocalComponentRules(from: component, state: &state)
         let rules = state.componentOrder.flatMap {
             state.rulesByComponent[$0] ?? []
         }
@@ -31,16 +30,12 @@ public struct ComponentStylesheetCollector: Sendable {
     }
 
     private func collectLocalComponentRules(
-        from element: any SGML.Element,
+        from component: any Component,
         state: inout State
     ) {
-        if let component = element as? any Component {
-            collectLocalRules(from: component, state: &state)
-        }
-        if let container = element as? any SGML.Container {
-            for child in container.children {
-                collectLocalComponentRules(from: child, state: &state)
-            }
+        collectLocalRules(from: component, state: &state)
+        for child in component.body {
+            collectLocalComponentRules(from: child, state: &state)
         }
     }
 
@@ -54,6 +49,5 @@ public struct ComponentStylesheetCollector: Sendable {
         }
         state.rulesByComponent[identifier] = component.rules()
         state.componentOrder.append(identifier)
-        collectLocalComponentRules(from: component.htmlBody(), state: &state)
     }
 }

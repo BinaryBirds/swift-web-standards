@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import Utils
 
 /// The `<tfoot>` tag is used to group footer content in an HTML table.
 ///

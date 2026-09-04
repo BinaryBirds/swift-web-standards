@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import Utils
 
 /// The `<selectedcontent>` tag represents selected content for the parent control.
 public struct SelectedContent:

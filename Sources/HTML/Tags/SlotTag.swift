@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import Utils
 
 /// The `<slot>` tag defines a placeholder in a web component.
 public struct Slot:

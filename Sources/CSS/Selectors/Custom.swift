@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import Utils
+
 /// Custom selector wrapper for arbitrary selector strings.
 public struct Custom: Selector {
 
@@ -20,7 +22,7 @@ public struct Custom: Selector {
     ///   - builder: Builder that returns property declarations.
     public init(
         _ name: String,
-        @Builder<Property> _ builder: () -> [any Property]
+        @Builder<any Property> _ builder: () -> [any Property]
     ) {
         self.name = name
         self.properties = builder()

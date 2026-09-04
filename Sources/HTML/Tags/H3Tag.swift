@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import Utils
 
 /// The `<h1>` to `<h6>` tags are used to define HTML headings.
 ///

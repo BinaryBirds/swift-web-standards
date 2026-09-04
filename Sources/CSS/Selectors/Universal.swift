@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import Utils
+
 /// CSS universal selector (`*`).
 public struct Universal: Selector {
 
@@ -17,7 +19,7 @@ public struct Universal: Selector {
     /// Creates a universal selector.
     /// - Parameter builder: Builder that returns property declarations.
     public init(
-        @Builder<Property> _ builder: () -> [any Property]
+        @Builder<any Property> _ builder: () -> [any Property]
     ) {
         self.name = "*"
         self.properties = builder()

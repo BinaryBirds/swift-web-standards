@@ -9,26 +9,19 @@ import CSS
 import DOM
 import HTML
 import SGML
+import Utils
 
 public protocol GlobalStyleComponent {
 
-    static var className: String { get }
-
-    @CSS.Builder<CSS.Rule>
+    @Builder<any CSS.Rule>
     static func rules() -> [any CSS.Rule]
 
-    @CSS.Builder<CSS.Selector>
+    @Builder<any CSS.Selector>
     static func selectors() -> [any CSS.Selector]
 
-    @CSS.Builder<CSS.Property>
-    static func properties() -> [any CSS.Property]
 }
 
 extension GlobalStyleComponent {
-
-    public static var className: String {
-        camelToHyphens(String(describing: self))
-    }
 
     public static func rules() -> [any CSS.Rule] {
         let selectors = Self.selectors()
@@ -41,16 +34,6 @@ extension GlobalStyleComponent {
     }
 
     public static func selectors() -> [any CSS.Selector] {
-        let properties = Self.properties()
-        guard !properties.isEmpty else {
-            return []
-        }
-        return [
-            Class(name: Self.className, properties: properties)
-        ]
-    }
-
-    public static func properties() -> [any CSS.Property] {
         []
     }
 }

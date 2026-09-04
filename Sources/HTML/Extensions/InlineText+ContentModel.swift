@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 06. 04.
 
 import SGML
+import Utils
 
 /// Add content model support to InlineText
 extension InlineText:

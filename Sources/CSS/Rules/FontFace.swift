@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import Utils
+
 /// Represents an `@font-face` rule.
 public struct FontFace: Rule {
 
@@ -13,7 +15,7 @@ public struct FontFace: Rule {
     /// Creates a font-face rule.
     /// - Parameter builder: A builder that returns property declarations.
     public init(
-        @Builder<Property> _ builder: () -> [any Property]
+        @Builder<any Property> _ builder: () -> [any Property]
     ) {
         self.properties = builder()
     }

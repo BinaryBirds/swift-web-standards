@@ -75,7 +75,7 @@ Available libraries:
 - `SVG`
 - `Sitemap`
 - `MIME`
-- `WebStandards` (bundles all from above)
+- `WebComponents` (bundles all from above)
 
 ## DOM
 
