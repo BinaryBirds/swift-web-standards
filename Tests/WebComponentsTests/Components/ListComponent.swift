@@ -10,14 +10,22 @@ import SGML
 import Utils
 import WebComponents
 
-struct ListComponent: Component {
+struct ListComponent: ContainerComponent {
+
     func selectors() -> [any Selector] {
         Class("list-component") { Color(.green) }
     }
 
-    var body: [any Component] { ListItemComponent() }
+    var body: [any Component] {
+        ListItemComponent()
+    }
 
-    func renderHTML(children: [any Element]) -> any Element {
-        Div { for child in children { child } }.class("list-component")
+    func renderHTML(
+        children: [any Element]
+    ) -> any Element {
+        Div {
+            children
+        }
+        .class("list-component")
     }
 }

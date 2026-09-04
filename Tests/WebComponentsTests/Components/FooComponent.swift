@@ -9,10 +9,11 @@ import SGML
 import Utils
 import WebComponents
 
-struct FooComponent: Component {
+struct FooComponent: LeafComponent {
+
     let text: String
 
-    func renderHTML(children: [any Element]) -> any Element {
+    func renderHTML() -> any Element {
         Span(text)
     }
 }

@@ -75,7 +75,7 @@ struct WebComponentsTestSuite {
     }
 }
 
-private struct ScriptedParentComponent: Component {
+private struct ScriptedParentComponent: ContainerComponent {
     @Builder<String>
     func scripts() -> [String] {
         "window.parentReady = true;"
@@ -91,14 +91,14 @@ private struct ScriptedParentComponent: Component {
     }
 }
 
-private struct ScriptedLeafComponent: Component {
+private struct ScriptedLeafComponent: LeafComponent {
     @Builder<String>
     func scripts() -> [String] { "window.leafReady = true;" }
 
-    func renderHTML(children: [any Element]) -> any Element { P("leaf") }
+    func renderHTML() -> any Element { P("leaf") }
 }
 
-private struct BuilderComponent: Component {
+private struct BuilderComponent: ContainerComponent {
     let includeGroup: Bool
     let group: ComponentGroup
 

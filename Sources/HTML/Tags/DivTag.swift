@@ -41,7 +41,7 @@ public struct Div:
     }
 
     public init(
-        @Builder<Element> _ block: () -> [Element]
+        @Builder<any Element> _ block: () -> [any Element]
     ) {
         self.init(children: block())
     }

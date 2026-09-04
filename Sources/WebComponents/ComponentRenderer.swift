@@ -14,7 +14,17 @@ public struct ComponentRenderer: Sendable {
     public func render(
         _ component: any Component
     ) -> any SGML.Element {
-        let children = component.body.map { render($0) }
-        return component.renderHTML(children: children)
+        if let leaf = component as? any LeafComponent {
+            return leaf.renderHTML()
+        }
+
+        guard let container = component as? any ContainerComponent else {
+            preconditionFailure(
+                "Component must conform to LeafComponent or ContainerComponent"
+            )
+        }
+
+        let children = container.body.map { render($0) }
+        return container.renderHTML(children: children)
     }
 }

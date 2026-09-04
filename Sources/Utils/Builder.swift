@@ -9,6 +9,12 @@
 public enum Builder<Element> {
 
     public static func buildExpression(
+        _ expression: [Element]
+    ) -> [Element] {
+        expression
+    }
+
+    public static func buildExpression(
         _ expression: Element
     ) -> [Element] {
         [expression]

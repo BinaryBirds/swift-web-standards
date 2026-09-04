@@ -10,10 +10,10 @@ import SGML
 import Utils
 import WebComponents
 
-struct ListItemComponent: Component {
+struct ListItemComponent: LeafComponent {
     func selectors() -> [any Selector] { Class("list-item") { Color(.red) } }
 
-    func renderHTML(children: [any Element]) -> any Element {
+    func renderHTML() -> any Element {
         P("List item").class("list-item")
     }
 }

@@ -23,6 +23,14 @@ public protocol Component: Sendable {
 
     @Builder<String>
     func scripts() -> [String]
+}
+
+public protocol LeafComponent: Component {
+
+    func renderHTML() -> any SGML.Element
+}
+
+public protocol ContainerComponent: Component {
 
     func renderHTML(
         children: [any SGML.Element]
@@ -54,4 +62,5 @@ extension Component {
     public var body: [any Component] {
         []
     }
+
 }
