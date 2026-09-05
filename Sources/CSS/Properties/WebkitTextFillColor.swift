@@ -1,3 +1,9 @@
+//
+//  WebkitTextFillColor.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 09. 05.
+
 /// CSS `-webkit-text-fill-color` property.
 /// Provides typed color values for this declaration.
 public struct WebkitTextFillColor: Property {
