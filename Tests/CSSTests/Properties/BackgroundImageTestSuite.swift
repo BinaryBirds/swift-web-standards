@@ -44,9 +44,9 @@ struct BackgroundImageTests {
         let gradient = LinearGradient(
             direction: .angle(180.deg),
             stops: [
-                .init("0A9AA5", 15.percent),
-                .init("068892", 55.percent),
-                .init("046C74", 90.percent),
+                .init("#0A9AA5", 15.percent),
+                .init("#068892", 55.percent),
+                .init("#046C74", 90.percent),
             ]
         )
 
@@ -66,9 +66,9 @@ struct BackgroundImageTests {
         let gradient = LinearGradient(
             direction: .to(.corner(.bottom, .right)),
             stops: [
-                .init("0A9AA5", 15.percent),
-                .init("068892", 55.percent),
-                .init("046C74", 90.percent),
+                .init("#0A9AA5", 15.percent),
+                .init("#068892", 55.percent),
+                .init("#046C74", 90.percent),
             ]
         )
 
@@ -88,8 +88,8 @@ struct BackgroundImageTests {
         let gradient = LinearGradient(
             direction: nil,
             stops: [
-                .init("0A9AA5"),
-                .init("068892"),
+                .init("#0A9AA5"),
+                .init("#068892"),
             ]
         )
 
@@ -109,8 +109,8 @@ struct BackgroundImageTests {
         let gradient = LinearGradient(
             direction: .angle(180.deg),
             stops: [
-                .init("0A9AA5", 15.percent, 20.percent),  // hard stop
-                .init("046C74", 90.percent),
+                .init("#0A9AA5", 15.percent, 20.percent),  // hard stop
+                .init("#046C74", 90.percent),
             ]
         )
 

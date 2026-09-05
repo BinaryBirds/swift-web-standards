@@ -16,6 +16,13 @@ public enum CSSColorValue: Sendable {
     /// Inherited value.
     case inherit
 
+    /// A CSS custom property reference, such as `var(--brand-color)`.
+    public static func variable(
+        _ name: String
+    ) -> Self {
+        .color(.variable(name))
+    }
+
     /// Rendered CSS color string.
     var rawValue: String {
         switch self {

@@ -6,7 +6,7 @@
 //
 
 /// Renders stylesheets, rules, selectors, and properties into CSS strings.
-public struct CSSRenderer {
+public struct CSSRenderer: Sendable {
 
     /// Whether output should be minified.
     public let minify: Bool

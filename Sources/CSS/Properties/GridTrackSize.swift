@@ -12,6 +12,8 @@ public enum GridTrackSize: Sendable {
     case maxContent
     /// Track sized to the smallest content contribution.
     case minContent
+    /// A CSS custom property reference, such as `var(--track-size)`.
+    case variable(String)
     /// Track sized with a CSS length/percentage unit.
     case length(UnitRepresentable)
     /// Track sized with a CSS fraction (`fr`) unit.
@@ -25,6 +27,8 @@ public enum GridTrackSize: Sendable {
             return "max-content"
         case .minContent:
             return "min-content"
+        case .variable(let name):
+            return name.variable
         case .length(let value):
             return value.rawValue
         case .fraction(let value):

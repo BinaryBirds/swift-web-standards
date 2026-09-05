@@ -30,6 +30,9 @@ public struct BackgroundImage: Property {
         ///
         /// Renders as: `none`
         case none
+
+        /// A CSS custom property reference, such as `var(--hero-image)`.
+        case variable(String)
         // @TODO: add gradient support
         //    case radial-gradient()    Sets a radial gradient as the background image. Define at least two colors (center to edges)
         //    case repeating-linear-gradient()    Repeats a linear gradient
@@ -54,6 +57,8 @@ public struct BackgroundImage: Property {
             switch self {
             case .none:
                 return "none"
+            case .variable(let name):
+                return name.variable
             case .url(let value):
                 return "url('\(value)')"
             case .linearGradient(let gradient):

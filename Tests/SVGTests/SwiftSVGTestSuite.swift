@@ -49,6 +49,15 @@ struct SwiftSVGTestSuite {
     }
 
     @Test
+    func strokeSupportsCustomPropertyReferences() async throws {
+        let tag = Circle(cx: 1, cy: 2, r: 3)
+            .stroke("var(--stroke-color)")
+        let result = SGMLRenderer().render(document: Document(root: tag))
+
+        #expect(result.contains("stroke=\"var(--stroke-color)\""))
+    }
+
+    @Test
     func basicPolygon() async throws {
         let tag = Polygon([1, 2, 3, 4])
 
