@@ -20,7 +20,7 @@ public struct ColumnCount: Property {
         case inherit
 
         /// Creates a `column-count` declaration.
-        /// Used by `StylesheetRenderer` when emitting CSS.
+        /// Used by `CSSRenderer` when emitting CSS.
         /// - Parameter value: The property value.
         public init(integerLiteral value: IntegerLiteralType) {
             self = .number(value)

@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import WebBuilders
+
 /// CSS `:root` selector.
 public struct Root: Selector {
 
@@ -17,7 +19,7 @@ public struct Root: Selector {
     /// Creates a root selector.
     /// - Parameter builder: Builder that returns property declarations.
     public init(
-        @Builder<Property> _ builder: () -> [any Property]
+        @Builder<any Property> _ builder: () -> [any Property]
     ) {
         self.name = ":root"
         self.properties = builder()

@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -23,7 +24,7 @@ struct SwiftCssTests {
             }
         }
         #expect(
-            StylesheetRenderer(minify: true, indent: 2).render(css)
+            CSSRenderer(minify: true, indent: 2).render(css)
                 == #"@charset "UTF-8";:root{margin:8.5px 8px;padding:8.5px 8px}"#
         )
     }
@@ -39,9 +40,9 @@ struct SwiftCssTests {
                 }
             }
         }
-        print(StylesheetRenderer(indent: 2).render(css))
+        print(CSSRenderer(indent: 2).render(css))
         #expect(
-            StylesheetRenderer(indent: 2).render(css) == #"""
+            CSSRenderer(indent: 2).render(css) == #"""
                 @charset "UTF-8";
                 :root {
                   margin: 8.5px 8px;
@@ -82,7 +83,7 @@ struct SwiftCssTests {
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 @charset "UTF-8";
                 :root {
                     margin: 8.5px 8px;
@@ -136,7 +137,7 @@ struct SwiftCssTests {
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 :root {
                     --size: 400px;
                 }
@@ -188,7 +189,7 @@ struct SwiftCssTests {
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 :root {
                     background: red;
                 }

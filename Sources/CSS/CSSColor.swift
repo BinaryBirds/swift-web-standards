@@ -13,23 +13,33 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
         colorValue = raw
     }
 
-    //    init(hex: String) {
-    //        css = hex
-    //    }
-
     /// Creates a color from a hex string literal.
     ///
     /// Valid lengths are 3, 4, 6, 7, 8, or 9 characters, with an optional `#` prefix.
     /// - Parameter value: The hex string literal.
-    public init(stringLiteral value: StringLiteralType) {
-        colorValue = value
+    public init(
+        hex value: String
+    ) {
         /// check if length is valid (000, #000, cafe00, #cafe00, 12345678, #123456789).
         assert([3, 4, 6, 7, 8, 9].contains(value.count), "Invalid hex string")
 
         /// add # prefix if missing.
-        if !colorValue.hasPrefix("#") {
-            colorValue = "#" + colorValue
+        if !value.hasPrefix("#") {
+            colorValue = "#" + value
         }
+        else {
+            colorValue = value
+        }
+    }
+
+    /// Creates a color from an arbitrary CSS color value.
+    ///
+    /// This can be used for newer CSS color functions and custom property
+    /// references that do not have a dedicated typed initializer.
+    public init(
+        stringLiteral value: StringLiteralType
+    ) {
+        colorValue = value
     }
 
     /// Creates an RGB or RGBA color from integer channels.
@@ -38,7 +48,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
     ///   - g: Green channel (0...255).
     ///   - b: Blue channel (0...255).
     ///   - a: Optional alpha channel (0.0...1.0).
-    public init(r: Int, g: Int, b: Int, a: Double? = nil) {
+    public init(
+        r: Int,
+        g: Int,
+        b: Int,
+        a: Double? = nil
+    ) {
         colorValue = "\(r),\(g),\(b)"
         if let a = a {
             colorValue = "rgba(" + colorValue + ", \(a))"
@@ -54,7 +69,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
     ///   - g: Green percent (0...100).
     ///   - b: Blue percent (0...100).
     ///   - a: Optional alpha channel (0.0...1.0).
-    public init(r: Double, g: Double, b: Double, a: Double? = nil) {
+    public init(
+        r: Double,
+        g: Double,
+        b: Double,
+        a: Double? = nil
+    ) {
         colorValue = "\(r)%,\(g)%,\(b)%"
         if let a = a {
             colorValue = "rgba(" + colorValue + ", \(a))"
@@ -70,7 +90,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
     ///   - s: Saturation percent.
     ///   - l: Lightness percent.
     ///   - a: Optional alpha channel (0.0...1.0).
-    public init(h: Int, s: Int, l: Int, a: Double? = nil) {
+    public init(
+        h: Int,
+        s: Int,
+        l: Int,
+        a: Double? = nil
+    ) {
         colorValue = "\(h),\(s),\(l)"
         if let a = a {
             colorValue = "hsla(" + colorValue + ", \(a))"
@@ -86,7 +111,12 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
     ///   - s: Saturation percent.
     ///   - l: Lightness percent.
     ///   - a: Optional alpha channel (0.0...1.0).
-    public init(h: Double, s: Double, l: Double, a: Double? = nil) {
+    public init(
+        h: Double,
+        s: Double,
+        l: Double,
+        a: Double? = nil
+    ) {
         colorValue = "\(h)%,\(s)%,\(l)%"
         if let a = a {
             colorValue = "hsla(" + colorValue + ", \(a))"
@@ -103,6 +133,11 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
 }
 
 extension CSSColor {
+    /// Handle variable colors, e.g. `var(--my-color)`.
+    public static func variable(_ name: String) -> Self {
+        .init(raw: "var(--\(name))")
+    }
+
     /// Hex color `F0F8FF`.
     public static let aliceBlue: Self = .init(raw: "aliceblue")
     /// Hex color `FAEBD7`.
@@ -401,8 +436,4 @@ extension CSSColor {
     public static let yellow: Self = .init(raw: "yellow")
     /// Hex color `9ACD32`.
     public static let yellowGreen: Self = .init(raw: "yellowgreen")
-    /// Handle variable colors, e.g. `var(--my-color)`.
-    public static func variable(_ name: String) -> Self {
-        .init(raw: "var(--\(name))")
-    }
 }

@@ -66,7 +66,7 @@ public struct ListStyleType: Property {
     public var isImportant: Bool
 
     /// Creates a `list-style-type` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameter value: The property value.
     public init(
         _ value: Value = .disc

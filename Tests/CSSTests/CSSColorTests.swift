@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -13,8 +14,11 @@ struct CSSColorTests {
 
     @Test
     func behavior() {
-        let hex: CSSColor = "cafe00"
-        #expect(hex.rawValue == "#cafe00")
+        let custom = CSSColor("oklch(60% 0.2 30)")
+        #expect(custom.rawValue == "oklch(60% 0.2 30)")
+
+        let stringLiteral: CSSColor = "cafe00"
+        #expect(stringLiteral.rawValue == "cafe00")
 
         let short: CSSColor = "#fff"
         #expect(short.rawValue == "#fff")

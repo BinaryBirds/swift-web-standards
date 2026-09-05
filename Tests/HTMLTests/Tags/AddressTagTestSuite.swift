@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -20,7 +21,7 @@ struct AddressTagTestSuite {
             "."
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -39,7 +40,7 @@ struct AddressTagTestSuite {
         }
         .id("contact")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -54,7 +55,7 @@ struct AddressTagTestSuite {
     func initializationWithText() async throws {
         let tag = Address("123 Example St.")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

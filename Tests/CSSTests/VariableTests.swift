@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -36,7 +37,7 @@ struct VariableTests {
             }
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         let expectation = ":root {\n    --spacing: 12px;\n}"
 
         #expect(rendered == expectation)

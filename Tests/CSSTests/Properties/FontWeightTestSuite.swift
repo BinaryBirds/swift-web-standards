@@ -6,6 +6,7 @@
 //
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -16,7 +17,7 @@ struct FontWeightTests {
     func initializers() {
         let property = FontWeight(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -26,7 +27,7 @@ struct FontWeightTests {
 
     @Test
     func keywordValues() {
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         #expect(
             renderer.renderProperty(FontWeight(.normal))
@@ -47,7 +48,7 @@ struct FontWeightTests {
 
     @Test
     func numericPresets() {
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         #expect(
             renderer.renderProperty(FontWeight(.w100)) == "font-weight: 100"
@@ -65,7 +66,7 @@ struct FontWeightTests {
 
     @Test
     func numericValue() {
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         #expect(
             renderer.renderProperty(FontWeight(.number(550)))
@@ -79,7 +80,7 @@ struct FontWeightTests {
 
     @Test
     func numericInitializer() {
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         // If you added `public init(_ value: Int)` this should compile and pass.
         #expect(renderer.renderProperty(FontWeight(700)) == "font-weight: 700")
@@ -90,7 +91,7 @@ struct FontWeightTests {
         let property = FontWeight(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -100,7 +101,7 @@ struct FontWeightTests {
 
     @Test
     func importantWithNumericValue() {
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         let property = FontWeight(.w400)
             .important()

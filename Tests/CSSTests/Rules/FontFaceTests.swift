@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -19,7 +20,7 @@ struct FontFaceTests {
             }
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         let expectation = "@font-face {\nfont-family: Inter\n}"
 
         #expect(rendered == expectation)
@@ -34,7 +35,7 @@ struct FontFaceTests {
             }
         }
 
-        let rendered = StylesheetRenderer(minify: true).render(css)
+        let rendered = CSSRenderer(minify: true).render(css)
         let expectation = "@font-face {font-family:Interfont-weight:bold}"
 
         #expect(rendered == expectation)

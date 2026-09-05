@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// The `<div>` tag defines a division or a section in an HTML document.
 ///
@@ -40,7 +41,7 @@ public struct Div:
     }
 
     public init(
-        @Builder<Element> _ block: () -> [Element]
+        @Builder<any Element> _ block: () -> [any Element]
     ) {
         self.init(children: block())
     }

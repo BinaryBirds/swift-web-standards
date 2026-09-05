@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -24,7 +25,7 @@ struct AriaSelectedAttributeTestSuite {
             let tag = Option("item")
                 .ariaSelected(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

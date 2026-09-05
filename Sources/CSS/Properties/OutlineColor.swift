@@ -47,7 +47,7 @@ public struct OutlineColor: Property {
     }
 
     /// Creates a `outline-color` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameter value: The property value.
     public init(_ value: CSSColor) {
         self.init(.color(value))

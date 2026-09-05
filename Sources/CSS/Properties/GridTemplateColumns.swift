@@ -17,6 +17,8 @@ public struct GridTemplateColumns: Property {
         case maxContent
         /// Sets the size of each column to depend on the smallest item in the column.
         case minContent
+        /// A CSS custom property reference, such as `var(--columns)`.
+        case variable(String)
         /// Sets the size of the columns, by using a legal length value.
         case length(UnitRepresentable)
         /// Sets the size of the columns using fractional (`fr`) values.
@@ -40,6 +42,8 @@ public struct GridTemplateColumns: Property {
                 return "max-content"
             case .minContent:
                 return "min-content"
+            case .variable(let name):
+                return name.variable
             case .length(let value):
                 return value.rawValue
             case .fraction(let value):

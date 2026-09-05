@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -36,7 +37,7 @@ struct MediaTests {
             }
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         let expectation =
             "@media screen and (min-width: 600px) {\n    .card {\n        width: 300px;\n    }\n}"
 
@@ -53,7 +54,7 @@ struct MediaTests {
             }
         }
 
-        let rendered = StylesheetRenderer().render(css)
+        let rendered = CSSRenderer().render(css)
         let expectation = ".box {\n    height: 40px;\n}"
 
         #expect(rendered == expectation)

@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -17,7 +18,7 @@ struct WidthAttributeTestSuite {
         let tag = Canvas {}
             .width(2)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -33,7 +34,7 @@ struct WidthAttributeTestSuite {
         let tag = Iframe {}
             .width(640)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -49,7 +50,7 @@ struct WidthAttributeTestSuite {
         let tag = Object("Media")
             .width(300)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

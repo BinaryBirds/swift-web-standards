@@ -5,11 +5,12 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
 @Suite
-struct StylesheetRendererTests {
+struct CSSRendererTests {
 
     @Test
     func minifiedStylesheet() {
@@ -22,7 +23,7 @@ struct StylesheetRendererTests {
             }
         }
 
-        let rendered = StylesheetRenderer(minify: true).render(css)
+        let rendered = CSSRenderer(minify: true).render(css)
         let expectation = ".badge{padding:6px 2px;background-color:red}"
 
         #expect(rendered == expectation)
@@ -38,7 +39,7 @@ struct StylesheetRendererTests {
             }
         }
 
-        let rendered = StylesheetRenderer(indent: 2).render(css)
+        let rendered = CSSRenderer(indent: 2).render(css)
         let expectation = "span {\n  margin: 4px;\n}"
 
         #expect(rendered == expectation)

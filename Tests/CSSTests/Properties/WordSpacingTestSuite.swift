@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct WordSpacingTests {
     func initializers() {
         let property = WordSpacing()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct WordSpacingTests {
         let property = WordSpacing()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct WordSpacingTests {
         let length = WordSpacing(2.px)
         let initial = WordSpacing(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(normal) == "word-spacing: normal")
         #expect(renderer.renderProperty(length) == "word-spacing: 2px")
         #expect(renderer.renderProperty(initial) == "word-spacing: initial")

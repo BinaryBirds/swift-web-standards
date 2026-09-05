@@ -25,7 +25,7 @@ public struct Document: Sendable {
     public func render(
         indent: UInt8 = 0
     ) -> String {
-        let renderer = Renderer(indent: indent)
+        let renderer = SGMLRenderer(indent: indent)
         return renderer.render(document: self)
     }
 }

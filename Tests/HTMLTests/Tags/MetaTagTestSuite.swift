@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct MetaTagTestSuite {
     func basics() async throws {
         let tag = Meta()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -33,7 +34,7 @@ struct MetaTagTestSuite {
             .name(.colorScheme)
             .content("light dark")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -51,7 +52,7 @@ struct MetaTagTestSuite {
             .content("#fff")
             .media("(prefers-color-scheme: light)")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -68,7 +69,7 @@ struct MetaTagTestSuite {
             .name(.appleMobileWebAppStatusBarStyle)
             .content("default")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

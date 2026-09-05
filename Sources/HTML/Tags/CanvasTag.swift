@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// The `<canvas>` tag is used to draw graphics, on the fly, via scripting (usually JavaScript).
 ///

@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct BorderRadiusTests {
     func initializers() {
         let property = BorderRadius(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct BorderRadiusTests {
         let property = BorderRadius(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -41,7 +42,7 @@ struct BorderRadiusTests {
         let property = BorderRadius(.length(4.px, 6.px, 8.px, 10.px))
         let single = BorderRadius(.length(12.px, nil, nil, nil))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(property)
                 == "border-radius: 4px 6px 8px 10px"
