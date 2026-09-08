@@ -15,7 +15,6 @@ struct VariableTests {
         let rawValue: String
     }
 
-
     @Test
     func behavior() {
         let variable = Variable("size", "400px")
