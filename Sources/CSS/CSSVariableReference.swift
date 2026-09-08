@@ -2,6 +2,7 @@
 //  CSSVariableReference.swift
 //  swift-web-standards
 //
+//  Created by Binary Birds on 2026. 09. 08.
 
 /// A reference to a CSS custom property, rendered as `var(--name)`.
 public struct CSSVariableReference: Sendable {
