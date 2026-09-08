@@ -18,7 +18,7 @@ public struct Variable: Property {
         _ value: String,
         isImportant: Bool = false
     ) {
-        self.name = "--" + name.rawValue
+        self.name = "--" + name.propertyName
         self.value = value
         self.isImportant = isImportant
     }

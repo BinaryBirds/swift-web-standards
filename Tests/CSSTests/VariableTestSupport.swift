@@ -7,9 +7,9 @@
 @testable import CSS
 
 struct TestVariableName: CSSVariableNameRepresentable {
-    let rawValue: String
+    let propertyName: String
 
-    init(_ rawValue: String) {
-        self.rawValue = rawValue
+    init(_ propertyName: String) {
+        self.propertyName = propertyName
     }
 }

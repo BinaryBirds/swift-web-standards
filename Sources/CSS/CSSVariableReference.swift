@@ -6,15 +6,19 @@
 
 /// A type that can provide the name of a CSS custom property.
 public protocol CSSVariableNameRepresentable: Sendable {
-    var rawValue: String { get }
+    var propertyName: String { get }
+}
+
+extension CSSVariableNameRepresentable where Self: RawRepresentable, RawValue == String {
+    public var propertyName: String { rawValue }
 }
 
 /// An unchecked CSS custom property name backed by a raw string.
 public struct UnsafeCSSVariableName: CSSVariableNameRepresentable {
-    public let rawValue: String
+    public let propertyName: String
 
-    public init(_ rawValue: String) {
-        self.rawValue = rawValue
+    public init(_ propertyName: String) {
+        self.propertyName = propertyName
     }
 }
 
@@ -24,7 +28,7 @@ public struct CSSVariableReference: Sendable {
     public let name: String
 
     public init(_ name: CSSVariableNameRepresentable) {
-        self.name = name.rawValue
+        self.name = name.propertyName
     }
 
     /// The rendered CSS `var(...)` function.

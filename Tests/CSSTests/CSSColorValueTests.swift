@@ -25,7 +25,7 @@ struct CSSColorValueTests {
         )
         #expect(variable.rawValue == "var(--brand-color)")
         if case .variable(let name) = variable {
-            #expect(name.rawValue == "brand-color")
+            #expect(name.propertyName == "brand-color")
         }
     }
 }

@@ -9,6 +9,10 @@ import WebBuilders
 
 @testable import CSS
 
+private enum RawVariableName: String, CSSVariableNameRepresentable {
+    case customSize = "custom-size"
+}
+
 @Suite
 struct VariableTests {
     @Test
@@ -34,6 +38,9 @@ struct VariableTests {
         let customName = TestVariableName("custom-size")
         let customReference = CSSVariableReference(customName)
         #expect(customReference.rawValue == "var(--custom-size)")
+
+        let rawReference = CSSVariableReference(RawVariableName.customSize)
+        #expect(rawReference.rawValue == "var(--custom-size)")
     }
 
     @Test
