@@ -113,7 +113,7 @@ struct SwiftCssTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Variable("size", "400px")
+                    Variable(UnsafeCSSVariableName("size"), "400px")
                 }
                 Class("container") {
                     Width(200.px)
@@ -121,17 +121,17 @@ struct SwiftCssTests {
             }
             Media(.screen && .maxWidth(599.px)) {
                 Root {
-                    Variable("size", "200px")
+                    Variable(UnsafeCSSVariableName("size"), "200px")
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
                 Root {
-                    Variable("size", "500px")
+                    Variable(UnsafeCSSVariableName("size"), "500px")
                 }
             }
             Media(.screen && .displayMode(.standalone)) {
                 Root {
-                    Variable("size", "460px")
+                    Variable(UnsafeCSSVariableName("size"), "460px")
                 }
             }
         }

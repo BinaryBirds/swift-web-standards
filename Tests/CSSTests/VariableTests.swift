@@ -13,7 +13,7 @@ import WebBuilders
 struct VariableTests {
     @Test
     func behavior() {
-        let variable = Variable("size", "400px")
+        let variable = Variable(UnsafeCSSVariableName("size"), "400px")
         #expect(variable.name == "--size")
         #expect(variable.value == "400px")
         #expect(variable.isImportant == false)
@@ -41,7 +41,7 @@ struct VariableTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Variable("spacing", "12px")
+                    Variable(UnsafeCSSVariableName("spacing"), "12px")
                 }
             }
         }
@@ -61,7 +61,7 @@ struct VariableTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Variable("red-color", "#f00")
+                    Variable(UnsafeCSSVariableName("red-color"), "#f00")
                 }
                 Custom("div") {
                     BackgroundColor(

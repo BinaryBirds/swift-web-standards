@@ -26,7 +26,7 @@ struct StylesheetTests {
             Charset("UTF-8")
             Media {
                 Root {
-                    Variable("size", "10px")
+                    Variable(UnsafeCSSVariableName("size"), "10px")
                 }
             }
         }
