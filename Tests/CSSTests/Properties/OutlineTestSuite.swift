@@ -42,7 +42,7 @@ struct OutlineTests {
         let property = Outline(
             1.px,
             .solid,
-            .color(.variable("outline-color"))
+            .color(.variable(CSSVariableReference("outline-color")))
         )
 
         let renderer = CSSRenderer()

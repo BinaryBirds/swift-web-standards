@@ -13,7 +13,9 @@ import WebBuilders
 struct CustomPropertyValueTests {
     private let renderer = CSSRenderer()
     private let color: CSSColor = "var(--red-color)"
-    private let colorValue = CSSColorValue.variable("red-color")
+    private let colorValue = CSSColorValue.variable(
+        CSSVariableReference("red-color")
+    )
 
     @Test
     func colorValuesRenderVariableReferences() {
@@ -96,7 +98,7 @@ struct CustomPropertyValueTests {
     @Test
     func colorValueProvidesVariableConvenience() {
         #expect(
-            CSSColorValue.variable("brand-color").rawValue
+            CSSColorValue.variable(CSSVariableReference("brand-color")).rawValue
                 == "var(--brand-color)"
         )
     }

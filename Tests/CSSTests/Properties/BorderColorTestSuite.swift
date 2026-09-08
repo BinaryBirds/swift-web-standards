@@ -42,7 +42,10 @@ struct BorderColorTests {
         let transparent = BorderColor(.transparent)
         let named = BorderColor(.color(.blue))
         let inherit = BorderColor(.inherit)
-        let two = BorderColor(.color(.red), .variable("border-color"))
+        let two = BorderColor(
+            .color(.red),
+            .variable(CSSVariableReference("border-color"))
+        )
         let three = BorderColor(.color(.red), .color(.green), .color(.blue))
         let four = BorderColor(
             .color(.red),

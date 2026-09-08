@@ -28,6 +28,14 @@ public struct Variable: Property {
         self.isImportant = isImportant
     }
 
+    public init(
+        _ name: CSSVariableNameRepresentable,
+        _ value: String,
+        isImportant: Bool = false
+    ) {
+        self.init(name.rawValue, value, isImportant: isImportant)
+    }
+
     /// Returns a copy marked as `!important`.
     public func important() -> Variable {
         modify { $0.isImportant = true }

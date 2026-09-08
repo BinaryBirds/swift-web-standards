@@ -23,13 +23,6 @@ public enum CSSColorValue: Sendable {
         self = .color(color)
     }
 
-    /// A CSS custom property reference, such as `var(--brand-color)`.
-    public static func variable(
-        _ name: String
-    ) -> Self {
-        .variable(.init(name))
-    }
-
     /// Rendered CSS color string.
     var rawValue: String {
         switch self {

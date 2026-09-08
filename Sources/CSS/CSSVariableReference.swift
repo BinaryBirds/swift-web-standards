@@ -4,6 +4,11 @@
 //
 //  Created by Binary Birds on 2026. 09. 08.
 
+/// A type that can provide the name of a CSS custom property.
+public protocol CSSVariableNameRepresentable: Sendable {
+    var rawValue: String { get }
+}
+
 /// A reference to a CSS custom property, rendered as `var(--name)`.
 public struct CSSVariableReference: Sendable {
     /// The custom property name without the `--` prefix.
@@ -12,6 +17,10 @@ public struct CSSVariableReference: Sendable {
     /// Creates a reference to a CSS custom property.
     public init(_ name: String) {
         self.name = name
+    }
+
+    public init(_ name: CSSVariableNameRepresentable) {
+        self.name = name.rawValue
     }
 
     /// The rendered CSS `var(...)` function.

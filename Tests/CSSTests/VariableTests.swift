@@ -11,6 +11,10 @@ import WebBuilders
 
 @Suite
 struct VariableTests {
+    private struct CustomVariableName: CSSVariableNameRepresentable {
+        let rawValue: String
+    }
+
 
     @Test
     func behavior() {
@@ -31,6 +35,10 @@ struct VariableTests {
         let reference = CSSVariableReference("size")
         #expect(reference.name == "size")
         #expect(reference.rawValue == "var(--size)")
+
+        let customName = CustomVariableName(rawValue: "custom-size")
+        let customReference = CSSVariableReference(customName)
+        #expect(customReference.rawValue == "var(--custom-size)")
     }
 
     @Test
@@ -61,8 +69,14 @@ struct VariableTests {
                     Variable("red-color", "#f00")
                 }
                 Custom("div") {
-                    BackgroundColor(.variable("red-color"))
-                    Border(1.px, .solid, .variable("red-color"))
+                    BackgroundColor(
+                        .variable(CSSVariableReference("red-color"))
+                    )
+                    Border(
+                        1.px,
+                        .solid,
+                        .variable(CSSVariableReference("red-color"))
+                    )
                 }
             }
         }

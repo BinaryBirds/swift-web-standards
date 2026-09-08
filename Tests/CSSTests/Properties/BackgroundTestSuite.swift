@@ -36,4 +36,12 @@ struct BackgroundTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func colorValue() {
+        let property = Background(.color(.red))
+
+        let renderer = CSSRenderer()
+        #expect(renderer.renderProperty(property) == "background: red")
+    }
 }
