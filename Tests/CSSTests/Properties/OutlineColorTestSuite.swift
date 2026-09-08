@@ -42,7 +42,7 @@ struct OutlineColorTests {
         let invert = OutlineColor(.invert)
         let color = OutlineColor(.color(CSSColorValue.color(.red)))
         let variable = OutlineColor(
-            .color(.variable(CSSVariableReference("outline-color")))
+            .color(.variable(TestVariableName("outline-color")))
         )
         let inherit = OutlineColor(.inherit)
 

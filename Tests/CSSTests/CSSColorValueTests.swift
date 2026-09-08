@@ -21,11 +21,11 @@ struct CSSColorValueTests {
         #expect(CSSColorValue(.red).rawValue == "red")
 
         let variable = CSSColorValue.variable(
-            CSSVariableReference("brand-color")
+            TestVariableName("brand-color")
         )
         #expect(variable.rawValue == "var(--brand-color)")
-        if case .variable(let reference) = variable {
-            #expect(reference.name == "brand-color")
+        if case .variable(let name) = variable {
+            #expect(name.rawValue == "brand-color")
         }
     }
 }

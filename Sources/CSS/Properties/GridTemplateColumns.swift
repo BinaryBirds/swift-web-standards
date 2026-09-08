@@ -18,7 +18,7 @@ public struct GridTemplateColumns: Property {
         /// Sets the size of each column to depend on the smallest item in the column.
         case minContent
         /// A CSS custom property reference, such as `var(--columns)`.
-        case variable(String)
+        case variable(CSSVariableNameRepresentable)
         /// Sets the size of the columns, by using a legal length value.
         case length(UnitRepresentable)
         /// Sets the size of the columns using fractional (`fr`) values.

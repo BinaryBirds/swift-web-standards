@@ -13,7 +13,7 @@ public enum GridTrackSize: Sendable {
     /// Track sized to the smallest content contribution.
     case minContent
     /// A CSS custom property reference, such as `var(--track-size)`.
-    case variable(String)
+    case variable(CSSVariableNameRepresentable)
     /// Track sized with a CSS length/percentage unit.
     case length(UnitRepresentable)
     /// Track sized with a CSS fraction (`fr`) unit.

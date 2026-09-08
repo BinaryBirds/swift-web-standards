@@ -10,7 +10,7 @@ public enum CSSColorValue: Sendable {
     /// Explicit color value.
     case color(CSSColor)
     /// A CSS custom property reference.
-    case variable(CSSVariableReference)
+    case variable(CSSVariableNameRepresentable)
     /// Transparent color.
     case transparent
     /// Default value.
@@ -28,8 +28,8 @@ public enum CSSColorValue: Sendable {
         switch self {
         case .color(let value):
             return value.rawValue
-        case .variable(let reference):
-            return reference.rawValue
+        case .variable(let name):
+            return CSSVariableReference(name).rawValue
         case .transparent:
             return "transparent"
         case .initial:

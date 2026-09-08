@@ -32,7 +32,7 @@ public struct BackgroundImage: Property {
         case none
 
         /// A CSS custom property reference, such as `var(--hero-image)`.
-        case variable(String)
+        case variable(CSSVariableNameRepresentable)
         // @TODO: add gradient support
         //    case radial-gradient()    Sets a radial gradient as the background image. Define at least two colors (center to edges)
         //    case repeating-linear-gradient()    Repeats a linear gradient

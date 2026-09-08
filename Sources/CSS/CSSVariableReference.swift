@@ -9,15 +9,19 @@ public protocol CSSVariableNameRepresentable: Sendable {
     var rawValue: String { get }
 }
 
+/// An unchecked CSS custom property name backed by a raw string.
+public struct UnsafeCSSVariableName: CSSVariableNameRepresentable {
+    public let rawValue: String
+
+    public init(_ rawValue: String) {
+        self.rawValue = rawValue
+    }
+}
+
 /// A reference to a CSS custom property, rendered as `var(--name)`.
 public struct CSSVariableReference: Sendable {
     /// The custom property name without the `--` prefix.
     public let name: String
-
-    /// Creates a reference to a CSS custom property.
-    public init(_ name: String) {
-        self.name = name
-    }
 
     public init(_ name: CSSVariableNameRepresentable) {
         self.name = name.rawValue

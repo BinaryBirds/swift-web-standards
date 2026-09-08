@@ -14,7 +14,7 @@ struct CustomPropertyValueTests {
     private let renderer = CSSRenderer()
     private let color: CSSColor = "var(--red-color)"
     private let colorValue = CSSColorValue.variable(
-        CSSVariableReference("red-color")
+        TestVariableName("red-color")
     )
 
     @Test
@@ -81,16 +81,22 @@ struct CustomPropertyValueTests {
     @Test
     func nonColorValuesRenderVariableReferences() {
         #expect(
-            renderer.renderProperty(BackgroundImage(.variable("hero-image")))
+            renderer.renderProperty(
+                BackgroundImage(.variable(TestVariableName("hero-image")))
+            )
                 == "background-image: var(--hero-image)"
         )
         #expect(
-            renderer.renderProperty(GridTemplateColumns(.variable("columns")))
+            renderer.renderProperty(
+                GridTemplateColumns(.variable(TestVariableName("columns")))
+            )
                 == "grid-template-columns: var(--columns)"
         )
         #expect(
             renderer.renderProperty(
-                GridTemplateColumns(.tracks([.variable("track-size")]))
+                GridTemplateColumns(
+                    .tracks([.variable(TestVariableName("track-size"))])
+                )
             ) == "grid-template-columns: var(--track-size)"
         )
     }
@@ -98,7 +104,7 @@ struct CustomPropertyValueTests {
     @Test
     func colorValueProvidesVariableConvenience() {
         #expect(
-            CSSColorValue.variable(CSSVariableReference("brand-color")).rawValue
+            CSSColorValue.variable(TestVariableName("brand-color")).rawValue
                 == "var(--brand-color)"
         )
     }
