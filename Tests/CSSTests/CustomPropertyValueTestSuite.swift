@@ -29,23 +29,23 @@ struct CustomPropertyValueTests {
                 == "background-color: var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(Border(1.px, .solid, color))
+            renderer.renderProperty(Border(1.px, .solid, colorValue))
                 == "border: 1px solid var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(BorderBottom(1.px, .solid, color))
+            renderer.renderProperty(BorderBottom(1.px, .solid, colorValue))
                 == "border-bottom: 1px solid var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(BorderLeft(1.px, .solid, color))
+            renderer.renderProperty(BorderLeft(1.px, .solid, colorValue))
                 == "border-left: 1px solid var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(BorderRight(1.px, .solid, color))
+            renderer.renderProperty(BorderRight(1.px, .solid, colorValue))
                 == "border-right: 1px solid var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(BorderTop(1.px, .solid, color))
+            renderer.renderProperty(BorderTop(1.px, .solid, colorValue))
                 == "border-top: 1px solid var(--red-color)"
         )
         #expect(
@@ -58,7 +58,11 @@ struct CustomPropertyValueTests {
         )
         #expect(
             renderer.renderProperty(
-                Outline(.values(.length(1.px), .solid, .color(color)))
+                Outline(
+                    .length(1.px),
+                    .solid,
+                    .color(colorValue)
+                )
             ) == "outline: 1px solid var(--red-color)"
         )
         #expect(

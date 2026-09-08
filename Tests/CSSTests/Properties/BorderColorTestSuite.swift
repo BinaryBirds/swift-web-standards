@@ -42,6 +42,14 @@ struct BorderColorTests {
         let transparent = BorderColor(.transparent)
         let named = BorderColor(.color(.blue))
         let inherit = BorderColor(.inherit)
+        let two = BorderColor(.color(.red), .variable("border-color"))
+        let three = BorderColor(.color(.red), .color(.green), .color(.blue))
+        let four = BorderColor(
+            .color(.red),
+            .color(.green),
+            .color(.blue),
+            .transparent
+        )
 
         let renderer = CSSRenderer()
         #expect(
@@ -49,5 +57,17 @@ struct BorderColorTests {
         )
         #expect(renderer.renderProperty(named) == "border-color: blue")
         #expect(renderer.renderProperty(inherit) == "border-color: inherit")
+        #expect(
+            renderer.renderProperty(two)
+                == "border-color: red var(--border-color)"
+        )
+        #expect(
+            renderer.renderProperty(three)
+                == "border-color: red green blue"
+        )
+        #expect(
+            renderer.renderProperty(four)
+                == "border-color: red green blue transparent"
+        )
     }
 }

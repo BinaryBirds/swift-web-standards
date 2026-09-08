@@ -12,7 +12,7 @@ public struct Border: Property {
     /// Value options for the `border` property.
     public enum Value: Sendable {
 
-        case values(BorderWidth.Value, BorderStyle.Value?, CSSColor?)
+        case values(BorderWidth.Value, BorderStyle.Value?, CSSColorValue?)
         /// Sets this property to its default value.
         case initial
         /// Inherits this property from its parent element.
@@ -49,7 +49,7 @@ public struct Border: Property {
     public init(
         _ width: BorderWidth.Value,
         _ style: BorderStyle.Value? = nil,
-        _ color: CSSColor? = nil
+        _ color: CSSColorValue? = nil
     ) {
         self.init(.values(width, style, color))
     }
@@ -57,7 +57,7 @@ public struct Border: Property {
     public init(
         _ width: UnitRepresentable,
         _ style: BorderStyle.Value? = nil,
-        _ color: CSSColor? = nil
+        _ color: CSSColorValue? = nil
     ) {
         self.init(.length(width), style, color)
     }

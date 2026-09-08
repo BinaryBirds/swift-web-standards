@@ -36,4 +36,19 @@ struct OutlineTests {
 
         #expect(result == expectation)
     }
+
+    @Test
+    func shorthand() {
+        let property = Outline(
+            1.px,
+            .solid,
+            .color(.variable("outline-color"))
+        )
+
+        let renderer = CSSRenderer()
+        #expect(
+            renderer.renderProperty(property)
+                == "outline: 1px solid var(--outline-color)"
+        )
+    }
 }

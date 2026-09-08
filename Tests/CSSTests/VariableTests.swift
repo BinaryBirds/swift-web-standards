@@ -44,7 +44,39 @@ struct VariableTests {
         }
 
         let rendered = CSSRenderer().render(css)
-        let expectation = ":root {\n    --spacing: 12px;\n}"
+        let expectation = #"""
+            :root {
+                --spacing: 12px;
+            }
+            """#
+
+        #expect(rendered == expectation)
+    }
+
+    @Test
+    func variableUsage() {
+        let css = Stylesheet {
+            Media {
+                Root {
+                    Variable("red-color", "#f00")
+                }
+                Custom("div") {
+                    BackgroundColor(.variable("red-color"))
+                    Border(1.px, .solid, .variable("red-color"))
+                }
+            }
+        }
+
+        let rendered = CSSRenderer().render(css)
+        let expectation = #"""
+            :root {
+                --red-color: #f00;
+            }
+            div {
+                background-color: var(--red-color);
+                border: 1px solid var(--red-color);
+            }
+            """#
 
         #expect(rendered == expectation)
     }

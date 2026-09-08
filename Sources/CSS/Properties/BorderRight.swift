@@ -23,7 +23,7 @@ public struct BorderRight: Property {
     public init(
         _ width: BorderWidth.Value,
         _ style: BorderStyle.Value? = nil,
-        _ color: CSSColor? = nil
+        _ color: CSSColorValue? = nil
     ) {
         self.init(.values(width, style, color))
     }
@@ -31,7 +31,7 @@ public struct BorderRight: Property {
     public init(
         _ width: UnitRepresentable,
         _ style: BorderStyle.Value? = nil,
-        _ color: CSSColor? = nil
+        _ color: CSSColorValue? = nil
     ) {
         self.init(.length(width), style, color)
     }
