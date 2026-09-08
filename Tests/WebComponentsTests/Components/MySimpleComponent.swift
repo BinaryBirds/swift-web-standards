@@ -16,7 +16,7 @@ struct MySimpleComponent: Leaf {
     func selectors() -> [any Selector] {
         Class("my-simple-component") {
             Background(color: CSSColorValue.color(.red))
-            Color(CSSColorValue.color(.cyan))
+            Color(.cyan)
         }
     }
 

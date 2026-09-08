@@ -39,7 +39,7 @@ struct SelectorBehaviorTests {
     @Test
     func builtInSelectors() {
         let classSelector = Class("button") {
-            Color(CSSColorValue.color(.red))
+            Color(.red)
         }
         let idSelector = Id("hero") {
             BackgroundColor(CSSColorValue.color(.blue))

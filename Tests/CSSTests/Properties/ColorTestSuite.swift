@@ -14,7 +14,7 @@ struct ColorTests {
 
     @Test
     func initializers() {
-        let property = Color(CSSColorValue.color(.red))
+        let property = Color(.red)
 
         let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
@@ -26,7 +26,7 @@ struct ColorTests {
 
     @Test
     func important() {
-        let property = Color(CSSColorValue.color(.red))
+        let property = Color(.red)
             .important()
 
         let renderer = CSSRenderer()

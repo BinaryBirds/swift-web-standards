@@ -75,6 +75,11 @@ public struct Background: Property {
         self.init(color: color)
     }
 
+    /// Creates a background shorthand containing a concrete CSS color.
+    public init(_ color: CSSColor) {
+        self.init(color: .color(color))
+    }
+
     /// A shorthand property for all the background-* properties.
     /// - Parameters:
     /// -  color: The color value.

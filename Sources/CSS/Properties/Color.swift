@@ -11,8 +11,6 @@ public struct Color: Property {
     public enum Value: Sendable {
         /// Raw value
         case raw(String)
-        /// Specifies the text color.
-        case color(CSSColor)
         /// Sets this property to its default value.
         case initial
         /// Inherits this property from its parent element.
@@ -22,8 +20,6 @@ public struct Color: Property {
             switch self {
             case .raw(let value):
                 return value
-            case .color(let value):
-                return value.rawValue
             case .initial:
                 return "initial"
             case .inherit:
@@ -49,6 +45,11 @@ public struct Color: Property {
     /// Sets the color of text.
     /// - Parameter value: The property value.
     public init(_ value: CSSColorValue) {
+        self.init(.raw(value.rawValue))
+    }
+
+    /// Sets the color of text from a concrete CSS color.
+    public init(_ value: CSSColor) {
         self.init(.raw(value.rawValue))
     }
 }
