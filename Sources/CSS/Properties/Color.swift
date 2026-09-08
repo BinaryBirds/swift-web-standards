@@ -46,7 +46,6 @@ public struct Color: Property {
         self.isImportant = false
     }
 
-
     /// Sets the color of text.
     /// - Parameter value: The property value.
     public init(_ value: CSSColorValue) {

@@ -15,7 +15,10 @@ public struct BorderColor: Property {
     /// Sets one to four colors for the top, right, bottom, and left borders.
     /// - Parameter values: One to four color values.
     public init(_ values: CSSColorValue...) {
-        precondition((1...4).contains(values.count), "border-color requires one to four values")
+        precondition(
+            (1...4).contains(values.count),
+            "border-color requires one to four values"
+        )
         self.name = "border-color"
         self.value = values.map(\.rawValue).joined(separator: " ")
         self.isImportant = false

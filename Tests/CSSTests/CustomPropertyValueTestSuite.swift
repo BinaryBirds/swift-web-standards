@@ -18,7 +18,8 @@ struct CustomPropertyValueTests {
     @Test
     func colorValuesRenderVariableReferences() {
         #expect(
-            renderer.renderProperty(Color(colorValue)) == "color: var(--red-color)"
+            renderer.renderProperty(Color(colorValue))
+                == "color: var(--red-color)"
         )
         #expect(
             renderer.renderProperty(Background(color: colorValue))
