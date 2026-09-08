@@ -24,7 +24,13 @@ struct VariableTests {
         #expect(importantVariable.name == "--size")
         #expect(importantVariable.value == "400px")
 
-        #expect("size".variable == "var(--size)")
+    }
+
+    @Test
+    func variableReference() {
+        let reference = CSSVariableReference("size")
+        #expect(reference.name == "size")
+        #expect(reference.rawValue == "var(--size)")
     }
 
     @Test

@@ -18,7 +18,4 @@ public struct AccentColor: Property {
         self.isImportant = false
     }
 
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

@@ -40,7 +40,7 @@ struct BorderBottomColorTests {
     @Test
     func values() {
         let transparent = BorderBottomColor(.transparent)
-        let named = BorderBottomColor(.blueViolet)
+        let named = BorderBottomColor(.color(.blueViolet))
         let inherit = BorderBottomColor(.inherit)
 
         let renderer = CSSRenderer()

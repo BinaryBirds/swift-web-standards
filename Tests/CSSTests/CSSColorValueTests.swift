@@ -18,5 +18,12 @@ struct CSSColorValueTests {
         #expect(CSSColorValue.initial.rawValue == "initial")
         #expect(CSSColorValue.inherit.rawValue == "inherit")
         #expect(CSSColorValue.color(.red).rawValue == "red")
+        #expect(CSSColorValue(.red).rawValue == "red")
+
+        let variable = CSSColorValue.variable("brand-color")
+        #expect(variable.rawValue == "var(--brand-color)")
+        if case .variable(let reference) = variable {
+            #expect(reference.name == "brand-color")
+        }
     }
 }

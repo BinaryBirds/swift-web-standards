@@ -40,7 +40,7 @@ struct BorderLeftColorTests {
     @Test
     func values() {
         let transparent = BorderLeftColor(.transparent)
-        let named = BorderLeftColor(.green)
+        let named = BorderLeftColor(.color(.green))
         let initial = BorderLeftColor(.initial)
 
         let renderer = CSSRenderer()

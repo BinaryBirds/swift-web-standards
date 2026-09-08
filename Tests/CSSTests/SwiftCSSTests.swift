@@ -66,7 +66,7 @@ struct SwiftCssTests {
 
             Media(.screen && .minWidth("600px")) {
                 Class("button") {
-                    Color("#cafe00")
+                    Color(CSSColorValue(CSSColor("#cafe00")))
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
@@ -77,7 +77,7 @@ struct SwiftCssTests {
 
             Media(.screen && .displayMode(.standalone)) {
                 Id("lead") {
-                    Background(color: .red)
+                    Background(color: CSSColorValue.color(.red))
                 }
             }
         }
@@ -168,22 +168,22 @@ struct SwiftCssTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Background(color: .red)
+                    Background(color: CSSColorValue.color(.red))
                 }
             }
             Media(.screen && .maxWidth(599.px)) {
                 Root {
-                    Background(color: .blue)
+                    Background(color: CSSColorValue.color(.blue))
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
                 Root {
-                    Background(color: .green)
+                    Background(color: CSSColorValue.color(.green))
                 }
             }
             Media(.screen && .displayMode(.standalone)) {
                 Custom("body") {
-                    Background(color: .yellow)
+                    Background(color: CSSColorValue.color(.yellow))
                 }
             }
         }

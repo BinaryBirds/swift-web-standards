@@ -40,7 +40,7 @@ struct BackgroundColorTests {
     @Test
     func values() {
         let transparent = BackgroundColor(.transparent)
-        let color = BackgroundColor(.hotPink)
+        let color = BackgroundColor(CSSColorValue.color(.hotPink))
         let initial = BackgroundColor(.initial)
 
         let renderer = CSSRenderer()

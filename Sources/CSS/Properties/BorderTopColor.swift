@@ -20,8 +20,4 @@ public struct BorderTopColor: Property {
         self.isImportant = false
     }
 
-    /// Sets the color of the top border.
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

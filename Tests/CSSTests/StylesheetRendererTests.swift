@@ -18,7 +18,7 @@ struct CSSRendererTests {
             Media {
                 Class("badge") {
                     Padding(vertical: 6.px, horizontal: 2.px)
-                    BackgroundColor(.red)
+                    BackgroundColor(CSSColorValue.color(.red))
                 }
             }
         }

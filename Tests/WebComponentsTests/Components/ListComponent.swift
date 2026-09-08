@@ -20,7 +20,7 @@ struct ListComponent: Branch {
 
     func selectors() -> [any Selector] {
         Class("list-component") {
-            Color(.green)
+            Color(CSSColorValue.color(.green))
         }
     }
 

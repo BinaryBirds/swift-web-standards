@@ -33,10 +33,3 @@ public struct Variable: Property {
         modify { $0.isImportant = true }
     }
 }
-
-extension String {
-    /// Converts a variable name into a `var(--name)` reference.
-    public var `variable`: String {
-        "var(--" + self + ")"
-    }
-}

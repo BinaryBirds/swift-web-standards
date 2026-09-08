@@ -43,7 +43,7 @@ public struct GridTemplateColumns: Property {
             case .minContent:
                 return "min-content"
             case .variable(let name):
-                return name.variable
+                return CSSVariableReference(name).rawValue
             case .length(let value):
                 return value.rawValue
             case .fraction(let value):

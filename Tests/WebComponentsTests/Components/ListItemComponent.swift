@@ -14,7 +14,7 @@ struct ListItemComponent: Leaf {
 
     func selectors() -> [any Selector] {
         Class("list-item") {
-            Color(.red)
+            Color(CSSColorValue.color(.red))
         }
     }
 

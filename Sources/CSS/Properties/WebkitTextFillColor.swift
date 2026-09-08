@@ -18,7 +18,4 @@ public struct WebkitTextFillColor: Property {
         self.isImportant = false
     }
 
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

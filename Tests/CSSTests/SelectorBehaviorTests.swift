@@ -15,7 +15,7 @@ struct SelectorBehaviorTests {
     @Test
     func behavior() {
         var selector = Custom("a") {
-            Color("#cafe00")
+            Color(CSSColorValue(CSSColor("#cafe00")))
         }
         selector.pseudo(.hover)
 
@@ -39,10 +39,10 @@ struct SelectorBehaviorTests {
     @Test
     func builtInSelectors() {
         let classSelector = Class("button") {
-            Color(.red)
+            Color(CSSColorValue.color(.red))
         }
         let idSelector = Id("hero") {
-            BackgroundColor(.blue)
+            BackgroundColor(CSSColorValue.color(.blue))
         }
         let elementSelector = Custom("p") {
             Margin(8.px)

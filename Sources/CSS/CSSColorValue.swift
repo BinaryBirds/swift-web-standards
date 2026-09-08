@@ -9,6 +9,8 @@ public enum CSSColorValue: Sendable {
 
     /// Explicit color value.
     case color(CSSColor)
+    /// A CSS custom property reference.
+    case variable(CSSVariableReference)
     /// Transparent color.
     case transparent
     /// Default value.
@@ -16,11 +18,16 @@ public enum CSSColorValue: Sendable {
     /// Inherited value.
     case inherit
 
+    /// Creates a color property value from a concrete CSS color.
+    public init(_ color: CSSColor) {
+        self = .color(color)
+    }
+
     /// A CSS custom property reference, such as `var(--brand-color)`.
     public static func variable(
         _ name: String
     ) -> Self {
-        .color(.variable(name))
+        .variable(.init(name))
     }
 
     /// Rendered CSS color string.
@@ -28,6 +35,8 @@ public enum CSSColorValue: Sendable {
         switch self {
         case .color(let value):
             return value.rawValue
+        case .variable(let reference):
+            return reference.rawValue
         case .transparent:
             return "transparent"
         case .initial:

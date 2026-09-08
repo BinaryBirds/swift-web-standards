@@ -20,8 +20,4 @@ public struct BorderLeftColor: Property {
         self.isImportant = false
     }
 
-    /// Sets the color of the left border.
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

@@ -58,7 +58,7 @@ public struct BackgroundImage: Property {
             case .none:
                 return "none"
             case .variable(let name):
-                return name.variable
+                return CSSVariableReference(name).rawValue
             case .url(let value):
                 return "url('\(value)')"
             case .linearGradient(let gradient):

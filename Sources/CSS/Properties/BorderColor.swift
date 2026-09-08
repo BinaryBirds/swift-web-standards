@@ -20,8 +20,4 @@ public struct BorderColor: Property {
         self.isImportant = false
     }
 
-    /// Sets the color of the four borders.
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

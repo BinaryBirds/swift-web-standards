@@ -97,7 +97,7 @@ private struct CustomStyleComponent: Component {
 
     func selectors() -> [any CSS.Selector] {
         Class("custom-document") {
-            Color(.red)
+            Color(CSSColorValue.color(.red))
         }
     }
 }
@@ -148,7 +148,7 @@ private struct CustomBodyComponent<Content: Renderable>: Branch {
 
     func selectors() -> [any CSS.Selector] {
         Class("custom-body") {
-            Color(.blue)
+            Color(CSSColorValue.color(.blue))
         }
     }
 

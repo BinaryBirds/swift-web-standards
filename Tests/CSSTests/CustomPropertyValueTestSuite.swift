@@ -12,19 +12,20 @@ import WebBuilders
 @Suite
 struct CustomPropertyValueTests {
     private let renderer = CSSRenderer()
-    private let color = CSSColor.variable("red-color")
+    private let color: CSSColor = "var(--red-color)"
+    private let colorValue = CSSColorValue.variable("red-color")
 
     @Test
     func colorValuesRenderVariableReferences() {
         #expect(
-            renderer.renderProperty(Color(color)) == "color: var(--red-color)"
+            renderer.renderProperty(Color(colorValue)) == "color: var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(Background(color: color))
+            renderer.renderProperty(Background(color: colorValue))
                 == "background: var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(BackgroundColor(color))
+            renderer.renderProperty(BackgroundColor(colorValue))
                 == "background-color: var(--red-color)"
         )
         #expect(
@@ -48,7 +49,7 @@ struct CustomPropertyValueTests {
                 == "border-top: 1px solid var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(BorderColor(color))
+            renderer.renderProperty(BorderColor(colorValue))
                 == "border-color: var(--red-color)"
         )
         #expect(
@@ -61,11 +62,11 @@ struct CustomPropertyValueTests {
             ) == "outline: 1px solid var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(AccentColor(color))
+            renderer.renderProperty(AccentColor(colorValue))
                 == "accent-color: var(--red-color)"
         )
         #expect(
-            renderer.renderProperty(WebkitTextFillColor(color))
+            renderer.renderProperty(WebkitTextFillColor(colorValue))
                 == "-webkit-text-fill-color: var(--red-color)"
         )
     }

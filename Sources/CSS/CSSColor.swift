@@ -133,11 +133,6 @@ public struct CSSColor: Sendable, ExpressibleByStringLiteral {
 }
 
 extension CSSColor {
-    /// Handle variable colors, e.g. `var(--my-color)`.
-    public static func variable(_ name: String) -> Self {
-        .init(raw: "var(--\(name))")
-    }
-
     /// Hex color `F0F8FF`.
     public static let aliceBlue: Self = .init(raw: "aliceblue")
     /// Hex color `FAEBD7`.
