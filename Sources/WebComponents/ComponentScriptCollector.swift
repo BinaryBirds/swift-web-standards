@@ -5,7 +5,7 @@
 //  Created by Binary Birds on 2026. 09. 04.
 //
 
-/// Collects JavaScript declared by components in a rendered component tree.
+/// Collects JavaScript declared by components registered during rendering.
 public struct ComponentScriptCollector: Sendable {
 
     private struct State {
@@ -14,9 +14,28 @@ public struct ComponentScriptCollector: Sendable {
         var collectedComponents: Set<String> = []
     }
 
-    public init() {}
+    private var state: State
 
-    /// Returns the collected JavaScript in component traversal order.
+    public init() {
+        self.state = .init()
+    }
+
+    public mutating func register(
+        _ component: any Component
+    ) {
+        collectLocalScripts(from: component, state: &state)
+    }
+
+    public func scripts() -> [String] {
+        state.componentOrder
+            .flatMap { state.scriptsByComponent[$0] ?? [] }
+    }
+
+    public func javascript() -> String {
+        scripts().joined(separator: "\n")
+    }
+
+    /// Returns the collected JavaScript in registration order.
     ///
     /// Each component type contributes its source once, even when it occurs
     /// multiple times in the tree.
@@ -26,7 +45,7 @@ public struct ComponentScriptCollector: Sendable {
         getScripts(from: component).joined(separator: "\n")
     }
 
-    /// Returns each collected JavaScript source in component traversal order.
+    /// Returns each collected JavaScript source in registration order.
     ///
     /// Each component type contributes its source once, even when it occurs
     /// multiple times in the tree. The returned values can be rendered as
@@ -34,10 +53,9 @@ public struct ComponentScriptCollector: Sendable {
     public func getScripts(
         from component: any Component
     ) -> [String] {
-        var state = State()
-        collectLocalComponentScripts(from: component, state: &state)
-        return state.componentOrder
-            .flatMap { state.scriptsByComponent[$0] ?? [] }
+        var collector = ComponentScriptCollector()
+        collector.register(component)
+        return collector.scripts()
     }
 
     /// Alias describing the returned source as JavaScript rather than an HTML
@@ -46,18 +64,6 @@ public struct ComponentScriptCollector: Sendable {
         from component: any Component
     ) -> String {
         getScript(from: component)
-    }
-
-    private func collectLocalComponentScripts(
-        from component: any Component,
-        state: inout State
-    ) {
-        collectLocalScripts(from: component, state: &state)
-        if let container = component as? any Branch {
-            for child in container.children {
-                collectLocalComponentScripts(from: child, state: &state)
-            }
-        }
     }
 
     private func collectLocalScripts(

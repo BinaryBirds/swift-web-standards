@@ -20,7 +20,8 @@ struct CustomDocumentTestSuite {
         let comp = CustomDocumentComponent(
             state: .init(title: "Custom document")
         )
-        let html = comp.html()
+        var context = RenderContext()
+        let html = context.render(comp)
         let result = SGMLRenderer(indent: 4)
             .render(document: Document(root: html))
 
@@ -45,7 +46,7 @@ struct CustomDocumentTestSuite {
     }
 }
 
-private struct CustomDocumentComponent: Branch {
+private struct CustomDocumentComponent: Component {
 
     let state: CustomDocumentState
     private let head: CustomHeadComponent
@@ -60,26 +61,20 @@ private struct CustomDocumentComponent: Branch {
         )
     }
 
-    @Builder<any Component>
-    var children: [any Component] {
-        head
-        styles
-        body
-    }
-
-    func html() -> Html {
-        let stylesheet = CSSRenderer(minify: true)
-            .render(ComponentStyleCollector().getStylesheet(from: self))
-        let scripts = ComponentScriptCollector().getScripts(from: self)
+    func html(context: inout RenderContext) -> Html {
+        context.register(styles)
+        context.register(body)
+        let bodyHTML = body.html(context: &context)
+        let stylesheet = CSSRenderer(minify: true).render(context.stylesheet())
+        let scripts = context.scripts()
 
         return Html(
             head: CustomHeadComponent(
                 title: state.title,
                 stylesheet: stylesheet,
                 scripts: scripts
-            )
-            .html(),
-            body: body.html()
+            ).html(context: &context),
+            body: bodyHTML
         )
     }
 }
@@ -89,6 +84,10 @@ private struct CustomDocumentState: Sendable {
 }
 
 private struct CustomStyleComponent: Component {
+
+    func html(context: inout RenderContext) -> InlineText {
+        ""
+    }
 
     @Builder<String>
     func scripts() -> [String] {
@@ -102,7 +101,7 @@ private struct CustomStyleComponent: Component {
     }
 }
 
-private struct CustomHeadComponent: Leaf {
+private struct CustomHeadComponent: Component {
 
     let title: String
     let stylesheet: String
@@ -118,7 +117,7 @@ private struct CustomHeadComponent: Leaf {
         self.scripts = scripts
     }
 
-    func html() -> Head {
+    func html(context: inout RenderContext) -> Head {
         Head {
             Title(title)
 
@@ -133,17 +132,12 @@ private struct CustomHeadComponent: Leaf {
     }
 }
 
-private struct CustomBodyComponent<Content: Renderable>: Branch {
+private struct CustomBodyComponent<Content: Component>: Component {
 
     let body: Content
 
     init(body: Content) {
         self.body = body
-    }
-
-    @Builder<any Component>
-    var children: [any Component] {
-        body
     }
 
     func selectors() -> [any CSS.Selector] {
@@ -152,17 +146,17 @@ private struct CustomBodyComponent<Content: Renderable>: Branch {
         }
     }
 
-    func html() -> Body {
+    func html(context: inout RenderContext) -> Body {
         Body {
             Div {
-                body.html()
+                context.render(body)
             }
             .class("custom-body")
         }
     }
 }
 
-private struct CustomBodyChildComponent: Leaf {
+private struct CustomBodyChildComponent: Component {
 
     let title: String
 
@@ -171,7 +165,7 @@ private struct CustomBodyChildComponent: Leaf {
         "window.custom-body-ready = true;"
     }
 
-    func html() -> H1 {
+    func html(context: inout RenderContext) -> H1 {
         H1(title)
     }
 }

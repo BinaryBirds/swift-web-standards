@@ -10,13 +10,9 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct ListComponent: Branch {
+struct ListComponent: Component {
 
     private let item = ListItemComponent()
-
-    var children: [any Component] {
-        item
-    }
 
     func selectors() -> [any Selector] {
         Class("list-component") {
@@ -24,9 +20,9 @@ struct ListComponent: Branch {
         }
     }
 
-    func html() -> Div {
+    func html(context: inout RenderContext) -> Div {
         Div {
-            item.html()
+            context.render(item)
         }
         .class("list-component")
     }

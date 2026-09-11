@@ -10,7 +10,7 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct MySimpleComponent: Leaf {
+struct MySimpleComponent: Component {
     let text: String
 
     func selectors() -> [any Selector] {
@@ -20,7 +20,7 @@ struct MySimpleComponent: Leaf {
         }
     }
 
-    func html() -> Div {
+    func html(context: inout RenderContext) -> Div {
         Div {
             P(text)
             Span("foobarbaz")

@@ -9,15 +9,11 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct PageComponent: Branch {
+struct PageComponent: Component {
 
     private let child = FooComponent(text: "Component subtree")
 
-    var children: [any Component] {
-        child
-    }
-
-    func html() -> Div {
-        Div { child.html() }
+    func html(context: inout RenderContext) -> Div {
+        Div { context.render(child) }
     }
 }

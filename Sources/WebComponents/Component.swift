@@ -11,7 +11,13 @@ import WebBuilders
 
 public protocol Component: Sendable {
 
+    associatedtype HTML: SGML.Element
+
     var identifier: String { get }
+
+    func html(
+        context: inout RenderContext
+    ) -> HTML
 
     @Builder<any CSS.Rule>
     func rules() -> [any CSS.Rule]
@@ -23,22 +29,28 @@ public protocol Component: Sendable {
     func scripts() -> [String]
 }
 
-public protocol Renderable: Component {
-
+/// Compatibility protocol for applications that still declare legacy leaf
+/// components. New components should conform directly to `Component` and
+/// implement `html(context:)`.
+public protocol Leaf: Component {
     associatedtype HTML: SGML.Element
-
     func html() -> HTML
 }
 
-public protocol Leaf: Renderable {}
-
-public protocol Branch: Renderable {
-
-    @Builder<any Component>
-    var children: [any Component] { get }
+extension Leaf {
+    public func html(context: inout RenderContext) -> HTML {
+        html()
+    }
 }
 
 extension Component {
+
+    /// Legacy convenience retained while downstream applications migrate to
+    /// context-based rendering.
+    public func html() -> HTML {
+        var context = RenderContext()
+        return context.render(self)
+    }
 
     public var identifier: String {
         String(describing: type(of: self))

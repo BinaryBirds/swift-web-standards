@@ -15,30 +15,37 @@ public struct ComponentStyleCollector: Sendable {
     }
 
     public init() {
-
+        self.state = .init()
     }
 
-    public func getStylesheet(
-        from component: any Component
-    ) -> CSS.Stylesheet {
-        var state = State()
+    public mutating func register(
+        _ component: any Component
+    ) {
         collectLocalComponentRules(from: component, state: &state)
+    }
+
+    public func stylesheet() -> CSS.Stylesheet {
         let rules = state.componentOrder.flatMap {
             state.rulesByComponent[$0] ?? []
         }
         return CSS.Stylesheet(rules)
     }
 
+    public func getStylesheet(
+        from component: any Component
+    ) -> CSS.Stylesheet {
+        var collector = ComponentStyleCollector()
+        collector.register(component)
+        return collector.stylesheet()
+    }
+
+    private var state: State
+
     private func collectLocalComponentRules(
         from component: any Component,
         state: inout State
     ) {
         collectLocalRules(from: component, state: &state)
-        if let container = component as? any Branch {
-            for child in container.children {
-                collectLocalComponentRules(from: child, state: &state)
-            }
-        }
     }
 
     private func collectLocalRules(

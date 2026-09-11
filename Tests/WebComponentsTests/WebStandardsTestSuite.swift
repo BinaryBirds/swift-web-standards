@@ -19,19 +19,20 @@ struct WebComponentsTestSuite {
     @Test
     func componentTreeRendersAsHTML() {
         let root = PageComponent()
-        let html = root.html()
+        var context = RenderContext()
+        let html = context.render(root)
         let result = SGMLRenderer().render(document: Document(root: html))
 
         #expect(result == "<div><span>Component subtree</span></div>")
     }
 
     @Test
-    func componentTreeCollectorsTraverseComponentsDirectly() {
-        let root = ListComponent()
+    func renderContextCollectsNestedComponents() {
+        var context = RenderContext()
+        _ = context.render(ListComponent())
 
-        let css = CSSRenderer(minify: true)
-            .render(ComponentStyleCollector().getStylesheet(from: root))
-        let javascript = ComponentScriptCollector().getScript(from: root)
+        let css = CSSRenderer(minify: true).render(context.stylesheet())
+        let javascript = context.javascript()
 
         #expect(css == ".list-component{color:green}.list-item{color:red}")
         #expect(javascript.isEmpty)
@@ -49,10 +50,10 @@ struct WebComponentsTestSuite {
 
     @Test
     func componentTreeSupportsNestedComponentsAndDeduplication() {
-        let root = ScriptedParentComponent()
+        var context = RenderContext()
+        _ = context.render(ScriptedParentComponent())
 
-        let javascript = ComponentScriptCollector()
-            .getJavaScript(from: root)
+        let javascript = context.javascript()
 
         #expect(
             javascript
@@ -65,26 +66,23 @@ struct WebComponentsTestSuite {
         let group = ComponentGroup([FooComponent(text: "one")])
         let component = BuilderComponent(includeGroup: true, group: group)
 
-        #expect(component.children.count == 2)
+        var context = RenderContext()
+        _ = context.render(component)
     }
 
 }
 
-private struct ScriptedParentComponent: Branch {
-    private let leaves = [ScriptedLeafComponent(), ScriptedLeafComponent()]
+private struct ScriptedParentComponent: Component {
+    private let components = [ScriptedComponent(), ScriptedComponent()]
     @Builder<String>
     func scripts() -> [String] {
         "window.parentReady = true;"
     }
 
-    var children: [any Component] {
-        leaves
-    }
-
-    func html() -> Div {
+    func html(context: inout RenderContext) -> Div {
         Div {
-            for leaf in leaves {
-                leaf.html()
+            for component in components {
+                context.render(component)
             }
         }
     }
@@ -95,30 +93,29 @@ private struct ScriptOnlyComponent: Component {
     func scripts() -> [String] {
         "window.analyticsReady = true;"
     }
+
+    func html(context: inout RenderContext) -> SGML.InlineText {
+        ""
+    }
 }
 
-private struct ScriptedLeafComponent: Leaf {
+private struct ScriptedComponent: Component {
     @Builder<String>
     func scripts() -> [String] { "window.leafReady = true;" }
 
-    func html() -> P { P("leaf") }
+    func html(context: inout RenderContext) -> P { P("leaf") }
 }
 
-private struct BuilderComponent: Branch {
+private struct BuilderComponent: Component {
     let includeGroup: Bool
     let group: ComponentGroup
 
-    @Builder<any Component>
-    var children: [any Component] {
-        FooComponent(text: "first")
-        if includeGroup { group }
-    }
-
-    func html() -> Div {
+    func html(context: inout RenderContext) -> Div {
         Div {
-            for component in children {
-                if let renderable = component as? any Renderable {
-                    renderable.html()
+            context.render(FooComponent(text: "first"))
+            if includeGroup {
+                for component in group.children {
+                    context.render(component)
                 }
             }
         }

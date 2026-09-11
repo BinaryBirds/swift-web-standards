@@ -10,7 +10,7 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct ListItemComponent: Leaf {
+struct ListItemComponent: Component {
 
     func selectors() -> [any Selector] {
         Class("list-item") {
@@ -18,7 +18,7 @@ struct ListItemComponent: Leaf {
         }
     }
 
-    func html() -> P {
+    func html(context: inout RenderContext) -> P {
         P("List item")
             .class("list-item")
     }

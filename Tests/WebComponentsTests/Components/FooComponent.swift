@@ -9,11 +9,11 @@ import SGML
 import WebBuilders
 import WebComponents
 
-struct FooComponent: Leaf {
+struct FooComponent: Component {
 
     let text: String
 
-    func html() -> Span {
+    func html(context: inout RenderContext) -> Span {
         Span(text)
     }
 }
