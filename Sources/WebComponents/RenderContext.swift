@@ -1,3 +1,9 @@
+//
+//  RenderContext.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 09. 11.
+
 import CSS
 import SGML
 
@@ -6,8 +12,7 @@ public struct RenderContext: Sendable {
     private var styleCollector: ComponentStyleCollector
     private var scriptCollector: ComponentScriptCollector
 
-    public init(
-    ) {
+    public init() {
         self.styleCollector = .init()
         self.scriptCollector = .init()
     }
@@ -26,8 +31,7 @@ public struct RenderContext: Sendable {
         return component.html(context: &self)
     }
 
-    public func stylesheet(
-    ) -> CSS.Stylesheet {
+    public func stylesheet() -> CSS.Stylesheet {
         styleCollector.stylesheet()
     }
 

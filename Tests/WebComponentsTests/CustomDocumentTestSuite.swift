@@ -73,7 +73,8 @@ private struct CustomDocumentComponent: Component {
                 title: state.title,
                 stylesheet: stylesheet,
                 scripts: scripts
-            ).html(context: &context),
+            )
+            .html(context: &context),
             body: bodyHTML
         )
     }

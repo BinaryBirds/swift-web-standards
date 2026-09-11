@@ -1,3 +1,9 @@
+//
+//  RenderContextTestSuite.swift
+//  swift-web-standards
+//
+//  Created by Binary Birds on 2026. 09. 11.
+
 import CSS
 import DOM
 import HTML
@@ -14,9 +20,10 @@ struct RenderContextTestSuite {
     func renderingRegistersStylesForTheRenderedComponent() {
         var context = RenderContext()
         let html = context.render(ContextStyledComponent())
-        let renderedHTML = SGMLRenderer().render(
-            document: Document(root: html)
-        )
+        let renderedHTML = SGMLRenderer()
+            .render(
+                document: Document(root: html)
+            )
         let renderedCSS = CSSRenderer(minify: true)
             .render(context.stylesheet())
 

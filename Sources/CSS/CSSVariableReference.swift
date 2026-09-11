@@ -9,7 +9,8 @@ public protocol CSSVariableNameRepresentable: Sendable {
     var propertyName: String { get }
 }
 
-extension CSSVariableNameRepresentable where Self: RawRepresentable, RawValue == String {
+extension CSSVariableNameRepresentable
+where Self: RawRepresentable, RawValue == String {
     public var propertyName: String { rawValue }
 }
 
