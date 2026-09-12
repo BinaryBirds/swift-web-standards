@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct LegendTagTestSuite {
     func initializationWithText() async throws {
         let tag = Legend("Lorem ipsum")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

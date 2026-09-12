@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -14,11 +15,11 @@ struct SelectorBehaviorTests {
     @Test
     func behavior() {
         var selector = Custom("a") {
-            Color("#cafe00")
+            Color(CSSColorValue(CSSColor("#cafe00")))
         }
         selector.pseudo(.hover)
 
-        let rendered = StylesheetRenderer().renderSelector(selector)
+        let rendered = CSSRenderer().renderSelector(selector)
         let expectation = "a:hover {\n    color: #cafe00;\n}"
 
         #expect(rendered == expectation)
@@ -41,7 +42,7 @@ struct SelectorBehaviorTests {
             Color(.red)
         }
         let idSelector = Id("hero") {
-            BackgroundColor(.blue)
+            BackgroundColor(CSSColorValue.color(.blue))
         }
         let elementSelector = Custom("p") {
             Margin(8.px)
@@ -50,7 +51,7 @@ struct SelectorBehaviorTests {
             Padding(4.px)
         }
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderSelector(classSelector)
                 == ".button {\n    color: red;\n}"

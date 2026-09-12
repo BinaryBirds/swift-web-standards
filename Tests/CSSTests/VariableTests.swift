@@ -5,15 +5,19 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
+private enum RawVariableName: String, CSSVariableNameRepresentable {
+    case customSize = "custom-size"
+}
+
 @Suite
 struct VariableTests {
-
     @Test
     func behavior() {
-        let variable = Variable("size", "400px")
+        let variable = Variable(UnsafeCSSVariableName("size"), "400px")
         #expect(variable.name == "--size")
         #expect(variable.value == "400px")
         #expect(variable.isImportant == false)
@@ -23,7 +27,20 @@ struct VariableTests {
         #expect(importantVariable.name == "--size")
         #expect(importantVariable.value == "400px")
 
-        #expect("size".variable == "var(--size)")
+    }
+
+    @Test
+    func variableReference() {
+        let reference = CSSVariableReference(UnsafeCSSVariableName("size"))
+        #expect(reference.name == "size")
+        #expect(reference.rawValue == "var(--size)")
+
+        let customName = TestVariableName("custom-size")
+        let customReference = CSSVariableReference(customName)
+        #expect(customReference.rawValue == "var(--custom-size)")
+
+        let rawReference = CSSVariableReference(RawVariableName.customSize)
+        #expect(rawReference.rawValue == "var(--custom-size)")
     }
 
     @Test
@@ -31,13 +48,51 @@ struct VariableTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Variable("spacing", "12px")
+                    Variable(UnsafeCSSVariableName("spacing"), "12px")
                 }
             }
         }
 
-        let rendered = StylesheetRenderer().render(css)
-        let expectation = ":root {\n    --spacing: 12px;\n}"
+        let rendered = CSSRenderer().render(css)
+        let expectation = #"""
+            :root {
+                --spacing: 12px;
+            }
+            """#
+
+        #expect(rendered == expectation)
+    }
+
+    @Test
+    func variableUsage() {
+        let css = Stylesheet {
+            Media {
+                Root {
+                    Variable(UnsafeCSSVariableName("red-color"), "#f00")
+                }
+                Custom("div") {
+                    BackgroundColor(
+                        .variable(TestVariableName("red-color"))
+                    )
+                    Border(
+                        1.px,
+                        .solid,
+                        .variable(TestVariableName("red-color"))
+                    )
+                }
+            }
+        }
+
+        let rendered = CSSRenderer().render(css)
+        let expectation = #"""
+            :root {
+                --red-color: #f00;
+            }
+            div {
+                background-color: var(--red-color);
+                border: 1px solid var(--red-color);
+            }
+            """#
 
         #expect(rendered == expectation)
     }

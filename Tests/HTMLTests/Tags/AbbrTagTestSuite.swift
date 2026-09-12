@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct AbbrTagTestSuite {
     func basics() async throws {
         let tag = Abbr("SSWG")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -32,7 +33,7 @@ struct AbbrTagTestSuite {
         let tag = Abbr("SSWG")
             .title("Swift Server Workgroup")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

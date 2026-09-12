@@ -12,16 +12,16 @@ public struct BorderColor: Property {
     public let value: String
     public var isImportant: Bool
 
-    /// Sets the color of the four borders.
-    /// - Parameter value: The property value.
-    public init(_ value: CSSColorValue) {
+    /// Sets one to four colors for the top, right, bottom, and left borders.
+    /// - Parameter values: One to four color values.
+    public init(_ values: CSSColorValue...) {
+        precondition(
+            (1...4).contains(values.count),
+            "border-color requires one to four values"
+        )
         self.name = "border-color"
-        self.value = value.rawValue
+        self.value = values.map(\.rawValue).joined(separator: " ")
         self.isImportant = false
     }
 
-    /// Sets the color of the four borders.
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct GridAutoColumnsTests {
     func initializers() {
         let property = GridAutoColumns()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct GridAutoColumnsTests {
         let property = GridAutoColumns()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +45,7 @@ struct GridAutoColumnsTests {
             .tracks([.length(150.px), .fraction(3.fr)])
         )
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "grid-auto-columns: 150px")
         #expect(renderer.renderProperty(fraction) == "grid-auto-columns: 3fr")
         #expect(

@@ -1,5 +1,5 @@
 //
-//  Renderer.swift
+//  SGMLRenderer.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 01. 29.
@@ -7,7 +7,7 @@
 import DOM
 
 /// Renders SGML documents to strings.
-public struct Renderer: Sendable {
+public struct SGMLRenderer: Sendable {
 
     /// The indentation level used during rendering.
     public var indent: UInt8
@@ -23,7 +23,7 @@ public struct Renderer: Sendable {
     public func render(
         document: Document
     ) -> String {
-        let renderer = DOM.Renderer(
+        let renderer = DOM.DOMRenderer(
             indent: indent
         )
         let doctype = render(type: document.type)

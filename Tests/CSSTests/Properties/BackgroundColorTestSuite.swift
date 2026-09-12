@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct BackgroundColorTests {
     func initializers() {
         let property = BackgroundColor()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct BackgroundColorTests {
         let property = BackgroundColor()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -39,10 +40,10 @@ struct BackgroundColorTests {
     @Test
     func values() {
         let transparent = BackgroundColor(.transparent)
-        let color = BackgroundColor(.hotPink)
+        let color = BackgroundColor(CSSColorValue.color(.hotPink))
         let initial = BackgroundColor(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(transparent)
                 == "background-color: transparent"

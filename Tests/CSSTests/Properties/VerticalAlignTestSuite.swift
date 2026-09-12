@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct VerticalAlignTests {
     func initializers() {
         let property = VerticalAlign()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct VerticalAlignTests {
         let property = VerticalAlign()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct VerticalAlignTests {
         let length = VerticalAlign(6.px)
         let middle = VerticalAlign(.middle)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(keyword) == "vertical-align: super")
         #expect(renderer.renderProperty(length) == "vertical-align: 6px")
         #expect(renderer.renderProperty(middle) == "vertical-align: middle")

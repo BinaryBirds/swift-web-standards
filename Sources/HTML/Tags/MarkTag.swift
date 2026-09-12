@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// The `<mark>` tag defines text that should be marked or highlighted.
 public struct Mark:

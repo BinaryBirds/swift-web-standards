@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -18,7 +19,7 @@ struct DlTagTestSuite {
             "Lorem ipsum"
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -39,7 +40,7 @@ struct DlTagTestSuite {
         }
         .id("glossary")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -60,7 +61,7 @@ struct DlTagTestSuite {
         let tag = Dl("Terms")
             .id("terms")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

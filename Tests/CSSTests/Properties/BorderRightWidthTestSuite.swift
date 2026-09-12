@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct BorderRightWidthTests {
     func initializers() {
         let property = BorderRightWidth()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct BorderRightWidthTests {
         let property = BorderRightWidth()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct BorderRightWidthTests {
         let length = BorderRightWidth(4.px)
         let inherit = BorderRightWidth(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(keyword) == "border-right-width: thick")
         #expect(renderer.renderProperty(length) == "border-right-width: 4px")
         #expect(

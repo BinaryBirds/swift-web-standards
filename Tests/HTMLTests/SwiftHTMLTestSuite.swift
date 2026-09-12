@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -42,7 +43,7 @@ struct SwiftHTMLTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(type: .html, root: html)
 
         let expectation = #"""
@@ -116,7 +117,7 @@ struct SwiftHTMLTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(type: .html, root: html)
 
         let expectation = #"""

@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -19,7 +20,7 @@ struct DelTagTestSuite {
         }
         .dateTime("2009-10-11T01:25-07:00")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -35,7 +36,7 @@ struct DelTagTestSuite {
         let tag = Del("<em>Removed</em>")
             .cite("https://example.com/changes")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

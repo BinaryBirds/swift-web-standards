@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -25,7 +26,7 @@ struct StylesheetTests {
             Charset("UTF-8")
             Media {
                 Root {
-                    Variable("size", "10px")
+                    Variable(UnsafeCSSVariableName("size"), "10px")
                 }
             }
         }

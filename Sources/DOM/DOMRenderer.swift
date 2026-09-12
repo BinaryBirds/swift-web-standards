@@ -1,11 +1,11 @@
 //
-//  Renderer.swift
+//  DOMRenderer.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 01. 29.
 
 /// Renders DOM nodes into their string representation.
-public struct Renderer {
+public struct DOMRenderer {
 
     /// Number of spaces per indentation level. Use `0` for inline rendering.
     public var indent: UInt8

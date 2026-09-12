@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct GridTemplateRowsTests {
     func initializers() {
         let property = GridTemplateRows()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct GridTemplateRowsTests {
         let property = GridTemplateRows()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -46,7 +47,7 @@ struct GridTemplateRowsTests {
         let repeatLength = GridTemplateRows(.repeat(3, .length(160.px)))
         let repeatFraction = GridTemplateRows(.repeat(3, .fraction(1.fr)))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "grid-template-rows: 120px")
         #expect(renderer.renderProperty(fraction) == "grid-template-rows: 2fr")
         #expect(

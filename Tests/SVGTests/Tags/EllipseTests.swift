@@ -13,7 +13,7 @@ import Testing
 struct EllipseTests {
 
     private func render(_ tag: Ellipse) -> String {
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
         return renderer.render(document: doc)
     }

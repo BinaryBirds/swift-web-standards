@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct FlexBasisTests {
     func initializers() {
         let property = FlexBasis()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct FlexBasisTests {
         let property = FlexBasis()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct FlexBasisTests {
         let number = FlexBasis(.number(40.percent))
         let inherit = FlexBasis(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(auto) == "flex-basis: auto")
         #expect(renderer.renderProperty(number) == "flex-basis: 40%")
         #expect(renderer.renderProperty(inherit) == "flex-basis: inherit")

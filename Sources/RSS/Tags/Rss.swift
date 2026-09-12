@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 29.
 
 import SGML
+import WebBuilders
 
 /// An `<rss>` element representing the root of an RSS 2.0 feed.
 ///

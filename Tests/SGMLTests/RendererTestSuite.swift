@@ -13,7 +13,7 @@ struct RendererTestSuite {
 
     @Test
     func renderElement() async throws {
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
 
         struct Root: StandardTag {
             var attributes: AttributeStore = .init()
@@ -35,7 +35,7 @@ struct RendererTestSuite {
 
     @Test
     func renderElementWithIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = SGMLRenderer(
             indent: 4
         )
 
@@ -70,7 +70,7 @@ struct RendererTestSuite {
 
     @Test
     func renderHierarchyWithIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = SGMLRenderer(
             indent: 2
         )
 
@@ -126,7 +126,7 @@ struct RendererTestSuite {
 
     @Test
     func renderMutation() async throws {
-        let renderer = Renderer(
+        let renderer = SGMLRenderer(
             indent: 2
         )
 
@@ -194,7 +194,7 @@ struct RendererTestSuite {
 
     @Test
     func renderMutationChildren() async throws {
-        let renderer = Renderer(
+        let renderer = SGMLRenderer(
             indent: 2
         )
 

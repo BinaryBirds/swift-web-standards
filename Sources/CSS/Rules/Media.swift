@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import WebBuilders
+
 /// Represents an `@media` rule with optional query conditions.
 public struct Media: Rule {
 
@@ -221,7 +223,7 @@ public struct Media: Rule {
     ///   - builder: Builder that returns selectors.
     public init(
         _ query: Query? = nil,
-        @Builder<Selector> _ builder: () -> [Selector] = { [] }
+        @Builder<any Selector> _ builder: () -> [Selector] = { [] }
     ) {
         self.init(
             query: query,

@@ -1,13 +1,12 @@
 //
-//  ComponentStylesheetCollector.swift
+//  ComponentStyleCollector.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 03. 06.
 
 import CSS
-import SGML
 
-public struct ComponentStylesheetCollector: Sendable {
+public struct ComponentStyleCollector: Sendable {
 
     private struct State {
         var rulesByComponent: [String: [any CSS.Rule]] = [:]
@@ -16,32 +15,37 @@ public struct ComponentStylesheetCollector: Sendable {
     }
 
     public init() {
-
+        self.state = .init()
     }
 
-    public func getStylesheet(
-        from element: any SGML.Element
-    ) -> CSS.Stylesheet {
-        var state = State()
-        collectLocalComponentRules(from: element, state: &state)
+    public mutating func register(
+        _ component: any Component
+    ) {
+        collectLocalComponentRules(from: component, state: &state)
+    }
+
+    public func stylesheet() -> CSS.Stylesheet {
         let rules = state.componentOrder.flatMap {
             state.rulesByComponent[$0] ?? []
         }
         return CSS.Stylesheet(rules)
     }
 
+    public func getStylesheet(
+        from component: any Component
+    ) -> CSS.Stylesheet {
+        var collector = ComponentStyleCollector()
+        collector.register(component)
+        return collector.stylesheet()
+    }
+
+    private var state: State
+
     private func collectLocalComponentRules(
-        from element: any SGML.Element,
+        from component: any Component,
         state: inout State
     ) {
-        if let component = element as? any Component {
-            collectLocalRules(from: component, state: &state)
-        }
-        if let container = element as? any SGML.Container {
-            for child in container.children {
-                collectLocalComponentRules(from: child, state: &state)
-            }
-        }
+        collectLocalRules(from: component, state: &state)
     }
 
     private func collectLocalRules(
@@ -54,6 +58,5 @@ public struct ComponentStylesheetCollector: Sendable {
         }
         state.rulesByComponent[identifier] = component.rules()
         state.componentOrder.append(identifier)
-        collectLocalComponentRules(from: component.htmlBody(), state: &state)
     }
 }

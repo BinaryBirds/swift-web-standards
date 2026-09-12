@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -24,7 +25,7 @@ struct PreloadAttributeTestSuite {
             let tag = Audio {}
                 .preload(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

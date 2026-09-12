@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct UlTagTestSuite {
     func initialization() async throws {
         let tag = Ul {}
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -37,7 +38,7 @@ struct UlTagTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -60,7 +61,7 @@ struct UlTagTestSuite {
             .id("menu")
             .setClass("primary")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -75,7 +76,7 @@ struct UlTagTestSuite {
     func initializationWithText() async throws {
         let tag = Ul("Item list")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

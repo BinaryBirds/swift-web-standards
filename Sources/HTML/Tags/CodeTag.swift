@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// The `<code>` tag is used to define a piece of computer code.
 ///

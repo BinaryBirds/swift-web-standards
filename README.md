@@ -75,7 +75,7 @@ Available libraries:
 - `SVG`
 - `Sitemap`
 - `MIME`
-- `WebStandards` (bundles all from above)
+- `WebComponents` (bundles all from above)
 
 ## DOM
 
@@ -326,7 +326,7 @@ let css = Stylesheet {
     }
 }
     
-print(StylesheetRenderer(minify: false, indent: 4).render(css))
+print(CSSRenderer(minify: false, indent: 4).render(css))
 ```
 
 [

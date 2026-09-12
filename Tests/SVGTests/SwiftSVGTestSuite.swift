@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import SVG
 
@@ -21,7 +22,7 @@ struct SwiftSVGTestSuite {
             y2: 4
         )
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -36,7 +37,7 @@ struct SwiftSVGTestSuite {
     func basicCircle() async throws {
         let tag = Circle(cx: 1, cy: 2, r: 3)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -48,10 +49,19 @@ struct SwiftSVGTestSuite {
     }
 
     @Test
+    func strokeSupportsCustomPropertyReferences() async throws {
+        let tag = Circle(cx: 1, cy: 2, r: 3)
+            .stroke("var(--stroke-color)")
+        let result = SGMLRenderer().render(document: Document(root: tag))
+
+        #expect(result.contains("stroke=\"var(--stroke-color)\""))
+    }
+
+    @Test
     func basicPolygon() async throws {
         let tag = Polygon([1, 2, 3, 4])
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -66,7 +76,7 @@ struct SwiftSVGTestSuite {
     func basicPolyline() async throws {
         let tag = Polyline([1, 2, 3, 4])
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -81,7 +91,7 @@ struct SwiftSVGTestSuite {
     func basicRect() async throws {
         let tag = Rect(x: 1, y: 2, width: 3, height: 4)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -104,7 +114,7 @@ struct SwiftSVGTestSuite {
             pathLength: 7
         )
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -119,7 +129,7 @@ struct SwiftSVGTestSuite {
     func basicEllipse() async throws {
         let tag = Ellipse(cx: 1, cy: 2, rx: 3, ry: 4)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -134,7 +144,7 @@ struct SwiftSVGTestSuite {
     func basicText() async throws {
         let tag = Text("I love SVG")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -151,7 +161,7 @@ struct SwiftSVGTestSuite {
             .x(0)
             .y(15)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -166,7 +176,7 @@ struct SwiftSVGTestSuite {
     func basicPath() async throws {
         let tag = Path("1 2 3")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -184,7 +194,7 @@ struct SwiftSVGTestSuite {
             Circle(cx: 60, cy: 60, r: 30)
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -204,7 +214,7 @@ struct SwiftSVGTestSuite {
             Circle(cx: 40, cy: 40, r: 20)
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -234,7 +244,7 @@ struct SwiftSVGTestSuite {
         .width(300)
         .height(200)
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -256,7 +266,7 @@ struct SwiftSVGTestSuite {
         .viewBox(minX: 0, minY: 0, width: 16, height: 16)
         .preserveAspectRatio(.xMinYMin, .meet)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -274,7 +284,7 @@ struct SwiftSVGTestSuite {
         let tag = Circle(cx: 1, cy: 2, r: 3)
             .strokeLinecap("round")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -290,7 +300,7 @@ struct SwiftSVGTestSuite {
         let tag = Circle(cx: 1, cy: 2, r: 3)
             .strokeLinejoin("bevel")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -306,7 +316,7 @@ struct SwiftSVGTestSuite {
         let tag = Text("I love SVG")
             .transform("rotate(30 20 40)")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -326,7 +336,7 @@ struct SwiftSVGTestSuite {
             .strokeLinejoin("miter")
             .transform("translate(10 20)")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -343,7 +353,7 @@ struct SwiftSVGTestSuite {
     func pathWithPathLength() async throws {
         let tag = Path("1 2 3", pathLength: 7)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -358,7 +368,7 @@ struct SwiftSVGTestSuite {
     func circleWithPathLength() async throws {
         let tag = Circle(cx: 1, cy: 2, r: 3, pathLength: 9)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

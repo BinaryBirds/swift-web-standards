@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// The `<search>` tag represents a part of the document that performs a search.
 public struct Search:

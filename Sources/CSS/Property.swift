@@ -7,7 +7,7 @@
 /// Base protocol for renderable CSS properties.
 ///
 /// Conforming types supply a property `name` and a `value` string that are
-/// concatenated by `StylesheetRenderer` when emitting CSS.
+/// concatenated by `CSSRenderer` when emitting CSS.
 public protocol Property: Sendable, Mutable {
 
     /// The CSS property name (e.g. `"margin"`).

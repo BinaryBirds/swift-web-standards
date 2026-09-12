@@ -4,6 +4,8 @@
 //
 //  Created by Binary Birds on 2026. 02. 02.
 
+import WebBuilders
+
 /// Represents a `@keyframes` rule.
 public struct Keyframes: Rule {
 
@@ -18,7 +20,7 @@ public struct Keyframes: Rule {
     ///   - builder: A builder that returns keyframe selectors.
     public init(
         _ name: String,
-        @Builder<Selector> _ builder: () -> [Selector]
+        @Builder<any Selector> _ builder: () -> [Selector]
     ) {
         self.name = name
         self.selectors = builder()

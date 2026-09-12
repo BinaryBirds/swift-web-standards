@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// Make some text bold (without marking it as important).
 public struct B:

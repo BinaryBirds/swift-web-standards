@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct OptionTagTestSuite {
     func initializationWithText() async throws {
         let tag = Option("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -34,7 +35,7 @@ struct OptionTagTestSuite {
             .label("Swift Language")
             .selected()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -50,7 +51,7 @@ struct OptionTagTestSuite {
         let tag = Option("Unavailable")
             .disabled()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

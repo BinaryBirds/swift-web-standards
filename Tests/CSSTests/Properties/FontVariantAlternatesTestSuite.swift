@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct FontVariantAlternatesTests {
     func initializers() {
         let property = FontVariantAlternates()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct FontVariantAlternatesTests {
         let property = FontVariantAlternates()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -45,7 +46,7 @@ struct FontVariantAlternatesTests {
         let swash = FontVariantAlternates(.swash("04"))
         let unset = FontVariantAlternates(.unset)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(
             renderer.renderProperty(normal) == "font-variant-alternates: normal"
         )

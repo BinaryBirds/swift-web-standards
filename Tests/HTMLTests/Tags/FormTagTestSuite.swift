@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -19,7 +20,7 @@ struct FormTagTestSuite {
         }
         .target(.self)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -60,7 +61,7 @@ struct FormTagTestSuite {
         .method(.post)
         .action("/sign-in/")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -98,7 +99,7 @@ struct FormTagTestSuite {
         .noValidate("novalidate")
         .rel(.search)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -115,7 +116,7 @@ struct FormTagTestSuite {
             .name("author")
             .target(.blank)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

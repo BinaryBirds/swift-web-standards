@@ -13,7 +13,7 @@ import Testing
 struct LineTests {
 
     private func render(_ tag: Line) -> String {
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
         return renderer.render(document: doc)
     }

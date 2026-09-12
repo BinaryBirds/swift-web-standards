@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct TransitionDurationTests {
     func initializers() {
         let property = TransitionDuration()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct TransitionDurationTests {
         let property = TransitionDuration()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -43,7 +44,7 @@ struct TransitionDurationTests {
         let milliseconds = TransitionDuration(.milliseconds(120))
         let inherit = TransitionDuration(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(zero) == "transition-duration: 0")
         #expect(
             renderer.renderProperty(seconds) == "transition-duration: 0.25s"

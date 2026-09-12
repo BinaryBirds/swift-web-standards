@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct HgroupTagTestSuite {
     func initializationWithText() async throws {
         let tag = Hgroup {}
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -35,7 +36,7 @@ struct HgroupTagTestSuite {
         }
         .id("hero-heading")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -50,7 +51,7 @@ struct HgroupTagTestSuite {
     func initializationWithTextContent() async throws {
         let tag = Hgroup("Headline")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

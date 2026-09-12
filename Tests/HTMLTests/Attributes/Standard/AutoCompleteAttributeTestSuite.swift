@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -85,7 +86,7 @@ struct AutoCompleteAttributeTestSuite {
             let tag = Input()
                 .autoComplete(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""
@@ -102,7 +103,7 @@ struct AutoCompleteAttributeTestSuite {
         let tag = Input()
             .autoComplete("section-blue shipping street-address")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -118,7 +119,7 @@ struct AutoCompleteAttributeTestSuite {
         let tag = Input()
             .autocomplete("off")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -134,7 +135,7 @@ struct AutoCompleteAttributeTestSuite {
         let tag = Input()
             .autoComplete()
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
