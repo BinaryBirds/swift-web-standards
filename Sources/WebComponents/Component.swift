@@ -32,8 +32,7 @@ public protocol Component: Sendable {
 /// Compatibility protocol for applications that still declare legacy leaf
 /// components. New components should conform directly to `Component` and
 /// implement `html(context:)`.
-public protocol Leaf: Component {
-    associatedtype HTML: SGML.Element
+public protocol Leaf: Component where HTML: SGML.Element {
     func html() -> HTML
 }
 
