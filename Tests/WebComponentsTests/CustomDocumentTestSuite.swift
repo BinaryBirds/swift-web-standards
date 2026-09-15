@@ -137,10 +137,6 @@ private struct CustomBodyComponent<Content: Component>: Component {
 
     let body: Content
 
-    init(body: Content) {
-        self.body = body
-    }
-
     func selectors() -> [any CSS.Selector] {
         Class("custom-body") {
             Color(.blue)
