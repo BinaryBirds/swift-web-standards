@@ -27,7 +27,7 @@ struct RendererTestSuite {
 
     @Test
     func commentNode() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = CommentNode(
             value: "this is a comment"
         )
@@ -42,7 +42,7 @@ struct RendererTestSuite {
 
     @Test
     func groupNode() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = ListNode(
             items: [
                 InlineText("this is a text"),
@@ -62,7 +62,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNode() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = StandardNode(
             name: "p"
         )
@@ -77,7 +77,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodes() async throws {
-        let renderer = Renderer(indent: 4)
+        let renderer = DOMRenderer(indent: 4)
         let node = StandardNode(
             name: "main",
             children: [
@@ -99,7 +99,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodeProperties() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = StandardNode(
             name: "p",
             properties: [
@@ -117,7 +117,7 @@ struct RendererTestSuite {
 
     @Test
     func shortNode() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = ShortNode(
             name: "br"
         )
@@ -132,7 +132,7 @@ struct RendererTestSuite {
 
     @Test
     func shortNodeWithIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 2
         )
         let node = ShortNode(
@@ -149,7 +149,7 @@ struct RendererTestSuite {
 
     @Test
     func shortNodeAsChild() async throws {
-        let renderer = Renderer(indent: 4)
+        let renderer = DOMRenderer(indent: 4)
         let node = StandardNode(
             name: "main",
             children: [
@@ -171,7 +171,7 @@ struct RendererTestSuite {
 
     @Test
     func shortNodeProperties() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = ShortNode(
             name: "input",
             properties: [
@@ -190,7 +190,7 @@ struct RendererTestSuite {
 
     @Test
     func textNode() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = InlineText("this is a text")
 
         let expectation = #"""
@@ -203,7 +203,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodeWithText() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = StandardNode(
             name: "p",
             children: [
@@ -221,7 +221,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodeWithoutIndentation() async throws {
-        let renderer = Renderer()
+        let renderer = DOMRenderer()
         let node = StandardNode(
             name: "div",
             children: [
@@ -250,7 +250,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodeWithIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 4
         )
         let node = StandardNode(
@@ -279,7 +279,7 @@ struct RendererTestSuite {
 
     @Test
     func commentNodeWithIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 2
         )
         let node = CommentNode(
@@ -296,7 +296,7 @@ struct RendererTestSuite {
 
     @Test
     func listNodeWithIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 2
         )
         let node = StandardNode(
@@ -330,7 +330,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodeWithStartingTextIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 2
         )
         let node = StandardNode(
@@ -376,7 +376,7 @@ struct RendererTestSuite {
 
     @Test
     func standardNodeWithTextIndentation() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 2
         )
         let node = StandardNode(
@@ -429,7 +429,7 @@ struct RendererTestSuite {
 
     @Test
     func preTagSupport() async throws {
-        let renderer = Renderer(
+        let renderer = DOMRenderer(
             indent: 4
         )
         let node = StandardNode(

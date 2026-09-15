@@ -6,6 +6,7 @@
 //
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -16,7 +17,7 @@ struct ZIndexTests {
     func defaultInitializer() {
         let property = ZIndex()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct ZIndexTests {
     func integerValue() {
         let property = ZIndex(.number(10))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         #expect(result == "z-index: 10")
@@ -38,7 +39,7 @@ struct ZIndexTests {
     func zeroValue() {
         let property = ZIndex(.number(0))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         #expect(result == "z-index: 0")
@@ -48,7 +49,7 @@ struct ZIndexTests {
     func negativeValue() {
         let property = ZIndex(.number(-5))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         #expect(result == "z-index: -5")
@@ -59,7 +60,7 @@ struct ZIndexTests {
         let property = ZIndex(.number(100))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         #expect(result == "z-index: 100 !important")

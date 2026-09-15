@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct OutlineOffsetTests {
     func initializers() {
         let property = OutlineOffset(.length(8.px))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct OutlineOffsetTests {
         let property = OutlineOffset(.length(8.px))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct OutlineOffsetTests {
         let initial = OutlineOffset(.initial)
         let inherit = OutlineOffset(.inherit)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(length) == "outline-offset: 12px")
         #expect(renderer.renderProperty(initial) == "outline-offset: initial")
         #expect(renderer.renderProperty(inherit) == "outline-offset: inherit")

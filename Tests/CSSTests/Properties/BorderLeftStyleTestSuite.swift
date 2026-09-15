@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct BorderLeftStyleTests {
     func initializers() {
         let property = BorderLeftStyle()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct BorderLeftStyleTests {
         let property = BorderLeftStyle()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

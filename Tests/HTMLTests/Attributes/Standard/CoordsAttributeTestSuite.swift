@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -17,7 +18,7 @@ struct CoordsAttributeTestSuite {
         let tag = Area()
             .coords("value")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -33,7 +34,7 @@ struct CoordsAttributeTestSuite {
         let tag = Area()
             .coords(0, 10, 20, 30)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -49,7 +50,7 @@ struct CoordsAttributeTestSuite {
         let tag = Area()
             .coords([1.5, 2.25])
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -65,7 +66,7 @@ struct CoordsAttributeTestSuite {
         let tag = Area()
             .coords(1.0 as Float, 2.5 as Float, 3.75 as Float)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

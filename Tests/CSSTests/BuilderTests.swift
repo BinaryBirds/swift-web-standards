@@ -6,7 +6,7 @@
 
 import Testing
 
-@testable import CSS
+@testable import WebBuilders
 
 private func buildValues(includeExtras: Bool) -> [Int] {
     @Builder<Int> var values: [Int] {

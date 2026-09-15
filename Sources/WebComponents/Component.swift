@@ -1,0 +1,60 @@
+//
+//  Component.swift
+//  swift-web-standards
+//
+//  Created by Tibor Bödecs on 2026. 03. 06.
+//
+
+import CSS
+import SGML
+import WebBuilders
+
+public protocol Component: Sendable {
+
+    associatedtype HTML: SGML.Element
+
+    var identifier: String { get }
+
+    func html(
+        context: inout BuilderContext
+    ) -> HTML
+
+    @Builder<any CSS.Rule>
+    func rules() -> [any CSS.Rule]
+
+    @Builder<any CSS.Selector>
+    func selectors() -> [any CSS.Selector]
+
+    @Builder<String>
+    func scripts() -> [String]
+}
+
+extension Component {
+
+    /// Builds this component using a fresh context.
+    public func html() -> HTML {
+        var context = BuilderContext()
+        return context.build(self)
+    }
+
+    public var identifier: String {
+        String(describing: type(of: self))
+    }
+
+    public func rules() -> [any CSS.Rule] {
+        let selectors = selectors()
+        guard !selectors.isEmpty else {
+            return []
+        }
+        return [Media(selectors: selectors)]
+    }
+
+    public func selectors() -> [any CSS.Selector] {
+        []
+    }
+
+    public func scripts() -> [String] {
+        []
+    }
+
+}

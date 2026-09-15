@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct MarginTests {
     func initializers() {
         let property = Margin()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct MarginTests {
         let property = Margin()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -44,7 +45,7 @@ struct MarginTests {
         let auto = Margin(.auto)
         let initial = Margin(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(single) == "margin: 12px")
         #expect(renderer.renderProperty(axis) == "margin: 8px 16px")
         #expect(renderer.renderProperty(sides) == "margin: 1px 2px 3px 4px")

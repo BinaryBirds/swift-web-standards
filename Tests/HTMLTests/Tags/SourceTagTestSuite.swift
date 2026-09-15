@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -17,7 +18,7 @@ struct SourceTagTestSuite {
         let tag = Source()
             .src("foo")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -34,7 +35,7 @@ struct SourceTagTestSuite {
             .srcSet("img.png")
             .media("(prefers-color-scheme: dark)")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
         let expectation = #"""
             <source srcset="img.png" media="(prefers-color-scheme: dark)">

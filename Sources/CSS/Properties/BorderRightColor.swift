@@ -20,7 +20,4 @@ public struct BorderRightColor: Property {
         self.isImportant = false
     }
 
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

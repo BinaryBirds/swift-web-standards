@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -23,7 +24,7 @@ struct TranslateAttributeTestSuite {
             let tag = Div {}
                 .translate(value)
 
-            let renderer = Renderer()
+            let renderer = SGMLRenderer()
             let doc = Document(root: tag)
 
             let expectation = #"""

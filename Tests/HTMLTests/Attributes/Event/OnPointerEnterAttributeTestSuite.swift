@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -17,7 +18,7 @@ struct OnPointerEnterAttributeTestSuite {
         let tag = A {}
             .onPointerEnter("handler()")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

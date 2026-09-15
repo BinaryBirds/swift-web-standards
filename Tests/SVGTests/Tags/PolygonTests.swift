@@ -13,7 +13,7 @@ import Testing
 struct PolygonTests {
 
     private func render(_ tag: Polygon) -> String {
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
         return renderer.render(document: doc)
     }

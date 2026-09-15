@@ -20,7 +20,7 @@ public struct AnimationName: Property {
         case inherit
 
         /// Creates a `animation-name` declaration.
-        /// Used by `StylesheetRenderer` when emitting CSS.
+        /// Used by `CSSRenderer` when emitting CSS.
         /// - Parameter value: The property value.
         public init(stringLiteral value: StringLiteralType) {
             self = .keyframename(value)

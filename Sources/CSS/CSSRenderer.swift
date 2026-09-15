@@ -1,12 +1,12 @@
 //
-//  StylesheetRenderer.swift
+//  CSSRenderer.swift
 //  swift-web-standards
 //
 //  Created by Tibor Bodecs on 2021. 11. 21.
 //
 
 /// Renders stylesheets, rules, selectors, and properties into CSS strings.
-public struct StylesheetRenderer {
+public struct CSSRenderer: Sendable {
 
     /// Whether output should be minified.
     public let minify: Bool

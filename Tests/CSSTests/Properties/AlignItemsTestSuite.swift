@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct AlignItemsTests {
     func initializers() {
         let property = AlignItems()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct AlignItemsTests {
         let property = AlignItems()
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"

@@ -44,4 +44,22 @@ public struct Outline: Property {
         self.value = value.rawValue
         self.isImportant = false
     }
+
+    /// Creates an outline from width, style, and color values.
+    public init(
+        _ width: OutlineWidth.Value = .medium,
+        _ style: OutlineStyle.Value = .none,
+        _ color: OutlineColor.Value = .invert
+    ) {
+        self.init(.values(width, style, color))
+    }
+
+    /// Creates an outline from a width value, style, and color.
+    public init(
+        _ width: UnitRepresentable,
+        _ style: OutlineStyle.Value = .none,
+        _ color: OutlineColor.Value = .invert
+    ) {
+        self.init(.length(width), style, color)
+    }
 }

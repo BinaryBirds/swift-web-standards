@@ -70,12 +70,14 @@ public struct Background: Property {
         self.isImportant = false
     }
 
-    /// Creates a background with CSS color.
-    /// - Parameter color: The color value.
-    public init(
-        color: CSSColor
-    ) {
-        self.init(.values(.color(color), nil, nil, nil, nil, nil, nil, nil))
+    /// Creates a background shorthand containing only a color value.
+    public init(_ color: CSSColorValue) {
+        self.init(color: color)
+    }
+
+    /// Creates a background shorthand containing a concrete CSS color.
+    public init(_ color: CSSColor) {
+        self.init(color: .color(color))
     }
 
     /// A shorthand property for all the background-* properties.

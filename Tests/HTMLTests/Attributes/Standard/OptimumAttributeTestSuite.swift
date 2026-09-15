@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -17,7 +18,7 @@ struct OptimumAttributeTestSuite {
         let tag = Meter {}
             .optimum(1.5)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

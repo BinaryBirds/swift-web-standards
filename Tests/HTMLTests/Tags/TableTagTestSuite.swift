@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct TableTagTestSuite {
     func initialization() async throws {
         let tag = Table("")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -53,7 +54,7 @@ struct TableTagTestSuite {
             }
         }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -127,7 +128,7 @@ struct TableTagTestSuite {
         }
         .class("table")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""

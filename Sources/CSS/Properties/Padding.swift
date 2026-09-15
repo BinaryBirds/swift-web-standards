@@ -43,14 +43,14 @@ public struct Padding: Property {
     }
 
     /// Creates a `padding` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameter value: The property value.
     public init(_ value: UnitRepresentable = 0) {
         self.init(.length(value))
     }
 
     /// Creates a `padding` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameters:
     ///   - vertical: The vertical value.
     ///   - horizontal: The horizontal value.
@@ -64,7 +64,7 @@ public struct Padding: Property {
     }
 
     /// Creates a `padding` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameters:
     ///   - vertical: The vertical value.
     ///   - horizontal: The horizontal value.
@@ -76,7 +76,7 @@ public struct Padding: Property {
     }
 
     /// Creates a `padding` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameters:
     ///   - top: The top value.
     ///   - right: The right value.
@@ -96,7 +96,7 @@ public struct Padding: Property {
     }
 
     /// Creates a `padding` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameters:
     ///   - top: The top value.
     ///   - right: The right value.

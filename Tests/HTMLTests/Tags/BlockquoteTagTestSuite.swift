@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct BlockquoteTagTestSuite {
     func initializationWithText() async throws {
         let tag = Blockquote("Hello, World!")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -32,7 +33,7 @@ struct BlockquoteTagTestSuite {
         let tag = Blockquote("Hello, World!")
             .cite("unknown")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

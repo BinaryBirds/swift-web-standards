@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct TabSizeTests {
     func initializers() {
         let property = TabSize(.length(8.px))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct TabSizeTests {
         let property = TabSize(.length(8.px))
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct TabSizeTests {
         let length = TabSize(2.em)
         let initial = TabSize(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(number) == "tab-size: 4")
         #expect(renderer.renderProperty(length) == "tab-size: 2em")
         #expect(renderer.renderProperty(initial) == "tab-size: initial")

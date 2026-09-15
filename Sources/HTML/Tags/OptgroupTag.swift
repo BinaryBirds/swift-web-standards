@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 01. 28.
 
 import SGML
+import WebBuilders
 
 /// The `<optgroup>` tag is used to group related options in a `<select>` element (drop-down list).
 ///

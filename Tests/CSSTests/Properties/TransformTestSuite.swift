@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct TransformTests {
     func initializers() {
         let property = Transform(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct TransformTests {
         let property = Transform(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -67,7 +68,7 @@ struct TransformTests {
             )
         )
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
 
         #expect(
             renderer.renderProperty(matrix)

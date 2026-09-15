@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -17,7 +18,7 @@ struct LinkTagTestSuite {
         let tag = Link(rel: .stylesheet)
             .href("./css/style.css")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -34,7 +35,7 @@ struct LinkTagTestSuite {
             .media("screen")
             .href("./css/style.css")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -57,7 +58,7 @@ struct LinkTagTestSuite {
             )
             .crossOrigin(.anonymous)
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

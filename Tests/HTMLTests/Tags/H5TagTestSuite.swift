@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -16,7 +17,7 @@ struct H5TagTestSuite {
     func initialization() async throws {
         let tag = H5("Lorem ipsum")
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

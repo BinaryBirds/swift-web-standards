@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -15,7 +16,7 @@ struct TextCombineUprightTests {
     func initializers() {
         let property = TextCombineUpright(.initial)
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value)"
@@ -28,7 +29,7 @@ struct TextCombineUprightTests {
         let property = TextCombineUpright(.initial)
             .important()
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         let result = renderer.renderProperty(property)
 
         let expectation = "\(property.name): \(property.value) !important"
@@ -42,7 +43,7 @@ struct TextCombineUprightTests {
         let all = TextCombineUpright(.all)
         let digits = TextCombineUpright(.digits(2))
 
-        let renderer = StylesheetRenderer()
+        let renderer = CSSRenderer()
         #expect(renderer.renderProperty(none) == "text-combine-upright: none")
         #expect(renderer.renderProperty(all) == "text-combine-upright: all")
         #expect(

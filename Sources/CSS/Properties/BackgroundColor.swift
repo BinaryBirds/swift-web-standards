@@ -20,8 +20,4 @@ public struct BackgroundColor: Property {
         self.isImportant = false
     }
 
-    /// Specifies the background color of an element.
-    public init(_ value: CSSColor) {
-        self.init(.color(value))
-    }
 }

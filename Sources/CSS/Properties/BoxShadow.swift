@@ -79,7 +79,7 @@ public struct BoxShadow: Property {
     }
 
     /// Creates a `box-shadow` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameters:
     ///   - hOffset: The hOffset value.
     ///   - vOffset: The vOffset value.

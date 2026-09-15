@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -36,7 +37,7 @@ struct AttributesTestSuite {
             .setAttribute(name: "class", value: "text")
             .setAttribute(name: "align", value: "left")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -56,7 +57,7 @@ struct AttributesTestSuite {
             .setAttribute(name: "class", value: "note")
             .setAttribute(name: "align", value: "right")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -75,7 +76,7 @@ struct AttributesTestSuite {
             .addAttribute(name: "class", value: "bar")
             .addAttribute(name: "class", value: "baz")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -105,7 +106,7 @@ struct AttributesTestSuite {
                 )
             )
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -139,7 +140,7 @@ struct AttributesTestSuite {
                 )
             )
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -161,7 +162,7 @@ struct AttributesTestSuite {
             .addClass("b")
             .addClass("c")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -178,7 +179,7 @@ struct AttributesTestSuite {
             .class("a", "b", "c")
             .setClass("b")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -196,7 +197,7 @@ struct AttributesTestSuite {
             .removeClass("e")
             .removeClass("c")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -213,7 +214,7 @@ struct AttributesTestSuite {
             .addClass("a")
             .removeClass("a")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -231,7 +232,7 @@ struct AttributesTestSuite {
             .toggleClass("a")
             .toggleClass("b")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -253,7 +254,7 @@ struct AttributesTestSuite {
                 $0.addClass("normal")
             }
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -271,7 +272,7 @@ struct AttributesTestSuite {
         let tag = P("Lorem ipsum.")
             .style("a")
 
-        let renderer = Renderer(indent: 4)
+        let renderer = SGMLRenderer(indent: 4)
         let doc = Document(root: tag)
 
         let expectation = #"""

@@ -6,6 +6,7 @@
 
 import SGML
 import Testing
+import WebBuilders
 
 @testable import HTML
 
@@ -19,7 +20,7 @@ struct PTagTestSuite {
             .addClass("bar")
         //            .addChild(Comment("foo"))
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""
@@ -39,7 +40,7 @@ struct PTagTestSuite {
             "ipsum"
         }
 
-        let renderer = Renderer()
+        let renderer = SGMLRenderer()
         let doc = Document(root: tag)
 
         let expectation = #"""

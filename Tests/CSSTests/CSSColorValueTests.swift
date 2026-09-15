@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -17,5 +18,14 @@ struct CSSColorValueTests {
         #expect(CSSColorValue.initial.rawValue == "initial")
         #expect(CSSColorValue.inherit.rawValue == "inherit")
         #expect(CSSColorValue.color(.red).rawValue == "red")
+        #expect(CSSColorValue(.red).rawValue == "red")
+
+        let variable = CSSColorValue.variable(
+            TestVariableName("brand-color")
+        )
+        #expect(variable.rawValue == "var(--brand-color)")
+        if case .variable(let name) = variable {
+            #expect(name.propertyName == "brand-color")
+        }
     }
 }

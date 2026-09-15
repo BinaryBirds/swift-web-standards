@@ -5,6 +5,7 @@
 //  Created by Binary Birds on 2026. 02. 02.
 
 import Testing
+import WebBuilders
 
 @testable import CSS
 
@@ -23,7 +24,7 @@ struct SwiftCssTests {
             }
         }
         #expect(
-            StylesheetRenderer(minify: true, indent: 2).render(css)
+            CSSRenderer(minify: true, indent: 2).render(css)
                 == #"@charset "UTF-8";:root{margin:8.5px 8px;padding:8.5px 8px}"#
         )
     }
@@ -39,9 +40,9 @@ struct SwiftCssTests {
                 }
             }
         }
-        print(StylesheetRenderer(indent: 2).render(css))
+        print(CSSRenderer(indent: 2).render(css))
         #expect(
-            StylesheetRenderer(indent: 2).render(css) == #"""
+            CSSRenderer(indent: 2).render(css) == #"""
                 @charset "UTF-8";
                 :root {
                   margin: 8.5px 8px;
@@ -65,7 +66,7 @@ struct SwiftCssTests {
 
             Media(.screen && .minWidth("600px")) {
                 Class("button") {
-                    Color("#cafe00")
+                    Color(CSSColorValue(CSSColor("#cafe00")))
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
@@ -76,13 +77,13 @@ struct SwiftCssTests {
 
             Media(.screen && .displayMode(.standalone)) {
                 Id("lead") {
-                    Background(color: .red)
+                    Background(color: CSSColorValue.color(.red))
                 }
             }
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 @charset "UTF-8";
                 :root {
                     margin: 8.5px 8px;
@@ -112,7 +113,7 @@ struct SwiftCssTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Variable("size", "400px")
+                    Variable(UnsafeCSSVariableName("size"), "400px")
                 }
                 Class("container") {
                     Width(200.px)
@@ -120,23 +121,23 @@ struct SwiftCssTests {
             }
             Media(.screen && .maxWidth(599.px)) {
                 Root {
-                    Variable("size", "200px")
+                    Variable(UnsafeCSSVariableName("size"), "200px")
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
                 Root {
-                    Variable("size", "500px")
+                    Variable(UnsafeCSSVariableName("size"), "500px")
                 }
             }
             Media(.screen && .displayMode(.standalone)) {
                 Root {
-                    Variable("size", "460px")
+                    Variable(UnsafeCSSVariableName("size"), "460px")
                 }
             }
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 :root {
                     --size: 400px;
                 }
@@ -167,28 +168,28 @@ struct SwiftCssTests {
         let css = Stylesheet {
             Media {
                 Root {
-                    Background(color: .red)
+                    Background(color: CSSColorValue.color(.red))
                 }
             }
             Media(.screen && .maxWidth(599.px)) {
                 Root {
-                    Background(color: .blue)
+                    Background(color: CSSColorValue.color(.blue))
                 }
             }
             Media(.screen && .prefersColorScheme(.dark)) {
                 Root {
-                    Background(color: .green)
+                    Background(color: CSSColorValue.color(.green))
                 }
             }
             Media(.screen && .displayMode(.standalone)) {
                 Custom("body") {
-                    Background(color: .yellow)
+                    Background(color: CSSColorValue.color(.yellow))
                 }
             }
         }
 
         #expect(
-            StylesheetRenderer().render(css) == #"""
+            CSSRenderer().render(css) == #"""
                 :root {
                     background: red;
                 }

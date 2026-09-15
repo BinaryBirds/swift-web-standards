@@ -43,7 +43,7 @@ public struct CounterIncrement: Property {
     public var isImportant: Bool
 
     /// Creates a `counter-increment` declaration.
-    /// Used by `StylesheetRenderer` when emitting CSS.
+    /// Used by `CSSRenderer` when emitting CSS.
     /// - Parameter value: The property value.
     public init(
         _ value: Value = .none
