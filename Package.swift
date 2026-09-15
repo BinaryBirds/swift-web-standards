@@ -24,6 +24,7 @@ defaultSwiftSettings.append(
 let package = Package(
     name: "swift-web-standards",
     products: [
+        .library(name: "WebBuilders", targets: ["WebBuilders"]),
         .library(name: "DOM", targets: ["DOM"]),
         .library(name: "SGML", targets: ["SGML"]),
         .library(name: "HTML", targets: ["HTML"]),

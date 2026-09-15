@@ -29,23 +29,9 @@ public protocol Component: Sendable {
     func scripts() -> [String]
 }
 
-/// Compatibility protocol for applications that still declare legacy leaf
-/// components. New components should conform directly to `Component` and
-/// implement `html(context:)`.
-public protocol Leaf: Component where HTML: SGML.Element {
-    func html() -> HTML
-}
-
-extension Leaf {
-    public func html(context: inout BuilderContext) -> HTML {
-        html()
-    }
-}
-
 extension Component {
 
-    /// Legacy convenience retained while downstream applications migrate to
-    /// context-based building.
+    /// Builds this component using a fresh context.
     public func html() -> HTML {
         var context = BuilderContext()
         return context.build(self)

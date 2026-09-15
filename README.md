@@ -3,9 +3,9 @@
 An awesome Swift library that closely follows the [W3C web standards](https://www.w3.org/standards/).
 
 [
-    ![Release: 1.0.0-beta.2](https://img.shields.io/badge/Release-1.0.0--beta.2-F05138)
+    ![Release: 1.0.0-beta.4](https://img.shields.io/badge/Release-1.0.0--beta.4-F05138)
 ](
-    https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.2
+    https://github.com/binarybirds/swift-web-standards/releases/tag/1.0.0-beta.4
 )
 
 ## Features
@@ -50,13 +50,13 @@ The Swift Web Standards package is distributed through **Swift Package Manager**
 Add this package to your `Package.swift` dependencies:
 
 ```swift
-.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.2"),
+.package(url: "https://github.com/binarybirds/swift-web-standards", from: "1.0.0-beta.4"),
 ```
 
 Then include the required product as a dependency for your target:
 
 ```swift
-.product(name: "HTML", package: "HTML"),
+.product(name: "HTML", package: "swift-web-standards"),
 ```
 
 Import the module in your source files:
@@ -65,17 +65,20 @@ Import the module in your source files:
 import HTML
 ```
 
-The `HTML` package is now ready to use.
+The `HTML` module is now ready to use.
 
 Available libraries:
 
+- `DOM`
+- `SGML`
 - `HTML`
 - `CSS`
 - `RSS`
 - `SVG`
 - `Sitemap`
 - `MIME`
-- `WebComponents` (bundles all from above)
+- `WebBuilders` (shared result-builder support)
+- `WebComponents` (higher-level component APIs)
 
 ## DOM
 
@@ -86,7 +89,7 @@ This tree is composed of the following node types:
 - **`ListNode`** — a container node used to group child nodes
 - **`ShortNode`** — a void (self-closing) element representation (`<node>`)
 - **`StandardNode`** — a normal element with opening and closing tags (`<node></node>`)
-- **`TextNode`** — raw textual content within the tree
+- **`InlineText`** — raw textual content within the tree
 
 These node types form the low-level DOM representation used by the renderer.
 
@@ -107,6 +110,8 @@ You can define your own elements by conforming to one of the following protocols
 Here is a minimal example of defining a custom short tag:
 
 ```swift
+import SGML
+
 public struct Br: ShortTag {
 
     public var attributes: AttributeStore
@@ -117,13 +122,16 @@ public struct Br: ShortTag {
 }
 ```
 
-A standard tag can be represented as follows, including result-builder support provided by the `@ElementBuilder` attribute:
+A standard tag can be represented as follows, including result-builder support provided by the `@Builder` attribute:
 
 ```swift
+import SGML
+import WebBuilders
+
 public struct P: StandardTag {
 
     public var attributes: AttributeStore
-    public var children: [Element]
+    public var children: [any Element]
 
     public init(
         _ contents: String
@@ -135,14 +143,14 @@ public struct P: StandardTag {
     }
 
     public init(
-        children: [Element]
+        children: [any Element]
     ) {
         self.attributes = .init()
         self.children = children
     }
 
     public init(
-        @ElementBuilder _ block: () -> [Element]
+        @Builder<any Element> _ block: () -> [any Element]
     ) {
         self.init(children: block())
     }
@@ -155,6 +163,8 @@ By default, the tag name is automatically derived from the type name (converted 
 It is also possible to override the static `name` property manually:
 
 ```swift
+import SGML
+
 struct LastBuildDate: StandardTag {
     
     static let name = "lastBuildDate"
@@ -168,6 +178,8 @@ struct LastBuildDate: StandardTag {
 You can define custom element attributes by creating a new `attribute modifier` protocol.
 
 ```swift
+import SGML
+
 public protocol StyleAttributeModifier {
     associatedtype StyleAttributeValueType: AttributeValueRepresentable = String
 }
@@ -178,7 +190,7 @@ extension StyleAttributeModifier where Self: Attributes & Mutable {
         _ value: StyleAttributeValueType?
     ) -> Self {
         setAttribute(
-            key: "style",
+            name: "style",
             value: value?.attributeValue
         )
     }
@@ -188,23 +200,41 @@ extension StyleAttributeModifier where Self: Attributes & Mutable {
 You can set, add, or remove attributes—or even modify individual attribute values—on any tag that supports attributes:
 
 ```swift
+import SGML
+
+struct Alignment: Attribute {
+
+    enum Value: String {
+        case left
+        case right
+        case middle
+        case justify
+    }
+
+    static let name = "align"
+    let value: String?
+
+    init(_ value: Value) {
+        self.value = value.rawValue
+    }
+}
+
 P("Lorem ipsum")
     // set (override) the current attributes
-    .setAttribute(Class("note"))
-    .setAttributeValueBy(name: "style", value: "color: white;")
+    .setAttribute(name: "class", value: "note")
+    .setAttribute(name: "style", value: "color: white;")
     .setAttributes([
         Alignment(.left)
     ])
     // add attribute or value(s) 
-    .addAttributeValue(Class("important"))
-    .addAttributeValueBy(name: "style", value: "background: black;")
-    .addAttributeValues([
-        Class("large")
+    .addAttribute(name: "class", value: "important")
+    .addAttribute(name: "style", value: "background: black;")
+    .addAttributes([
+        Alignment(.right)
     ])
     // remove attribute or value(s)
-    .removeAttributeBy(Class.self)
-    .removeAttributeBy(name: "style")
-    .removeAttributeValueBy(
+    .removeAttribute(name: "style")
+    .removeAttribute(
         Alignment(.left)
     )
 ```
@@ -216,6 +246,8 @@ There are built-in, type-safe attributes and helper modifiers available for the 
 Use the `if` modifier to evaluate a condition and update an element when the condition is met:
 
 ```swift
+import HTML
+
 let condition = false
 
 H1("Lorem ipsum")
@@ -232,24 +264,27 @@ It is also possible to define tags that contain child elements; these are referr
 All standard tags support child elements by default.
 
 ```swift
+import SGML
+import WebBuilders
+
 public struct CustomTag:
     StandardTag
 {
 
     public var attributes: AttributeStore
 
-    public var children: [Element]
+    public var children: [any Element]
 
     init(
         attributes: AttributeStore = .init(),
-        children: [Element]
+        children: [any Element]
     ) {
         self.attributes = attributes
         self.children = children
     }
 
     public init(
-        @Builder<Element> _ block: () -> [Element]
+        @Builder<any Element> _ block: () -> [any Element]
     ) {
         self.init(children: block())
     }
@@ -263,6 +298,7 @@ This produces a standards-compliant HTML document:
 
 ```swift
 import HTML
+import SGML
 
 let html = Html {
     Head {
@@ -294,6 +330,8 @@ print(result) // HTML output
 This produces a CSS document:
 
 ```swift
+import CSS
+
 let css = Stylesheet {            
     Media {
         AllElements {
@@ -302,8 +340,8 @@ let css = Stylesheet {
         Root {
             Color(.blue)
         }
-        Element("div") {
-            BackgroundColor(.red)
+        Custom("div") {
+            Background(.color(.red))
             Color(.white)
             TextAlign(.left)
         }
@@ -327,6 +365,48 @@ let css = Stylesheet {
 }
     
 print(CSSRenderer(minify: false, indent: 4).render(css))
+```
+
+## Custom components
+
+The `WebComponents` library provides a context-aware component API. A component
+can render HTML, declare the CSS selectors it owns, and compose child components
+through the shared `BuilderContext`:
+
+```swift
+import CSS
+import HTML
+import SGML
+import WebBuilders
+import WebComponents
+
+struct GreetingComponent: Component {
+
+    let name: String
+
+    func selectors() -> [any Selector] {
+        Class("greeting-component") {
+            Color(.blue)
+        }
+    }
+
+    func html(context: inout BuilderContext) -> Div {
+        Div {
+            H1("Hello, \(name)!")
+        }
+        .class("greeting-component")
+    }
+}
+
+var context = BuilderContext()
+let greeting = context.build(GreetingComponent(name: "Swift"))
+
+let html = Document(root: greeting)
+let renderedHTML = SGMLRenderer(indent: 4).render(document: html)
+let renderedCSS = CSSRenderer(indent: 4).render(context.stylesheet())
+
+print(renderedHTML)
+print(renderedCSS)
 ```
 
 [
