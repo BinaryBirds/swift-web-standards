@@ -13,7 +13,7 @@ struct PageComponent: Component {
 
     private let child = FooComponent(text: "Component subtree")
 
-    func html(context: inout RenderContext) -> Div {
-        Div { context.render(child) }
+    func html(context: inout BuilderContext) -> Div {
+        Div { context.build(child) }
     }
 }

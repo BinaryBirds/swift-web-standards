@@ -1,5 +1,5 @@
 //
-//  RenderContext.swift
+//  BuilderContext.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 09. 11.
@@ -7,7 +7,7 @@
 import CSS
 import SGML
 
-public struct RenderContext: Sendable {
+public struct BuilderContext: Sendable {
 
     private var styleCollector: ComponentStyleCollector
     private var scriptCollector: ComponentScriptCollector
@@ -24,7 +24,7 @@ public struct RenderContext: Sendable {
         scriptCollector.register(component)
     }
 
-    public mutating func render<T: Component>(
+    public mutating func build<T: Component>(
         _ component: T
     ) -> T.HTML {
         register(component)

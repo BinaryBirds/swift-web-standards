@@ -1,5 +1,5 @@
 //
-//  RenderContextTestSuite.swift
+//  BuilderContextTestSuite.swift
 //  swift-web-standards
 //
 //  Created by Binary Birds on 2026. 09. 11.
@@ -14,12 +14,12 @@ import WebBuilders
 @testable import WebComponents
 
 @Suite
-struct RenderContextTestSuite {
+struct BuilderContextTestSuite {
 
     @Test
-    func renderingRegistersStylesForTheRenderedComponent() {
-        var context = RenderContext()
-        let html = context.render(ContextStyledComponent())
+    func buildingRegistersStylesForTheBuiltComponent() {
+        var context = BuilderContext()
+        let html = context.build(ContextStyledComponent())
         let renderedHTML = SGMLRenderer()
             .render(
                 document: Document(root: html)
@@ -33,7 +33,7 @@ struct RenderContextTestSuite {
 
     @Test
     func explicitRegistrationIncludesComponentsThatAreNotRendered() {
-        var context = RenderContext()
+        var context = BuilderContext()
         context.register(ContextRegisteredComponent())
         let renderedCSS = CSSRenderer(minify: true)
             .render(context.stylesheet())
@@ -42,10 +42,10 @@ struct RenderContextTestSuite {
     }
 
     @Test
-    func renderingDeduplicatesRepeatedComponents() {
-        var context = RenderContext()
-        _ = context.render(ContextStyledComponent())
-        _ = context.render(ContextStyledComponent())
+    func buildingDeduplicatesRepeatedComponents() {
+        var context = BuilderContext()
+        _ = context.build(ContextStyledComponent())
+        _ = context.build(ContextStyledComponent())
         let renderedCSS = CSSRenderer(minify: true)
             .render(context.stylesheet())
 
@@ -61,7 +61,7 @@ private struct ContextStyledComponent: Component {
         }
     }
 
-    func html(context: inout RenderContext) -> P {
+    func html(context: inout BuilderContext) -> P {
         P("Leaf").class("context-styled-leaf")
     }
 }
@@ -74,7 +74,7 @@ private struct ContextRegisteredComponent: Component {
         }
     }
 
-    func html(context: inout RenderContext) -> P {
+    func html(context: inout BuilderContext) -> P {
         P("Registered")
     }
 }

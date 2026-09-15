@@ -20,8 +20,8 @@ struct CustomDocumentTestSuite {
         let comp = CustomDocumentComponent(
             state: .init(title: "Custom document")
         )
-        var context = RenderContext()
-        let html = context.render(comp)
+        var context = BuilderContext()
+        let html = context.build(comp)
         let result = SGMLRenderer(indent: 4)
             .render(document: Document(root: html))
 
@@ -61,7 +61,7 @@ private struct CustomDocumentComponent: Component {
         )
     }
 
-    func html(context: inout RenderContext) -> Html {
+    func html(context: inout BuilderContext) -> Html {
         context.register(styles)
         context.register(body)
         let bodyHTML = body.html(context: &context)
@@ -86,7 +86,7 @@ private struct CustomDocumentState: Sendable {
 
 private struct CustomStyleComponent: Component {
 
-    func html(context: inout RenderContext) -> InlineText {
+    func html(context: inout BuilderContext) -> InlineText {
         ""
     }
 
@@ -118,7 +118,7 @@ private struct CustomHeadComponent: Component {
         self.scripts = scripts
     }
 
-    func html(context: inout RenderContext) -> Head {
+    func html(context: inout BuilderContext) -> Head {
         Head {
             Title(title)
 
@@ -147,10 +147,10 @@ private struct CustomBodyComponent<Content: Component>: Component {
         }
     }
 
-    func html(context: inout RenderContext) -> Body {
+    func html(context: inout BuilderContext) -> Body {
         Body {
             Div {
-                context.render(body)
+                context.build(body)
             }
             .class("custom-body")
         }
@@ -166,7 +166,7 @@ private struct CustomBodyChildComponent: Component {
         "window.custom-body-ready = true;"
     }
 
-    func html(context: inout RenderContext) -> H1 {
+    func html(context: inout BuilderContext) -> H1 {
         H1(title)
     }
 }

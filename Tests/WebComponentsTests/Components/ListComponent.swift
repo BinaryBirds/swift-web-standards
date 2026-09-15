@@ -20,9 +20,9 @@ struct ListComponent: Component {
         }
     }
 
-    func html(context: inout RenderContext) -> Div {
+    func html(context: inout BuilderContext) -> Div {
         Div {
-            context.render(item)
+            context.build(item)
         }
         .class("list-component")
     }

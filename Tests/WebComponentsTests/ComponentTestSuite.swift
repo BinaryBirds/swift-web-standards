@@ -18,8 +18,8 @@ struct ComponentTestSuite {
 
     @Test
     func componentRendering() {
-        var context = RenderContext()
-        let html = context.render(MySimpleComponent(text: "lorem"))
+        var context = BuilderContext()
+        let html = context.build(MySimpleComponent(text: "lorem"))
         let result = SGMLRenderer(indent: 4)
             .render(document: Document(root: html))
 
@@ -36,8 +36,8 @@ struct ComponentTestSuite {
 
     @Test
     func componentRenderingTree() throws {
-        var context = RenderContext()
-        let html = context.render(ListComponent())
+        var context = BuilderContext()
+        let html = context.build(ListComponent())
         let result = SGMLRenderer().render(document: Document(root: html))
 
         #expect(
@@ -50,8 +50,8 @@ struct ComponentTestSuite {
 
     @Test
     func componentStylesheetCollectorUsesComponentTree() {
-        var context = RenderContext()
-        _ = context.render(ListComponent())
+        var context = BuilderContext()
+        _ = context.build(ListComponent())
         let rendered = CSSRenderer(minify: true)
             .render(context.stylesheet())
 

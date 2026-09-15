@@ -18,7 +18,7 @@ struct ListItemComponent: Component {
         }
     }
 
-    func html(context: inout RenderContext) -> P {
+    func html(context: inout BuilderContext) -> P {
         P("List item")
             .class("list-item")
     }

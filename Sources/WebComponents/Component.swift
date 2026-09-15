@@ -16,7 +16,7 @@ public protocol Component: Sendable {
     var identifier: String { get }
 
     func html(
-        context: inout RenderContext
+        context: inout BuilderContext
     ) -> HTML
 
     @Builder<any CSS.Rule>
@@ -37,7 +37,7 @@ public protocol Leaf: Component where HTML: SGML.Element {
 }
 
 extension Leaf {
-    public func html(context: inout RenderContext) -> HTML {
+    public func html(context: inout BuilderContext) -> HTML {
         html()
     }
 }
@@ -45,10 +45,10 @@ extension Leaf {
 extension Component {
 
     /// Legacy convenience retained while downstream applications migrate to
-    /// context-based rendering.
+    /// context-based building.
     public func html() -> HTML {
-        var context = RenderContext()
-        return context.render(self)
+        var context = BuilderContext()
+        return context.build(self)
     }
 
     public var identifier: String {

@@ -13,7 +13,7 @@ struct FooComponent: Component {
 
     let text: String
 
-    func html(context: inout RenderContext) -> Span {
+    func html(context: inout BuilderContext) -> Span {
         Span(text)
     }
 }

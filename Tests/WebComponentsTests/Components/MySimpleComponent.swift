@@ -20,7 +20,7 @@ struct MySimpleComponent: Component {
         }
     }
 
-    func html(context: inout RenderContext) -> Div {
+    func html(context: inout BuilderContext) -> Div {
         Div {
             P(text)
             Span("foobarbaz")
