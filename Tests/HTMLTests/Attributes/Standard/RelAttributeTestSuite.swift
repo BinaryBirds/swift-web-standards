@@ -24,7 +24,7 @@ struct RelAttributeTestSuite {
             (.license, "license"),
             (.next, "next"),
             (.nofollow, "nofollow"),
-            (.noopenero, "noopenero"),
+            (.noopener, "noopener"),
             (.noreferrer, "noreferrer"),
             (.prev, "prev"),
             (.search, "search"),
